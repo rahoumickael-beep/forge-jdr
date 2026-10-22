@@ -2,343 +2,457 @@
   {
     "id": "corneille-des-pieux",
     "name": "Corneille des pieux",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a ragged black crow perched on top of a tarred wooden stake beside a straight paved imperial road, wheat plain behind, beak half open as if speaking, late afternoon light raking from the side, a rope still knotted below it",
-    "seed": 3789238019
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a ragged black crow perched on top of a tarred wooden stake beside a straight paved imperial road, wheat plain behind, beak half open as if speaking, a rope still knotted below it",
+    "seed": 3789238019,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "matin-leve",
     "name": "Mâtin levé",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a dead farm mastiff standing in a muddy farmyard at night, ribs showing through torn hide, milky eyes, iron collar with a broken chain, a lantern-lit cottage door behind it with deep claw marks on the wood, cold blue moonlight",
-    "seed": 2707949215
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a dead farm mastiff standing in a muddy farmyard, ribs showing through torn hide, milky eyes, iron collar with a broken chain",
+    "seed": 2707949215,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "bleu-des-marches",
     "name": "Bleu des Marches",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a frightened fifteen-year-old soldier in an oversized red wool cloak and quilted gambeson, round wooden shield and spear, standing in heather on a windswept grey hill, rain, a stone fort and a black pyre smoke plume in the distance, overcast diffuse light",
-    "seed": 168293254
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a frightened fifteen-year-old soldier in an oversized red wool cloak and quilted gambeson, round wooden shield and spear, standing in heather on a windswept grey hill, rain, a stone fort and a black pyre smoke plume in the distance",
+    "seed": 168293254,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "crabe-des-salines",
     "name": "Crabe des salines",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a large pale pink crab with salt crystals crusted on its shell climbing out of a broken coffin packed with coarse white salt, oak stilts and black lagoon water behind, harsh white midday sun, glittering salt pans in the distance",
-    "seed": 3863315661
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a large pale pink crab with salt crystals crusted on its shell climbing out of a broken coffin packed with coarse white salt, oak stilts and black lagoon water behind, harsh white midday sun, glittering salt pans in the distance",
+    "seed": 3863315661,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "leve",
     "name": "Levé",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a freshly risen corpse in a plain burial shirt walking stiffly through a wheat field at dawn, arms hanging, bare feet caked with earth, face turned toward a distant copper dome on the horizon, low golden backlight, long shadow",
-    "seed": 594679459
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a freshly risen corpse in a plain burial shirt walking stiffly through a wheat field, arms hanging, bare feet caked with earth, face turned toward a distant copper dome on the horizon, long shadow",
+    "seed": 594679459,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "loup-de-bruyere",
     "name": "Loup de bruyère",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a lean grey wolf with soot-blackened paws standing on a heather ridge, fur blown by a strong wind, behind it a burning pyre outside a grey stone fort sending up thick greasy smoke, cold dusk light, low clouds",
-    "seed": 1605912186
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a lean grey wolf with soot-blackened paws standing on a heather ridge, fur blown by a strong wind, behind it a burning pyre outside a grey stone fort sending up thick greasy smoke, low clouds",
+    "seed": 1605912186,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "nuee-de-rats-des-fosses",
     "name": "Nuée de rats des fossés",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a seething mass of chalk-white rats with red eyes pouring out of a ditch filled with lime powder at the edge of a medieval city, slate roofs and city walls behind, torchlight from above, white dust in the air",
-    "seed": 236863030
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a seething mass of chalk-white rats with red eyes pouring out of a ditch filled with lime powder at the edge of a medieval city, slate roofs and city walls behind, torchlight from above, white dust in the air",
+    "seed": 236863030,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "bouc-des-vertebres",
     "name": "Bouc des vertèbres",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a wild white mountain goat with spiral horns and wild eyes on a narrow limestone ledge, licking a drip of grey lead on a carved dwarven stone door sealed with molten lead, larch forest far below, sharp cold morning light",
-    "seed": 4138473676
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a wild white mountain goat with spiral horns and wild eyes on a narrow limestone ledge, licking a drip of grey lead on a carved dwarven stone door sealed with molten lead, larch forest far below",
+    "seed": 4138473676,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "legionnaire-d-os",
     "name": "Légionnaire d'os",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a column of skeletal soldiers in rusted bronze scale fragments and rotted red cloth rising from thawing earth on a heather hillside, round shields, short swords, marching in rank, grey rain, distant line of stone forts, cold steel-blue light",
-    "seed": 227965786
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a column of skeletal soldiers in rusted bronze scale fragments and rotted red cloth rising from thawing earth on a heather hillside, round shields, short swords, marching in rank, grey rain, distant line of stone forts",
+    "seed": 227965786,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "mort-des-salines",
     "name": "Mort des salines",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a mummified salt worker with skin cracked and crusted with white salt crystals, raking salt at the edge of a pink evaporation pond, iron chains at the ankles, white salt pyramids glittering behind, blinding white sun, a figure with a parasol in the background",
-    "seed": 3587875120
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a mummified salt worker with skin cracked and crusted with white salt crystals, raking salt at the edge of a pink evaporation pond, iron chains at the ankles, white salt pyramids glittering behind, blinding white sun, a figure with a parasol in the background",
+    "seed": 3587875120,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "attendant",
     "name": "Attendant",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a gaunt pilgrim in a rough brown habit with a noose loosely around his neck walking among a procession on a straight paved road, holding a small knife and a burning candle, ecstatic face, wheat plain and a copper dome far away, overcast dusk",
-    "seed": 1757216674
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a gaunt pilgrim in a rough brown habit with a noose loosely around his neck walking among a procession on a straight paved road, holding a small knife and a burning candle, ecstatic face, wheat plain and a copper dome far away",
+    "seed": 1757216674,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "nuee-d-abeilles-cirieres",
     "name": "Nuée d'abeilles cirières",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a swarm of golden bees bursting out of the open ribcage of a standing corpse in a terraced vineyard, grey honeycomb visible between the ribs, white abbey walls behind, warm late summer light, haze of insects",
-    "seed": 2730164764
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a swarm of golden bees bursting out of the open ribcage of a standing corpse in a terraced vineyard, grey honeycomb visible between the ribs, white abbey walls behind, haze of insects",
+    "seed": 2730164764,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "scarabee-de-verre",
     "name": "Scarabée de verre",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a dog-sized beetle with a translucent dark red glass carapace emerging from red sand beside a half-buried slab of black glass, sunlight refracting through its shell, rolling red dunes, low evening sun, long shadows",
-    "seed": 1135815598
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, stormy sky, hard contrast, slate and rust tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a dog-sized beetle with a translucent dark red glass carapace emerging from red sand beside a half-buried slab of black glass, rolling red dunes, low evening sun, long shadows",
+    "seed": 1135815598,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "pleureur",
     "name": "Pleureur",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a translucent pale ghost of a baker woman kneading invisible dough on an empty flour-dusted table in an abandoned bakery, cold window light, dust motes, her face blurred with grief, cold oven behind her, faint blue glow",
-    "seed": 1839095717
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a translucent pale ghost of a baker woman kneading invisible dough on an empty flour-dusted table in an abandoned bakery, dust motes, her face blurred with grief, cold oven behind her",
+    "seed": 1839095717,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "legionnaire-de-hersende",
     "name": "Légionnaire de Hersende",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a weathered middle-aged legionary in a red wool cloak over chain shirt, round shield and short sword, carrying a torch, standing in a rain-soaked fort courtyard with a funeral pyre burning behind him, grey sky, firelight on wet stone",
-    "seed": 3785744123
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a weathered middle-aged legionary in a red wool cloak over chain shirt, round shield and short sword, carrying a torch, standing in a rain-soaked fort courtyard with a funeral pyre burning behind him, grey sky, firelight on wet stone",
+    "seed": 3785744123,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "crapaud-de-vase",
     "name": "Crapaud-de-vase",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a huge mud-brown toad the size of a rowing boat half-submerged in black peat water beneath narrow wooden plank walkways, only its golden eyes and warty back visible, reeds, thick ground mist, grey dawn light, stilt houses with thick reed roofs",
-    "seed": 224987415
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a huge mud-brown toad the size of a rowing boat half-submerged in black peat water beneath narrow wooden plank walkways, only its golden eyes and warty back visible, reeds, thick ground mist, stilt houses with thick reed roofs",
+    "seed": 224987415,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "ciree-de-la-rotonde",
     "name": "Cirée de la Rotonde",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an undead figure entirely coated in thick dripping white candle wax, dozens of burnt-out wicks sticking out of its shoulders and head, shambling through a vaulted stone cellar, one wick still burning on its brow, warm candlelight against deep black shadow",
-    "seed": 4001118309
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an undead figure entirely coated in thick dripping white candle wax, dozens of burnt-out wicks sticking out of its shoulders and head, shambling through a vaulted stone cellar, one wick still burning on its brow, warm candlelight against deep black shadow",
+    "seed": 4001118309,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "mort-beni",
     "name": "Mort béni",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a kneeling corpse in a monk's white burial robe before a stone altar crowded with candles inside a white-walled abbey chapel, hands clasped around an iron rosary, head bowed, other kneeling figures behind, warm candle glow, cold blue window light",
-    "seed": 1996563942
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a kneeling corpse in a monk's white burial robe before a stone altar crowded with candles inside a white-walled abbey chapel, hands clasped around an iron rosary, head bowed, other kneeling figures behind",
+    "seed": 1996563942,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "anguille-machoire",
     "name": "Anguille-mâchoire",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an enormous black eel with a flat head and backward-curving needle teeth lunging up out of dark peat water at a narrow wooden plank walkway, spray, reeds, dense white mist, pale early morning light, a dropped wooden bucket in the air",
-    "seed": 2381104335
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an enormous black eel with a flat head and backward-curving needle teeth lunging up out of dark peat water at a narrow wooden plank walkway, spray, reeds, dense white mist, a dropped wooden bucket in the air",
+    "seed": 2381104335,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "lanterne-de-tourbe",
     "name": "Lanterne de tourbe",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a small floating blue-glass lantern light hovering over black bog water among tall reeds at night, its reflection on the water, a narrow plank path leading toward it and ending abruptly, thick mist, deep blue-black darkness, cold glow",
-    "seed": 3331900910
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a small floating blue-glass lantern light hovering over black bog water among tall reeds, its reflection on the water, a narrow plank path leading toward it and ending abruptly, thick mist, deep blue-black darkness",
+    "seed": 3331900910,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "sanglier-de-la-brune",
     "name": "Sanglier de la Brune",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a massive black wild boar with long yellowed tusks rooting in a perfectly round bare clearing in an ancient oak forest, trunks wide as houses, green filtered light, bone fragments in the turned earth, fallen leaves, silence",
-    "seed": 747781949
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, late afternoon natural light, ochre and moss green tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a massive black wild boar with long yellowed tusks rooting in a perfectly round bare clearing in an ancient oak forest, trunks wide as houses, bone fragments in the turned earth, fallen leaves, silence",
+    "seed": 747781949,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "compagnon-cloueur",
     "name": "Compagnon-cloueur",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a broad-shouldered gravedigger in tarred leather with an iron square-headed nail through his left earlobe, holding a heavy hammer and a pouch of nails, kneeling over a corpse on a village road, lantern on the ground, lime dust on his boots, dusk",
-    "seed": 978003001
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a broad-shouldered gravedigger in tarred leather with an iron square-headed nail through his left earlobe, holding a heavy hammer and a pouch of nails, kneeling over a corpse on a village road, lantern on the ground, lime dust on his boots, dusk",
+    "seed": 978003001,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "main-nue",
     "name": "Main-Nue",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a barefoot gaunt pilgrim woman in a mud-stained grey tunic standing in a muddy pilgrim camp, left palm raised showing a fresh round burn scar with nine radiating marks, other pilgrims and tents behind, smoky campfires, overcast evening light, intense gaze",
-    "seed": 234327397
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a barefoot gaunt pilgrim woman in a mud-stained grey tunic standing in a muddy pilgrim camp, left palm raised showing a fresh round burn scar with nine radiating marks, other pilgrims and tents behind, smoky campfires, intense gaze",
+    "seed": 234327397,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "noye",
     "name": "Noyé",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an ancient bog body with leathery reddish-brown tanned skin and peat-dyed red hair rising waist-deep from black water among reeds, copper bracelets, a braided leather cord still knotted around its neck, hollow eyes, dense dawn mist, faint pale light",
-    "seed": 2910740948
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an ancient bog body with leathery reddish-brown tanned skin and peat-dyed red hair rising waist-deep from black water among reeds, copper bracelets, a braided leather cord still knotted around its neck, hollow eyes, dense dawn mist",
+    "seed": 2910740948,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "porte-voix",
     "name": "Porte-Voix",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a well-dressed pale corpse in a dark leather coat sitting calmly at a tavern table in candlelight, a longsword across its knees, very pale washed-out grey eyes, a gentle almost kind smile, the shadow of a listener in the foreground, deep warm shadows",
-    "seed": 3010829970
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a well-dressed pale corpse in a dark leather coat sitting calmly at a tavern table in candlelight, a longsword across its knees, very pale washed-out grey eyes, a gentle almost kind smile, the shadow of a listener in the foreground, deep warm shadows",
+    "seed": 3010829970,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "garde-du-seuil",
     "name": "Garde du Seuil",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a stern guard in lime-whitened chain mail and a white tabard embroidered with a closed door beneath a crown, holding a flanged mace and kite shield, standing at a bronze doorway under a green copper dome, smoke and torchlight, ash on his boots",
-    "seed": 2040624677
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a stern guard in lime-whitened chain mail and a white tabard embroidered with a closed door beneath a crown, holding a flanged mace and kite shield, standing at a bronze doorway under a green copper dome, smoke and torchlight, ash on his boots",
+    "seed": 2040624677,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "contremaitre-a-l-ombrelle",
     "name": "Contremaître à l'ombrelle",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a plump salt overseer in a wide straw hat holding a white parasol and a ledger, standing on a dyke between pink evaporation ponds, chained salt-crusted dead workers raking behind him, a whip of fine chain at his belt, harsh white sun, glittering salt",
-    "seed": 2649067622
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a plump salt overseer in a wide straw hat holding a white parasol and a ledger, standing on a dyke between pink evaporation ponds, chained salt-crusted dead workers raking behind him, a whip of fine chain at his belt, harsh white sun, glittering salt",
+    "seed": 2649067622,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "ancetre-mure",
     "name": "Ancêtre muré",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a dead dwarf warrior in ornate ancestral plate armour with a braided grey beard threaded with gold wire, mouth and throat filled with solidified grey lead, gripping a warhammer, standing before a huge carved dwarven door with faces of ancestors, lead drips on the stone, torchlight from below",
-    "seed": 1518549657
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a dead dwarf warrior in ornate ancestral plate armour with a braided grey beard threaded with gold wire, mouth and throat filled with solidified grey lead, gripping a warhammer, standing before a huge carved dwarven door with faces of ancestors, lead drips on the stone, torchlight from below",
+    "seed": 1518549657,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "souffle-du-dessous",
     "name": "Souffle du Dessous",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a visible swirling current of warm grey-yellow air rising out of a crack in a cavern floor, shaped vaguely like a reaching figure, candle flames bending toward it, a corpse on the ground beginning to sit up, dust spirals, sickly warm underlight",
-    "seed": 3853212640
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a visible swirling current of warm grey-yellow air rising out of a crack in a cavern floor, shaped vaguely like a reaching figure, candle flames bending toward it, a corpse on the ground beginning to sit up, dust spirals, sickly warm underlight",
+    "seed": 3853212640,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "gueule-de-saumure",
     "name": "Gueule-de-saumure",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a huge pale fish-like monster with a gaping mouth rimmed with jagged salt crystals breaching from a dark canal between wooden stilt houses at night, a small barge with sacks and chained bodies above it, lantern light reflecting on black water",
-    "seed": 522564177
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, stormy sky, hard contrast, slate and rust tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a huge pale fish-like monster with a gaping mouth rimmed with jagged salt crystals breaching from a dark canal between wooden stilt houses, a small barge with sacks and chained bodies above it",
+    "seed": 522564177,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "raie-des-dunes",
     "name": "Raie des dunes",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a giant sand-coloured ray erupting from a red dune, sand cascading off its wide wings, barbed tail raised to strike a fleeing camel rider, a half-buried black glass slab nearby, harsh low red sunset, flying grains of sand",
-    "seed": 4148622841
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, stormy sky, hard contrast, slate and rust tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a giant sand-coloured ray erupting from a red dune, sand cascading off its wide wings, barbed tail raised to strike a fleeing camel rider, a half-buried black glass slab nearby, harsh low red sunset, flying grains of sand",
+    "seed": 4148622841,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "colonne-de-la-marche",
     "name": "Colonne de la Marche",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a dense column of hundreds of shambling corpses packed shoulder to shoulder marching down a straight paved imperial road through a wheat plain, dust cloud rising, a small village with a bell tower in their path, stormy yellow sky, high viewpoint",
-    "seed": 3744263946
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a dense column of hundreds of shambling corpses packed shoulder to shoulder marching down a straight paved imperial road through a wheat plain, dust cloud rising, a small village with a bell tower in their path, stormy yellow sky, high viewpoint",
+    "seed": 3744263946,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "sonneur-du-glas",
     "name": "Sonneur du Glas",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, the translucent ghost of a bell-ringer in a rough linen smock hauling on a phantom rope inside a dark stone bell tower, a huge bronze bell swinging above in motion blur, dust shaking from beams, his mouth open counting, cold moonlight through louvres",
-    "seed": 412144413
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, the translucent ghost of a bell-ringer in a rough linen smock hauling on a phantom rope inside a dark stone bell tower, a huge bronze bell swinging above in motion blur, dust shaking from beams, his mouth open counting",
+    "seed": 412144413,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "mangeur-de-bucher",
     "name": "Mangeur de bûcher",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a hulking grey ash-covered giant with overly long arms crouching over the embers of a funeral pyre at night outside a stone fort, cramming charred bones into its mouth, sparks rising, heather moor, red firelight from below, a watchman's torch on the wall",
-    "seed": 3517166542
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, stormy sky, hard contrast, slate and rust tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a hulking grey ash-covered giant with overly long arms crouching over the embers of a funeral pyre outside a stone fort, cramming charred bones into its mouth, sparks rising, heather moor, red firelight from below, a watchman's torch on the wall",
+    "seed": 3517166542,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "porte-aigle",
     "name": "Porte-Aigle des Marches",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a scarred veteran officer in battered half plate and a red cloak holding a tall pole topped with a bronze eagle, longsword in the other hand, standing on a stone rampart in driving rain, legionaries behind him, grey sea and mountains on the horizon",
-    "seed": 1493980044
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a scarred veteran officer in battered half plate and a red cloak holding a tall pole topped with a bronze eagle, longsword in the other hand, standing on a stone rampart in driving rain, legionaries behind him, grey sea and mountains on the horizon",
+    "seed": 1493980044,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "charme-pendu",
     "name": "Charme pendu",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an enormous twisted hornbeam tree with a spiral trunk walking on its roots through an ancient forest, several elf skeletons hanging from its branches like fruit with arms crossed over their chests, green gloomy filtered light, mist between giant trunks",
-    "seed": 1718561998
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, stormy sky, hard contrast, slate and rust tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an enormous twisted hornbeam tree with a spiral trunk walking on its roots through an ancient forest, several elf skeletons hanging from its branches like fruit with arms crossed over their chests, mist between giant trunks",
+    "seed": 1718561998,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "pris-dans-le-chene",
     "name": "Pris-dans-le-chêne",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an elf skeleton tearing itself free from a split colossal oak trunk, half its body still embedded in the wood like insect in amber, arms raised, bony fingers twitching, bark grown over its ribs, shafts of green forest light, falling leaves",
-    "seed": 2399149840
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an elf skeleton tearing itself free from a split colossal oak trunk, half its body still embedded in the wood like insect in amber, arms raised, bony fingers twitching, bark grown over its ribs, falling leaves",
+    "seed": 2399149840,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "wyverne-des-ossiers",
     "name": "Wyverne des Ossiers",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a pale bone-white wyvern with leathery wings spread wide perched on a jagged limestone peak shaped like a spine, a nest of goat bones beneath it, barbed tail curled, larch valley and green torrent far below, cold bright high-altitude light",
-    "seed": 1236397581
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, stormy sky, hard contrast, slate and rust tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a pale bone-white wyvern with leathery wings spread wide perched on a jagged limestone peak shaped like a spine, a nest of goat bones beneath it, barbed tail curled, larch valley and green torrent far below",
+    "seed": 1236397581,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "inquisiteur-de-la-cire",
     "name": "Inquisiteur de la Cire",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a grim inquisitor in a white robe over soot-blackened half plate, a lit candle fixed to a spike on his pauldron, wax dripping down the armour, holding a flanged mace and a ledger of names, standing in a white abbey cloister at dusk, terraced vineyards behind",
-    "seed": 2563682011
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a grim inquisitor in a white robe over soot-blackened half plate, wax dripping down the armour, holding a flanged mace and a ledger of names, standing in a white abbey cloister, terraced vineyards behind",
+    "seed": 2563682011,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "nuee-de-remontes",
     "name": "Nuée de remontés",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a whirling cloud of hundreds of translucent grey faces and reaching hands rising out of a fissure in a stone crypt floor, mouths open in terror, clutching at a torch-bearing adventurer, cold silver light from below, motion blur",
-    "seed": 3507303498
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a whirling cloud of hundreds of translucent grey faces and reaching hands rising out of a fissure in a stone crypt floor, mouths open in terror, clutching at a torch-bearing adventurer, motion blur",
+    "seed": 3507303498,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "maitre-cloueur",
     "name": "Maître-cloueur",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a grizzled master gravedigger in a tarred leather breastplate with an iron nail through his ear bearing three notches, holding a long-handled hammer over his shoulder, a belt of iron nails and a salt pouch, standing in a fog-filled cemetery among nailed corpses, cold lantern light",
-    "seed": 3066161731
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a grizzled master gravedigger in a tarred leather breastplate with an iron nail through his ear bearing three notches, holding a long-handled hammer over his shoulder, a belt of iron nails and a salt pouch, standing in a fog-filled cemetery among nailed corpses",
+    "seed": 3066161731,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "vieille-noyee",
     "name": "Vieille Noyée",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an ancient bog woman with leathery dark brown skin and long peat-red hair, many verdigris copper necklaces, leaning on an old oar as she wades out of black water among reeds, calm knowing eyes, offerings of eels hung on stilts behind her, misty grey dusk",
-    "seed": 4264832664
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an ancient bog woman with leathery dark brown skin and long peat-red hair, many verdigris copper necklaces, leaning on an old oar as she wades out of black water among reeds, calm knowing eyes, offerings of eels hung on stilts behind her, misty grey dusk",
+    "seed": 4264832664,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "wyverne-levee",
     "name": "Wyverne levée",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an undead wyvern with tattered rotting wing membranes stretched over bare bones, half its skull exposed, crawling over a limestone ridge before taking off again, its barbed tail dragging, storm clouds, a ruined dwarven watchtower behind, cold green-grey light",
-    "seed": 2936883979
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an undead wyvern with tattered rotting wing membranes stretched over bare bones, half its skull exposed, crawling over a limestone ridge before taking off again, its barbed tail dragging, storm clouds, a ruined dwarven watchtower behind",
+    "seed": 2936883979,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "echo-de-verre",
     "name": "Écho de verre",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a tall humanoid figure made of smooth dark translucent glass rising from a cracked black glass slab in red desert dunes at twilight, the sunset visible through its body, sharp crystalline arms, faint ripples of sound in the air, long violet shadows",
-    "seed": 276017617
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a tall humanoid figure made of smooth dark translucent glass rising from a cracked black glass slab in red desert dunes at twilight, the sunset visible through its body, sharp crystalline arms, faint ripples of sound in the air, long violet shadows",
+    "seed": 276017617,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "peseur-renegat",
     "name": "Peseur renégat",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a thin young mage in an ink-stained brick-red coat with a small brass balance pendant tilting violently on his chest, one hand raised conjuring a spectral brass weight, a thick ledger under his other arm, inside a brick tower library, swirling papers, warm lamplight",
-    "seed": 3226155596
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, torchlight and candlelight, warm browns and dried blood red, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a thin young mage in an ink-stained brick-red coat with a small brass balance pendant tilting violently on his chest, one hand raised conjuring a spectral brass weight, a thick ledger under his other arm, inside a brick tower library, swirling papers, warm lamplight",
+    "seed": 3226155596,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "ver-des-ossiers",
     "name": "Ver des Ossiers",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a colossal pale worm with segmented limestone-white rings bursting through the wall of a dwarven ossuary, hundreds of skulls embedded in its flesh, a circular maw of grinding teeth, bones raining down, dust, torchlight from fleeing dwarves",
-    "seed": 353015784
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, stormy sky, hard contrast, slate and rust tones, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a colossal pale worm with segmented limestone-white rings bursting through the wall of a dwarven ossuary, hundreds of skulls embedded in its flesh, a circular maw of grinding teeth, bones raining down, dust, torchlight from fleeing dwarves",
+    "seed": 353015784,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "bouche-de-gorvan",
     "name": "Bouche de Gorvan",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a gentle-looking pale man in a fine grey travelling coat seated in the dark corner of a military tent, a single candle between him and an empty camp chair, very pale washed-out grey eyes, mouth slightly open as if mid-word, faint shapes of other faces in the smoke around his head",
-    "seed": 3816039015
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a gentle-looking pale man in a fine grey travelling coat seated in the dark corner of a military tent, a single candle between him and an empty camp chair, very pale washed-out grey eyes, mouth slightly open as if mid-word, faint shapes of other faces in the smoke around his head",
+    "seed": 3816039015,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "chair-du-sceau",
     "name": "Chair du Sceau",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, massive veins of glowing golden flesh running down the black basalt walls of a bottomless shaft like roots, split in places with light bleeding out, tendrils reaching toward a small group of torch-bearing figures on a narrow ledge, darkness below, warm gold against cold black",
-    "seed": 3413553724
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, massive veins of glowing golden flesh running down the black basalt walls of a bottomless shaft like roots, tendrils reaching toward a small group of torch-bearing figures on a narrow ledge, darkness below, warm gold against cold black",
+    "seed": 3413553724,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "dent-du-mangeur",
     "name": "Dent du Mangeur",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a horrifying beast formed of half-digested human bodies fused together into a hunched quadruped with an enormous vertical mouth full of mismatched teeth, climbing a cracked basalt shaft wall, faint golden glow from veins in the rock, deep shadows, wet sheen",
-    "seed": 13806978
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a horrifying beast formed of half-digested human bodies fused together into a hunched quadruped with an enormous vertical mouth full of mismatched teeth, climbing a cracked basalt shaft wall, deep shadows, wet sheen",
+    "seed": 13806978,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "connetable-d-os",
     "name": "Thiébaut Mainferrée, le Connétable d'os",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an ancient undead warlord in heavy archaic bronze-and-iron plate armour and a tattered fur cloak, his face perfectly preserved and peaceful with closed eyes, holding a bastard sword planted in the earth, skeletal soldiers rising around him on a heather battlefield, storm light, crows",
-    "seed": 3338986284
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an ancient undead warlord in heavy archaic bronze-and-iron plate armour and a tattered fur cloak, his face perfectly preserved and peaceful with closed eyes, holding a bastard sword planted in the earth, skeletal soldiers rising around him on a heather battlefield, crows",
+    "seed": 3338986284,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "langue-de-gorvan",
     "name": "Langue de Gorvan",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a huge grey glistening tongue-like appendage as long as a street emerging from a fissure in the marble floor of a domed rotunda, coiling around a pillar, candles toppled, wax pooled, a tiny human figure caught in its tip, dim golden light from above",
-    "seed": 2880096269
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a huge grey glistening tongue-like appendage as long as a street emerging from a fissure in the marble floor of a domed rotunda, coiling around a pillar, candles toppled, wax pooled, a tiny human figure caught in its tip",
+    "seed": 2880096269,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "roi-des-noyes",
     "name": "Le Roi des Noyes",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, an ancient bog king with leathery reddish-brown skin wearing a crude black iron crown and a rusted iron mail coat, standing waist-deep in dark peat water holding a sceptre of carved bog oak, a court of bog bodies standing silently behind him among reeds, all facing east, pale dawn mist",
-    "seed": 983866455
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, an ancient bog king with leathery reddish-brown skin wearing a crude black iron crown and a rusted iron mail coat, standing waist-deep in dark peat water holding a sceptre of carved bog oak, a court of bog bodies standing silently behind him among reeds, all facing east, pale dawn mist",
+    "seed": 983866455,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "geant-fige",
     "name": "Géant figé du Verre",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a colossal humanoid giant made of cracked dark glass tearing itself up out of a sheet of black glass in the red desert, shards flying, one huge eye opening, a tiny caravan with lanterns fleeing in the foreground, night sky with stars, cold white glow from inside the glass",
-    "seed": 590330120
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a colossal humanoid giant made of cracked dark glass tearing itself up out of a sheet of black glass in the red desert, shards flying, one huge eye opening, a tiny caravan with lanterns fleeing in the foreground, night sky with stars",
+    "seed": 590330120,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "reine-sous-le-sel",
     "name": "Amarante, la Reine sous le Sel",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a regal mummified queen encrusted with glittering white salt crystals seated on a throne carved from a block of salt inside a hollow salt pyramid, a delicate salt crown, one hand raised commanding swirling salt, chained salt-dead kneeling below, shafts of harsh white light through cracks",
-    "seed": 3817251184
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a regal mummified queen encrusted with glittering white salt crystals seated on a throne carved from a block of salt inside a hollow salt pyramid, a delicate salt crown, one hand raised commanding swirling salt, chained salt-dead kneeling below",
+    "seed": 3817251184,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "main-de-gorvan",
     "name": "Main de Gorvan",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a gigantic grey human-like hand the size of a house bursting up through the cracked marble floor of a domed rotunda, each finger tip opening into a speaking mouth, rivers of white candle wax flowing into the hole, a dead emperor seated on a throne in the background, single beam of light from the dome",
-    "seed": 357787862
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a gigantic grey human-like hand the size of a house bursting up through the cracked marble floor of a domed rotunda, each finger tip opening into a speaking mouth, rivers of white candle wax flowing into the hole, a dead emperor seated on a throne in the background",
+    "seed": 357787862,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "gorvan-fragment",
     "name": "Gorvan, le Frère du Dessous (fragment)",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a tall serene godlike figure with the exact face of a dead emperor but skin the colour of raw dough and very pale washed-out grey eyes, smiling warmly, floating above the mouth of a bottomless well under a cracked basalt throne, golden flesh veins torn around him, faint faces in the darkness below, cold grey light from beneath",
-    "seed": 2870881035
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, near darkness, a single pale cold light rising from below, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a tall serene godlike figure with the exact face of a dead emperor but skin the colour of raw dough and very pale washed-out grey eyes, smiling warmly, floating above the mouth of a bottomless well under a cracked basalt throne, golden flesh veins torn around him, faint faces in the darkness below",
+    "seed": 2870881035,
+    "width": 1024,
+    "height": 1344
   },
   {
     "id": "ostral-le-dieu-mort",
     "name": "Ostral, le Dieu-Empereur mort",
-    "prompt": "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark, a dead god-emperor with skin the colour of baked bread rising from a stone throne, iron crown askew on his head, open lifeless eyes, legs encased to the knees in a mountain of white candle wax bristling with thousands of extinguished wicks, wax cracking as he stands, a single shaft of light from a copper dome, vast dim rotunda",
-    "seed": 1276643855
+    "prompt": "oil painting on aged canvas, dark fantasy bestiary plate, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, single creature shown full body, centered, eye-level view, uncluttered background, cold moonlight, grey-green tones, low ground mist, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, a dead god-emperor with skin the colour of baked bread rising from a stone throne, iron crown askew on his head, open lifeless eyes, legs encased to the knees in a mountain of white candle wax bristling with thousands of extinguished wicks, wax cracking as he stands, vast dim rotunda",
+    "seed": 1276643855,
+    "width": 1024,
+    "height": 1344
   }
 ]

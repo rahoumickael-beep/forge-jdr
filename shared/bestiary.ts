@@ -1,6 +1,7 @@
 // Bestiaire d'Aubreterre (campagne « Le Trône du Dieu Mort »).
 // Fiches façon D&D 5e : FP 0 à 20, distances en mètres (1 case = 1,5 m).
 // Tout est original ou tiré du folklore : aucune créature protégée hors SRD 5.1.
+import { stylePeinture } from "./charte";
 import type { Encounter, GenreId } from "./types";
 
 export type Stat = "For" | "Dex" | "Con" | "Int" | "Sag" | "Cha";
@@ -108,9 +109,27 @@ export interface Creature {
   illustration: string; // prompt Flux Schnell, commence par ILLUSTRATION_STYLE
 }
 
-/** Préfixe commun des prompts d'illustration : planche de bestiaire peinte à l'huile. */
-export const ILLUSTRATION_STYLE =
-  "oil painting, dark fantasy bestiary plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, aged canvas texture, single creature study, painterly realism, no text, no border, no watermark";
+/** Chaque famille a sa lumière : on reconnaît la famille d'une créature au premier coup d'œil. */
+export const LUMIERE_FAMILLE: Record<Family, string> = {
+  Bêtes: "late afternoon natural light, ochre and moss green tones",
+  Morts: "cold moonlight, grey-green tones, low ground mist",
+  Humanoïdes: "torchlight and candlelight, warm browns and dried blood red",
+  Monstruosités: "stormy sky, hard contrast, slate and rust tones",
+  "Créatures du Dessous": "near darkness, a single pale cold light rising from below",
+};
+
+/** Préfixe des prompts d'illustration d'une famille, tiré de la charte fantasy (shared/charte.ts). */
+export const illustrationStyle = (family: Family) => stylePeinture("fantasy", "creature", LUMIERE_FAMILLE[family]);
+/** Préfixe commun à toutes les planches, jusqu'à la lumière exclue. */
+export const ILLUSTRATION_STYLE = stylePeinture("fantasy", "creature").split(", warm candlelight")[0];
+
+/** Retire d'une scène les morceaux qui imposent leur propre lumière (la famille décide). */
+const sansLumiere = (scene: string) =>
+  scene
+    .split(", ")
+    .filter((part, i) => i === 0 || !/\b(light|lit|backlight|backlit|overcast|moonlight|sunlight|glow)\b/i.test(part))
+    .join(", ")
+    .replace(/ (at|in the|under the) (dawn|dusk|sunset|sunrise|noon|midday|night)\b/gi, "");
 
 // --- Repères de la 5e (Guide du maître, création de monstres) ---
 
@@ -271,7 +290,7 @@ function creature(input: CreatureInput): Creature {
     hp,
     hpDice: `${hd}d${die}${bonus > 0 ? `+${bonus}` : bonus < 0 ? bonus : ""}`,
     senses: `${senses ? `${senses}, ` : ""}Perception passive ${passive}`,
-    illustration: `${ILLUSTRATION_STYLE}, ${scene}`,
+    illustration: `${illustrationStyle(input.family)}, ${sansLumiere(scene)}`,
   };
 }
 
