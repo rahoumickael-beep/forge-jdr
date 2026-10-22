@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { toCharacter, toScenario, type AiKind } from "../../../shared/ai";
 import { GENRES, TONS } from "../../../shared/genres";
 import { generateCharacter, generateEncounter, generateLoot, generateScenario, modifier } from "../../../shared/generators";
+import { LIBRARY } from "../../../shared/library";
 import { generateMap } from "../../../shared/maps";
 import { randomSeed } from "../../../shared/random";
 import type { Character, Encounter, GameMap, GenreId, MapKind, RoomView, Scenario, Ton, Token } from "../../../shared/types";
@@ -418,14 +419,65 @@ export function ScenariosPanel({ room }: { room: RoomView }) {
     if (!room.map) return toast("Génère d'abord une carte.");
     void send("token:bulk", tokensForEncounter(room, e));
   };
+  const readAloud = (text: string) => void send("narrate", { text }).then((r) => r.ok && toast("Texte envoyé dans le journal."));
+  const placeMap = (s: Scenario) => {
+    const hint = s.mapHint;
+    if (!hint) return;
+    if (room.tokens.some((t) => t.kind !== "joueur") && !window.confirm("Poser cette carte retire les pions qui ne sont pas des joueurs. On continue ?")) return;
+    const map = generateMap({ kind: hint.kind, seed: hint.seed, name: hint.name, width: hint.width ?? 46, height: hint.height ?? 36 });
+    hint.labels?.forEach((label, i) => {
+      if (map.rooms[i] && label) map.rooms[i] = { ...map.rooms[i], label };
+    });
+    void send("map:set", { map, keepTokens: false }).then((r) => r.ok && toast(`Carte posée : ${map.name}.`));
+  };
+  const mapButton = (s: Scenario) => s.mapHint && <button className="btn small" onClick={() => placeMap(s)}>Poser la carte</button>;
+  const library = LIBRARY.filter((s) => s.genre === room.genre);
   return (
     <div className="stack">
       <h3>Scénarios</h3>
-      {room.scenarios.length === 0 && <p className="small muted">Les scénarios que tu gardes depuis l'onglet Générer arrivent ici. Les joueurs ne les voient pas.</p>}
+      {room.scenarios.length === 0 && <p className="small muted">Les scénarios que tu gardes depuis l'onglet Générer ou la bibliothèque arrivent ici. Les joueurs ne les voient pas.</p>}
       <div className="card-list">
         {room.scenarios.map((s) => (
-          <ScenarioSheet key={s.id} s={s} onPlaceEncounter={place} actions={<button className="btn small danger" onClick={() => send("scenario:remove", s.id)}>Jeter</button>} />
+          <ScenarioSheet
+            key={s.id}
+            s={s}
+            onPlaceEncounter={place}
+            onReadAloud={readAloud}
+            actions={
+              <>
+                {mapButton(s)}
+                <button className="btn small danger" onClick={() => send("scenario:remove", s.id)}>Jeter</button>
+              </>
+            }
+          />
         ))}
+      </div>
+      <h3 style={{ marginTop: 12 }}>Bibliothèque</h3>
+      {library.length === 0 ? (
+        <p className="small muted">Pas encore de scénario écrit à la main pour ce genre.</p>
+      ) : (
+        <p className="small muted">Des scénarios écrits à la main, prêts à jouer : textes à lire, choix et carte proposée.</p>
+      )}
+      <div className="card-list">
+        {library.map((s) => {
+          const added = room.scenarios.some((x) => x.id === s.id);
+          return (
+            <ScenarioSheet
+              key={s.id}
+              s={s}
+              onPlaceEncounter={place}
+              onReadAloud={readAloud}
+              actions={
+                <>
+                  <button className="btn small primary" disabled={added} onClick={() => send("scenario:add", s).then((r) => r.ok && toast("Scénario ajouté à la partie."))}>
+                    {added ? "Déjà dans la partie" : "Ajouter à la partie"}
+                  </button>
+                  {mapButton(s)}
+                </>
+              }
+            />
+          );
+        })}
       </div>
       <h3 style={{ marginTop: 12 }}>Personnages et PNJ</h3>
       <div className="card-list">

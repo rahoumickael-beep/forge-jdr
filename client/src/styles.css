@@ -170,6 +170,16 @@ textarea.input { resize: vertical; min-height: 70px; }
 .prose p { margin: 0 0 8px; }
 .prose h5 { font-family: var(--display); font-weight: 400; font-size: 1.05rem; margin: 12px 0 4px; }
 .act { border-left: 3px solid var(--paper-line); padding-left: 10px; margin-bottom: 8px; }
+/* Texte à lire à voix haute : un encart de papier plus clair, filet laiton à gauche. */
+.read-aloud { background: #fbf6ea; border: 1px solid var(--paper-line); border-left: 3px solid var(--brass-dim); padding: 6px 10px 2px; margin: 4px 0 10px; }
+.read-aloud-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 4px; }
+.read-aloud-head span { font-family: var(--display); font-size: .95rem; color: var(--ink-soft); }
+.read-aloud p { font-style: italic; line-height: 1.5; }
+.gm-notes { border-top: 1px dashed var(--paper-line); border-bottom: 1px dashed var(--paper-line); padding-bottom: 4px; margin: 8px 0; }
+.choice { border-left: 3px solid var(--blood); padding-left: 10px; margin-bottom: 10px; }
+.choice ul { margin: 4px 0 0; padding-left: 18px; }
+.choice li { margin-bottom: 4px; }
+.npc-voice { color: var(--ink-soft); font-style: italic; }
 .enemy-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 4px 0 8px; }
 .enemy-table th, .enemy-table td { border-bottom: 1px solid var(--paper-line); padding: 3px 4px; text-align: left; }
 .enemy-table th { font-size: 11px; text-transform: uppercase; color: var(--ink-soft); letter-spacing: .05em; }

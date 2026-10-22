@@ -91,11 +91,20 @@ export interface Scenario {
   synopsis: string;
   acts: { title: string; summary: string; location: string }[];
   villain: { name: string; motivation: string; description: string };
-  npcs: { name: string; role: string; secret: string }[];
+  /** voice : façon de parler, tic, mot fétiche (facultatif). */
+  npcs: { name: string; role: string; secret: string; voice?: string }[];
   encounters: Encounter[];
   twists: string[];
   rewards: string[];
-  source: "aleatoire" | "ia";
+  source: "aleatoire" | "ia" | "bibliotheque";
+  /** Conseils de préparation pour le MJ (paragraphes séparés par une ligne vide). */
+  gmNotes?: string;
+  /** Textes à lire à voix haute. act : numéro de l'acte à partir de 1, ou 0 pour l'ouverture. */
+  readAloud?: { act: number; title?: string; text: string }[];
+  /** Choix laissés aux joueurs, avec leurs conséquences. */
+  choices?: { act: number; title: string; options: { label: string; consequence: string }[] }[];
+  /** Carte proposée, à recréer avec generateMap. labels renomme les points d'intérêt dans l'ordre. */
+  mapHint?: { kind: MapKind; seed: number; name: string; width?: number; height?: number; labels?: string[] };
 }
 
 export interface Token {
