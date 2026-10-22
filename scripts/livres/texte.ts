@@ -40,7 +40,7 @@ export function illustration(id: string, prompt: string, format: Format = "large
       return `<figure class="illu ${format}"><img src="data:image/${ext === "jpg" ? "jpeg" : ext};base64,${data}" alt="">${cap}</figure>`;
     }
   }
-  return `<figure class="illu wait ${format}"><div class="wait-inner"><span class="wait-title">Illustration à peindre</span><code>${esc(id)}</code><p>${esc(complet.split("no watermark, ").pop() ?? prompt)}</p></div>${cap}</figure>`;
+  return `<figure class="illu wait ${format}"><div class="wait-inner"><span class="wait-title">Illustration à peindre</span><code>${esc(id)}</code><p>${esc(complet.replace(/^.*no (modern objects|watermark), /, ""))}</p></div>${cap}</figure>`;
 }
 
 /**

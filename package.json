@@ -12,7 +12,8 @@
     "test": "tsx --test shared/*.test.ts",
     "playtest": "node scripts/playtest.mjs",
     "livre": "tsx scripts/livre.ts dist-livre",
-    "apercu-cartes": "node scripts/apercu-cartes.mjs"
+    "apercu-cartes": "node scripts/apercu-cartes.mjs",
+    "livres": "tsx scripts/livres/index.ts tout dist-livre"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",

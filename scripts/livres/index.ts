@@ -3,13 +3,14 @@
 import { writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { bestiaire } from "./bestiaire";
+import { livreDesJoueurs } from "./joueurs";
 import { guideMj } from "./mj";
 import { fabriquer, type Livre } from "./moteur";
 import { illustrationsDemandees } from "./texte";
 
 const quoi = process.argv[2] || "tout";
 const out = resolve(process.argv[3] || "dist-livre");
-const LIVRES: Record<string, () => Livre | Promise<Livre>> = { mj: guideMj, bestiaire };
+const LIVRES: Record<string, () => Livre | Promise<Livre>> = { joueurs: livreDesJoueurs, mj: guideMj, bestiaire };
 
 for (const [id, faire] of Object.entries(LIVRES)) {
   if (quoi !== "tout" && quoi !== id) continue;
