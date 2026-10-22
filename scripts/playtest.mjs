@@ -1,0 +1,79 @@
+// Partie de test automatique : un MJ et un joueur dans deux navigateurs.
+// Usage : npm run build && npm run playtest   (lance son propre serveur sur le port 3999)
+import { spawn } from "node:child_process";
+import { mkdtempSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { chromium } from "playwright";
+
+const PORT = 3999;
+const URL = `http://localhost:${PORT}`;
+const server = spawn("npx", ["tsx", "server/index.ts"], {
+  env: { ...process.env, PORT: String(PORT), DATA_DIR: mkdtempSync(join(tmpdir(), "forge-")) },
+  stdio: ["ignore", "pipe", "inherit"],
+});
+await new Promise((resolve) => server.stdout.on("data", (d) => String(d).includes("prête") && resolve()));
+
+// CHROMIUM_PATH permet d'utiliser un Chromium déjà installé (ex. /opt/pw-browsers/chromium).
+let browser;
+const fail = (msg) => {
+  console.error("ÉCHEC :", msg);
+  process.exitCode = 1;
+};
+
+try {
+  browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
+  const gm = await (await browser.newContext({ viewport: { width: 1400, height: 900 } })).newPage();
+  gm.setDefaultTimeout(10000);
+  gm.on("pageerror", (e) => fail(`erreur JS côté MJ : ${e.message}`));
+  console.log("Navigateur du MJ ouvert");
+  await gm.goto(URL);
+  await gm.fill("#pseudo", "Mickael");
+  await gm.fill("#campagne", "Les Cendres de Valmer");
+  await gm.getByRole("button", { name: "Ouvrir la table" }).click();
+  await gm.getByRole("button", { name: "Poser sur la table" }).click();
+  await gm.getByRole("button", { name: "Tout révéler" }).click();
+  const code = (await gm.locator(".code-chip").textContent()).trim();
+  console.log("Partie créée :", code);
+
+  const pl = await (await browser.newContext({ viewport: { width: 1200, height: 800 } })).newPage();
+  pl.setDefaultTimeout(10000);
+  pl.on("pageerror", (e) => fail(`erreur JS côté joueur : ${e.message}`));
+  await pl.goto(`${URL}/?partie=${code}`);
+  await pl.fill("#pseudo", "Léa");
+  await pl.getByRole("button", { name: "S'asseoir à la table" }).click();
+  await pl.getByRole("button", { name: "Tirer un personnage" }).click();
+  await pl.fill("#pj-nom", "Brunhild");
+  await pl.getByRole("button", { name: "C'est mon personnage" }).click();
+  await pl.waitForTimeout(400);
+
+  // Le joueur sélectionne son pion via le serveur puis le déplace avec les flèches.
+  const before = await gm.evaluate(() => window.__forge?.());
+  const tok = await pl.evaluate(() => window.__forge?.().tokens.find((t) => t.name === "Brunhild"));
+  if (!tok) fail("le pion du joueur n'apparaît pas");
+  else {
+    const box = await pl.locator("canvas").boundingBox();
+    // Clique sur le pion : on retrouve sa position écran grâce au helper de debug.
+    const pos = await pl.evaluate((id) => window.__forgeTokenScreen?.(id), tok.id);
+    await pl.mouse.click(box.x + pos.x, box.y + pos.y);
+    await pl.keyboard.press("ArrowRight");
+    await pl.waitForTimeout(500);
+    const after = await gm.evaluate((id) => window.__forge?.().tokens.find((t) => t.id === id), tok.id);
+    if (!after || after.x === tok.x) fail(`le MJ ne voit pas le déplacement (avant ${tok.x}, après ${after?.x})`);
+    else console.log(`Déplacement synchronisé : x ${tok.x} → ${after.x}`);
+  }
+  await pl.getByRole("button", { name: "d20" }).click();
+  await gm.waitForTimeout(400);
+  const log = await gm.locator(".log").textContent();
+  if (!log.includes("Léa")) fail("le lancer de dé du joueur n'arrive pas chez le MJ");
+  await gm.screenshot({ path: "playtest-mj.png" });
+  await pl.screenshot({ path: "playtest-joueur.png" });
+  console.log(before ? "Captures : playtest-mj.png, playtest-joueur.png" : "");
+} catch (err) {
+  fail(err.message);
+} finally {
+  await browser?.close();
+  server.kill();
+}
+if (!process.exitCode) console.log("Partie de test réussie.");
+process.exit();
