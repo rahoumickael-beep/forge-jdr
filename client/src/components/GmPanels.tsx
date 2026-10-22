@@ -6,12 +6,13 @@ import { useEffect, useMemo, useState } from "react";
 import { toCharacter, toScenario, type AiKind } from "../../../shared/ai";
 import { GENRES, TONS } from "../../../shared/genres";
 import { generateCharacter, generateEncounter, generateLoot, generateScenario, modifier } from "../../../shared/generators";
+import { BESTIARY, crLabel, creaturesFor, toEncounterEnemy, type Family } from "../../../shared/bestiary";
 import { LIBRARY } from "../../../shared/library";
 import { generateMap } from "../../../shared/maps";
 import { randomSeed } from "../../../shared/random";
 import type { Character, Encounter, GameMap, GenreId, MapKind, RoomView, Scenario, Ton, Token } from "../../../shared/types";
 import { generateAi, listLmModels, loadAiSettings, saveAiSettings, type AiSettings } from "../ai";
-import { tokenForCharacter, tokensForEncounter } from "../placement";
+import { freeCell, tokenForCharacter, tokensForEncounter } from "../placement";
 import { send, toast } from "../store";
 import { CharacterSheet, EncounterBlock, ScenarioSheet } from "./Sheets";
 
@@ -369,27 +370,13 @@ export function TokensPanel({ room, selectedId, onSelect }: { room: RoomView; se
 
 export function CombatPanel({ room }: { room: RoomView }) {
   const { entries, turn, round } = room.initiative;
-  function rollAll() {
-    const list = room.tokens
-      .filter((t) => t.kind !== "objet")
-      .map((t) => {
-        const c = room.characters.find((x) => x.id === t.characterId);
-        const dex = c ? modifier(Object.values(c.stats)[1] ?? 10) : 0;
-        return { tokenId: t.id, name: t.name, value: Math.floor(Math.random() * 20) + 1 + dex };
-      });
-    void send("initiative:set", { entries: list });
-    void send("narrate", { text: `Le combat commence ! Initiative : ${[...list].sort((a, b) => b.value - a.value).map((e) => `${e.name} (${e.value})`).join(", ")}.` });
-  }
+  const monsters = room.tokens.filter((t) => t.kind === "monstre");
   return (
     <div className="stack">
       <h3>Combat</h3>
-      <div className="row">
-        <button className="btn primary" onClick={rollAll} disabled={!room.tokens.length}>Lancer l'initiative</button>
-        <button className="btn" onClick={() => send("initiative:set", { entries: [] })} disabled={!entries.length}>Fin du combat</button>
-      </div>
-      {entries.length > 0 && (
+      {room.combat ? (
         <>
-          <p className="small muted">Round {round}</p>
+          <p className="small muted">Round {round} · au tour de <b>{entries[turn]?.name ?? "personne"}</b></p>
           <ol className="init-list">
             {entries.map((e, i) => (
               <li key={i} className={i === turn ? "current" : ""}>
@@ -401,9 +388,24 @@ export function CombatPanel({ room }: { room: RoomView }) {
           <div className="row">
             <button className="btn" onClick={() => send("initiative:step", { delta: -1 })}>Précédent</button>
             <button className="btn primary" onClick={() => send("initiative:step", { delta: 1 })}>Tour suivant</button>
+            <button className="btn danger" onClick={() => send("combat:end")}>Fin du combat</button>
+          </div>
+        </>
+      ) : (
+        <>
+          <p className="small muted">Le combat commence tout seul quand un pion joueur voit un monstre. Tu peux aussi le lancer toi-même, pour une embuscade.</p>
+          <div className="row">
+            <button className="btn primary" onClick={() => send("combat:start", {})} disabled={!monsters.length}>Lancer le combat</button>
           </div>
         </>
       )}
+      <div className="section stack">
+        <h3>Déclenchement</h3>
+        <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          <input type="checkbox" checked={room.autoCombat} onChange={(e) => send("settings:set", { autoCombat: e.target.checked })} /> Lancer le combat quand un joueur voit un monstre
+        </label>
+        <p className="small muted">Un monstre « caché » dans l'onglet Pions ne déclenche rien, même en vue : pratique pour une conversation qui doit rester calme.</p>
+      </div>
       <div className="section stack">
         <h3>Déplacements</h3>
         <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
@@ -413,6 +415,90 @@ export function CombatPanel({ room }: { room: RoomView }) {
     </div>
   );
 }
+
+const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous"];
+
+/** Bestiaire du genre : le MJ pose une créature (ou un groupe) sur la carte en un clic. */
+export function BestiaryPanel({ room }: { room: RoomView }) {
+  const [family, setFamily] = useState<Family | "">("");
+  const [query, setQuery] = useState("");
+  const [count, setCount] = useState(1);
+  const [open, setOpen] = useState<string | null>(null);
+  const all = creaturesFor(room.genre);
+  const max = Math.max(1, room.level + 3);
+  const list = all
+    .filter((c) => (!family || c.family === family) && (!query || c.name.toLowerCase().includes(query.toLowerCase())))
+    .sort((a, b) => a.cr - b.cr || a.name.localeCompare(b.name, "fr"));
+
+  function poser(id: string) {
+    const c = BESTIARY.find((x) => x.id === id);
+    if (!c) return;
+    if (!room.map) return toast("Génère d'abord une carte.");
+    const enemy = toEncounterEnemy(c, count);
+    const placed: Token[] = [];
+    const near = room.map.rooms.length ? room.map.rooms[Math.floor(Math.random() * room.map.rooms.length)] : undefined;
+    for (let i = 0; i < count; i++) {
+      const pos = freeCell({ ...room, tokens: [...room.tokens, ...placed] }, near ? { x: near.x + Math.floor(near.w / 2), y: near.y + Math.floor(near.h / 2) } : undefined);
+      placed.push({
+        id: "",
+        name: count > 1 ? `${c.name} ${i + 1}` : c.name,
+        x: pos.x,
+        y: pos.y,
+        color: FAMILY_COLORS[c.family],
+        kind: "monstre",
+        hidden: room.visionMode === "manuel",
+        hp: enemy.hp,
+        hpMax: enemy.hp,
+        ac: enemy.ac,
+        creatureId: c.id,
+        speed: Math.max(1, Math.round(c.speed.marche / 1.5)),
+        size: c.size === "Grande" ? 2 : c.size === "Très grande" ? 3 : c.size === "Gigantesque" ? 4 : 1,
+      });
+    }
+    void send("token:bulk", placed);
+    toast(`${count > 1 ? `${count} × ` : ""}${c.name} posé${count > 1 ? "s" : ""} sur la carte.`);
+  }
+
+  if (!all.length) return <div className="stack"><h3>Bestiaire</h3><p className="small muted">Pas encore de bestiaire pour ce genre.</p></div>;
+  return (
+    <div className="stack">
+      <h3>Bestiaire</h3>
+      <div className="row">
+        <input className="input" placeholder="Chercher une créature" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Chercher une créature" />
+        <select className="input" value={family} onChange={(e) => setFamily(e.target.value as Family | "")} aria-label="Famille">
+          <option value="">Toutes les familles</option>
+          {FAMILIES.map((f) => <option key={f} value={f}>{f}</option>)}
+        </select>
+        <label className="small" style={{ display: "flex", gap: 4, alignItems: "center" }}>
+          Nombre
+          <input className="input small" type="number" min={1} max={12} value={count} onChange={(e) => setCount(Math.max(1, Math.min(12, Number(e.target.value) || 1)))} style={{ width: 56 }} />
+        </label>
+      </div>
+      <ul className="beast-list">
+        {list.map((c) => (
+          <li key={c.id} className={c.cr > max ? "beast-hard" : ""}>
+            <button className="beast-row" onClick={() => setOpen(open === c.id ? null : c.id)} aria-expanded={open === c.id}>
+              <i style={{ background: FAMILY_COLORS[c.family] }} />
+              <span className="beast-name">{c.name}</span>
+              <span className="beast-cr" title="Puissance">{crLabel(c.cr)}</span>
+            </button>
+            {open === c.id && (
+              <div className="beast-detail">
+                <p className="small"><em>{c.type}, {c.region}</em> · CA {c.ac} · {c.hp} PV · {c.speed.marche} m</p>
+                <p className="small">{c.lore}</p>
+                <p className="small muted"><b>Au MJ :</b> {c.gmNotes}</p>
+                <button className="btn small primary" onClick={() => poser(c.id)}>Poser {count > 1 ? `${count} ${c.name}` : "sur la carte"}</button>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+      <p className="small muted">En gris : plus de deux crans au-dessus du niveau du groupe.</p>
+    </div>
+  );
+}
+
+const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236" };
 
 export function ScenariosPanel({ room }: { room: RoomView }) {
   const place = (e: Encounter) => {

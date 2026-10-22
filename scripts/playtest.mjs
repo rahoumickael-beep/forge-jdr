@@ -109,6 +109,50 @@ try {
   if (!aubin) fail("le personnage créé pas à pas n'arrive pas chez le MJ");
   else console.log(`Créateur : ${aubin.name}, ${aubin.origin}, ${aubin.archetype}, PV ${aubin.hp}, CA ${aubin.ac}`);
 
+  // --- Combat : le MJ pose un Levé du bestiaire en vue de Brunhild, le combat doit partir tout seul ---
+  await gm.getByRole("tab", { name: "Bestiaire" }).click();
+  await gm.getByPlaceholder("Chercher une créature").fill("Levé");
+  await gm.locator(".beast-row", { hasText: /^Levé/ }).click();
+  await gm.getByRole("button", { name: "Poser sur la carte" }).click();
+  await gm.waitForTimeout(400);
+  const spot = await pl.evaluate(() => {
+    const v = window.__forge?.();
+    const me = v.tokens.find((t) => t.name === "Brunhild");
+    const seen = new Set(v.visible ?? []);
+    const taken = new Set(v.tokens.map((t) => t.y * v.map.width + t.x));
+    for (let r = 2; r <= 5; r++)
+      for (const [dx, dy] of [[r, 0], [-r, 0], [0, r], [0, -r], [r, r], [-r, -r], [r, -r], [-r, r]]) {
+        const i = (me.y + dy) * v.map.width + me.x + dx;
+        if (seen.has(i) && !taken.has(i) && [1, 4, 5, 6].includes(v.map.tiles[i])) return { x: me.x + dx, y: me.y + dy };
+      }
+    return null;
+  });
+  if (!spot) fail("aucune case en vue de Brunhild pour poser le monstre");
+  else {
+    const leve = await gm.evaluate(() => window.__forge?.().tokens.find((t) => t.creatureId === "leve"));
+    if (!leve) fail("le Levé n'a pas été posé depuis le bestiaire");
+    await gm.evaluate(({ id, x, y }) => window.__forgeSend("token:move", { id, x, y }), { id: leve.id, ...spot });
+    await pl.waitForTimeout(1500);
+    if (!(await pl.locator(".combat-intro").count())) fail("pas d'animation de combat chez le joueur");
+    await pl.screenshot({ path: "playtest-combat-sceau.png" });
+    await pl.waitForTimeout(2600);
+    const combat = await gm.evaluate(() => window.__forge?.().combat);
+    if (!combat || combat.cause !== "auto") fail("le combat ne s'est pas lancé tout seul");
+    const items = await pl.locator(".frieze-item").count();
+    if (items < 2) fail(`frise d'initiative incomplète (${items})`);
+    await gm.screenshot({ path: "playtest-combat-mj.png" });
+    await pl.screenshot({ path: "playtest-combat-joueur.png" });
+    await gm.getByRole("button", { name: "Tour suivant" }).first().click();
+    await gm.waitForTimeout(300);
+    const turn = await gm.evaluate(() => window.__forge?.().initiative.turn);
+    if (turn !== 1) fail("le tour suivant ne passe pas");
+    await gm.getByRole("tab", { name: "Combat" }).click();
+    await gm.getByRole("button", { name: "Fin du combat" }).click();
+    await gm.waitForTimeout(600);
+    if (await gm.evaluate(() => window.__forge?.().combat)) fail("le combat repart alors que le MJ l'a terminé");
+    console.log(`Combat : lancé tout seul, ${items} combattants, tour suivant et fin du combat OK`);
+  }
+
   console.log(before ? "Captures : playtest-mj.png, playtest-joueur.png, playtest-joueur-vue.png" : "");
 } catch (err) {
   fail(err.message);

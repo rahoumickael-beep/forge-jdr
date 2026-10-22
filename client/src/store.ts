@@ -70,6 +70,9 @@ export interface AckResult {
 }
 
 /** Envoie une action au serveur ; affiche l'erreur s'il la refuse. */
+// Le test automatisé envoie aussi des actions (le serveur vérifie les droits comme pour un clic).
+(window as unknown as { __forgeSend: typeof send }).__forgeSend = (e, p) => send(e, p);
+
 export function send<T = unknown>(event: string, payload?: T): Promise<AckResult> {
   return new Promise((resolve) => {
     socket.timeout(8000).emit(event, payload, (err: Error | null, res: AckResult) => {

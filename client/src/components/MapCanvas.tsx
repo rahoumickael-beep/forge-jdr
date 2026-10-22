@@ -1,8 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { reachable } from "../../../shared/combat";
+import { charte } from "../../../shared/charte";
 import { getGenre } from "../../../shared/genres";
 import type { RoomView, Token } from "../../../shared/types";
 import { BASE, makeMistPattern, materialFor, renderMapImage, shade } from "../mapRender";
 import { send, socket, useStore, type Ping } from "../store";
+import { INTRO_MS } from "./CombatIntro";
 
 export type MapTool = "deplacer" | "reveler" | "cacher";
 
@@ -45,8 +48,16 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   const drag = useRef<Drag | null>(null);
   const [localFog, setLocalFog] = useState<{ cells: Set<number>; hidden: boolean } | null>(null);
   // Les dernières valeurs, lues par la boucle d'animation sans la redémarrer.
-  const live = useRef({ room, pings, selectedId, localFog, isGM });
-  live.current = { room, pings, selectedId, localFog, isGM };
+  // Combat : pion dont c'est le tour, et cases qu'il peut atteindre (montrées au MJ et à son joueur).
+  const active = room.combat ? room.tokens.find((t) => t.id === room.initiative.entries[room.initiative.turn]?.tokenId) ?? null : null;
+  const reach = useMemo(() => {
+    if (!map || !active || !(isGM || active.ownerId === room.you.id)) return null;
+    const speed = active.speed ?? room.characters.find((c) => c.id === active.characterId)?.speed ?? 6;
+    return reachable(map, active, speed);
+  }, [map, active?.id, active?.x, active?.y, active?.speed, isGM, room.you.id, room.characters]);
+  const accent = charte(room.genre).palette.or;
+  const live = useRef({ room, pings, selectedId, localFog, isGM, active, reach, accent });
+  live.current = { room, pings, selectedId, localFog, isGM, active, reach, accent };
 
   // Masque de brouillard à une case par pixel : agrandi avec lissage, il donne des bords doux.
   const fogMask = useMemo(() => {
@@ -82,6 +93,31 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     const cell = Math.max(10, Math.min(56, Math.floor(Math.min(el.clientWidth / map.width, el.clientHeight / map.height))));
     view.current = { cell, ox: (el.clientWidth - map.width * cell) / 2, oy: (el.clientHeight - map.height * cell) / 2 };
   }, [map?.seed, map?.width, map?.height]);
+
+  // Caméra : en combat, elle plonge sur la zone du combat (pendant que le titre de l'animation s'affiche),
+  // puis revient sur toute la carte à la fin.
+  const cam = useRef<{ from: typeof view.current; to: typeof view.current; start: number; dur: number } | null>(null);
+  const combatId = room.combat?.id ?? null;
+  const prevCombat = useRef<string | null>(combatId);
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el || !map || prevCombat.current === combatId) return;
+    const fresh = !!room.combat && Date.now() - room.combat.startedAt < 15000;
+    prevCombat.current = combatId;
+    const W = el.clientWidth;
+    const H = el.clientHeight;
+    let to: typeof view.current;
+    if (room.combat) {
+      const f = room.combat.focus;
+      const cell = Math.max(10, Math.min(96, Math.min(W / f.w, H / f.h) * 0.94));
+      to = { cell, ox: W / 2 - (f.x + f.w / 2) * cell, oy: H / 2 - (f.y + f.h / 2) * cell };
+    } else {
+      const cell = Math.max(10, Math.min(56, Math.floor(Math.min(W / map.width, H / map.height))));
+      to = { cell, ox: (W - map.width * cell) / 2, oy: (H - map.height * cell) / 2 };
+    }
+    const delay = room.combat && fresh ? INTRO_MS * 0.5 : 0;
+    cam.current = { from: { ...view.current }, to, start: performance.now() + delay, dur: reducedMotion ? 1 : 1100 };
+  }, [combatId, map]);
 
   const toCell = (clientX: number, clientY: number) => {
     const rect = canvasRef.current!.getBoundingClientRect();
@@ -208,7 +244,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     const cv = canvasRef.current;
     const wrap = wrapRef.current;
     if (!cv || !wrap) return;
-    const { room, pings, selectedId, isGM } = live.current;
+    const { room, pings, selectedId, isGM, active, reach, accent } = live.current;
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     const w = wrap.clientWidth;
     const h = wrap.clientHeight;
@@ -221,6 +257,21 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     g.clearRect(0, 0, w, h);
     const map = room.map;
     if (!map || !image) return;
+    const c = cam.current;
+    if (c && time * 1000 >= c.start) {
+      const k = Math.min(1, (time * 1000 - c.start) / c.dur);
+      const e = k < 0.5 ? 4 * k * k * k : 1 - (-2 * k + 2) ** 3 / 2; // ease in-out
+      // Interpolation en échelle logarithmique : le zoom paraît régulier.
+      const cellNow = Math.exp(Math.log(c.from.cell) + (Math.log(c.to.cell) - Math.log(c.from.cell)) * e);
+      const lerp = (a: number, b: number) => a + (b - a) * e;
+      // On interpole le centre visé, pas les décalages, pour que la zone reste au milieu.
+      const cx0 = (w / 2 - c.from.ox) / c.from.cell;
+      const cy0 = (h / 2 - c.from.oy) / c.from.cell;
+      const cx1 = (w / 2 - c.to.ox) / c.to.cell;
+      const cy1 = (h / 2 - c.to.oy) / c.to.cell;
+      view.current = { cell: cellNow, ox: w / 2 - lerp(cx0, cx1) * cellNow, oy: h / 2 - lerp(cy0, cy1) * cellNow };
+      if (k >= 1) cam.current = null;
+    }
     const { ox, oy, cell } = view.current;
     const mw = map.width * cell;
     const mh = map.height * cell;
@@ -281,6 +332,44 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
         g.fillStyle = "#f6e7c1";
         g.fillText(r.label, cx, cy);
       }
+    }
+
+    // Combat : cases atteignables du pion dont c'est le tour, puis halo sous ce pion.
+    if (reach && active) {
+      g.save();
+      g.fillStyle = accent;
+      g.globalAlpha = 0.13 + (reducedMotion ? 0 : Math.sin(time * 2.4) * 0.03);
+      for (const i of reach) g.fillRect(ox + (i % map.width) * cell + 1, oy + Math.floor(i / map.width) * cell + 1, cell - 2, cell - 2);
+      g.globalAlpha = 0.55;
+      g.strokeStyle = accent;
+      g.lineWidth = 1.5;
+      g.beginPath();
+      for (const i of reach) {
+        const x = i % map.width;
+        const y = Math.floor(i / map.width);
+        const px = ox + x * cell;
+        const py = oy + y * cell;
+        if (!reach.has(i - map.width)) { g.moveTo(px, py); g.lineTo(px + cell, py); }
+        if (!reach.has(i + map.width)) { g.moveTo(px, py + cell); g.lineTo(px + cell, py + cell); }
+        if (x === 0 || !reach.has(i - 1)) { g.moveTo(px, py); g.lineTo(px, py + cell); }
+        if (x === map.width - 1 || !reach.has(i + 1)) { g.moveTo(px + cell, py); g.lineTo(px + cell, py + cell); }
+      }
+      g.stroke();
+      g.restore();
+    }
+    if (active) {
+      const pos = shown.current.get(active.id) ?? active;
+      const s = active.size ?? 1;
+      const cx = ox + (pos.x + s / 2) * cell;
+      const cy = oy + (pos.y + s / 2) * cell;
+      const pulse = reducedMotion ? 0 : (Math.sin(time * 3) + 1) / 2;
+      const grad = g.createRadialGradient(cx, cy, cell * s * 0.3, cx, cy, cell * s * (0.85 + pulse * 0.15));
+      grad.addColorStop(0, accent + "aa");
+      grad.addColorStop(1, accent + "00");
+      g.fillStyle = grad;
+      g.beginPath();
+      g.arc(cx, cy, cell * s, 0, Math.PI * 2);
+      g.fill();
     }
 
     // Pions
@@ -363,7 +452,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     // Vignette : les bords de l'écran s'assombrissent comme sous une lampe.
     const vg = g.createRadialGradient(w / 2, h / 2, Math.min(w, h) * 0.35, w / 2, h / 2, Math.max(w, h) * 0.75);
     vg.addColorStop(0, "rgba(0,0,0,0)");
-    vg.addColorStop(1, "rgba(0,0,0,.55)");
+    vg.addColorStop(1, room.combat ? "rgba(0,0,0,.75)" : "rgba(0,0,0,.55)");
     g.fillStyle = vg;
     g.fillRect(0, 0, w, h);
   }

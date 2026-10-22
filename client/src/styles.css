@@ -414,3 +414,64 @@ textarea.input { resize: vertical; min-height: 70px; }
   .cc-stat { grid-template-columns: 1fr auto 24px 30px 30px; }
 }
 .sheet-portrait { float: right; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 2px solid var(--brass); box-shadow: 0 3px 10px #0007; margin: 0 0 6px 10px; }
+
+/* ---------- Ouverture du combat : le sceau de cire ---------- */
+.combat-intro { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; cursor: pointer; animation: ci-out 2.9s forwards; }
+.ci-vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, #0000 0%, #000c 70%, #000 100%), var(--grain); animation: ci-dark .35s ease-out both; }
+.ci-seal { position: relative; width: min(46vmin, 360px); filter: drop-shadow(0 18px 30px #000c); animation: ci-stamp .42s cubic-bezier(.2,.9,.3,1.2) both, ci-shake .22s .38s linear; }
+.ci-half { transition: none; }
+.ci-left { animation: ci-split-l .7s 1.25s cubic-bezier(.5,0,.8,.4) forwards; transform-origin: 30% 50%; }
+.ci-right { animation: ci-split-r .7s 1.25s cubic-bezier(.5,0,.8,.4) forwards; transform-origin: 70% 50%; }
+.ci-crack { stroke-dasharray: 220; stroke-dashoffset: 220; animation: ci-crack .25s 1s ease-in forwards, ci-fade .3s 1.3s forwards; }
+.ci-title { position: absolute; text-align: center; opacity: 0; animation: ci-title .8s 1.35s cubic-bezier(.2,.8,.2,1) forwards; padding: 0 16px; }
+.ci-kicker { font-family: var(--display); color: var(--brass); letter-spacing: .5em; text-transform: uppercase; font-size: clamp(12px, 1.6vw, 16px); }
+.ci-name { font-family: var(--display-deco); font-size: clamp(34px, 7vw, 84px); line-height: 1.05; margin: 6px 0; }
+.ci-sub { font-family: var(--body); font-style: italic; color: var(--accent-2); font-size: clamp(14px, 1.8vw, 20px); opacity: .9; }
+@keyframes ci-dark { from { opacity: 0; } }
+@keyframes ci-stamp { from { transform: scale(3.2) rotate(-14deg); opacity: 0; } 70% { opacity: 1; } to { transform: scale(1) rotate(-4deg); } }
+@keyframes ci-shake { 25% { translate: -6px 3px; } 50% { translate: 5px -4px; } 75% { translate: -3px 2px; } }
+@keyframes ci-crack { to { stroke-dashoffset: 0; } }
+@keyframes ci-fade { to { opacity: 0; } }
+@keyframes ci-split-l { to { transform: translate(-60%, 12%) rotate(-28deg); opacity: 0; } }
+@keyframes ci-split-r { to { transform: translate(60%, 18%) rotate(32deg); opacity: 0; } }
+@keyframes ci-title { from { opacity: 0; transform: scale(.86); letter-spacing: .2em; filter: blur(6px); } to { opacity: 1; transform: none; letter-spacing: normal; filter: none; } }
+@keyframes ci-out { 0%, 86% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) {
+  .ci-seal, .ci-left, .ci-right, .ci-crack { animation: none; }
+  .ci-seal { opacity: 0; }
+  .ci-title { animation: ci-dark .3s forwards; opacity: 1; }
+}
+
+/* ---------- Frise d'initiative ---------- */
+.frieze { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; align-items: center; gap: 10px; max-width: calc(100% - 24px);
+  padding: 8px 12px; background: linear-gradient(180deg, #000000d0, #000000a0); border: 1px solid var(--panel-edge); border-radius: 10px; box-shadow: 0 8px 24px #000a, inset 0 1px 0 #ffffff14; animation: frieze-in .5s 1.8s both; }
+.frieze-round { display: grid; text-align: center; font-family: var(--display); color: var(--brass); line-height: 1; padding-right: 10px; border-right: 1px solid var(--panel-edge); }
+.frieze-round span { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; opacity: .8; }
+.frieze-round b { font-size: 22px; }
+.frieze-list { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; overflow-x: auto; scrollbar-width: thin; }
+.frieze-item { display: grid; justify-items: center; width: 64px; flex: none; opacity: .72; transition: opacity .3s, transform .3s; }
+.frieze-item.current { opacity: 1; transform: translateY(2px) scale(1.08); }
+.frieze-item.down { opacity: .35; filter: grayscale(1); }
+.frieze-medal { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; overflow: hidden; border: 2px solid #0008; box-shadow: 0 0 0 1px var(--panel-edge), 0 2px 6px #000a;
+  font-family: var(--display); font-weight: 700; color: #fff; text-shadow: 0 1px 2px #000; font-size: 14px; }
+.frieze-medal img { width: 100%; height: 100%; object-fit: cover; }
+.frieze-item.foe .frieze-medal { box-shadow: 0 0 0 1px var(--blood), 0 2px 6px #000a; }
+.frieze-item.current .frieze-medal { box-shadow: 0 0 0 2px var(--brass), 0 0 14px var(--glow); }
+.frieze-name { font-size: 11px; max-width: 64px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); margin-top: 3px; }
+.frieze-meta { font-size: 10px; color: var(--text-soft, #bbb); white-space: nowrap; max-width: 64px; overflow: hidden; text-overflow: ellipsis; }
+.frieze-actions { display: flex; gap: 4px; padding-left: 10px; border-left: 1px solid var(--panel-edge); }
+.frieze-yours { font-family: var(--display); color: var(--brass); padding-left: 10px; border-left: 1px solid var(--panel-edge); white-space: nowrap; animation: frieze-glow 1.6s ease-in-out infinite alternate; }
+@keyframes frieze-in { from { opacity: 0; transform: translate(-50%, -16px); } }
+@keyframes frieze-glow { to { text-shadow: 0 0 10px var(--glow); } }
+@media (max-width: 720px) { .frieze { top: 6px; gap: 6px; padding: 6px 8px; } .frieze-item { width: 50px; } .frieze-round { display: none; } }
+
+/* ---------- Bestiaire du MJ ---------- */
+.beast-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; max-height: 52vh; overflow-y: auto; }
+.beast-row { display: flex; align-items: center; gap: 8px; width: 100%; padding: 6px 8px; background: #ffffff08; border: 1px solid transparent; border-radius: 6px; color: var(--text); font: inherit; text-align: left; cursor: pointer; }
+.beast-row:hover, .beast-row[aria-expanded="true"] { border-color: var(--panel-edge); background: #ffffff10; }
+.beast-row i { width: 10px; height: 10px; border-radius: 50%; flex: none; box-shadow: 0 0 0 1px #0008; }
+.beast-name { flex: 1; }
+.beast-cr { font-family: var(--display); color: var(--brass); font-size: 13px; min-width: 28px; text-align: right; }
+.beast-hard .beast-row { opacity: .55; }
+.beast-detail { padding: 6px 10px 10px 26px; display: grid; gap: 4px; }
+.beast-detail p { margin: 0; }
