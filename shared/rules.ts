@@ -29,6 +29,18 @@ export interface CharacterClass {
   skills: { choose: number; from: string[] };
   startingGear: string[];
   powers: Power[];
+  /** Nom de la sous-classe dans cette classe : « Serment », « Patron », « Voie primitive »… */
+  subclassTitle: string;
+  /** Choisie au niveau donné par `subclassLevel()` (shared/origins.ts). */
+  subclasses: Subclass[];
+}
+
+export interface Subclass {
+  id: string;
+  name: string;
+  pitch: string; // une phrase pour la carte du créateur
+  description: string;
+  powers: Power[];
 }
 
 export interface RuleSection {
@@ -191,7 +203,9 @@ export const CORE_RULES: RuleSection[] = [
 
 const P = (level: number, name: string, action: ActionType, recharge: Recharge, effect: string, extra: Partial<Power> = {}): Power => ({ level, name, action, recharge, effect, ...extra });
 
-export const CLASSES: CharacterClass[] = [
+type BaseClass = Omit<CharacterClass, "subclassTitle" | "subclasses">;
+
+const BASE_CLASSES: BaseClass[] = [
   {
     id: "fantasy-guerrier",
     genre: "fantasy",
@@ -448,7 +462,7 @@ export const CLASSES: CharacterClass[] = [
     skills: { choose: 2, from: ["Arcanes / Savoir", "Intuition", "Intimidation", "Persuasion", "Tromperie", "Histoire"] },
     startingGear: ["Arbalète légère et 20 carreaux", "Deux dagues", "Éclat de verre rouge (focaliseur)", "Sac d'explorateur"],
     powers: [
-      P(1, "Lignée", "passif", "passif", "D'où vient ton pouvoir : Draconique (CA 13 + Dextérité sans armure, +1 PV par niveau, ton élément est feu, froid ou foudre), Sauvage (sur un 1 au d20 d'un pouvoir, le MJ choisit un effet imprévu ; une fois par repos long, avantage à un jet) ou Sang gris (résistance nécrotique, ton élément est nécrotique, et tu entends parfois une voix aimable)."),
+      P(1, "Lignée", "passif", "passif", "Ton pouvoir vient du sang, pas des livres. Ta lignée, choisie dès le niveau 1, fixe ton élément, celui de l'Éclat, de la Gerbe et de l'Éclair, et ce qu'elle a laissé dans ton corps."),
       P(1, "Éclat", "action", "à volonté", "Attaque à distance : 1d10 de ton élément (2d10 au niveau 5, 3d10 au 11, 4d10 au 17).", { range: "36 m" }),
       P(1, "Gerbe", "action", "repos long", "Cône de 4,5 m : 3d6 de ton élément, moitié si sauvegarde de Dextérité réussie.", { uses: 2 }),
       P(2, "Métamagie", "passif", "repos long", "Points de sorcellerie égaux à ton niveau. Accélération (2 points : un pouvoir qui prend une action se lance en action bonus), Jumelage (1 point : un pouvoir à cible unique en vise une deuxième), Prudence (1 point : tes alliés réussissent d'office la sauvegarde contre ta zone), Mutation (1 point : change le type de dégâts)."),
@@ -473,7 +487,7 @@ export const CLASSES: CharacterClass[] = [
     skills: { choose: 2, from: ["Arcanes / Savoir", "Histoire", "Intimidation", "Investigation", "Tromperie", "Intuition"] },
     startingGear: ["Arbalète légère et 20 carreaux", "Deux dagues", "Armure de cuir", "Un objet qui appartenait à un mort (focaliseur)", "Sac d'érudit"],
     powers: [
-      P(1, "Patron", "passif", "passif", "Qui t'a parlé en premier : la Dame des Carrefours (une fois par repos court, quand on te touche, tu deviens invisible jusqu'à ton prochain tour), un saint que l'Église a oublié (une fois par repos long, réserve de 1d6 × niveau PV à rendre d'une action bonus) ou une voix qui a celle d'un proche mort (télépathie à 9 m ; seul le MJ sait qui parle vraiment)."),
+      P(1, "Patron", "passif", "passif", "Une voix t'a parlé la première et tu lui as répondu. Ton patron, choisi dès le niveau 1, te donne ses premiers dons dès le niveau 1. Le MJ sait qui parle vraiment ; toi, pas toujours."),
       P(1, "Décharge occulte", "action", "à volonté", "Attaque à distance : 1d10 force. Un rayon de plus aux niveaux 5, 11 et 17, sur la même cible ou sur d'autres.", { range: "36 m" }),
       P(1, "Maléfice", "action bonus", "repos court", "Pendant 1 heure : +1d6 nécrotique à chaque coup contre la cible, et désavantage à ses tests d'une caractéristique au choix. Si elle meurt, tu passes le maléfice à une autre en action bonus.", { uses: 2, range: "27 m" }),
       P(2, "Faveurs", "passif", "passif", "Deux faveurs du patron (une de plus aux niveaux 5, 9, 13 et 17) : Décharge repoussante (repousse de 3 m), Décharge vorace (+Charisme aux dégâts), Yeux de nuit (vision dans le noir, même magique), Mille visages (déguisement à volonté), Voix volée (tu imites une voix entendue une fois)."),
@@ -536,6 +550,431 @@ export const CLASSES: CharacterClass[] = [
     ],
   },
 ];
+
+// --- Sous-classes ---
+// Deux par classe. Le niveau d'entrée suit subclassLevel() (shared/origins.ts) ; les pouvoirs suivants
+// tombent sur les niveaux que la table de base laisse vides, en suivant le rythme de la 5e.
+
+const SUBCLASSES: Record<string, { title: string; list: Subclass[] }> = {
+  "fantasy-guerrier": {
+    title: "École d'armes",
+    list: [
+      {
+        id: "guerrier-veteran-des-neuf-cents",
+        name: "Vétéran des Neuf Cents",
+        pitch: "Trente hivers sur le Mur, et il frappe toujours au même endroit : là où ça casse.",
+        description: "Les forts du Mur des Neuf Cents forment des soldats qui ne font rien de compliqué. Ils frappent juste, marchent loin et dorment debout. Pas de botte secrète : des années de répétition, jusqu'à ce que chaque coup trouve le défaut de l'armure.",
+        powers: [
+          P(3, "Coup qui porte", "passif", "passif", "Tes attaques d'arme font un coup critique sur 19 ou 20."),
+          P(7, "Pas de marche", "passif", "passif", "Ajoute la moitié de ta maîtrise aux tests de Force, de Dextérité et de Constitution que tu ne maîtrises pas. Tu peux marcher une journée et une nuit d'affilée sans prendre d'épuisement."),
+          P(10, "Deuxième garde", "passif", "passif", "Choisis un deuxième style de combat parmi ceux du guerrier."),
+          P(15, "Coup qui tranche", "passif", "passif", "Tes attaques d'arme font un coup critique sur 18, 19 ou 20."),
+        ],
+      },
+      {
+        id: "guerrier-garde-du-seuil",
+        name: "Garde du Seuil",
+        pitch: "On lui a appris à tenir une porte. Pour lui, tout le reste est une porte aussi.",
+        description: "La Garde du Seuil veille sur la Rotonde d'Aube-Close depuis six siècles. Ses hommes ne poursuivent jamais personne : ils restent devant, bouclier levé, et ce qui veut passer doit passer sur eux. Depuis le Glas, la Garde repousse les Levés à la fourche dans les fossés de chaux, et ses vétérans se louent cher.",
+        powers: [
+          P(3, "Fermer la porte", "passif", "à volonté", "Une créature que tu touches avec une attaque d'opportunité tombe à vitesse 0 jusqu'à la fin du tour. Se désengager ne l'empêche pas de provoquer ton attaque d'opportunité."),
+          P(7, "Bouclier levé", "réaction", "à volonté", "Avec un bouclier au bras : une créature que tu vois attaque un allié à 1,5 m de toi. Elle a le désavantage à cette attaque."),
+          P(10, "Derrière moi", "passif", "passif", "Les alliés à 1,5 m de toi gagnent +1 à la CA et aux sauvegardes de Dextérité tant que tu n'es pas neutralisé."),
+          P(15, "Personne ne passe", "action bonus", "repos long", "Pendant 1 minute, tu tiens une ligne de trois cases devant toi. Une créature qui veut la franchir fait une sauvegarde de Force ; si elle la rate, elle s'arrête là. Qu'elle passe ou non, tu l'attaques une fois sans dépenser ta réaction (une fois par créature et par tour).", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-magicien": {
+    title: "Discipline",
+    list: [
+      {
+        id: "magicienne-main-de-braise",
+        name: "Main de braise",
+        pitch: "Elle sait exactement où s'arrête sa boule de feu, au pouce près, et elle ne te le dira pas.",
+        description: "La discipline du feu tenu en laisse. Les Peseurs la jugent gaspilleuse, les légions d'Hersende la paient au mois. Une main de braise apprend d'abord à ne pas brûler les siens, ensuite à brûler tout le reste.",
+        powers: [
+          P(2, "Zone épargnée", "passif", "à volonté", "Quand tu lances un pouvoir de zone, choisis jusqu'à 1 + ton Intelligence créatures que tu vois : elles réussissent la sauvegarde d'office et ne subissent aucun dégât."),
+          P(6, "Braise qui colle", "passif", "passif", "Quand ton Trait de feu rate, la cible subit quand même des dégâts de feu égaux à ton Intelligence. Quand une créature réussit sa sauvegarde contre l'un de tes pouvoirs de dégâts, elle en subit quand même la moitié, même si le pouvoir ne le prévoit pas."),
+          P(10, "Feu nourri", "passif", "passif", "Ajoute ton Intelligence à un jet de dégâts de chacun de tes pouvoirs de magicienne."),
+          P(14, "Pousser la flamme", "passif", "repos long", "Sur un pouvoir de niveau 5 ou moins, compte chaque dé de dégâts à son maximum. Tu peux recommencer avant ton repos long, mais chaque fois de plus te coûte 2d12 nécrotique par fois déjà utilisée, que rien ne réduit.", { uses: 1 }),
+        ],
+      },
+      {
+        id: "magicienne-peseuse",
+        name: "Peseuse de la Tour",
+        pitch: "Elle tient le compte de chaque sort lancé dans sa vie. Du tien aussi, si tu restes assez longtemps.",
+        description: "On entre chez les Peseurs par une passerelle au troisième étage d'une tour sans porte. On en sort avec une balance de laiton au cou et un registre qu'on remplit jusqu'à sa mort. La Peseuse ne lance pas plus de sorts que les autres : elle sait mieux ce qu'ils coûtent, et comment faire payer ceux des autres.",
+        powers: [
+          P(2, "Balance de laiton", "passif", "passif", "Tu sens tout pouvoir lancé à 18 m de toi, sa direction, et s'il est puissant (pouvoir de niveau 5 ou plus). Dans Aubreterre, tu sais chaque fois que le MJ gagne un Murmure à cette distance."),
+          P(6, "Contrepoids", "réaction", "repos court", "Une créature à 18 m lance un pouvoir : fais un test d'Intelligence (tu ajoutes ta maîtrise) contre DD 10 + son niveau ou son FP. Si tu réussis, le pouvoir échoue et l'utilisation est perdue.", { uses: 1, range: "18 m" }),
+          P(10, "Tare", "passif", "passif", "Avantage aux sauvegardes contre les pouvoirs, et résistance aux dégâts qu'ils infligent."),
+          P(14, "Le grand registre", "action", "repos long", "Tu poses ta balance au sol. Pendant 1 minute, dans une sphère de 9 m autour d'elle, un ennemi qui lance un pouvoir subit 4d10 force et fait une sauvegarde de Constitution : s'il la rate, le pouvoir échoue. Tes propres pouvoirs n'y donnent aucun Murmure.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-voleur": {
+    title: "Spécialité",
+    list: [
+      {
+        id: "voleur-coupe-bourse",
+        name: "Coupe-bourse de Port-Lagune",
+        pitch: "Il a appris le métier sur des passerelles qui bougent, au-dessus d'une eau qui pue la saumure.",
+        description: "À Port-Lagune, les rues sont des canaux et les toits se touchent. Les coupe-bourses y grimpent mieux que les chats et volent la chevalière d'un armateur pendant qu'il serre la main de quelqu'un d'autre. Un vrai voleur, à l'ancienne : vite dedans, vite dehors.",
+        powers: [
+          P(3, "Pieds de pilotis", "passif", "passif", "Grimper ne te coûte pas de déplacement en plus. Tes sauts gagnent 30 cm par point de Dextérité. Une passerelle qui bouge, un pont mouillé ou un toit d'ardoise ne te font jamais tomber."),
+          P(7, "Pas de bruit", "passif", "passif", "Avantage aux tests de Discrétion si tu ne parcours pas plus de la moitié de ta vitesse ce tour-ci."),
+          P(11, "Lire les sceaux", "passif", "passif", "Tu utilises n'importe quel objet magique ou parchemin, quelle que soit la classe qu'il demande. Au toucher, tu reconnais un faux sceau de la Hanse, de l'Église ou de la Chancellerie."),
+          P(15, "Premier dans la pièce", "passif", "passif", "Au premier round d'un combat, tu joues deux tours : le premier à ton initiative, le second à ton initiative moins 10."),
+        ],
+      },
+      {
+        id: "voleur-plume-muette",
+        name: "Plume muette",
+        pitch: "Elle n'écrit jamais « je ». Elle écrit ce que tu as fait mardi soir, et à qui.",
+        description: "La Chancellerie Muette n'existe plus, officiellement. Ses agents ont le pouce taché d'encre violette et des dossiers sur tout le monde. Ils forgent des laissez-passer, apprennent les secrets et frappent quand l'autre ne regarde plus. Ils citent le Code en tranchant une gorge.",
+        powers: [
+          P(3, "Faussaire", "passif", "passif", "Maîtrise du nécessaire de faussaire et du nécessaire de déguisement. Tu imites une écriture vue une fois. En une heure, tu fabriques un laissez-passer qu'un garde ordinaire accepte sans test."),
+          P(7, "Dossier", "action", "repos court", "Une minute à observer ou à faire parler une créature hors combat. Le MJ te dit sa sauvegarde la plus faible et une chose qu'elle veut cacher. Pendant 1 heure, avantage aux tests de Persuasion, de Tromperie et d'Intimidation contre elle.", { uses: 2 }),
+          P(11, "Faux témoin", "réaction", "repos court", "Une créature à 9 m va t'attaquer : oppose ta Tromperie à son Intuition. Si tu gagnes, elle doit choisir une autre cible, ou perdre l'attaque s'il n'y en a pas.", { uses: 2, range: "9 m" }),
+          P(15, "Rayé des registres", "action", "repos long", "Pendant 8 heures, aucune magie ne te trouve ni ne lit tes pensées, et ceux qui t'ont vu oublient ton visage dès que tu sors de leur vue. Pendant ce temps, ton attaque sournoise fait +2d6 contre une créature qui ne t'a pas vu avant ce tour.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-clerc": {
+    title: "Domaine",
+    list: [
+      {
+        id: "clerc-battoir-de-sainte-mauve",
+        name: "Battoir de Sainte Mauve",
+        pitch: "Les manches retroussées au-dessus du coude, même en janvier, et les mains rouges d'eau froide.",
+        description: "Sainte Mauve a lavé les corps d'une épidémie entière sans tomber malade. Ses clercs soignent les vivants, lavent les morts et ne demandent à personne de quel camp il vient. Les Veilleuses les prient d'entrer dans les fermes. Leur symbole est un battoir de bois, et ils savent s'en servir.",
+        powers: [
+          P(1, "Eau de lavoir", "passif", "passif", "Maîtrise des armures lourdes. Quand tu rends des PV avec un pouvoir, la cible récupère en plus 2 + la moitié de ton niveau."),
+          P(6, "Laver l'autre", "passif", "passif", "Quand tu rends des PV à une autre créature, tu récupères toi aussi 1d6 PV."),
+          P(10, "Jamais malade", "passif", "passif", "Immunisé aux maladies. Une fois par tour, tes attaques d'arme font +1d8 radiant (2d8 au niveau 14)."),
+          P(14, "Les mains suffisent", "passif", "passif", "Quand tu rends des PV avec un pouvoir, compte chaque dé à son maximum."),
+        ],
+      },
+      {
+        id: "clerc-ruban-de-saint-ruben",
+        name: "Ruban de Saint Ruben",
+        pitch: "Son saint est mort deux fois. Il sait comment on s'y prend, et comment on revient.",
+        description: "Ruben est mort au gibet, revenu trois jours après, et il a passé un an à enterrer les autres avant de se recoucher de lui-même. Un évêque l'a canonisé en secret. L'Église déclare son culte hérétique, les Rendus le prient. Ses clercs portent un ruban noir au poignet et se tiennent au bord de la tombe, du côté des vivants.",
+        powers: [
+          P(1, "Au bord du trou", "action bonus", "à volonté", "Une créature à 0 PV à 9 m se stabilise. Tu sens à 18 m les créatures à 0 PV, les morts-vivants et les Rendus.", { range: "9 m" }),
+          P(6, "Pas encore", "réaction", "repos long", "Un allié à 9 m tombe à 0 PV sans mourir sur le coup : il reste à 1 PV.", { uses: 1, range: "9 m" }),
+          P(10, "Ce qui ne se relève pas", "passif", "passif", "Une créature qui meurt à 9 m de toi ne se relève pas en mort-vivant. Une fois par tour, quand tu touches une créature qui a perdu plus de la moitié de ses PV, +2d8 nécrotique."),
+          P(14, "Revenir une fois", "action", "repos long", "Au toucher, tu ramènes une créature morte depuis moins de 10 minutes, avec 1 PV. Dans Aubreterre, elle revient sans Cicatrice du Dessous, ou comme Rendue si son joueur le préfère.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-rodeur": {
+    title: "Piste",
+    list: [
+      {
+        id: "rodeuse-pisteuse-des-marches",
+        name: "Pisteuse des Marches",
+        pitch: "Au dégel, elle compte les os qui remontent, et elle sait lesquels marchent encore en rang.",
+        description: "Les collines des Marches de Fer rendent chaque printemps des légions entières de morts. Les pisteuses vont devant les colonnes d'Hersende, repèrent les rangs et frappent les gros d'abord. Elles chassent ce qui est nombreux et ce qui est grand, et elles se battent dans la bruyère mouillée sans jamais glisser.",
+        powers: [
+          P(3, "Fendre le rang", "passif", "à volonté", "Une fois par tour, +1d8 dégâts à une créature qui n'a plus tous ses PV."),
+          P(7, "Pas dans la boue", "passif", "passif", "Le terrain difficile non magique ne te ralentit pas. Les attaques d'opportunité contre toi ont le désavantage."),
+          P(11, "Tailler dans la masse", "passif", "à volonté", "Quand tu prends l'action Attaquer, une attaque de plus contre une autre créature à 1,5 m de ta première cible (ou à 3 m d'elle si tu tires)."),
+          P(15, "Lire le coup", "réaction", "à volonté", "Une attaque que tu vois te touche : tu divises ses dégâts par deux."),
+        ],
+      },
+      {
+        id: "rodeuse-passeuse-des-noyes",
+        name: "Passeuse des Noyes",
+        pitch: "Elle connaît les planches qui tiennent, et celles qu'on a posées pour que tu tombes.",
+        description: "Dans les tourbières de l'ouest, on circule sur des passerelles que la brume efface. Les passeuses guident les voyageurs pour quelques pièces et une prière à la Mère Tourbe. Depuis que les Noyés sortent de l'eau, elles se battent aussi. Elles se battent mieux dans l'eau noire que n'importe qui sur la terre ferme.",
+        powers: [
+          P(3, "Brume au ras des joncs", "action bonus", "repos court", "Un banc de brume de 6 m de rayon autour de toi pendant 1 minute : on n'y voit rien. Toi, tu y vois à 9 m.", { uses: 2 }),
+          P(7, "Eau noire", "passif", "passif", "Vitesse de nage égale à ta vitesse. Tu retiens ton souffle 10 minutes. Avantage aux tests pour échapper à une prise ou à des liens."),
+          P(11, "Tirer sous l'eau", "passif", "à volonté", "Une fois par tour, quand tu touches une créature : sauvegarde de Force ou elle tombe à terre. Si elle a de l'eau ou de la boue jusqu'aux chevilles, elle est aussi entravée jusqu'à ton prochain tour."),
+          P(15, "Ce que la tourbe garde", "action", "repos long", "Pendant 1 minute, le sol dans un rayon de 6 m devient tourbière. Terrain difficile pour tes ennemis. Ceux qui y commencent leur tour subissent 3d8 contondant et font une sauvegarde de Force ou sont entravés jusqu'au suivant.", { uses: 1, range: "27 m" }),
+        ],
+      },
+    ],
+  },
+  "fantasy-barde": {
+    title: "Répertoire",
+    list: [
+      {
+        id: "barde-recitante-du-code",
+        name: "Récitante du Code",
+        pitch: "Neuf cents articles par cœur, et au moins un pour chaque occasion de te faire taire.",
+        description: "À Aube-Close, les juges récitent le Code d'Ostral sans le lire. Certains en ont fait un art : ils plaident, ils citent, ils coupent la parole au bon moment. La récitante sait un peu de tout et le dit mieux que tout le monde. Article 312 : on ne discute pas le prix d'un chou.",
+        powers: [
+          P(3, "Couper la parole", "réaction", "à volonté", "Une créature à 18 m fait un jet d'attaque, un test ou un jet de dégâts : dépense une Inspiration et soustrais son dé au résultat.", { range: "18 m" }),
+          P(6, "Jurisprudence", "passif", "passif", "Choisis deux pouvoirs à utilisations limitées d'autres classes fantasy, d'un niveau égal ou inférieur à ton niveau moins 3. Ils deviennent des pouvoirs de barde et utilisent ton Charisme."),
+          P(10, "Citer l'article", "action", "repos court", "Jusqu'à trois créatures à 18 m qui te comprennent : sauvegarde de Sagesse ou elles obéissent à un ordre d'un mot (« Fuis », « Lâche », « À genoux ») à leur prochain tour.", { uses: 1, range: "18 m" }),
+          P(14, "Le mot juste", "passif", "à volonté", "Quand tu fais un test de caractéristique, tu peux dépenser une Inspiration et ajouter son dé au résultat, même après avoir vu le d20."),
+        ],
+      },
+      {
+        id: "barde-pleureuse-du-val",
+        name: "Pleureuse du Val",
+        pitch: "Elle chante aux veillées du Val Cierge, et les morts l'écoutent jusqu'au dernier couplet.",
+        description: "Dans le Val, on ne brûle personne : on veille, on chante, on attend la troisième nuit. Les pleureuses louent leur voix aux familles. Depuis le Glas, on a remarqué que les morts se tiennent tranquilles tant qu'elles chantent, et qu'ils ont l'air de les écouter.",
+        powers: [
+          P(3, "Complainte", "action", "repos court", "Autant de créatures que ton Charisme (au moins une), à 9 m, qui t'entendent : sauvegarde de Sagesse ou elles ne font que se déplacer jusqu'à la fin de leur prochain tour. Une créature blessée se réveille. Les morts-vivants ont le désavantage à cette sauvegarde.", { uses: 1, range: "9 m" }),
+          P(6, "Pleurer pour deux", "réaction", "à volonté", "Un allié à 9 m subit des dégâts : dépense une Inspiration et réduis ces dégâts de son dé + ton Charisme.", { range: "9 m" }),
+          P(10, "La voix des absents", "action", "repos long", "Tu chantes dix minutes au-dessus d'un mort. Il répond à cinq questions, en peu de mots. Dans Aubreterre, aucune phrase venue d'en bas ne se glisse dans ses réponses quand c'est toi qui demandes.", { uses: 1 }),
+          P(14, "Dernier couplet", "action", "repos long", "Pendant 1 minute, chaque allié à 9 m qui tombe à 0 PV reste à 1 PV (une fois chacun), et tes alliés ont l'avantage aux sauvegardes contre la peur et le charme.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-paladin": {
+    title: "Serment",
+    list: [
+      {
+        id: "paladin-serment-du-seuil",
+        name: "Serment du Seuil",
+        pitch: "Il garde une porte. Il ne sait pas ce qu'il y a derrière, et ça ne change rien.",
+        description: "Le serment le plus ancien de l'Église d'Ostral : se tenir entre ceux qu'on protège et ce qui vient. Le paladin du Seuil jure de ne jamais ouvrir une porte qu'on lui a confiée et de ne jamais laisser passer un mort. Depuis le Glas, beaucoup se demandent quelle porte leur dieu gardait.",
+        powers: [
+          P(3, "Arme consacrée", "action bonus", "repos court", "Pendant 1 minute, ajoute ton Charisme à tes jets d'attaque avec une arme. L'arme éclaire à 6 m.", { uses: 1 }),
+          P(7, "Seuil gardé", "passif", "passif", "Toi et les alliés à 3 m ne pouvez pas être charmés (30 m au niveau 18). Un allié déjà charmé ne l'est plus en entrant dans cette zone."),
+          P(15, "Porte close", "passif", "passif", "Les morts-vivants, démons, fées, élémentaires et célestes ont le désavantage pour te toucher, et ne peuvent ni te charmer, ni t'effrayer, ni te posséder."),
+          P(20, "La porte du Dieu", "action", "repos long", "Pendant 1 minute, une lumière vive de 9 m sort de toi. Un ennemi qui y commence son tour subit 10 radiant. Avantage à tes sauvegardes contre les pouvoirs des morts-vivants et des démons.", { uses: 1 }),
+        ],
+      },
+      {
+        id: "paladin-serment-de-saint-brac",
+        name: "Serment de Saint Brac",
+        pitch: "Il a juré sur un clou à tête carrée, et il garde le clou entre les dents quand il se bat.",
+        description: "Saint Brac a forgé, dit-on, les clous qui tiennent la couronne de fer sur la tête du Dieu. Ses paladins sont des forgerons, des légionnaires, parfois des maîtres-cloueurs de la Confrérie. Ils jurent de fixer ce qui doit rester en place : un mort dans sa tombe, un ennemi sur le sol, une parole donnée.",
+        powers: [
+          P(3, "Clou de Brac", "action bonus", "repos court", "Tu plantes un clou dans le sol près d'une créature que tu vois. Pendant 1 minute, elle ne peut pas s'éloigner à plus de 9 m du clou (sauvegarde de Force à la fin de chacun de ses tours pour l'arracher), et tes attaques contre elle font +1d6 radiant.", { uses: 1, range: "9 m" }),
+          P(7, "Fer de forge", "passif", "passif", "Tes armes au contact comptent comme magiques et en fer froid. Toi et les alliés à 3 m avez la résistance aux dégâts nécrotiques (30 m au niveau 18)."),
+          P(15, "Enclume", "passif", "passif", "Tant que tu portes une armure lourde, tu as la résistance aux dégâts contondants, perforants et tranchants."),
+          P(20, "Forgé debout", "action", "repos long", "Pendant 1 minute : +2 à la CA, résistance à tous les dégâts sauf psychiques, et chaque créature que tu touches au contact fait une sauvegarde de Force ou reste clouée sur place (vitesse 0) jusqu'à la fin de son prochain tour.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-druide": {
+    title: "Cercle",
+    list: [
+      {
+        id: "druide-cercle-de-la-mere-tourbe",
+        name: "Cercle de la Mère Tourbe",
+        pitch: "Elle croit que les morts doivent redevenir de la terre. Elle donne un coup de main.",
+        description: "La Mère Tourbe n'a ni temple ni prêtres, seulement des vieilles qui vivent sur pilotis dans les Noyes. Ses druides servent la pluie et ce qui pourrit pour faire pousser. Ils détestent les Levés, non par peur, mais parce qu'un mort debout, c'est un mort qui refuse de nourrir le sol.",
+        powers: [
+          P(2, "Ce qui pourrit fait pousser", "passif", "à volonté", "Quand une créature meurt à 9 m de toi, toi ou un allié à 9 m récupère 1d8 PV (une fois par tour). D'une action, au toucher, un cadavre tombe en terreau et ne se relève jamais."),
+          P(6, "Main de tourbe", "action", "repos court", "Une créature à 18 m : 2d8 contondant et sauvegarde de Force, ou elle est entravée par la boue jusqu'à la fin de ton prochain tour.", { uses: 2, range: "18 m" }),
+          P(10, "Peau de tourbe", "passif", "passif", "Résistance aux dégâts nécrotiques et de poison. Immunisé aux maladies."),
+          P(14, "Rendre à la terre", "action", "repos long", "Une créature à 18 m : sauvegarde de Constitution ou 10d8 nécrotique, moitié si elle réussit. Un mort-vivant tué ainsi devient une motte de terre noire, et une touffe de bruyère y pousse dans l'heure.", { uses: 1, range: "18 m" }),
+        ],
+      },
+      {
+        id: "druide-cercle-de-la-brune",
+        name: "Cercle de la Brune",
+        pitch: "Les chênes de la Brune ont la largeur d'une maison, et elle connaît chacun par son nom.",
+        description: "Les elfes de la Brune confient leurs morts aux arbres, qui les absorbent. Leurs druides gardent la mémoire des troncs et le chemin des clairières. Ils puisent leur force dans la forêt elle-même, et ils savent, mieux que personne, que certains arbres rendent depuis le Glas ce qu'ils avaient pris.",
+        powers: [
+          P(2, "Racines qui écoutent", "passif", "repos long", "Pendant un repos court, récupère une utilisation d'un pouvoir de druide de niveau 5 ou moins. Tu ne te perds jamais en forêt.", { uses: 1 }),
+          P(6, "Marche des sous-bois", "passif", "passif", "Le terrain difficile non magique ne te ralentit pas. Les ronces et les épines ne te blessent pas. Avantage aux sauvegardes contre les plantes animées ou ensorcelées."),
+          P(10, "Écorce", "action bonus", "repos court", "Pendant 1 heure, ta CA ne descend pas sous 16, même en forme sauvage.", { uses: 1 }),
+          P(14, "Pris dans le bois", "action", "repos long", "Un tronc jaillit sous une créature à 18 m : sauvegarde de Dextérité ou elle est enfermée dans le bois, entravée, et subit 4d10 contondant au début de chacun de ses tours pendant 1 minute. Sauvegarde de Force à la fin de chacun de ses tours pour sortir.", { uses: 1, range: "18 m" }),
+        ],
+      },
+    ],
+  },
+  "fantasy-barbare": {
+    title: "Voie primitive",
+    list: [
+      {
+        id: "barbare-berserker-des-marches",
+        name: "Berserker des Marches",
+        pitch: "Il a passé l'hiver sur le Mur avec une hache et sans manteau. Il n'a pas eu froid.",
+        description: "Les Marchois brûlent leurs morts et se battent dans le vent. Les berserkers des forts sont ceux qu'on envoie en premier quand les os remontent au dégel : ils entrent dans la mêlée en hurlant, ne reculent devant rien, et laissent derrière eux de quoi faire un bûcher.",
+        powers: [
+          P(3, "Fumée grasse", "passif", "passif", "Pendant ta rage : résistance au froid, et tes attaques au contact font +1d6 feu aux morts-vivants. Un mort-vivant que tu réduis à 0 PV s'embrase et ne se relève pas."),
+          P(6, "Rien dans la tête", "passif", "passif", "Pendant ta rage, tu ne peux être ni charmé ni effrayé. Un effet de ce genre déjà sur toi s'arrête le temps de la rage."),
+          P(10, "Cri du Mur", "action", "repos court", "Les créatures de ton choix à 9 m qui t'entendent : sauvegarde de Sagesse ou effrayées jusqu'à la fin de ton prochain tour. À chacun de tes tours, tu peux prolonger d'une action.", { uses: 1, range: "9 m" }),
+          P(14, "Coup pour coup", "réaction", "à volonté", "Pendant ta rage, une créature à 1,5 m te blesse : tu l'attaques au contact."),
+        ],
+      },
+      {
+        id: "barbare-fils-du-verre",
+        name: "Fils du Verre",
+        pitch: "Sa peau garde des éclats de verre rouge. Il a cessé de les retirer.",
+        description: "Les clans du Verre-Rouge racontent que le désert est né d'un combat entre deux géants de lumière. Certains enfants naissent avec du verre sous la peau. Quand ils entrent en rage, le verre chante comme les plaques des dunes, et on raconte qu'ils grandissent.",
+        powers: [
+          P(3, "Peau de verre", "passif", "passif", "Pendant ta rage, une créature qui te touche au contact subit 1d6 tranchant (2d6 au niveau 10, 3d6 au 14)."),
+          P(6, "Pieds dans le sable", "passif", "passif", "Résistance aux dégâts de feu, et la chaleur du désert ne te fatigue pas. Le sable et les éboulis ne te ralentissent pas. Pendant ta rage, rien ne te met à terre contre ton gré."),
+          P(10, "Chant du verre", "action bonus", "repos court", "Pendant ta rage : les créatures de ton choix à 3 m font une sauvegarde de Constitution ou subissent 3d8 tonnerre et sont assourdies jusqu'à la fin de ton prochain tour (moitié des dégâts sinon).", { uses: 1 }),
+          P(14, "Géant de lumière", "passif", "repos long", "Quand tu entres en rage, tu peux grandir d'une taille pour toute la rage : allonge de 3 m au contact, avantage en Force, et +1d8 radiant à chaque coup au contact.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-moine": {
+    title: "Règle",
+    list: [
+      {
+        id: "moine-main-ouverte",
+        name: "Main ouverte",
+        pitch: "Il n'a jamais tenu d'arme. Il n'a jamais perdu un combat non plus.",
+        description: "La règle la plus répandue des abbayes : le corps comme seule arme, le souffle comme seule réserve. Ses moines frappent pour déséquilibrer, renverser, repousser. Ils soignent leurs propres blessures en respirant, et on dit que les plus anciens ne marchent plus tout à fait sur le sol.",
+        powers: [
+          P(3, "Main ouverte", "passif", "à volonté", "Chaque frappe du Déluge de coups qui touche impose un choix : sauvegarde de Dextérité ou à terre, sauvegarde de Force ou repoussée de 4,5 m, ou plus de réaction jusqu'à la fin de ton prochain tour."),
+          P(6, "Paume qui soigne", "action", "repos long", "Tu récupères 3 × ton niveau PV.", { uses: 1 }),
+          P(11, "Tranquillité", "passif", "repos long", "Après un repos long, une créature qui veut t'attaquer ou te viser d'un pouvoir fait d'abord une sauvegarde de Sagesse ; si elle la rate, elle doit choisir une autre cible. L'effet s'arrête dès que tu attaques ou que tu blesses quelqu'un.", { uses: 1 }),
+          P(15, "Pas qui ne pèse pas", "passif", "passif", "Ton déplacement augmente de 3 m. Tu marches sur l'eau, sur la boue et sur les murs pendant ton tour sans tomber, et tu ignores le terrain difficile."),
+        ],
+      },
+      {
+        id: "moine-frere-du-silence",
+        name: "Frère du Silence du Val",
+        pitch: "Vingt ans sans dire un mot. Le jour où il crie, les vitraux de l'abbaye tombent.",
+        description: "Dans une abbaye blanche du Val Cierge, entre les ruches et les vignes, les frères du Silence ont fait vœu de ne plus parler. Ils mouchent les cierges du bout des doigts, passent sans bruit dans les couloirs et gardent tout ce qu'ils ont à dire pour un seul cri.",
+        powers: [
+          P(3, "Vœu de silence", "passif", "à volonté", "Tant que tu n'as pas parlé depuis ton dernier repos, avantage en Discrétion et en Intuition. Quand tu touches à mains nues, 1 point de souffle : la cible ne peut plus parler, ni lancer de pouvoir qui demande la voix, jusqu'à la fin de son prochain tour."),
+          P(6, "Moucher les cierges", "action bonus", "à volonté", "2 points de souffle : une sphère de 4,5 m de silence et de noir complet autour d'un point à 18 m, pendant 1 minute. Toi, tu y vois. Les flammes non magiques s'y éteignent.", { range: "18 m" }),
+          P(11, "Pas de cire", "action bonus", "à volonté", "1 point de souffle : tu passes d'une zone d'ombre ou de noir à une autre que tu vois, à 18 m, sans traverser l'espace entre les deux. Ta première attaque après ce pas a l'avantage.", { range: "18 m" }),
+          P(15, "Le cri", "action", "repos long", "Tu romps ton vœu. Cône de 9 m : 8d8 tonnerre et assourdis pendant 1 minute, moitié et pas assourdis si sauvegarde de Constitution réussie. Plus de Vœu de silence jusqu'à ton prochain repos long.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-ensorceleur": {
+    title: "Lignée",
+    list: [
+      {
+        id: "ensorceleuse-draconique",
+        name: "Draconique",
+        pitch: "Sa grand-mère gardait des écailles de wyverne dans une boîte à couture. Elle, elle les a sous la peau.",
+        description: "Une bête ailée des Monts Ossiers, quelque part dans l'arbre de famille, et personne n'en parle au repas. Le sang se voit : des écailles sur la nuque, des dents trop pointues, une chaleur qui monte quand elle s'énerve. Choisis ton élément : feu, froid ou foudre.",
+        powers: [
+          P(1, "Écailles", "passif", "passif", "Sans armure, ta CA vaut 13 + Dextérité. +1 PV par niveau. Ton élément est le feu, le froid ou la foudre, au choix, une fois pour toutes."),
+          P(6, "Sang qui chauffe", "passif", "passif", "Ajoute ton Charisme aux dégâts de tes pouvoirs de ton élément (un jet par pouvoir). 1 point de sorcellerie : résistance à ton élément pendant 1 heure."),
+          P(14, "Ailes", "action bonus", "à volonté", "Des ailes sortent de ton dos : vitesse de vol égale à ta vitesse, jusqu'à ce que tu les replies d'une action bonus. Pas d'ailes sous une armure qui ne leur laisse pas de place."),
+          P(18, "Regard de la bête", "action", "repos long", "Les créatures de ton choix à 18 m : sauvegarde de Sagesse ou charmées, ou effrayées, à ton choix, pendant 1 minute. Elles refont la sauvegarde à la fin de chacun de leurs tours.", { uses: 1, range: "18 m" }),
+        ],
+      },
+      {
+        id: "ensorceleuse-sang-gris",
+        name: "Sang gris",
+        pitch: "Tu entends parfois une voix aimable. Elle connaît ton prénom d'enfant.",
+        description: "Ça a commencé la nuit du Glas, ou ça a toujours été là et le Glas l'a réveillé. Tes veines sont grises sous la peau, tes mains froides, et ton pouvoir sent la terre retournée. Les Peseurs voudraient t'étudier. Les Veilleuses te regardent avec pitié. La voix, elle, est toujours gentille.",
+        powers: [
+          P(1, "Sang gris", "passif", "repos long", "Résistance aux dégâts nécrotiques. Ton élément est nécrotique. Une fois par repos long, quand tu tombes à 0 PV sans mourir sur le coup, tu restes à 1 PV. Dans Aubreterre, le MJ prend alors un Murmure.", { uses: 1 }),
+          P(6, "Ce qui nourrit", "passif", "passif", "Quand un de tes pouvoirs réduit une créature à 0 PV, tu gagnes des PV temporaires égaux à ton niveau + ton Charisme."),
+          P(14, "Peau froide", "passif", "passif", "Vision dans le noir à 36 m. Les morts-vivants sans esprit te prennent pour l'un des leurs et ne t'attaquent pas tant que tu ne les as pas attaqués."),
+          P(18, "La voix aimable", "action", "repos long", "Pendant 1 minute, tes pouvoirs ignorent la résistance aux dégâts nécrotiques et traitent l'immunité comme une résistance. Chaque créature que tu tues pendant ce temps se relève à ton service jusqu'à la fin de la minute, puis tombe en poussière. Dans Aubreterre, le MJ prend 2 Murmures.", { uses: 1 }),
+        ],
+      },
+    ],
+  },
+  "fantasy-occultiste": {
+    title: "Patron",
+    list: [
+      {
+        id: "occultiste-dame-des-carrefours",
+        name: "La Dame des Carrefours",
+        pitch: "Une pièce sous une pierre, à un croisement, la nuit. Elle a répondu, et elle a gardé la pièce.",
+        description: "Plus vieille que l'Empire, la Dame des Carrefours protège les colporteurs, les voleurs et les déserteurs. L'Église la tolère sans l'aimer. Ses occultistes ne restent jamais là où on les attend : ils changent de route, de visage, de place, et laissent leurs poursuivants au mauvais croisement.",
+        powers: [
+          P(1, "Pièce sous la pierre", "réaction", "repos court", "Une attaque te touche : tu deviens invisible jusqu'à la fin de ton prochain tour et tu te déplaces de la moitié de ta vitesse. En voyage, à chaque croisement, tu sais quelle route mène au danger.", { uses: 1 }),
+          P(6, "Deux chemins", "action bonus", "repos court", "Tu te téléportes à 9 m dans un endroit que tu vois, ou tu échanges ta place avec un allié consentant à 9 m. Ta prochaine attaque ce tour-ci a l'avantage.", { uses: 2, range: "9 m" }),
+          P(10, "Péage", "réaction", "repos court", "Une créature à 9 m se déplace vers toi : sauvegarde de Sagesse ou elle s'arrête, perd le reste de son déplacement et subit 3d6 psychique.", { uses: 2, range: "9 m" }),
+          P(14, "Le mauvais croisement", "action", "repos long", "Une créature à 18 m : sauvegarde de Charisme ou elle disparaît sur une route qui n'existe pas. Elle revient à la fin de ton prochain tour, à sa place ou à la plus proche libre, et subit 8d10 psychique.", { uses: 1, range: "18 m" }),
+        ],
+      },
+      {
+        id: "occultiste-defunt-aime",
+        name: "Le Défunt aimé",
+        pitch: "Ta mère est morte il y a trois hivers. Depuis, elle te parle tous les soirs.",
+        description: "La voix a celle d'un proche mort : un père, une sœur, un amour noyé. Elle sait des choses que seul ce proche savait. Elle t'aime, elle te protège, elle te demande parfois de petits services. Tu ne lui as jamais demandé comment elle est revenue. Le MJ sait qui parle vraiment.",
+        powers: [
+          P(1, "La voix", "passif", "repos long", "Télépathie à 9 m avec toute créature qui parle une langue. Une fois par repos long, la voix te souffle un conseil : avantage à un test de caractéristique.", { uses: 1 }),
+          P(6, "Main froide sur l'épaule", "réaction", "repos court", "Une créature attaque un allié à 9 m : elle entend la voix d'un de ses propres morts et a le désavantage. Si elle rate quand même, elle est effrayée jusqu'à la fin de son prochain tour.", { uses: 1, range: "9 m" }),
+          P(10, "Plus peur de rien", "passif", "passif", "Immunisé à l'état effrayé. Résistance aux dégâts nécrotiques. Personne ne lit tes pensées sans ton accord."),
+          P(14, "Viens me voir", "action", "repos long", "Une créature à 18 m : sauvegarde de Sagesse ou elle entend la voix d'un mort qu'elle a aimé. Pendant 1 minute, elle est charmée, ne fait que marcher vers toi, et subit 4d10 psychique à chaque tour où on l'en empêche. Dans Aubreterre, le MJ prend un Murmure.", { uses: 1, range: "18 m" }),
+        ],
+      },
+    ],
+  },
+  "fantasy-chasseur-de-morts": {
+    title: "Métier de loge",
+    list: [
+      {
+        id: "chasseur-bruleur",
+        name: "Brûleur",
+        pitch: "Ce qu'il ne cloue pas, il le brûle. Ce qu'il ne brûle pas, il le cloue deux fois.",
+        description: "Dans les loges du nord, on a appris des Marchois que le feu ne se trompe jamais. Les brûleurs sentent le goudron à trois rues, portent des gants de cuir roussi et se font maudire par les curés du Val. Ils s'en moquent : un tas de cendres ne se relève pas à la troisième nuit.",
+        powers: [
+          P(3, "Torche de loge", "action bonus", "à volonté", "Ton arme s'enflamme pendant 1 minute : +1d4 feu à chaque coup (1d6 au niveau 11). Un mort-vivant touché ne régénère pas jusqu'à ton prochain tour."),
+          P(7, "Goudron épais", "passif", "passif", "Ton Pot de goudron gagne une utilisation et un rayon de 4,5 m. Résistance aux dégâts de feu."),
+          P(11, "Bûcher", "passif", "à volonté", "Un mort-vivant que tu réduis à 0 PV éclate en flammes : 2d6 feu aux créatures à 1,5 m de lui, moitié si sauvegarde de Dextérité réussie."),
+          P(15, "Cendres", "action", "repos long", "Cône de feu de 9 m : 8d6 feu, moitié si sauvegarde de Dextérité réussie. Les morts-vivants ont le désavantage à cette sauvegarde, et ceux qu'elle tue ne se relèvent jamais.", { uses: 1 }),
+        ],
+      },
+      {
+        id: "chasseur-fossoyeur-de-loge",
+        name: "Fossoyeur de loge",
+        pitch: "Il creusait les fosses d'Aube-Close avant la Confrérie. Il les creuse toujours, en plus profond.",
+        description: "La Confrérie du Dernier Clou est née chez les fossoyeurs, la deuxième année du Glas. Les vieux du métier gardent leur pelle plutôt qu'un marteau. Ils connaissent les morts mieux que personne, savent les remettre en terre en une minute, et ouvrent le sol sous ceux qui refusent d'y rester.",
+        powers: [
+          P(3, "Pelle de fossoyeur", "passif", "à volonté", "Ta pelle est une arme de guerre en fer froid (1d8 tranchant, 1d10 à deux mains). Tu creuses une fosse d'1,5 m en une minute. Une fois par tour, quand tu touches au contact : sauvegarde de Force ou la cible tombe à terre."),
+          P(7, "Six pieds", "action", "repos court", "Tu ouvres le sol sous une créature à 1,5 m : sauvegarde de Dextérité ou elle tombe dans une fosse de 3 m, subit 1d6 contondant et reste entravée jusqu'à ce qu'elle en sorte (Athlétisme contre le DD de tes pouvoirs, une action).", { uses: 1 }),
+          P(11, "Connaître les morts", "passif", "passif", "Au toucher d'un cadavre, tu sais comment il est mort et tu vois ses six dernières secondes. Avantage aux sauvegardes contre les pouvoirs des morts-vivants."),
+          P(15, "La fosse commune", "action", "repos long", "Carré de 6 m : le sol s'effondre. Chaque créature : sauvegarde de Dextérité ou 6d10 contondant, enterrée et entravée, moitié et rien d'autre si elle réussit. Un mort-vivant enterré ainsi ne remonte pas avant 24 heures.", { uses: 1, range: "18 m" }),
+        ],
+      },
+    ],
+  },
+  "fantasy-veilleur": {
+    title: "Veille",
+    list: [
+      {
+        id: "veilleur-lanterne-bleue",
+        name: "Lanterne bleue",
+        pitch: "La lanterne ne s'éteint jamais, ni en plein jour, ni sous la pluie, ni quand il a peur.",
+        description: "Les Veilleuses vivent chez l'habitant, lavent les corps, accouchent les femmes et soignent sans demander à qui elles parlent. Leurs veilleurs du sceau portent la même lanterne au verre bleu. Dans sa lumière, les blessés tiennent et les morts restent couchés.",
+        powers: [
+          P(2, "Veiller", "action bonus", "repos long", "Ta lanterne éclaire en bleu à 9 m. Un allié dans cette lumière récupère 1d6 + ta Sagesse PV.", { uses: 3, range: "9 m" }),
+          P(6, "Trois nuits en une", "passif", "passif", "Dans la lumière de ta lanterne, les créatures à 0 PV se stabilisent seules et les morts ne se relèvent pas."),
+          P(10, "Lumière qui brûle", "passif", "passif", "Un mort-vivant qui commence son tour dans la lumière de ta lanterne subit 1d8 radiant (2d8 au niveau 14)."),
+          P(14, "La Plus Ancienne", "action", "repos long", "Chaque allié à 9 m récupère 4d8 + ta Sagesse PV et se débarrasse d'un état : aveuglé, charmé, effrayé ou empoisonné.", { uses: 1, range: "9 m" }),
+        ],
+      },
+      {
+        id: "veilleur-oreille-du-dessous",
+        name: "Oreille du Dessous",
+        pitch: "Il colle l'oreille contre les dalles, et il entend quelque chose respirer en bas.",
+        description: "Certains veilleurs n'écoutent pas les morts : ils écoutent ce qui les fait lever. Ils dorment par terre, la joue sur la pierre, et savent quand une fissure s'ouvre à trois rues. Les Rendus les trouvent rassurants. Les prêtres les trouvent bizarres. Eux ne dorment plus beaucoup.",
+        powers: [
+          P(2, "Écouter les dalles", "passif", "passif", "Tu entends à travers 3 m de pierre ou de terre. Avantage en Perception. On ne te surprend pas tant que tu es conscient."),
+          P(6, "Répondre au murmure", "réaction", "repos long", "Une créature à 18 m lance un pouvoir qui charme, effraie ou force à obéir : les cibles ont l'avantage à leur sauvegarde. Dans Aubreterre, tu peux aussi annuler un Murmure que le MJ dépense à 9 m de toi : il est perdu, et tu subis 1d10 psychique.", { uses: 2, range: "18 m" }),
+          P(10, "Ce qui marche dessus", "action", "repos court", "La main à plat sur le sol : pendant 10 minutes, tu sens à 36 m toute créature qui touche le sol, même invisible ou derrière un mur.", { uses: 1 }),
+          P(14, "Retourner la voix", "réaction", "repos long", "Une créature à 18 m vise toi ou un allié avec un pouvoir qui charme, effraie ou force à obéir : le pouvoir échoue et frappe son lanceur à la place, qui fait la sauvegarde.", { uses: 1, range: "18 m" }),
+        ],
+      },
+    ],
+  },
+};
+
+export const CLASSES: CharacterClass[] = BASE_CLASSES.map((c) => ({
+  ...c,
+  subclassTitle: SUBCLASSES[c.id]?.title ?? "Sous-classe",
+  subclasses: SUBCLASSES[c.id]?.list ?? [],
+}));
+
+/** La sous-classe d'un personnage, s'il en a choisi une. */
+export function subclassOf(classId: string | undefined, subclassId: string | undefined): Subclass | undefined {
+  if (!classId || !subclassId) return undefined;
+  return CLASSES.find((c) => c.id === classId)?.subclasses.find((s) => s.id === subclassId);
+}
 
 /** Noms provisoires des classes pour les autres genres, à remplir après validation des classes fantasy. */
 export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {

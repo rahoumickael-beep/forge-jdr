@@ -15,7 +15,7 @@ import {
   type StatBonus,
   type SubOrigin,
 } from "../../../shared/origins";
-import { classesFor, type CharacterClass } from "../../../shared/rules";
+import { classesFor, type CharacterClass, type Power, type Subclass } from "../../../shared/rules";
 import type { Character, RoomView } from "../../../shared/types";
 import { send, toast } from "../store";
 
@@ -29,7 +29,7 @@ function mergeBonus(...list: (StatBonus | undefined)[]): number[] {
   return out;
 }
 
-function armorClass(cls: CharacterClass, sub: SubOrigin | undefined, mods: number[]): number {
+function armorClass(cls: CharacterClass, sub: SubOrigin | undefined, subclass: Subclass | undefined, mods: number[]): number {
   const [, dex, con, , wis] = mods;
   const armor = cls.armor.toLowerCase();
   const gear = cls.startingGear.join(" ").toLowerCase();
@@ -39,14 +39,15 @@ function armorClass(cls: CharacterClass, sub: SubOrigin | undefined, mods: numbe
   else if (/toutes les armures|lourde/.test(armor)) ac = 16;
   else if (/intermédiaire/.test(armor)) ac = 14 + Math.min(dex, 2);
   else if (/légère/.test(armor)) ac = 11 + dex;
-  if (sub?.id === "os-sec") ac = Math.max(ac, 13 + dex);
+  if (sub?.id === "os-sec" || subclass?.id === "ensorceleuse-draconique") ac = Math.max(ac, 13 + dex);
   if (/bouclier/.test(armor) && /bouclier/.test(gear)) ac += 2;
   return ac;
 }
 
-function hitPoints(cls: CharacterClass, sub: SubOrigin | undefined, level: number, con: number): number {
+function hitPoints(cls: CharacterClass, sub: SubOrigin | undefined, subclass: Subclass | undefined, level: number, con: number): number {
   const perLevel = cls.hitDie / 2 + 1 + con;
-  return Math.max(1, cls.hitDie + con + (level - 1) * perLevel + (sub?.hpPerLevel ?? 0) * level);
+  const extra = (sub?.hpPerLevel ?? 0) + (subclass?.id === "ensorceleuse-draconique" ? 1 : 0);
+  return Math.max(1, cls.hitDie + con + (level - 1) * perLevel + extra * level);
 }
 
 /** Réduit une image envoyée par le joueur à un petit portrait JPEG. */
@@ -78,6 +79,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
   const [originId, setOriginId] = useState(origins[0]?.id ?? "");
   const [subId, setSubId] = useState(origins[0]?.subs[0]?.id ?? "");
   const [classId, setClassId] = useState(classes[0]?.id ?? "");
+  const [subclassId, setSubclassId] = useState("");
   const [bgId, setBgId] = useState(backgrounds[0]?.id ?? "");
   const [base, setBase] = useState<number[]>([8, 8, 8, 8, 8, 8]);
   const [pool, setPool] = useState<number[] | null>(method === "fixe" ? STANDARD_ARRAY : null);
@@ -95,6 +97,10 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
   const origin: Origin | undefined = origins.find((o) => o.id === originId);
   const sub = origin?.subs.find((s) => s.id === subId) ?? origin?.subs[0];
   const cls = classes.find((c) => c.id === classId);
+  const level = room.level;
+  // La sous-classe n'existe qu'à partir de son niveau (1, 2 ou 3 selon la classe) ; la première est prise par défaut.
+  const subclassOpen = !!cls && cls.subclasses.length > 0 && level >= subclassLevel(cls.id);
+  const subclass = subclassOpen ? (cls!.subclasses.find((s) => s.id === subclassId) ?? cls!.subclasses[0]) : undefined;
   const bg = backgrounds.find((b) => b.id === bgId);
 
   useEffect(() => {
@@ -116,11 +122,11 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
   const skillChoices = (cls?.skills.from ?? []).filter((s) => !fixedSkills.includes(s));
   const skillCount = cls?.skills.choose ?? 0;
 
-  const level = room.level;
-  const hp = cls ? hitPoints(cls, sub, level, mods[2]) : 0;
-  const ac = cls ? armorClass(cls, sub, mods) : 10;
+  const hp = cls ? hitPoints(cls, sub, subclass, level, mods[2]) : 0;
+  const ac = cls ? armorClass(cls, sub, subclass, mods) : 10;
   const speed = sub?.speed ?? origin?.speed ?? 6;
   const powers = useMemo(() => (cls?.powers ?? []).filter((p) => p.level <= level), [cls, level]);
+  const subPowers = useMemo(() => (subclass?.powers ?? []).filter((p) => p.level <= level), [subclass, level]);
 
   const canNext = [
     !!origin && !!sub,
@@ -158,6 +164,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
       level,
       archetype: cls!.name,
       classId: cls!.id,
+      subclass: subclass?.id,
       origin: sub ? sub.name : origin!.name,
       subOrigin: sub?.id,
       background: bg?.name,
@@ -174,6 +181,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
       equipment: [...cls!.startingGear, ...(bg?.gear ?? [])],
       abilities: [
         ...powers.map((p) => p.name),
+        ...subPowers.map((p) => p.name),
         ...(origin?.traits ?? []).map((x) => x.name),
         ...(sub?.traits ?? []).map((x) => x.name),
         ...(bg ? [bg.feature.name] : []),
@@ -247,7 +255,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
                 <h3 className="cc-title">Quelle est ta voie ?</h3>
                 <div className="cc-cards">
                   {classes.map((c) => (
-                    <button key={c.id} type="button" className="cc-card" aria-pressed={c.id === classId} onClick={() => { setClassId(c.id); setSkills([]); }}>
+                    <button key={c.id} type="button" className="cc-card" aria-pressed={c.id === classId} onClick={() => { setClassId(c.id); setSubclassId(""); setSkills([]); }}>
                       <strong>{c.name}</strong>
                       <span className="cc-tag">{c.role}</span>
                       <span className="cc-card-text">{c.pitch}</span>
@@ -261,16 +269,36 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
                       Dé de vie d{cls.hitDie} · {cls.mainStats.join(" et ")} · sauvegardes : {cls.saves.join(", ")}
                     </p>
                     <p className="small">{cls.armor}. {cls.weapons}.</p>
-                    <p className="small"><em>Sous-classe au niveau {subclassLevel(cls.id)}.</em></p>
                     <h4>Pouvoirs jusqu'au niveau {level}</h4>
-                    <ul className="cc-powers">
-                      {powers.map((p) => (
-                        <li key={p.name}>
-                          <strong>{p.name}</strong> <span className="muted small">niv. {p.level} · {p.action} · {p.recharge === "à volonté" ? "à volonté" : p.recharge === "passif" ? "toujours actif" : `${p.uses ?? 1} fois par ${p.recharge}`}</span>
-                          <div className="small">{p.effect}</div>
-                        </li>
-                      ))}
-                    </ul>
+                    <PowerList powers={powers} />
+                    {subclassOpen ? (
+                      <>
+                        <h4>{cls.subclassTitle}</h4>
+                        <div className="cc-cards two" role="group" aria-label={cls.subclassTitle}>
+                          {cls.subclasses.map((s) => (
+                            <button key={s.id} type="button" className="cc-card light" aria-pressed={s.id === subclass?.id} onClick={() => setSubclassId(s.id)}>
+                              <strong>{s.name}</strong>
+                              <span className="cc-card-text">{s.pitch}</span>
+                            </button>
+                          ))}
+                        </div>
+                        {subclass && (
+                          <>
+                            <p className="small">{subclass.description}</p>
+                            <PowerList powers={subPowers} />
+                            {subclass.powers.some((p) => p.level > level) && (
+                              <p className="small muted">Plus tard : {subclass.powers.filter((p) => p.level > level).map((p) => `${p.name} (niv. ${p.level})`).join(", ")}.</p>
+                            )}
+                          </>
+                        )}
+                      </>
+                    ) : (
+                      cls.subclasses.length > 0 && (
+                        <p className="small muted">
+                          {cls.subclassTitle} au niveau {subclassLevel(cls.id)} : {cls.subclasses.map((s) => s.name).join(" ou ")}.
+                        </p>
+                      )
+                    )}
                   </div>
                 )}
               </section>
@@ -429,7 +457,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
                   <div className="cc-portrait">{portrait ? <img src={portrait} alt="" /> : <span>{name.slice(0, 1).toUpperCase()}</span>}</div>
                   <div>
                     <h3 className="cc-name">{name}</h3>
-                    <p className="cc-meta">{sub?.name} · {cls.name} · {bg?.name} · niveau {level}</p>
+                    <p className="cc-meta">{sub?.name} · {cls.name}{subclass ? ` (${subclass.name})` : ""} · {bg?.name} · niveau {level}</p>
                     <p className="cc-meta">PV {hp} · CA {ac} · déplacement {speed} cases</p>
                   </div>
                 </div>
@@ -439,7 +467,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
                   ))}
                 </div>
                 <p className="small"><strong>Compétences :</strong> {[...fixedSkills, ...skills].join(", ")}</p>
-                <p className="small"><strong>Pouvoirs :</strong> {powers.map((p) => p.name).join(", ")}</p>
+                <p className="small"><strong>Pouvoirs :</strong> {[...powers, ...subPowers].map((p) => p.name).join(", ")}</p>
                 {traits.trait && <p className="small"><em>{traits.trait}</em></p>}
               </section>
             )}
@@ -456,6 +484,19 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
         </footer>
       </div>
     </div>
+  );
+}
+
+function PowerList({ powers }: { powers: Power[] }) {
+  return (
+    <ul className="cc-powers">
+      {powers.map((p) => (
+        <li key={p.name}>
+          <strong>{p.name}</strong> <span className="muted small">niv. {p.level} · {p.action} · {p.recharge === "à volonté" ? "à volonté" : p.recharge === "passif" ? "toujours actif" : `${p.uses ?? 1} fois par ${p.recharge}`}</span>
+          <div className="small">{p.effect}</div>
+        </li>
+      ))}
+    </ul>
   );
 }
 

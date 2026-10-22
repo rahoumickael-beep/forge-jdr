@@ -14,6 +14,7 @@ import {
   type Power,
   type RuleSection,
 } from "../../../shared/rules";
+import { subclassLevel } from "../../../shared/origins";
 import type { RoomView } from "../../../shared/types";
 
 export const CHAPTERS = [
@@ -145,9 +146,18 @@ function PowerItem({ p, className }: { p: Power; className?: string }) {
   );
 }
 
-function ClassSheet({ c }: { c: CharacterClass }) {
+function groupByLevel(powers: Power[]): [number, Power[]][] {
   const byLevel = new Map<number, Power[]>();
-  for (const p of c.powers) byLevel.set(p.level, [...(byLevel.get(p.level) ?? []), p]);
+  for (const p of powers) byLevel.set(p.level, [...(byLevel.get(p.level) ?? []), p]);
+  return [...byLevel.entries()].sort((a, b) => a[0] - b[0]);
+}
+
+function ClassSheet({ c }: { c: CharacterClass }) {
+  // Les niveaux où la sous-classe donne quelque chose apparaissent aussi dans la table de la classe.
+  const subLevels = new Map<number, string[]>();
+  for (const s of c.subclasses) for (const p of s.powers) subLevels.set(p.level, [...(subLevels.get(p.level) ?? []), p.name]);
+  const levels = [...new Set([...c.powers.map((p) => p.level), ...subLevels.keys()])].sort((a, b) => a - b);
+  const entry = subclassLevel(c.id);
   return (
     <article className="rb-class" aria-labelledby={`rb-${c.id}`}>
       <h3 id={`rb-${c.id}`}>{c.name}</h3>
@@ -163,12 +173,39 @@ function ClassSheet({ c }: { c: CharacterClass }) {
         <dt>Équipement de départ</dt><dd>{c.startingGear.join(", ")}</dd>
       </dl>
       <h4 className="rb-powers-title">Pouvoirs</h4>
-      {[...byLevel.entries()].map(([level, powers]) => (
+      {levels.map((level) => (
         <section key={level} className="rb-level">
           <h5>Niveau {level}</h5>
-          <ul className="rb-powers">{powers.map((p) => <PowerItem key={p.name} p={p} />)}</ul>
+          <ul className="rb-powers">
+            {c.powers.filter((p) => p.level === level).map((p) => <PowerItem key={p.name} p={p} />)}
+            {subLevels.has(level) && (
+              <li className="rb-power rb-sub-hint">
+                <b>{level === entry ? `${c.subclassTitle} au choix` : `Pouvoir de ${c.subclassTitle.toLowerCase()}`}</b>
+                <p>{subLevels.get(level)!.join(" ou ")}</p>
+              </li>
+            )}
+          </ul>
         </section>
       ))}
+      {c.subclasses.length > 0 && (
+        <>
+          <h4 className="rb-powers-title">{c.subclassTitle}</h4>
+          <p className="rb-note">{c.subclassTitle} : à choisir au niveau {entry}, parmi les {c.subclasses.length === 2 ? "deux" : c.subclasses.length} ci-dessous. Ses pouvoirs s'ajoutent à ceux de la classe, aux niveaux indiqués.</p>
+          {c.subclasses.map((s) => (
+            <section key={s.id} className="rb-subclass" aria-labelledby={`rb-${s.id}`}>
+              <h5 id={`rb-${s.id}`}>{s.name}</h5>
+              <p className="rb-pitch">{s.pitch}</p>
+              <p>{s.description}</p>
+              {groupByLevel(s.powers).map(([level, powers]) => (
+                <section key={level} className="rb-level">
+                  <h5>Niveau {level}</h5>
+                  <ul className="rb-powers">{powers.map((p) => <PowerItem key={p.name} p={p} />)}</ul>
+                </section>
+              ))}
+            </section>
+          ))}
+        </>
+      )}
     </article>
   );
 }
@@ -317,7 +354,12 @@ function SearchResults({ room, query, onNav, nav }: { room: RoomView; query: str
   const q = fold(query.trim());
   const rules = CORE_RULES.map((s) => ({ s, lines: matches(q, s.title) ? s.body : s.body.filter((l) => matches(q, l)) })).filter((r) => r.lines.length);
   const classes = classesFor(room.genre);
-  const powers = classes.flatMap((c) => c.powers.filter((p) => matches(q, p.name, p.effect)).map((p) => ({ c, p })));
+  const powers = classes.flatMap((c) => [
+    ...c.powers.filter((p) => matches(q, p.name, p.effect)).map((p) => ({ key: c.id + p.name, label: c.name, p })),
+    ...c.subclasses.flatMap((s) =>
+      s.powers.filter((p) => matches(q, p.name, p.effect, s.name)).map((p) => ({ key: s.id + p.name, label: `${c.name} · ${s.name}`, p })),
+    ),
+  ]);
   const conditions = CONDITIONS.filter((c) => matches(q, c.name, c.effect));
   const skills = SKILLS.filter((s) => matches(q, s.name));
   const total = rules.length + powers.length + conditions.length + skills.length;
@@ -331,8 +373,8 @@ function SearchResults({ room, query, onNav, nav }: { room: RoomView; query: str
         <section className="rb-section">
           <h3>Pouvoirs</h3>
           <ul className="rb-powers">
-            {powers.map(({ c, p }) => (
-              <PowerItem key={c.id + p.name} p={p} className={c.name} />
+            {powers.map(({ key, label, p }) => (
+              <PowerItem key={key} p={p} className={label} />
             ))}
           </ul>
         </section>

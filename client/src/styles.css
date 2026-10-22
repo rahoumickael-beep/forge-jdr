@@ -275,6 +275,11 @@ textarea.input { resize: vertical; min-height: 70px; }
 .rb-power-head b { font-weight: 700; }
 .rb-power-class { font-size: .85em; color: var(--ink-soft); }
 .rb-power-meta { font-size: .82em; color: var(--ink-soft); font-style: italic; }
+.rb-sub-hint { border-left: 2px solid var(--brass); padding-left: 8px; }
+.rb-sub-hint b { font-weight: 400; font-style: italic; color: var(--ink-soft); }
+.rb-subclass { margin: 14px 0 6px; }
+.rb-subclass > h5 { font-family: var(--display); font-weight: 400; font-size: 1.15rem; color: var(--blood); text-align: center; margin: 0; }
+.rb-subclass > .rb-pitch { margin-bottom: 6px !important; }
 
 .rb-defs { margin: 0; display: grid; gap: 6px; }
 .rb-defs dt { font-weight: 700; color: var(--blood); }

@@ -64,6 +64,8 @@ export interface Character {
   role?: string;
   // Champs du créateur de personnage (facultatifs : les personnages tirés au hasard ne les ont pas)
   classId?: string;
+  /** Sous-classe choisie (id d'une entrée de `subclasses` dans shared/rules.ts). */
+  subclass?: string;
   subOrigin?: string;
   background?: string;
   skills?: string[];
