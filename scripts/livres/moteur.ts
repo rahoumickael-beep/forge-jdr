@@ -1,5 +1,6 @@
-// Moteur de mise en page des livres : chaque unité (chapitre, classe, créature…) est imprimée à part par
-// Chromium, en A4 sans marge et sur fond transparent ; on assemble ensuite avec pdf-lib : sous chaque page,
+// Moteur de mise en page des livres : chaque unité (chapitre, classe, créature…) est d'abord imprimée à part
+// par Chromium, en A4 sans marge et sur fond transparent, pour compter ses pages ; le livre est ensuite imprimé
+// d'un seul tenant (les polices ne sont embarquées qu'une fois) puis découpé. Assemblage avec pdf-lib : sous chaque page,
 // une seule image de parchemin partagée par tout le livre (le PDF reste léger) ; par-dessus, un calque
 // transparent avec les en-têtes courants et les folios. Le sommaire se calcule en deux passes.
 import { execFileSync } from "node:child_process";
@@ -25,6 +26,8 @@ export interface Unite {
   html: string;
   /** Page pleine sans marges ni parchemin (couverture, planche). */
   pleine?: boolean;
+  /** Mise en page de rechange si `html` déborde d'une page (une créature légendaire passe en double page). */
+  siLong?: string;
 }
 
 export interface Livre {
@@ -77,7 +80,12 @@ export async function fabriquer(livre: Livre, out: string) {
   const credits = await imprimer(page, doc(`<div class="flux">${livre.credits}</div>`, false));
   const corps: Uint8Array[] = [];
   for (const u of livre.unites) {
-    corps.push(await imprimer(page, u.pleine ? doc(u.html, false) : doc(`<div class="flux">${u.html}</div>`, false)));
+    let pdf = await imprimer(page, u.pleine ? doc(u.html, false) : doc(`<div class="flux">${u.html}</div>`, false));
+    if (u.siLong && (await pagesDe(pdf)) > 1) {
+      u.html = u.siLong;
+      pdf = await imprimer(page, doc(`<div class="flux">${u.html}</div>`, false));
+    }
+    corps.push(pdf);
     process.stdout.write(".");
   }
   process.stdout.write("\n");
@@ -94,6 +102,19 @@ export async function fabriquer(livre: Livre, out: string) {
   const toc = await imprimer(page, doc(sommaire(livre, debuts), false));
   tocPages = await pagesDe(toc);
 
+  // Impression d'un seul tenant : chaque morceau commence sur une nouvelle page, donc le découpage retombe
+  // sur les mêmes pages. Si le compte ne colle pas, on garde les impressions séparées.
+  const morceauxHtml = [
+    `<div class="flux">${livre.credits}</div>`,
+    sommaire(livre, debuts),
+    ...livre.unites.map((u) => (u.pleine ? u.html : `<div class="flux">${u.html}</div>`)),
+  ];
+  const attendu = [await pagesDe(credits), tocPages, ...tailles];
+  const ensemble = await imprimer(page, doc(morceauxHtml.map((h, i) => `<section class="morceau${i ? " suite" : ""}">${h}</section>`).join(""), false));
+  const ensDoc = await PDFDocument.load(ensemble);
+  const unSeul = ensDoc.getPageCount() === attendu.reduce((a, b) => a + b, 0);
+  if (!unSeul) console.warn(`  impression d'un seul tenant : ${ensDoc.getPageCount()} pages au lieu de ${attendu.reduce((a, b) => a + b, 0)}, impressions séparées gardées`);
+
   const final = await PDFDocument.create();
   final.setTitle(livre.titre);
   final.setAuthor("Mickael et sa table");
@@ -105,9 +126,10 @@ export async function fabriquer(livre: Livre, out: string) {
     { pdf: toc, parchemin: true },
     ...corps.map((pdf, i) => ({ pdf, parchemin: !livre.unites[i].pleine })),
   ];
-  for (const m of morceaux) {
-    const src = await PDFDocument.load(m.pdf);
-    const formesSrc = await final.embedPages(src.getPages());
+  const formesEnsemble = unSeul ? await final.embedPages(ensDoc.getPages()) : [];
+  let curseur = 0;
+  for (const [i, m] of morceaux.entries()) {
+    const formesSrc = unSeul && i > 0 ? formesEnsemble.slice(curseur, (curseur += attendu[i - 1])) : await final.embedPages((await PDFDocument.load(m.pdf)).getPages());
     for (const f of formesSrc) {
       const p = final.addPage([f.width, f.height]);
       if (m.parchemin) p.drawImage(fond, { x: 0, y: 0, width: f.width, height: f.height });

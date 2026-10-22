@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
+import { FIN_DE_STYLE } from "./charte";
 import {
   averageDice,
   BESTIARY,
@@ -7,6 +8,7 @@ import {
   creaturesFor,
   estimateCr,
   ILLUSTRATION_STYLE,
+  LUMIERE_FAMILLE,
   illustrationSeed,
   modOf,
   proficiencyForCr,
@@ -100,7 +102,7 @@ test("bestiaire : aucun nom protégé ni tournure interdite", () => {
 test("bestiaire : chaque créature a un prompt d'illustration et des textes", () => {
   const seeds = new Set<number>();
   for (const c of BESTIARY) {
-    assert.ok(c.illustration.startsWith(ILLUSTRATION_STYLE), `${c.id} : préfixe de style`);
+    assert.ok(c.illustration.includes(ILLUSTRATION_STYLE), `${c.id} : style de la charte`);
     assert.ok(c.illustration.length > ILLUSTRATION_STYLE.length + 80, `${c.id} : prompt trop court`);
     assert.ok(!/[àâçéèêëîïôûùœ]/i.test(c.illustration), `${c.id} : prompt pas en anglais`);
     assert.ok(c.lore.length > 60 && c.gmNotes.length > 60, `${c.id} : textes`);
@@ -123,10 +125,13 @@ test("bestiaire : conversion en ennemi de rencontre", () => {
 });
 
 test("bestiaire : aucune planche fantasy ne décrit d'objet moderne", () => {
-  const moderne = /\b(electric|telephone|power line|pylon|asphalt|car|truck|plastic|concrete|neon|gun|rifle|pistol)\b/i;
+  // Flux dessine ce qu'on nomme : ni objet moderne, ni « no … », ni route ou poteau qui appellent des pylônes.
+  const moderne = /\b(electric|telephone|power line|pylon|asphalt|car|truck|plastic|concrete|neon|gun|rifle|pistol|road|stake|pole)\b/i;
   for (const c of BESTIARY) {
-    const scene = c.illustration.split("no modern objects, ")[1] ?? "";
+    const scene = c.illustration.replace(FIN_DE_STYLE, "");
     assert.ok(scene.length > 40, `${c.id} : scène introuvable`);
     assert.ok(!moderne.test(scene), `${c.id} : objet moderne dans la scène`);
+    assert.ok(!/\bno\s/i.test(c.illustration), `${c.id} : négation dans le prompt`);
+    assert.ok(c.illustration.startsWith(LUMIERE_FAMILLE[c.family]), `${c.id} : la lumière de la famille doit ouvrir le prompt`);
   }
 });

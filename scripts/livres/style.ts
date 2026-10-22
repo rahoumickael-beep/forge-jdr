@@ -26,6 +26,7 @@ body { font-family: "${F.texte}", Georgia, serif; color: ${P.encre}; font-size: 
 .flux { padding: 21mm 17mm 19mm; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .cols { column-count: 2; column-gap: 8mm; column-rule: .4pt solid #a07a4066; orphans: 3; widows: 3; }
 .saut { break-before: page; height: 0; }
+.morceau.suite { break-before: page; }
 .bloc { break-inside: avoid; }
 
 h1, h2, h3, h4, h5 { font-family: "${F.titre}", serif; font-weight: 600; color: #6e2414; margin: 0; break-after: avoid; }
@@ -106,6 +107,13 @@ table.tab.long { break-inside: auto; }
 .sb-type { font-style: italic; font-size: 9pt; }
 .abil { width: 100%; text-align: center; font-size: 9pt; color: #6e2414; }
 .abil th { font-family: Cinzel, serif; font-size: 8.4pt; }
+
+/* Page de créature : planche plus basse, et la fiche passe d'une colonne à l'autre comme dans les manuels 5e. */
+.creature .illu.large { height: 74mm; }
+.creature.longue .illu.large { height: 150mm; }
+.creature .statblock { break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.creature .statblock h5, .creature .statblock p, .creature .statblock table { break-inside: avoid; }
+.creature .statblock h5 { break-after: avoid; }
 
 /* Sommaire */
 .sommaire { max-width: 150mm; margin: 0 auto; }

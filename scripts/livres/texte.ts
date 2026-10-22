@@ -1,7 +1,7 @@
 // Outils de texte des livres : échappement, typographie française, petit Markdown, illustrations.
 import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
-import { promptPeinture, type Cadrage } from "../../shared/charte";
+import { FIN_DE_STYLE, promptPeinture, type Cadrage } from "../../shared/charte";
 
 export const ILLU_DIR = resolve("content/aubreterre/illustrations");
 
@@ -29,7 +29,7 @@ const CADRAGE: Record<Format, Cadrage> = { large: "scene", colonne: "portrait", 
  * Le style vient de la charte du genre (shared/charte.ts) ; un prompt déjà complet (bestiaire) est gardé tel quel.
  */
 export function illustration(id: string, prompt: string, format: Format = "large", legende = "") {
-  const complet = prompt.startsWith("oil painting") ? prompt : promptPeinture("fantasy", CADRAGE[format], prompt);
+  const complet = FIN_DE_STYLE.test(prompt) ? prompt : promptPeinture("fantasy", CADRAGE[format], prompt);
   const [width, height] = TAILLES[format];
   illustrationsDemandees.set(id, { id, prompt: complet, width, height });
   const cap = legende ? `<figcaption>${md(legende)}</figcaption>` : "";
@@ -40,7 +40,7 @@ export function illustration(id: string, prompt: string, format: Format = "large
       return `<figure class="illu ${format}"><img src="data:image/${ext === "jpg" ? "jpeg" : ext};base64,${data}" alt="">${cap}</figure>`;
     }
   }
-  return `<figure class="illu wait ${format}"><div class="wait-inner"><span class="wait-title">Illustration à peindre</span><code>${esc(id)}</code><p>${esc(complet.replace(/^.*no (modern objects|watermark), /, ""))}</p></div>${cap}</figure>`;
+  return `<figure class="illu wait ${format}"><div class="wait-inner"><span class="wait-title">Illustration à peindre</span><code>${esc(id)}</code><p>${esc(complet.replace(FIN_DE_STYLE, ""))}</p></div>${cap}</figure>`;
 }
 
 /**

@@ -148,8 +148,8 @@ export function bestiaire(): Livre {
       ouverture: true,
       html: `${ouverture(`Chapitre ${i + 1}`, f.titre, f.chapeau)}
       ${illustration(f.illu[0], f.illu[1], "large")}
-      <div class="cols">${f.texte.map((t, k) => `<p${k === 0 ? ' class="lettrine"' : ""}>${md(t)}</p>`).join("")}
-      <table class="tab long"><thead><tr><th>Créature</th><th>Puiss.</th><th>Région</th></tr></thead><tbody>${liste.map((c) => `<tr><td>${esc(c.name)}</td><td>${crLabel(c.cr)}</td><td>${esc(c.region)}</td></tr>`).join("")}</tbody></table></div>`,
+      <div class="cols">${f.texte.map((t, k) => `<p${k === 0 ? ' class="lettrine"' : ""}>${md(t)}</p>`).join("")}</div>
+      <table class="tab long"><thead><tr><th>Créature</th><th>Puiss.</th><th>Région</th></tr></thead><tbody>${liste.map((c) => `<tr><td>${esc(c.name)}</td><td>${crLabel(c.cr)}</td><td>${esc(c.region)}</td></tr>`).join("")}</tbody></table>`,
     });
     for (const c of liste) {
       unites.push({
@@ -157,12 +157,18 @@ export function bestiaire(): Livre {
         niveau: 2,
         entete: `Bestiaire · ${f.titre}`,
         html: `<div class="tete"><div class="sous">${esc(f.titre)} · ${esc(c.region)} · Puissance ${crLabel(c.cr)}</div><h2>${esc(c.name)}</h2></div>
-        ${illustration(c.id, c.illustration, "large")}
+        <div class="creature">${illustration(c.id, c.illustration, "large")}
         <div class="cols">
           <p class="lettrine">${md(c.lore)}</p>
           ${ficheDeStats(c)}
           <aside class="encart dark"><h4>Au MJ</h4><p>${md(c.gmNotes)}</p></aside>
-        </div>`,
+        </div></div>`,
+        // Trop long pour une page : grande planche, récit et note au MJ d'abord, la fiche entière en regard.
+        siLong: `<div class="tete"><div class="sous">${esc(f.titre)} · ${esc(c.region)} · Puissance ${crLabel(c.cr)}</div><h2>${esc(c.name)}</h2></div>
+        <div class="creature longue">${illustration(c.id, c.illustration, "large")}
+        <div class="cols"><p class="lettrine">${md(c.lore)}</p><aside class="encart dark"><h4>Au MJ</h4><p>${md(c.gmNotes)}</p></aside></div>
+        <div class="saut"></div>
+        <div class="cols">${ficheDeStats(c)}</div></div>`,
       });
     }
   });

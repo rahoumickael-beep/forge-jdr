@@ -120,8 +120,8 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte fantasy (shared/charte.ts). */
 export const illustrationStyle = (family: Family) => stylePeinture("fantasy", "creature", LUMIERE_FAMILLE[family]);
-/** Préfixe commun à toutes les planches, jusqu'à la lumière exclue. */
-export const ILLUSTRATION_STYLE = stylePeinture("fantasy", "creature").split(", warm candlelight")[0];
+/** Style commun à toutes les planches, sans la lumière (qui ouvre le prompt). */
+export const ILLUSTRATION_STYLE = stylePeinture("fantasy", "creature", "");
 
 /** Retire d'une scène les morceaux qui imposent leur propre lumière (la famille décide). */
 const sansLumiere = (scene: string) =>
@@ -345,7 +345,7 @@ export const BESTIARY: Creature[] = [
     actions: [hit("Bec", "contact", 4, "1,5 m", "1", "perforants")],
     lore: "Elles suivent les lignes de pieux le long des routes impériales depuis six siècles et savent à quelle heure on pend. Les rouliers leur jettent du pain pour qu'elles se taisent.",
     gmNotes: "Une corneille qui a picoré l'œil d'un Porte-Voix répète des phrases de Gorvan pendant des jours : « Il suffit de la retirer. » C'est un indice que les joueurs peuvent trouver dès le niveau 1, sans le comprendre.",
-    scene: "a ragged black crow perched on a single crooked tarred gibbet stake on a medieval cobbled road, open wheat plain behind, beak half open as if speaking, late afternoon light raking from the side, a rope still knotted below it",
+    scene: "a ragged black crow perched on the crooked dead branch of a lone gibbet oak, open wheat plain and thatched hamlet behind, beak half open as if speaking, late afternoon light raking from the side, a rope still knotted below it",
   }),
   creature({
     id: "matin-leve",
@@ -527,7 +527,7 @@ export const BESTIARY: Creature[] = [
     ],
     lore: "Il marche au bord de la route impériale avec des dizaines d'autres, en chantant, une corde autour du cou. Il croit que les morts vont à Aube-Close pour ressusciter le Dieu, et il veut en être.",
     gmNotes: "Les Attendants se tuent en groupe sur les routes pour rejoindre la Marche. Leur meneur, un ancien juge, cite le Code à l'envers. Ce sont des fous dangereux, mais ils ont vu juste sur un point : les morts vont bien vers le Trône.",
-    scene: "a gaunt pilgrim in a rough brown habit with a noose loosely around his neck walking among a procession on a straight paved road, holding a small knife and a burning candle, ecstatic face, wheat plain and a copper dome far away, overcast dusk",
+    scene: "a gaunt pilgrim in a rough brown habit with a noose loosely around his neck walking among a procession on a dusty pilgrim track, holding a small knife and a burning candle, ecstatic face, wheat plain and a copper dome far away, overcast dusk",
   }),
   creature({
     id: "nuee-d-abeilles-cirieres",
@@ -763,7 +763,7 @@ export const BESTIARY: Creature[] = [
     ],
     lore: "Un clou de fer à tête carrée dans le lobe de l'oreille gauche, deux encoches sur la tête. Il sent le goudron et la chaux et se fait payer à la paire de talons.",
     gmNotes: "Payé au cadavre, il gonfle volontiers ses comptes : il garde des clous de rechange pour prouver des morts qu'il n'a pas cloués. Il a sur lui un bout de carte avec des lignes tirées à la règle, recopié dans sa loge, sans savoir ce qu'elles veulent dire.",
-    scene: "a broad-shouldered gravedigger in tarred leather with an iron square-headed nail through his left earlobe, holding a heavy hammer and a pouch of nails, kneeling over a corpse on a village road, lantern on the ground, lime dust on his boots, dusk",
+    scene: "a broad-shouldered gravedigger in tarred leather with an iron square-headed nail through his left earlobe, holding a heavy hammer and a pouch of nails, kneeling over a corpse in a muddy village lane, lantern on the ground, lime dust on his boots, dusk",
   }),
   creature({
     id: "main-nue",
@@ -1008,7 +1008,7 @@ export const BESTIARY: Creature[] = [
     ],
     lore: "Une centaine de Levés serrés épaule contre épaule sur la route impériale, qui avancent du même pas. Les paysans la voient venir à deux lieues, à la poussière.",
     gmNotes: "Une colonne ne dévie jamais. Elle passe à travers une haie, un mur de ferme, une rivière. Un village sur son trajet n'a que deux choix : partir, ou creuser un fossé de chaux en travers de la route et tenir une nuit.",
-    scene: "a dense column of hundreds of shambling corpses packed shoulder to shoulder marching down a straight paved imperial road through a wheat plain, dust cloud rising, a small village with a bell tower in their path, stormy yellow sky, high viewpoint",
+    scene: "a dense column of hundreds of shambling corpses packed shoulder to shoulder marching down an ancient flagstone causeway through a wheat plain, dust cloud rising, a small village with a bell tower in their path, stormy yellow sky, high viewpoint",
   }),
   creature({
     id: "sonneur-du-glas",
@@ -1079,7 +1079,7 @@ export const BESTIARY: Creature[] = [
     reactions: [special("Parade", "+3 à la CA contre une attaque au contact qui le toucherait.")],
     lore: "Il porte l'aigle de bronze de sa légion sur une hampe et l'épée de l'autre main. Il a vingt ans de Mur derrière lui et il finit ses phrases comme la Générale.",
     gmNotes: "Les porte-aigles sont les seuls officiers que Hersende écoute. L'un d'eux a vu la Générale parler seule dans sa tente et répondre à quelqu'un. Il ne l'a dit à personne. Gagner sa confiance, c'est obtenir ce témoignage.",
-    scene: "a scarred veteran officer in battered half plate and a red cloak holding a tall pole topped with a bronze eagle, longsword in the other hand, standing on a stone rampart in driving rain, legionaries behind him, grey sea and mountains on the horizon",
+    scene: "a scarred veteran officer in battered half plate and a red cloak holding a tall wooden standard topped with a bronze eagle, longsword in the other hand, standing on a stone rampart in driving rain, legionaries behind him, grey sea and mountains on the horizon",
   }),
   creature({
     id: "charme-pendu",
@@ -1486,7 +1486,7 @@ export const BESTIARY: Creature[] = [
     ],
     lore: "Une langue grise et humide, longue comme une rue, qui sort d'une fissure et tâte les murs. Elle parle avec la voix de vos morts, très doucement, très près.",
     gmNotes: "Gorvan pousse cette chose par les fissures pour goûter le monde : elle ramène des souvenirs, des noms, des secrets, qui lui servent ensuite dans les voix des Porte-Voix. Ce que la Langue apprend d'un joueur, Gorvan le sait. Le MJ peut le rejouer plus tard.",
-    scene: "a huge grey glistening tongue-like appendage as long as a street emerging from a fissure in the marble floor of a domed rotunda, coiling around a pillar, candles toppled, wax pooled, a tiny human figure caught in its tip, dim golden light from above",
+    scene: "a huge grey glistening tongue-like appendage as long as a nave emerging from a fissure in the marble floor of a domed rotunda, coiling around a pillar, candles toppled, wax pooled, a tiny human figure caught in its tip, dim golden light from above",
   }),
   creature({
     id: "roi-des-noyes",

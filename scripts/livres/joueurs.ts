@@ -40,7 +40,7 @@ const FIGURES: Record<string, string> = {
   barbare: "a huge barbarian of the red glass desert, skin streaked with shards of dark glass, roaring, sandstorm behind",
   moine: "a silent monk in grey robes balancing on a temple wall above vineyards at dusk, hands open, a sealed mouth embroidered on his hood",
   ensorceleur: "a sorceress with faint wyvern scales on her neck and cheek, eyes glowing amber, sparks in her palms, cliffs of white limestone",
-  occultiste: "a warlock at a lonely crossroads at night, a coin under a stone, a pale hand resting on his shoulder from behind, no one there",
+  occultiste: "a warlock at a lonely crossroads at night, a coin under a stone, a pale disembodied hand resting on his shoulder from the empty darkness behind",
   "chasseur-de-morts": "a grim dead-hunter in brigandine and wide hat, cold iron hammer and a bag of square nails, kneeling over a corpse in a muddy village",
   veilleur: "a watcher holding a blue-glass lantern at the door of a farmhouse at night, listening to the ground, the dead standing still in the fields beyond",
 };
@@ -83,7 +83,7 @@ function classe(c: CharacterClass): string {
 }
 
 const PORTRAITS: Record<string, string> = {
-  humain: "two travellers on an imperial paved road, a clerk from the capital with ink-stained fingers and a weathered northern legionary in a red cloak",
+  humain: "two travellers on an ancient flagstone causeway, a clerk from the capital with ink-stained fingers and a weathered northern legionary in a red cloak",
   elfe: "a tall forest elf with bark-brown skin and moss in her hair standing between the trunks of colossal oaks, green light",
   nain: "a dwarf with a lead-grey beard braided with small bones, standing before a huge carved door sealed with molten lead",
   "petites-gens": "a halfling peat-cutter on a plank walkway over black water, long spade on his shoulder, mist",

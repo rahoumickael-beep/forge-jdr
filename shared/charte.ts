@@ -52,7 +52,10 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "fantasy",
     nom: "Peinture à l'huile, lumière de bougie",
     // Gabarit des planches : le retoucher oblige à repeindre les illustrations déjà faites.
-    peinture: "oil painting on aged canvas, dark fantasy {support}, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, {cadrage}, {lumiere}, pre-industrial medieval world of timber, stone and iron, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, no power lines, no modern objects",
+    // Flux Schnell n'a pas de prompt négatif et dessine ce qu'on nomme, même après « no » : on décrit donc
+    // ce qu'on veut voir (un monde du XIIIe siècle, une toile vierge), jamais ce qu'on ne veut pas.
+    // La lumière ouvre le prompt, c'est elle qui tient la famille.
+    peinture: "{lumiere}, oil painting on aged canvas, dark fantasy {support}, {cadrage}, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas",
     lumiere: "warm candlelight from one side",
     supports: fantasySupports,
     palette: { fond: "#16201b", papier: "#efe2c2", papier2: "#e3d2a8", filet: "#b89a62", encre: "#2b1d0e", encreDouce: "#6b5232", or: "#d4a94c", sang: "#8f2a1f" },
@@ -63,7 +66,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "dark-fantasy",
     nom: "Gravure à l'eau-forte, sang et cendre",
     provisoire: true,
-    peinture: "dark etching with red ink wash, grim dark fantasy {support}, heavy crosshatching, ash grey and dried blood palette, {cadrage}, no text, no border, no watermark",
+    peinture: "dark etching with red ink wash, grim dark fantasy {support}, heavy crosshatching, ash grey and dried blood palette, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("grimdark"),
     palette: { fond: "#0f0d0d", papier: "#d8cfc0", papier2: "#c7bba7", filet: "#8c7a64", encre: "#1d1512", encreDouce: "#5a4a40", or: "#b8402f", sang: "#7a1d14" },
     polices: { titre: "Pirata One", deco: "Pirata One", texte: "Crimson Pro", petitesCapitales: "IM Fell English SC" },
@@ -73,7 +76,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "science-fiction",
     nom: "Peinture de couverture des années 70",
     provisoire: true,
-    peinture: "1970s science fiction paperback painting, {support}, airbrushed gouache, deep blues and warm highlights, grand scale, {cadrage}, no text, no border, no watermark",
+    peinture: "1970s science fiction paperback painting, {support}, airbrushed gouache, deep blues and warm highlights, grand scale, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("retro science fiction"),
     palette: { fond: "#060c18", papier: "#0f1d33", papier2: "#13284a", filet: "#2c5c9a", encre: "#d6ecff", encreDouce: "#7fa6cf", or: "#4cc3ff", sang: "#ff5c6c" },
     polices: { titre: "Exo 2", deco: "Exo 2", texte: "Exo 2", petitesCapitales: "Exo 2" },
@@ -83,7 +86,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "cyberpunk",
     nom: "Néon sous la pluie, photographie de nuit",
     provisoire: true,
-    peinture: "cinematic night photograph look, cyberpunk {support}, rain, neon magenta and cyan reflections, film grain, {cadrage}, no text, no border, no watermark",
+    peinture: "cinematic night photograph look, cyberpunk {support}, rain, neon magenta and cyan reflections, film grain, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("cyberpunk"),
     palette: { fond: "#0a0612", papier: "#140d24", papier2: "#1d1236", filet: "#ff2fa0", encre: "#f6e8ff", encreDouce: "#b493d4", or: "#ff2fa0", sang: "#ff3b3b" },
     polices: { titre: "Chakra Petch", deco: "Chakra Petch", texte: "Chakra Petch", petitesCapitales: "Chakra Petch" },
@@ -93,7 +96,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "horreur",
     nom: "Photographie argentique années 20",
     provisoire: true,
-    peinture: "1920s silver gelatin photograph, cosmic horror {support}, sepia and grey, vignetting, scratches and dust, {cadrage}, no text, no border, no watermark",
+    peinture: "1920s silver gelatin photograph, cosmic horror {support}, sepia and grey, vignetting, scratches and dust, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("archival horror"),
     palette: { fond: "#0c0d0b", papier: "#e4dcc4", papier2: "#d6ccb0", filet: "#9a8f70", encre: "#1c1a14", encreDouce: "#5d5744", or: "#a8b07a", sang: "#7a1f1f" },
     polices: { titre: "Special Elite", deco: "Special Elite", texte: "Crimson Pro", petitesCapitales: "Special Elite" },
@@ -103,7 +106,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "post-apo",
     nom: "Affiche au pochoir, rouille et poussière",
     provisoire: true,
-    peinture: "gritty gouache painting, post-apocalyptic {support}, rust orange and dust palette, harsh sun, {cadrage}, no text, no border, no watermark",
+    peinture: "gritty gouache painting, post-apocalyptic {support}, rust orange and dust palette, harsh sun, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("wasteland"),
     palette: { fond: "#17130d", papier: "#d9c7a0", papier2: "#c9b48a", filet: "#8f7650", encre: "#241a0d", encreDouce: "#6a5536", or: "#e0782a", sang: "#a8331c" },
     polices: { titre: "Stardos Stencil", deco: "Stardos Stencil", texte: "Oswald", petitesCapitales: "Oswald" },
@@ -113,7 +116,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "western",
     nom: "Peinture de l'Ouest à la Remington",
     provisoire: true,
-    peinture: "oil painting in the style of 19th century American western art, {support}, golden dust light, ochre and sage palette, {cadrage}, no text, no border, no watermark",
+    peinture: "oil painting in the style of 19th century American western art, {support}, golden dust light, ochre and sage palette, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("frontier"),
     palette: { fond: "#1c130c", papier: "#ecd5a8", papier2: "#e0c48e", filet: "#a07a44", encre: "#2e1a0a", encreDouce: "#74512a", or: "#d8963c", sang: "#9a2f1a" },
     polices: { titre: "Rye", deco: "Rye", texte: "Crimson Pro", petitesCapitales: "Playfair Display SC" },
@@ -123,7 +126,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "pirates",
     nom: "Marine à l'huile du XVIIIe siècle",
     provisoire: true,
-    peinture: "18th century maritime oil painting, pirate {support}, stormy sea light, teal and brass palette, {cadrage}, no text, no border, no watermark",
+    peinture: "18th century maritime oil painting, pirate {support}, stormy sea light, teal and brass palette, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("golden age of piracy"),
     palette: { fond: "#08161f", papier: "#ead8ae", papier2: "#dcc490", filet: "#a3804a", encre: "#22180c", encreDouce: "#6a5230", or: "#d6b24a", sang: "#9a2a1a" },
     polices: { titre: "Pirata One", deco: "Pirata One", texte: "Cormorant Garamond", petitesCapitales: "IM Fell English SC" },
@@ -133,7 +136,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "steampunk",
     nom: "Gravure victorienne rehaussée",
     provisoire: true,
-    peinture: "Victorian engraving with watercolor tint, steampunk {support}, brass and copper tones, fine linework, {cadrage}, no text, no border, no watermark",
+    peinture: "Victorian engraving with watercolor tint, steampunk {support}, brass and copper tones, fine linework, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("Victorian steampunk"),
     palette: { fond: "#17110c", papier: "#e8d8b8", papier2: "#d9c39a", filet: "#9c7a4a", encre: "#2a1a0c", encreDouce: "#6e5232", or: "#c98a3c", sang: "#8a2a1a" },
     polices: { titre: "Playfair Display SC", deco: "Playfair Display SC", texte: "Crimson Pro", petitesCapitales: "Playfair Display SC" },
@@ -143,7 +146,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "contemporain",
     nom: "Photo de dossier, flash et grain",
     provisoire: true,
-    peinture: "candid documentary photograph, thriller {support}, direct flash, muted cold colors, 35mm grain, {cadrage}, no text, no border, no watermark",
+    peinture: "candid documentary photograph, thriller {support}, direct flash, muted cold colors, 35mm grain, {cadrage}, clean unmarked image",
     supports: supportsGeneriques("modern thriller"),
     palette: { fond: "#111417", papier: "#eceae4", papier2: "#dedbd2", filet: "#a8a49a", encre: "#18191b", encreDouce: "#5a5c60", or: "#d24a3a", sang: "#b0301f" },
     polices: { titre: "Oswald", deco: "Oswald", texte: "Source Sans 3", petitesCapitales: "Oswald" },
@@ -161,8 +164,11 @@ export function stylePeinture(genre: GenreId, cadrage: Cadrage, lumiere?: string
   return c.peinture
     .replace("{support}", s.support)
     .replace("{cadrage}", s.cadrage)
-    .replace(l ? "{lumiere}" : ", {lumiere}", l ?? "");
+    .replace(l ? "{lumiere}" : /\{lumiere\}, |, \{lumiere\}/, l ?? "");
 }
+
+/** Fin du style dans un prompt complet : ce qui suit est le sujet. */
+export const FIN_DE_STYLE = /^.*clean unmarked (canvas|image), /;
 
 /** Prompt complet : style du genre, puis le sujet (en anglais pour Flux). */
 export const promptPeinture = (genre: GenreId, cadrage: Cadrage, sujet: string, lumiere?: string) => `${stylePeinture(genre, cadrage, lumiere)}, ${sujet}`;
