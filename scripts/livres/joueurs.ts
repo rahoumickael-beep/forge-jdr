@@ -87,7 +87,7 @@ const PORTRAITS: Record<string, string> = {
   elfe: "a tall forest elf with bark-brown skin and moss in her hair standing between the trunks of colossal oaks, green light",
   nain: "a dwarf with a lead-grey beard braided with small bones, standing before a huge carved door sealed with molten lead",
   "petites-gens": "a halfling peat-cutter on a plank walkway over black water, long spade on his shoulder, mist",
-  "demi-orc": "a half-orc caravan guard in desert robes leaning on a spear, red dunes and glass plates behind her",
+  "demi-orc": "a broad-shouldered half-orc woman caravan guard with grey-green skin, jutting lower tusks and a heavy jaw, desert robes, leaning on a spear, red dunes and glass plates behind her",
   revenu: "a revenant woman with pale bluish skin and black fingernails, hood, standing in a graveyard, calm sad eyes, breath not fogging in the cold",
   "sang-dore": "a young noble with faintly golden skin and eyes like candle flames, simple clothes, kneeling in an empty chapel",
 };
