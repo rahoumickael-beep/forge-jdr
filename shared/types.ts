@@ -102,6 +102,7 @@ export interface Token {
   hpMax?: number;
   ac?: number;
   conditions?: string[]; // états : à terre, empoisonné…
+  vision?: number; // portée de vue en cases (ligne de vue dynamique)
   characterId?: string;
   size?: number; // 1 = une case
 }
@@ -148,6 +149,10 @@ export interface RoomState {
   map: GameMap | null;
   fog: boolean[] | null; // true = caché pour les joueurs
   fogEnabled: boolean;
+  /** "dynamique" : chaque joueur voit ce que voient les pions du groupe ; "manuel" : le MJ peint le brouillard. */
+  visionMode: "dynamique" | "manuel";
+  sharedVision: boolean; // les joueurs partagent la vue de tout le groupe
+  mapKnown: boolean; // le groupe possède la carte des lieux : le plan est visible en sombre
   tokens: Token[];
   players: Player[];
   chat: ChatEntry[];
@@ -161,4 +166,9 @@ export interface RoomState {
 }
 
 /** Vue envoyée à un client : la version joueur retire les secrets. */
-export type RoomView = Omit<RoomState, "gmNotes"> & { gmNotes?: string; you: Player };
+export type RoomView = Omit<RoomState, "gmNotes"> & {
+  gmNotes?: string;
+  you: Player;
+  /** Cases vues en ce moment par ce joueur (ligne de vue dynamique). */
+  visible?: number[];
+};

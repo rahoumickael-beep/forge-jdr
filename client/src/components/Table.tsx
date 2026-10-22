@@ -30,9 +30,9 @@ export function Table({ room }: { room: RoomView }) {
   }
 
   return (
-    <div className="table-layout">
+    <div className="table-layout themed-bg" data-genre={room.genre}>
       <header className="topbar">
-        <h1>{room.name}</h1>
+        <h1 className="gilded">{room.name}</h1>
         <span className="muted small">{getGenre(room.genre).label} · niveau {room.level}</span>
         <button className="code-chip" onClick={copyInvite} title="Copier le lien d'invitation">{room.code}</button>
         {!connected && <span className="small" style={{ color: "#f0b2a8" }}>Connexion perdue, reconnexion…</span>}

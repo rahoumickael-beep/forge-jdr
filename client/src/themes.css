@@ -1,0 +1,246 @@
+/* Ambiances par genre. Chaque genre redéfinit les mêmes variables ; les composants n'utilisent que celles-ci.
+   data-genre est posé sur l'accueil (genre choisi) et sur la table de jeu. */
+
+:root {
+  /* Grain : bruit fractal en SVG, superposé aux fonds pour casser l'aspect numérique. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --fibers: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .09' numOctaves='4' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .22 0 0 0 0 .08 0 0 0 .5 -.12'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  --accent-2: #f3d58a;
+  --glow: #c9a34e66;
+  --panel-edge: #c9a34e55;
+  --title-gradient: linear-gradient(180deg, #fff2c4 0%, #e3bb5c 45%, #9c7424 100%);
+  --frame-corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M2 38V14C2 7 7 2 14 2h24' fill='none' stroke='%237a5a2a' stroke-width='1.6'/%3E%3Cpath d='M7 38V17c0-6 4-10 10-10h21' fill='none' stroke='%237a5a2a' stroke-width='.8'/%3E%3Ccircle cx='14' cy='14' r='2.6' fill='%237a5a2a'/%3E%3Cpath d='M14 6c3 3 3 5 0 8-3-3-3-5 0-8z' fill='%237a5a2a' opacity='.7'/%3E%3C/svg%3E");
+  --body-font: var(--body);
+}
+
+[data-genre] {
+  background-color: var(--felt);
+  color: var(--text);
+}
+
+/* Le fond de la table : couleur du genre, halo de lampe et grain. */
+.themed-bg {
+  background-color: var(--felt);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 35% 25%, var(--lamp, #ffffff10) 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 120%, #00000080 0%, transparent 60%),
+    var(--grain);
+  background-blend-mode: normal, normal, overlay;
+}
+
+/* --- Fantasy : enluminure, parchemin, feuille d'or --- */
+[data-genre="fantasy"] {
+  --felt: #16201b; --felt-2: #1d2a23; --wood: #22170f; --lamp: #e8b45a1c;
+  --paper: #efe2c2; --paper-2: #e3d2a8; --paper-line: #b89a62; --ink: #2b1d0e; --ink-soft: #6b5232;
+  --brass: #d4a94c; --accent-2: #f6dc8e; --glow: #e4b65a55; --blood: #8f2a1f;
+  --display: "Cinzel", "IM Fell English SC", Georgia, serif;
+  --display-deco: "Cinzel Decorative", "Cinzel", serif;
+  --body: "Cormorant Garamond", Georgia, serif;
+  --title-gradient: linear-gradient(180deg, #fff6d6 0%, #f0cd72 40%, #b5852c 70%, #7d5a18 100%);
+}
+[data-genre="fantasy"] body, [data-genre="fantasy"].lobby, [data-genre="fantasy"] .panel { font-size: 16.5px; }
+
+/* --- Dark fantasy : fer, sang séché, cendre --- */
+[data-genre="dark-fantasy"] {
+  --felt: #0f0d0d; --felt-2: #171313; --wood: #1a1414; --lamp: #b0302018;
+  --paper: #d8cfc0; --paper-2: #c7bba7; --paper-line: #8c7a64; --ink: #1d1512; --ink-soft: #5a4a40;
+  --brass: #b8402f; --accent-2: #e2735e; --glow: #b8402f55; --blood: #7a1d14;
+  --display: "Pirata One", "IM Fell English SC", serif;
+  --display-deco: "Pirata One", serif;
+  --body: "Crimson Pro", Georgia, serif;
+  --title-gradient: linear-gradient(180deg, #f3d8cf 0%, #c8553f 50%, #5e160d 100%);
+  --frame-corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M2 38V2h36' fill='none' stroke='%235a2a20' stroke-width='2'/%3E%3Cpath d='M2 2l10 10M8 2v6H2' fill='none' stroke='%235a2a20' stroke-width='1.2'/%3E%3C/svg%3E");
+}
+
+/* --- Science-fiction : interface holographique --- */
+[data-genre="science-fiction"] {
+  --felt: #060c18; --felt-2: #0b1526; --wood: #0a1322; --lamp: #3aa0ff14;
+  --paper: #0f1d33; --paper-2: #13284a; --paper-line: #2c5c9a; --ink: #d6ecff; --ink-soft: #7fa6cf;
+  --brass: #4cc3ff; --accent-2: #a8e6ff; --glow: #4cc3ff55; --blood: #ff5c6c; --moss: #3ee6a8;
+  --text: #dceeff; --text-soft: #7f9bbd;
+  --display: "Exo 2", system-ui, sans-serif;
+  --display-deco: "Exo 2", system-ui, sans-serif;
+  --body: "Exo 2", system-ui, sans-serif;
+  --title-gradient: linear-gradient(180deg, #ffffff 0%, #a8e6ff 40%, #2f8fd6 100%);
+  --frame-corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M2 26V2h24' fill='none' stroke='%234cc3ff' stroke-width='2'/%3E%3Cpath d='M8 2h4M2 8v4' stroke='%23a8e6ff' stroke-width='3'/%3E%3C/svg%3E");
+}
+
+/* --- Cyberpunk : néon, verre, pluie --- */
+[data-genre="cyberpunk"] {
+  --felt: #0a0612; --felt-2: #120a1f; --wood: #0e0818; --lamp: #ff2fa018;
+  --paper: #140d24e6; --paper-2: #1d1236; --paper-line: #ff2fa077; --ink: #f6e8ff; --ink-soft: #b493d4;
+  --brass: #ff2fa0; --accent-2: #2ff3ff; --glow: #ff2fa066; --blood: #ff3b3b; --moss: #2ff3a0;
+  --text: #f1e6ff; --text-soft: #9d86bd;
+  --display: "Chakra Petch", system-ui, sans-serif;
+  --display-deco: "Chakra Petch", system-ui, sans-serif;
+  --body: "Chakra Petch", system-ui, sans-serif;
+  --title-gradient: linear-gradient(90deg, #2ff3ff 0%, #ff2fa0 60%, #ffcf3b 100%);
+  --frame-corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M2 20V2h18' fill='none' stroke='%23ff2fa0' stroke-width='2'/%3E%3Cpath d='M26 2h4M34 2h4' stroke='%232ff3ff' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+/* --- Horreur : papier jauni, machine à écrire, encre --- */
+[data-genre="horreur"] {
+  --felt: #0c0d0b; --felt-2: #131411; --wood: #141410; --lamp: #b8c08a10;
+  --paper: #e4dcc4; --paper-2: #d6ccb0; --paper-line: #9a8f70; --ink: #1c1a14; --ink-soft: #5d5744;
+  --brass: #a8b07a; --accent-2: #d8dcb8; --glow: #7a1f1f55; --blood: #7a1f1f;
+  --display: "Special Elite", "Courier New", monospace;
+  --display-deco: "Special Elite", monospace;
+  --body: "Crimson Pro", Georgia, serif;
+  --title-gradient: linear-gradient(180deg, #e8e4d0 0%, #a8a888 100%);
+  --frame-corner: none;
+}
+
+/* --- Post-apocalyptique : rouille, pochoir, poussière --- */
+[data-genre="post-apo"] {
+  --felt: #17130d; --felt-2: #211b12; --wood: #1d170f; --lamp: #e0902a18;
+  --paper: #d9c7a0; --paper-2: #c9b48a; --paper-line: #8f7650; --ink: #241a0d; --ink-soft: #6a5536;
+  --brass: #e0782a; --accent-2: #f2b46b; --glow: #e0782a55; --blood: #a8331c;
+  --display: "Stardos Stencil", "Oswald", sans-serif;
+  --display-deco: "Stardos Stencil", sans-serif;
+  --body: "Oswald", system-ui, sans-serif;
+  --title-gradient: linear-gradient(180deg, #ffd9a8 0%, #e0782a 55%, #7a3410 100%);
+  --frame-corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M2 30V2h28' fill='none' stroke='%236a4a20' stroke-width='3' stroke-dasharray='6 3'/%3E%3C/svg%3E");
+}
+
+/* --- Western : cuir, bois, affiche « recherché » --- */
+[data-genre="western"] {
+  --felt: #1c130c; --felt-2: #26190f; --wood: #24170d; --lamp: #f0a24a1c;
+  --paper: #ecd5a8; --paper-2: #e0c48e; --paper-line: #a07a44; --ink: #2e1a0a; --ink-soft: #74512a;
+  --brass: #d8963c; --accent-2: #f5c77a; --glow: #d8963c55; --blood: #9a2f1a;
+  --display: "Rye", "Playfair Display SC", serif;
+  --display-deco: "Rye", serif;
+  --body: "Crimson Pro", Georgia, serif;
+  --title-gradient: linear-gradient(180deg, #ffe6b0 0%, #d8963c 55%, #7a4a14 100%);
+  --frame-corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M12 3l2.4 5 5.6.6-4.2 3.8 1.2 5.5L12 15l-5 2.9 1.2-5.5L4 8.6l5.6-.6z' fill='%238a5a24'/%3E%3C/svg%3E");
+}
+
+/* --- Pirates : carte marine, cordage, embruns --- */
+[data-genre="pirates"] {
+  --felt: #08161f; --felt-2: #0d202d; --wood: #1d140c; --lamp: #4ab0d01a;
+  --paper: #ead8ae; --paper-2: #dcc490; --paper-line: #a3804a; --ink: #22180c; --ink-soft: #6a5230;
+  --brass: #d6b24a; --accent-2: #9fe0e8; --glow: #4ab0d055; --blood: #9a2a1a;
+  --display: "Pirata One", "IM Fell English SC", serif;
+  --display-deco: "Pirata One", serif;
+  --body: "Cormorant Garamond", Georgia, serif;
+  --title-gradient: linear-gradient(180deg, #fff1c8 0%, #d6b24a 55%, #6a4a12 100%);
+}
+
+/* --- Steampunk : laiton, cuivre, rivets --- */
+[data-genre="steampunk"] {
+  --felt: #17110c; --felt-2: #211810; --wood: #20160e; --lamp: #e09a4a1c;
+  --paper: #e8d8b8; --paper-2: #d9c39a; --paper-line: #9c7a4a; --ink: #2a1a0c; --ink-soft: #6e5232;
+  --brass: #c98a3c; --accent-2: #f0c27a; --glow: #c98a3c55; --blood: #8a2a1a;
+  --display: "Playfair Display SC", "IM Fell English SC", serif;
+  --display-deco: "Playfair Display SC", serif;
+  --body: "Crimson Pro", Georgia, serif;
+  --title-gradient: linear-gradient(180deg, #ffe9c2 0%, #d89a4c 45%, #8a5420 75%, #5a3410 100%);
+  --frame-corner: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23a06a2a'/%3E%3Ccircle cx='8' cy='8' r='1.6' fill='%23e8c88a'/%3E%3Cpath d='M16 4h20M4 16v20' stroke='%23a06a2a' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+/* --- Contemporain : dossier confidentiel --- */
+[data-genre="contemporain"] {
+  --felt: #111417; --felt-2: #181c20; --wood: #161a1e; --lamp: #9ab8d014;
+  --paper: #eceae4; --paper-2: #dedbd2; --paper-line: #a8a49a; --ink: #18191b; --ink-soft: #5a5c60;
+  --brass: #d24a3a; --accent-2: #f08a7a; --glow: #d24a3a44; --blood: #b0301f;
+  --display: "Oswald", system-ui, sans-serif;
+  --display-deco: "Oswald", system-ui, sans-serif;
+  --body: "Source Sans 3", system-ui, sans-serif;
+  --title-gradient: linear-gradient(180deg, #ffffff 0%, #c8ccd2 100%);
+  --frame-corner: none;
+}
+
+/* ---------- Éléments communs qui profitent des ambiances ---------- */
+
+body { font-family: var(--body); }
+.gilded {
+  background: var(--title-gradient);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 2px 0 #0009) drop-shadow(0 0 18px var(--glow));
+}
+.ornament { display: block; width: min(340px, 80%); height: 22px; margin: 6px auto; color: var(--brass); opacity: .9; }
+
+/* Parchemin : grain + fibres + bords brûlés + cadre orné aux coins. */
+.paper {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse at 50% 40%, transparent 55%, #6b3f1030 100%),
+    var(--fibers),
+    var(--grain);
+  background-blend-mode: normal, multiply, soft-light;
+  box-shadow: 0 0 0 1px #00000040, inset 0 0 0 6px var(--paper), inset 0 0 0 7px var(--paper-line), 0 14px 34px #000a, 0 2px 4px #0007;
+  border-radius: 2px;
+}
+.paper::before, .paper::after {
+  content: ""; position: absolute; width: 34px; height: 34px; pointer-events: none;
+  background: var(--frame-corner) no-repeat center / contain; opacity: .85;
+}
+.paper::before { top: 3px; left: 3px; }
+.paper::after { bottom: 3px; right: 3px; transform: rotate(180deg); }
+.paper h2, .paper h4 { color: var(--ink); }
+
+/* Genres « écran » : la fiche devient un panneau de verre lumineux. */
+[data-genre="science-fiction"] .paper, [data-genre="cyberpunk"] .paper {
+  background-image: linear-gradient(180deg, #ffffff0a, transparent 30%), repeating-linear-gradient(0deg, #ffffff06 0 1px, transparent 1px 3px);
+  background-blend-mode: normal;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 0 1px var(--paper-line), 0 0 24px var(--glow), inset 0 0 30px #00000060;
+  color: var(--ink);
+}
+[data-genre="science-fiction"] .paper .input, [data-genre="cyberpunk"] .paper .input,
+[data-genre="science-fiction"] .paper .btn, [data-genre="cyberpunk"] .paper .btn,
+[data-genre="science-fiction"] .paper .stat, [data-genre="cyberpunk"] .paper .stat,
+[data-genre="science-fiction"] .paper .genre-pick, [data-genre="cyberpunk"] .paper .genre-pick {
+  background: #00000040; color: var(--ink); border-color: var(--paper-line);
+}
+[data-genre="science-fiction"] .paper .btn.primary, [data-genre="cyberpunk"] .paper .btn.primary { background: var(--brass); color: #05070d; }
+
+/* Boutons : relief métallique dans la couleur du genre. */
+.btn.primary {
+  background: linear-gradient(180deg, var(--accent-2), var(--brass) 55%, color-mix(in srgb, var(--brass) 70%, #000));
+  border-color: color-mix(in srgb, var(--brass) 60%, #000);
+  color: #1a1206; text-shadow: 0 1px 0 #ffffff55;
+  box-shadow: 0 1px 0 #ffffff40 inset, 0 2px 8px #0008, 0 0 0 0 var(--glow);
+  transition: box-shadow .2s, transform .1s;
+}
+.btn.primary:hover { box-shadow: 0 1px 0 #ffffff40 inset, 0 2px 8px #0008, 0 0 18px var(--glow); background: linear-gradient(180deg, #fff, var(--accent-2) 30%, var(--brass)); }
+.btn.primary:active { transform: translateY(1px); }
+.btn { border-color: color-mix(in srgb, var(--brass) 45%, transparent); background: #ffffff08; }
+.btn:hover { border-color: var(--brass); background: #ffffff12; }
+
+/* Barre du haut et barre latérale : matière et liserés. */
+.topbar {
+  background-color: var(--wood);
+  background-image: linear-gradient(180deg, #ffffff0c, transparent 60%), var(--grain);
+  background-blend-mode: normal, overlay;
+  border-bottom: 1px solid var(--panel-edge);
+  box-shadow: 0 1px 0 #000, 0 6px 18px #000a;
+}
+.topbar h1 { font-family: var(--display); font-size: 1.45rem; }
+.sidebar {
+  background-color: var(--wood);
+  background-image: linear-gradient(90deg, #00000055, transparent 18px), var(--grain);
+  background-blend-mode: normal, overlay;
+  border-left: 1px solid var(--panel-edge);
+}
+.tab { font-family: var(--display); letter-spacing: .03em; }
+.tab[aria-selected="true"] { color: var(--accent-2); box-shadow: inset 0 -2px 0 var(--brass), 0 6px 14px -8px var(--glow); }
+.panel h3 { font-family: var(--display); color: var(--accent-2); display: flex; align-items: center; gap: 10px; }
+.panel h3::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--panel-edge), transparent); }
+.log { background: #00000045; border-top: 1px solid var(--panel-edge); }
+.log-entry b { color: var(--accent-2); }
+.die {
+  border-color: var(--panel-edge); color: var(--accent-2); font-family: var(--display);
+  background: radial-gradient(circle at 35% 30%, #ffffff18, transparent 60%), #00000040;
+  transition: transform .15s, box-shadow .15s;
+}
+.die:hover { transform: translateY(-2px) rotate(-4deg); box-shadow: 0 6px 14px #0008, 0 0 12px var(--glow); }
+.code-chip { border-color: var(--brass); color: var(--accent-2); box-shadow: 0 0 12px -2px var(--glow); }
+.scene-banner { font-family: var(--display); border-color: var(--panel-edge); box-shadow: 0 0 30px #000, 0 0 16px var(--glow); }
+.vital { background: var(--ink); color: var(--paper); }
+.hp-bar i { background: linear-gradient(90deg, color-mix(in srgb, var(--blood) 70%, #000), var(--blood)); }
+
+/* Cyberpunk : lueur néon sur les titres et les bordures. */
+[data-genre="cyberpunk"] .panel h3, [data-genre="cyberpunk"] .topbar h1 { text-shadow: 0 0 8px #ff2fa0aa, 0 0 22px #ff2fa055; }
+[data-genre="cyberpunk"] .btn { border-radius: 0; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); }
+[data-genre="science-fiction"] .btn { border-radius: 2px; }
+[data-genre="horreur"] .panel h3::after { background: repeating-linear-gradient(90deg, var(--panel-edge) 0 6px, transparent 6px 10px); }

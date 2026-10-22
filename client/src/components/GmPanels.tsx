@@ -1,4 +1,5 @@
 // Panneaux du maître du jeu.
+import { DEFAULT_VISION } from "../../../shared/vision";
 import { useEffect, useMemo, useState } from "react";
 import { toCharacter, toScenario, type AiKind } from "../../../shared/ai";
 import { GENRES, TONS } from "../../../shared/genres";
@@ -235,7 +236,26 @@ export function MapPanel({ room }: { room: RoomView }) {
           <button className="btn small" onClick={() => send("fog:all", { hidden: false })}>Tout révéler</button>
           <button className="btn small" onClick={() => send("fog:all", { hidden: true })}>Tout cacher</button>
         </div>
-        <p className="small muted">Utilise les pinceaux en bas à gauche de la carte pour révéler les salles au fur et à mesure.</p>
+        <label className="field">
+          <span>Ce que voient les joueurs</span>
+          <select id="vision-mode" className="input" value={room.visionMode} onChange={(e) => send("settings:set", { visionMode: e.target.value })}>
+            <option value="dynamique">Ligne de vue de leurs pions</option>
+            <option value="manuel">Ce que je révèle au pinceau</option>
+          </select>
+        </label>
+        {room.visionMode === "dynamique" ? (
+          <>
+            <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
+              <input type="checkbox" checked={room.sharedVision} onChange={(e) => send("settings:set", { sharedVision: e.target.checked })} /> Vision partagée (chacun voit ce que voit le groupe)
+            </label>
+            <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
+              <input type="checkbox" checked={room.mapKnown} onChange={(e) => send("settings:set", { mapKnown: e.target.checked })} /> Donner la carte des lieux (plan visible, sans les créatures)
+            </label>
+            <p className="small muted">Les murs bloquent la vue. Les zones déjà explorées restent visibles en pénombre. La portée de vision se règle par pion dans l'onglet Pions.</p>
+          </>
+        ) : (
+          <p className="small muted">Utilise les pinceaux en bas à gauche de la carte pour révéler les salles au fur et à mesure.</p>
+        )}
       </div>
     </div>
   );
@@ -323,6 +343,16 @@ export function TokensPanel({ room, selectedId, onSelect }: { room: RoomView; se
                 <button className="btn small" onClick={() => update(t, { hp: Math.min(t.hpMax!, (t.hp ?? 0) + 1) })} aria-label="Ajouter 1 PV">+</button>
               </>
             ) : null}
+            {t.kind === "joueur" && room.visionMode === "dynamique" && (
+              <select className="input small" style={{ width: "auto" }} value={t.vision ?? DEFAULT_VISION} onChange={(e) => update(t, { vision: Number(e.target.value) })} title="Portée de vision" aria-label={`Vision de ${t.name}`}>
+                <option value={2}>3 m</option>
+                <option value={4}>6 m</option>
+                <option value={6}>9 m</option>
+                <option value={10}>15 m</option>
+                <option value={16}>24 m</option>
+                <option value={40}>Illimitée</option>
+              </select>
+            )}
             <button className="btn small" onClick={() => update(t, { hidden: !t.hidden })} title={t.hidden ? "Montrer aux joueurs" : "Cacher aux joueurs"}>
               {t.hidden ? "Caché" : "Visible"}
             </button>

@@ -2,6 +2,7 @@
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { uid } from "../shared/random";
+import { visibleCells } from "../shared/vision";
 import type { ChatEntry, GenreId, Player, RoomState, RoomView, Ton } from "../shared/types";
 
 const DATA_DIR = process.env.DATA_DIR || join(process.cwd(), "data");
@@ -25,6 +26,9 @@ export function loadRooms() {
     try {
       const stored = JSON.parse(readFileSync(join(DATA_DIR, file), "utf8")) as StoredRoom;
       stored.state.players.forEach((p) => (p.online = false));
+      stored.state.visionMode ??= "dynamique";
+      stored.state.sharedVision ??= true;
+      stored.state.mapKnown ??= false;
       rooms.set(stored.state.code, stored);
     } catch (err) {
       console.warn(`Partie illisible ignorée : ${file}`, err);
@@ -67,6 +71,9 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
     map: null,
     fog: null,
     fogEnabled: true,
+    visionMode: "dynamique",
+    sharedVision: true,
+    mapKnown: false,
     tokens: [],
     players: [gm],
     chat: [],
@@ -101,18 +108,36 @@ export function log(room: StoredRoom, entry: Omit<ChatEntry, "id" | "at">) {
   if (room.state.chat.length > MAX_LOG) room.state.chat.splice(0, room.state.chat.length - MAX_LOG);
 }
 
+/** En vision dynamique, tout ce que voit le groupe devient « exploré » (on retire le brouillard). */
+export function updateExplored(room: StoredRoom) {
+  const s = room.state;
+  if (s.visionMode !== "dynamique" || !s.map || !s.fog) return;
+  for (const i of visibleCells(s.map, s.tokens.filter((t) => t.kind === "joueur"))) s.fog[i] = false;
+}
+
 /** Ce qu'un joueur a le droit de voir. Le MJ voit tout. */
 export function viewFor(room: StoredRoom, player: Player): RoomView {
   const s = room.state;
   if (player.isGM) return { ...s, you: player };
   const { gmNotes: _hidden, ...rest } = s;
-  const fogged = (x: number, y: number) => !!(s.fogEnabled && s.fog && s.map && s.fog[Math.floor(y) * s.map.width + Math.floor(x)]);
-  return {
+  const base = {
     ...rest,
     you: player,
-    tokens: s.tokens.filter((t) => t.ownerId === player.id || (!t.hidden && !fogged(t.x, t.y))),
     chat: s.chat.filter((c) => !c.secret || c.fromId === player.id),
     scenarios: [], // les scénarios sont la préparation du MJ
-    characters: s.characters,
   };
+  const map = s.map;
+  if (!map || !s.fogEnabled) return { ...base, tokens: s.tokens.filter((t) => t.ownerId === player.id || !t.hidden) };
+  const cell = (x: number, y: number) => Math.round(y) * map.width + Math.round(x);
+  if (s.visionMode === "dynamique") {
+    const eyes = s.tokens.filter((t) => t.kind === "joueur" && (s.sharedVision || t.ownerId === player.id));
+    const visible = visibleCells(map, eyes);
+    return {
+      ...base,
+      visible: [...visible],
+      tokens: s.tokens.filter((t) => t.ownerId === player.id || (!t.hidden && visible.has(cell(t.x, t.y)))),
+    };
+  }
+  const fogged = (x: number, y: number) => !!s.fog?.[cell(x, y)];
+  return { ...base, tokens: s.tokens.filter((t) => t.ownerId === player.id || (!t.hidden && !fogged(t.x, t.y))) };
 }

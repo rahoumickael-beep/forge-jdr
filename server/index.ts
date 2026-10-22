@@ -8,7 +8,7 @@ import { rollDice } from "../shared/dice";
 import { uid } from "../shared/random";
 import type { Character, GameMap, InitiativeEntry, Player, RoomState, Scenario, Token } from "../shared/types";
 import { claudeAvailable, generateWithClaude } from "./claude";
-import { addPlayer, createRoom, getRoom, loadRooms, log, MAX_PLAYERS, saveSoon, viewFor, type StoredRoom } from "./rooms";
+import { addPlayer, createRoom, getRoom, loadRooms, log, MAX_PLAYERS, saveSoon, updateExplored, viewFor, type StoredRoom } from "./rooms";
 
 // Charge .env sans dépendance supplémentaire.
 if (existsSync(".env")) {
@@ -53,6 +53,7 @@ type Ack = (res: { ok: boolean; error?: string; [k: string]: unknown }) => void;
 
 /** Envoie à chaque joueur connecté sa propre vue de la partie. */
 async function broadcast(room: StoredRoom) {
+  updateExplored(room);
   saveSoon(room.state.code);
   const sockets = await io.in(room.state.code).fetchSockets();
   for (const s of sockets) {
@@ -144,7 +145,7 @@ io.on("connection", (socket) => {
     if (!s.player.isGM) {
       if (existing && existing.ownerId !== s.player.id) return ack?.({ ok: false, error: "Ce pion n'est pas à toi." });
       if (!existing && st.tokens.filter((x) => x.ownerId === s.player.id).length >= 2) return ack?.({ ok: false, error: "Deux pions maximum par joueur." });
-      t = { ...t, ownerId: s.player.id, kind: "joueur", hidden: false };
+      t = { ...t, ownerId: s.player.id, kind: "joueur", hidden: false, vision: existing?.vision };
     }
     const clean: Token = { ...t, id: t.id || uid("t_"), name: String(t.name || "Pion").slice(0, 40) };
     if (existing) Object.assign(existing, clean);
@@ -252,7 +253,10 @@ io.on("connection", (socket) => {
   gm<string>("handout:remove", (st, id) => (st.handouts = st.handouts.filter((h) => h.id !== id)));
   gm<Scenario>("scenario:add", (st, sc) => st.scenarios.unshift(sc));
   gm<string>("scenario:remove", (st, id) => (st.scenarios = st.scenarios.filter((x) => x.id !== id)));
-  gm<Partial<Pick<RoomState, "name" | "genre" | "ton" | "level" | "movementLocked">>>("settings:set", (st, p) => {
+  gm<Partial<Pick<RoomState, "name" | "genre" | "ton" | "level" | "movementLocked" | "visionMode" | "sharedVision" | "mapKnown">>>("settings:set", (st, p) => {
+    if (p.visionMode === "dynamique" || p.visionMode === "manuel") st.visionMode = p.visionMode;
+    if (typeof p.sharedVision === "boolean") st.sharedVision = p.sharedVision;
+    if (typeof p.mapKnown === "boolean") st.mapKnown = p.mapKnown;
     if (typeof p.name === "string") st.name = p.name.slice(0, 80);
     if (p.genre) st.genre = p.genre;
     if (p.ton) st.ton = p.ton;

@@ -68,7 +68,15 @@ try {
   if (!log.includes("Léa")) fail("le lancer de dé du joueur n'arrive pas chez le MJ");
   await gm.screenshot({ path: "playtest-mj.png" });
   await pl.screenshot({ path: "playtest-joueur.png" });
-  console.log(before ? "Captures : playtest-mj.png, playtest-joueur.png" : "");
+  // Ligne de vue : on recache tout, le joueur ne doit plus voir que ce que voit son pion.
+  await gm.getByRole("button", { name: "Tout cacher" }).click();
+  await pl.waitForTimeout(500);
+  const view = await pl.evaluate(() => window.__forge?.());
+  if (!view?.visible?.length) fail("le joueur ne reçoit pas sa ligne de vue");
+  else if (view.visible.length > view.map.width * view.map.height * 0.5) fail("la ligne de vue traverse les murs");
+  else console.log(`Ligne de vue : ${view.visible.length} cases visibles`);
+  await pl.screenshot({ path: "playtest-joueur-vue.png" });
+  console.log(before ? "Captures : playtest-mj.png, playtest-joueur.png, playtest-joueur-vue.png" : "");
 } catch (err) {
   fail(err.message);
 } finally {
