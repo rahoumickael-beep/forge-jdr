@@ -27,6 +27,8 @@ export function loadRooms() {
       const stored = JSON.parse(readFileSync(join(DATA_DIR, file), "utf8")) as StoredRoom;
       stored.state.players.forEach((p) => (p.online = false));
       stored.state.visionMode ??= "dynamique";
+      stored.state.abilityMethod ??= "points";
+      stored.state.deathRule ??= "heroique";
       stored.state.sharedVision ??= true;
       stored.state.mapKnown ??= false;
       rooms.set(stored.state.code, stored);
@@ -72,6 +74,8 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
     fog: null,
     fogEnabled: true,
     visionMode: "dynamique",
+    abilityMethod: "points",
+    deathRule: "heroique",
     sharedVision: true,
     mapKnown: false,
     tokens: [],

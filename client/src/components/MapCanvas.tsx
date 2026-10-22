@@ -296,6 +296,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
         selected: t.id === selectedId,
         mine: t.ownerId === room.you.id,
         time,
+        portrait: t.characterId ? portraitImage(room.characters.find((c) => c.id === t.characterId)?.portrait) : null,
       });
     }
 
@@ -402,7 +403,20 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
 }
 
 /** Pion en médaillon : liseré métallique, disque coloré bombé, initiales gravées. */
-function drawToken(g: CanvasRenderingContext2D, t: Token, cx: number, cy: number, size: number, o: { selected: boolean; mine: boolean; time: number }) {
+// Portraits des personnages, décodés une fois puis gardés en mémoire.
+const portraits = new Map<string, HTMLImageElement>();
+function portraitImage(url: string | undefined): HTMLImageElement | null {
+  if (!url) return null;
+  let img = portraits.get(url);
+  if (!img) {
+    img = new Image();
+    img.src = url;
+    portraits.set(url, img);
+  }
+  return img.complete && img.naturalWidth ? img : null;
+}
+
+function drawToken(g: CanvasRenderingContext2D, t: Token, cx: number, cy: number, size: number, o: { selected: boolean; mine: boolean; time: number; portrait?: HTMLImageElement | null }) {
   const r = size * 0.43;
   const rim = t.kind === "monstre" ? "#8a2a20" : t.kind === "pnj" ? "#8a8a8a" : "#d4a94c";
   g.save();
@@ -441,6 +455,14 @@ function drawToken(g: CanvasRenderingContext2D, t: Token, cx: number, cy: number
   g.beginPath();
   g.arc(cx, cy, r * 0.8, 0, Math.PI * 2);
   g.fill();
+  if (o.portrait) {
+    g.save();
+    g.clip();
+    g.drawImage(o.portrait, cx - r * 0.8, cy - r * 0.8, r * 1.6, r * 1.6);
+    g.restore();
+    g.beginPath();
+    g.arc(cx, cy, r * 0.8, 0, Math.PI * 2);
+  }
   g.strokeStyle = "rgba(0,0,0,.5)";
   g.lineWidth = Math.max(1, r * 0.06);
   if (t.hidden) g.setLineDash([3, 3]);
@@ -452,7 +474,7 @@ function drawToken(g: CanvasRenderingContext2D, t: Token, cx: number, cy: number
   g.ellipse(cx - r * 0.2, cy - r * 0.38, r * 0.45, r * 0.2, -0.4, 0, Math.PI * 2);
   g.fill();
   // initiales gravées
-  if (size >= 18) {
+  if (size >= 18 && !o.portrait) {
     g.font = `700 ${Math.max(9, r * 0.72)}px Cinzel, "Source Sans 3", serif`;
     g.textAlign = "center";
     g.textBaseline = "middle";

@@ -1,4 +1,5 @@
 // Serveur : sert le client, gère les parties en temps réel (Socket.IO) et l'IA Claude optionnelle.
+import { DEATH_RULES } from "../shared/rules";
 import { createServer } from "node:http";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -253,7 +254,9 @@ io.on("connection", (socket) => {
   gm<string>("handout:remove", (st, id) => (st.handouts = st.handouts.filter((h) => h.id !== id)));
   gm<Scenario>("scenario:add", (st, sc) => st.scenarios.unshift(sc));
   gm<string>("scenario:remove", (st, id) => (st.scenarios = st.scenarios.filter((x) => x.id !== id)));
-  gm<Partial<Pick<RoomState, "name" | "genre" | "ton" | "level" | "movementLocked" | "visionMode" | "sharedVision" | "mapKnown">>>("settings:set", (st, p) => {
+  gm<Partial<Pick<RoomState, "name" | "genre" | "ton" | "level" | "movementLocked" | "visionMode" | "sharedVision" | "mapKnown" | "abilityMethod" | "deathRule">>>("settings:set", (st, p) => {
+    if (p.abilityMethod === "points" || p.abilityMethod === "des" || p.abilityMethod === "fixe") st.abilityMethod = p.abilityMethod;
+    if (typeof p.deathRule === "string" && DEATH_RULES.some((d) => d.id === p.deathRule)) st.deathRule = p.deathRule;
     if (p.visionMode === "dynamique" || p.visionMode === "manuel") st.visionMode = p.visionMode;
     if (typeof p.sharedVision === "boolean") st.sharedVision = p.sharedVision;
     if (typeof p.mapKnown === "boolean") st.mapKnown = p.mapKnown;

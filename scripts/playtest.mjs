@@ -77,6 +77,38 @@ try {
   else if (view.visible.length > view.map.width * view.map.height * 0.5) fail("la ligne de vue traverse les murs");
   else console.log(`Ligne de vue : ${view.visible.length} cases visibles`);
   await pl.screenshot({ path: "playtest-joueur-vue.png" });
+  // Créateur de personnage pas à pas : un deuxième joueur passe toutes les étapes.
+  const p2 = await (await browser.newContext({ viewport: { width: 1400, height: 900 } })).newPage();
+  p2.setDefaultTimeout(10000);
+  p2.on("pageerror", (e) => fail(`erreur JS côté joueur 2 : ${e.message}`));
+  await p2.goto(`${URL}/?partie=${code}`);
+  await p2.fill("#pseudo", "Tom");
+  await p2.getByRole("button", { name: "S'asseoir à la table" }).click();
+  await p2.getByRole("button", { name: "Créer pas à pas" }).click();
+  await p2.getByRole("button", { name: /Revenus/ }).click();
+  await p2.screenshot({ path: "playtest-createur-origine.png" });
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.getByRole("button", { name: /Chasseur de morts/ }).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.getByRole("button", { name: /Cloueur/ }).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  for (const [stat, n] of [["Force", 7], ["Constitution", 6], ["Sagesse", 2]]) for (let i = 0; i < n; i++) await p2.getByRole("button", { name: `Monter ${stat}` }).click();
+  await p2.screenshot({ path: "playtest-createur-carac.png" });
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  const next = p2.getByRole("button", { name: "Suivant" });
+  while (await next.isDisabled()) await p2.locator('.cc-chip[aria-pressed="false"]:not([disabled])').first().click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.fill("#cc-nom", "Aubin Clouet");
+  await p2.locator(".cc-trait").first().locator(".cc-chip").nth(1).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.screenshot({ path: "playtest-createur-recap.png" });
+  await p2.getByRole("button", { name: "Entrer dans l'histoire" }).click();
+  await p2.waitForTimeout(500);
+  const aubin = await gm.evaluate(() => window.__forge?.().characters.find((c) => c.name === "Aubin Clouet"));
+  if (!aubin) fail("le personnage créé pas à pas n'arrive pas chez le MJ");
+  else console.log(`Créateur : ${aubin.name}, ${aubin.origin}, ${aubin.archetype}, PV ${aubin.hp}, CA ${aubin.ac}`);
+
   console.log(before ? "Captures : playtest-mj.png, playtest-joueur.png, playtest-joueur-vue.png" : "");
 } catch (err) {
   fail(err.message);

@@ -1,4 +1,6 @@
 // Panneaux du maître du jeu.
+import { ABILITY_METHODS } from "../../../shared/origins";
+import { DEATH_RULES } from "../../../shared/rules";
 import { DEFAULT_VISION } from "../../../shared/vision";
 import { useEffect, useMemo, useState } from "react";
 import { toCharacter, toScenario, type AiKind } from "../../../shared/ai";
@@ -530,6 +532,20 @@ export function SettingsPanel({ room }: { room: RoomView }) {
   }
   return (
     <div className="stack">
+      <h3>Règles de la partie</h3>
+      <label className="field">
+        <span>Caractéristiques à la création</span>
+        <select id="ability-method" className="input" value={room.abilityMethod} onChange={(e) => send("settings:set", { abilityMethod: e.target.value })}>
+          {ABILITY_METHODS.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}
+        </select>
+      </label>
+      <label className="field">
+        <span>Mort des personnages</span>
+        <select id="death-rule" className="input" value={room.deathRule} onChange={(e) => send("settings:set", { deathRule: e.target.value })}>
+          {DEATH_RULES.map((d) => <option key={d.id} value={d.id}>{d.label}</option>)}
+        </select>
+      </label>
+      <p className="small muted">{DEATH_RULES.find((d) => d.id === room.deathRule)?.text}</p>
       <h3>Joueurs</h3>
       {room.players.map((p) => (
         <div key={p.id} className="token-row">

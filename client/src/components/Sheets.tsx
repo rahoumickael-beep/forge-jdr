@@ -12,6 +12,7 @@ export function CharacterSheet({ c, editable, onPlace, onRemove }: { c: Characte
   const roll = (stat: string) => send("dice:roll", { expr: `1d20${modifier(c.stats[stat]) >= 0 ? "+" : ""}${modifier(c.stats[stat])}`, label: `${c.name} — ${stat}` });
   return (
     <article className="paper sheet">
+      {c.portrait && <img className="sheet-portrait" src={c.portrait} alt={`Portrait de ${c.name}`} />}
       <h4>{c.name}</h4>
       <div className="sub">
         {c.origin} · {c.archetype} · niveau {c.level}

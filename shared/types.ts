@@ -62,6 +62,15 @@ export interface Character {
   abilities: string[];
   /** Pour un PNJ : rôle dans l'histoire. */
   role?: string;
+  // Champs du créateur de personnage (facultatifs : les personnages tirés au hasard ne les ont pas)
+  classId?: string;
+  subOrigin?: string;
+  background?: string;
+  skills?: string[];
+  traits?: { trait: string; ideal: string; bond: string; flaw: string };
+  appearance?: string;
+  /** Portrait en data URL JPEG (petit, ~256 px). */
+  portrait?: string;
 }
 
 export interface Encounter {
@@ -153,6 +162,10 @@ export interface RoomState {
   visionMode: "dynamique" | "manuel";
   sharedVision: boolean; // les joueurs partagent la vue de tout le groupe
   mapKnown: boolean; // le groupe possède la carte des lieux : le plan est visible en sombre
+  /** Méthode de répartition des caractéristiques à la création. */
+  abilityMethod: "points" | "des" | "fixe";
+  /** Règle de mort choisie par le MJ (id de DEATH_RULES). */
+  deathRule: string;
   tokens: Token[];
   players: Player[];
   chat: ChatEntry[];
