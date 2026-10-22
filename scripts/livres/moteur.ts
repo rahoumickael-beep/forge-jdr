@@ -1,6 +1,7 @@
 // Moteur de mise en page des livres : chaque unité (chapitre, classe, créature…) est imprimée à part par
-// Chromium, en A4 sans marge, avec le parchemin en fond ; on assemble ensuite avec pdf-lib, on calcule le
-// sommaire, puis on imprime par-dessus un calque transparent avec les en-têtes courants et les folios.
+// Chromium, en A4 sans marge et sur fond transparent ; on assemble ensuite avec pdf-lib : sous chaque page,
+// une seule image de parchemin partagée par tout le livre (le PDF reste léger) ; par-dessus, un calque
+// transparent avec les en-têtes courants et les folios. Le sommaire se calcule en deux passes.
 import { execFileSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -66,11 +67,17 @@ export async function fabriquer(livre: Livre, out: string) {
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
   const page = await browser.newPage();
 
+  // Le parchemin, peint une fois en JPEG.
+  const page2 = await browser.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: 2 });
+  await page2.setContent(doc("", true));
+  const texture = await page2.screenshot({ type: "jpeg", quality: 80 });
+  await page2.close();
+
   const couverture = await imprimer(page, doc(`<section class="couverture">${livre.couverture}</section>`, false));
-  const credits = await imprimer(page, doc(`<div class="flux">${livre.credits}</div>`));
+  const credits = await imprimer(page, doc(`<div class="flux">${livre.credits}</div>`, false));
   const corps: Uint8Array[] = [];
   for (const u of livre.unites) {
-    corps.push(await imprimer(page, u.pleine ? doc(u.html, false) : doc(`<div class="flux">${u.html}</div>`)));
+    corps.push(await imprimer(page, u.pleine ? doc(u.html, false) : doc(`<div class="flux">${u.html}</div>`, false)));
     process.stdout.write(".");
   }
   process.stdout.write("\n");
@@ -82,18 +89,30 @@ export async function fabriquer(livre: Livre, out: string) {
     let n = avant + pagesSommaire + 1;
     return tailles.map((t) => ((n += t), n - t));
   };
-  let tocPages = await pagesDe(await imprimer(page, doc(sommaire(livre, debutsAvec(1)))));
+  let tocPages = await pagesDe(await imprimer(page, doc(sommaire(livre, debutsAvec(1)), false)));
   const debuts = debutsAvec(tocPages);
-  const toc = await imprimer(page, doc(sommaire(livre, debuts)));
+  const toc = await imprimer(page, doc(sommaire(livre, debuts), false));
   tocPages = await pagesDe(toc);
 
   const final = await PDFDocument.create();
   final.setTitle(livre.titre);
   final.setAuthor("Mickael et sa table");
   final.setLanguage("fr-FR");
-  for (const morceau of [couverture, credits, toc, ...corps]) {
-    const src = await PDFDocument.load(morceau);
-    for (const p of await final.copyPages(src, src.getPageIndices())) final.addPage(p);
+  const fond = await final.embedJpg(texture);
+  const morceaux = [
+    { pdf: couverture, parchemin: false },
+    { pdf: credits, parchemin: true },
+    { pdf: toc, parchemin: true },
+    ...corps.map((pdf, i) => ({ pdf, parchemin: !livre.unites[i].pleine })),
+  ];
+  for (const m of morceaux) {
+    const src = await PDFDocument.load(m.pdf);
+    const formesSrc = await final.embedPages(src.getPages());
+    for (const f of formesSrc) {
+      const p = final.addPage([f.width, f.height]);
+      if (m.parchemin) p.drawImage(fond, { x: 0, y: 0, width: f.width, height: f.height });
+      p.drawPage(f, { x: 0, y: 0 });
+    }
   }
   const total = final.getPageCount();
 
