@@ -1,0 +1,14 @@
+# Déploiement sur Render (https://render.com) : "New > Blueprint" puis choisir ce dépôt.
+services:
+  - type: web
+    name: forge-jdr
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/sante
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ANTHROPIC_API_KEY
+        sync: false
