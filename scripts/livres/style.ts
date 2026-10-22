@@ -1,4 +1,8 @@
 // Feuille de style des livres d'Aubreterre : parchemin, Cinzel, EB Garamond, deux colonnes.
+// Couleurs et polices de base tirées de la charte fantasy (shared/charte.ts), comme dans l'appli.
+import { CHARTES } from "../../shared/charte";
+
+const { palette: P, polices: F } = CHARTES.fantasy;
 
 export const POLICES =
   "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English+SC&display=swap";
@@ -12,10 +16,10 @@ export const CSS = `
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
-body { font-family: "EB Garamond", Georgia, serif; color: #2a1d12; font-size: 10.2pt; line-height: 1.34; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "${F.texte}", Georgia, serif; color: ${P.encre}; font-size: 10.2pt; line-height: 1.34; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
 /* Fond de parchemin répété sur chaque page imprimée (élément fixe). */
-.parchemin { position: fixed; inset: 0; z-index: -1; background-color: #efe2c4;
+.parchemin { position: fixed; inset: 0; z-index: -1; background-color: ${P.papier};
   background-image: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(110,70,30,.28) 100%), ${BRUIT_FIN}, ${TACHES}; }
 
 /* Le texte coule de page en page ; les marges sont recopiées sur chaque fragment. */
@@ -24,7 +28,7 @@ body { font-family: "EB Garamond", Georgia, serif; color: #2a1d12; font-size: 10
 .saut { break-before: page; height: 0; }
 .bloc { break-inside: avoid; }
 
-h1, h2, h3, h4, h5 { font-family: Cinzel, serif; font-weight: 600; color: #6e2414; margin: 0; break-after: avoid; }
+h1, h2, h3, h4, h5 { font-family: "${F.titre}", serif; font-weight: 600; color: #6e2414; margin: 0; break-after: avoid; }
 h3 { font-size: 13pt; margin: 3.5mm 0 1.5mm; border-bottom: .6pt solid #a07a40; padding-bottom: .6mm; }
 h4 { font-size: 10.8pt; margin: 2.6mm 0 .8mm; }
 h5 { font-size: 9.6pt; margin: 2mm 0 .6mm; }

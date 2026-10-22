@@ -35,7 +35,7 @@
   --brass: #d4a94c; --accent-2: #f6dc8e; --glow: #e4b65a55; --blood: #8f2a1f;
   --display: "Cinzel", "IM Fell English SC", Georgia, serif;
   --display-deco: "Cinzel Decorative", "Cinzel", serif;
-  --body: "Cormorant Garamond", Georgia, serif;
+  --body: "EB Garamond", Georgia, serif;
   --title-gradient: linear-gradient(180deg, #fff6d6 0%, #f0cd72 40%, #b5852c 70%, #7d5a18 100%);
 }
 [data-genre="fantasy"] body, [data-genre="fantasy"].lobby, [data-genre="fantasy"] .panel { font-size: 16.5px; }
