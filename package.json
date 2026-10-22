@@ -10,7 +10,9 @@
     "start": "tsx server/index.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "tsx --test shared/*.test.ts",
-    "playtest": "node scripts/playtest.mjs"
+    "playtest": "node scripts/playtest.mjs",
+    "livre": "tsx scripts/livre.ts dist-livre",
+    "apercu-cartes": "node scripts/apercu-cartes.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",

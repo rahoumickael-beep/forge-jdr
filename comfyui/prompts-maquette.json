@@ -1,0 +1,37 @@
+[
+  {
+    "id": "couverture",
+    "prompt": "oil painting, dark fantasy rulebook plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, candlelight, painterly, by an old master, a dead god-emperor sitting on a black basalt throne, iron crown, candle wax rising to his knees, pilgrims kneeling in shadow, vast cathedral hall, cold blue light from cracks in the floor",
+    "seed": 1000,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "glas",
+    "prompt": "oil painting, dark fantasy rulebook plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, candlelight, painterly, by an old master, the night all the bells rang alone, a gothic imperial city at night under snow, bell towers, crowds in the streets looking up, a faint pale glow from the palace",
+    "seed": 1017,
+    "width": 1344,
+    "height": 1024
+  },
+  {
+    "id": "classe-chasseur",
+    "prompt": "oil painting, dark fantasy rulebook plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, candlelight, painterly, by an old master, a grim dead-hunter in a brigandine and wide hat, cold iron hammer and a bag of square nails, kneeling over a corpse in a muddy village at dusk, salt in his palm",
+    "seed": 1034,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "origine-revenu",
+    "prompt": "oil painting, dark fantasy rulebook plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, candlelight, painterly, by an old master, portrait of a revenant woman, pale bluish skin, black fingernails, hood, standing in a graveyard at dawn, calm sad eyes, breath not fogging in the cold air",
+    "seed": 1051,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "bestiaire-leve",
+    "prompt": "oil painting, dark fantasy rulebook plate, visible brush strokes, muted earth palette, dramatic chiaroscuro, candlelight, painterly, by an old master, a risen corpse walking east across a misty peat bog at dawn, old leather-tanned skin, iron nail in one heel, villagers on stilt houses watching in silence",
+    "seed": 1068,
+    "width": 1344,
+    "height": 1024
+  }
+]
