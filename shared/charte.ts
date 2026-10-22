@@ -52,7 +52,7 @@ export const CHARTES: Record<GenreId, Charte> = {
     genre: "fantasy",
     nom: "Peinture à l'huile, lumière de bougie",
     // Gabarit des planches : le retoucher oblige à repeindre les illustrations déjà faites.
-    peinture: "oil painting on aged canvas, dark fantasy {support}, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, {cadrage}, {lumiere}, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark",
+    peinture: "oil painting on aged canvas, dark fantasy {support}, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, {cadrage}, {lumiere}, pre-industrial medieval world of timber, stone and iron, painterly realism in the manner of 17th century Dutch masters, no text, no letters, no signature, no border, no frame, no watermark, no power lines, no modern objects",
     lumiere: "warm candlelight from one side",
     supports: fantasySupports,
     palette: { fond: "#16201b", papier: "#efe2c2", papier2: "#e3d2a8", filet: "#b89a62", encre: "#2b1d0e", encreDouce: "#6b5232", or: "#d4a94c", sang: "#8f2a1f" },

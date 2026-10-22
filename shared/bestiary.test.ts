@@ -121,3 +121,12 @@ test("bestiaire : conversion en ennemi de rencontre", () => {
   assert.equal(aigle.danger, "Élevé");
   assert.match(aigle.attack, /3 × Épée longue/);
 });
+
+test("bestiaire : aucune planche fantasy ne décrit d'objet moderne", () => {
+  const moderne = /\b(electric|telephone|power line|pylon|asphalt|car|truck|plastic|concrete|neon|gun|rifle|pistol)\b/i;
+  for (const c of BESTIARY) {
+    const scene = c.illustration.split("no modern objects, ")[1] ?? "";
+    assert.ok(scene.length > 40, `${c.id} : scène introuvable`);
+    assert.ok(!moderne.test(scene), `${c.id} : objet moderne dans la scène`);
+  }
+});

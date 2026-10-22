@@ -345,7 +345,7 @@ export const BESTIARY: Creature[] = [
     actions: [hit("Bec", "contact", 4, "1,5 m", "1", "perforants")],
     lore: "Elles suivent les lignes de pieux le long des routes impériales depuis six siècles et savent à quelle heure on pend. Les rouliers leur jettent du pain pour qu'elles se taisent.",
     gmNotes: "Une corneille qui a picoré l'œil d'un Porte-Voix répète des phrases de Gorvan pendant des jours : « Il suffit de la retirer. » C'est un indice que les joueurs peuvent trouver dès le niveau 1, sans le comprendre.",
-    scene: "a ragged black crow perched on top of a tarred wooden stake beside a straight paved imperial road, wheat plain behind, beak half open as if speaking, late afternoon light raking from the side, a rope still knotted below it",
+    scene: "a ragged black crow perched on a single crooked tarred gibbet stake on a medieval cobbled road, open wheat plain behind, beak half open as if speaking, late afternoon light raking from the side, a rope still knotted below it",
   }),
   creature({
     id: "matin-leve",
