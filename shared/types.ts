@@ -79,7 +79,7 @@ export interface Character {
 export interface Encounter {
   title: string;
   description: string;
-  enemies: { name: string; count: number; hp: number; ac: number; attack: string; danger: string }[];
+  enemies: { name: string; count: number; hp: number; ac: number; attack: string; danger: string; creatureId?: string }[];
   difficulty: string;
 }
 
