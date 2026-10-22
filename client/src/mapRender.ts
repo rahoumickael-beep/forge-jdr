@@ -3,8 +3,10 @@
 // la brume et les pions sont dessinés à chaque image par MapCanvas.
 import type { MapTheme } from "../../shared/genres";
 import { T, type GameMap, type GenreId, type Tile } from "../../shared/types";
+import { BASE, hash, shade } from "./mapUtil";
+import { indoorCells, paintOutdoorGround, paintOutdoorWater } from "./mapOutdoor";
 
-export const BASE = 48; // pixels par case dans l'image pré-rendue
+export { BASE, hash, shade };
 
 export type Material = "pierre" | "metal" | "planches" | "terre";
 
@@ -13,23 +15,6 @@ export function materialFor(genre: GenreId): Material {
   if (genre === "pirates" || genre === "western") return "planches";
   if (genre === "post-apo") return "terre";
   return "pierre";
-}
-
-export function hash(x: number, y: number, seed: number) {
-  let h = (x * 374761393 + y * 668265263 + seed * 2246822519) | 0;
-  h = Math.imul(h ^ (h >>> 13), 1274126177);
-  return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
-}
-
-function rgb(hex: string): [number, number, number] {
-  const n = parseInt(hex.replace("#", "").slice(0, 6), 16);
-  return [n >> 16, (n >> 8) & 255, n & 255];
-}
-
-export function shade(hex: string, amount: number, alpha = 1) {
-  const [r, g, b] = rgb(hex);
-  const c = (v: number) => Math.max(0, Math.min(255, Math.round(v + amount * 255)));
-  return `rgba(${c(r)},${c(g)},${c(b)},${alpha})`;
 }
 
 const isSolid = (t: Tile | undefined) => t === undefined || t === T.mur || t === T.vide;
@@ -68,11 +53,17 @@ export function renderMapImage(map: GameMap, theme: MapTheme, material: Material
       }
     }
 
+  // Extérieur : herbe et chemins organiques ; seuls les intérieurs des maisons gardent un sol dessiné case par case.
+  const outdoor = map.kind === "nature" || map.kind === "village";
+  const indoor = outdoor ? indoorCells(map) : null;
+  if (outdoor) paintOutdoorGround(g, map, theme, indoor!);
+
   // 2. Sols selon la matière.
   for (let y = 0; y < H; y++)
     for (let x = 0; x < W; x++) {
       const t = at(x, y)!;
       if (isSolid(t)) continue;
+      if (indoor && !indoor[y * W + x]) continue;
       const px = x * S;
       const py = y * S;
       const r = hash(x, y, map.seed);
@@ -180,7 +171,8 @@ export function renderMapImage(map: GameMap, theme: MapTheme, material: Material
     }
 
   // 3. Eau : lit sombre, dégradé de profondeur, écume au bord.
-  for (let y = 0; y < H; y++)
+  if (outdoor) paintOutdoorWater(g, map, theme);
+  else for (let y = 0; y < H; y++)
     for (let x = 0; x < W; x++) {
       if (at(x, y) !== T.eau) continue;
       const px = x * S;
@@ -338,8 +330,9 @@ export function renderMapImage(map: GameMap, theme: MapTheme, material: Material
       g.restore();
     }
 
-  // 8. Quadrillage discret.
+  // 8. Quadrillage discret (plus léger dehors, pour ne pas casser les formes naturelles).
   g.strokeStyle = theme.grid;
+  g.globalAlpha = outdoor ? 0.45 : 1;
   g.lineWidth = 1;
   g.beginPath();
   for (let y = 0; y < H; y++)
@@ -348,6 +341,7 @@ export function renderMapImage(map: GameMap, theme: MapTheme, material: Material
       g.rect(x * S + 0.5, y * S + 0.5, S, S);
     }
   g.stroke();
+  g.globalAlpha = 1;
   return cv;
 }
 
