@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { getGenre } from "../../../shared/genres";
 import type { RoomView } from "../../../shared/types";
 import { forgetSession, toast, useStore } from "../store";
@@ -6,9 +6,10 @@ import { DiceTray, Log } from "./Dice";
 import { CombatPanel, GeneratePanel, MapPanel, NotesPanel, ScenariosPanel, SettingsPanel, TokensPanel } from "./GmPanels";
 import { MapCanvas, type MapTool } from "./MapCanvas";
 import { HandoutsPanel, MyCharacterPanel, PartyPanel } from "./PlayerPanels";
+import { INITIAL_NAV, Rulebook, RulebookOverlay, type BookNav } from "./Rulebook";
 
-const GM_TABS = ["Générer", "Carte", "Pions", "Combat", "Scénarios", "Narration", "Réglages"] as const;
-const PLAYER_TABS = ["Mon perso", "Groupe", "Documents"] as const;
+const GM_TABS = ["Générer", "Carte", "Pions", "Combat", "Scénarios", "Narration", "Réglages", "Règles"] as const;
+const PLAYER_TABS = ["Mon perso", "Groupe", "Documents", "Règles"] as const;
 
 export function Table({ room }: { room: RoomView }) {
   const { connected } = useStore();
@@ -18,6 +19,9 @@ export function Table({ room }: { room: RoomView }) {
   const [tool, setTool] = useState<MapTool>("deplacer");
   const [brush, setBrush] = useState(3);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [bookNav, setBookNav] = useState<BookNav>(INITIAL_NAV);
+  const [bookOpen, setBookOpen] = useState(false);
+  const closeBook = useCallback(() => setBookOpen(false), []);
 
   const invite = `${location.origin}/?partie=${room.code}`;
   async function copyInvite() {
@@ -85,6 +89,7 @@ export function Table({ room }: { room: RoomView }) {
             {tab === "Mon perso" && <MyCharacterPanel room={room} />}
             {tab === "Groupe" && <PartyPanel room={room} />}
             {tab === "Documents" && <HandoutsPanel room={room} />}
+            {tab === "Règles" && <Rulebook room={room} nav={bookNav} onNav={setBookNav} onOpenWide={() => setBookOpen(true)} />}
           </div>
           <div>
             {room.initiative.entries.length > 0 && (
@@ -97,6 +102,7 @@ export function Table({ room }: { room: RoomView }) {
           </div>
         </aside>
       </div>
+      {bookOpen && <RulebookOverlay room={room} nav={bookNav} onNav={setBookNav} onClose={closeBook} />}
     </div>
   );
 }

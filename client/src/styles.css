@@ -198,3 +198,123 @@ textarea.input { resize: vertical; min-height: 70px; }
   .sidebar { border-left: 0; border-top: 1px solid #00000080; }
   .table-layout { height: auto; min-height: 100%; }
 }
+
+/* --- Livre des règles --- */
+.rulebook { display: flex; flex-direction: column; gap: 10px; }
+.rb-toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 4px; }
+.rb-toc-item {
+  background: transparent; border: 0; border-bottom: 1px solid transparent; color: var(--text-soft);
+  padding: 4px 6px; cursor: pointer; font-family: var(--display); letter-spacing: .03em; font-size: 14px;
+}
+.rb-toc-item:hover { color: var(--text); }
+.rb-toc-item[aria-current="page"] { color: var(--accent-2, var(--brass)); border-bottom-color: var(--brass); }
+.rb-toc-num { font-family: var(--display); color: var(--brass-dim); display: inline-block; min-width: 2.2em; }
+.rb-tools { display: flex; gap: 6px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+.rb-tools .input { flex: 1 1 140px; width: auto; padding: 5px 8px; }
+.rb-search-label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-soft); }
+
+.rb-page { padding: 22px 22px 18px; font-family: var(--body); }
+.rb-scroll { line-height: 1.5; }
+.rb-scroll p { margin: 0 0 8px; }
+.rb-chapter-head { text-align: center; margin-bottom: 10px; }
+.rulebook .rb-page h2 { font-size: 1.6rem; color: var(--ink); margin: 0; }
+.rb-sub { margin: 2px 0 0; color: var(--ink-soft); font-style: italic; }
+.rb-ornament { color: var(--ink-soft); opacity: .7; height: 16px; margin-top: 4px; }
+.rulebook .rb-page h3 {
+  display: block; font-family: var(--display); font-size: 1.12rem; color: var(--blood); margin: 14px 0 6px; letter-spacing: .02em;
+}
+.rulebook .rb-page h3::after { content: none; }
+.rb-section { break-inside: avoid; }
+.rb-chapter-head + .rb-section > p:first-of-type, .rb-chapter-head + p { display: flow-root; }
+.rb-chapter-head + .rb-section > p:first-of-type::first-letter,
+.rb-chapter-head + p::first-letter {
+  float: left; font-family: var(--display); font-size: 2.9em; line-height: .9; padding: 4px 6px 0 0; color: var(--blood);
+}
+.rb-list { margin: 0 0 8px; padding-left: 1.1em; }
+.rb-list li { margin-bottom: 3px; }
+.rb-list li::marker { color: var(--blood); }
+.rb-table { border-collapse: collapse; margin: 4px 0 10px; min-width: 60%; }
+.rb-table th, .rb-table td { border-bottom: 1px solid var(--paper-line); padding: 3px 10px 3px 0; text-align: left; font-size: .92em; }
+.rb-table th { font-size: .74em; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); font-weight: 600; }
+.rb-table td:first-child { font-variant-numeric: tabular-nums; }
+.rb-xp { width: 100%; }
+.rb-xp td { font-variant-numeric: tabular-nums; }
+.rb-note { color: var(--ink-soft); font-style: italic; border-left: 2px solid var(--paper-line); padding-left: 10px; }
+
+.rb-class-picker { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 12px; justify-content: center; }
+.rb-pick {
+  background: transparent; border: 1px solid var(--paper-line); color: var(--ink); border-radius: 2px;
+  padding: 3px 10px; cursor: pointer; font-family: var(--display); font-size: 14px;
+}
+.rb-pick:hover { border-color: var(--ink-soft); }
+.rb-pick[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.rulebook .rb-class > h3 { font-size: 1.45rem; color: var(--ink); margin-top: 4px; text-align: center; }
+.rb-pitch { text-align: center; font-style: italic; color: var(--ink-soft); margin-bottom: 12px !important; }
+.rb-facts { display: grid; grid-template-columns: minmax(0, 8em) 1fr; gap: 3px 12px; margin: 0 0 12px; font-size: .95em; }
+.rb-facts dt { color: var(--ink-soft); font-size: .82em; text-transform: uppercase; letter-spacing: .05em; padding-top: .2em; }
+.rb-facts dd { margin: 0; }
+.rb-powers-title {
+  font-family: var(--display); font-weight: 400; font-size: 1.2rem; margin: 14px 0 2px; color: var(--ink);
+  border-bottom: 1px solid var(--paper-line); padding-bottom: 2px;
+}
+.rb-level { display: grid; grid-template-columns: 4.6em 1fr; gap: 0 10px; border-bottom: 1px dotted var(--paper-line); padding: 6px 0; }
+.rb-level h5 { margin: 2px 0 0; font-family: var(--display); font-weight: 400; font-size: .95em; color: var(--blood); }
+.rb-powers { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rb-power p { margin: 2px 0 0 !important; }
+.rb-power-head { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.rb-power-head b { font-weight: 700; }
+.rb-power-class { font-size: .85em; color: var(--ink-soft); }
+.rb-power-meta { font-size: .82em; color: var(--ink-soft); font-style: italic; }
+
+.rb-defs { margin: 0; display: grid; gap: 6px; }
+.rb-defs dt { font-weight: 700; color: var(--blood); }
+.rb-defs dd { margin: 0 0 0 1em; }
+.rb-namelist { columns: 2 10em; margin: 4px 0 12px; padding-left: 1.1em; font-family: var(--display); }
+.rb-chosen { border: 1px solid var(--blood); border-left-width: 4px; padding: 8px 12px; margin: 6px 0 10px; background: color-mix(in srgb, var(--blood) 7%, transparent); }
+.rulebook .rb-chosen h3 { margin-top: 2px; }
+.rb-chosen-tag { font-size: .75em; text-transform: uppercase; letter-spacing: .1em; color: var(--blood); font-weight: 700; }
+.rb-dim { opacity: .72; }
+
+/* Le livre en grand, par-dessus la table. */
+.rb-overlay {
+  position: fixed; inset: 0; z-index: 45; display: grid; place-items: center;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  background: color-mix(in srgb, var(--felt) 78%, transparent); backdrop-filter: blur(3px);
+}
+.rb-dialog {
+  width: min(1180px, 100%); height: min(860px, 100%); display: grid; grid-template-rows: auto 1fr; min-height: 0;
+  background-color: var(--wood); background-image: linear-gradient(180deg, #ffffff0c, transparent 120px), var(--grain);
+  background-blend-mode: normal, overlay;
+  border: 1px solid var(--panel-edge); border-radius: 3px; box-shadow: 0 24px 60px #000c;
+}
+.rb-dialog-head { display: flex; align-items: baseline; gap: 12px; padding: 12px 18px; border-bottom: 1px solid var(--panel-edge); flex-wrap: wrap; }
+.rb-dialog-head h2 { font-size: 1.6rem; }
+.rb-dialog-head .btn { margin-left: auto; }
+.rb-dialog-head kbd { font-family: var(--mono); font-size: 11px; border: 1px solid currentColor; border-radius: 3px; padding: 0 4px; opacity: .7; }
+.rulebook.wide { display: grid; grid-template-columns: 220px 1fr; gap: 0; min-height: 0; }
+.rulebook.wide .rb-toc { padding: 18px 14px; border-right: 1px solid var(--panel-edge); overflow-y: auto; }
+.rulebook.wide .rb-toc ol { flex-direction: column; gap: 2px; }
+.rulebook.wide .rb-toc-item { font-size: 16px; padding: 6px 4px; width: 100%; text-align: left; border-bottom: 0; border-left: 2px solid transparent; padding-left: 8px; }
+.rulebook.wide .rb-toc-item[aria-current="page"] { border-left-color: var(--brass); background: #ffffff08; }
+.rulebook.wide .rb-tools { margin-top: 18px; flex-direction: column; align-items: stretch; }
+.rulebook.wide .rb-tools .input { flex: none; width: 100%; }
+.rulebook.wide .rb-page { margin: 16px; padding: 0; min-height: 0; display: grid; background-size: auto, 1400px 1400px, auto; }
+.rulebook.wide .rb-scroll { overflow-y: auto; padding: 30px clamp(20px, 5vw, 64px) 28px; font-size: 17.5px; }
+.rulebook.wide .rb-scroll > * { max-width: 72ch; margin-left: auto; margin-right: auto; }
+.rulebook.wide .rb-page h2 { font-size: 2.2rem; }
+.rulebook.wide .rb-facts { grid-template-columns: 13em 1fr; }
+.rulebook.wide .rb-level { grid-template-columns: 6em 1fr; }
+
+@media (max-width: 760px) {
+  .rb-overlay { padding: 8px; }
+  .rulebook.wide { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .rulebook.wide .rb-toc { border-right: 0; border-bottom: 1px solid var(--panel-edge); padding: 8px 12px; }
+  .rulebook.wide .rb-toc ol { flex-direction: row; }
+  .rulebook.wide .rb-toc-item { width: auto; font-size: 14px; }
+  .rulebook.wide .rb-toc-num { display: none; }
+  .rulebook.wide .rb-tools { margin-top: 6px; flex-direction: row; }
+  .rulebook.wide .rb-page { margin: 8px; }
+  .rulebook.wide .rb-scroll { padding: 18px 16px; font-size: 16px; }
+  .rulebook.wide .rb-facts { grid-template-columns: 1fr; }
+  .rb-level { grid-template-columns: 1fr; }
+}
