@@ -29,6 +29,8 @@ export function loadRooms() {
       stored.state.visionMode ??= "dynamique";
       stored.state.abilityMethod ??= "points";
       stored.state.deathRule ??= "heroique";
+      stored.state.combat ??= null;
+      stored.state.autoCombat ??= true;
       stored.state.sharedVision ??= true;
       stored.state.mapKnown ??= false;
       rooms.set(stored.state.code, stored);
@@ -82,6 +84,8 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
     players: [gm],
     chat: [],
     initiative: { entries: [], turn: 0, round: 1 },
+    combat: null,
+    autoCombat: true,
     handouts: [],
     characters: [],
     scenarios: [],
@@ -127,6 +131,7 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
   const base = {
     ...rest,
     you: player,
+    combatDismissed: undefined,
     chat: s.chat.filter((c) => !c.secret || c.fromId === player.id),
     scenarios: [], // les scénarios sont la préparation du MJ
   };
@@ -144,4 +149,15 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
   }
   const fogged = (x: number, y: number) => !!s.fog?.[cell(x, y)];
   return { ...base, tokens: s.tokens.filter((t) => t.ownerId === player.id || (!t.hidden && !fogged(t.x, t.y))) };
+}
+
+/** Vue joueur : pas de nom ni d'identifiant de monstre qu'il ne voit pas, même dans l'initiative ou le combat. */
+export function hideUnseen(view: RoomView): RoomView {
+  if (view.you.isGM) return view;
+  const seen = new Set(view.tokens.map((t) => t.id));
+  return {
+    ...view,
+    initiative: { ...view.initiative, entries: view.initiative.entries.map((e) => (e.tokenId && !seen.has(e.tokenId) ? { value: e.value, name: "Quelque chose" } : e)) },
+    combat: view.combat ? { ...view.combat, monsterIds: view.combat.monsterIds.filter((id) => seen.has(id)) } : null,
+  };
 }

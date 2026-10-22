@@ -1,4 +1,5 @@
 // Types partagés entre le serveur et le client.
+import type { Combat } from "./combat";
 
 export type GenreId =
   | "fantasy"
@@ -125,6 +126,12 @@ export interface Token {
   vision?: number; // portée de vue en cases (ligne de vue dynamique)
   characterId?: string;
   size?: number; // 1 = une case
+  /** Créature du bestiaire (shared/bestiary.ts) dont ce pion est issu. */
+  creatureId?: string;
+  /** Bonus d'initiative noté à la main (sinon tiré de la fiche ou du bestiaire). */
+  init?: number;
+  /** Déplacement en cases par tour (6 par défaut, soit 9 m). */
+  speed?: number;
 }
 
 export interface ChatEntry {
@@ -181,6 +188,12 @@ export interface RoomState {
   players: Player[];
   chat: ChatEntry[];
   initiative: { entries: InitiativeEntry[]; turn: number; round: number };
+  /** Combat en cours (null hors combat). */
+  combat: Combat | null;
+  /** Le combat se lance tout seul quand un pion joueur voit un monstre. */
+  autoCombat: boolean;
+  /** Monstres d'un combat que le MJ a terminé : ils ne relancent rien tant qu'ils restent en vue. */
+  combatDismissed?: string[];
   handouts: Handout[];
   characters: Character[];
   scenarios: Scenario[];
