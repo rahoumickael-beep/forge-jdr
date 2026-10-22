@@ -11,6 +11,7 @@ const URL = `http://localhost:${PORT}`;
 const server = spawn("npx", ["tsx", "server/index.ts"], {
   env: { ...process.env, PORT: String(PORT), DATA_DIR: mkdtempSync(join(tmpdir(), "forge-")) },
   stdio: ["ignore", "pipe", "inherit"],
+  detached: true, // groupe de processus à part : on tue npx, tsx et le serveur d'un coup
 });
 await new Promise((resolve) => server.stdout.on("data", (d) => String(d).includes("prête") && resolve()));
 
@@ -81,7 +82,9 @@ try {
   fail(err.message);
 } finally {
   await browser?.close();
-  server.kill();
+  try {
+    process.kill(-server.pid);
+  } catch {}
 }
 if (!process.exitCode) console.log("Partie de test réussie.");
 process.exit();

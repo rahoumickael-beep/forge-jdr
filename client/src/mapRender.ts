@@ -371,8 +371,11 @@ export function makeMistPattern(): HTMLCanvasElement {
     const r = 20 + hash(i, 3, 7) * 60;
     for (const [ox, oy] of [[0, 0], [size, 0], [-size, 0], [0, size], [0, -size]]) {
       const grad = g.createRadialGradient(x + ox, y + oy, 0, x + ox, y + oy, r);
-      grad.addColorStop(0, "rgba(200,210,220,.10)");
-      grad.addColorStop(1, "rgba(200,210,220,0)");
+      // Fumée sombre : volutes presque noires, liseré à peine plus clair sur les bords.
+      const light = hash(i, 4, 7) < 0.3;
+      grad.addColorStop(0, light ? "rgba(70,62,72,.16)" : "rgba(0,0,0,.22)");
+      grad.addColorStop(0.7, light ? "rgba(90,80,92,.07)" : "rgba(10,8,12,.10)");
+      grad.addColorStop(1, "rgba(0,0,0,0)");
       g.fillStyle = grad;
       g.fillRect(x + ox - r, y + oy - r, r * 2, r * 2);
     }

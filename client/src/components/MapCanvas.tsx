@@ -310,15 +310,20 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       lg.drawImage(fog, ox - cell * 0.5, oy - cell * 0.5, mw + cell, mh + cell);
       lg.drawImage(fog, ox, oy, mw, mh);
       lg.globalCompositeOperation = "source-in";
-      lg.fillStyle = isGM ? "#0b0e12" : "#07090b";
+      lg.fillStyle = isGM ? "#0b0e12" : "#141116";
       lg.fillRect(0, 0, w, h);
       if (!reducedMotion) {
         lg.globalCompositeOperation = "source-atop";
-        const pattern = lg.createPattern(mist, "repeat")!;
-        const shift = time * 8;
-        pattern.setTransform(new DOMMatrix().translate(shift % 256, (shift * 0.4) % 256).scale(Math.max(1, cell / 24)));
-        lg.fillStyle = pattern;
-        lg.fillRect(0, 0, w, h);
+        // Deux couches de fumée qui dérivent en sens contraires : les volutes se croisent et se défont.
+        const scale = Math.max(1, cell / 20);
+        const span = 256 * scale;
+        for (const [speed, dir, extra] of [[7, 1, 1], [4, -1, 1.6]] as const) {
+          const pattern = lg.createPattern(mist, "repeat")!;
+          const shift = time * speed;
+          pattern.setTransform(new DOMMatrix().translate((dir * shift) % span, (shift * 0.35) % span).scale(scale * extra));
+          lg.fillStyle = pattern;
+          lg.fillRect(0, 0, w, h);
+        }
       }
       g.drawImage(layer, 0, 0, w, h);
     }
