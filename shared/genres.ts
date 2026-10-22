@@ -51,7 +51,7 @@ export const GENRES: Genre[] = [
     pitch: "Elfes, dragons, magie et royaumes en guerre.",
     theme: { background: "#2b2a24", floor: "#c9b98f", wall: "#5a4a36", water: "#3f7ea6", vegetation: "#5d8a3c", road: "#a88c5a", door: "#8a4f22", grid: "rgba(40,30,20,.25)" },
     stats: classicStats,
-    archetypes: ["Guerrier", "Magicienne", "Voleur", "Clerc", "Rôdeuse", "Barde", "Paladin", "Druide", "Sorcier", "Moine"],
+    archetypes: ["Guerrier", "Magicienne", "Voleur", "Clerc", "Rôdeuse", "Barde", "Paladin", "Druide", "Barbare", "Moine", "Ensorceleuse", "Occultiste", "Chasseur de morts", "Veilleur du sceau"],
     origins: ["Humain", "Elfe", "Nain", "Halfelin", "Demi-orc", "Gnome", "Tieffelin", "Drakéide"],
     equipment: ["Épée longue", "Arc court", "Bâton runique", "Cotte de mailles", "Bouclier armorié", "Potion de soin", "Corde en soie elfique", "Grimoire usé", "Dague empoisonnée", "Amulette de protection", "Lanterne", "Carte au trésor déchirée"],
     abilities: ["Boule de feu", "Attaque sournoise", "Soin des blessures", "Rage du berserker", "Pas brumeux", "Inspiration bardique", "Châtiment divin", "Forme animale", "Vision dans le noir", "Parade"],
