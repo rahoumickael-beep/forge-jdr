@@ -2,9 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { reachable } from "../../../shared/combat";
 import { charte } from "../../../shared/charte";
 import { DEFAULT_VISION } from "../../../shared/vision";
-import { BESTIARY } from "../../../shared/bestiary";
-import { CLASSES } from "../../../shared/rules";
-import type { Character, RoomView, Token } from "../../../shared/types";
+import type { RoomView, Token } from "../../../shared/types";
+import { figurineDe } from "../figurines";
 import { BOARD_CELLS, TILT_MAX, drawBoard, drawStandingBase, drawTable, makeTilt, project, tiltExtent, unproject, warpTilted, type Tilt } from "../mapBoard";
 import { mapImage } from "../mapImageCache";
 import {
@@ -418,7 +417,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     }
     const look = (t: Token): TokenLook => {
       const sheet = t.characterId ? room.characters.find((c) => c.id === t.characterId) : undefined;
-      return { mine: t.ownerId === room.you.id, dpr, portrait: portraitImage(sheet?.portrait || figurineDe(t, sheet)), role: sheet?.archetype, lifted: d?.type === "token" && d.id === t.id };
+      return { mine: t.ownerId === room.you.id, dpr, portrait: portraitImage(figurineDe(t, sheet)), role: sheet?.archetype, lifted: d?.type === "token" && d.id === t.id };
     };
 
     // Inclinaison du plateau, animée quand on bascule entre la vue de dessus et la vue de 3/4.
@@ -685,13 +684,6 @@ function arrivalView(W: number, H: number, mw: number, mh: number, t: { x: numbe
   ox = keep(ox, px, W);
   oy = keep(oy, py, H);
   return { cell, ox, oy };
-}
-
-/** Vignette peinte d'une figurine : l'illustration de sa créature, sinon celle de la classe du personnage (Aubreterre seulement). */
-function figurineDe(t: Token, sheet: Character | undefined): string | undefined {
-  if (t.creatureId && BESTIARY.some((c) => c.id === t.creatureId && c.genre === "fantasy")) return `/pions/${t.creatureId}.webp`;
-  const cls = sheet?.genre === "fantasy" ? CLASSES.find((c) => c.genre === "fantasy" && c.name === sheet.archetype) : undefined;
-  return cls ? `/pions/classe-${cls.id.replace(/^fantasy-/, "")}.webp` : undefined;
 }
 
 // Portraits et vignettes de figurines, décodés une fois puis gardés en mémoire.
