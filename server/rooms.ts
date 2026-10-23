@@ -3,7 +3,8 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { uid } from "../shared/random";
 import { visibleCells } from "../shared/vision";
-import type { ChatEntry, GenreId, Player, RoomState, RoomView, Ton } from "../shared/types";
+import { GENRES, TONS } from "../shared/genres";
+import type { Character, ChatEntry, GameMap, GenreId, Player, RoomState, RoomView, Token, Ton } from "../shared/types";
 
 const DATA_DIR = process.env.DATA_DIR || join(process.cwd(), "data");
 const MAX_LOG = 200;
@@ -68,9 +69,9 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
   const state: RoomState = {
     code,
     name: opts.name || "Nouvelle campagne",
-    genre: opts.genre,
-    ton: opts.ton,
-    level: opts.level,
+    genre: isGenre(opts.genre) ? opts.genre : "fantasy",
+    ton: isTon(opts.ton) ? opts.ton : "epique",
+    level: Math.max(1, Math.min(20, Math.round(Number(opts.level)) || 1)),
     createdAt: Date.now(),
     map: null,
     fog: null,
@@ -123,6 +124,11 @@ export function updateExplored(room: StoredRoom) {
   for (const i of visibleCells(s.map, s.tokens.filter((t) => t.kind === "joueur"))) s.fog[i] = false;
 }
 
+/** Joueur à qui appartient une fiche : celui qui l'a créée, ou à défaut celui du pion joueur lié (parties anciennes). */
+export function characterOwner(s: RoomState, c: Character): string | undefined {
+  return c.ownerId ?? s.tokens.find((t) => t.characterId === c.id && t.kind === "joueur")?.ownerId;
+}
+
 /** Ce qu'un joueur a le droit de voir. Le MJ voit tout. */
 export function viewFor(room: StoredRoom, player: Player): RoomView {
   const s = room.state;
@@ -134,6 +140,8 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
     combatDismissed: undefined,
     chat: s.chat.filter((c) => !c.secret || c.fromId === player.id),
     scenarios: [], // les scénarios sont la préparation du MJ
+    characters: s.characters.filter((c) => characterOwner(s, c)), // les fiches de PNJ restent chez le MJ
+    handouts: s.handouts.filter((h) => !h.to?.length || h.to.includes(player.id)),
   };
   const map = s.map;
   if (!map || !s.fogEnabled) return { ...base, tokens: s.tokens.filter((t) => t.ownerId === player.id || !t.hidden) };
@@ -159,5 +167,78 @@ export function hideUnseen(view: RoomView): RoomView {
     ...view,
     initiative: { ...view.initiative, entries: view.initiative.entries.map((e) => (e.tokenId && !seen.has(e.tokenId) ? { value: e.value, name: "Quelque chose" } : e)) },
     combat: view.combat ? { ...view.combat, monsterIds: view.combat.monsterIds.filter((id) => seen.has(id)) } : null,
+  };
+}
+
+export const isGenre = (g: unknown): g is GenreId => GENRES.some((x) => x.id === g);
+export const isTon = (t: unknown): t is Ton => TONS.some((x) => x.id === t);
+
+const isObj = (v: unknown): v is Record<string, unknown> => !!v && typeof v === "object" && !Array.isArray(v);
+const isInt = (v: unknown, min: number, max: number): v is number => Number.isInteger(v) && (v as number) >= min && (v as number) <= max;
+/** Les éléments d'une liste qui ont au moins un identifiant texte. */
+const withIds = <X>(v: unknown): X[] => (Array.isArray(v) ? v.filter((x) => isObj(x) && typeof x.id === "string") : []) as X[];
+
+function cleanMap(v: unknown): GameMap | null {
+  if (!isObj(v) || !isInt(v.width, 4, 200) || !isInt(v.height, 4, 200)) return null;
+  const { width, height } = v;
+  if (!Array.isArray(v.tiles) || v.tiles.length !== width * height || !v.tiles.every((t) => isInt(t, 0, 6))) return null;
+  const kinds = ["donjon", "caverne", "nature", "village"];
+  return {
+    name: String(v.name ?? "Carte").slice(0, 80),
+    kind: (kinds.includes(v.kind as string) ? v.kind : "donjon") as GameMap["kind"],
+    seed: Number.isFinite(v.seed) ? (v.seed as number) : 0,
+    width,
+    height,
+    tiles: v.tiles as GameMap["tiles"],
+    rooms: (Array.isArray(v.rooms) ? v.rooms : [])
+      .filter((r): r is Record<string, unknown> => isObj(r) && [r.x, r.y, r.w, r.h].every((n) => isInt(n, 0, 200)))
+      .map((r) => ({ x: r.x as number, y: r.y as number, w: r.w as number, h: r.h as number, ...(typeof r.label === "string" ? { label: r.label.slice(0, 60) } : {}) })),
+  };
+}
+
+/** Sauvegarde importée par le MJ : on ne garde que des champs connus et bien typés. Le code et les joueurs de la table restent. */
+export function sanitizeImport(data: unknown, current: RoomState): RoomState {
+  if (!isObj(data) || !Array.isArray(data.tokens)) throw new Error("Fichier de partie invalide.");
+  const map = cleanMap(data.map);
+  const cells = map ? map.width * map.height : 0;
+  const fog = map && Array.isArray(data.fog) && data.fog.length === cells ? data.fog.map(Boolean) : map ? new Array(cells).fill(true) : null;
+  const bool = (k: keyof RoomState, fallback: boolean) => (typeof data[k] === "boolean" ? (data[k] as boolean) : fallback);
+  const str = (k: keyof RoomState, max: number, fallback: string) => (typeof data[k] === "string" ? (data[k] as string).slice(0, max) : fallback);
+  const tokens = withIds<Token>(data.tokens)
+    .filter((t) => Number.isFinite(t.x) && Number.isFinite(t.y))
+    .map((t) => ({ ...t, name: String(t.name ?? "Pion").slice(0, 40), x: Math.max(0, Math.min((map?.width ?? 40) - 1, Math.round(t.x))), y: Math.max(0, Math.min((map?.height ?? 30) - 1, Math.round(t.y))) }));
+  const ini = isObj(data.initiative) && Array.isArray(data.initiative.entries) ? data.initiative : null;
+  return {
+    ...current,
+    name: str("name", 80, current.name),
+    genre: isGenre(data.genre) ? data.genre : current.genre,
+    ton: isTon(data.ton) ? data.ton : current.ton,
+    level: isInt(data.level, 1, 20) ? data.level : current.level,
+    map,
+    fog,
+    fogEnabled: bool("fogEnabled", true),
+    visionMode: data.visionMode === "manuel" ? "manuel" : "dynamique",
+    sharedVision: bool("sharedVision", true),
+    mapKnown: bool("mapKnown", false),
+    abilityMethod: data.abilityMethod === "des" || data.abilityMethod === "fixe" ? data.abilityMethod : "points",
+    deathRule: str("deathRule", 40, current.deathRule),
+    autoCombat: bool("autoCombat", true),
+    movementLocked: bool("movementLocked", false),
+    tokens,
+    chat: withIds<ChatEntry>(data.chat).slice(-MAX_LOG),
+    initiative: ini
+      ? {
+          entries: (ini.entries as unknown[]).filter((e): e is RoomState["initiative"]["entries"][number] => isObj(e) && typeof e.name === "string" && Number.isFinite(e.value)),
+          turn: isInt(ini.turn, 0, 999) ? ini.turn : 0,
+          round: isInt(ini.round, 1, 9999) ? ini.round : 1,
+        }
+      : { entries: [], turn: 0, round: 1 },
+    combat: null, // un combat reprend proprement depuis l'écran du MJ
+    combatDismissed: [],
+    handouts: withIds<RoomState["handouts"][number]>(data.handouts),
+    characters: withIds<Character>(data.characters),
+    scenarios: withIds<RoomState["scenarios"][number]>(data.scenarios),
+    gmNotes: str("gmNotes", 50000, ""),
+    scene: str("scene", 2000, ""),
   };
 }

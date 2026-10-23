@@ -102,6 +102,7 @@ export function HandoutsPanel({ room }: { room: RoomView }) {
       {room.handouts.map((h) => (
         <article key={h.id} className="paper sheet">
           <h4>{h.title}</h4>
+          {h.to?.length ? <p className="small muted" style={{ margin: "2px 0 0" }}>{h.to.length === 1 ? "Remis à toi seul." : "Remis à une partie du groupe."}</p> : null}
           <p className="small" style={{ whiteSpace: "pre-wrap", margin: "6px 0 0" }}>{h.text}</p>
         </article>
       ))}

@@ -74,6 +74,8 @@ export interface Character {
   appearance?: string;
   /** Portrait en data URL JPEG (petit, ~256 px). */
   portrait?: string;
+  /** Joueur à qui appartient la fiche (posé par le serveur). Sans propriétaire, c'est un PNJ du MJ. */
+  ownerId?: string;
 }
 
 export interface Encounter {
@@ -163,6 +165,8 @@ export interface Handout {
   title: string;
   text: string;
   at: number;
+  /** Joueurs qui reçoivent le document ; absent ou vide : toute la table. */
+  to?: string[];
 }
 
 /** État complet d'une partie, tel que le serveur le garde. */
