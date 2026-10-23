@@ -53,4 +53,17 @@ Ajoute `ANTHROPIC_API_KEY` dans les variables d'environnement du serveur (fichie
 
 ## Travailler avec Claude Code
 
-Le dépôt contient tout ce qu'il faut pour que Claude continue le travail : `CLAUDE.md` (règles du projet), des skills dans `.claude/skills` (ajouter un genre, écrire un scénario, tester une partie, style visuel), un agent relecteur de règles, des hooks (installation automatique, vérification des types après chaque modification) et un serveur MCP Playwright pour piloter un navigateur.
+Le dépôt contient tout ce qu'il faut pour que Claude continue le travail :
+
+- `CLAUDE.md` : les règles du projet.
+- `docs/journal-de-production.md` : le plan et les décisions.
+- Des skills dans `.claude/skills` : bâtir un monde, vérifier la cohérence, peindre avec Flux, concevoir une rencontre, fabriquer les livres, écran immersif, écrire un scénario, style visuel, ajouter un genre, tester une partie.
+- Des agents dans `.claude/agents` : Haiku pour les vérifications, Sonnet pour les fiches et les relectures.
+- Des hooks en Node, qui marchent sous Windows :
+  - installation automatique ;
+  - refus des prompts Flux fautifs ;
+  - vérification des types après chaque modification ;
+  - tests en fin de tâche.
+- Deux serveurs MCP locaux :
+  - Playwright, pour piloter un navigateur ;
+  - ComfyUI (`comfyui/mcp-comfyui.mjs`), pour mettre des illustrations en file, suivre et récupérer.

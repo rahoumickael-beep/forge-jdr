@@ -11,3 +11,4 @@ content/aubreterre/illustrations-hd
 # Fichiers locaux lourds ou de travail
 figurines/
 *.log
+comfyui/sorties/
