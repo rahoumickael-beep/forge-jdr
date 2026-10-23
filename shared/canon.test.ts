@@ -87,6 +87,13 @@ test("canon : aucun secret du MJ dans ce que lisent les joueurs", () => {
   assert.deepEqual(fuites, []);
 });
 
+test("canon : une créature dont le nom trahit un secret a un nom public qui n'en trahit aucun", () => {
+  const trahit = (n: string) => C.secrets.some((s) => n.includes(s));
+  for (const c of fantasy(BESTIARY).filter((c) => trahit(c.name))) {
+    assert.ok(c.publicName && !trahit(c.publicName), c.name);
+  }
+});
+
 test("canon : un PNJ tiré au hasard ne devient jamais une figure du canon", () => {
   const figures = new Set(C.figures.flatMap((f) => [f.nom, ...(f.alias ?? [])]));
   for (const p of C.noms.prenoms) for (const n of C.noms.familles) assert.ok(!figures.has(p + n), p + n);

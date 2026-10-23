@@ -176,7 +176,7 @@ export const AUBRETERRE: Canon = {
     "la Grenouille",
   ],
 
-  secrets: ["Gorvan", "Frère du Dessous", "le Mangeur", "Mon frère attend", "jumeau scellé"],
+  secrets: ["Gorvan", "Frère du Dessous", "le Mangeur", "du Mangeur", "Mon frère attend", "jumeau scellé"],
 
   anachronismes: [
     "fusil", "pistolet", "revolver", "mousquet", "poudre à canon", "électricité", "électrique", "téléphone", "camion",

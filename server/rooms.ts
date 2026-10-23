@@ -3,6 +3,7 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { uid } from "../shared/random";
 import { visibleCells } from "../shared/vision";
+import { nomVuParLesJoueurs } from "../shared/bestiary";
 import { GENRES, TONS } from "../shared/genres";
 import type { Character, ChatEntry, GameMap, GenreId, Player, RoomState, RoomView, Token, Ton } from "../shared/types";
 
@@ -163,9 +164,17 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
 export function hideUnseen(view: RoomView): RoomView {
   if (view.you.isGM) return view;
   const seen = new Set(view.tokens.map((t) => t.id));
+  // Le vrai nom de certaines créatures trahit un secret du canon : les joueurs voient leur nom public.
+  const creatureOf = new Map(view.tokens.map((t) => [t.id, t.creatureId]));
   return {
     ...view,
-    initiative: { ...view.initiative, entries: view.initiative.entries.map((e) => (e.tokenId && !seen.has(e.tokenId) ? { value: e.value, name: "Quelque chose" } : e)) },
+    tokens: view.tokens.map((t) => (t.creatureId ? { ...t, name: nomVuParLesJoueurs(t.name, t.creatureId) } : t)),
+    initiative: {
+      ...view.initiative,
+      entries: view.initiative.entries.map((e) =>
+        e.tokenId && !seen.has(e.tokenId) ? { value: e.value, name: "Quelque chose" } : e.tokenId ? { ...e, name: nomVuParLesJoueurs(e.name, creatureOf.get(e.tokenId)) } : e,
+      ),
+    },
     combat: view.combat ? { ...view.combat, monsterIds: view.combat.monsterIds.filter((id) => seen.has(id)) } : null,
   };
 }

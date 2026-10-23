@@ -1,6 +1,7 @@
 // Serveur : sert le client, gère les parties en temps réel (Socket.IO) et l'IA Claude optionnelle.
 import { autoCombat, endCombat, monstersSeen, startCombat, type Combat } from "../shared/combat";
 import { DEATH_RULES } from "../shared/rules";
+import { nomVuParLesJoueurs } from "../shared/bestiary";
 import { createServer } from "node:http";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -71,7 +72,8 @@ async function broadcast(room: StoredRoom) {
 /** Écrit le début du combat dans le journal ; le MJ reçoit l'ordre complet, les joueurs ce qu'ils voient. */
 function announce(room: StoredRoom, combat: Combat) {
   const st = room.state;
-  const names = combat.monsterIds.map((id) => st.tokens.find((t) => t.id === id)?.name).filter(Boolean);
+  // Message public : les créatures y portent leur nom public.
+  const names = combat.monsterIds.map((id) => st.tokens.find((t) => t.id === id)).filter((t) => !!t).map((t) => nomVuParLesJoueurs(t.name, t.creatureId));
   log(room, { from: "MJ", text: combat.cause === "auto" ? `Combat ! ${names.join(", ")} surgit devant le groupe.` : "Le combat commence.", kind: "narration" });
   log(room, { from: "Système", text: `Initiative : ${st.initiative.entries.map((e) => `${e.name} (${e.value})`).join(", ")}.`, kind: "systeme", secret: true });
 }

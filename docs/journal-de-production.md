@@ -7,6 +7,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - 23/10/2026 : plan en 7 étapes validé, dans l'ordre ci-dessous.
 - 23/10/2026 : carte côté joueur en A′ ; outillage validé avec un serveur MCP pour ComfyUI seulement (pas pour LM Studio).
 - 23/10/2026 : canon en TypeScript (option A) : `shared/canon/fantasy.ts`, importé par les générateurs, les tests et les livres.
+- 23/10/2026 : créatures au nom secret (option A) : un nom public pour les joueurs (Bouche, Langue, Main, Dent du Dessous ; « Ce qui attend en bas » pour le fragment de Gorvan), le MJ garde le vrai nom. Chronologie (option A) : Ostral est arrivé il y a 621 ans, le lore est corrigé.
 
 ## Plan
 | # | Étape | État |
@@ -28,6 +29,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Ajoutés au canon parce que le bestiaire ou la bibliothèque les avaient créés : Fort-Brac, Mains-Nues, Sonneur du Glas, Pris-dans-le-chêne, la Fossoyeuse, le Bâillement, Amarante, le Roi des Noyes, Thiébaut Mainferrée, les frères du Silence, et les PNJ de « Ce que rend la tourbe ».
 - `genres.ts` (lieux, prénoms, noms, accroches) et le lieu des rencontres lisent le canon.
 - Les noms de famille des figures (Crolle, Lescot, Varlet, Pell, Mainferrée) sont sortis de la réserve des PNJ tirés au hasard, qui pouvait produire « Hubert Lescot » ou « Bastienne Crolle » ; remplacés par Corbin, Mortemer, Sauvelet, Bourrache, Lattier.
+- Noms publics : `publicName` dans le bestiaire ; `hideUnseen` (serveur) remplace le vrai nom dans les pions et l'initiative des joueurs, et l'annonce publique du combat utilise aussi le nom public. Testé dans `server/rooms.test.ts` et `shared/canon.test.ts`.
 - Fuite corrigée : le trait « Oreille fine » (Elfe de Mémoire) nommait Gorvan dans le livre des joueurs.
 
 ## État au 23/10/2026
@@ -43,6 +45,4 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Agrandissement 300 dpi de toutes les planches, version imprimeur des livres.
 - Styles graphiques des 9 autres genres.
 - Nom définitif du jeu (Forge des Mondes, Mille Royaumes, Le Carrefour des Destins).
-- Lore : « il y a six cent quatorze ans » (arrivée d'Ostral) contredit l'an 621 du Couronnement ; le canon garde 621, la phrase du lore est à corriger.
-- Créatures « Bouche, Langue, Main de Gorvan » et « Gorvan (fragment) » : le nom d'un pion s'affiche chez les joueurs, donc poser l'une d'elles révèle le secret. Choix à faire par Mickael.
 - `comfyui/generer-v2.mjs` non suivi : pas à Claude, laissé tel quel.

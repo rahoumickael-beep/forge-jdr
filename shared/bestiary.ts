@@ -74,6 +74,8 @@ export interface Trait {
 export interface Creature {
   id: string;
   name: string;
+  /** Nom affiché aux joueurs quand le vrai nom trahit un secret du canon. */
+  publicName?: string;
   genre: GenreId;
   family: Family;
   size: Size;
@@ -1349,6 +1351,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "bouche-de-gorvan",
     name: "Bouche de Gorvan",
+    publicName: "Bouche du Dessous",
     family: "Morts", size: "Moyenne", type: "mort-vivant", region: "Partout",
     cr: 10, ac: 16, acNote: "armure naturelle", hd: 17, speed: { marche: 9 },
     stats: [18, 16, 18, 16, 16, 20],
@@ -1405,6 +1408,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "dent-du-mangeur",
     name: "Dent du Mangeur",
+    publicName: "Dent du Dessous",
     family: "Créatures du Dessous", size: "Grande", type: "aberration", region: "Le Dessous",
     cr: 12, ac: 16, acNote: "chair compactée", hd: 22, speed: { marche: 12, escalade: 9 },
     stats: [22, 10, 20, 3, 10, 8],
@@ -1465,6 +1469,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "langue-de-gorvan",
     name: "Langue de Gorvan",
+    publicName: "Langue du Dessous",
     family: "Créatures du Dessous", size: "Très grande", type: "aberration", region: "Le Dessous",
     cr: 14, ac: 17, acNote: "armure naturelle", hd: 22, speed: { marche: 6, escalade: 6 },
     stats: [24, 10, 20, 14, 16, 22],
@@ -1582,6 +1587,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "main-de-gorvan",
     name: "Main de Gorvan",
+    publicName: "Main du Dessous",
     family: "Créatures du Dessous", size: "Gigantesque", type: "aberration (fragment de dieu)", region: "Le Couronnement",
     cr: 18, ac: 19, acNote: "armure naturelle", hd: 18, speed: { marche: 0 },
     stats: [28, 10, 24, 8, 14, 22],
@@ -1608,6 +1614,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "gorvan-fragment",
     name: "Gorvan, le Frère du Dessous (fragment)",
+    publicName: "Ce qui attend en bas",
     family: "Créatures du Dessous", size: "Grande", type: "fiélon (fragment de dieu)", region: "Le Dessous",
     cr: 20, ac: 20, acNote: "armure naturelle", hd: 25, speed: { marche: 12, vol: 12, stationnaire: true },
     stats: [22, 16, 24, 22, 20, 28],
@@ -1712,6 +1719,12 @@ export function attackSummary(c: Creature): string {
  * Ligne d'ennemi au format de `Encounter["enemies"]`.
  * Le danger dépend du FP, rapporté au niveau du groupe s'il est donné.
  */
+/** Nom d'un pion tel que le voit un joueur : le nom public remplace le vrai nom de la créature. */
+export function nomVuParLesJoueurs(nom: string, creatureId?: string): string {
+  const c = creatureId ? BESTIARY.find((x) => x.id === creatureId) : undefined;
+  return c?.publicName ? nom.split(c.name).join(c.publicName) : nom;
+}
+
 export function toEncounterEnemy(c: Creature, count: number, partyLevel?: number): Encounter["enemies"][number] {
   const ratio = partyLevel ? c.cr / partyLevel : undefined;
   const danger =

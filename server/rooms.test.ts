@@ -4,10 +4,11 @@ import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
+import { BESTIARY } from "../shared/bestiary";
 import type { Character } from "../shared/types";
 
 process.env.DATA_DIR = mkdtempSync(join(tmpdir(), "forge-test-"));
-const { addPlayer, createRoom, sanitizeImport, viewFor } = await import("./rooms");
+const { addPlayer, createRoom, hideUnseen, sanitizeImport, viewFor } = await import("./rooms");
 
 const fiche = (id: string, name: string, extra: Partial<Character> = {}): Character => ({
   id, name, genre: "fantasy", level: 1, archetype: "Guerrier", origin: "Humain", description: "", backstory: "", personality: "",
@@ -55,6 +56,17 @@ test("documents : un document remis à un joueur n'arrive que chez lui", () => {
   const { stored, lea, tom } = partie();
   assert.deepEqual(viewFor(stored, lea).handouts.map((h) => h.id), ["h_tous", "h_lea"]);
   assert.deepEqual(viewFor(stored, tom).handouts.map((h) => h.id), ["h_tous"]);
+});
+
+test("vue joueur : une créature au nom secret n'apparaît que sous son nom public, pion et initiative", () => {
+  const { stored, gm, lea } = partie();
+  const bouche = BESTIARY.find((c) => c.name === "Bouche de Gorvan")!;
+  stored.state.tokens.push({ id: "t_bouche", name: "Bouche de Gorvan 2", x: 3, y: 3, color: "#000", kind: "monstre", creatureId: bouche.id });
+  stored.state.initiative.entries.push({ tokenId: "t_bouche", name: "Bouche de Gorvan 2", value: 12 });
+  const json = JSON.stringify(hideUnseen(viewFor(stored, lea)));
+  assert.ok(!json.includes("Gorvan"));
+  assert.ok(json.includes("Bouche du Dessous 2"));
+  assert.ok(JSON.stringify(hideUnseen(viewFor(stored, gm))).includes("Bouche de Gorvan 2"));
 });
 
 test("vue du MJ : il voit tout", () => {
