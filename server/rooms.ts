@@ -37,6 +37,7 @@ export function loadRooms() {
       stored.state.sharedVision ??= true;
       stored.state.mapKnown ??= false;
       stored.state.campagne = nettoyerCampagne(stored.state.campagne, stored.state.genre);
+      stored.state.carte ??= null;
       rooms.set(stored.state.code, stored);
     } catch (err) {
       console.warn(`Partie illisible ignorée : ${file}`, err);
@@ -97,6 +98,7 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
     movementLocked: false,
     scene: "",
     campagne: nouvelleCampagne(isGenre(opts.genre) ? opts.genre : "fantasy"),
+    carte: null,
   };
   const stored = { state, gmKey: uid("gm_") + uid() };
   rooms.set(code, stored);
@@ -254,5 +256,6 @@ export function sanitizeImport(data: unknown, current: RoomState): RoomState {
     gmNotes: str("gmNotes", 50000, ""),
     scene: str("scene", 2000, ""),
     campagne: nettoyerCampagne(data.campagne, isGenre(data.genre) ? data.genre : current.genre),
+    carte: null,
   };
 }

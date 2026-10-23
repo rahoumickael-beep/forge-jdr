@@ -84,6 +84,15 @@ export interface AccrocheDeCampagne {
   factions: string[];
 }
 
+/** Carte de la pioche du MJ (événement ou objet), retournée devant la table. */
+export interface CarteDuMonde {
+  titre: string;
+  /** Ce que les joueurs lisent. */
+  texte: string;
+  /** Ce que ça change en jeu, en une phrase. */
+  effet: string;
+}
+
 export interface Canon {
   genre: GenreId;
   monde: string;
@@ -124,4 +133,6 @@ export interface Canon {
     reserve?: { nom: string; max: number; regle: string };
     accroches: AccrocheDeCampagne[];
   };
+  /** Pioches de cartes : rien de secret, les joueurs les lisent. */
+  cartes?: { evenements: CarteDuMonde[]; objets: CarteDuMonde[] };
 }

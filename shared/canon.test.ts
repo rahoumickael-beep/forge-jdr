@@ -27,6 +27,7 @@ const chapitresJoueurs = readdirSync(LIVRE_JOUEURS).map((f) => [f, readFileSync(
 /** Ce que lit un joueur : livre des joueurs, origines, historiques, classes. */
 const POUR_LES_JOUEURS: [string, string][] = [
   ...chapitresJoueurs,
+  ...textes(C.cartes, "cartes"),
   ...textes(fantasy(ORIGINS), "origines"),
   ...textes(fantasy(BACKGROUNDS), "historiques"),
   ...textes(fantasy(CLASSES), "classes"),
@@ -37,6 +38,7 @@ const TOUT: [string, string][] = [
   ...textes(fantasy(LIBRARY), "bibliotheque"),
   ...textes(fantasy(BESTIARY), "bestiaire"),
   ...textes(getGenre("fantasy"), "genre"),
+  ...textes(C.cartes, "cartes"),
 ];
 
 test("canon : chronologie dans l'ordre, âges et années d'accord", () => {

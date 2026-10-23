@@ -1,4 +1,5 @@
-// Vignettes rondes des pions-figurines : un portrait carré de 256 px par créature du bestiaire et par classe,
+// Vignettes rondes des pions-figurines (un portrait carré de 256 px par créature du bestiaire et par classe)
+// et illustrations des cartes de rencontre. Vignettes :
 // recadré sur la zone la plus marquante de l'illustration, puis resserré sur le buste (le haut du centre) :
 // dans un pion de 40 px, une silhouette en pied ne se lit pas. node scripts/vignettes-figurines.mjs [--refaire]
 import { existsSync, mkdirSync, readdirSync } from "node:fs";
@@ -17,3 +18,15 @@ for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f
   n++;
 }
 console.log(`${n} vignette(s) écrite(s) dans ${SORTIE}.`);
+
+// Illustrations des cartes de rencontre : format portrait, plein cadre, une par créature (pas les classes).
+const CARTES = "client/public/cartes";
+mkdirSync(CARTES, { recursive: true });
+let k = 0;
+for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f) && !f.startsWith("classe-"))) {
+  const dest = `${CARTES}/${f.replace(/\.jpg$/, ".webp")}`;
+  if (existsSync(dest) && !process.argv.includes("--refaire")) continue;
+  await sharp(`${SOURCE}/${f}`).resize(600, 760, { fit: "cover", position: sharp.strategy.attention }).webp({ quality: 78 }).toFile(dest);
+  k++;
+}
+console.log(`${k} illustration(s) de carte écrite(s) dans ${CARTES}.`);

@@ -18,6 +18,7 @@ function etat(tokens: Token[]): RoomState {
     tokens, players: [], chat: [], initiative: { entries: [], turn: 0, round: 1 }, combat: null, autoCombat: true,
     handouts: [], characters: [], scenarios: [], gmNotes: "", movementLocked: false, scene: "",
     campagne: nouvelleCampagne("fantasy"),
+    carte: null,
   };
 }
 

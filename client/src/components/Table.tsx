@@ -4,6 +4,7 @@ import type { RoomView } from "../../../shared/types";
 import { forgetSession, toast, useStore } from "../store";
 import { DiceTray, Log } from "./Dice";
 import { CombatIntro } from "./CombatIntro";
+import { CarteRetournee, PiocheMJ } from "./Cartes";
 import { DesSurLaTable } from "./DesSurLaTable";
 import { InitiativeFrieze } from "./InitiativeFrieze";
 import { CampagnePanel, ChroniquePanel } from "./CampagnePanel";
@@ -60,6 +61,8 @@ export function Table({ room }: { room: RoomView }) {
         <div style={{ position: "relative", minHeight: 0, display: "grid" }}>
           <MapCanvas room={room} tool={tool} brush={brush} selectedId={selectedId} onSelect={setSelectedId} />
           <DesSurLaTable room={room} />
+          <PiocheMJ room={room} />
+          <CarteRetournee room={room} />
           <InitiativeFrieze room={room} />
           {isGM && room.map && (
             <div className="map-tools" role="toolbar" aria-label="Outils de carte">

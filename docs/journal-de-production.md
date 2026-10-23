@@ -7,6 +7,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - 23/10/2026 : plan en 7 étapes validé, dans l'ordre ci-dessous.
 - 23/10/2026 : carte côté joueur en A′ ; outillage validé avec un serveur MCP pour ComfyUI seulement (pas pour LM Studio).
 - 23/10/2026 : canon en TypeScript (option A) : `shared/canon/fantasy.ts`, importé par les générateurs, les tests et les livres.
+- 24/10/2026 : cartes de la table en « relique noire » (option B) ; Mickael veut une DA « de dingue ». Puis idée d'un jeu de cartes à collectionner (paquets, decks, duels contre un bot ou un ami) : avis franc et plan demandés.
 - 24/10/2026 : dés sur la table, choisis comme morceau suivant du jeu de plateau.
 - 24/10/2026 : vue de 3/4 (plateau incliné) : bouton sur la carte, choix gardé par chaque joueur.
 - 24/10/2026 : plateau sur la table (option A) : la carte est un plateau épais posé sur une table de noyer, sous une lampe ; le brouillard reste sur le plateau.
@@ -50,6 +51,8 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Plateau (`client/src/mapBoard.ts`) : table en planches mise en cache par taille d'écran ; plateau qui suit le zoom (ombre, tranche de carton contrecollé, marge de toile, filets et coins de laiton, nom de la carte doré). Remplace le cadre de case de BD et le flou ambiant du MJ. Le cadrage d'ensemble garde le bord du plateau à l'écran. Il montre les dimensions de la carte, comme un vrai plateau.
 - Vue de 3/4 : la scène est peinte à plat dans un calque, puis couchée en perspective par bandes de 2 px (`warpTilted`, 34°) ; les figurines sont dessinées debout sur un socle, de l'arrière vers l'avant ; les clics passent par la projection inverse et une figurine se saisit par son corps. Mickael a demandé une estimation pour une vraie 3D (réponse du 24/10 : en trois niveaux).
 - Dés sur la table (`client/src/components/DesSurLaTable.tsx`) : chaque lancer du journal porte ses dés (`ChatEntry.roll`) ; chaque client le rejoue (rebonds, faces qui défilent, arrêt sur la valeur du serveur, choc synthétisé), en couleur du joueur, depuis sa place à la table. Dés écartés grisés, lueur dorée sur un 20 naturel, rouge sur un 1, étiquette du total. Un jet secret n'est rejoué que chez qui le voit. 8 dés au plus à l'écran. Suite possible : piste d'initiative en jetons, cartes de rencontre.
+- Piste d'initiative : réglette de noyer, jetons peints (même vignette que la figurine, `client/src/figurines.ts`).
+- Cartes (`shared/cartes.ts`, `client/src/components/Cartes.tsx`) : trois pioches du MJ (rencontres du bestiaire, 12 événements et 10 objets écrits dans le canon), aperçu privé, retournement animé devant la table, carte posée au coin du plateau. 57 illustrations de cartes en 600 × 760 (`client/public/cartes/`). Les événements et objets ont un emblème gravé en attendant leurs propres peintures Flux.
 - Limite connue, à traiter : le code du client contient tout le bestiaire et la bibliothèque, secrets compris ; un joueur curieux peut les lire dans le navigateur. Le nom public protège l'écran, pas le code.
 
 ## État au 23/10/2026

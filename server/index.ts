@@ -2,6 +2,7 @@
 import { autoCombat, endCombat, monstersSeen, startCombat, type Combat } from "../shared/combat";
 import { DEATH_RULES } from "../shared/rules";
 import { nomVuParLesJoueurs } from "../shared/bestiary";
+import { nettoyerCarte } from "../shared/cartes";
 import { cloreSeance, nettoyerCampagne, noterFait, ouvrirSeance, reglerJauge, reglerReserve } from "../shared/campagne";
 import { canonDe } from "../shared/canon";
 import { createServer } from "node:http";
@@ -358,6 +359,15 @@ io.on("connection", (socket) => {
     if (p.reputation && p.reputation.id in c.reputations) c.reputations[p.reputation.id] = Math.max(0, Math.min(3, Math.round(Number(p.reputation.valeur) || 0)));
     if (typeof p.preparation === "string") c.preparation = p.preparation.slice(0, 20000);
   });
+  // --- Pioche : le MJ retourne une carte devant toute la table ---
+  gm<unknown>("carte:retourner", (st, p, room) => {
+    const carte = nettoyerCarte(p);
+    if (!carte) throw new Error("Carte invalide.");
+    st.carte = { ...carte, at: Date.now() };
+    log(room, { from: "MJ", text: `Le MJ retourne une carte : ${carte.titre}.`, kind: "narration" });
+    noterFait(st.campagne, `Carte retournée : ${carte.titre}.`);
+  });
+  gm<void>("carte:ranger", (st) => (st.carte = null));
   gm<unknown>("room:import", (st, data) => Object.assign(st, sanitizeImport(data, st)));
 });
 

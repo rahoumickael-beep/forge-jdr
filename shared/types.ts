@@ -171,6 +171,8 @@ export interface Handout {
   to?: string[];
 }
 
+import type { Carte } from "./cartes";
+
 /** Une séance de jeu : ce qui s'est passé, pour la raconter la fois suivante. */
 export interface Seance {
   numero: number;
@@ -257,6 +259,8 @@ export interface RoomState {
   movementLocked: boolean;
   scene: string; // texte d'ambiance affiché à tous
   campagne: Campagne;
+  /** Carte que le MJ a retournée devant la table (publique), avec l'heure du retournement. */
+  carte: (Carte & { at: number }) | null;
 }
 
 /** Vue envoyée à un client : la version joueur retire les secrets. */
