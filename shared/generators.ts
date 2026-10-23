@@ -1,6 +1,7 @@
 // Générateurs aléatoires (sans IA) : personnages, PNJ, rencontres, scénarios, butin.
 // Règles inspirées de D&D : 6 caractéristiques, modificateur = (valeur - 10) / 2, CA, PV, initiative au d20.
 import { creaturesFor, toEncounterEnemy } from "./bestiary";
+import { canonDe } from "./canon";
 import { getGenre, levelTier } from "./genres";
 import { Rng, uid } from "./random";
 import type { Character, Encounter, GenreId, Scenario, Ton } from "./types";
@@ -99,18 +100,11 @@ function enemyProfile(index: number, total: number, level: number) {
   return { hp, ac, attack: `+${atk}, ${dmgDie}+${Math.ceil(ratio * 4)}` };
 }
 
-/** Lieu typique de chaque région d'Aubreterre, pour qu'une rencontre se passe là où vit la créature. */
-const REGION_PLACES: Record<string, string> = {
-  "Le Couronnement": "les faubourgs d'Aube-Close",
-  "Les Marches de Fer": "un fort du Mur des Neuf Cents",
-  "Le Val Cierge": "une abbaye du Val Cierge",
-  "Les Noyes": "les tourbières des Noyes",
-  "La Côte des Sels": "les salines de Port-Lagune",
-  "Les Monts Ossiers": "un ossuaire muré des Monts Ossiers",
-  "La Brune": "une clairière ronde de la Brune",
-  "Le Verre-Rouge": "une oasis du Verre-Rouge",
-  "Le Dessous": "une fissure sous la Rotonde",
-};
+/** Lieu typique de chaque région du canon, pour qu'une rencontre se passe là où vit la créature. */
+function lieuDeRegion(genre: GenreId, region: string): string | undefined {
+  if (region === "Le Dessous") return "une fissure sous la Rotonde";
+  return canonDe(genre)?.regions.find((r) => r.nom === region)?.lieuDeRencontre;
+}
 
 export function generateEncounter(genre: GenreId, level: number, players = 4, seed?: number): Encounter {
   const rng = new Rng(seed);
@@ -136,7 +130,7 @@ export function generateEncounter(genre: GenreId, level: number, players = 4, se
       const count = Math.max(1, Math.min(8, Math.round(budget / picked.length / (c.xp * (kinds > 1 ? 2 : 1.5)))));
       return { ...toEncounterEnemy(c, count, level), creatureId: c.id };
     });
-    const place = (region && REGION_PLACES[region]) || rng.pick(g.places);
+    const place = (region && lieuDeRegion(genre, region)) || rng.pick(g.places);
     return {
       title: `${enemies.map((e) => e.name).join(" et ")} — ${place}`,
       description: `Près de ${place}. ${rng.pick(["Ils attendent sur la route que les héros arrivent.", "Le terrain est mauvais : boue, eau ou éboulis.", "Un innocent est pris entre deux feux.", "Quelqu'un, parmi eux, veut d'abord parler.", "La nuit tombe, et la lumière manque."])}`,

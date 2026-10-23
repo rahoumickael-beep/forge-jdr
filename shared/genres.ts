@@ -1,3 +1,4 @@
+import { AUBRETERRE } from "./canon/fantasy";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -55,10 +56,10 @@ export const GENRES: Genre[] = [
     origins: ["Humain", "Elfe de la Brune", "Nain des Ossiers", "Petite gens", "Demi-orc", "Revenu", "Sang-Doré"],
     equipment: ["Épée longue", "Arc court", "Marteau de cloueur", "Sac de clous en fer froid", "Brigandine", "Bouclier aux armes d'Aube-Close", "Potion de soin", "Lanterne au verre bleu", "Grimoire de Peseur", "Sachet de sel bénit", "Pot de goudron", "Sauf-conduit de la Chancellerie"],
     abilities: ["Boule de feu", "Attaque sournoise", "Soin des blessures", "Rage du berserker", "Pas brumeux", "Inspiration bardique", "Châtiment divin", "Forme animale", "Clouer un mort", "Veillée"],
-    nameStart: ["Bastienne", "Hubert", "Maëlle", "Colin", "Gaudry", "Ombeline", "Jacquet", "Perrine", "Thiébaut", "Aubin", "Gisle", "Ferréol", "Odile", "Brunissende", "Enguerrand", "Mahaut", "Guérin", "Isaure"],
-    nameEnd: [" Crolle", " Lescot", " Varlet", " Clouet", " Saulnier", " Mainferrée", " Pell", " Tourbier", " de Gué", " Cirier", " Brac", " Ravel", " Fosseux", " Marchois"],
-    places: ["les tourbières des Noyes", "les faubourgs d'Aube-Close", "un fort du Mur des Neuf Cents", "une abbaye du Val Cierge", "les salines de Port-Lagune", "un ossuaire muré des Monts Ossiers", "une clairière ronde de la Brune", "une oasis du Verre-Rouge"],
-    hooks: ["Un apprenti cloueur n'est pas revenu d'un village sur pilotis.", "Les morts d'un cimetière du Val se sont agenouillés devant l'autel avant de partir vers l'est.", "Une légion de Hersende réquisitionne le sel d'un village qui en a besoin pour ses morts.", "Un Revenu demande qu'on retrouve la personne qui l'a vu revenir.", "Un scribe de la Chancellerie propose de l'or pour un rouleau volé."],
+    nameStart: AUBRETERRE.noms.prenoms,
+    nameEnd: AUBRETERRE.noms.familles,
+    places: AUBRETERRE.regions.map((r) => r.lieuDeRencontre),
+    hooks: AUBRETERRE.accroches.map((a) => a.texte),
     villains: ["un passeur qui pousse les morts sur la Marche", "un inquisiteur de la Cire qui cloue les vivants", "un Peseur renégat qui veut mesurer le Sceau", "un connétable d'os qui commande une légion morte", "un contremaître de la Hanse qui fait travailler les morts"],
     motivations: ["rejoindre un être aimé noyé il y a deux hivers", "prouver que le Dieu-Empereur se relèvera", "garder le sel pour sa seule famille", "obéir à une voix qui parle la nuit"],
     enemies: ["Levés", "Loups de bruyère", "Bandits des routes", "Légionnaires d'os", "Noyés", "Pleureurs", "Gardes du Seuil", "Inquisiteurs de la Cire", "Porte-Voix", "Wyverne des Ossiers", "Colonne de la Marche", "Ver des Ossiers", "Bouche de Gorvan", "Connétable d'os", "Reine sous le Sel"],

@@ -105,7 +105,7 @@ export const ORIGINS: Origin[] = [
         traits: [
           { name: "Tour appris", text: "Un tour de magie de magicienne au choix." },
           { name: "Souvenir d'avant", text: "Une fois par repos long, avantage à un jet d'Histoire ou d'Arcanes." },
-          { name: "Oreille fine", text: "Entend les murmures de Gorvan dirigés vers un allié à 6 cases. Le MJ le prévient." },
+          { name: "Oreille fine", text: "Entend les Murmures qu'une voix adresse à un allié à 6 cases. Le MJ le prévient." },
         ],
       },
     ],

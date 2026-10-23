@@ -14,7 +14,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 | 1 | Mise à l'abri du travail en cours, journal de production | fait |
 | 2 | Fondations sûres : fiches de PNJ hors de la vue joueur, droits des fiches et des pions, import contrôlé, réglages vérifiés, documents remis à certains joueurs | fait (PR n°3) |
 | 3 | Outillage Claude Code : hooks en Node, agents Haiku et Sonnet, skills, MCP ComfyUI | fait (PR n°4) |
-| 4 | Canon d'Aubreterre en TypeScript (`shared/canon/fantasy.ts`), générateurs branchés dessus, tests de cohérence | prochaine étape, à faire sur une branche partie de `claude/outillage` |
+| 4 | Canon d'Aubreterre en TypeScript (`shared/canon/fantasy.ts`), générateurs branchés dessus, tests de cohérence | fait (branche `claude/canon`) |
 | 5 | Mémoire de campagne côté serveur, préparation de la séance suivante | à faire |
 | 6 | Écrans immersifs : tableau de bord du MJ, fiche cliquable, codex, effets, 400 px | à faire |
 | 7+ | Un monde par genre : 3 prémisses, puis noms, puis style, au choix de Mickael | à faire |
@@ -22,6 +22,13 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 ## Décisions techniques
 - Carte côté joueur : le choix A (n'envoyer que les cases vues) casse le rendu, qui a besoin de toutes les cases et des noms des salles pour meubler, et redessiner coûte 0,3 à 1,5 s par pas. La graine suffit de toute façon à reconstruire la carte. Mickael a choisi A′ le 23/10/2026 : la carte complète reste dans les données (comme Roll20 ou Foundry), rien d'inexploré ne s'affiche ; un joueur voit le nom d'une salle une fois plus de la moitié explorée.
 - Performance : rendu à deux vitesses (30 images/s pendant 2 s après un changement ou un geste, 4 au repos). Mesuré : 20 images en 5 s au repos contre 150 avant.
+
+## Étape 4 : le canon (23/10/2026)
+- `shared/canon/fantasy.ts` : monde, calendrier (an 621 du Couronnement = an 7 du Glas), chronologie, 8 régions et leurs lieux, 12 factions, 20 figures, 7 divinités, peuples, vocabulaire, secrets, anachronismes, réserves de noms, accroches reliées à des factions.
+- Ajoutés au canon parce que le bestiaire ou la bibliothèque les avaient créés : Fort-Brac, Mains-Nues, Sonneur du Glas, Pris-dans-le-chêne, la Fossoyeuse, le Bâillement, Amarante, le Roi des Noyes, Thiébaut Mainferrée, les frères du Silence, et les PNJ de « Ce que rend la tourbe ».
+- `genres.ts` (lieux, prénoms, noms, accroches) et le lieu des rencontres lisent le canon.
+- Les noms de famille des figures (Crolle, Lescot, Varlet, Pell, Mainferrée) sont sortis de la réserve des PNJ tirés au hasard, qui pouvait produire « Hubert Lescot » ou « Bastienne Crolle » ; remplacés par Corbin, Mortemer, Sauvelet, Bourrache, Lattier.
+- Fuite corrigée : le trait « Oreille fine » (Elfe de Mémoire) nommait Gorvan dans le livre des joueurs.
 
 ## État au 23/10/2026
 - Typecheck, 34 tests, build et partie automatique : tout passe.
@@ -36,4 +43,6 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Agrandissement 300 dpi de toutes les planches, version imprimeur des livres.
 - Styles graphiques des 9 autres genres.
 - Nom définitif du jeu (Forge des Mondes, Mille Royaumes, Le Carrefour des Destins).
+- Lore : « il y a six cent quatorze ans » (arrivée d'Ostral) contredit l'an 621 du Couronnement ; le canon garde 621, la phrase du lore est à corriger.
+- Créatures « Bouche, Langue, Main de Gorvan » et « Gorvan (fragment) » : le nom d'un pion s'affiche chez les joueurs, donc poser l'une d'elles révèle le secret. Choix à faire par Mickael.
 - `comfyui/generer-v2.mjs` non suivi : pas à Claude, laissé tel quel.
