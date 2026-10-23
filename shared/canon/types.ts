@@ -64,6 +64,26 @@ export interface Accroche {
   factions: string[];
 }
 
+/** Une jauge de campagne propre au monde : elle descend, et le monde change à chaque seuil. */
+export interface JaugeDuMonde {
+  nom: string;
+  depart: number;
+  /** Du plus haut au plus bas. */
+  seuils: { valeur: number; effet: string }[];
+  /** Ce qui la fait remonter. */
+  remontees: { action: string; gain: number }[];
+  /** Ce qui la fait descendre. */
+  descentes: { action: string; perte: number }[];
+}
+
+/** Accroche de campagne, rangée par palier de niveaux. */
+export interface AccrocheDeCampagne {
+  titre: string;
+  niveaux: [number, number];
+  texte: string;
+  factions: string[];
+}
+
 export interface Canon {
   genre: GenreId;
   monde: string;
@@ -97,4 +117,11 @@ export interface Canon {
   /** Réserves des générateurs ; aucune combinaison ne doit redonner une figure. */
   noms: { prenoms: string[]; familles: string[] };
   accroches: Accroche[];
+  /** La grande ligne de la campagne, dans l'ordre. */
+  campagne?: {
+    jauge?: JaugeDuMonde;
+    /** Réserve du MJ et son plafond. */
+    reserve?: { nom: string; max: number; regle: string };
+    accroches: AccrocheDeCampagne[];
+  };
 }

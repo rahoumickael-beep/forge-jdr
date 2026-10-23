@@ -69,6 +69,28 @@ test("vue joueur : une créature au nom secret n'apparaît que sous son nom publ
   assert.ok(JSON.stringify(hideUnseen(viewFor(stored, gm))).includes("Bouche de Gorvan 2"));
 });
 
+test("vue joueur : la campagne sans fil secret, sans note de PNJ, sans Murmures, sans préparation, Sceau caché", () => {
+  const { stored, gm, lea } = partie();
+  const c = stored.state.campagne;
+  c.fils.push({ id: "f", texte: "CACHE-FIL", ouvert: true, secret: true, seance: 1 });
+  c.pnj.push({ id: "n", nom: "Gaudru", attitude: -1, public: "Le vicaire.", secret: "CACHE-VICAIRE" });
+  c.reserve = 5;
+  c.preparation = "CACHE-PREPARATION";
+  const vue = viewFor(stored, lea);
+  assert.ok(!JSON.stringify(vue).includes("CACHE-"));
+  assert.equal(vue.campagne.jauge, null);
+  assert.equal(vue.campagne.reserve, 0);
+  assert.equal(viewFor(stored, gm).campagne.reserve, 5);
+});
+
+test("import : la campagne importée est nettoyée", () => {
+  const { stored } = partie();
+  const st = sanitizeImport({ tokens: [], campagne: { jauge: -40, reserve: 99, fils: "x" } }, stored.state);
+  assert.equal(st.campagne.jauge, 0);
+  assert.equal(st.campagne.reserve, 6);
+  assert.deepEqual(st.campagne.fils, []);
+});
+
 test("vue du MJ : il voit tout", () => {
   const { stored, gm } = partie();
   const v = viewFor(stored, gm);

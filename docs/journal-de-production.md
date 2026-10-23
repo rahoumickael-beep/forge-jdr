@@ -16,8 +16,8 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 | 2 | Fondations sûres : fiches de PNJ hors de la vue joueur, droits des fiches et des pions, import contrôlé, réglages vérifiés, documents remis à certains joueurs | fait (PR n°3) |
 | 3 | Outillage Claude Code : hooks en Node, agents Haiku et Sonnet, skills, MCP ComfyUI | fait (PR n°4) |
 | 4 | Canon d'Aubreterre en TypeScript (`shared/canon/fantasy.ts`), générateurs branchés dessus, tests de cohérence | fait (branche `claude/canon`) |
-| 5 | Mémoire de campagne côté serveur, préparation de la séance suivante | à faire |
-| 6 | Écrans immersifs : tableau de bord du MJ, fiche cliquable, codex, effets, 400 px | à faire |
+| 5 | Mémoire de campagne côté serveur, préparation de la séance suivante | fait (branche `claude/canon`) |
+| 6 | Écrans immersifs : tableau de bord du MJ, fiche cliquable, codex, effets, 400 px ; pions en figurines (demande de Mickael du 23/10) | à faire |
 | 7+ | Un monde par genre : 3 prémisses, puis noms, puis style, au choix de Mickael | à faire |
 
 ## Décisions techniques
@@ -31,6 +31,13 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Les noms de famille des figures (Crolle, Lescot, Varlet, Pell, Mainferrée) sont sortis de la réserve des PNJ tirés au hasard, qui pouvait produire « Hubert Lescot » ou « Bastienne Crolle » ; remplacés par Corbin, Mortemer, Sauvelet, Bourrache, Lattier.
 - Noms publics : `publicName` dans le bestiaire ; `hideUnseen` (serveur) remplace le vrai nom dans les pions et l'initiative des joueurs, et l'annonce publique du combat utilise aussi le nom public. Testé dans `server/rooms.test.ts` et `shared/canon.test.ts`.
 - Fuite corrigée : le trait « Oreille fine » (Elfe de Mémoire) nommait Gorvan dans le livre des joueurs.
+
+## Étape 5 : la mémoire de campagne (23/10/2026)
+- `RoomState.campagne` (`shared/campagne.ts`) : séances (résumé du MJ, faits notés tout seuls : combats, cartes, documents publics), fils ouverts (secrets ou non), PNJ croisés (attitude, ce que savent les joueurs, ce que garde le MJ), réputation auprès de chaque faction du canon (0 à 3), jauge du monde (le Sceau) et réserve du MJ (les Murmures), notes de préparation.
+- Ouvrir une séance lit le « Précédemment » dans le journal. Un seuil du Sceau franchi prévient le MJ seul, avec l'effet du lore.
+- Fiche de préparation sans IA : précédemment, fils, PNJ marquants, ordres qui bougent, Sceau et prochain seuil, accroches de campagne du palier (les 10 du lore, dans le canon), rencontre prête.
+- Vue joueur (onglet Chronique) : ni fil secret, ni note de PNJ, ni Murmures, ni préparation ; le Sceau seulement si le MJ coche « Les joueurs voient la jauge » (décochée par défaut, comme le recommande le lore jusqu'à l'accroche 4).
+- Demande de Mickael (23/10) : des pions plus « figurine à déplacer » pour joueurs, monstres et PNJ. À faire à l'étape 6, avec 3 directions à lui proposer.
 
 ## État au 23/10/2026
 - Typecheck, 34 tests, build et partie automatique : tout passe.

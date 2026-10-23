@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { uid } from "../shared/random";
 import { visibleCells } from "../shared/vision";
 import { nomVuParLesJoueurs } from "../shared/bestiary";
+import { campagnePourJoueur, nettoyerCampagne, nouvelleCampagne } from "../shared/campagne";
 import { GENRES, TONS } from "../shared/genres";
 import type { Character, ChatEntry, GameMap, GenreId, Player, RoomState, RoomView, Token, Ton } from "../shared/types";
 
@@ -35,6 +36,7 @@ export function loadRooms() {
       stored.state.autoCombat ??= true;
       stored.state.sharedVision ??= true;
       stored.state.mapKnown ??= false;
+      stored.state.campagne = nettoyerCampagne(stored.state.campagne, stored.state.genre);
       rooms.set(stored.state.code, stored);
     } catch (err) {
       console.warn(`Partie illisible ignorée : ${file}`, err);
@@ -94,6 +96,7 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
     gmNotes: "",
     movementLocked: false,
     scene: "",
+    campagne: nouvelleCampagne(isGenre(opts.genre) ? opts.genre : "fantasy"),
   };
   const stored = { state, gmKey: uid("gm_") + uid() };
   rooms.set(code, stored);
@@ -143,6 +146,7 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
     scenarios: [], // les scénarios sont la préparation du MJ
     characters: s.characters.filter((c) => characterOwner(s, c)), // les fiches de PNJ restent chez le MJ
     handouts: s.handouts.filter((h) => !h.to?.length || h.to.includes(player.id)),
+    campagne: campagnePourJoueur(s.campagne),
   };
   const map = s.map;
   if (!map || !s.fogEnabled) return { ...base, tokens: s.tokens.filter((t) => t.ownerId === player.id || !t.hidden) };
@@ -249,5 +253,6 @@ export function sanitizeImport(data: unknown, current: RoomState): RoomState {
     scenarios: withIds<RoomState["scenarios"][number]>(data.scenarios),
     gmNotes: str("gmNotes", 50000, ""),
     scene: str("scene", 2000, ""),
+    campagne: nettoyerCampagne(data.campagne, isGenre(data.genre) ? data.genre : current.genre),
   };
 }

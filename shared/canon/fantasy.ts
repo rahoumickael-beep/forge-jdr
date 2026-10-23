@@ -197,4 +197,45 @@ export const AUBRETERRE: Canon = {
     { texte: "Un Revenu demande qu'on retrouve la personne qui l'a vu revenir.", factions: ["rendus"] },
     { texte: "Un scribe de la Chancellerie propose de l'or pour un rouleau volé.", factions: ["chancellerie"] },
   ],
+  campagne: {
+    jauge: {
+      nom: "le Sceau",
+      depart: 100,
+      seuils: [
+        { valeur: 75, effet: "Les Levés se relèvent en une nuit au lieu de trois. Les animaux morts commencent à se relever aussi." },
+        { valeur: 50, effet: "Les Porte-Voix apparaissent dans les villes. Les héritiers entendent la voix en plein jour." },
+        { valeur: 25, effet: "La Rotonde se fend. Le corps d'Ostral penche sur son trône. Les Grands Morts se lèvent de leurs tombeaux royaux." },
+        { valeur: 0, effet: "Le sceau cède, à moins que quelqu'un ne remplace le corps sur le Trône. Fin de campagne." },
+      ],
+      remontees: [
+        { action: "Rendre au Trône une relique d'Ostral", gain: 5 },
+        { action: "Une grande procession de prières", gain: 2 },
+        { action: "Finir une bataille sans massacre", gain: 3 },
+        { action: "La veillée pratiquée à grande échelle", gain: 1 },
+        { action: "Une quête de niveau 11 ou plus réussie autour du sceau", gain: 10 },
+      ],
+      descentes: [
+        { action: "Un mois de jeu (la guerre, les prières qui ne suffisent plus)", perte: 1 },
+        { action: "Un sort de niveau 6 à 8", perte: 1 },
+        { action: "Un sort de niveau 9", perte: 3 },
+      ],
+    },
+    reserve: {
+      nom: "Murmures",
+      max: 6,
+      regle: "Sort de niveau 4 ou 5 : +1 Murmure. Niveau 6 à 8 : +2. Niveau 9 : +3. Un rituel ne coûte rien. À dépenser pour un désavantage, un mort qui se relève, une voix aimée qui suggère, ou un renseignement soufflé à un ennemi.",
+    },
+    accroches: [
+      { titre: "La Marche à Gué-Saulnier", niveaux: [1, 4], factions: ["confrerie"], texte: "Les Noyés sortent de la tourbe par dizaines ; l'apprenti de la Confrérie n'est pas revenu. On le trouve cloué à un pilotis, vivant, avec « Ils ne nous laissent pas descendre » gravé en ancienne langue, et sa carte des lignes de la Marche." },
+      { titre: "Le contremaître à l'ombrelle", niveaux: [1, 4], factions: ["hanse", "eglise"], texte: "Un convoi de sel de la Hanse cache des Levés enchaînés. L'inspection de l'Église veut tout brûler et pendre l'escorte ; le contremaître paie pour faire disparaître le prêtre. Un Levé aux yeux gris appelle un personnage par le prénom de sa mère : premier Porte-Voix." },
+      { titre: "Un chien pour l'Enfant", niveaux: [1, 4], factions: ["yse", "veilleuses"], texte: "Ysé a quitté le camp des Veilleuses pour chercher « un chien qui a une voix de papa ». La retrouver avant les hommes de Cyprien et ceux de Hersende. Laquelle des deux voix ment ? « Celle qui dit oui à tout. »" },
+      { titre: "La tour sans porte", niveaux: [5, 10], factions: ["peseurs", "eglise"], texte: "Voler pour un Peseur son propre registre, confisqué par l'Église. Les courbes montrent que chaque grand sort fait baisser quelque chose sous Aube-Close ; le plus gros creux date des tempêtes de feu de l'an 4. Introduire les Murmures à voix haute." },
+      { titre: "Le rouleau de la nuit du Glas", niveaux: [5, 10], factions: ["chancellerie", "rendus"], texte: "Retrouver le scribe de garde la nuit du Glas, mort depuis et caché chez les Rendus. Il a retenu les dernières paroles du Dieu : « Ne la retirez pas. Mon frère attend. » Trois camps veulent le faire taire." },
+      { titre: "Le siège de Clairfont", niveaux: [5, 10], factions: ["hersende", "eglise"], texte: "Hersende assiège une abbaye qui garde ses morts enchaînés dans les caves. Si elle tombe, des centaines de morts sortent ; si elle tient, les légions se vengent sur les villages. La nuit, Hersende parle avec tendresse à un Porte-Voix assis dans le noir." },
+      { titre: "Le chêne qui rend", niveaux: [11, 16], factions: ["elfes"], texte: "Les elfes de la Brune parlent si on nettoie une clairière où les arbres rendent leurs morts. Un elfe de Mémoire pris dans un tronc raconte les jumeaux et prononce le vrai nom : Gorvan. Dit devant un Porte-Voix, il le fige un round. Gorvan sait désormais qui sont les personnages." },
+      { titre: "Sous la Rotonde", niveaux: [11, 16], factions: ["chancellerie", "eglise"], texte: "Descendre par les archives ou par les fosses de la Garde jusqu'au puits : le corps d'Ostral prolongé dans la pierre, fendu. Chaque sort de niveau 4 ou plus coûte double. Gorvan propose poliment d'épargner leurs proches." },
+      { titre: "Le couronnement", niveaux: [17, 20], factions: ["hersende", "eglise", "yse"], texte: "L'héritier le plus fort a pris Aube-Close et lève la main vers la couronne. Le convaincre, l'arrêter devant le peuple, ou le laisser faire. Si la couronne quitte la tête, le Sceau tombe à 0 dans l'heure." },
+      { titre: "Celui qui s'assoit", niveaux: [17, 20], factions: ["yse"], texte: "Refaire le sceau : Ysé sur le Trône de son plein gré, un Sang-Doré ou un héritier à sa place, rendre à Gorvan sa fonction sans sa faim, ou le tuer et brûler tous les morts pour toujours. Aucune fin n'est gratuite." },
+    ],
+  },
 };

@@ -169,6 +169,56 @@ export interface Handout {
   to?: string[];
 }
 
+/** Une séance de jeu : ce qui s'est passé, pour la raconter la fois suivante. */
+export interface Seance {
+  numero: number;
+  debut: number;
+  fin?: number;
+  /** « Précédemment » : écrit par le MJ à la clôture, lu aux joueurs à l'ouverture suivante. */
+  resume: string;
+  /** Notés tout seuls pendant la séance (combats, documents, cartes) : rien de secret. */
+  faits: string[];
+}
+
+/** Une piste laissée en suspens. Un fil secret reste chez le MJ. */
+export interface FilOuvert {
+  id: string;
+  texte: string;
+  ouvert: boolean;
+  secret: boolean;
+  /** Séance où le fil est apparu. */
+  seance: number;
+}
+
+/** Un PNJ que le groupe a croisé. */
+export interface PnjConnu {
+  id: string;
+  nom: string;
+  /** De -2 (hostile) à +2 (allié). */
+  attitude: number;
+  /** Ce que les joueurs savent de lui. */
+  public: string;
+  /** Ce que le MJ garde pour lui. */
+  secret: string;
+}
+
+/** Mémoire de la campagne, d'une séance à l'autre. */
+export interface Campagne {
+  seances: Seance[];
+  fils: FilOuvert[];
+  pnj: PnjConnu[];
+  /** Réputation du groupe auprès de chaque faction du canon (id → 0 à 3). */
+  reputations: Record<string, number>;
+  /** Jauge du monde (le Sceau en fantasy), de 0 à 100 ; null si le monde n'en a pas. */
+  jauge: number | null;
+  /** Les joueurs voient-ils la jauge ? */
+  jaugeVisible: boolean;
+  /** Réserve du MJ (les Murmures en fantasy). */
+  reserve: number;
+  /** Notes du MJ pour la séance suivante. */
+  preparation: string;
+}
+
 /** État complet d'une partie, tel que le serveur le garde. */
 export interface RoomState {
   code: string;
@@ -204,6 +254,7 @@ export interface RoomState {
   gmNotes: string; // jamais envoyé aux joueurs
   movementLocked: boolean;
   scene: string; // texte d'ambiance affiché à tous
+  campagne: Campagne;
 }
 
 /** Vue envoyée à un client : la version joueur retire les secrets. */

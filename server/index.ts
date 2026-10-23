@@ -2,6 +2,8 @@
 import { autoCombat, endCombat, monstersSeen, startCombat, type Combat } from "../shared/combat";
 import { DEATH_RULES } from "../shared/rules";
 import { nomVuParLesJoueurs } from "../shared/bestiary";
+import { cloreSeance, nettoyerCampagne, noterFait, ouvrirSeance, reglerJauge, reglerReserve } from "../shared/campagne";
+import { canonDe } from "../shared/canon";
 import { createServer } from "node:http";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -75,6 +77,7 @@ function announce(room: StoredRoom, combat: Combat) {
   // Message public : les créatures y portent leur nom public.
   const names = combat.monsterIds.map((id) => st.tokens.find((t) => t.id === id)).filter((t) => !!t).map((t) => nomVuParLesJoueurs(t.name, t.creatureId));
   log(room, { from: "MJ", text: combat.cause === "auto" ? `Combat ! ${names.join(", ")} surgit devant le groupe.` : "Le combat commence.", kind: "narration" });
+  noterFait(st.campagne, `Combat contre ${names.join(", ") || "des adversaires"}.`);
   log(room, { from: "Système", text: `Initiative : ${st.initiative.entries.map((e) => `${e.name} (${e.value})`).join(", ")}.`, kind: "systeme", secret: true });
 }
 
@@ -249,6 +252,7 @@ io.on("connection", (socket) => {
       t.y = Math.min(t.y, p.map.height - 1);
     }
     log(room, { from: "MJ", text: `Nouvelle carte : ${p.map.name}.`, kind: "systeme" });
+    noterFait(st.campagne, `Arrivée : ${p.map.name}.`);
   });
   gm<{ cells: number[]; hidden: boolean }>("fog:paint", (st, p) => {
     if (!st.fog) return;
@@ -286,6 +290,7 @@ io.on("connection", (socket) => {
   gm<{ title: string; text: string; to?: string[] }>("handout:add", (st, p) => {
     const to = Array.isArray(p.to) ? p.to.filter((id) => st.players.some((x) => x.id === id && !x.isGM)) : [];
     st.handouts.unshift({ id: uid("h_"), title: String(p.title).slice(0, 120), text: String(p.text ?? "").slice(0, 8000), at: Date.now(), ...(to.length ? { to } : {}) });
+    if (!to.length) noterFait(st.campagne, `Document remis : ${String(p.title).slice(0, 120)}.`);
   });
   gm<string>("handout:remove", (st, id) => (st.handouts = st.handouts.filter((h) => h.id !== id)));
   gm<Scenario>("scenario:add", (st, sc) => st.scenarios.unshift(sc));
@@ -298,7 +303,11 @@ io.on("connection", (socket) => {
     if (typeof p.sharedVision === "boolean") st.sharedVision = p.sharedVision;
     if (typeof p.mapKnown === "boolean") st.mapKnown = p.mapKnown;
     if (typeof p.name === "string") st.name = p.name.slice(0, 80);
-    if (isGenre(p.genre)) st.genre = p.genre;
+    if (isGenre(p.genre) && p.genre !== st.genre) {
+      st.genre = p.genre;
+      // Séances, fils et PNJ restent ; réputations et jauge suivent le canon du nouveau monde.
+      st.campagne = nettoyerCampagne({ ...st.campagne, reputations: {}, jauge: undefined }, p.genre);
+    }
     if (isTon(p.ton)) st.ton = p.ton;
     if (typeof p.level === "number") st.level = Math.max(1, Math.min(20, p.level));
     if (typeof p.movementLocked === "boolean") st.movementLocked = p.movementLocked;
@@ -309,6 +318,44 @@ io.on("connection", (socket) => {
     st.players = st.players.filter((x) => x.id !== id);
     st.tokens = st.tokens.filter((t) => t.ownerId !== id);
     log(room, { from: "Système", text: `${p.name} a quitté la table.`, kind: "systeme" });
+  });
+  // --- Mémoire de campagne ---
+  gm<void>("seance:ouvrir", (st, _p, room) => {
+    const { seance, precedemment } = ouvrirSeance(st.campagne);
+    log(room, { from: "MJ", text: `Séance ${seance.numero}.${precedemment ? ` Précédemment : ${precedemment}` : ""}`, kind: "narration" });
+  });
+  gm<{ resume: string }>("seance:clore", (st, p, room) => {
+    const s = cloreSeance(st.campagne, String(p.resume ?? ""));
+    log(room, { from: "MJ", text: `Fin de la séance ${s.numero}.`, kind: "narration" });
+  });
+  gm<{ texte: string }>("seance:fait", (st, p) => noterFait(st.campagne, String(p.texte ?? "")));
+  gm<{ id?: string; texte: string; secret?: boolean; ouvert?: boolean }>("fil:upsert", (st, p) => {
+    const c = st.campagne;
+    const fil = p.id ? c.fils.find((f) => f.id === p.id) : undefined;
+    const texte = String(p.texte ?? "").slice(0, 500);
+    if (fil) Object.assign(fil, { texte: texte || fil.texte, secret: p.secret ?? fil.secret, ouvert: p.ouvert ?? fil.ouvert });
+    else if (texte.trim()) c.fils.unshift({ id: uid("f_"), texte, secret: !!p.secret, ouvert: true, seance: c.seances.length });
+  });
+  gm<string>("fil:remove", (st, id) => (st.campagne.fils = st.campagne.fils.filter((f) => f.id !== id)));
+  gm<{ id?: string; nom: string; attitude?: number; public?: string; secret?: string }>("pnj:upsert", (st, p) => {
+    const c = st.campagne;
+    const pnj = p.id ? c.pnj.find((x) => x.id === p.id) : undefined;
+    const attitude = Math.max(-2, Math.min(2, Math.round(Number(p.attitude) || 0)));
+    const champs = { nom: String(p.nom ?? "").slice(0, 80), attitude, public: String(p.public ?? "").slice(0, 1000), secret: String(p.secret ?? "").slice(0, 2000) };
+    if (pnj) Object.assign(pnj, champs, { nom: champs.nom || pnj.nom });
+    else if (champs.nom.trim()) c.pnj.unshift({ id: uid("n_"), ...champs });
+  });
+  gm<string>("pnj:remove", (st, id) => (st.campagne.pnj = st.campagne.pnj.filter((x) => x.id !== id)));
+  gm<{ jauge?: number; jaugeVisible?: boolean; reserve?: number; reputation?: { id: string; valeur: number }; preparation?: string }>("campagne:set", (st, p, room) => {
+    const c = st.campagne;
+    const canon = canonDe(st.genre);
+    if (typeof p.jauge === "number") {
+      for (const s of reglerJauge(c, p.jauge, canon)) log(room, { from: "Système", text: `${canon?.campagne?.jauge?.nom ?? "La jauge"} passe sous ${s.valeur} : ${s.effet}`, kind: "systeme", secret: true });
+    }
+    if (typeof p.jaugeVisible === "boolean") c.jaugeVisible = p.jaugeVisible;
+    if (typeof p.reserve === "number") reglerReserve(c, p.reserve, canon);
+    if (p.reputation && p.reputation.id in c.reputations) c.reputations[p.reputation.id] = Math.max(0, Math.min(3, Math.round(Number(p.reputation.valeur) || 0)));
+    if (typeof p.preparation === "string") c.preparation = p.preparation.slice(0, 20000);
   });
   gm<unknown>("room:import", (st, data) => Object.assign(st, sanitizeImport(data, st)));
 });
