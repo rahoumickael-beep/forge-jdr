@@ -9,7 +9,7 @@ import { CREDITS_SRD } from "./communs";
 import { ouverture, type Livre, type Unite } from "./moteur";
 import { esc, illustration, markdown, md } from "./texte";
 
-const LORE = readFileSync("content/aubreterre/lore.md", "utf8");
+const LORE = readFileSync("content/aubreterre/lore.md", "utf8").replace(/\r\n?/g, "\n"); // fichiers en CRLF sous Windows
 
 /** Sections « ## N. Titre » de la bible, sans les lignes de travail (options de nom). */
 function sections() {

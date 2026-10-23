@@ -14,7 +14,7 @@ const STATS = GENRES.find((g) => g.id === "fantasy")!.stats;
 
 /** Chapitre de règles écrit en Markdown : titre pris sur « # Chapitre N — Titre ». */
 function chapitreMd(fichier: string) {
-  const src = readFileSync(join(DOSSIER, fichier), "utf8");
+  const src = readFileSync(join(DOSSIER, fichier), "utf8").replace(/\r\n?/g, "\n"); // fichiers en CRLF sous Windows
   const titre = (src.match(/^# (?:Chapitre \d+ — )?(.+)$/m)?.[1] ?? fichier).trim();
   return { titre, html: markdown(src) };
 }

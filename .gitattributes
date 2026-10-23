@@ -1,0 +1,5 @@
+# Fin de ligne LF partout : les livres découpent le Markdown ligne à ligne.
+* text=auto eol=lf
+*.jpg binary
+*.png binary
+*.pdf binary
