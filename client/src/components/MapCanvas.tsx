@@ -1,9 +1,33 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { reachable } from "../../../shared/combat";
 import { charte } from "../../../shared/charte";
-import { getGenre } from "../../../shared/genres";
+import { DEFAULT_VISION } from "../../../shared/vision";
 import type { RoomView, Token } from "../../../shared/types";
-import { BASE, makeMistPattern, materialFor, renderMapImage, shade } from "../mapRender";
+import { mapImage } from "../mapImageCache";
+import {
+  Lighting,
+  buildFog,
+  drawActiveHalo,
+  drawAmbient,
+  drawBackdrop,
+  drawFog,
+  drawMeasure,
+  drawPings,
+  drawReach,
+  drawRoomLabels,
+  drawSelection,
+  drawPanelFrame,
+  drawToken,
+  drawGrid,
+  drawVignette,
+  panelMargin,
+  passePartout,
+  fogDensity,
+  fogLeaks,
+  labelBlocker,
+  reachLoops,
+  seedOf,
+} from "../mapTokens";
 import { send, socket, useStore, type Ping } from "../store";
 import { INTRO_MS } from "./CombatIntro";
 
@@ -20,15 +44,6 @@ interface Props {
 const METERS_PER_CELL = 1.5;
 const reducedMotion = typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function initials(name: string) {
-  return name
-    .split(/\s+/)
-    .filter((w) => w && !/^\d+$/.test(w))
-    .slice(0, 2)
-    .map((w) => w[0]?.toUpperCase())
-    .join("");
-}
-
 type Drag =
   | { type: "pan"; sx: number; sy: number; ox: number; oy: number }
   | { type: "token"; id: string; fromX: number; fromY: number; x: number; y: number }
@@ -40,9 +55,10 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const isGM = room.you.isGM;
   const map = room.map;
-  const genre = getGenre(room.genre);
-  const image = useMemo(() => (map ? renderMapImage(map, genre.theme, materialFor(room.genre)) : null), [map, genre, room.genre]);
-  const mist = useMemo(() => makeMistPattern(), []);
+  // Même cache que l'aperçu du MJ : une carte tirée puis posée n'est pas encrée deux fois.
+  const image = useMemo(() => (map ? mapImage(map, room.genre) : null), [map, room.genre]);
+  // Lumière : torches des salles calculées une fois par carte, celles des héros à chaque case atteinte.
+  const lighting = useMemo(() => (map ? new Lighting(map) : null), [map]);
 
   const view = useRef({ ox: 0, oy: 0, cell: 28 });
   const drag = useRef<Drag | null>(null);
@@ -56,43 +72,82 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     return reachable(map, active, speed);
   }, [map, active?.id, active?.x, active?.y, active?.speed, isGM, room.you.id, room.characters]);
   const accent = charte(room.genre).palette.or;
-  const live = useRef({ room, pings, selectedId, localFog, isGM, active, reach, accent });
-  live.current = { room, pings, selectedId, localFog, isGM, active, reach, accent };
+  const reachShape = useMemo(() => (map && reach ? reachLoops(map, reach) : null), [map, reach]);
+  const live = useRef({ room, pings, selectedId, localFog, isGM, active, reachShape, accent, lighting });
+  live.current = { room, pings, selectedId, localFog, isGM, active, reachShape, accent, lighting };
 
-  // Masque de brouillard à une case par pixel : agrandi avec lissage, il donne des bords doux.
+  // Pions qui voient pour ce joueur (comme viewFor côté serveur) : le bord de sa vue suit leur polygone de vue.
+  const eyesKey =
+    !isGM && room.visionMode === "dynamique"
+      ? room.tokens
+          .filter((t) => t.kind === "joueur" && (room.sharedVision || t.ownerId === room.you.id))
+          .map((t) => `${Math.round(t.x)},${Math.round(t.y)},${Math.max(1, Math.min(40, t.vision ?? DEFAULT_VISION))}`)
+          .join(";")
+      : "";
+  // Brouillard d'encre : texture refaite seulement quand ce qui est caché change.
   const fogMask = useMemo(() => {
     if (!map || !room.fogEnabled || !room.fog) return null;
-    const cv = document.createElement("canvas");
-    cv.width = map.width;
-    cv.height = map.height;
-    const g = cv.getContext("2d")!;
-    const img = g.createImageData(map.width, map.height);
-    const visible = room.visible ? new Set(room.visible) : null;
-    for (let i = 0; i < map.width * map.height; i++) {
-      let hidden = room.fog[i];
-      if (localFog?.cells.has(i)) hidden = localFog.hidden;
-      let alpha = 0;
-      if (isGM) alpha = hidden ? 150 : 0;
-      else if (room.visionMode === "dynamique") {
-        if (visible?.has(i)) alpha = 0;
-        else if (!hidden || room.mapKnown) alpha = 175; // déjà exploré ou plan connu : sombre
-        else alpha = 255;
-      } else alpha = hidden ? 255 : 0;
-      img.data[i * 4 + 3] = alpha;
-    }
-    g.putImageData(img, 0, 0);
-    return cv;
-  }, [map, room.fog, room.fogEnabled, room.visible, room.visionMode, room.mapKnown, localFog, isGM]);
+    const density = fogDensity(map.width * map.height, {
+      fog: room.fog,
+      visible: room.visible,
+      dynamic: room.visionMode === "dynamique",
+      mapKnown: room.mapKnown,
+      isGM,
+      override: localFog,
+    });
+    const eyes = eyesKey ? eyesKey.split(";").map((e) => {
+      const [x, y, vision] = e.split(",").map(Number);
+      return { x, y, vision };
+    }) : [];
+    // Un joueur a toujours du brouillard : hors de la carte, rien n'est exploré.
+    return !isGM || density.some((v) => v > 0) ? buildFog(map, density, eyes) : null;
+  }, [map, room.fog, room.fogEnabled, room.visible, room.visionMode, room.mapKnown, localFog, isGM, eyesKey]);
+  // Contrôle de secret pour scripts/apercu-cartes.mjs : cases inexplorées où la carte transparaît (doit rester vide).
+  (window as unknown as { __forgeFogLeaks: (opaque?: number) => number[] | null }).__forgeFogLeaks = (opaque) => {
+    if (!map || !fogMask || isGM) return null;
+    const density = fogDensity(map.width * map.height, { fog: room.fog ?? [], visible: room.visible, dynamic: room.visionMode === "dynamique", mapKnown: room.mapKnown, isGM, override: localFog });
+    return fogLeaks(fogMask, density, map.width, map.height, opaque);
+  };
   const fogRef = useRef(fogMask);
   fogRef.current = fogMask;
 
-  // Cadrer la carte quand elle change.
+  // Cadrer la carte quand elle change. Le MJ la voit entière ; un joueur arrive sur ce que voit son pion, assez près pour le lire,
+  // au lieu d'une tache claire perdue dans le brouillard.
+  // Les premières secondes sur une carte, tant que le joueur n'a ni glissé ni zoomé, la vue suit son pion (le serveur le pose,
+  // puis la vue arrive) : on recadre doucement à chaque nouvelle position ou vue.
+  const mine = isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur") ?? null;
+  const framed = useRef("");
+  const autoFrame = useRef(0);
+  // Le joueur a glissé ou zoomé lui-même : on ne recadre plus sa vue (même si la fenêtre change de taille).
+  const userMoved = useRef(false);
+  const visibleKey = room.visible?.length ?? -1;
+  // Nombre de cases connues du joueur : quand le MJ cache tout, ou qu'une salle s'ouvre, la vue d'arrivée se recalcule.
+  const knownKey = !isGM && room.fogEnabled && room.fog ? room.fog.reduce((n, h) => n + (h ? 0 : 1), 0) : -1;
   useEffect(() => {
     const el = wrapRef.current;
     if (!el || !map) return;
-    const cell = Math.max(10, Math.min(56, Math.floor(Math.min(el.clientWidth / map.width, el.clientHeight / map.height))));
-    view.current = { cell, ox: (el.clientWidth - map.width * cell) / 2, oy: (el.clientHeight - map.height * cell) / 2 };
-  }, [map?.seed, map?.width, map?.height]);
+    const W = el.clientWidth;
+    const H = el.clientHeight;
+    if (!W || !H) return;
+    if (frameIfNew(W, H)) return;
+    if (!mine || performance.now() > autoFrame.current || cam.current) return;
+    cam.current = { from: { ...view.current }, to: arrivalView(W, H, map.width, map.height, mine, seenBy(room)), start: performance.now(), dur: reducedMotion ? 1 : 450 };
+  }, [map?.kind, map?.seed, map?.width, map?.height, map?.name, mine?.id, mine?.x, mine?.y, visibleKey, knownKey]);
+
+  /** Première vue d'une carte (ou d'un nouveau pion) : vue d'arrivée du joueur, carte entière pour le MJ. Vrai si on a cadré. */
+  function frameIfNew(W: number, H: number) {
+    const { room } = live.current;
+    const map = room.map;
+    if (!map) return false;
+    const me = room.you.isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur") ?? null;
+    const tag = `${map.kind}:${map.seed}:${map.width}:${map.height}:${map.name}:${me?.id ?? ""}`;
+    if (framed.current === tag) return false;
+    framed.current = tag;
+    userMoved.current = false;
+    autoFrame.current = me ? performance.now() + 8000 : 0;
+    view.current = me ? arrivalView(W, H, map.width, map.height, me, seenBy(room)) : fitView(W, H, map.width, map.height);
+    return true;
+  }
 
   // Caméra : en combat, elle plonge sur la zone du combat (pendant que le titre de l'animation s'affiche),
   // puis revient sur toute la carte à la fin.
@@ -112,8 +167,8 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       const cell = Math.max(10, Math.min(96, Math.min(W / f.w, H / f.h) * 0.94));
       to = { cell, ox: W / 2 - (f.x + f.w / 2) * cell, oy: H / 2 - (f.y + f.h / 2) * cell };
     } else {
-      const cell = Math.max(10, Math.min(56, Math.floor(Math.min(W / map.width, H / map.height))));
-      to = { cell, ox: (W - map.width * cell) / 2, oy: (H - map.height * cell) / 2 };
+      const me = live.current.isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur");
+      to = me ? arrivalView(W, H, map.width, map.height, me, seenBy(room)) : fitView(W, H, map.width, map.height);
     }
     const delay = room.combat && fresh ? INTRO_MS * 0.5 : 0;
     cam.current = { from: { ...view.current }, to, start: performance.now() + delay, dur: reducedMotion ? 1 : 1100 };
@@ -146,6 +201,8 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
 
   function onPointerDown(e: React.PointerEvent) {
     canvasRef.current!.setPointerCapture(e.pointerId);
+    autoFrame.current = 0; // le joueur prend la main : la vue ne le suit plus
+    userMoved.current = true;
     const v = view.current;
     const { x, y } = toCell(e.clientX, e.clientY);
     if (e.button === 1 || e.button === 2) {
@@ -196,6 +253,8 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   }
 
   function zoomAt(px: number, py: number, factor: number) {
+    autoFrame.current = 0;
+    userMoved.current = true;
     const v = view.current;
     const cell = Math.max(6, Math.min(110, v.cell * factor));
     const k = cell / v.cell;
@@ -225,6 +284,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
 
   // Position animée des pions : ils glissent vers leur nouvelle case au lieu de sauter.
   const shown = useRef(new Map<string, { x: number; y: number }>());
+  const lastSize = useRef<{ w: number; h: number } | null>(null);
 
   // --- Boucle de rendu ---
   useEffect(() => {
@@ -244,7 +304,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     const cv = canvasRef.current;
     const wrap = wrapRef.current;
     if (!cv || !wrap) return;
-    const { room, pings, selectedId, isGM, active, reach, accent } = live.current;
+    const { room, pings, selectedId, isGM, active, reachShape, accent, lighting } = live.current;
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     const w = wrap.clientWidth;
     const h = wrap.clientHeight;
@@ -252,9 +312,28 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       cv.width = Math.round(w * dpr);
       cv.height = Math.round(h * dpr);
     }
+    // Fenêtre redimensionnée (téléphone tourné, panneau replié) : une carte qui tenait entière est recadrée,
+    // sinon le point au centre de l'écran y reste.
+    const was = lastSize.current;
+    lastSize.current = { w, h };
+    const m0 = room.map;
+    // La case de BD a pu n'avoir aucune taille quand la carte est arrivée : on cadre à la première image utile.
+    if (w > 0 && h > 0) frameIfNew(w, h);
+    if (was && (was.w !== w || was.h !== h) && m0 && !cam.current && w > 0 && h > 0) {
+      const v = view.current;
+      // Un joueur qui n'a pas touché à la vue garde sa vue d'arrivée, recalculée pour la nouvelle taille (la case de BD a pu
+      // naître petite, pendant la création du personnage).
+      const me = isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur");
+      if (me && !userMoved.current) view.current = arrivalView(w, h, m0.width, m0.height, me, seenBy(room));
+      else if (v.cell === fitView(was.w, was.h, m0.width, m0.height).cell) view.current = fitView(w, h, m0.width, m0.height);
+      else view.current = { cell: v.cell, ox: v.ox + (w - was.w) / 2, oy: v.oy + (h - was.h) / 2 };
+    }
     const g = cv.getContext("2d")!;
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     g.clearRect(0, 0, w, h);
+    // Autour de la carte : passe-partout sombre pour le MJ ; pour un joueur, le brouillard continue au-delà du bord.
+    const fogged = !isGM && room.fogEnabled;
+    drawBackdrop(g, w, h, fogged ? "brouillard" : "passe");
     const map = room.map;
     if (!map || !image) return;
     const c = cam.current;
@@ -280,181 +359,98 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       return t ? { x: ox + (t.x + 0.5) * cell, y: oy + (t.y + 0.5) * cell } : null;
     };
 
-    // Ombre de la carte posée sur la table
-    g.save();
-    g.shadowColor = "rgba(0,0,0,.7)";
-    g.shadowBlur = 40;
-    g.shadowOffsetY = 12;
-    g.fillStyle = "#000";
-    g.fillRect(ox, oy, mw, mh);
-    g.restore();
+    // Vue du MJ : la carte se prolonge, floue, dans les bandes vides au lieu d'un aplat noir.
+    const filled = !fogged && drawAmbient(g, image, w, h, ox, oy, mw, mh);
+
+    // Ombre de la carte posée sur le passe-partout (vue du MJ) ; pour un joueur, la carte se fond dans le brouillard.
+    if (!fogged && !filled) {
+      g.save();
+      g.shadowColor = "rgba(30,18,6,.55)";
+      g.shadowBlur = 18;
+      g.shadowOffsetX = 4;
+      g.shadowOffsetY = 6;
+      g.fillStyle = "#000";
+      g.fillRect(ox, oy, mw, mh);
+      g.restore();
+    }
     g.imageSmoothingEnabled = true;
     g.imageSmoothingQuality = "high";
     g.drawImage(image, ox, oy, mw, mh);
+    // Grille repassée : en brun dans l'herbe, en sombre multiplié sur les dalles, pour compter les cases.
+    drawGrid(g, map, ox, oy, cell, w, h);
 
-    // Lumières : torches dans les salles (donjon, cavernes), qui vacillent.
-    const lit = map.kind === "donjon" || map.kind === "caverne";
-    if (lit) {
-      g.save();
-      g.globalCompositeOperation = "multiply";
-      g.fillStyle = "rgba(20,24,40,.38)"; // pénombre générale
-      g.fillRect(ox, oy, mw, mh);
-      g.restore();
-      g.save();
-      g.globalCompositeOperation = "screen";
-      const lights = map.rooms.length ? map.rooms : [];
-      lights.forEach((r, i) => {
-        const flick = reducedMotion ? 1 : 0.9 + Math.sin(time * 7 + i * 1.7) * 0.05 + Math.sin(time * 13.3 + i) * 0.04;
-        const cx = ox + (r.x + r.w / 2) * cell;
-        const cy = oy + (r.y + r.h / 2) * cell;
-        const rad = Math.max(r.w, r.h) * cell * 0.85 * flick;
-        const grad = g.createRadialGradient(cx, cy, 0, cx, cy, rad);
-        grad.addColorStop(0, "rgba(255,190,110,.32)");
-        grad.addColorStop(0.5, "rgba(255,150,70,.12)");
-        grad.addColorStop(1, "rgba(255,140,60,0)");
-        g.fillStyle = grad;
-        g.fillRect(cx - rad, cy - rad, rad * 2, rad * 2);
-      });
-      g.restore();
-    }
-
-    // Étiquettes des salles, pour le MJ
-    if (isGM && cell >= 16) {
-      g.font = `600 ${Math.max(10, cell * 0.36)}px Cinzel, "IM Fell English SC", Georgia, serif`;
-      g.textAlign = "center";
-      for (const r of map.rooms) {
-        if (!r.label) continue;
-        const cx = ox + (r.x + r.w / 2) * cell;
-        const cy = oy + (r.y + 0.62) * cell;
-        g.lineWidth = 3;
-        g.strokeStyle = "rgba(0,0,0,.65)";
-        g.strokeText(r.label, cx, cy);
-        g.fillStyle = "#f6e7c1";
-        g.fillText(r.label, cx, cy);
-      }
-    }
-
-    // Combat : cases atteignables du pion dont c'est le tour, puis halo sous ce pion.
-    if (reach && active) {
-      g.save();
-      g.fillStyle = accent;
-      g.globalAlpha = 0.13 + (reducedMotion ? 0 : Math.sin(time * 2.4) * 0.03);
-      for (const i of reach) g.fillRect(ox + (i % map.width) * cell + 1, oy + Math.floor(i / map.width) * cell + 1, cell - 2, cell - 2);
-      g.globalAlpha = 0.55;
-      g.strokeStyle = accent;
-      g.lineWidth = 1.5;
-      g.beginPath();
-      for (const i of reach) {
-        const x = i % map.width;
-        const y = Math.floor(i / map.width);
-        const px = ox + x * cell;
-        const py = oy + y * cell;
-        if (!reach.has(i - map.width)) { g.moveTo(px, py); g.lineTo(px + cell, py); }
-        if (!reach.has(i + map.width)) { g.moveTo(px, py + cell); g.lineTo(px + cell, py + cell); }
-        if (x === 0 || !reach.has(i - 1)) { g.moveTo(px, py); g.lineTo(px, py + cell); }
-        if (x === map.width - 1 || !reach.has(i + 1)) { g.moveTo(px + cell, py); g.lineTo(px + cell, py + cell); }
-      }
-      g.stroke();
-      g.restore();
-    }
-    if (active) {
-      const pos = shown.current.get(active.id) ?? active;
-      const s = active.size ?? 1;
-      const cx = ox + (pos.x + s / 2) * cell;
-      const cy = oy + (pos.y + s / 2) * cell;
-      const pulse = reducedMotion ? 0 : (Math.sin(time * 3) + 1) / 2;
-      const grad = g.createRadialGradient(cx, cy, cell * s * 0.3, cx, cy, cell * s * (0.85 + pulse * 0.15));
-      grad.addColorStop(0, accent + "aa");
-      grad.addColorStop(1, accent + "00");
-      g.fillStyle = grad;
-      g.beginPath();
-      g.arc(cx, cy, cell * s, 0, Math.PI * 2);
-      g.fill();
-    }
-
-    // Pions
+    // Positions animées des pions : ils glissent vers leur nouvelle case au lieu de sauter.
     const d = drag.current;
+    const pos = new Map<string, { x: number; y: number }>();
     for (const t of room.tokens) {
       const target = d?.type === "token" && d.id === t.id ? { x: d.x, y: d.y } : { x: t.x, y: t.y };
       const prev = shown.current.get(t.id) ?? target;
       const k = reducedMotion ? 1 : 0.35;
-      const pos = { x: prev.x + (target.x - prev.x) * k, y: prev.y + (target.y - prev.y) * k };
-      if (Math.abs(pos.x - target.x) < 0.01 && Math.abs(pos.y - target.y) < 0.01) Object.assign(pos, target);
-      shown.current.set(t.id, pos);
-      drawToken(g, t, ox + (pos.x + (t.size ?? 1) / 2) * cell, oy + (pos.y + (t.size ?? 1) / 2) * cell, cell * (t.size ?? 1), {
-        selected: t.id === selectedId,
+      const p = { x: prev.x + (target.x - prev.x) * k, y: prev.y + (target.y - prev.y) * k };
+      if (Math.abs(p.x - target.x) < 0.01 && Math.abs(p.y - target.y) < 0.01) Object.assign(p, target);
+      shown.current.set(t.id, p);
+      pos.set(t.id, p);
+    }
+
+    // Lumière : pénombre froide, torches des salles, et la torche de chaque héros qui vacille avec lui.
+    if (lighting) {
+      const torches = room.tokens
+        .filter((t) => t.kind === "joueur" && !t.hidden)
+        .map((t) => ({ ...(pos.get(t.id) ?? t), seed: seedOf(t.id) }));
+      lighting.draw(g, torches, ox, oy, cell, w, h, time, reducedMotion);
+      // Ombres portées à l'encre, à l'opposé de la lumière la plus proche.
+      lighting.drawShadows(
+        g,
+        room.tokens.filter((t) => !(t.hidden && !isGM)).map((t) => ({ ...(pos.get(t.id) ?? t), size: t.size ?? 1, seed: seedOf(t.id) })),
+        torches,
+        ox,
+        oy,
+        cell,
+      );
+    }
+
+    // Étiquettes des salles, pour le MJ
+    if (isGM) drawRoomLabels(g, map, ox, oy, cell);
+
+    // Combat : cases atteignables du pion dont c'est le tour, puis auréole sous ce pion.
+    if (reachShape && active) drawReach(g, reachShape, ox, oy, cell, accent, time, reducedMotion);
+    if (active) {
+      const p = pos.get(active.id) ?? active;
+      const s = active.size ?? 1;
+      drawActiveHalo(g, ox + (p.x + s / 2) * cell, oy + (p.y + s / 2) * cell, cell * s, time, accent, reducedMotion);
+    }
+
+    // Pions
+    for (const t of room.tokens) {
+      const p = pos.get(t.id) ?? t;
+      const s = t.size ?? 1;
+      const cx = ox + (p.x + s / 2) * cell;
+      const cy = oy + (p.y + s / 2) * cell;
+      const sheet = t.characterId ? room.characters.find((c) => c.id === t.characterId) : undefined;
+      if (t.id === selectedId) drawSelection(g, t.id, cx, cy, cell * s, time, reducedMotion, t.color);
+      drawToken(g, t, cx, cy, cell * s, {
         mine: t.ownerId === room.you.id,
-        time,
-        portrait: t.characterId ? portraitImage(room.characters.find((c) => c.id === t.characterId)?.portrait) : null,
+        dpr,
+        portrait: sheet?.portrait ? portraitImage(sheet.portrait) : null,
+        role: sheet?.archetype,
       });
     }
 
-    // Brouillard : masque lissé + brume qui dérive.
+    // Brouillard : grisaille de l'exploré, encre et fumée de l'inexploré.
     const fog = fogRef.current;
-    if (fog) {
-      const layer = document.createElement("canvas");
-      layer.width = Math.ceil(w);
-      layer.height = Math.ceil(h);
-      const lg = layer.getContext("2d")!;
-      lg.imageSmoothingEnabled = true;
-      lg.drawImage(fog, ox - cell * 0.5, oy - cell * 0.5, mw + cell, mh + cell);
-      lg.drawImage(fog, ox, oy, mw, mh);
-      lg.globalCompositeOperation = "source-in";
-      lg.fillStyle = isGM ? "#0b0e12" : "#141116";
-      lg.fillRect(0, 0, w, h);
-      if (!reducedMotion) {
-        lg.globalCompositeOperation = "source-atop";
-        // Deux couches de fumée qui dérivent en sens contraires : les volutes se croisent et se défont.
-        const scale = Math.max(1, cell / 20);
-        const span = 256 * scale;
-        for (const [speed, dir, extra] of [[7, 1, 1], [4, -1, 1.6]] as const) {
-          const pattern = lg.createPattern(mist, "repeat")!;
-          const shift = time * speed;
-          pattern.setTransform(new DOMMatrix().translate((dir * shift) % span, (shift * 0.35) % span).scale(scale * extra));
-          lg.fillStyle = pattern;
-          lg.fillRect(0, 0, w, h);
-        }
-      }
-      g.drawImage(layer, 0, 0, w, h);
-    }
+    if (fog) drawFog(g, fog, ox, oy, cell, map.width, map.height, w, h);
 
     // Mesure pendant le déplacement d'un pion
     if (d?.type === "token") {
-      const fx = ox + (d.fromX + 0.5) * cell;
-      const fy = oy + (d.fromY + 0.5) * cell;
-      const tx = ox + (d.x + 0.5) * cell;
-      const ty = oy + (d.y + 0.5) * cell;
-      g.strokeStyle = "#f3d58a";
-      g.lineWidth = 2;
-      g.setLineDash([6, 5]);
-      g.beginPath();
-      g.moveTo(fx, fy);
-      g.lineTo(tx, ty);
-      g.stroke();
-      g.setLineDash([]);
       const cells = Math.max(Math.abs(d.x - d.fromX), Math.abs(d.y - d.fromY));
       const label = `${cells} case${cells > 1 ? "s" : ""} · ${(cells * METERS_PER_CELL).toLocaleString("fr-FR")} m`;
-      g.font = `600 13px "Source Sans 3", system-ui, sans-serif`;
-      const wl = g.measureText(label).width + 16;
-      g.fillStyle = "rgba(14,10,6,.92)";
-      g.beginPath();
-      g.roundRect(tx + 12, ty - 30, wl, 22, 4);
-      g.fill();
-      g.strokeStyle = "rgba(243,213,138,.5)";
-      g.stroke();
-      g.fillStyle = "#f6e7c1";
-      g.textAlign = "left";
-      g.fillText(label, tx + 20, ty - 14);
+      drawMeasure(g, ox + (d.fromX + 0.5) * cell, oy + (d.fromY + 0.5) * cell, ox + (d.x + 0.5) * cell, oy + (d.y + 0.5) * cell, label, cell, labelBlocker(map, ox, oy, cell));
     }
 
     drawPings(g, pings, ox, oy, cell, time);
-
-    // Vignette : les bords de l'écran s'assombrissent comme sous une lampe.
-    const vg = g.createRadialGradient(w / 2, h / 2, Math.min(w, h) * 0.35, w / 2, h / 2, Math.max(w, h) * 0.75);
-    vg.addColorStop(0, "rgba(0,0,0,0)");
-    vg.addColorStop(1, room.combat ? "rgba(0,0,0,.75)" : "rgba(0,0,0,.55)");
-    g.fillStyle = vg;
-    g.fillRect(0, 0, w, h);
+    drawVignette(g, w, h, !!room.combat, map.kind === "nature");
+    // Cadre de case de BD : gouttière de papier, trait d'encre à peine tremblé, vignettage du pourtour.
+    drawPanelFrame(g, w, h, dpr);
   }
 
   return (
@@ -481,17 +477,91 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       )}
       {room.scene && <div className="scene-banner">{room.scene}</div>}
       {map && (
-        <div className="map-hint">
-          Glisser : déplacer · Molette : zoom · Double-clic : signaler
-          <button className="btn small ghost" onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 1.25)} aria-label="Zoomer">+</button>
-          <button className="btn small ghost" onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 0.8)} aria-label="Dézoomer">−</button>
-        </div>
+        <>
+          <div className="map-hint">Glisser : déplacer · Molette : zoom · Double-clic : signaler</div>
+          <div className="map-zoom">
+            <button onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 1.25)} aria-label="Zoomer">+</button>
+            <button onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 0.8)} aria-label="Dézoomer">−</button>
+          </div>
+        </>
       )}
     </div>
   );
 }
 
-/** Pion en médaillon : liseré métallique, disque coloré bombé, initiales gravées. */
+/** Carte entière dans la case de BD, posée sur le passe-partout : ajustée au plus juste (sans arrondi), et si elle laisse moins
+ * de 4 % de vide d'un côté, on la pose bord à bord (au plus 2 % rogné) : le dessin touche le passe-partout. */
+function fitView(W: number, H: number, mw: number, mh: number) {
+  const m = (panelMargin(W) + passePartout(W)) * 2;
+  const contain = Math.min((W - m) / mw, (H - m) / mh);
+  const cover = Math.max((W - m) / mw, (H - m) / mh);
+  const cell = Math.max(8, Math.min(56, cover / contain < 1.04 ? cover : contain));
+  return { cell, ox: (W - mw * cell) / 2, oy: (H - mh * cell) / 2 };
+}
+
+/** Cases que le joueur voit ou a déjà explorées : c'est elles que la vue d'arrivée cadre. */
+function seenBy(room: RoomView): (i: number) => boolean {
+  if (!room.fogEnabled || !room.fog) return () => true;
+  const fog = room.fog;
+  const vis = room.visionMode === "dynamique" && room.visible?.length ? new Set(room.visible) : null;
+  return (i) => !fog[i] || !!vis?.has(i);
+}
+
+/**
+ * Vue d'arrivée d'un joueur sur une carte. Boîte englobante de ce qu'il connaît autour de son pion (cases vues ou explorées,
+ * à 14 cases au plus) et de 6 cases tout autour du pion, plus 2 cases de marge. Centre pondéré : 60 % le pion, 40 % la boîte.
+ * Le zoom fait occuper à la boîte 78 % de la case de BD, avec une case d'au moins 56 px à l'écran (on lit les pions et le
+ * décor) et au plus 2,5 fois la vue d'ensemble (64 px au moins). Si le pion sortait du champ, la vue glisse juste assez.
+ */
+function arrivalView(W: number, H: number, mw: number, mh: number, t: { x: number; y: number }, seen: (i: number) => boolean) {
+  const tx = Math.round(t.x);
+  const ty = Math.round(t.y);
+  let x0 = tx - 6;
+  let x1 = tx + 7;
+  let y0 = ty - 6;
+  let y1 = ty + 7;
+  for (let y = Math.max(0, ty - 14); y <= Math.min(mh - 1, ty + 14); y++)
+    for (let x = Math.max(0, tx - 14); x <= Math.min(mw - 1, tx + 14); x++)
+      if (seen(y * mw + x)) {
+        x0 = Math.min(x0, x);
+        x1 = Math.max(x1, x + 1);
+        y0 = Math.min(y0, y);
+        y1 = Math.max(y1, y + 1);
+      }
+  x0 -= 2;
+  y0 -= 2;
+  x1 += 2;
+  y1 += 2;
+  const px = t.x + 0.5;
+  const py = t.y + 0.5;
+  const cx = px * 0.6 + ((x0 + x1) / 2) * 0.4;
+  const cy = py * 0.6 + ((y0 + y1) / 2) * 0.4;
+  const hx = Math.max(cx - x0, x1 - cx);
+  const hy = Math.max(cy - y0, y1 - cy);
+  const inner = panelMargin(W) * 2;
+  const iw = W - inner;
+  const ih = H - inner;
+  const fit = fitView(W, H, mw, mh).cell;
+  const share = W < 600 ? 0.7 : 0.78;
+  const want = Math.min((iw * share) / (hx * 2), (ih * share) / (hy * 2));
+  // Sur téléphone, cadrage plus large : 42 px par case au moins (une dizaine de cases en largeur) au lieu de 56.
+  const floor = W < 600 ? 42 : 56;
+  const cell = Math.max(floor, Math.min(want, Math.max(64, fit * 2.5)));
+  let ox = W / 2 - cx * cell;
+  let oy = H / 2 - cy * cell;
+  // Le pion reste à une case et demie au moins du cadre.
+  const keep = (o: number, p: number, span: number) => {
+    const s = o + p * cell;
+    const lo = panelMargin(W) + cell * 1.5;
+    const hi = span - panelMargin(W) - cell * 1.5;
+    if (hi <= lo) return span / 2 - p * cell;
+    return s < lo ? o + lo - s : s > hi ? o + hi - s : o;
+  };
+  ox = keep(ox, px, W);
+  oy = keep(oy, py, H);
+  return { cell, ox, oy };
+}
+
 // Portraits des personnages, décodés une fois puis gardés en mémoire.
 const portraits = new Map<string, HTMLImageElement>();
 function portraitImage(url: string | undefined): HTMLImageElement | null {
@@ -503,128 +573,4 @@ function portraitImage(url: string | undefined): HTMLImageElement | null {
     portraits.set(url, img);
   }
   return img.complete && img.naturalWidth ? img : null;
-}
-
-function drawToken(g: CanvasRenderingContext2D, t: Token, cx: number, cy: number, size: number, o: { selected: boolean; mine: boolean; time: number; portrait?: HTMLImageElement | null }) {
-  const r = size * 0.43;
-  const rim = t.kind === "monstre" ? "#8a2a20" : t.kind === "pnj" ? "#8a8a8a" : "#d4a94c";
-  g.save();
-  g.globalAlpha = t.hidden ? 0.5 : 1;
-  // halo de sélection qui pulse
-  if (o.selected) {
-    const pulse = reducedMotion ? 0.6 : 0.5 + Math.sin(o.time * 4) * 0.25;
-    const grad = g.createRadialGradient(cx, cy, r * 0.9, cx, cy, r * 1.7);
-    grad.addColorStop(0, `rgba(255,220,130,${pulse})`);
-    grad.addColorStop(1, "rgba(255,220,130,0)");
-    g.fillStyle = grad;
-    g.beginPath();
-    g.arc(cx, cy, r * 1.7, 0, Math.PI * 2);
-    g.fill();
-  }
-  // ombre portée
-  g.fillStyle = "rgba(0,0,0,.55)";
-  g.beginPath();
-  g.ellipse(cx + r * 0.12, cy + r * 0.22, r * 1.02, r * 0.95, 0, 0, Math.PI * 2);
-  g.fill();
-  // anneau métallique
-  const ring = g.createLinearGradient(cx - r, cy - r, cx + r, cy + r);
-  ring.addColorStop(0, shade(rim, 0.35));
-  ring.addColorStop(0.45, rim);
-  ring.addColorStop(0.55, shade(rim, -0.25));
-  ring.addColorStop(1, shade(rim, 0.15));
-  g.fillStyle = ring;
-  g.beginPath();
-  g.arc(cx, cy, r, 0, Math.PI * 2);
-  g.fill();
-  // disque intérieur bombé
-  const inner = g.createRadialGradient(cx - r * 0.3, cy - r * 0.35, r * 0.05, cx, cy, r * 0.82);
-  inner.addColorStop(0, shade(t.color, 0.25));
-  inner.addColorStop(1, shade(t.color, -0.18));
-  g.fillStyle = inner;
-  g.beginPath();
-  g.arc(cx, cy, r * 0.8, 0, Math.PI * 2);
-  g.fill();
-  if (o.portrait) {
-    g.save();
-    g.clip();
-    g.drawImage(o.portrait, cx - r * 0.8, cy - r * 0.8, r * 1.6, r * 1.6);
-    g.restore();
-    g.beginPath();
-    g.arc(cx, cy, r * 0.8, 0, Math.PI * 2);
-  }
-  g.strokeStyle = "rgba(0,0,0,.5)";
-  g.lineWidth = Math.max(1, r * 0.06);
-  if (t.hidden) g.setLineDash([3, 3]);
-  g.stroke();
-  g.setLineDash([]);
-  // reflet
-  g.fillStyle = "rgba(255,255,255,.18)";
-  g.beginPath();
-  g.ellipse(cx - r * 0.2, cy - r * 0.38, r * 0.45, r * 0.2, -0.4, 0, Math.PI * 2);
-  g.fill();
-  // initiales gravées
-  if (size >= 18 && !o.portrait) {
-    g.font = `700 ${Math.max(9, r * 0.72)}px Cinzel, "Source Sans 3", serif`;
-    g.textAlign = "center";
-    g.textBaseline = "middle";
-    g.fillStyle = "rgba(0,0,0,.45)";
-    g.fillText(initials(t.name), cx + 0.8, cy + 1.8);
-    g.fillStyle = "#fff8e6";
-    g.fillText(initials(t.name), cx, cy + 1);
-    g.textBaseline = "alphabetic";
-  }
-  // repère « à moi » : petit losange doré au sommet
-  if (o.mine) {
-    g.fillStyle = "#f3d58a";
-    g.beginPath();
-    g.moveTo(cx, cy - r - 6);
-    g.lineTo(cx + 4, cy - r - 2);
-    g.lineTo(cx, cy - r + 2);
-    g.lineTo(cx - 4, cy - r - 2);
-    g.closePath();
-    g.fill();
-  }
-  // barre de vie en arc sous le médaillon
-  if (t.hpMax && size >= 16) {
-    const ratio = Math.max(0, Math.min(1, (t.hp ?? t.hpMax) / t.hpMax));
-    g.lineWidth = Math.max(2.5, r * 0.14);
-    g.lineCap = "round";
-    g.strokeStyle = "rgba(0,0,0,.6)";
-    g.beginPath();
-    g.arc(cx, cy, r * 1.12, Math.PI * 0.2, Math.PI * 0.8);
-    g.stroke();
-    g.strokeStyle = ratio > 0.5 ? "#6fbf5a" : ratio > 0.25 ? "#e3a63c" : "#d2412c";
-    g.beginPath();
-    g.arc(cx, cy, r * 1.12, Math.PI * 0.8 - Math.PI * 0.6 * ratio, Math.PI * 0.8);
-    g.stroke();
-  }
-  if (t.conditions?.length && size >= 16) {
-    g.fillStyle = "#d2412c";
-    g.beginPath();
-    g.arc(cx + r * 0.78, cy - r * 0.78, Math.max(3, r * 0.2), 0, Math.PI * 2);
-    g.fill();
-  }
-  g.restore();
-}
-
-function drawPings(g: CanvasRenderingContext2D, pings: Ping[], ox: number, oy: number, cell: number, time: number) {
-  for (const p of pings) {
-    const cx = ox + (p.x + 0.5) * cell;
-    const cy = oy + (p.y + 0.5) * cell;
-    const phase = (time * 1.4) % 1;
-    g.strokeStyle = p.color;
-    for (let k = 0; k < 3; k++) {
-      const f = (phase + k / 3) % 1;
-      g.globalAlpha = 1 - f;
-      g.lineWidth = 3 * (1 - f) + 1;
-      g.beginPath();
-      g.arc(cx, cy, cell * (0.4 + f * 1.6), 0, Math.PI * 2);
-      g.stroke();
-    }
-    g.globalAlpha = 1;
-    g.font = `600 12px "Source Sans 3", sans-serif`;
-    g.textAlign = "center";
-    g.fillStyle = "#fff";
-    g.fillText(p.name, cx, cy - cell * 0.9);
-  }
 }

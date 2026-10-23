@@ -12,6 +12,7 @@ import { generateMap } from "../../../shared/maps";
 import { randomSeed } from "../../../shared/random";
 import type { Character, Encounter, GameMap, GenreId, MapKind, RoomView, Scenario, Ton, Token } from "../../../shared/types";
 import { generateAi, listLmModels, loadAiSettings, saveAiSettings, type AiSettings } from "../ai";
+import { hasMapImage, mapImage } from "../mapImageCache";
 import { freeCell, tokenForCharacter, tokensForEncounter } from "../placement";
 import { send, toast } from "../store";
 import { CharacterSheet, EncounterBlock, ScenarioSheet } from "./Sheets";
@@ -202,6 +203,15 @@ export function MapPanel({ room }: { room: RoomView }) {
   return (
     <div className="stack">
       <h3>Carte</h3>
+      <div className="map-proof-sticky">
+        <MiniMap map={preview} room={room} />
+        <div className="row map-proof-actions">
+          <button className="btn" onClick={() => setSeed(randomSeed())}>Autre tirage</button>
+          <button className="btn primary" onClick={() => send("map:set", { map: preview, keepTokens: false }).then((r) => r.ok && toast("Carte posée sur la table."))}>
+            Poser sur la table
+          </button>
+        </div>
+      </div>
       <div className="row">
         <label className="field">
           <span>Type</span>
@@ -222,13 +232,6 @@ export function MapPanel({ room }: { room: RoomView }) {
         <span>Nom affiché</span>
         <input id="map-name" className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder={preview.name} />
       </label>
-      <MiniMap map={preview} room={room} />
-      <div className="row">
-        <button className="btn" onClick={() => setSeed(randomSeed())}>Autre tirage</button>
-        <button className="btn primary" onClick={() => send("map:set", { map: preview, keepTokens: false }).then((r) => r.ok && toast("Carte posée sur la table."))}>
-          Poser sur la table
-        </button>
-      </div>
       <p className="small muted">Graine {seed} : note-la pour retrouver exactement cette carte.</p>
 
       <div className="section stack">
@@ -265,23 +268,43 @@ export function MapPanel({ room }: { room: RoomView }) {
   );
 }
 
+/** Aperçu de la carte tirée, dans le même rendu que la table, en miniature. On attend que le MJ s'arrête
+ * de taper ou de cliquer (un dessin coûte jusqu'à 1,5 s) ; l'image est gardée et resservira à la table. */
 function MiniMap({ map, room }: { map: GameMap; room: RoomView }) {
-  const [url, setUrl] = useState("");
+  const [shot, setShot] = useState<{ url: string; key: string } | null>(null);
+  const key = `${room.genre}|${map.kind}|${map.seed}|${map.width}|${map.name}`;
   useEffect(() => {
-    const cv = document.createElement("canvas");
-    const s = 4;
-    cv.width = map.width * s;
-    cv.height = map.height * s;
-    const g = cv.getContext("2d")!;
-    const theme = GENRES.find((x) => x.id === room.genre)!.theme;
-    const colors = [theme.background, theme.floor, theme.wall, theme.water, theme.vegetation, theme.road, theme.door];
-    map.tiles.forEach((t, i) => {
-      g.fillStyle = colors[t];
-      g.fillRect((i % map.width) * s, Math.floor(i / map.width) * s, s, s);
-    });
-    setUrl(cv.toDataURL());
-  }, [map, room.genre]);
-  return url ? <img src={url} alt={`Aperçu : ${map.name}`} style={{ width: "100%", imageRendering: "pixelated", borderRadius: 3, border: "1px solid #ffffff20" }} /> : null;
+    let alive = true;
+    const paint = () => {
+      if (!alive) return;
+      const img = mapImage(map, room.genre);
+      // Miniature à 2 px d'écran par px affiché, assez nette pour lire les salles.
+      const w = Math.min(img.width, 720);
+      const cv = document.createElement("canvas");
+      cv.width = w;
+      cv.height = Math.round((img.height * w) / img.width);
+      const g = cv.getContext("2d")!;
+      g.imageSmoothingQuality = "high";
+      g.drawImage(img, 0, 0, cv.width, cv.height);
+      if (alive) setShot({ url: cv.toDataURL("image/jpeg", 0.86), key });
+    };
+    // Déjà dessinée : tout de suite ; sinon un temps de latence, puis une image pour laisser le libellé s'afficher.
+    const t = setTimeout(() => requestAnimationFrame(() => setTimeout(paint, 0)), hasMapImage(map, room.genre) ? 0 : 260);
+    return () => {
+      alive = false;
+      clearTimeout(t);
+    };
+  }, [key]);
+  const stale = !shot || shot.key !== key;
+  // Épreuve posée en haut de l'onglet, qui ne défile pas : passe-partout de papier, trait d'encre, coins assombris.
+  return (
+    <div className="map-proof">
+      <div className={`map-thumb${stale ? " is-stale" : ""}`} style={{ aspectRatio: `${map.width} / ${map.height}` }}>
+        {shot && <img src={shot.url} alt={`Aperçu : ${map.name}`} />}
+        {stale && <span className="map-thumb-wait">On encre la carte…</span>}
+      </div>
+    </div>
+  );
 }
 
 const TOKEN_COLORS = ["#7a2a22", "#3d6b8a", "#6b5b3e", "#4f7a4a", "#5b3a6b", "#8a6a1f", "#2f2f2f", "#a34f7a"];

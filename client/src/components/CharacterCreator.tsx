@@ -108,7 +108,10 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
-  useEffect(() => dialogRef.current?.querySelector<HTMLElement>(".cc-body")?.scrollTo({ top: 0 }), [step]);
+  // Accolades : scrollTo renvoie une promesse dans les Chromium récents, qu'un effet ne doit pas renvoyer.
+  useEffect(() => {
+    dialogRef.current?.querySelector<HTMLElement>(".cc-body")?.scrollTo({ top: 0 });
+  }, [step]);
 
   // Scores avant bonus d'origine
   const raw = method === "points" ? base : assign.map((i) => (i === null || !pool ? 8 : pool[i]));
