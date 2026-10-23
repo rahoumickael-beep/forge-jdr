@@ -2,7 +2,7 @@
 
 Mickael a demandé le 24/10/2026 qu'on bâtisse les mondes des autres genres, textes et images, au niveau d'Aubreterre (skill `batir-un-monde`).
 Pour chaque genre : trois prémisses, chacune avec un grand secret que personne ne connaît en début de campagne, et une recommandation.
-Rien n'est encore écrit au-delà de cette page. Les noms des mondes restent à proposer en A/B/C une fois la prémisse choisie.
+**Choix de Mickael (24/10/2026) : la prémisse A partout. Premier monde bâti : la SF.** Les noms, c'est Claude qui les choisit et Mickael qui relit ; le style graphique de chaque genre passe d'abord par 3 essais A/B/C.
 
 ## Dark fantasy (gravure à l'eau-forte, sang et cendre)
 - **A · La Dîme** : chaque hiver, chaque foyer paie à la Cour Grise une dîme de souvenirs et oublie un de ses morts. La magie se paie aussi en souvenirs. *Secret* : la Cour Grise est morte depuis un siècle ; c'est la terre elle-même qui mange les souvenirs, et les seigneurs qui « la servent » mentent pour garder leur pouvoir.

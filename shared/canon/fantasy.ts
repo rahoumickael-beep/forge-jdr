@@ -196,7 +196,7 @@ export const AUBRETERRE: Canon = {
   ],
   cartes: {
     evenements: [
-      { titre: "Le glas du hameau", texte: "Les cloches d'un village voisin sonnent seules, trois coups, au milieu de la nuit. Personne n'est monté au clocher.", effet: "Avant l'aube, les morts de la semaine de ce village sont debout et marchent vers l'est." },
+      { titre: "Le glas du hameau", texte: "Les cloches d'un village voisin sonnent seules, trois coups, au milieu de la nuit. Personne n'est monté au clocher.", effet: "Avant l'aube, les morts de la semaine de ce village sont debout et marchent vers l'est.", image: "carte-evenement-glas" },
       { titre: "La file des Levés", texte: "Une file de morts traverse la route, l'un derrière l'autre, du même pas, tout droit vers Aube-Close.", effet: "Ils ne s'en prennent qu'à ce qui leur barre le chemin. Les laisser passer coûte une heure.", image: "carte-evenement-file-des-leves" },
       { titre: "Barrage de la Garde du Seuil", texte: "Une chaîne en travers du pont, deux gardes en manteau blanc et un registre. On note les noms, on fouille les sacs.", effet: "Un laissez-passer de la Chancellerie ouvre la chaîne. Sinon : payer, mentir, ou faire le tour par le gué.", image: "carte-evenement-barrage" },
       { titre: "Les recruteurs", texte: "Un sergent des légions de Hersende fait aligner les hommes valides d'un hameau devant la grange. Les mères regardent par les fenêtres.", effet: "Les personnages sont comptés comme valides. Le sergent n'aime pas qu'on discute.", image: "carte-evenement-recruteurs" },
@@ -217,7 +217,7 @@ export const AUBRETERRE: Canon = {
       { titre: "Laissez-passer de la Chancellerie", texte: "Un parchemin au sceau impérial, signé d'une encre violette. Il ne dit jamais « je ».", effet: "Reconnu par la plupart des gardes, sauf ceux de Hersende.", image: "carte-laissez-passer" },
       { titre: "Balance de laiton", texte: "Un pendentif de Peseur, deux fléaux minuscules. Ils s'inclinent quand quelqu'un lance un grand sort tout près.", effet: "Signale tout sort de niveau 4 ou plus lancé à moins de dix mètres.", image: "carte-balance-laiton" },
       { titre: "Chevalière à réservoir", texte: "Une bague de la Hanse du Sel, un peu de sel sous le chaton. Les comptoirs la reconnaissent.", effet: "Crédit de 50 po dans n'importe quel port, remboursable sous un mois.", image: "carte-chevaliere-sel" },
-      { titre: "Ruban noir", texte: "Un ruban de soie noire, usé, à nouer au poignet gauche, là où l'on prenait le pouls.", effet: "Les Rendus vous prennent pour l'un des leurs, ou pour un ami." },
+      { titre: "Ruban noir", texte: "Un ruban de soie noire, usé, à nouer au poignet gauche, là où l'on prenait le pouls.", effet: "Les Rendus vous prennent pour l'un des leurs, ou pour un ami.", image: "carte-ruban-noir" },
       { titre: "Insigne de plomb de la Rotonde", texte: "Un insigne de pèlerin, la porte fermée sous la couronne, frappé dans le plomb.", effet: "Les pèlerins vous accueillent sur toutes les routes de Pallène.", image: "carte-insigne-rotonde" },
       { titre: "Cierge béni", texte: "Un cierge de cire blanche du Val, à peine entamé, une goutte figée sur le côté.", effet: "Allumé près d'un mort, il le tient tranquille une nuit.", image: "carte-cierge-benit" },
     ],

@@ -32,7 +32,7 @@ export const SUJETS_COLLECTION: Record<string, string> = {
   "saunier-hanse": "a shrewd salt merchant in a fine salt-stained coat and a silver signet ring, weighing coarse white salt on a small brass balance",
   "peseur": "an elderly mage in a dark scholar's gown, a small brass balance pendant on his chest, a thick leather ledger under his arm",
   "mere-gisle": "an old peat-bog wise woman with deep wrinkles and a woollen shawl, holding a clod of dark peat in both hands, a necklace of reed charms",
-  "odile-varlet": "an elegant drowned merchant woman returned from death, pale grey-blue skin, bluish lips, damp dark hair clinging to her cheeks, a wry smile, a rich water-stained green silk gown, a black silk ribbon tied at her left wrist",
+  "odile-varlet": "a drowned merchant woman risen from black bog water, waxy corpse-like grey-blue skin, pale blue-violet lips, dark bruised hollows under sunken eyes, soaked black hair plastered to her face with strands of pondweed, water dripping from her chin, a faint wry smile, a sodden water-stained green silk gown, a black silk ribbon tied at her left wrist",
   "faveur-pelerins": "a muddy pilgrim camp at dusk, hundreds of small campfires stretching to the horizon, pilgrims with walking staffs and candles",
   "faveur-confrerie": "the inside of a nailers' guild lodge, rough oak tables, hammers and bundles of iron nails hanging on the wall, men with an iron nail through the left earlobe sharing bread",
   "faveur-veilleuses": "a healer of a lay sisterhood in a plain grey dress tending a sick man in a cottage, a lantern with blue glass glowing on the table",
