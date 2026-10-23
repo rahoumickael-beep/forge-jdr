@@ -5,13 +5,12 @@ import { DEFAULT_VISION } from "../../../shared/vision";
 import { BESTIARY } from "../../../shared/bestiary";
 import { CLASSES } from "../../../shared/rules";
 import type { Character, RoomView, Token } from "../../../shared/types";
+import { BOARD_CELLS, drawBoard, drawTable } from "../mapBoard";
 import { mapImage } from "../mapImageCache";
 import {
   Lighting,
   buildFog,
   drawActiveHalo,
-  drawAmbient,
-  drawBackdrop,
   drawFog,
   drawMeasure,
   drawPings,
@@ -19,7 +18,6 @@ import {
   drawRoomLabels,
   exploredRooms,
   drawSelection,
-  drawPanelFrame,
   drawToken,
   drawGrid,
   drawVignette,
@@ -347,8 +345,8 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     g.clearRect(0, 0, w, h);
     // Autour de la carte : passe-partout sombre pour le MJ ; pour un joueur, le brouillard continue au-delà du bord.
-    const fogged = !isGM && room.fogEnabled;
-    drawBackdrop(g, w, h, fogged ? "brouillard" : "passe");
+    // La table en bois sous la lampe, pour le MJ comme pour les joueurs : la carte est un plateau posé dessus.
+    drawTable(g, w, h, dpr);
     const map = room.map;
     if (!map || !image) return;
     const c = cam.current;
@@ -374,20 +372,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       return t ? { x: ox + (t.x + 0.5) * cell, y: oy + (t.y + 0.5) * cell } : null;
     };
 
-    // Vue du MJ : la carte se prolonge, floue, dans les bandes vides au lieu d'un aplat noir.
-    const filled = !fogged && drawAmbient(g, image, w, h, ox, oy, mw, mh);
-
-    // Ombre de la carte posée sur le passe-partout (vue du MJ) ; pour un joueur, la carte se fond dans le brouillard.
-    if (!fogged && !filled) {
-      g.save();
-      g.shadowColor = "rgba(30,18,6,.55)";
-      g.shadowBlur = 18;
-      g.shadowOffsetX = 4;
-      g.shadowOffsetY = 6;
-      g.fillStyle = "#000";
-      g.fillRect(ox, oy, mw, mh);
-      g.restore();
-    }
+    drawBoard(g, ox, oy, mw, mh, cell, map.name);
     g.imageSmoothingEnabled = true;
     g.imageSmoothingQuality = "high";
     g.drawImage(image, ox, oy, mw, mh);
@@ -454,7 +439,15 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
 
     // Brouillard : grisaille de l'exploré, encre et fumée de l'inexploré.
     const fog = fogRef.current;
-    if (fog) drawFog(g, fog, ox, oy, cell, map.width, map.height, w, h);
+    // Le brouillard reste sur le plateau : la table et le bord du plateau se voient autour.
+    if (fog) {
+      g.save();
+      g.beginPath();
+      g.rect(ox, oy, mw, mh);
+      g.clip();
+      drawFog(g, fog, ox, oy, cell, map.width, map.height);
+      g.restore();
+    }
 
     // Mesure pendant le déplacement d'un pion
     if (d?.type === "token") {
@@ -465,8 +458,6 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
 
     drawPings(g, pings, ox, oy, cell, time);
     drawVignette(g, w, h, !!room.combat, map.kind === "nature");
-    // Cadre de case de BD : gouttière de papier, trait d'encre à peine tremblé, vignettage du pourtour.
-    drawPanelFrame(g, w, h, dpr);
   }
 
   return (
@@ -508,11 +499,14 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
 /** Carte entière dans la case de BD, posée sur le passe-partout : ajustée au plus juste (sans arrondi), et si elle laisse moins
  * de 4 % de vide d'un côté, on la pose bord à bord (au plus 2 % rogné) : le dessin touche le passe-partout. */
 function fitView(W: number, H: number, mw: number, mh: number) {
+  // La carte entière, avec le bord du plateau autour (marge imprimée et tranche).
   const m = (panelMargin(W) + passePartout(W)) * 2;
-  const contain = Math.min((W - m) / mw, (H - m) / mh);
-  const cover = Math.max((W - m) / mw, (H - m) / mh);
+  const bw = mw + BOARD_CELLS.x;
+  const bh = mh + BOARD_CELLS.y;
+  const contain = Math.min((W - m) / bw, (H - m) / bh);
+  const cover = Math.max((W - m) / bw, (H - m) / bh);
   const cell = Math.max(8, Math.min(56, cover / contain < 1.04 ? cover : contain));
-  return { cell, ox: (W - mw * cell) / 2, oy: (H - mh * cell) / 2 };
+  return { cell, ox: (W - mw * cell) / 2, oy: (H - mh * cell) / 2 - (BOARD_CELLS.y - BOARD_CELLS.x) * cell * 0.5 };
 }
 
 /** Cases que le joueur voit ou a déjà explorées : c'est elles que la vue d'arrivée cadre. */
