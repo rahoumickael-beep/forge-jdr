@@ -6,6 +6,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - 23/10/2026 : travail des cartes et des illustrations commité sur `claude/livre-des-regles` (PR n°2), puis branche `claude/studio` créée à partir de là.
 - 23/10/2026 : plan en 7 étapes validé, dans l'ordre ci-dessous.
 - 23/10/2026 : carte côté joueur en A′ ; outillage validé avec un serveur MCP pour ComfyUI seulement (pas pour LM Studio).
+- 23/10/2026 : canon en TypeScript (option A) : `shared/canon/fantasy.ts`, importé par les générateurs, les tests et les livres.
 
 ## Plan
 | # | Étape | État |
@@ -13,7 +14,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 | 1 | Mise à l'abri du travail en cours, journal de production | fait |
 | 2 | Fondations sûres : fiches de PNJ hors de la vue joueur, droits des fiches et des pions, import contrôlé, réglages vérifiés, documents remis à certains joueurs | fait (PR n°3) |
 | 3 | Outillage Claude Code : hooks en Node, agents Haiku et Sonnet, skills, MCP ComfyUI | fait (PR n°4) |
-| 4 | Canon d'Aubreterre en données typées, générateurs branchés dessus, tests de cohérence | à faire |
+| 4 | Canon d'Aubreterre en TypeScript (`shared/canon/fantasy.ts`), générateurs branchés dessus, tests de cohérence | prochaine étape, à faire sur une branche partie de `claude/outillage` |
 | 5 | Mémoire de campagne côté serveur, préparation de la séance suivante | à faire |
 | 6 | Écrans immersifs : tableau de bord du MJ, fiche cliquable, codex, effets, 400 px | à faire |
 | 7+ | Un monde par genre : 3 prémisses, puis noms, puis style, au choix de Mickael | à faire |
