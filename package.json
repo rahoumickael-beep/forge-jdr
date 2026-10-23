@@ -13,7 +13,8 @@
     "playtest": "node scripts/playtest.mjs",
     "livre": "tsx scripts/livre.ts dist-livre",
     "apercu-cartes": "node scripts/apercu-cartes.mjs",
-    "livres": "tsx scripts/livres/index.ts tout dist-livre"
+    "livres": "tsx scripts/livres/index.ts tout dist-livre",
+    "livres:impression": "tsx scripts/livres/index.ts tout dist-livre-impression --hd"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",
@@ -33,6 +34,7 @@
     "concurrently": "^10.0.6",
     "pdf-lib": "^1.17.1",
     "playwright": "^1.64.1",
+    "sharp": "^0.34.5",
     "typescript": "^5.9.3",
     "vite": "^8.0.0"
   },

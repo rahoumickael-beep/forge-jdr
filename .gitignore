@@ -5,3 +5,5 @@ data/*.json
 playtest-*.png
 .claude/worktrees/
 dist-livre
+dist-livre-impression
+content/aubreterre/illustrations-hd

@@ -9,7 +9,7 @@ import { join } from "node:path";
 import { PDFDocument } from "pdf-lib";
 import { chromium, type Page } from "playwright";
 import { CSS, POLICES } from "./style";
-import { esc, md } from "./texte";
+import { esc, HD, md } from "./texte";
 
 export interface Unite {
   /** Titre dans le sommaire. */
@@ -71,7 +71,7 @@ export async function fabriquer(livre: Livre, out: string) {
   const page = await browser.newPage();
 
   // Le parchemin, peint une fois en JPEG.
-  const page2 = await browser.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: 2 });
+  const page2 = await browser.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: HD ? 3 : 2 }); // ×3 : parchemin à près de 300 dpi pour l'impression
   await page2.setContent(doc("", true));
   const texture = await page2.screenshot({ type: "jpeg", quality: 80 });
   await page2.close();

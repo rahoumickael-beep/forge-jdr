@@ -4,6 +4,9 @@ import { join, resolve } from "node:path";
 import { FIN_DE_STYLE, promptPeinture, type Cadrage } from "../../shared/charte";
 
 export const ILLU_DIR = resolve("content/aubreterre/illustrations");
+/** Version d'impression (--hd) : les images agrandies par comfyui/agrandir.mjs, quand elles existent. */
+export const HD = process.argv.includes("--hd");
+const ILLU_HD = resolve("content/aubreterre/illustrations-hd");
 
 
 export const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -33,8 +36,8 @@ export function illustration(id: string, prompt: string, format: Format = "large
   const [width, height] = TAILLES[format];
   illustrationsDemandees.set(id, { id, prompt: complet, width, height });
   const cap = legende ? `<figcaption>${md(legende)}</figcaption>` : "";
-  for (const ext of ["jpg", "png", "webp"]) {
-    const p = join(ILLU_DIR, `${id}.${ext}`);
+  for (const p of [...(HD ? [join(ILLU_HD, `${id}.jpg`)] : []), ...["jpg", "png", "webp"].map((ext) => join(ILLU_DIR, `${id}.${ext}`))]) {
+    const ext = p.slice(p.lastIndexOf(".") + 1);
     if (existsSync(p)) {
       const data = readFileSync(p).toString("base64");
       return `<figure class="illu ${format}"><img src="data:image/${ext === "jpg" ? "jpeg" : ext};base64,${data}" alt="">${cap}</figure>`;
