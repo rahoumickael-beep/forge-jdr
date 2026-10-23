@@ -91,6 +91,8 @@ export interface CarteDuMonde {
   texte: string;
   /** Ce que ça change en jeu, en une phrase. */
   effet: string;
+  /** Peinture (nom de fichier dans /cartes/, sans extension). */
+  image?: string;
 }
 
 export interface Canon {

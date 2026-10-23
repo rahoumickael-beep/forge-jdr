@@ -53,7 +53,7 @@ export function tirerCarte(type: TypeDeCarte, genre: GenreId, level: number, see
   if (pioche?.length) {
     const choix = pioche.filter((c) => !deja.includes(`${type}:${c.titre}`));
     const c = rng.pick(choix.length ? choix : pioche);
-    return { id: `${type}:${c.titre}`, type, titre: c.titre, sousTitre: type === "evenement" ? "Événement" : "Objet", texte: c.texte, effet: c.effet };
+    return { id: `${type}:${c.titre}`, type, titre: c.titre, sousTitre: type === "evenement" ? "Événement" : "Objet", texte: c.texte, effet: c.effet, ...(c.image ? { image: `/cartes/${c.image}.webp` } : {}) };
   }
   // Monde sans canon : les rebondissements et récompenses du genre.
   const g = getGenre(genre);

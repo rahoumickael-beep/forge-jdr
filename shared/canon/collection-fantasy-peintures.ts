@@ -15,7 +15,7 @@ export const SUJETS_COLLECTION: Record<string, string> = {
   "clous-tete-carree": "nine hand-forged square-headed iron nails laid in a neat row on a scrap of dark linen, rough black iron, a small iron hammer beside them",
   "sel-benit": "a small stitched linen pouch spilling a pinch of coarse white salt, its neck sealed with a drop of white wax, on dark cloth",
   "cierge-benit": "a tall white beeswax church candle, barely burned, a frozen drip of wax on its side, standing on dark cloth",
-  "ruban-noir": "a worn black silk ribbon tied in a loose bow, lying across dark velvet",
+  "ruban-noir": "a long worn black silk ribbon coiled loosely on dark velvet, its frayed ends spread apart, a soft sheen along the silk",
   "insigne-rotonde": "a small cast lead pilgrim badge showing a closed door beneath a crown, threaded on a leather cord, on dark cloth",
   "pot-de-goudron": "a small earthenware pot of glossy black pine tar with a wooden spatula, tar dripping down its side, on dark cloth",
   "lanterne-bleue": "a small iron hand lantern with glowing pale blue glass panes, its flame lit, standing on dark cloth",
@@ -24,7 +24,7 @@ export const SUJETS_COLLECTION: Record<string, string> = {
   "chevaliere-sel": "a heavy silver signet ring with a hinged bezel opened to show a tiny chamber of white salt, on dark cloth",
   "balance-laiton": "a tiny brass balance-scale pendant on a fine chain, its two little pans tilted, on dark cloth",
   "encre-violette": "a squat glass inkwell full of deep violet ink, a goose quill resting in it, violet stains on the cloth",
-  "clou-saint-brac": "a single ancient square-headed iron nail, thick and pitted, resting on a folded white altar cloth embroidered with gold thread",
+  "clou-saint-brac": "one single ancient square-headed iron nail, thick, black and pitted, lying alone at the center of a folded white altar cloth embroidered with gold thread, close view",
   "relique-ostral": "a fragment of polished black basalt resting in a fold of white linen embroidered with a closed door in gold thread, a faint warm glow on the stone",
   "pleureuse": "a hired mourner woman in a black mourning veil, eyes red from weeping, holding a small hurdy-gurdy against her chest",
   "passeur-noyes": "a weathered peat-bog ferryman with a grey beard and a wide felt hat, holding a long wooden punting staff, black water and reeds behind him",
@@ -32,7 +32,7 @@ export const SUJETS_COLLECTION: Record<string, string> = {
   "saunier-hanse": "a shrewd salt merchant in a fine salt-stained coat and a silver signet ring, weighing coarse white salt on a small brass balance",
   "peseur": "an elderly mage in a dark scholar's gown, a small brass balance pendant on his chest, a thick leather ledger under his arm",
   "mere-gisle": "an old peat-bog wise woman with deep wrinkles and a woollen shawl, holding a clod of dark peat in both hands, a necklace of reed charms",
-  "odile-varlet": "an elegant drowned merchant woman come back from death, pale bluish skin and dark lips, a wry smile, a rich water-stained silk gown, a black ribbon at her left wrist",
+  "odile-varlet": "an elegant drowned merchant woman returned from death, pale grey-blue skin, bluish lips, damp dark hair clinging to her cheeks, a wry smile, a rich water-stained green silk gown, a black silk ribbon tied at her left wrist",
   "faveur-pelerins": "a muddy pilgrim camp at dusk, hundreds of small campfires stretching to the horizon, pilgrims with walking staffs and candles",
   "faveur-confrerie": "the inside of a nailers' guild lodge, rough oak tables, hammers and bundles of iron nails hanging on the wall, men with an iron nail through the left earlobe sharing bread",
   "faveur-veilleuses": "a healer of a lay sisterhood in a plain grey dress tending a sick man in a cottage, a lantern with blue glass glowing on the table",
@@ -47,7 +47,7 @@ export const SUJETS_COLLECTION: Record<string, string> = {
 /** Cartes d'événement de la pioche du MJ (les objets de la pioche reprennent les peintures de la collection). */
 export const LUMIERE_EVENEMENTS = "pale overcast light fading to dusk, slate blue shadows, a few warm lantern glows";
 export const SUJETS_EVENEMENTS: Record<string, string> = {
-  "evenement-glas": "a small stone village church at nightfall, its bell swinging alone in the open belfry, frightened villagers in nightshirts holding candles at their doors and looking up",
+  "evenement-glas": "a small stone village bell tower with a slate roof at nightfall, its bronze bell swinging alone in the open belfry, frightened villagers in nightshirts holding candles at their doors and looking up",
   "evenement-file-des-leves": "a long line of pale dead villagers in burial shrouds walking one behind another across a muddy cart track through heather, all at the same pace, two travelers stepping aside",
   "evenement-barrage": "a heavy iron chain stretched across a narrow stone bridge, two guards in long white cloaks beside a wooden lectern with an open register, one searching a traveler's sack",
   "evenement-recruteurs": "a sergeant in a red cloak lining up village men in front of a timber barn, mothers watching from small cottage windows, a muddy farmyard",
