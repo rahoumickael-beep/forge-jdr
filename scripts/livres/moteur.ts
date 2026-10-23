@@ -163,9 +163,14 @@ export async function fabriquer(livre: Livre, out: string) {
   writeFileSync(chemin, await final.save());
   await browser.close();
 
-  for (const n of livre.apercus ?? []) {
-    if (n > total) continue;
-    execFileSync("pdftoppm", ["-f", String(n), "-l", String(n), "-r", "70", "-png", "-singlefile", chemin, join(out, `${livre.fichier}-p${n}`)]);
+  // Aperçus PNG : seulement si pdftoppm (poppler) est installé, ce qui n'est pas le cas par défaut sous Windows.
+  try {
+    for (const n of livre.apercus ?? []) {
+      if (n > total) continue;
+      execFileSync("pdftoppm", ["-f", String(n), "-l", String(n), "-r", "70", "-png", "-singlefile", chemin, join(out, `${livre.fichier}-p${n}`)]);
+    }
+  } catch {
+    console.log(`${livre.titre} : aperçus PNG sautés (pdftoppm introuvable)`);
   }
   console.log(`${livre.titre} : ${total} pages → ${chemin}`);
   return { chemin, total, debuts };
