@@ -1,0 +1,61 @@
+{
+  // Essai de Forge JdR depuis VS Code : Terminal > Exécuter la tâche…
+  // « Essai complet » installe, lance les tests, fabrique les livres, les ouvre, puis démarre la table.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Installer",
+      "type": "shell",
+      "command": "npm install && npx playwright install chromium",
+      "problemMatcher": []
+    },
+    {
+      "label": "2. Tests",
+      "type": "shell",
+      "command": "npm run typecheck && npm test",
+      "group": "test",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "3. Fabriquer les livres",
+      "type": "shell",
+      "command": "npm run livres",
+      "problemMatcher": []
+    },
+    {
+      "label": "4. Ouvrir les livres",
+      "type": "shell",
+      "command": "open dist-livre/*.pdf",
+      "windows": { "command": "Get-ChildItem dist-livre\\*.pdf | ForEach-Object { Invoke-Item $_.FullName }" },
+      "linux": { "command": "xdg-open dist-livre/livre-des-joueurs-aubreterre.pdf" },
+      "problemMatcher": []
+    },
+    {
+      "label": "5. Démarrer la table",
+      "detail": "Serveur sur 3001, table sur http://localhost:5173 (ouvre une fenêtre privée pour jouer un joueur)",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": { "regexp": "^__jamais__$" },
+        "background": { "activeBegin": "serveur|client", "activeEnd": "Local:.*5173" }
+      }
+    },
+    {
+      "label": "6. Ouvrir la table dans le navigateur",
+      "type": "shell",
+      "command": "open http://localhost:5173",
+      "windows": { "command": "Start-Process http://localhost:5173" },
+      "linux": { "command": "xdg-open http://localhost:5173" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Essai complet",
+      "dependsOrder": "sequence",
+      "dependsOn": ["1. Installer", "2. Tests", "3. Fabriquer les livres", "4. Ouvrir les livres", "5. Démarrer la table", "6. Ouvrir la table dans le navigateur"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -12,6 +12,7 @@ export function CharacterSheet({ c, editable, onPlace, onRemove }: { c: Characte
   const roll = (stat: string) => send("dice:roll", { expr: `1d20${modifier(c.stats[stat]) >= 0 ? "+" : ""}${modifier(c.stats[stat])}`, label: `${c.name} — ${stat}` });
   return (
     <article className="paper sheet">
+      {c.portrait && <img className="sheet-portrait" src={c.portrait} alt={`Portrait de ${c.name}`} />}
       <h4>{c.name}</h4>
       <div className="sub">
         {c.origin} · {c.archetype} · niveau {c.level}
@@ -88,31 +89,80 @@ export function EncounterBlock({ e, onPlace }: { e: Encounter; onPlace?: () => v
   );
 }
 
-export function ScenarioSheet({ s, onPlaceEncounter, actions }: { s: Scenario; onPlaceEncounter?: (e: Encounter) => void; actions?: React.ReactNode }) {
+const SOURCE_LABELS: Record<Scenario["source"], string> = { ia: "écrit par l'IA", aleatoire: "tiré au hasard", bibliotheque: "écrit à la main" };
+const MAP_KIND_LABELS = { donjon: "donjon", caverne: "cavernes", nature: "extérieur", village: "village" } as const;
+
+function Paragraphs({ text }: { text: string }) {
+  return <>{text.split(/\n\s*\n/).map((p, i) => <p key={i}>{p.trim()}</p>)}</>;
+}
+
+function ReadAloud({ title, text, onRead }: { title?: string; text: string; onRead?: (text: string) => void }) {
+  return (
+    <div className="read-aloud">
+      <div className="read-aloud-head">
+        <span>À lire{title ? ` · ${title}` : ""}</span>
+        {onRead && <button className="btn small" onClick={() => onRead(text)} title="Envoyer ce texte dans le journal de la table">Dans le journal</button>}
+      </div>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+export function ScenarioSheet({ s, onPlaceEncounter, onReadAloud, actions }: { s: Scenario; onPlaceEncounter?: (e: Encounter) => void; onReadAloud?: (text: string) => void; actions?: React.ReactNode }) {
   const [open, setOpen] = useState(false);
+  const readFor = (act: number) => (s.readAloud ?? []).filter((r) => r.act === act);
   return (
     <article className="paper sheet">
       <h4>{s.title}</h4>
       <div className="sub">
-        {getGenre(s.genre).label} · {TONS.find((t) => t.id === s.ton)?.label} · niveau {s.level} · {s.players} joueurs · {s.source === "ia" ? "écrit par l'IA" : "tiré au hasard"}
+        {getGenre(s.genre).label} · {TONS.find((t) => t.id === s.ton)?.label} · niveau {s.level} · {s.players} joueurs · {SOURCE_LABELS[s.source] ?? "tiré au hasard"}
       </div>
       <div className="prose small">
         <p><b>Accroche.</b> {s.hook}</p>
         <p>{s.synopsis}</p>
+        {s.mapHint && (
+          <p className="muted">Carte proposée : {s.mapHint.name} ({MAP_KIND_LABELS[s.mapHint.kind]}, tirage n°{s.mapHint.seed}).</p>
+        )}
         {open && (
           <>
+            {s.gmNotes && (
+              <div className="gm-notes">
+                <h5>Avant de jouer</h5>
+                <Paragraphs text={s.gmNotes} />
+              </div>
+            )}
+            {readFor(0).map((r, i) => <ReadAloud key={i} title={r.title} text={r.text} onRead={onReadAloud} />)}
             <h5>Déroulé</h5>
             {s.acts.map((a, i) => (
               <div className="act" key={i}>
-                <b>{a.title}</b> <span className="muted">— {a.location}</span>
+                <b>{s.readAloud || s.choices ? `Acte ${i + 1}. ` : ""}{a.title}</b> <span className="muted">— {a.location}</span>
                 <p>{a.summary}</p>
+                {readFor(i + 1).map((r, k) => <ReadAloud key={k} title={r.title} text={r.text} onRead={onReadAloud} />)}
               </div>
             ))}
+            {s.choices && s.choices.length > 0 && (
+              <>
+                <h5>Les choix</h5>
+                {s.choices.map((c, i) => (
+                  <div className="choice" key={i}>
+                    <b>{c.title}</b> <span className="muted">— acte {c.act}</span>
+                    <ul>
+                      {c.options.map((o, k) => (
+                        <li key={k}><b>{o.label}.</b> {o.consequence}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </>
+            )}
             <h5>Le méchant : {s.villain.name}</h5>
             <p>{s.villain.description} Il veut {s.villain.motivation.replace(/^\w/, (m) => m.toLowerCase())}.</p>
             <h5>Personnages non joueurs</h5>
             {s.npcs.map((n, i) => (
-              <p key={i}><b>{n.name}</b> ({n.role}) : {n.secret}</p>
+              <p key={i}>
+                <b>{n.name}</b> ({n.role}) : {n.secret}
+                {n.voice && <span className="npc-voice"> Voix : {n.voice}</span>}
+              </p>
             ))}
             <h5>Rencontres</h5>
             {s.encounters.map((e, i) => (

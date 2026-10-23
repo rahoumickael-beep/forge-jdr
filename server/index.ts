@@ -1,4 +1,6 @@
 // Serveur : sert le client, gère les parties en temps réel (Socket.IO) et l'IA Claude optionnelle.
+import { autoCombat, endCombat, monstersSeen, startCombat, type Combat } from "../shared/combat";
+import { DEATH_RULES } from "../shared/rules";
 import { createServer } from "node:http";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -8,7 +10,7 @@ import { rollDice } from "../shared/dice";
 import { uid } from "../shared/random";
 import type { Character, GameMap, InitiativeEntry, Player, RoomState, Scenario, Token } from "../shared/types";
 import { claudeAvailable, generateWithClaude } from "./claude";
-import { addPlayer, createRoom, getRoom, loadRooms, log, MAX_PLAYERS, saveSoon, viewFor, type StoredRoom } from "./rooms";
+import { addPlayer, createRoom, getRoom, hideUnseen, loadRooms, log, MAX_PLAYERS, saveSoon, updateExplored, viewFor, type StoredRoom } from "./rooms";
 
 // Charge .env sans dépendance supplémentaire.
 if (existsSync(".env")) {
@@ -53,14 +55,25 @@ type Ack = (res: { ok: boolean; error?: string; [k: string]: unknown }) => void;
 
 /** Envoie à chaque joueur connecté sa propre vue de la partie. */
 async function broadcast(room: StoredRoom) {
+  updateExplored(room);
+  const combat = autoCombat(room.state);
+  if (combat) announce(room, combat);
   saveSoon(room.state.code);
   const sockets = await io.in(room.state.code).fetchSockets();
   for (const s of sockets) {
     const session = s.data.session as Session | undefined;
     if (!session) continue;
     const player = room.state.players.find((p) => p.id === session.player.id);
-    if (player) s.emit("state", viewFor(room, player));
+    if (player) s.emit("state", hideUnseen(viewFor(room, player)));
   }
+}
+
+/** Écrit le début du combat dans le journal ; le MJ reçoit l'ordre complet, les joueurs ce qu'ils voient. */
+function announce(room: StoredRoom, combat: Combat) {
+  const st = room.state;
+  const names = combat.monsterIds.map((id) => st.tokens.find((t) => t.id === id)?.name).filter(Boolean);
+  log(room, { from: "MJ", text: combat.cause === "auto" ? `Combat ! ${names.join(", ")} surgit devant le groupe.` : "Le combat commence.", kind: "narration" });
+  log(room, { from: "Système", text: `Initiative : ${st.initiative.entries.map((e) => `${e.name} (${e.value})`).join(", ")}.`, kind: "systeme", secret: true });
 }
 
 function attach(socket: Socket, room: StoredRoom, player: Player) {
@@ -144,7 +157,7 @@ io.on("connection", (socket) => {
     if (!s.player.isGM) {
       if (existing && existing.ownerId !== s.player.id) return ack?.({ ok: false, error: "Ce pion n'est pas à toi." });
       if (!existing && st.tokens.filter((x) => x.ownerId === s.player.id).length >= 2) return ack?.({ ok: false, error: "Deux pions maximum par joueur." });
-      t = { ...t, ownerId: s.player.id, kind: "joueur", hidden: false };
+      t = { ...t, ownerId: s.player.id, kind: "joueur", hidden: false, vision: existing?.vision };
     }
     const clean: Token = { ...t, id: t.id || uid("t_"), name: String(t.name || "Pion").slice(0, 40) };
     if (existing) Object.assign(existing, clean);
@@ -248,11 +261,27 @@ io.on("connection", (socket) => {
     }
     st.initiative.turn = turn;
   });
+  gm<{ tokenIds?: string[] }>("combat:start", (st, p, room) => {
+    const chosen = (p?.tokenIds ?? []).map((id) => st.tokens.find((t) => t.id === id && t.kind === "monstre")).filter((t): t is Token => !!t);
+    const triggers = chosen.length ? chosen : monstersSeen(st).length ? monstersSeen(st) : st.tokens.filter((t) => t.kind === "monstre" && !t.hidden);
+    if (!triggers.length) throw new Error("Aucun monstre sur la carte.");
+    announce(room, startCombat(st, triggers, "mj"));
+  });
+  gm<void>("combat:end", (st, _p, room) => {
+    endCombat(st);
+    log(room, { from: "MJ", text: "Fin du combat.", kind: "narration" });
+  });
   gm<{ title: string; text: string }>("handout:add", (st, p) => st.handouts.unshift({ id: uid("h_"), title: p.title.slice(0, 120), text: p.text.slice(0, 8000), at: Date.now() }));
   gm<string>("handout:remove", (st, id) => (st.handouts = st.handouts.filter((h) => h.id !== id)));
   gm<Scenario>("scenario:add", (st, sc) => st.scenarios.unshift(sc));
   gm<string>("scenario:remove", (st, id) => (st.scenarios = st.scenarios.filter((x) => x.id !== id)));
-  gm<Partial<Pick<RoomState, "name" | "genre" | "ton" | "level" | "movementLocked">>>("settings:set", (st, p) => {
+  gm<Partial<Pick<RoomState, "name" | "genre" | "ton" | "level" | "movementLocked" | "visionMode" | "sharedVision" | "mapKnown" | "abilityMethod" | "deathRule" | "autoCombat">>>("settings:set", (st, p) => {
+    if (typeof p.autoCombat === "boolean") st.autoCombat = p.autoCombat;
+    if (p.abilityMethod === "points" || p.abilityMethod === "des" || p.abilityMethod === "fixe") st.abilityMethod = p.abilityMethod;
+    if (typeof p.deathRule === "string" && DEATH_RULES.some((d) => d.id === p.deathRule)) st.deathRule = p.deathRule;
+    if (p.visionMode === "dynamique" || p.visionMode === "manuel") st.visionMode = p.visionMode;
+    if (typeof p.sharedVision === "boolean") st.sharedVision = p.sharedVision;
+    if (typeof p.mapKnown === "boolean") st.mapKnown = p.mapKnown;
     if (typeof p.name === "string") st.name = p.name.slice(0, 80);
     if (p.genre) st.genre = p.genre;
     if (p.ton) st.ton = p.ton;

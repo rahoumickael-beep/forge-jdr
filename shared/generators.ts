@@ -1,5 +1,6 @@
 // Générateurs aléatoires (sans IA) : personnages, PNJ, rencontres, scénarios, butin.
 // Règles inspirées de D&D : 6 caractéristiques, modificateur = (valeur - 10) / 2, CA, PV, initiative au d20.
+import { creaturesFor, toEncounterEnemy } from "./bestiary";
 import { getGenre, levelTier } from "./genres";
 import { Rng, uid } from "./random";
 import type { Character, Encounter, GenreId, Scenario, Ton } from "./types";
@@ -98,6 +99,19 @@ function enemyProfile(index: number, total: number, level: number) {
   return { hp, ac, attack: `+${atk}, ${dmgDie}+${Math.ceil(ratio * 4)}` };
 }
 
+/** Lieu typique de chaque région d'Aubreterre, pour qu'une rencontre se passe là où vit la créature. */
+const REGION_PLACES: Record<string, string> = {
+  "Le Couronnement": "les faubourgs d'Aube-Close",
+  "Les Marches de Fer": "un fort du Mur des Neuf Cents",
+  "Le Val Cierge": "une abbaye du Val Cierge",
+  "Les Noyes": "les tourbières des Noyes",
+  "La Côte des Sels": "les salines de Port-Lagune",
+  "Les Monts Ossiers": "un ossuaire muré des Monts Ossiers",
+  "La Brune": "une clairière ronde de la Brune",
+  "Le Verre-Rouge": "une oasis du Verre-Rouge",
+  "Le Dessous": "une fissure sous la Rotonde",
+};
+
 export function generateEncounter(genre: GenreId, level: number, players = 4, seed?: number): Encounter {
   const rng = new Rng(seed);
   const g = getGenre(genre);
@@ -109,6 +123,27 @@ export function generateEncounter(genre: GenreId, level: number, players = 4, se
   const difficulty = rng.pick(["Facile", "Moyenne", "Difficile", "Mortelle"]);
   const diffFactor = { Facile: 0.6, Moyenne: 1, Difficile: 1.4, Mortelle: 1.9 }[difficulty]!;
   const kinds = rng.int(1, 2);
+  // Genre avec un bestiaire : de vraies créatures, au nombre fixé par un budget de PX façon Guide du maître.
+  const beasts = creaturesFor(genre).filter((c) => c.cr <= Math.max(0.5, level) && c.cr >= Math.min(level / 4, 2) && !c.legendary);
+  if (beasts.length) {
+    const budget = players * 50 * level * diffFactor * (level < 3 ? 1 : 1.5);
+    // Deux créatures d'une même région (ou de partout), et le lieu qui va avec.
+    const first = rng.pick(beasts);
+    const mates = beasts.filter((c) => c !== first && (c.region === first.region || c.region === "Partout" || first.region === "Partout"));
+    const picked = kinds > 1 && mates.length ? [first, rng.pick(mates)] : [first];
+    const region = picked.find((c) => c.region !== "Partout")?.region;
+    const enemies = picked.map((c) => {
+      const count = Math.max(1, Math.min(8, Math.round(budget / picked.length / (c.xp * (kinds > 1 ? 2 : 1.5)))));
+      return { ...toEncounterEnemy(c, count, level), creatureId: c.id };
+    });
+    const place = (region && REGION_PLACES[region]) || rng.pick(g.places);
+    return {
+      title: `${enemies.map((e) => e.name).join(" et ")} — ${place}`,
+      description: `Près de ${place}. ${rng.pick(["Ils attendent sur la route que les héros arrivent.", "Le terrain est mauvais : boue, eau ou éboulis.", "Un innocent est pris entre deux feux.", "Quelqu'un, parmi eux, veut d'abord parler.", "La nuit tombe, et la lumière manque."])}`,
+      enemies,
+      difficulty,
+    };
+  }
   const enemies = Array.from({ length: kinds }, () => {
     const idx = rng.int(lo, hi);
     const p = enemyProfile(idx, n, level);

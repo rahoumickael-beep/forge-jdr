@@ -1,7 +1,35 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { getGenre, type MapTheme } from "../../../shared/genres";
-import { T, type GameMap, type RoomView, type Token } from "../../../shared/types";
-import { send, socket, useStore } from "../store";
+import { reachable } from "../../../shared/combat";
+import { charte } from "../../../shared/charte";
+import { DEFAULT_VISION } from "../../../shared/vision";
+import type { RoomView, Token } from "../../../shared/types";
+import { mapImage } from "../mapImageCache";
+import {
+  Lighting,
+  buildFog,
+  drawActiveHalo,
+  drawAmbient,
+  drawBackdrop,
+  drawFog,
+  drawMeasure,
+  drawPings,
+  drawReach,
+  drawRoomLabels,
+  drawSelection,
+  drawPanelFrame,
+  drawToken,
+  drawGrid,
+  drawVignette,
+  panelMargin,
+  passePartout,
+  fogDensity,
+  fogLeaks,
+  labelBlocker,
+  reachLoops,
+  seedOf,
+} from "../mapTokens";
+import { send, socket, useStore, type Ping } from "../store";
+import { INTRO_MS } from "./CombatIntro";
 
 export type MapTool = "deplacer" | "reveler" | "cacher";
 
@@ -13,132 +41,13 @@ interface Props {
   onSelect: (id: string | null) => void;
 }
 
-const BASE = 32; // taille d'une case dans l'image pré-rendue
 const METERS_PER_CELL = 1.5;
+const reducedMotion = typeof matchMedia !== "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/** Petit hachage déterministe : chaque case garde le même grain d'un rendu à l'autre. */
-function hash(x: number, y: number, seed: number) {
-  let h = (x * 374761393 + y * 668265263 + seed * 2246822519) | 0;
-  h = Math.imul(h ^ (h >>> 13), 1274126177);
-  return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
-}
-
-function shade(hex: string, amount: number) {
-  const n = parseInt(hex.slice(1), 16);
-  const c = (v: number) => Math.max(0, Math.min(255, Math.round(v + amount * 255)));
-  return `rgb(${c(n >> 16)},${c((n >> 8) & 255)},${c(n & 255)})`;
-}
-
-/** Dessine la carte une fois, avec son grain, dans une image hors écran. */
-function renderMap(map: GameMap, theme: MapTheme): HTMLCanvasElement {
-  const cv = document.createElement("canvas");
-  cv.width = map.width * BASE;
-  cv.height = map.height * BASE;
-  const g = cv.getContext("2d")!;
-  g.fillStyle = theme.background;
-  g.fillRect(0, 0, cv.width, cv.height);
-  for (let y = 0; y < map.height; y++)
-    for (let x = 0; x < map.width; x++) {
-      const t = map.tiles[y * map.width + x];
-      const r = hash(x, y, map.seed);
-      const px = x * BASE;
-      const py = y * BASE;
-      const fill = (color: string) => {
-        g.fillStyle = shade(color, (r - 0.5) * 0.08);
-        g.fillRect(px, py, BASE, BASE);
-      };
-      switch (t) {
-        case T.vide:
-          // Roche brute : quelques traits de hachure, comme sur une carte dessinée à la main
-          if (r > 0.55) {
-            g.strokeStyle = shade(theme.background, 0.06);
-            g.lineWidth = 1;
-            g.beginPath();
-            g.moveTo(px + 4, py + BASE - 6);
-            g.lineTo(px + BASE - 6, py + 4);
-            g.stroke();
-          }
-          break;
-        case T.sol:
-          fill(theme.floor);
-          if (r < 0.12) {
-            g.fillStyle = shade(theme.floor, -0.08);
-            g.fillRect(px + r * 200 % 24, py + r * 300 % 24, 3, 2);
-          }
-          break;
-        case T.route:
-          fill(theme.road);
-          break;
-        case T.mur: {
-          fill(theme.wall);
-          g.strokeStyle = shade(theme.wall, -0.12);
-          g.lineWidth = 1.2;
-          for (let i = -BASE; i < BASE; i += 7) {
-            g.beginPath();
-            g.moveTo(px + i, py + BASE);
-            g.lineTo(px + i + BASE, py);
-            g.stroke();
-          }
-          break;
-        }
-        case T.eau: {
-          fill(theme.water);
-          g.strokeStyle = shade(theme.water, 0.12);
-          g.lineWidth = 1.2;
-          g.beginPath();
-          const wy = py + 10 + r * 12;
-          g.moveTo(px + 5, wy);
-          g.quadraticCurveTo(px + 11, wy - 4, px + 16, wy);
-          g.quadraticCurveTo(px + 21, wy + 4, px + 27, wy);
-          g.stroke();
-          break;
-        }
-        case T.vegetation: {
-          fill(theme.floor);
-          g.fillStyle = shade(theme.vegetation, (r - 0.5) * 0.15);
-          const n = 1 + Math.floor(r * 3);
-          for (let i = 0; i < n; i++) {
-            const cx = px + 8 + hash(x, y, i + 7) * 16;
-            const cy = py + 8 + hash(y, x, i + 3) * 16;
-            g.beginPath();
-            g.arc(cx, cy, 6 + r * 4, 0, Math.PI * 2);
-            g.fill();
-          }
-          break;
-        }
-        case T.porte:
-          fill(theme.road);
-          g.fillStyle = theme.door;
-          g.fillRect(px + 6, py + 6, BASE - 12, BASE - 12);
-          g.strokeStyle = shade(theme.door, -0.2);
-          g.strokeRect(px + 6.5, py + 6.5, BASE - 13, BASE - 13);
-          break;
-      }
-    }
-  // Quadrillage
-  g.strokeStyle = theme.grid;
-  g.lineWidth = 1;
-  g.beginPath();
-  for (let x = 0; x <= map.width; x++) {
-    g.moveTo(x * BASE + 0.5, 0);
-    g.lineTo(x * BASE + 0.5, cv.height);
-  }
-  for (let y = 0; y <= map.height; y++) {
-    g.moveTo(0, y * BASE + 0.5);
-    g.lineTo(cv.width, y * BASE + 0.5);
-  }
-  g.stroke();
-  return cv;
-}
-
-function initials(name: string) {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0]?.toUpperCase())
-    .join("");
-}
+type Drag =
+  | { type: "pan"; sx: number; sy: number; ox: number; oy: number }
+  | { type: "token"; id: string; fromX: number; fromY: number; x: number; y: number }
+  | { type: "fog"; cells: Set<number> };
 
 export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   const { pings } = useStore();
@@ -146,38 +55,124 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const isGM = room.you.isGM;
   const map = room.map;
-  const theme = getGenre(room.genre).theme;
-  const image = useMemo(() => (map ? renderMap(map, theme) : null), [map, theme]);
+  // Même cache que l'aperçu du MJ : une carte tirée puis posée n'est pas encrée deux fois.
+  const image = useMemo(() => (map ? mapImage(map, room.genre) : null), [map, room.genre]);
+  // Lumière : torches des salles calculées une fois par carte, celles des héros à chaque case atteinte.
+  const lighting = useMemo(() => (map ? new Lighting(map) : null), [map]);
 
-  // Vue : décalage en pixels écran et taille d'une case.
   const view = useRef({ ox: 0, oy: 0, cell: 28 });
-  const drag = useRef<
-    | { type: "pan"; sx: number; sy: number; ox: number; oy: number }
-    | { type: "token"; id: string; fromX: number; fromY: number; x: number; y: number }
-    | { type: "fog"; cells: Set<number> }
-    | null
-  >(null);
+  const drag = useRef<Drag | null>(null);
   const [localFog, setLocalFog] = useState<{ cells: Set<number>; hidden: boolean } | null>(null);
-  const [, force] = useState(0);
-  const redraw = () => force((n) => n + 1);
+  // Les dernières valeurs, lues par la boucle d'animation sans la redémarrer.
+  // Combat : pion dont c'est le tour, et cases qu'il peut atteindre (montrées au MJ et à son joueur).
+  const active = room.combat ? room.tokens.find((t) => t.id === room.initiative.entries[room.initiative.turn]?.tokenId) ?? null : null;
+  const reach = useMemo(() => {
+    if (!map || !active || !(isGM || active.ownerId === room.you.id)) return null;
+    const speed = active.speed ?? room.characters.find((c) => c.id === active.characterId)?.speed ?? 6;
+    return reachable(map, active, speed);
+  }, [map, active?.id, active?.x, active?.y, active?.speed, isGM, room.you.id, room.characters]);
+  const accent = charte(room.genre).palette.or;
+  const reachShape = useMemo(() => (map && reach ? reachLoops(map, reach) : null), [map, reach]);
+  const live = useRef({ room, pings, selectedId, localFog, isGM, active, reachShape, accent, lighting });
+  live.current = { room, pings, selectedId, localFog, isGM, active, reachShape, accent, lighting };
 
-  // Cadrer la carte quand elle change.
+  // Pions qui voient pour ce joueur (comme viewFor côté serveur) : le bord de sa vue suit leur polygone de vue.
+  const eyesKey =
+    !isGM && room.visionMode === "dynamique"
+      ? room.tokens
+          .filter((t) => t.kind === "joueur" && (room.sharedVision || t.ownerId === room.you.id))
+          .map((t) => `${Math.round(t.x)},${Math.round(t.y)},${Math.max(1, Math.min(40, t.vision ?? DEFAULT_VISION))}`)
+          .join(";")
+      : "";
+  // Brouillard d'encre : texture refaite seulement quand ce qui est caché change.
+  const fogMask = useMemo(() => {
+    if (!map || !room.fogEnabled || !room.fog) return null;
+    const density = fogDensity(map.width * map.height, {
+      fog: room.fog,
+      visible: room.visible,
+      dynamic: room.visionMode === "dynamique",
+      mapKnown: room.mapKnown,
+      isGM,
+      override: localFog,
+    });
+    const eyes = eyesKey ? eyesKey.split(";").map((e) => {
+      const [x, y, vision] = e.split(",").map(Number);
+      return { x, y, vision };
+    }) : [];
+    // Un joueur a toujours du brouillard : hors de la carte, rien n'est exploré.
+    return !isGM || density.some((v) => v > 0) ? buildFog(map, density, eyes) : null;
+  }, [map, room.fog, room.fogEnabled, room.visible, room.visionMode, room.mapKnown, localFog, isGM, eyesKey]);
+  // Contrôle de secret pour scripts/apercu-cartes.mjs : cases inexplorées où la carte transparaît (doit rester vide).
+  (window as unknown as { __forgeFogLeaks: (opaque?: number) => number[] | null }).__forgeFogLeaks = (opaque) => {
+    if (!map || !fogMask || isGM) return null;
+    const density = fogDensity(map.width * map.height, { fog: room.fog ?? [], visible: room.visible, dynamic: room.visionMode === "dynamique", mapKnown: room.mapKnown, isGM, override: localFog });
+    return fogLeaks(fogMask, density, map.width, map.height, opaque);
+  };
+  const fogRef = useRef(fogMask);
+  fogRef.current = fogMask;
+
+  // Cadrer la carte quand elle change. Le MJ la voit entière ; un joueur arrive sur ce que voit son pion, assez près pour le lire,
+  // au lieu d'une tache claire perdue dans le brouillard.
+  // Les premières secondes sur une carte, tant que le joueur n'a ni glissé ni zoomé, la vue suit son pion (le serveur le pose,
+  // puis la vue arrive) : on recadre doucement à chaque nouvelle position ou vue.
+  const mine = isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur") ?? null;
+  const framed = useRef("");
+  const autoFrame = useRef(0);
+  // Le joueur a glissé ou zoomé lui-même : on ne recadre plus sa vue (même si la fenêtre change de taille).
+  const userMoved = useRef(false);
+  const visibleKey = room.visible?.length ?? -1;
+  // Nombre de cases connues du joueur : quand le MJ cache tout, ou qu'une salle s'ouvre, la vue d'arrivée se recalcule.
+  const knownKey = !isGM && room.fogEnabled && room.fog ? room.fog.reduce((n, h) => n + (h ? 0 : 1), 0) : -1;
   useEffect(() => {
     const el = wrapRef.current;
     if (!el || !map) return;
-    const cell = Math.max(10, Math.min(48, Math.floor(Math.min(el.clientWidth / map.width, el.clientHeight / map.height))));
-    view.current = { cell, ox: (el.clientWidth - map.width * cell) / 2, oy: (el.clientHeight - map.height * cell) / 2 };
-    redraw();
-  }, [map?.seed, map?.width, map?.height]);
+    const W = el.clientWidth;
+    const H = el.clientHeight;
+    if (!W || !H) return;
+    if (frameIfNew(W, H)) return;
+    if (!mine || performance.now() > autoFrame.current || cam.current) return;
+    cam.current = { from: { ...view.current }, to: arrivalView(W, H, map.width, map.height, mine, seenBy(room)), start: performance.now(), dur: reducedMotion ? 1 : 450 };
+  }, [map?.kind, map?.seed, map?.width, map?.height, map?.name, mine?.id, mine?.x, mine?.y, visibleKey, knownKey]);
 
-  // Redimensionnement
+  /** Première vue d'une carte (ou d'un nouveau pion) : vue d'arrivée du joueur, carte entière pour le MJ. Vrai si on a cadré. */
+  function frameIfNew(W: number, H: number) {
+    const { room } = live.current;
+    const map = room.map;
+    if (!map) return false;
+    const me = room.you.isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur") ?? null;
+    const tag = `${map.kind}:${map.seed}:${map.width}:${map.height}:${map.name}:${me?.id ?? ""}`;
+    if (framed.current === tag) return false;
+    framed.current = tag;
+    userMoved.current = false;
+    autoFrame.current = me ? performance.now() + 8000 : 0;
+    view.current = me ? arrivalView(W, H, map.width, map.height, me, seenBy(room)) : fitView(W, H, map.width, map.height);
+    return true;
+  }
+
+  // Caméra : en combat, elle plonge sur la zone du combat (pendant que le titre de l'animation s'affiche),
+  // puis revient sur toute la carte à la fin.
+  const cam = useRef<{ from: typeof view.current; to: typeof view.current; start: number; dur: number } | null>(null);
+  const combatId = room.combat?.id ?? null;
+  const prevCombat = useRef<string | null>(combatId);
   useEffect(() => {
     const el = wrapRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(redraw);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
+    if (!el || !map || prevCombat.current === combatId) return;
+    const fresh = !!room.combat && Date.now() - room.combat.startedAt < 15000;
+    prevCombat.current = combatId;
+    const W = el.clientWidth;
+    const H = el.clientHeight;
+    let to: typeof view.current;
+    if (room.combat) {
+      const f = room.combat.focus;
+      const cell = Math.max(10, Math.min(96, Math.min(W / f.w, H / f.h) * 0.94));
+      to = { cell, ox: W / 2 - (f.x + f.w / 2) * cell, oy: H / 2 - (f.y + f.h / 2) * cell };
+    } else {
+      const me = live.current.isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur");
+      to = me ? arrivalView(W, H, map.width, map.height, me, seenBy(room)) : fitView(W, H, map.width, map.height);
+    }
+    const delay = room.combat && fresh ? INTRO_MS * 0.5 : 0;
+    cam.current = { from: { ...view.current }, to, start: performance.now() + delay, dur: reducedMotion ? 1 : 1100 };
+  }, [combatId, map]);
 
   const toCell = (clientX: number, clientY: number) => {
     const rect = canvasRef.current!.getBoundingClientRect();
@@ -206,6 +201,8 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
 
   function onPointerDown(e: React.PointerEvent) {
     canvasRef.current!.setPointerCapture(e.pointerId);
+    autoFrame.current = 0; // le joueur prend la main : la vue ne le suit plus
+    userMoved.current = true;
     const v = view.current;
     const { x, y } = toCell(e.clientX, e.clientY);
     if (e.button === 1 || e.button === 2) {
@@ -235,14 +232,10 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     if (d.type === "pan") {
       view.current.ox = d.ox + e.clientX - d.sx;
       view.current.oy = d.oy + e.clientY - d.sy;
-      redraw();
     } else if (d.type === "token") {
       const { x, y } = toCell(e.clientX, e.clientY);
-      if (x !== d.x || y !== d.y) {
-        d.x = x;
-        d.y = y;
-        redraw();
-      }
+      d.x = x;
+      d.y = y;
     } else if (d.type === "fog") {
       const { x, y } = toCell(e.clientX, e.clientY);
       paintFog(x, y, d.cells);
@@ -257,7 +250,15 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     } else if (d?.type === "fog" && d.cells.size) {
       void send("fog:paint", { cells: [...d.cells], hidden: tool === "cacher" }).then(() => setLocalFog(null));
     }
-    redraw();
+  }
+
+  function zoomAt(px: number, py: number, factor: number) {
+    autoFrame.current = 0;
+    userMoved.current = true;
+    const v = view.current;
+    const cell = Math.max(6, Math.min(110, v.cell * factor));
+    const k = cell / v.cell;
+    view.current = { cell, ox: px - (px - v.ox) * k, oy: py - (py - v.oy) * k };
   }
 
   function onWheel(e: React.WheelEvent) {
@@ -265,20 +266,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     zoomAt(e.clientX - rect.left, e.clientY - rect.top, e.deltaY < 0 ? 1.12 : 1 / 1.12);
   }
 
-  function zoomAt(px: number, py: number, factor: number) {
-    const v = view.current;
-    const cell = Math.max(6, Math.min(96, v.cell * factor));
-    const k = cell / v.cell;
-    view.current = { cell, ox: px - (px - v.ox) * k, oy: py - (py - v.oy) * k };
-    redraw();
-  }
-
-  function onDoubleClick(e: React.MouseEvent) {
-    const { x, y } = toCell(e.clientX, e.clientY);
-    socket.emit("map:ping", { x, y });
-  }
-
-  // Raccourcis clavier : flèches pour déplacer le pion sélectionné.
+  // Flèches du clavier : déplacer le pion sélectionné.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (!selectedId || (e.target as HTMLElement)?.closest("input, textarea, select")) return;
@@ -294,147 +282,176 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     return () => window.removeEventListener("keydown", onKey);
   });
 
-  // --- Rendu ---
+  // Position animée des pions : ils glissent vers leur nouvelle case au lieu de sauter.
+  const shown = useRef(new Map<string, { x: number; y: number }>());
+  const lastSize = useRef<{ w: number; h: number } | null>(null);
+
+  // --- Boucle de rendu ---
   useEffect(() => {
+    let raf = 0;
+    let last = 0;
+    const frame = (now: number) => {
+      raf = requestAnimationFrame(frame);
+      if (now - last < (reducedMotion ? 200 : 33)) return; // ~30 images/s suffisent
+      last = now;
+      draw(now / 1000);
+    };
+    raf = requestAnimationFrame(frame);
+    return () => cancelAnimationFrame(raf);
+  }, [image]);
+
+  function draw(time: number) {
     const cv = canvasRef.current;
     const wrap = wrapRef.current;
     if (!cv || !wrap) return;
-    const dpr = window.devicePixelRatio || 1;
+    const { room, pings, selectedId, isGM, active, reachShape, accent, lighting } = live.current;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
     const w = wrap.clientWidth;
     const h = wrap.clientHeight;
-    if (cv.width !== w * dpr || cv.height !== h * dpr) {
-      cv.width = w * dpr;
-      cv.height = h * dpr;
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) {
+      cv.width = Math.round(w * dpr);
+      cv.height = Math.round(h * dpr);
+    }
+    // Fenêtre redimensionnée (téléphone tourné, panneau replié) : une carte qui tenait entière est recadrée,
+    // sinon le point au centre de l'écran y reste.
+    const was = lastSize.current;
+    lastSize.current = { w, h };
+    const m0 = room.map;
+    // La case de BD a pu n'avoir aucune taille quand la carte est arrivée : on cadre à la première image utile.
+    if (w > 0 && h > 0) frameIfNew(w, h);
+    if (was && (was.w !== w || was.h !== h) && m0 && !cam.current && w > 0 && h > 0) {
+      const v = view.current;
+      // Un joueur qui n'a pas touché à la vue garde sa vue d'arrivée, recalculée pour la nouvelle taille (la case de BD a pu
+      // naître petite, pendant la création du personnage).
+      const me = isGM ? null : room.tokens.find((t) => t.ownerId === room.you.id && t.kind === "joueur");
+      if (me && !userMoved.current) view.current = arrivalView(w, h, m0.width, m0.height, me, seenBy(room));
+      else if (v.cell === fitView(was.w, was.h, m0.width, m0.height).cell) view.current = fitView(w, h, m0.width, m0.height);
+      else view.current = { cell: v.cell, ox: v.ox + (w - was.w) / 2, oy: v.oy + (h - was.h) / 2 };
     }
     const g = cv.getContext("2d")!;
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     g.clearRect(0, 0, w, h);
+    // Autour de la carte : passe-partout sombre pour le MJ ; pour un joueur, le brouillard continue au-delà du bord.
+    const fogged = !isGM && room.fogEnabled;
+    drawBackdrop(g, w, h, fogged ? "brouillard" : "passe");
+    const map = room.map;
     if (!map || !image) return;
+    const c = cam.current;
+    if (c && time * 1000 >= c.start) {
+      const k = Math.min(1, (time * 1000 - c.start) / c.dur);
+      const e = k < 0.5 ? 4 * k * k * k : 1 - (-2 * k + 2) ** 3 / 2; // ease in-out
+      // Interpolation en échelle logarithmique : le zoom paraît régulier.
+      const cellNow = Math.exp(Math.log(c.from.cell) + (Math.log(c.to.cell) - Math.log(c.from.cell)) * e);
+      const lerp = (a: number, b: number) => a + (b - a) * e;
+      // On interpole le centre visé, pas les décalages, pour que la zone reste au milieu.
+      const cx0 = (w / 2 - c.from.ox) / c.from.cell;
+      const cy0 = (h / 2 - c.from.oy) / c.from.cell;
+      const cx1 = (w / 2 - c.to.ox) / c.to.cell;
+      const cy1 = (h / 2 - c.to.oy) / c.to.cell;
+      view.current = { cell: cellNow, ox: w / 2 - lerp(cx0, cx1) * cellNow, oy: h / 2 - lerp(cy0, cy1) * cellNow };
+      if (k >= 1) cam.current = null;
+    }
     const { ox, oy, cell } = view.current;
+    const mw = map.width * cell;
+    const mh = map.height * cell;
     (window as unknown as { __forgeTokenScreen: (id: string) => { x: number; y: number } | null }).__forgeTokenScreen = (id) => {
       const t = room.tokens.find((x) => x.id === id);
       return t ? { x: ox + (t.x + 0.5) * cell, y: oy + (t.y + 0.5) * cell } : null;
     };
-    g.imageSmoothingEnabled = cell < BASE;
-    g.drawImage(image, ox, oy, map.width * cell, map.height * cell);
+
+    // Vue du MJ : la carte se prolonge, floue, dans les bandes vides au lieu d'un aplat noir.
+    const filled = !fogged && drawAmbient(g, image, w, h, ox, oy, mw, mh);
+
+    // Ombre de la carte posée sur le passe-partout (vue du MJ) ; pour un joueur, la carte se fond dans le brouillard.
+    if (!fogged && !filled) {
+      g.save();
+      g.shadowColor = "rgba(30,18,6,.55)";
+      g.shadowBlur = 18;
+      g.shadowOffsetX = 4;
+      g.shadowOffsetY = 6;
+      g.fillStyle = "#000";
+      g.fillRect(ox, oy, mw, mh);
+      g.restore();
+    }
+    g.imageSmoothingEnabled = true;
+    g.imageSmoothingQuality = "high";
+    g.drawImage(image, ox, oy, mw, mh);
+    // Grille repassée : en brun dans l'herbe, en sombre multiplié sur les dalles, pour compter les cases.
+    drawGrid(g, map, ox, oy, cell, w, h);
+
+    // Positions animées des pions : ils glissent vers leur nouvelle case au lieu de sauter.
+    const d = drag.current;
+    const pos = new Map<string, { x: number; y: number }>();
+    for (const t of room.tokens) {
+      const target = d?.type === "token" && d.id === t.id ? { x: d.x, y: d.y } : { x: t.x, y: t.y };
+      const prev = shown.current.get(t.id) ?? target;
+      const k = reducedMotion ? 1 : 0.35;
+      const p = { x: prev.x + (target.x - prev.x) * k, y: prev.y + (target.y - prev.y) * k };
+      if (Math.abs(p.x - target.x) < 0.01 && Math.abs(p.y - target.y) < 0.01) Object.assign(p, target);
+      shown.current.set(t.id, p);
+      pos.set(t.id, p);
+    }
+
+    // Lumière : pénombre froide, torches des salles, et la torche de chaque héros qui vacille avec lui.
+    if (lighting) {
+      const torches = room.tokens
+        .filter((t) => t.kind === "joueur" && !t.hidden)
+        .map((t) => ({ ...(pos.get(t.id) ?? t), seed: seedOf(t.id) }));
+      lighting.draw(g, torches, ox, oy, cell, w, h, time, reducedMotion);
+      // Ombres portées à l'encre, à l'opposé de la lumière la plus proche.
+      lighting.drawShadows(
+        g,
+        room.tokens.filter((t) => !(t.hidden && !isGM)).map((t) => ({ ...(pos.get(t.id) ?? t), size: t.size ?? 1, seed: seedOf(t.id) })),
+        torches,
+        ox,
+        oy,
+        cell,
+      );
+    }
 
     // Étiquettes des salles, pour le MJ
-    if (isGM && cell >= 14) {
-      g.font = `${Math.max(10, cell * 0.38)}px "IM Fell English SC", Georgia, serif`;
-      g.textAlign = "center";
-      for (const r of map.rooms) {
-        if (!r.label) continue;
-        const cx = ox + (r.x + r.w / 2) * cell;
-        const cy = oy + (r.y + 0.6) * cell;
-        g.fillStyle = "#0009";
-        g.fillText(r.label, cx + 1, cy + 1);
-        g.fillStyle = "#f3e9cf";
-        g.fillText(r.label, cx, cy);
-      }
+    if (isGM) drawRoomLabels(g, map, ox, oy, cell);
+
+    // Combat : cases atteignables du pion dont c'est le tour, puis auréole sous ce pion.
+    if (reachShape && active) drawReach(g, reachShape, ox, oy, cell, accent, time, reducedMotion);
+    if (active) {
+      const p = pos.get(active.id) ?? active;
+      const s = active.size ?? 1;
+      drawActiveHalo(g, ox + (p.x + s / 2) * cell, oy + (p.y + s / 2) * cell, cell * s, time, accent, reducedMotion);
     }
 
     // Pions
-    const d = drag.current;
     for (const t of room.tokens) {
+      const p = pos.get(t.id) ?? t;
       const s = t.size ?? 1;
-      const tx = d?.type === "token" && d.id === t.id ? d.x : t.x;
-      const ty = d?.type === "token" && d.id === t.id ? d.y : t.y;
-      const cx = ox + (tx + s / 2) * cell;
-      const cy = oy + (ty + s / 2) * cell;
-      const rad = cell * s * 0.42;
-      g.globalAlpha = t.hidden ? 0.45 : 1;
-      g.fillStyle = "#0007";
-      g.beginPath();
-      g.arc(cx + 1.5, cy + 2, rad, 0, Math.PI * 2);
-      g.fill();
-      g.fillStyle = t.color;
-      g.beginPath();
-      g.arc(cx, cy, rad, 0, Math.PI * 2);
-      g.fill();
-      g.lineWidth = Math.max(1.5, cell * 0.07);
-      g.strokeStyle = t.id === selectedId ? "#e9c46a" : t.ownerId === room.you.id ? "#f5f0e4" : "#1a1410";
-      if (t.hidden) g.setLineDash([4, 3]);
-      g.stroke();
-      g.setLineDash([]);
-      if (cell * s >= 16) {
-        g.fillStyle = "#fffaf0";
-        g.font = `700 ${Math.max(9, rad * 0.8)}px "Source Sans 3", system-ui, sans-serif`;
-        g.textAlign = "center";
-        g.textBaseline = "middle";
-        g.fillText(initials(t.name), cx, cy + 1);
-        g.textBaseline = "alphabetic";
-      }
-      if (t.hpMax && cell >= 14) {
-        const bw = cell * s * 0.8;
-        const ratio = Math.max(0, Math.min(1, (t.hp ?? t.hpMax) / t.hpMax));
-        g.fillStyle = "#000a";
-        g.fillRect(cx - bw / 2, cy + rad + 2, bw, 4);
-        g.fillStyle = ratio > 0.5 ? "#5fa052" : ratio > 0.25 ? "#d9a03a" : "#c2412f";
-        g.fillRect(cx - bw / 2, cy + rad + 2, bw * ratio, 4);
-      }
-      if (t.conditions?.length && cell >= 16) {
-        g.fillStyle = "#c2412f";
-        g.beginPath();
-        g.arc(cx + rad * 0.75, cy - rad * 0.75, Math.max(3, cell * 0.1), 0, Math.PI * 2);
-        g.fill();
-      }
-      g.globalAlpha = 1;
+      const cx = ox + (p.x + s / 2) * cell;
+      const cy = oy + (p.y + s / 2) * cell;
+      const sheet = t.characterId ? room.characters.find((c) => c.id === t.characterId) : undefined;
+      if (t.id === selectedId) drawSelection(g, t.id, cx, cy, cell * s, time, reducedMotion, t.color);
+      drawToken(g, t, cx, cy, cell * s, {
+        mine: t.ownerId === room.you.id,
+        dpr,
+        portrait: sheet?.portrait ? portraitImage(sheet.portrait) : null,
+        role: sheet?.archetype,
+      });
     }
 
-    // Brouillard de guerre : opaque pour les joueurs, voilé pour le MJ.
-    if (room.fogEnabled && room.fog) {
-      const fog = room.fog;
-      g.fillStyle = isGM ? "rgba(8,10,12,.55)" : "#0a0d0c";
-      for (let y = 0; y < map.height; y++)
-        for (let x = 0; x < map.width; x++) {
-          const i = y * map.width + x;
-          let hidden = fog[i];
-          if (localFog?.cells.has(i)) hidden = localFog.hidden;
-          if (hidden) g.fillRect(Math.floor(ox + x * cell), Math.floor(oy + y * cell), Math.ceil(cell), Math.ceil(cell));
-        }
-    }
+    // Brouillard : grisaille de l'exploré, encre et fumée de l'inexploré.
+    const fog = fogRef.current;
+    if (fog) drawFog(g, fog, ox, oy, cell, map.width, map.height, w, h);
 
     // Mesure pendant le déplacement d'un pion
     if (d?.type === "token") {
-      const fx = ox + (d.fromX + 0.5) * cell;
-      const fy = oy + (d.fromY + 0.5) * cell;
-      const tx = ox + (d.x + 0.5) * cell;
-      const ty = oy + (d.y + 0.5) * cell;
-      g.strokeStyle = "#e9c46a";
-      g.lineWidth = 2;
-      g.setLineDash([6, 4]);
-      g.beginPath();
-      g.moveTo(fx, fy);
-      g.lineTo(tx, ty);
-      g.stroke();
-      g.setLineDash([]);
-      // Distance façon D&D : une diagonale compte une case.
       const cells = Math.max(Math.abs(d.x - d.fromX), Math.abs(d.y - d.fromY));
       const label = `${cells} case${cells > 1 ? "s" : ""} · ${(cells * METERS_PER_CELL).toLocaleString("fr-FR")} m`;
-      g.font = `600 13px "Source Sans 3", system-ui, sans-serif`;
-      const wLabel = g.measureText(label).width + 12;
-      g.fillStyle = "#14100ce6";
-      g.fillRect(tx + 10, ty - 26, wLabel, 20);
-      g.fillStyle = "#f3e9cf";
-      g.textAlign = "left";
-      g.fillText(label, tx + 16, ty - 11);
+      drawMeasure(g, ox + (d.fromX + 0.5) * cell, oy + (d.fromY + 0.5) * cell, ox + (d.x + 0.5) * cell, oy + (d.y + 0.5) * cell, label, cell, labelBlocker(map, ox, oy, cell));
     }
 
-    // Signaux (double-clic)
-    for (const p of pings) {
-      const cx = ox + (p.x + 0.5) * cell;
-      const cy = oy + (p.y + 0.5) * cell;
-      g.strokeStyle = p.color;
-      g.lineWidth = 3;
-      for (const k of [0.6, 1.1, 1.6]) {
-        g.globalAlpha = 1 - k / 2;
-        g.beginPath();
-        g.arc(cx, cy, cell * k, 0, Math.PI * 2);
-        g.stroke();
-      }
-      g.globalAlpha = 1;
-    }
-  });
+    drawPings(g, pings, ox, oy, cell, time);
+    drawVignette(g, w, h, !!room.combat, map.kind === "nature");
+    // Cadre de case de BD : gouttière de papier, trait d'encre à peine tremblé, vignettage du pourtour.
+    drawPanelFrame(g, w, h, dpr);
+  }
 
   return (
     <div className="map-area" ref={wrapRef}>
@@ -445,7 +462,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
         onWheel={onWheel}
-        onDoubleClick={onDoubleClick}
+        onDoubleClick={(e) => socket.emit("map:ping", toCell(e.clientX, e.clientY))}
         onContextMenu={(e) => e.preventDefault()}
         style={{ cursor: isGM && tool !== "deplacer" ? "crosshair" : "grab" }}
         aria-label="Carte de jeu"
@@ -453,23 +470,107 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       {!map && (
         <div className="map-empty">
           <div>
-            <h2>La table est vide</h2>
+            <h2 className="gilded">La table est vide</h2>
             <p>{isGM ? "Génère une carte dans l'onglet Carte pour commencer." : "Le maître du jeu prépare la carte…"}</p>
           </div>
         </div>
       )}
       {room.scene && <div className="scene-banner">{room.scene}</div>}
       {map && (
-        <div className="map-hint">
-          Glisser : déplacer · Molette : zoom · Double-clic : signaler
-          <button className="btn small ghost" onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 1.25)} aria-label="Zoomer">
-            +
-          </button>
-          <button className="btn small ghost" onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 0.8)} aria-label="Dézoomer">
-            −
-          </button>
-        </div>
+        <>
+          <div className="map-hint">Glisser : déplacer · Molette : zoom · Double-clic : signaler</div>
+          <div className="map-zoom">
+            <button onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 1.25)} aria-label="Zoomer">+</button>
+            <button onClick={() => zoomAt((wrapRef.current?.clientWidth ?? 0) / 2, (wrapRef.current?.clientHeight ?? 0) / 2, 0.8)} aria-label="Dézoomer">−</button>
+          </div>
+        </>
       )}
     </div>
   );
+}
+
+/** Carte entière dans la case de BD, posée sur le passe-partout : ajustée au plus juste (sans arrondi), et si elle laisse moins
+ * de 4 % de vide d'un côté, on la pose bord à bord (au plus 2 % rogné) : le dessin touche le passe-partout. */
+function fitView(W: number, H: number, mw: number, mh: number) {
+  const m = (panelMargin(W) + passePartout(W)) * 2;
+  const contain = Math.min((W - m) / mw, (H - m) / mh);
+  const cover = Math.max((W - m) / mw, (H - m) / mh);
+  const cell = Math.max(8, Math.min(56, cover / contain < 1.04 ? cover : contain));
+  return { cell, ox: (W - mw * cell) / 2, oy: (H - mh * cell) / 2 };
+}
+
+/** Cases que le joueur voit ou a déjà explorées : c'est elles que la vue d'arrivée cadre. */
+function seenBy(room: RoomView): (i: number) => boolean {
+  if (!room.fogEnabled || !room.fog) return () => true;
+  const fog = room.fog;
+  const vis = room.visionMode === "dynamique" && room.visible?.length ? new Set(room.visible) : null;
+  return (i) => !fog[i] || !!vis?.has(i);
+}
+
+/**
+ * Vue d'arrivée d'un joueur sur une carte. Boîte englobante de ce qu'il connaît autour de son pion (cases vues ou explorées,
+ * à 14 cases au plus) et de 6 cases tout autour du pion, plus 2 cases de marge. Centre pondéré : 60 % le pion, 40 % la boîte.
+ * Le zoom fait occuper à la boîte 78 % de la case de BD, avec une case d'au moins 56 px à l'écran (on lit les pions et le
+ * décor) et au plus 2,5 fois la vue d'ensemble (64 px au moins). Si le pion sortait du champ, la vue glisse juste assez.
+ */
+function arrivalView(W: number, H: number, mw: number, mh: number, t: { x: number; y: number }, seen: (i: number) => boolean) {
+  const tx = Math.round(t.x);
+  const ty = Math.round(t.y);
+  let x0 = tx - 6;
+  let x1 = tx + 7;
+  let y0 = ty - 6;
+  let y1 = ty + 7;
+  for (let y = Math.max(0, ty - 14); y <= Math.min(mh - 1, ty + 14); y++)
+    for (let x = Math.max(0, tx - 14); x <= Math.min(mw - 1, tx + 14); x++)
+      if (seen(y * mw + x)) {
+        x0 = Math.min(x0, x);
+        x1 = Math.max(x1, x + 1);
+        y0 = Math.min(y0, y);
+        y1 = Math.max(y1, y + 1);
+      }
+  x0 -= 2;
+  y0 -= 2;
+  x1 += 2;
+  y1 += 2;
+  const px = t.x + 0.5;
+  const py = t.y + 0.5;
+  const cx = px * 0.6 + ((x0 + x1) / 2) * 0.4;
+  const cy = py * 0.6 + ((y0 + y1) / 2) * 0.4;
+  const hx = Math.max(cx - x0, x1 - cx);
+  const hy = Math.max(cy - y0, y1 - cy);
+  const inner = panelMargin(W) * 2;
+  const iw = W - inner;
+  const ih = H - inner;
+  const fit = fitView(W, H, mw, mh).cell;
+  const share = W < 600 ? 0.7 : 0.78;
+  const want = Math.min((iw * share) / (hx * 2), (ih * share) / (hy * 2));
+  // Sur téléphone, cadrage plus large : 42 px par case au moins (une dizaine de cases en largeur) au lieu de 56.
+  const floor = W < 600 ? 42 : 56;
+  const cell = Math.max(floor, Math.min(want, Math.max(64, fit * 2.5)));
+  let ox = W / 2 - cx * cell;
+  let oy = H / 2 - cy * cell;
+  // Le pion reste à une case et demie au moins du cadre.
+  const keep = (o: number, p: number, span: number) => {
+    const s = o + p * cell;
+    const lo = panelMargin(W) + cell * 1.5;
+    const hi = span - panelMargin(W) - cell * 1.5;
+    if (hi <= lo) return span / 2 - p * cell;
+    return s < lo ? o + lo - s : s > hi ? o + hi - s : o;
+  };
+  ox = keep(ox, px, W);
+  oy = keep(oy, py, H);
+  return { cell, ox, oy };
+}
+
+// Portraits des personnages, décodés une fois puis gardés en mémoire.
+const portraits = new Map<string, HTMLImageElement>();
+function portraitImage(url: string | undefined): HTMLImageElement | null {
+  if (!url) return null;
+  let img = portraits.get(url);
+  if (!img) {
+    img = new Image();
+    img.src = url;
+    portraits.set(url, img);
+  }
+  return img.complete && img.naturalWidth ? img : null;
 }

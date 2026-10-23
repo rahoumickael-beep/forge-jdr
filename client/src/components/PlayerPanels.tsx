@@ -1,4 +1,6 @@
 // Panneaux des joueurs : mon personnage, le groupe, les documents.
+import { originsFor } from "../../../shared/origins";
+import { CharacterCreator } from "./CharacterCreator";
 import { useState } from "react";
 import { getGenre } from "../../../shared/genres";
 import { generateCharacter } from "../../../shared/generators";
@@ -15,8 +17,17 @@ export function MyCharacterPanel({ room }: { room: RoomView }) {
   const genre = getGenre(room.genre);
   const [draft, setDraft] = useState<Character | null>(null);
   const [archetype, setArchetype] = useState("");
+  const [creating, setCreating] = useState(false);
 
   const roll = () => setDraft(generateCharacter({ genre: room.genre, level: room.level, archetype: archetype || undefined, seed: randomSeed() }));
+
+  async function place(c: Character) {
+    if (!room.map) return toast("Attends que le MJ pose une carte pour placer ton pion.");
+    const r = await send("character:upsert", c);
+    if (!r.ok) return;
+    await send("token:upsert", tokenForCharacter(room, c, me.color, me.id));
+    setCreating(false);
+  }
 
   async function confirm() {
     if (!draft) return;
@@ -35,7 +46,14 @@ export function MyCharacterPanel({ room }: { room: RoomView }) {
       {mine.length === 0 && (
         <>
           <h3>Créer mon personnage</h3>
-          <p className="small muted">Tire un personnage au hasard, change son nom si tu veux, puis pose ton pion sur la carte.</p>
+          {originsFor(room.genre).length > 0 && (
+            <>
+              <p className="small muted">Origine, classe, historique, caractéristiques, personnalité, apparence : construis ton personnage étape par étape.</p>
+              <button className="btn primary" onClick={() => setCreating(true)}>Créer pas à pas</button>
+              <div className="ornament" aria-hidden="true" />
+            </>
+          )}
+          <p className="small muted">Ou tire un personnage au hasard, change son nom si tu veux, puis pose ton pion sur la carte.</p>
           <label className="field">
             <span>Classe souhaitée</span>
             <select id="pj-classe" className="input" value={archetype} onChange={(e) => setArchetype(e.target.value)}>
@@ -56,6 +74,7 @@ export function MyCharacterPanel({ room }: { room: RoomView }) {
           )}
         </>
       )}
+      {creating && <CharacterCreator room={room} onDone={place} onClose={() => setCreating(false)} />}
       {room.movementLocked && <p className="small muted">Le MJ a bloqué les déplacements pour l'instant.</p>}
       <p className="small muted">Pour bouger : fais glisser ton pion, ou clique dessus puis utilise les flèches du clavier. Double-clic sur la carte pour attirer l'attention.</p>
     </div>

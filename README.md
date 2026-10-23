@@ -17,6 +17,10 @@ npm run dev
 
 Ouvre http://localhost:5173. Pour jouer à plusieurs en local, tes amis doivent pouvoir joindre ton ordinateur (voir « Mettre en ligne »).
 
+## Essai dans VS Code
+
+Ouvre le dossier dans VS Code, puis **Terminal > Exécuter la tâche de build** (Ctrl+Maj+B) : la tâche « Essai complet » installe tout, lance les tests, fabrique les trois livres et les ouvre, puis démarre la table sur http://localhost:5173. Pour jouer un joueur en même temps, ouvre une fenêtre privée sur la même adresse et entre le code de la partie. Les tâches une par une sont dans **Terminal > Exécuter la tâche…**.
+
 ## Mettre en ligne
 
 Le plus simple : [Render](https://render.com), offre gratuite.

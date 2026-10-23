@@ -1,13 +1,19 @@
 // Panneaux du maître du jeu.
+import { ABILITY_METHODS } from "../../../shared/origins";
+import { DEATH_RULES } from "../../../shared/rules";
+import { DEFAULT_VISION } from "../../../shared/vision";
 import { useEffect, useMemo, useState } from "react";
 import { toCharacter, toScenario, type AiKind } from "../../../shared/ai";
 import { GENRES, TONS } from "../../../shared/genres";
 import { generateCharacter, generateEncounter, generateLoot, generateScenario, modifier } from "../../../shared/generators";
+import { BESTIARY, crLabel, creaturesFor, toEncounterEnemy, type Family } from "../../../shared/bestiary";
+import { LIBRARY } from "../../../shared/library";
 import { generateMap } from "../../../shared/maps";
 import { randomSeed } from "../../../shared/random";
 import type { Character, Encounter, GameMap, GenreId, MapKind, RoomView, Scenario, Ton, Token } from "../../../shared/types";
 import { generateAi, listLmModels, loadAiSettings, saveAiSettings, type AiSettings } from "../ai";
-import { tokenForCharacter, tokensForEncounter } from "../placement";
+import { hasMapImage, mapImage } from "../mapImageCache";
+import { freeCell, tokenForCharacter, tokensForEncounter } from "../placement";
 import { send, toast } from "../store";
 import { CharacterSheet, EncounterBlock, ScenarioSheet } from "./Sheets";
 
@@ -197,6 +203,15 @@ export function MapPanel({ room }: { room: RoomView }) {
   return (
     <div className="stack">
       <h3>Carte</h3>
+      <div className="map-proof-sticky">
+        <MiniMap map={preview} room={room} />
+        <div className="row map-proof-actions">
+          <button className="btn" onClick={() => setSeed(randomSeed())}>Autre tirage</button>
+          <button className="btn primary" onClick={() => send("map:set", { map: preview, keepTokens: false }).then((r) => r.ok && toast("Carte posée sur la table."))}>
+            Poser sur la table
+          </button>
+        </div>
+      </div>
       <div className="row">
         <label className="field">
           <span>Type</span>
@@ -217,13 +232,6 @@ export function MapPanel({ room }: { room: RoomView }) {
         <span>Nom affiché</span>
         <input id="map-name" className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder={preview.name} />
       </label>
-      <MiniMap map={preview} room={room} />
-      <div className="row">
-        <button className="btn" onClick={() => setSeed(randomSeed())}>Autre tirage</button>
-        <button className="btn primary" onClick={() => send("map:set", { map: preview, keepTokens: false }).then((r) => r.ok && toast("Carte posée sur la table."))}>
-          Poser sur la table
-        </button>
-      </div>
       <p className="small muted">Graine {seed} : note-la pour retrouver exactement cette carte.</p>
 
       <div className="section stack">
@@ -235,29 +243,68 @@ export function MapPanel({ room }: { room: RoomView }) {
           <button className="btn small" onClick={() => send("fog:all", { hidden: false })}>Tout révéler</button>
           <button className="btn small" onClick={() => send("fog:all", { hidden: true })}>Tout cacher</button>
         </div>
-        <p className="small muted">Utilise les pinceaux en bas à gauche de la carte pour révéler les salles au fur et à mesure.</p>
+        <label className="field">
+          <span>Ce que voient les joueurs</span>
+          <select id="vision-mode" className="input" value={room.visionMode} onChange={(e) => send("settings:set", { visionMode: e.target.value })}>
+            <option value="dynamique">Ligne de vue de leurs pions</option>
+            <option value="manuel">Ce que je révèle au pinceau</option>
+          </select>
+        </label>
+        {room.visionMode === "dynamique" ? (
+          <>
+            <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
+              <input type="checkbox" checked={room.sharedVision} onChange={(e) => send("settings:set", { sharedVision: e.target.checked })} /> Vision partagée (chacun voit ce que voit le groupe)
+            </label>
+            <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
+              <input type="checkbox" checked={room.mapKnown} onChange={(e) => send("settings:set", { mapKnown: e.target.checked })} /> Donner la carte des lieux (plan visible, sans les créatures)
+            </label>
+            <p className="small muted">Les murs bloquent la vue. Les zones déjà explorées restent visibles en pénombre. La portée de vision se règle par pion dans l'onglet Pions.</p>
+          </>
+        ) : (
+          <p className="small muted">Utilise les pinceaux en bas à gauche de la carte pour révéler les salles au fur et à mesure.</p>
+        )}
       </div>
     </div>
   );
 }
 
+/** Aperçu de la carte tirée, dans le même rendu que la table, en miniature. On attend que le MJ s'arrête
+ * de taper ou de cliquer (un dessin coûte jusqu'à 1,5 s) ; l'image est gardée et resservira à la table. */
 function MiniMap({ map, room }: { map: GameMap; room: RoomView }) {
-  const [url, setUrl] = useState("");
+  const [shot, setShot] = useState<{ url: string; key: string } | null>(null);
+  const key = `${room.genre}|${map.kind}|${map.seed}|${map.width}|${map.name}`;
   useEffect(() => {
-    const cv = document.createElement("canvas");
-    const s = 4;
-    cv.width = map.width * s;
-    cv.height = map.height * s;
-    const g = cv.getContext("2d")!;
-    const theme = GENRES.find((x) => x.id === room.genre)!.theme;
-    const colors = [theme.background, theme.floor, theme.wall, theme.water, theme.vegetation, theme.road, theme.door];
-    map.tiles.forEach((t, i) => {
-      g.fillStyle = colors[t];
-      g.fillRect((i % map.width) * s, Math.floor(i / map.width) * s, s, s);
-    });
-    setUrl(cv.toDataURL());
-  }, [map, room.genre]);
-  return url ? <img src={url} alt={`Aperçu : ${map.name}`} style={{ width: "100%", imageRendering: "pixelated", borderRadius: 3, border: "1px solid #ffffff20" }} /> : null;
+    let alive = true;
+    const paint = () => {
+      if (!alive) return;
+      const img = mapImage(map, room.genre);
+      // Miniature à 2 px d'écran par px affiché, assez nette pour lire les salles.
+      const w = Math.min(img.width, 720);
+      const cv = document.createElement("canvas");
+      cv.width = w;
+      cv.height = Math.round((img.height * w) / img.width);
+      const g = cv.getContext("2d")!;
+      g.imageSmoothingQuality = "high";
+      g.drawImage(img, 0, 0, cv.width, cv.height);
+      if (alive) setShot({ url: cv.toDataURL("image/jpeg", 0.86), key });
+    };
+    // Déjà dessinée : tout de suite ; sinon un temps de latence, puis une image pour laisser le libellé s'afficher.
+    const t = setTimeout(() => requestAnimationFrame(() => setTimeout(paint, 0)), hasMapImage(map, room.genre) ? 0 : 260);
+    return () => {
+      alive = false;
+      clearTimeout(t);
+    };
+  }, [key]);
+  const stale = !shot || shot.key !== key;
+  // Épreuve posée en haut de l'onglet, qui ne défile pas : passe-partout de papier, trait d'encre, coins assombris.
+  return (
+    <div className="map-proof">
+      <div className={`map-thumb${stale ? " is-stale" : ""}`} style={{ aspectRatio: `${map.width} / ${map.height}` }}>
+        {shot && <img src={shot.url} alt={`Aperçu : ${map.name}`} />}
+        {stale && <span className="map-thumb-wait">On encre la carte…</span>}
+      </div>
+    </div>
+  );
 }
 
 const TOKEN_COLORS = ["#7a2a22", "#3d6b8a", "#6b5b3e", "#4f7a4a", "#5b3a6b", "#8a6a1f", "#2f2f2f", "#a34f7a"];
@@ -323,6 +370,16 @@ export function TokensPanel({ room, selectedId, onSelect }: { room: RoomView; se
                 <button className="btn small" onClick={() => update(t, { hp: Math.min(t.hpMax!, (t.hp ?? 0) + 1) })} aria-label="Ajouter 1 PV">+</button>
               </>
             ) : null}
+            {t.kind === "joueur" && room.visionMode === "dynamique" && (
+              <select className="input small" style={{ width: "auto" }} value={t.vision ?? DEFAULT_VISION} onChange={(e) => update(t, { vision: Number(e.target.value) })} title="Portée de vision" aria-label={`Vision de ${t.name}`}>
+                <option value={2}>3 m</option>
+                <option value={4}>6 m</option>
+                <option value={6}>9 m</option>
+                <option value={10}>15 m</option>
+                <option value={16}>24 m</option>
+                <option value={40}>Illimitée</option>
+              </select>
+            )}
             <button className="btn small" onClick={() => update(t, { hidden: !t.hidden })} title={t.hidden ? "Montrer aux joueurs" : "Cacher aux joueurs"}>
               {t.hidden ? "Caché" : "Visible"}
             </button>
@@ -336,27 +393,13 @@ export function TokensPanel({ room, selectedId, onSelect }: { room: RoomView; se
 
 export function CombatPanel({ room }: { room: RoomView }) {
   const { entries, turn, round } = room.initiative;
-  function rollAll() {
-    const list = room.tokens
-      .filter((t) => t.kind !== "objet")
-      .map((t) => {
-        const c = room.characters.find((x) => x.id === t.characterId);
-        const dex = c ? modifier(Object.values(c.stats)[1] ?? 10) : 0;
-        return { tokenId: t.id, name: t.name, value: Math.floor(Math.random() * 20) + 1 + dex };
-      });
-    void send("initiative:set", { entries: list });
-    void send("narrate", { text: `Le combat commence ! Initiative : ${[...list].sort((a, b) => b.value - a.value).map((e) => `${e.name} (${e.value})`).join(", ")}.` });
-  }
+  const monsters = room.tokens.filter((t) => t.kind === "monstre");
   return (
     <div className="stack">
       <h3>Combat</h3>
-      <div className="row">
-        <button className="btn primary" onClick={rollAll} disabled={!room.tokens.length}>Lancer l'initiative</button>
-        <button className="btn" onClick={() => send("initiative:set", { entries: [] })} disabled={!entries.length}>Fin du combat</button>
-      </div>
-      {entries.length > 0 && (
+      {room.combat ? (
         <>
-          <p className="small muted">Round {round}</p>
+          <p className="small muted">Round {round} · au tour de <b>{entries[turn]?.name ?? "personne"}</b></p>
           <ol className="init-list">
             {entries.map((e, i) => (
               <li key={i} className={i === turn ? "current" : ""}>
@@ -368,9 +411,24 @@ export function CombatPanel({ room }: { room: RoomView }) {
           <div className="row">
             <button className="btn" onClick={() => send("initiative:step", { delta: -1 })}>Précédent</button>
             <button className="btn primary" onClick={() => send("initiative:step", { delta: 1 })}>Tour suivant</button>
+            <button className="btn danger" onClick={() => send("combat:end")}>Fin du combat</button>
+          </div>
+        </>
+      ) : (
+        <>
+          <p className="small muted">Le combat commence tout seul quand un pion joueur voit un monstre. Tu peux aussi le lancer toi-même, pour une embuscade.</p>
+          <div className="row">
+            <button className="btn primary" onClick={() => send("combat:start", {})} disabled={!monsters.length}>Lancer le combat</button>
           </div>
         </>
       )}
+      <div className="section stack">
+        <h3>Déclenchement</h3>
+        <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          <input type="checkbox" checked={room.autoCombat} onChange={(e) => send("settings:set", { autoCombat: e.target.checked })} /> Lancer le combat quand un joueur voit un monstre
+        </label>
+        <p className="small muted">Un monstre « caché » dans l'onglet Pions ne déclenche rien, même en vue : pratique pour une conversation qui doit rester calme.</p>
+      </div>
       <div className="section stack">
         <h3>Déplacements</h3>
         <label className="small" style={{ display: "flex", gap: 6, alignItems: "center" }}>
@@ -381,19 +439,154 @@ export function CombatPanel({ room }: { room: RoomView }) {
   );
 }
 
+const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous"];
+
+/** Bestiaire du genre : le MJ pose une créature (ou un groupe) sur la carte en un clic. */
+export function BestiaryPanel({ room }: { room: RoomView }) {
+  const [family, setFamily] = useState<Family | "">("");
+  const [query, setQuery] = useState("");
+  const [count, setCount] = useState(1);
+  const [open, setOpen] = useState<string | null>(null);
+  const all = creaturesFor(room.genre);
+  const max = Math.max(1, room.level + 3);
+  const list = all
+    .filter((c) => (!family || c.family === family) && (!query || c.name.toLowerCase().includes(query.toLowerCase())))
+    .sort((a, b) => a.cr - b.cr || a.name.localeCompare(b.name, "fr"));
+
+  function poser(id: string) {
+    const c = BESTIARY.find((x) => x.id === id);
+    if (!c) return;
+    if (!room.map) return toast("Génère d'abord une carte.");
+    const enemy = toEncounterEnemy(c, count);
+    const placed: Token[] = [];
+    const near = room.map.rooms.length ? room.map.rooms[Math.floor(Math.random() * room.map.rooms.length)] : undefined;
+    for (let i = 0; i < count; i++) {
+      const pos = freeCell({ ...room, tokens: [...room.tokens, ...placed] }, near ? { x: near.x + Math.floor(near.w / 2), y: near.y + Math.floor(near.h / 2) } : undefined);
+      placed.push({
+        id: "",
+        name: count > 1 ? `${c.name} ${i + 1}` : c.name,
+        x: pos.x,
+        y: pos.y,
+        color: FAMILY_COLORS[c.family],
+        kind: "monstre",
+        hidden: room.visionMode === "manuel",
+        hp: enemy.hp,
+        hpMax: enemy.hp,
+        ac: enemy.ac,
+        creatureId: c.id,
+        speed: Math.max(1, Math.round(c.speed.marche / 1.5)),
+        size: c.size === "Grande" ? 2 : c.size === "Très grande" ? 3 : c.size === "Gigantesque" ? 4 : 1,
+      });
+    }
+    void send("token:bulk", placed);
+    toast(`${count > 1 ? `${count} × ` : ""}${c.name} posé${count > 1 ? "s" : ""} sur la carte.`);
+  }
+
+  if (!all.length) return <div className="stack"><h3>Bestiaire</h3><p className="small muted">Pas encore de bestiaire pour ce genre.</p></div>;
+  return (
+    <div className="stack">
+      <h3>Bestiaire</h3>
+      <div className="row">
+        <input className="input" placeholder="Chercher une créature" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Chercher une créature" />
+        <select className="input" value={family} onChange={(e) => setFamily(e.target.value as Family | "")} aria-label="Famille">
+          <option value="">Toutes les familles</option>
+          {FAMILIES.map((f) => <option key={f} value={f}>{f}</option>)}
+        </select>
+        <label className="small" style={{ display: "flex", gap: 4, alignItems: "center" }}>
+          Nombre
+          <input className="input small" type="number" min={1} max={12} value={count} onChange={(e) => setCount(Math.max(1, Math.min(12, Number(e.target.value) || 1)))} style={{ width: 56 }} />
+        </label>
+      </div>
+      <ul className="beast-list">
+        {list.map((c) => (
+          <li key={c.id} className={c.cr > max ? "beast-hard" : ""}>
+            <button className="beast-row" onClick={() => setOpen(open === c.id ? null : c.id)} aria-expanded={open === c.id}>
+              <i style={{ background: FAMILY_COLORS[c.family] }} />
+              <span className="beast-name">{c.name}</span>
+              <span className="beast-cr" title="Puissance">{crLabel(c.cr)}</span>
+            </button>
+            {open === c.id && (
+              <div className="beast-detail">
+                <p className="small"><em>{c.type}, {c.region}</em> · CA {c.ac} · {c.hp} PV · {c.speed.marche} m</p>
+                <p className="small">{c.lore}</p>
+                <p className="small muted"><b>Au MJ :</b> {c.gmNotes}</p>
+                <button className="btn small primary" onClick={() => poser(c.id)}>Poser {count > 1 ? `${count} ${c.name}` : "sur la carte"}</button>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+      <p className="small muted">En gris : plus de deux crans au-dessus du niveau du groupe.</p>
+    </div>
+  );
+}
+
+const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236" };
+
 export function ScenariosPanel({ room }: { room: RoomView }) {
   const place = (e: Encounter) => {
     if (!room.map) return toast("Génère d'abord une carte.");
     void send("token:bulk", tokensForEncounter(room, e));
   };
+  const readAloud = (text: string) => void send("narrate", { text }).then((r) => r.ok && toast("Texte envoyé dans le journal."));
+  const placeMap = (s: Scenario) => {
+    const hint = s.mapHint;
+    if (!hint) return;
+    if (room.tokens.some((t) => t.kind !== "joueur") && !window.confirm("Poser cette carte retire les pions qui ne sont pas des joueurs. On continue ?")) return;
+    const map = generateMap({ kind: hint.kind, seed: hint.seed, name: hint.name, width: hint.width ?? 46, height: hint.height ?? 36 });
+    hint.labels?.forEach((label, i) => {
+      if (map.rooms[i] && label) map.rooms[i] = { ...map.rooms[i], label };
+    });
+    void send("map:set", { map, keepTokens: false }).then((r) => r.ok && toast(`Carte posée : ${map.name}.`));
+  };
+  const mapButton = (s: Scenario) => s.mapHint && <button className="btn small" onClick={() => placeMap(s)}>Poser la carte</button>;
+  const library = LIBRARY.filter((s) => s.genre === room.genre);
   return (
     <div className="stack">
       <h3>Scénarios</h3>
-      {room.scenarios.length === 0 && <p className="small muted">Les scénarios que tu gardes depuis l'onglet Générer arrivent ici. Les joueurs ne les voient pas.</p>}
+      {room.scenarios.length === 0 && <p className="small muted">Les scénarios que tu gardes depuis l'onglet Générer ou la bibliothèque arrivent ici. Les joueurs ne les voient pas.</p>}
       <div className="card-list">
         {room.scenarios.map((s) => (
-          <ScenarioSheet key={s.id} s={s} onPlaceEncounter={place} actions={<button className="btn small danger" onClick={() => send("scenario:remove", s.id)}>Jeter</button>} />
+          <ScenarioSheet
+            key={s.id}
+            s={s}
+            onPlaceEncounter={place}
+            onReadAloud={readAloud}
+            actions={
+              <>
+                {mapButton(s)}
+                <button className="btn small danger" onClick={() => send("scenario:remove", s.id)}>Jeter</button>
+              </>
+            }
+          />
         ))}
+      </div>
+      <h3 style={{ marginTop: 12 }}>Bibliothèque</h3>
+      {library.length === 0 ? (
+        <p className="small muted">Pas encore de scénario écrit à la main pour ce genre.</p>
+      ) : (
+        <p className="small muted">Des scénarios écrits à la main, prêts à jouer : textes à lire, choix et carte proposée.</p>
+      )}
+      <div className="card-list">
+        {library.map((s) => {
+          const added = room.scenarios.some((x) => x.id === s.id);
+          return (
+            <ScenarioSheet
+              key={s.id}
+              s={s}
+              onPlaceEncounter={place}
+              onReadAloud={readAloud}
+              actions={
+                <>
+                  <button className="btn small primary" disabled={added} onClick={() => send("scenario:add", s).then((r) => r.ok && toast("Scénario ajouté à la partie."))}>
+                    {added ? "Déjà dans la partie" : "Ajouter à la partie"}
+                  </button>
+                  {mapButton(s)}
+                </>
+              }
+            />
+          );
+        })}
       </div>
       <h3 style={{ marginTop: 12 }}>Personnages et PNJ</h3>
       <div className="card-list">
@@ -500,6 +693,20 @@ export function SettingsPanel({ room }: { room: RoomView }) {
   }
   return (
     <div className="stack">
+      <h3>Règles de la partie</h3>
+      <label className="field">
+        <span>Caractéristiques à la création</span>
+        <select id="ability-method" className="input" value={room.abilityMethod} onChange={(e) => send("settings:set", { abilityMethod: e.target.value })}>
+          {ABILITY_METHODS.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}
+        </select>
+      </label>
+      <label className="field">
+        <span>Mort des personnages</span>
+        <select id="death-rule" className="input" value={room.deathRule} onChange={(e) => send("settings:set", { deathRule: e.target.value })}>
+          {DEATH_RULES.map((d) => <option key={d.id} value={d.id}>{d.label}</option>)}
+        </select>
+      </label>
+      <p className="small muted">{DEATH_RULES.find((d) => d.id === room.deathRule)?.text}</p>
       <h3>Joueurs</h3>
       {room.players.map((p) => (
         <div key={p.id} className="token-row">

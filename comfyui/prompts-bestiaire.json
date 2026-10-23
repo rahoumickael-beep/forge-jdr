@@ -1,0 +1,458 @@
+[
+  {
+    "id": "corneille-des-pieux",
+    "name": "Corneille des pieux",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a ragged black crow perched on the crooked dead branch of a lone gibbet oak, open wheat plain and thatched hamlet behind, beak half open as if speaking, a rope still knotted below it",
+    "seed": 3789238019,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "matin-leve",
+    "name": "Mâtin levé",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a zombie farm mastiff, the starved undead carcass of a broad-headed guard dog with heavy sagging jowls, seen in three-quarter view, sitting stiff and upright in dark trampled mud, gaunt skeletal body, grey decaying hide hanging in torn flaps from its side so the bare curved ribs show, dead blind eyes covered by a thick pale white film like cataracts, white pupilless eyes, slack grey lips, rusted iron collar around its neck, a short length of chain ending in a broken split link resting on the mud, tail lying flat and still on the ground, directly behind it a weathered oak plank door of a thatched cottage, the lower half of the door shredded with long deep pale gouges from scratching paws, an iron lantern with a candle flame on a hook beside the door frame, cold bluish-grey shadows over the yard",
+    "seed": 2707949215,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "bleu-des-marches",
+    "name": "Bleu des Marches",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a frightened fifteen-year-old soldier in an oversized red wool cloak and quilted gambeson, round wooden shield and spear, standing in heather on a windswept grey hill, rain, a stone fort and a black pyre smoke plume in the distance",
+    "seed": 168293254,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "crabe-des-salines",
+    "name": "Crabe des salines",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, side profile of one shield-sized pale crab, its broad flat shell the whitish pastel pink of raw shrimp flesh and rose quartz, frosted all over with a thick crust of white salt crystals like rime, two heavy pale pink claws forcing apart the splintered boards of a wooden coffin, the coffin lying flat on a wet plank jetty, a classic six-sided coffin shape, wide at the shoulders and narrow at the feet, its lid smashed in and its planks burst open, the inside packed full with coarse white salt spilling out through the cracks, the crab dragging its pink body up over the broken edge, a row of thick dark oak piles standing in black still lagoon water behind the jetty, a bleached white noon sky with a small fierce white sun straight overhead, short black shadows under the crab, far off a flat chequer of white salt pans glittering on the shore",
+    "seed": 3863315661,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "leve",
+    "name": "Levé",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a heavy-set middle-aged peasant man with a full fleshy face, thick nose, stubbled jaw and plain human ears, sleepwalking in strict side profile from left to right through waist-high ripe wheat, his whole skin ashen grey-white like old candle wax, purple-blue blotches on the throat and hands, grey-blue lips pressed shut, glassy half-closed eyes staring ahead, a strip of white linen bound under his chin and knotted on top of his head as on a laid-out body, short hair clotted with brown soil, wearing a long shapeless undyed linen shroud to the shins smeared with brown earth, both arms hanging straight down, swollen grey fingers, bare grey feet black with mud, clumps of soil dropping from the hem, body stiff and upright like a carved wooden saint carried in procession, ahead of him on the far right horizon a distant walled town under one broad low dome of green verdigris copper, the dome level with his gaze, red-gold sunrise sky low behind the dome, the man edged in a thin golden rim, his long shadow falling back across the wheat toward the viewer, heavy brown-umber sky above",
+    "seed": 594679459,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "loup-de-bruyere",
+    "name": "Loup de bruyère",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a lean grey wolf with soot-blackened paws standing on a heather ridge, fur blown by a strong wind, behind it a burning pyre outside a grey stone fort sending up thick greasy smoke, low clouds",
+    "seed": 1605912186,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "nuee-de-rats-des-fosses",
+    "name": "Nuée de rats des fossés",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a seething mass of chalk-white rats with red eyes pouring out of a ditch filled with lime powder at the edge of a medieval city, slate roofs and city walls behind, torchlight from above, white dust in the air",
+    "seed": 236863030,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "bouc-des-vertebres",
+    "name": "Bouc des vertèbres",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a feral white mountain goat with a matted shaggy coat, bare neck, a short beard and two ringed horns coiling back in tight spirals, standing side-on with all four hooves gripping a narrow shelf of pale limestone on a sheer cliff, its neck craned up to the cliff wall, mouth open, long pink tongue lapping at a thick dribble of dull grey lead, mad bulging yellow eyes rimmed with white, foam on its lips, the cliff wall carved into a low squat arch of dark granite blocks, the arch filled solid with tightly fitted masonry, every joint of the masonry stuffed with grey lead that has melted and run down the rock in long hardened drips, angular dwarven knotwork chiselled around the arch, rime frost on the stone, crisp cold morning air, pale grey-blue sky, far below a wild larch forest in deep blue shadow",
+    "seed": 4138473676,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "legionnaire-d-os",
+    "name": "Légionnaire d'os",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a human-sized walking skeleton soldier filling the foreground from head to feet, bare weathered bones the dull brown-grey of old dug-up bone, empty eye sockets, visible ribcage, spine and pelvis between hanging scraps of corroded verdigris bronze scale armour, tattered strips of rotten dark red wool cloth on the shoulders, a small green bronze regiment plaque hanging from a cord at its ribs, a round battered wooden shield strapped to its left forearm, a short straight sword held low in its right hand, a javelin slung on its back, behind it a long column of identical skeleton soldiers marching in tight file up a heather hillside, their feet climbing out of muddy half-frozen earth with patches of melting snow, heavy slanting grey rain streaks across the whole scene, sky entirely filled with low dense rain clouds the colour of wet slate, cold steel-blue tint, a line of small square stone forts along the far ridge, the bottom edge of the canvas is dark wet heather and mud",
+    "seed": 227965786,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "mort-des-salines",
+    "name": "Mort des salines",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a dead human salt worker seen from the side, stooped forward, a dried corpse with a gaunt human face, sunken closed eyes and hollow cheeks, his whole body caked in a thick rough crust of white salt like hoarfrost, white salt crystals clustered on his shoulders, arms, ribs and shins, salt flaking from his cracked brown skin, a short ragged loincloth, head hanging down with his gaze on the ground, both arms reaching forward along one long wooden handle, pushing a flat wooden salt rake through a ridge of white salt, standing barefoot in the shallow rose-pink brine of a square evaporation pond edged by a low clay dyke, a heavy iron shackle on each ankle, a thick iron chain trailing from the shackles across the mud to a big iron ring set in a square grey stone block, tall cone-shaped mounds of white salt behind him, a bleached white noon sky with a tiny white-hot sun high overhead, harsh short shadows, far along the dyke a tiny standing overseer in a long brown medieval robe under a round cloth sunshade",
+    "seed": 3587875120,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "attendant",
+    "name": "Attendant",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a thin living medieval peasant man with sunburnt weathered skin, hollow cheeks, rosy lips and a short unkempt beard, mouth open singing a hymn, eyes rolled up toward the sky in rapture, hood of a coarse dark brown monk's habit pushed back, a frayed hemp rope noose hanging loosely around his neck, his right hand gripping a small iron knife with a wooden handle, his left hand raising a thick burning wax candle with a tiny flame, bare dirty feet on a rutted dirt cart track of packed earth, behind him a long dense crowd of dozens of hooded peasants in brown habits walking in file and carrying candles, golden wheat fields stretching flat to the horizon, a small copper dome far away, heavy grey clouds filling the sky",
+    "seed": 1757216674,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "nuee-d-abeilles-cirieres",
+    "name": "Nuée d'abeilles cirières",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a vast airborne swarm of thousands of tiny honeybees, each bee a minute amber speck with translucent wings, rising in a tall twisting column that fills the upper half of the painting like drifting gold dust, the swarm streaming upward out of the chest of a dead man standing upright in the lower half, an emaciated human corpse with leathery grey-brown skin, a shaved bald head and a smooth hairless chin, the jaw hanging wide open with a slab of ash-grey wax honeycomb of hexagonal cells inside the mouth, two thin arms hanging at his sides ending in bony human hands, the chest cavity split open with the ribs spread apart, flat ash-grey honeycomb combs with hexagonal cells built vertically in the gaps between the ribs, a plain undyed linen loincloth, two thin legs and bare bony feet on dry earth, behind him a steep hillside of stepped dry-stone terrace walls with low grapevines on each step, white monastery walls and a romanesque bell tower at the top of the hill, warm golden late summer haze full of insects, a plain band of painted earth along the bottom edge",
+    "seed": 2730164764,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "scarabee-de-verre",
+    "name": "Scarabée de verre",
+    "prompt": "stormy sky, hard contrast, slate and rust tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, the storm clouds breaking open over the horizon onto a fat orange setting sun sitting just behind the creature, a glass sculpture come alive: a beetle as big as a hound cast entirely in one piece of dark garnet glass like a cathedral window, its whole body, head, six legs and two hooked mandibles made of the same clear wine-red glass, the sun shining straight through it so the body turns ruby and throws a red stain on the sand, fine white crack lines across the back, seen from the front three quarters close to the ground, three jointed glass legs splayed on each side like a crab, its rear half still buried in a spray of red sand, crawling out from under the tilted edge of a thin black glass sheet half sunk in the dune, a few small glass pellets and warm golden shards in the sand, long purple shadows on rippled dunes",
+    "seed": 1135815598,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "pleureur",
+    "name": "Pleureur",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a semi-transparent see-through spectral woman baker in a linen apron and head veil, seen in three-quarter view, the edge of the wooden table and the cold dark brick oven clearly visible through her body and apron, her skin colourless grey-blue like thin smoke, the hem of her dress fading into floor mist, bent forward over a bare flour-dusted kneading table, both fists pressed down and folding into empty air just above the wood, the tabletop holding only scattered flour and faint handprints, her features smeared and blurred as if seen through tears, mouth open in a silent sob, alone in a long-abandoned medieval bakery with cobwebs, cracked plaster and drifting dust motes, a small grey window with wooden shutters behind her",
+    "seed": 1839095717,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "legionnaire-de-hersende",
+    "name": "Légionnaire de Hersende",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a lone weary human soldier of fifty, bare head with short cropped grey hair, round human ears, a short grey beard, a broad lined tired face, wearing a long-sleeved shirt of riveted iron chain mail down to mid-thigh under a heavy red wool cloak dark with rain, a round wooden shield painted red strapped on his left forearm, a short stubby leaf-bladed gladius in a short brown scabbard on his right hip, a small round clay flask of oil tied to his belt, his right fist raised gripping a plain rough wooden stick wrapped in tarred rags at its top end, the rags burning with a ragged orange flame, brown leather boots planted on wet grey flagstones with a band of empty puddled stone below his feet, behind him a square stone fort courtyard with a bare grey stone wall, a tall pyre of stacked logs burning with two corpses wrapped in white linen shrouds lying on top, sheets of falling rain, a flat featureless grey rain-cloud sky, orange reflections of the flames on the wet stones",
+    "seed": 3785744123,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "crapaud-de-vase",
+    "name": "Crapaud-de-vase",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, two round golden eyes with horizontal black pupils and a broad wart-covered mud-brown back rising just above the flat black water of a peat bog pool, the rest of the huge toad hidden deep below the surface, the dark body outline faintly visible under the water, a rotting plank walkway crossing high over the pool with its boards resting on posts of wet timber, the toad lying beneath the planks, dark water filling the lower half of the picture, tall reeds along both edges, low thick mist on the water, two stilt houses with heavy reed roofs standing in the mist far behind, soft grey dawn colours of peat brown and moss green, empty margins all around the scene",
+    "seed": 224987415,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "ciree-de-la-rotonde",
+    "name": "Cirée de la Rotonde",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a shambling dead man of ordinary human build and height, his entire body from scalp to toes encased in a thick lumpy shell of opaque white candle wax, as if a hundred church candles had melted over him, every part of him smooth white wax, his face a blurred white wax mask with two dark hollows for eyes and a dark slack mouth, heavy layered white drips hanging from his chin, elbows and fingertips, five-fingered human hands and flat bare human feet with five toes, all thickly crusted in white wax, dozens of short charred black cotton wick stubs, cold and dead, poking out of the white wax on his shoulders and crown like black stubble, one single tiny flame flickering on a wick in the middle of his forehead, that small flame the only warm source in the scene, casting golden warmth over the glossy white wax and the nearest rough stones, a low vaulted stone cellar dissolving into pitch black darkness behind him, deep black shadow all around, strong candle chiaroscuro",
+    "seed": 4001118309,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "mort-beni",
+    "name": "Mort béni",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a dead monk kneeling upright on both knees, seen in side profile, facing a stone altar crowded with tall beeswax candles, the kneeling figure fills most of the frame, his body is a dried mummified corpse with shrunken grey-brown leathery skin stretched tight over the skull, deep sunken eye sockets, hollow cheeks, thin withered lips pulled back from the teeth, bony fingers like dry twigs pressed palm to palm in prayer and wrapped in a dark rusted iron rosary, head bowed toward the altar, wearing a long bone-white linen burial robe stained with grave earth, his robe covers his folded legs on the floor, behind him a row of three more withered corpses in white burial robes kneeling with bowed heads, whitewashed stone walls of a bare Romanesque abbey chapel, a tall narrow window of pale cold blue-grey glass on one side, warm amber candle flames on the altar",
+    "seed": 1996563942,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "anguille-machoire",
+    "name": "Anguille-mâchoire",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a gigantic European eel filling the whole height of the picture, a single thick snake-like ribbon of smooth glossy jet-black slimy skin, bursting upward from black peat water in a tall curve, flat broad head with a wide open mouth full of thin needle teeth curved backward like fish hooks, a small wooden stave bucket with a rope handle falling in mid-air beside it, tilted and spilling water, narrow plank walkway across the bottom of the picture, tall reeds, thick white mist, flying water drops",
+    "seed": 2381104335,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "lanterne-de-tourbe",
+    "name": "Lanterne de tourbe",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, seen from low on a narrow old plank walkway, a small round medieval lantern of deep blue glass, a blue glass globe the size of an apple with a tiny pointed black iron cap, hovering alone in mid-air at a man's head height above black bog water, thick fog all around and above it, cold blue radiance pouring from the blue glass, its long blue reflection on the still black water directly beneath it, tall black reeds in the middle distance, wet grey-blue planks catching blue reflections, the walkway runs toward the lantern and its last plank breaks off jagged above deep black water an arm's length short of the reflection, dense blue-black fog filling the whole sky, blue and black palette, the blue lantern the single bright point of the painting, dark still water along the bottom edge",
+    "seed": 3331900910,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "sanglier-de-la-brune",
+    "name": "Sanglier de la Brune",
+    "prompt": "late afternoon natural light, ochre and moss green tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, wide view from a distance across a forest clearing, in the middle stands a huge shaggy black wild boar seen from behind at three-quarters, rump and humped bristly back toward the viewer, the whole animal small in the frame with wide margins of earth around it, its head pushed down into a shallow hole it is digging, face hidden in the soil, the clearing is a perfect circle of bare churned dark brown earth sharply edged by a thick ring of green ferns and moss, a few small whitish chips of old bone scattered in the dug soil near its forelegs, colossal ancient oak trunks as wide as houses standing around the circle, deep green shade under a dense leafy canopy, still and silent woods",
+    "seed": 747781949,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "compagnon-cloueur",
+    "name": "Compagnon-cloueur",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, seen in left profile, a burly English village gravedigger with a thick neck and a shaven head marked by two short scars, a heavy black iron nail with a square head hanging from his fleshy earlobe like a crude earring, black tarred leather coat covered in round iron studs, kneeling in brown mud at the feet of a dead old peasant laid on a plank under a grey linen sheet, his left hand pressing a long iron nail against the bare heel of the dead man, his right hand raising a blunt iron hammer with a thick square head and a short ash handle, a fat leather purse of nails hanging at his hip, white lime powder on his boots, a small iron lantern set in the mud beside the plank, a narrow lane of dark mud between timber cottages with thatched roofs, dusk sky of dull ochre",
+    "seed": 978003001,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "main-nue",
+    "name": "Main-Nue",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, the whole figure from the top of her head down to her bare toes, a thin medieval peasant woman of forty walking toward us out of a muddy pilgrim camp, a plain human face with hollow cheeks and fierce devout eyes, a coarse undyed linen headscarf tied under the chin hiding her hair and ears, a long mud-stained grey wool tunic with long sleeves, a rope belt, both bare feet ankle-deep in brown mud at the bottom of the picture; on the left side of the picture her fist closes tightly around a knotted wooden walking staff, the staff foot sunk in the mud beside her bare foot; on the right side of the picture her other arm reaches straight out toward us, the open hand shown flat and large in the foreground, inside of the hand facing us, thumb on the outer edge of the picture; branded into the middle of that palm like a cattle brand, a dark brown seared circle the size of a coin with nine short seared rays around it, a crude sun stamped by a branding iron into scabbed skin; behind her, barefoot pilgrims in brown rags, patched canvas tents, smoky cookfires, grey evening sky",
+    "seed": 234327397,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "noye",
+    "name": "Noyé",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a drowned medieval peasant man preserved by the peat, realistic ordinary human face of a gaunt middle-aged farmer with a broad nose, thin closed lips and a short wet beard, long wet auburn hair plastered over the sides of his head and falling past his shoulders, smooth leathery reddish-brown tanned skin like old saddle leather, standing waist-deep in still black peat water among tall brown reeds, his arms hanging straight at his sides, a thin hammered copper bangle of shiny metallic orange on each wrist, a braided brown leather cord knotted tight around his throat, deep-set dark sunken eyes staring straight at the viewer, the water surface cutting his body at the waist, thick pale grey morning fog filling the marsh behind him, a soft grey sky",
+    "seed": 2910740948,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "porte-voix",
+    "name": "Porte-Voix",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a dead man of forty embalmed and dressed for his own wake, sitting sideways on a low wooden bench beside a tavern table, his whole body visible from boots to head, an ordinary handsome human face with full intact flesh, small rounded human ears half hidden under short combed dark hair, clean-shaven, ashen grey-white waxen skin like cold tallow, lilac-grey bloodless lips curved in a soft patient smile, milky washed-out pale grey irises almost white, a plain long dark brown leather coat covered in small round iron studs, a coarse undyed linen tunic, a sheathed two-handed longsword lying horizontally across both thighs, his two hands resting flat on the leather scabbard in his lap, the heavy oak table at his right elbow holding a single short tallow candle in a clay dish and a wooden cup, the dark hooded back of a listener at the lower left corner, dark timber walls, deep warm amber shadows",
+    "seed": 3010829970,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "garde-du-seuil",
+    "name": "Garde du Seuil",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a tall lean young human soldier of slender build, long legs and narrow waist, his head small in proportion to his tall body, standing straight like a sentry, bareheaded with short dark brown hair, a narrow stern clean-shaven face with a long jaw and thin lips, rounded human ears, chain mail hauberk painted chalk-white with lime wash down to his knees, over it a long plain off-white linen surcoat reaching his shins, on the chest one small painted badge: a dark-red arched wooden door with black iron hinges, closed, topped by a small gold crown, his right hand raising a short iron mace up against his right shoulder, its heavy round iron head of six sharp flanges clearly beside his cheek, a white almond-shaped shield strapped to his left forearm, tall leather boots dusted grey with ash up to the ankles, standing on wide stone steps before tall closed bronze double doors in a stone archway, high above the wall the outside of a round stone church with a broad green copper roof shaped like a bowl turned upside down, two burning torches flaming in iron brackets on either side of the doors, dark smoke drifting across the stone wall",
+    "seed": 2040624677,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "contremaitre-a-l-ombrelle",
+    "name": "Contremaître à l'ombrelle",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a plump clean-shaven medieval human merchant with a round pink smiling face and shrewd small eyes, a wide-brimmed woven straw hat on his head, a long belted ochre wool tunic down to his knees over brown hose, plain soft leather medieval shoes, his right fist gripping the long ivory shaft of an open white cloth parasol held high above his hat, his left arm clamping a thick leather-bound ledger against his ribs, a coiled whip of fine iron chain hanging from his leather belt, standing on a narrow earthen dyke between flat pink salt evaporation ponds, behind him three gaunt barefoot human laborers with grey wrinkled skin crusted in white salt, ragged linen rags, iron chains linking their ankles, bent over wooden rakes, a blazing white sun high in a pale bleached sky, glittering salt crystals everywhere",
+    "seed": 2649067622,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "ancetre-mure",
+    "name": "Ancêtre muré",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a squat broad dwarf king's corpse standing guard, short legs, barrel chest, grey parchment skin and closed sunken eyes, his lips stretched around a thick gag of solid pewter-grey metal that fills his mouth, a heavy frozen icicle of hardened grey lead hanging from that gag down his chin to his chest, long grey beard split into three braids bound with wide gold rings, a mail hood covering his head and cheeks under a low iron crown-helm, ornate engraved ancestral plate armour, thick square iron boots, a round iron shield on his left arm, a plain iron warhammer resting on his right shoulder in his right fist, behind him a towering stone door carved with stern bearded ancestor faces, its cracks filled with grey lead, rough black rock walls of a low cave hall, an iron brazier of red embers at his feet throwing orange from below",
+    "seed": 1518549657,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "souffle-du-dessous",
+    "name": "Souffle du Dessous",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, wide view of a timbered dwarven mine gallery with rough rock walls and crooked wooden props, a jagged crack crosses the rock floor in the lower middle, out of it surges a huge column of churning dusty grey-yellow air three times the height of a man filling the centre of the picture, the swirling haze shapes a giant faceless figure with a round misty head, broad shoulders and two long arms of vapour stretched out to the right, its smoky hands hovering above a dead dwarf miner, the dead miner rests on a flat raised rock shelf at mid-height on the right side, ashen grey skin, filmy eyes, his torso stiffly lifting off the stone and one rigid arm reaching up toward the vapour hands, his bearded head in full view at the middle of the picture, on a rock ledge at the left two tallow candles in a clay dish, their flames stretched flat and horizontal toward the column like tiny flags in a strong wind, grit and dust whirling in spirals, a sickly ochre haze seeping up from deep in the crack, the lowest part of the picture is plain dark rock floor",
+    "seed": 3853212640,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "gueule-de-saumure",
+    "name": "Gueule-de-saumure",
+    "prompt": "stormy sky, hard contrast, slate and rust tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a huge pale grey-white fish as long as a galley, shaped like a giant carp with scales, gills, dorsal fin and tail fin, one round dull eye on each side of its head, bursting head-first out of a black canal in a spray of water, its long scaly body arching half out of the water, its gaping mouth has bare jaw edges encrusted with thick jagged white rock salt crystals like a crust of salt around rows of teeth, wooden stilt houses with thatched roofs on both banks, iron lanterns with small orange flames hanging from the houses, orange lantern reflections on the black water, deep darkness, black sky, in the foreground floating flat on the water surface beside the fish, a low wooden barge loaded with sacks of salt and grey shrouded bodies bound with iron chains",
+    "seed": 522564177,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "raie-des-dunes",
+    "name": "Raie des dunes",
+    "prompt": "stormy sky, hard contrast, slate and rust tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, natural history engraving of a stingray, seen from behind and a little above so that only its flat back shows, a sand-coloured stingray the width of a nomad tent bursting at a slant out of a dull rust-red dune, its lower edge still dragging in the sand, its whole body one flat smooth rhombus like a kite, rough grainy hide crusted with dry sand, thick curtains of sand pouring off both wing tips, a long whip tail rising from the rear point of the rhombus and curling forward over the back, the tail ending in a single jagged saw-toothed barb aimed at a rider, a robed rider on a shaggy two-humped bactrian camel running away down the slope in the right foreground, the rider looking back over his shoulder, the camel twice as tall as the stingray is thick, a cracked slab of black volcanic glass half sunk in the sand at bottom left, the sky a deep red sunset with the last thin rim of the sun sinking behind the dunes at the horizon, long dark shadows stretching across the sand, gusts of sand blowing across the whole scene",
+    "seed": 4148622841,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "colonne-de-la-marche",
+    "name": "Colonne de la Marche",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, bird's-eye view from a high hilltop, a narrow raised medieval causeway of uneven rough-hewn cobblestones with tufts of grass between the stones and muddy cart ruts, winding gently through a vast plain of ripe golden wheat, the whole causeway packed edge to edge by one dense column of a hundred gaunt walking human corpses crowded shoulder to shoulder, all striding in step in the same direction along the cobbles, emaciated peasant men and women with ashen grey skin stretched over their cheekbones, hollow eyes, hanging jaws, long tangled hair on bare heads, rotting wool tunics and rags, a few rusted mail shirts, pale ochre dust billowing from their feet and hanging over the column, farther along the causeway in their path a tiny huddle of thatched timber cottages around a squat grey stone chapel with a short square belfry, distant horizon of low blue hills and dark forest, the whole daytime sky a churning mass of heavy mustard-yellow thunderclouds",
+    "seed": 3744263946,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "sonneur-du-glas",
+    "name": "Sonneur du Glas",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a ghost shaped entirely of drifting pale blue-grey smoke and swirling dust, in the form of a gaunt bareheaded peasant bell-ringer with cropped hair, a short coarse linen smock with rolled sleeves sketched in faint wisps, double exposure effect, the dark oak beams and rough stone blocks behind him plainly showing through his face, chest and arms, his body unravelling into a long trailing tail of smoke below the waist, drifting high in mid-air at the height of the bell, leaning far back with both arms reaching up and pulling down hard, his clenched hands wrapped around a thin twisting thread of white vapour that rises from his fists toward the bell and dissolves halfway, his lips parted mid-count, sunken patient empty eyes, above him one enormous dark bronze bell tipped steeply sideways in full swing on its oak headstock, its rim smeared with motion blur, sheets of dust and grit falling from the rafters through the smoke, inside a cramped belfry of rough grey stone and black oak timbers, pale grey rays slanting through slatted wooden louvres, an open trapdoor in the floorboards far below",
+    "seed": 412144413,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "mangeur-de-bucher",
+    "name": "Mangeur de bûcher",
+    "prompt": "stormy sky, hard contrast, slate and rust tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a hulking two-legged giant built like an enormous gaunt bald man, broad human face with heavy brow, flat nose and blunt jaw, dull grey skin caked in pale powdery ash like a man rolled in a cold hearth, ragged hide loincloth, absurdly long arms hanging past his knees ending in huge knuckled hands, squatting on bent human legs atop the collapsed smouldering embers of a funeral pyre of charred logs, a blackened human skeleton half-buried in the cinders, one hand pushing a charred bone between his teeth while the other grips a burnt thighbone, pale bones scattered over the ashes, small orange sparks drifting upward into a starless pitch-black sky, dim ember tones of brown and orange rising from below onto his chest and face, dark heather moor, behind him a rough fieldstone fort wall where a small cloaked watchman holds a burning wooden torch aloft",
+    "seed": 3517166542,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "porte-aigle",
+    "name": "Porte-Aigle des Marches",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a weathered fifty-year-old human soldier standing on the paved walkway of a long high stone fortress wall with square battlements, bareheaded, short grey hair plastered by rain, a thick white scar running across his cheek and nose, a broken nose, a grim lined face, wearing dented steel half plate with a plain steel breastplate over chainmail and a soaked dark red wool cloak, his left fist gripping a tall straight wooden staff planted on the stones, a small cast bronze eagle figure with spread wings bolted to the very top of the staff, his right hand holding a long steel sword pointed down at his side, heavy slanting rain streaks, wet glistening stones, behind him along the same wall three life-sized helmeted soldiers in red cloaks with tall rectangular shields and spears, beyond the wall a grey choppy sea and dark mountains under heavy grey storm clouds",
+    "seed": 1493980044,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "charme-pendu",
+    "name": "Charme pendu",
+    "prompt": "stormy sky, hard contrast, slate and rust tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a colossal old hornbeam tree shaped like a giant walking on its roots, its grey trunk wrung into a deep corkscrew spiral, three massive roots raised like striding legs above a mossy forest floor, two long bare limbs reaching straight out sideways like outstretched arms toward the left and right edges of the painting, from the far tip of each limb hang two elf skeletons, far out in open air with wide empty mist between them and the trunk, each skeleton hangs by a short green woody stem growing out of the top of its skull, like an apple hanging from its twig, the skeletons slender and tall with long narrow elf skulls, whole bodies, legs together, feet pointing down, each one laid to rest like a stone tomb effigy, hands resting flat on the opposite shoulders so the forearms make an X across the ribcage, serene and still, ivory bone wrapped in a few strands of ivy, ancient forest of giant trunks behind, deep green gloom, mist",
+    "seed": 1718561998,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "pris-dans-le-chene",
+    "name": "Pris-dans-le-chêne",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, the gnarled trunk of a colossal split oak filling the frame, an elf skeleton grown into the oak like a carved relief in the bark, its pelvis, legs and spine sealed inside the wood grain, only the ribcage, skull and arms wrenched out of the trunk, thick ridged bark and moss grown over and between the ribs, a long narrow elongated skull with high sharp cheekbones and a tapered jaw straining forward, mouth gaping, both arms jerked upward and outward in violent effort, bony fingers hooked like claws ripping chunks of bark, splinters and wood fibres stretched taut between the bones and the trunk, brown oak leaves tumbling around it, emerald green sunbeams slanting down through the forest canopy behind the oak",
+    "seed": 2399149840,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "wyverne-des-ossiers",
+    "name": "Wyverne des Ossiers",
+    "prompt": "stormy sky, hard contrast, slate and rust tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, side profile of a lean wyvern standing like a giant eagle on two scaly hind legs, its two leathery wings raised high above its back like a heraldic bird, the wings are its only forelimbs, the whole beast is chalk-white and pale grey like weathered limestone and old marble, white wing membranes with grey veins, long lizard head like a monitor lizard with a smooth bare skull and an open jaw of teeth, long whip tail arching up over its back ending in a large barbed arrowhead stinger like a scorpion sting, gripping the tip of a sharp white limestone crag notched like a row of vertebrae, a shallow nest of goat skulls with curled horns and goat bones packed under its talons, far below a steep valley of dark green larch trees and a jade-green mountain torrent, crisp clear pale blue alpine sky with thin white clouds, distant snowy peaks",
+    "seed": 1236397581,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "inquisiteur-de-la-cire",
+    "name": "Inquisiteur de la Cire",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, portrait of an ordinary middle-aged human man, a stern church inquisitor with a bare shaved head, a lean weathered face, grey stubble, thin pressed lips and hard pale eyes, wearing a long plain white wool robe over sooty black iron half plate armour, dirty charcoal-black breastplate and pauldrons smudged with ash, a thick white church candle bolted upright on top of his left shoulder plate with a small flame burning beside his ear, thick black wax running down from the candle over the pauldron and dripping across the breastplate in long black streaks, his right hand in a mail glove gripping a short iron flanged mace with a heavy ribbed head, his left hand holding an open leather-bound ledger filled with handwritten names, plain brown leather boots on his feet, standing on the flagstones of a whitewashed abbey cloister with round arches, terraced vineyards on the hills behind",
+    "seed": 2563682011,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "nuee-de-remontes",
+    "name": "Nuée de remontés",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, seen from behind the shoulder of a cloaked traveller kneeling on the flagstones of a narrow stone crypt, his right fist gripping a short wooden torch wrapped in tarred rags with one small orange flame, in front of him a long jagged crack splits the floor and shines bright silver-white like molten tin, from the crack a spiralling column of pale grey translucent mist rises toward the vault, the mist shaped into many weeping human faces like faded portraits, a plump frightened child, a bearded soldier in a kettle helmet, a wrinkled grandmother in a linen wimple, a young mother, each with soft lips, full hair and tearful pleading eyes, dozens of thin misty arms stretching out of the spiral and clutching his sleeve, his cloak and his torch arm, the whole column smeared and twisted by fast circular motion, stone coffins along both walls",
+    "seed": 3507303498,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "maitre-cloueur",
+    "name": "Maître-cloueur",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a stocky old Flemish peasant gravedigger as painted by Pieter Bruegel the Elder, broad weathered red face, big fleshy nose, grey bristly hair cut short, round fleshy human ears with heavy earlobes, a long black iron nail hanging from his right earlobe like a crude earring, three small notches cut into the nail's square head, wearing a black tarred leather cuirass laced at the sides over a coarse grey wool smock, a broad leather belt with a row of long black iron nails slotted upright through loops all around his waist and a small white cloth pouch of salt tied at his hip, his right fist wrapped around the ash-wood handle of a long iron hammer with a heavy blunt square head, the hammer resting on his right shoulder, his left hand hanging at his side holding a small iron lantern with horn panes, both hands rough and crossed with many small white scars, standing in a grey fog among crooked wooden grave markers, at his feet a dead man in a linen shroud lying on his back in the mud with thick iron nails hammered through both wrists and both ankles into the earth",
+    "seed": 3066161731,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "vieille-noyee",
+    "name": "Vieille Noyée",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a hunched toothless old crone of ninety, Tollund bog body come back to life, her face and arms the deep walnut brown of an old leather saddle, cracked with a thousand wrinkles, a sodden hood of coarse brown wool pulled over her head and ears, long wet dark copper-red hair spilling from the hood down over her chest, a heavy pile of green verdigris copper necklaces and torcs on her breast, she wades waist-deep out of black peat water through tall brown reeds, both knotted hands clasped on the top of one long wooden boat oar held upright beside her, its wide flat blade in the water, kind patient grandmother eyes, behind her an old wooden jetty on stilts where a dozen long black snake-like eels hang by their heads from a rope, thick grey marsh fog filling the whole background",
+    "seed": 4264832664,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "wyverne-levee",
+    "name": "Wyverne levée",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, the rotting corpse of a giant quetzalcoatlus pterosaur leaping off a pale limestone ridge, seen from the side, its two huge wings spread wide and high above its back like a bat, each wing a long bony arm with a single elongated finger bone, the wing membrane rotted into torn grey rags with big ragged holes showing the dark storm clouds through them, its two clawed hind feet kicking off the rock, gaunt shrunken body of dry cracked grey-brown hide split open over bare ribs, long narrow head with the front half a bare yellowed skull with an empty eye socket and the back half dried rotten hide, a long whip-thin reptile tail ending in a hooked barbed bone stinger trailing down onto the stone, heavy black storm clouds filling the whole sky, far behind on a crag a squat collapsed stump of a round dwarven stone watchtower, half its wall fallen into rubble",
+    "seed": 2936883979,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "echo-de-verre",
+    "name": "Écho de verre",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a giant figure of smoky clear glass three times the height of a man, shaped like a tall stained-glass church window come alive, its torso and legs made of large flat panes of tinted glass joined at sharp edges, the crimson dusk sky and the red setting sun on the horizon seen right through its chest like through a window pane, its head a smooth tall egg of polished glass as blank as a bottle, two very long thin arms of cut glass tapering into jagged sword-like shards that reach down to its knees, it climbs up out of a cracked black glass slab split in three pieces half sunk in red sand, wide rolling red sand dunes stretching away to the horizon under a deep crimson and mauve dusk sky, rings of sound rippling through the air around its raised arm like ripples spreading on a pond, the sand around the slab trembling in concentric rings, long violet shadows across the dunes",
+    "seed": 276017617,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "peseur-renegat",
+    "name": "Peseur renégat",
+    "prompt": "torchlight and candlelight, warm browns and dried blood red, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a gaunt bookkeeper monk of thirty with a short dark beard and a tonsured head, broad plain human face, standing on a worn stone floor in a long brick-red wool robe splattered with black ink stains, ink-blackened fingers, on his chest a small brass merchant's scale on a leather necklace, two tiny dishes on a short beam tipped sharply sideways, a thick closed brown leather account book with a blank cover clamped tight under his left armpit, his right arm thrust upward with open palm, a large square block of brass floating just above the palm, the brass block half transparent like smoke, loose parchment sheets spinning around him in a wide spiral, behind him bare red brick walls and dark oak shelves of scrolls, beeswax candles in iron holders",
+    "seed": 3226155596,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "ver-des-ossiers",
+    "name": "Ver des Ossiers",
+    "prompt": "stormy sky, hard contrast, slate and rust tones, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a colossal pale worm with segmented limestone-white rings bursting through the wall of a dwarven ossuary, hundreds of skulls embedded in its flesh, a circular maw of grinding teeth, bones raining down, dust, torchlight from fleeing dwarves",
+    "seed": 353015784,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "bouche-de-gorvan",
+    "name": "Bouche de Gorvan",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a weary, kindly middle-aged man seen in three-quarter view seated on a low wooden bench at the left of the picture, turned toward an empty folding camp chair of wood and leather at the right, a single thick beeswax candle in a heavy iron dish on a small wooden crate between them, the inside of a dim canvas army tent with sagging stitched walls behind, bare trampled earth floor, his shoulder-length straight grey hair falling over his ears, ashen pale skin, a gaunt clean-shaven face, very pale washed-out grey eyes, his mouth open in speech with lips apart and lower jaw dropped as if halfway through a sentence, one hand lifted gently toward the empty chair, wearing a long hooded grey wool cloak of fine weave over a belted ankle-length grey wool cote, a thin ribbon of grey candle smoke rising and spreading into a wide translucent veil around his head, the veil of smoke swirling into several ghostly transparent faces drawn only in wisps of smoke, an old woman, a young man, a child, their features soft and see-through like breath on glass",
+    "seed": 3816039015,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "chair-du-sceau",
+    "name": "Chair du Sceau",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, the inside of a narrow vertical well of rough black basalt columns plunging straight down into a pitch-black void, its walls overgrown by enormous cords of raw golden flesh as thick as oak trunks, wet and fibrous like exposed muscle and sinew, sunk deep into the cracks of the rock and branching across the stone like tree roots, the cords torn open in several places with molten gold pouring out of the gashes like bright blood and spattering the basalt, the nearest cords peeling away from the wall and stretching across the void toward four tiny adventurers holding torches on a narrow ledge cut into the well wall, the adventurers very small against the immense wall, warm gold against cold black",
+    "seed": 3413553724,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "dent-du-mangeur",
+    "name": "Dent du Mangeur",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, side profile view of a huge hunched four-legged creature crawling diagonally upward across a cracked black basalt cliff face inside a deep cavern shaft, its belly pressed to the rock, its bulky body is a heap of raw pink and grey human flesh, half-dissolved naked human torsos, shoulders, buttocks and thighs melted into one another like soft wax, three or four sagging human faces with shut eyelids sunk into its wet flanks, its legs are long fused human arms with splayed fingers groping and gripping cracks in the stone, its entire front end is one gaping mouth split vertically from bottom to top, a tall narrow slit like a torn seam, edged with crooked yellowed human molars and incisors of mismatched sizes, slimy glistening flesh dripping thick mucus down the rock, thin veins of gold ore running through the black stone, deep shadows",
+    "seed": 13806978,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "connetable-d-os",
+    "name": "Thiébaut Mainferrée, le Connétable d'os",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, full length figure seen from head to boots in the middle distance, a broad-shouldered human warlord standing tall on a purple heather moor, short cropped grey hair, round human ears, ashen grey skin, his calm face carved like a stone tomb effigy with eyelids shut, polished bronze breastplate over dark iron plate armour on arms and legs, a ragged wolf-fur cloak hanging in torn strips, a round bronze shield strapped to his left forearm, his right gauntlet resting on the pommel of one long bastard sword driven point-first into the earth beside his boot, on either side of him two man-sized skeleton soldiers in rusted iron helmets and torn mail shirts heaving themselves waist-deep up out of the broken black soil, bony hands gripping the heather, behind them a heaving sky of black thunderclouds above a flat moor, a few small crows high in the clouds",
+    "seed": 3338986284,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "langue-de-gorvan",
+    "name": "Langue de Gorvan",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, close view at floor level inside a small round marble chapel, in the foreground a wide jagged black crack splits the white marble floor and the thick root of one giant human tongue heaves up out of it, the root plunging straight down into the black depth of the crack, ash-grey tongue flesh exactly like a real human tongue in an anatomy book, smooth, soft and swollen, slick with saliva, one deep central furrow along its whole length, fine pale papillae speckling its upper surface, the tongue rises in one long unbroken sweep, coils once around a thick marble column, and its broad flat spatula-shaped tip presses wetly against the cheek and chest of a peasant man in a brown wool tunic who kneels pinned at the foot of the column, both his hands gripping the column, his head turned aside, his eyes shut, toppled iron candlesticks, scattered candles and smooth flat puddles of spilled white wax on the cracked floor, a few small candle flames, faint gold falling from the high dome, close, intimate and uneasy mood",
+    "seed": 2880096269,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "roi-des-noyes",
+    "name": "Le Roi des Noyes",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a thousand-year-old human king preserved in a peat bog like the Tollund Man, seen in three-quarter view turned toward the left of the picture, a gaunt old man's face with sunken cheeks, closed lips and leathery reddish-brown tanned skin, long matted black hair hanging over the sides of his head down to his shoulders, a heavy crude band of black hammered iron on his brow as a crown, a rusted iron mail coat, standing waist-deep in dark brown peat water, his right hand gripping a short carved sceptre of black bog oak reaching to his chest, his left forearm bearing a round oak shield, behind him a few bareheaded bog men and women with shrunken brown human faces and matted hair standing silently among tall reeds, all of them turned toward the left, the whole sky a flat even sheet of pale grey mist above the reeds",
+    "seed": 983866455,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "geant-fige",
+    "name": "Géant figé du Verre",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a colossal humanoid giant filling the upper two thirds of the picture, its whole body made of translucent smoky obsidian glass like a huge cracked bottle, broad glass shoulders, a smooth bald glass head with a single enormous round eye half opened in the middle of its face, its torso and arms seamed with jagged bright white cracks, icy white brilliance trapped inside the glass shining through every crack, its legs and hips still sunk in a vast flat sheet of black glass that covers the dusky red sand, both long glass arms wrenched free, one huge clenched glass fist slammed down on the black sheet, the sheet splintering into a web of cracks around the fist, large black glass shards hurled up into the air around the giant, at the bottom of the picture a tiny caravan of six camels and robed travellers running away toward the viewer, each traveller holding a small brass hand lantern with a warm orange flame, the travellers tiny next to the giant's fist, a dark blue night sky full of small stars above the desert",
+    "seed": 590330120,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "reine-sous-le-sel",
+    "name": "Amarante, la Reine sous le Sel",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, the withered mummy of an ancient queen seated alone and upright on a plain cube of rough white salt, a slender female mummy of human size, dark brown leathery skin shrunk tight over her skull and cheekbones, a small shrunken nose, thin dry lips pressed shut, a neck of dry tendons, her eyes wide open with pale glassy grey irises staring calmly at the viewer, thick crusts of sparkling white salt crystals growing over her brow, cheeks, collarbones, shoulders and forearms, a long faded crimson burial gown stiff with white salt crystals falling straight to the floor and hiding her feet, a thin circlet of jagged white salt crystals on her head, her right hand held up at shoulder height with withered fingers spread and a small whirl of loose white salt grains spinning above the palm, her left hand resting flat on her knee, behind her the sloping white salt walls of a hollow pyramid chamber meeting in shadow overhead, two thin bright cracks in the walls, broken iron chains lying in coils on the white salt floor",
+    "seed": 3817251184,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "main-de-gorvan",
+    "name": "Main de Gorvan",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, one colossal ash-grey human right hand the size of a house, anatomically normal like a giant statue cast from a real man's hand, one thumb jutting out to the left side and four fingers side by side (index, middle, ring, and a shorter little finger), wrist rising out of a jagged hole in the cracked marble floor of a dark domed rotunda, palm facing the viewer, the five fingers spread and bent toward us, the tip of every finger and of the thumb split open into a small human mouth with pale grey lips and teeth, five open whispering mouths in a row, cadaverous ash-grey skin with dark veins, thick rivers of white melted wax creeping across the marble and spilling over the broken edge down into the hole, far behind the hand, small but clear, a mummified dead emperor with shrunken grey skin tight over his skull, empty eye sockets, a gold crown on his head, slumped on a tall carved stone throne, one narrow shaft of pale sky falling from the round opening at the top of the dome",
+    "seed": 357787862,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "gorvan-fragment",
+    "name": "Gorvan, le Frère du Dessous (fragment)",
+    "prompt": "near darkness, a single pale cold light rising from below, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, a giant regal man seated upright on a massive cracked black basalt throne, the throne hovering in empty air above the round black mouth of a bottomless stone well, seen from below, his bare feet hanging over the void, the proud marble-bust face of a Roman emperor, high cheekbones, straight nose, firm jaw, short cropped grey hair, round human ears, clean-shaven, skin chalky and bloodless like unbaked bread dough, ash-white face and hands with grey lips, wide pale silver-grey eyes like clouded glass, a gracious charming smile of a host greeting old friends, one open hand extended toward the viewer in invitation, draped in a simple undyed wool toga hanging in long folds from one shoulder, torn ribbons of golden flesh like ripped veins drifting in the air around the throne, deep in the black well a few faint pale human faces, cold grey mist breathing up out of the well and catching on his face from beneath, the rest of the scene black",
+    "seed": 2870881035,
+    "width": 1024,
+    "height": 1344
+  },
+  {
+    "id": "ostral-le-dieu-mort",
+    "name": "Ostral, le Dieu-Empereur mort",
+    "prompt": "cold silver-grey light, grey-green tones, low ground mist, oil painting on aged canvas, dark fantasy bestiary plate, single creature shown full body, centered, eye-level view, uncluttered background, set in an untouched 13th century world of timber, thatch, stone and iron, visible brush strokes, muted earth palette of umber, ochre and verdigris, dramatic chiaroscuro, painterly realism in the manner of 17th century Dutch masters, clean unmarked canvas, an embalmed emperor preserved like a funeral effigy, beardless, smooth whole flesh the golden-brown of baked bread crust, face slack and expressionless as a waxwork mannequin, eyes wide open, dull and glassy like a doll's eyes, unblinking fixed stare, a plain band of black iron as a crown slipped sideways over one temple, a faded umber robe stiff with drips of wax, his body leaning forward as he pushes himself up from a heavy throne cut from rough grey granite blocks, his knees and shins sealed inside a great hill of melted white candle wax, centuries of layered drips and frozen runs like pale stalactites, the hill studded with stubby half-burnt candle stumps with short charred black wicks, long jagged cracks splitting the wax around his knees, flakes of wax falling, a vast circular hall of dark stone columns fading into deep shadow, a soft slanting dusty ray falling from high above out of frame across his face and shoulders",
+    "seed": 1276643855,
+    "width": 1024,
+    "height": 1344
+  }
+]

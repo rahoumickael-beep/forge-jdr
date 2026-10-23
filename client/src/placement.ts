@@ -27,7 +27,7 @@ export function tokenForCharacter(room: RoomView, c: Character, color: string, o
 
 const ENEMY_COLORS = ["#7a2a22", "#5b3a6b", "#3c4a2a", "#6b4a1f"];
 
-/** Place les ennemis d'une rencontre, cachés, regroupés dans une salle au hasard. */
+/** Place les ennemis d'une rencontre, regroupés dans une salle au hasard. */
 export function tokensForEncounter(room: RoomView, e: Encounter): Token[] {
   const map = room.map;
   const area = map?.rooms.length ? map.rooms[Math.floor(Math.random() * map.rooms.length)] : undefined;
@@ -43,10 +43,13 @@ export function tokensForEncounter(room: RoomView, e: Encounter): Token[] {
         y: pos.y,
         color: ENEMY_COLORS[k % ENEMY_COLORS.length],
         kind: "monstre",
-        hidden: true,
+        // En vision dynamique, les joueurs ne voient déjà que ce que voient leurs pions : le monstre reste
+        // visible pour pouvoir déclencher le combat. En brouillard manuel, le MJ le révèle lui-même.
+        hidden: room.visionMode === "manuel",
         hp: en.hp,
         hpMax: en.hp,
         ac: en.ac,
+        creatureId: en.creatureId,
       });
     }
   });

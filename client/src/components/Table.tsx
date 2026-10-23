@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { getGenre } from "../../../shared/genres";
 import type { RoomView } from "../../../shared/types";
 import { forgetSession, toast, useStore } from "../store";
 import { DiceTray, Log } from "./Dice";
-import { CombatPanel, GeneratePanel, MapPanel, NotesPanel, ScenariosPanel, SettingsPanel, TokensPanel } from "./GmPanels";
+import { CombatIntro } from "./CombatIntro";
+import { InitiativeFrieze } from "./InitiativeFrieze";
+import { BestiaryPanel, CombatPanel, GeneratePanel, MapPanel, NotesPanel, ScenariosPanel, SettingsPanel, TokensPanel } from "./GmPanels";
 import { MapCanvas, type MapTool } from "./MapCanvas";
 import { HandoutsPanel, MyCharacterPanel, PartyPanel } from "./PlayerPanels";
+import { INITIAL_NAV, Rulebook, RulebookOverlay, type BookNav } from "./Rulebook";
 
-const GM_TABS = ["Générer", "Carte", "Pions", "Combat", "Scénarios", "Narration", "Réglages"] as const;
-const PLAYER_TABS = ["Mon perso", "Groupe", "Documents"] as const;
+const GM_TABS = ["Générer", "Carte", "Pions", "Bestiaire", "Combat", "Scénarios", "Narration", "Réglages", "Règles"] as const;
+const PLAYER_TABS = ["Mon perso", "Groupe", "Documents", "Règles"] as const;
 
 export function Table({ room }: { room: RoomView }) {
   const { connected } = useStore();
@@ -18,6 +21,9 @@ export function Table({ room }: { room: RoomView }) {
   const [tool, setTool] = useState<MapTool>("deplacer");
   const [brush, setBrush] = useState(3);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [bookNav, setBookNav] = useState<BookNav>(INITIAL_NAV);
+  const [bookOpen, setBookOpen] = useState(false);
+  const closeBook = useCallback(() => setBookOpen(false), []);
 
   const invite = `${location.origin}/?partie=${room.code}`;
   async function copyInvite() {
@@ -30,9 +36,9 @@ export function Table({ room }: { room: RoomView }) {
   }
 
   return (
-    <div className="table-layout">
+    <div className="table-layout themed-bg" data-genre={room.genre}>
       <header className="topbar">
-        <h1>{room.name}</h1>
+        <h1 className="gilded">{room.name}</h1>
         <span className="muted small">{getGenre(room.genre).label} · niveau {room.level}</span>
         <button className="code-chip" onClick={copyInvite} title="Copier le lien d'invitation">{room.code}</button>
         {!connected && <span className="small" style={{ color: "#f0b2a8" }}>Connexion perdue, reconnexion…</span>}
@@ -51,6 +57,7 @@ export function Table({ room }: { room: RoomView }) {
       <div className="table-main">
         <div style={{ position: "relative", minHeight: 0, display: "grid" }}>
           <MapCanvas room={room} tool={tool} brush={brush} selectedId={selectedId} onSelect={setSelectedId} />
+          <InitiativeFrieze room={room} />
           {isGM && room.map && (
             <div className="map-tools" role="toolbar" aria-label="Outils de carte">
               <button className={`btn small${tool === "deplacer" ? " active" : ""}`} onClick={() => setTool("deplacer")}>Déplacer</button>
@@ -78,6 +85,7 @@ export function Table({ room }: { room: RoomView }) {
             {tab === "Générer" && <GeneratePanel room={room} />}
             {tab === "Carte" && <MapPanel room={room} />}
             {tab === "Pions" && <TokensPanel room={room} selectedId={selectedId} onSelect={setSelectedId} />}
+            {tab === "Bestiaire" && <BestiaryPanel room={room} />}
             {tab === "Combat" && <CombatPanel room={room} />}
             {tab === "Scénarios" && <ScenariosPanel room={room} />}
             {tab === "Narration" && <NotesPanel room={room} />}
@@ -85,9 +93,10 @@ export function Table({ room }: { room: RoomView }) {
             {tab === "Mon perso" && <MyCharacterPanel room={room} />}
             {tab === "Groupe" && <PartyPanel room={room} />}
             {tab === "Documents" && <HandoutsPanel room={room} />}
+            {tab === "Règles" && <Rulebook room={room} nav={bookNav} onNav={setBookNav} onOpenWide={() => setBookOpen(true)} />}
           </div>
           <div>
-            {room.initiative.entries.length > 0 && (
+            {room.initiative.entries.length > 0 && !room.combat && (
               <div className="small" style={{ padding: "6px 12px", background: "#c9a34e22", borderTop: "1px solid #00000080" }}>
                 Round {room.initiative.round} · au tour de <b>{room.initiative.entries[room.initiative.turn]?.name}</b>
               </div>
@@ -97,6 +106,8 @@ export function Table({ room }: { room: RoomView }) {
           </div>
         </aside>
       </div>
+      <CombatIntro room={room} />
+      {bookOpen && <RulebookOverlay room={room} nav={bookNav} onNav={setBookNav} onClose={closeBook} />}
     </div>
   );
 }

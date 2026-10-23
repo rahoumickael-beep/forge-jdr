@@ -32,10 +32,11 @@ export function Lobby() {
   }
 
   return (
-    <main className="lobby">
+    <main className="lobby themed-bg" data-genre={genre}>
       <div className="lobby-inner">
         <header className="lobby-title">
-          <h1>Forge JdR</h1>
+          <h1 className="gilded">Forge JdR</h1>
+          <div className="ornament" aria-hidden="true" />
           <p>Prépare ta partie, ouvre la table et envoie le code à tes amis. Chacun déplace son pion depuis chez lui.</p>
         </header>
 

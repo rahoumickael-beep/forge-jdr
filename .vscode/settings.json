@@ -1,0 +1,6 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": { "node_modules": true, "dist": true },
+  "search.exclude": { "dist-livre": true, "dist-livre-impression": true, "content/aubreterre/illustrations-hd": true },
+  "workbench.editorAssociations": { "*.pdf": "pdf.preview" }
+}

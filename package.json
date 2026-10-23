@@ -10,7 +10,11 @@
     "start": "tsx server/index.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "tsx --test shared/*.test.ts",
-    "playtest": "node scripts/playtest.mjs"
+    "playtest": "node scripts/playtest.mjs",
+    "livre": "tsx scripts/livre.ts dist-livre",
+    "apercu-cartes": "node scripts/apercu-cartes.mjs",
+    "livres": "tsx scripts/livres/index.ts tout dist-livre",
+    "livres:impression": "tsx scripts/livres/index.ts tout dist-livre-impression --hd"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",
@@ -28,7 +32,9 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "concurrently": "^10.0.6",
+    "pdf-lib": "^1.17.1",
     "playwright": "^1.64.1",
+    "sharp": "^0.34.5",
     "typescript": "^5.9.3",
     "vite": "^8.0.0"
   },
