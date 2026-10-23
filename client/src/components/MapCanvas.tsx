@@ -15,6 +15,7 @@ import {
   drawPings,
   drawReach,
   drawRoomLabels,
+  exploredRooms,
   drawSelection,
   drawPanelFrame,
   drawToken,
@@ -75,6 +76,12 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   const reachShape = useMemo(() => (map && reach ? reachLoops(map, reach) : null), [map, reach]);
   const live = useRef({ room, pings, selectedId, localFog, isGM, active, reachShape, accent, lighting });
   live.current = { room, pings, selectedId, localFog, isGM, active, reachShape, accent, lighting };
+  // Rendu à deux vitesses : vif pendant 2 s après chaque changement ou geste, lent au repos (la carte graphique souffle).
+  const awakeUntil = useRef(0);
+  const wake = () => {
+    awakeUntil.current = performance.now() + 2000;
+  };
+  useEffect(wake, [room, pings, selectedId, localFog]);
 
   // Pions qui voient pour ce joueur (comme viewFor côté serveur) : le bord de sa vue suit leur polygone de vue.
   const eyesKey =
@@ -110,6 +117,10 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   };
   const fogRef = useRef(fogMask);
   fogRef.current = fogMask;
+  // Noms des salles qu'un joueur a explorées (le MJ les voit toutes).
+  const roomsShown = useMemo(() => (map && !isGM ? exploredRooms(map, room.fog, room.fogEnabled) : undefined), [map, room.fog, room.fogEnabled, isGM]);
+  const roomsShownRef = useRef(roomsShown);
+  roomsShownRef.current = roomsShown;
 
   // Cadrer la carte quand elle change. Le MJ la voit entière ; un joueur arrive sur ce que voit son pion, assez près pour le lire,
   // au lieu d'une tache claire perdue dans le brouillard.
@@ -292,7 +303,9 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     let last = 0;
     const frame = (now: number) => {
       raf = requestAnimationFrame(frame);
-      if (now - last < (reducedMotion ? 200 : 33)) return; // ~30 images/s suffisent
+      // ~30 images/s quand quelque chose bouge (caméra, glisser, signal, combat), 4 au repos : les torches vacillent encore.
+      const busy = now < awakeUntil.current || !!cam.current || !!drag.current || live.current.pings.length > 0 || !!live.current.active;
+      if (now - last < (reducedMotion ? 200 : busy ? 33 : 250)) return;
       last = now;
       draw(now / 1000);
     };
@@ -409,8 +422,8 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       );
     }
 
-    // Étiquettes des salles, pour le MJ
-    if (isGM) drawRoomLabels(g, map, ox, oy, cell);
+    // Étiquettes des salles : toutes pour le MJ, celles déjà explorées pour un joueur
+    drawRoomLabels(g, map, ox, oy, cell, isGM ? undefined : roomsShownRef.current);
 
     // Combat : cases atteignables du pion dont c'est le tour, puis auréole sous ce pion.
     if (reachShape && active) drawReach(g, reachShape, ox, oy, cell, accent, time, reducedMotion);
@@ -454,7 +467,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
   }
 
   return (
-    <div className="map-area" ref={wrapRef}>
+    <div className="map-area" ref={wrapRef} onPointerDownCapture={wake} onPointerMoveCapture={wake} onWheelCapture={wake}>
       <canvas
         ref={canvasRef}
         onPointerDown={onPointerDown}

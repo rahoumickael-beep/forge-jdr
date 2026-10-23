@@ -10,7 +10,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 | # | Étape | État |
 |---|---|---|
 | 1 | Mise à l'abri du travail en cours, journal de production | fait |
-| 2 | Fondations sûres : fiches de PNJ hors de la vue joueur, droits des fiches et des pions, import contrôlé, réglages vérifiés, documents remis à certains joueurs | fait (PR n°3), sauf la carte : voir ci-dessous |
+| 2 | Fondations sûres : fiches de PNJ hors de la vue joueur, droits des fiches et des pions, import contrôlé, réglages vérifiés, documents remis à certains joueurs | fait (PR n°3) |
 | 3 | Outillage Claude Code : hooks en Node, agents Haiku et Sonnet, skills, MCP ComfyUI (à montrer avant d'installer) | à faire |
 | 4 | Canon d'Aubreterre en données typées, générateurs branchés dessus, tests de cohérence | à faire |
 | 5 | Mémoire de campagne côté serveur, préparation de la séance suivante | à faire |
@@ -18,8 +18,8 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 | 7+ | Un monde par genre : 3 prémisses, puis noms, puis style, au choix de Mickael | à faire |
 
 ## Décisions techniques
-- Carte côté joueur : le choix A (n'envoyer que les cases vues) casse le rendu, qui a besoin de toutes les cases et des noms des salles pour meubler, et redessiner coûte 0,3 à 1,5 s par pas. La graine suffit de toute façon à reconstruire la carte. Variante proposée à Mickael le 23/10/2026, en attente.
-- Performance : la carte se redessine 30 fois par seconde en permanence (torches, brume). À passer en rendu à la demande (carte graphique de Mickael à 99 % pendant les essais).
+- Carte côté joueur : le choix A (n'envoyer que les cases vues) casse le rendu, qui a besoin de toutes les cases et des noms des salles pour meubler, et redessiner coûte 0,3 à 1,5 s par pas. La graine suffit de toute façon à reconstruire la carte. Mickael a choisi A′ le 23/10/2026 : la carte complète reste dans les données (comme Roll20 ou Foundry), rien d'inexploré ne s'affiche ; un joueur voit le nom d'une salle une fois plus de la moitié explorée.
+- Performance : rendu à deux vitesses (30 images/s pendant 2 s après un changement ou un geste, 4 au repos). Mesuré : 20 images en 5 s au repos contre 150 avant.
 
 ## État au 23/10/2026
 - Typecheck, 34 tests, build et partie automatique : tout passe.

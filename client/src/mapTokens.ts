@@ -2843,15 +2843,16 @@ export function drawAmbient(g: CanvasRenderingContext2D, image: HTMLCanvasElemen
   return true;
 }
 
-/** Nom des salles pour le MJ : lettres à la plume, détourées de papier pour rester lisibles sur l'ombre. */
-export function drawRoomLabels(g: CanvasRenderingContext2D, map: GameMap, ox: number, oy: number, cell: number) {
+/** Nom des salles : lettres à la plume, détourées de papier pour rester lisibles sur l'ombre.
+ * Le MJ les voit toutes ; un joueur, seulement celles qu'il a explorées (`shown`). */
+export function drawRoomLabels(g: CanvasRenderingContext2D, map: GameMap, ox: number, oy: number, cell: number, shown?: Set<number>) {
   if (cell < 16) return;
   const px = Math.max(13, cell * 0.48);
   g.font = `italic ${px}px ${DISPLAY}`;
   g.textAlign = "center";
   g.lineJoin = "round";
-  for (const r of map.rooms) {
-    if (!r.label) continue;
+  for (const [i, r] of map.rooms.entries()) {
+    if (!r.label || (shown && !shown.has(i))) continue;
     const cx = ox + (r.x + r.w / 2) * cell;
     const cy = oy + (r.y + 0.62) * cell;
     g.lineWidth = Math.max(4, px * 0.4);
@@ -3100,5 +3101,17 @@ export function fogDensity(
       else out[i] = 255;
     } else out[i] = hidden ? 255 : 0;
   }
+  return out;
+}
+
+/** Salles qu'un joueur a explorées : plus de la moitié de leurs cases hors du brouillard. Sans brouillard, toutes. */
+export function exploredRooms(map: GameMap, fog: boolean[] | null, fogEnabled: boolean): Set<number> {
+  const out = new Set<number>();
+  map.rooms.forEach((r, i) => {
+    if (!fogEnabled || !fog) return out.add(i);
+    let seen = 0;
+    for (let y = r.y; y < r.y + r.h; y++) for (let x = r.x; x < r.x + r.w; x++) if (!fog[y * map.width + x]) seen++;
+    if (seen * 2 > r.w * r.h) out.add(i);
+  });
   return out;
 }
