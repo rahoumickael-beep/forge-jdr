@@ -1,6 +1,6 @@
 // Partie de test automatique : un MJ et un joueur dans deux navigateurs.
 // Usage : npm run build && npm run playtest   (lance son propre serveur sur le port 3999)
-import { spawn } from "node:child_process";
+import { execSync, spawn } from "node:child_process";
 import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -8,10 +8,12 @@ import { chromium } from "playwright";
 
 const PORT = 3999;
 const URL = `http://localhost:${PORT}`;
+const win = process.platform === "win32";
 const server = spawn("npx", ["tsx", "server/index.ts"], {
   env: { ...process.env, PORT: String(PORT), DATA_DIR: mkdtempSync(join(tmpdir(), "forge-")) },
   stdio: ["ignore", "pipe", "inherit"],
-  detached: true, // groupe de processus à part : on tue npx, tsx et le serveur d'un coup
+  shell: win, // sous Windows, npx est un script .cmd
+  detached: !win, // groupe de processus à part : on tue npx, tsx et le serveur d'un coup
 });
 await new Promise((resolve) => server.stdout.on("data", (d) => String(d).includes("prête") && resolve()));
 
@@ -159,7 +161,8 @@ try {
 } finally {
   await browser?.close();
   try {
-    process.kill(-server.pid);
+    if (win) execSync(`taskkill /pid ${server.pid} /T /F`, { stdio: "ignore" });
+    else process.kill(-server.pid);
   } catch {}
 }
 if (!process.exitCode) console.log("Partie de test réussie.");
