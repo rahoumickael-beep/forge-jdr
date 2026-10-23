@@ -19,11 +19,11 @@ for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f
 }
 console.log(`${n} vignette(s) écrite(s) dans ${SORTIE}.`);
 
-// Illustrations des cartes de rencontre : format portrait, plein cadre, une par créature (pas les classes).
+// Illustrations des cartes : format portrait, plein cadre, une par créature et par classe (cartes d'alliés).
 const CARTES = "client/public/cartes";
 mkdirSync(CARTES, { recursive: true });
 let k = 0;
-for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f) && !f.startsWith("classe-"))) {
+for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f))) {
   const dest = `${CARTES}/${f.replace(/\.jpg$/, ".webp")}`;
   if (existsSync(dest) && !process.argv.includes("--refaire")) continue;
   await sharp(`${SOURCE}/${f}`).resize(600, 760, { fit: "cover", position: sharp.strategy.attention }).webp({ quality: 78 }).toFile(dest);

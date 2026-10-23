@@ -7,6 +7,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - 23/10/2026 : plan en 7 étapes validé, dans l'ordre ci-dessous.
 - 23/10/2026 : carte côté joueur en A′ ; outillage validé avec un serveur MCP pour ComfyUI seulement (pas pour LM Studio).
 - 23/10/2026 : canon en TypeScript (option A) : `shared/canon/fantasy.ts`, importé par les générateurs, les tests et les livres.
+- 24/10/2026 : jeu de cartes à collectionner, en trois étapes (1. paquets et collection au service du JdR ; 2. duel entre amis puis contre un bot ; 3. le reste si le duel plaît). Choix : cartes = objets, alliés, faveurs jouables en partie ; 4 raretés + signature du MJ ; paquets de 6 ; paquets donnés par le MJ + 1 par fin de séance ; jamais d'argent réel. Référence visuelle : Riftbound. Recherche : `docs/recherche-jeu-de-cartes.md`.
 - 24/10/2026 : cartes de la table en « relique noire » (option B) ; Mickael veut une DA « de dingue ». Puis idée d'un jeu de cartes à collectionner (paquets, decks, duels contre un bot ou un ami) : avis franc et plan demandés.
 - 24/10/2026 : dés sur la table, choisis comme morceau suivant du jeu de plateau.
 - 24/10/2026 : vue de 3/4 (plateau incliné) : bouton sur la carte, choix gardé par chaque joueur.
@@ -53,6 +54,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Dés sur la table (`client/src/components/DesSurLaTable.tsx`) : chaque lancer du journal porte ses dés (`ChatEntry.roll`) ; chaque client le rejoue (rebonds, faces qui défilent, arrêt sur la valeur du serveur, choc synthétisé), en couleur du joueur, depuis sa place à la table. Dés écartés grisés, lueur dorée sur un 20 naturel, rouge sur un 1, étiquette du total. Un jet secret n'est rejoué que chez qui le voit. 8 dés au plus à l'écran. Suite possible : piste d'initiative en jetons, cartes de rencontre.
 - Piste d'initiative : réglette de noyer, jetons peints (même vignette que la figurine, `client/src/figurines.ts`).
 - Cartes (`shared/cartes.ts`, `client/src/components/Cartes.tsx`) : trois pioches du MJ (rencontres du bestiaire, 12 événements et 10 objets écrits dans le canon), aperçu privé, retournement animé devant la table, carte posée au coin du plateau. 57 illustrations de cartes en 600 × 760 (`client/public/cartes/`). Les événements et objets ont un emblème gravé en attendant leurs propres peintures Flux.
+- Cartes à collectionner, étape 1 : catalogue de 34 cartes (`shared/canon/collection-fantasy.ts`, contrôlé par le test du canon), paquets tirés par le serveur (`shared/collection.ts`), collection par joueur dans la campagne, ouverture mise en scène (sceau, éventail, lueur de rareté, retournement, cloche), onglet Cartes du joueur, distribution par le MJ dans l'onglet Campagne, cartes « une fois » ou « par séance ». Peintures Flux des 30 cartes sans illustration en cours (sujets dans `shared/canon/collection-fantasy-peintures.ts`).
 - Limite connue, à traiter : le code du client contient tout le bestiaire et la bibliothèque, secrets compris ; un joueur curieux peut les lire dans le navigateur. Le nom public protège l'écran, pas le code.
 
 ## État au 23/10/2026

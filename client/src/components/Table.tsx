@@ -5,6 +5,7 @@ import { forgetSession, toast, useStore } from "../store";
 import { DiceTray, Log } from "./Dice";
 import { CombatIntro } from "./CombatIntro";
 import { CarteRetournee, PiocheMJ } from "./Cartes";
+import { CollectionPanel } from "./Collection";
 import { DesSurLaTable } from "./DesSurLaTable";
 import { InitiativeFrieze } from "./InitiativeFrieze";
 import { CampagnePanel, ChroniquePanel } from "./CampagnePanel";
@@ -14,7 +15,7 @@ import { HandoutsPanel, MyCharacterPanel, PartyPanel } from "./PlayerPanels";
 import { INITIAL_NAV, Rulebook, RulebookOverlay, type BookNav } from "./Rulebook";
 
 const GM_TABS = ["Générer", "Carte", "Pions", "Bestiaire", "Combat", "Scénarios", "Narration", "Campagne", "Réglages", "Règles"] as const;
-const PLAYER_TABS = ["Mon perso", "Groupe", "Documents", "Chronique", "Règles"] as const;
+const PLAYER_TABS = ["Mon perso", "Groupe", "Cartes", "Documents", "Chronique", "Règles"] as const;
 
 export function Table({ room }: { room: RoomView }) {
   const { connected } = useStore();
@@ -97,6 +98,7 @@ export function Table({ room }: { room: RoomView }) {
             {tab === "Narration" && <NotesPanel room={room} />}
             {tab === "Campagne" && <CampagnePanel room={room} />}
             {tab === "Chronique" && <ChroniquePanel room={room} />}
+            {tab === "Cartes" && <CollectionPanel room={room} />}
             {tab === "Réglages" && <SettingsPanel room={room} />}
             {tab === "Mon perso" && <MyCharacterPanel room={room} />}
             {tab === "Groupe" && <PartyPanel room={room} />}

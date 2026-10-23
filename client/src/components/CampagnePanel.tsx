@@ -4,6 +4,7 @@ import { preparerSeance, seanceEnCours, texteDePreparation } from "../../../shar
 import { canonDe } from "../../../shared/canon";
 import type { RoomView } from "../../../shared/types";
 import { send, toast } from "../store";
+import { DistributionCartes } from "./Collection";
 
 const ATTITUDES = ["Hostile", "Méfiant", "Neutre", "Bienveillant", "Allié"];
 const attitude = (n: number) => ATTITUDES[n + 2] ?? "Neutre";
@@ -45,6 +46,8 @@ export function CampagnePanel({ room }: { room: RoomView }) {
           <button className="btn primary" onClick={() => send("seance:ouvrir")}>Ouvrir la séance {c.seances.length + 1}</button>
         </>
       )}
+
+      <DistributionCartes room={room} />
 
       <div className="section stack">
         <h3>Fils ouverts</h3>

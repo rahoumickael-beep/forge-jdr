@@ -3,6 +3,7 @@ import { autoCombat, endCombat, monstersSeen, startCombat, type Combat } from ".
 import { DEATH_RULES } from "../shared/rules";
 import { nomVuParLesJoueurs } from "../shared/bestiary";
 import { nettoyerCarte } from "../shared/cartes";
+import { carteDuCatalogue, collectionVide, tirerPaquet } from "../shared/collection";
 import { cloreSeance, nettoyerCampagne, noterFait, ouvrirSeance, reglerJauge, reglerReserve } from "../shared/campagne";
 import { canonDe } from "../shared/canon";
 import { createServer } from "node:http";
@@ -324,11 +325,17 @@ io.on("connection", (socket) => {
   // --- Mémoire de campagne ---
   gm<void>("seance:ouvrir", (st, _p, room) => {
     const { seance, precedemment } = ouvrirSeance(st.campagne);
+    // Les cartes « par séance » se rechargent.
+    for (const c of Object.values(st.collections)) for (const e of c.cartes) delete e.utilisee;
     log(room, { from: "MJ", text: `Séance ${seance.numero}.${precedemment ? ` Précédemment : ${precedemment}` : ""}`, kind: "narration" });
   });
   gm<{ resume: string }>("seance:clore", (st, p, room) => {
     const s = cloreSeance(st.campagne, String(p.resume ?? ""));
     log(room, { from: "MJ", text: `Fin de la séance ${s.numero}.`, kind: "narration" });
+    // Un paquet de cartes pour chaque joueur à la fin de chaque séance.
+    const joueurs = st.players.filter((x) => !x.isGM);
+    for (const j of joueurs) (st.collections[j.id] ??= collectionVide()).paquets++;
+    if (joueurs.length) log(room, { from: "Système", text: "Chacun reçoit un paquet de cartes pour la séance.", kind: "systeme" });
   });
   gm<{ texte: string }>("seance:fait", (st, p) => noterFait(st.campagne, String(p.texte ?? "")));
   gm<{ id?: string; texte: string; secret?: boolean; ouvert?: boolean }>("fil:upsert", (st, p) => {
@@ -359,6 +366,62 @@ io.on("connection", (socket) => {
     if (p.reputation && p.reputation.id in c.reputations) c.reputations[p.reputation.id] = Math.max(0, Math.min(3, Math.round(Number(p.reputation.valeur) || 0)));
     if (typeof p.preparation === "string") c.preparation = p.preparation.slice(0, 20000);
   });
+  // --- Cartes à collectionner ---
+  gm<{ playerId?: string; n?: number }>("paquet:donner", (st, p, room) => {
+    const n = Math.max(1, Math.min(10, Math.round(Number(p.n) || 1)));
+    const cibles = st.players.filter((x) => !x.isGM && (!p.playerId || x.id === p.playerId));
+    if (!cibles.length) throw new Error("Aucun joueur à qui donner ce paquet.");
+    for (const j of cibles) (st.collections[j.id] ??= collectionVide()).paquets += n;
+    const qui = p.playerId ? cibles[0].name : "chaque joueur";
+    log(room, { from: "MJ", text: `Le MJ donne ${n > 1 ? `${n} paquets` : "un paquet"} de cartes à ${qui}.`, kind: "narration" });
+  });
+  gm<{ playerId: string; id: string }>("carte:offrir", (st, p, room) => {
+    const j = st.players.find((x) => x.id === p.playerId && !x.isGM);
+    const carte = carteDuCatalogue(st.genre, String(p.id));
+    if (!j || !carte) throw new Error("Joueur ou carte introuvable.");
+    (st.collections[j.id] ??= collectionVide()).cartes.push({ id: carte.id, signature: true });
+    log(room, { from: "MJ", text: `Le MJ offre à ${j.name} une carte signée : ${carte.nom}.`, kind: "narration" });
+  });
+
+  /** Un joueur ouvre un de ses paquets : le serveur tire les cartes et les lui renvoie dans l'ordre de la révélation. */
+  socket.on("paquet:ouvrir", (_p: unknown, ack?: Ack) => {
+    const s = session();
+    if (!s) return;
+    const st = s.room.state;
+    const col = st.collections[s.player.id];
+    if (s.player.isGM || !col || col.paquets <= 0) return ack?.({ ok: false, error: "Aucun paquet à ouvrir." });
+    const ids = tirerPaquet(st.genre);
+    if (!ids.length) return ack?.({ ok: false, error: "Ce monde n'a pas encore de cartes à collectionner." });
+    col.paquets--;
+    col.cartes.push(...ids.map((id) => ({ id })));
+    const haute = carteDuCatalogue(st.genre, ids[ids.length - 1]);
+    log(s.room, {
+      from: "Système",
+      text: haute?.rarete === "relique" ? `${s.player.name} ouvre un paquet… et en sort une relique : ${haute.nom} !` : `${s.player.name} ouvre un paquet de cartes.`,
+      kind: "systeme",
+    });
+    ack?.({ ok: true, cartes: ids });
+    void broadcast(s.room);
+  });
+
+  /** Un joueur joue une carte de sa collection : « une fois », elle part ; « par séance », elle attend la séance suivante. */
+  socket.on("collection:jouer", (p: { index: number }, ack?: Ack) => {
+    const s = session();
+    if (!s) return;
+    const st = s.room.state;
+    const col = st.collections[s.player.id];
+    const e = col?.cartes[Math.round(Number(p?.index))];
+    const carte = e && carteDuCatalogue(st.genre, e.id);
+    if (!col || !e || !carte) return ack?.({ ok: false, error: "Cette carte n'est pas dans ta collection." });
+    if (e.utilisee) return ack?.({ ok: false, error: "Déjà jouée cette séance." });
+    if (carte.recharge === "une-fois") col.cartes.splice(col.cartes.indexOf(e), 1);
+    else e.utilisee = true;
+    const perso = st.characters.find((c) => c.ownerId === s.player.id)?.name ?? s.player.name;
+    log(s.room, { from: s.player.name, fromId: s.player.id, text: `${perso} joue ${carte.nom} : ${carte.usage}`, kind: "narration" });
+    ack?.({ ok: true });
+    void broadcast(s.room);
+  });
+
   // --- Pioche : le MJ retourne une carte devant toute la table ---
   gm<unknown>("carte:retourner", (st, p, room) => {
     const carte = nettoyerCarte(p);

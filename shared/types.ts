@@ -172,6 +172,7 @@ export interface Handout {
 }
 
 import type { Carte } from "./cartes";
+import type { Collection } from "./collection";
 
 /** Une séance de jeu : ce qui s'est passé, pour la raconter la fois suivante. */
 export interface Seance {
@@ -261,6 +262,8 @@ export interface RoomState {
   campagne: Campagne;
   /** Carte que le MJ a retournée devant la table (publique), avec l'heure du retournement. */
   carte: (Carte & { at: number }) | null;
+  /** Cartes à collectionner de chaque joueur (id du joueur → collection). Rien de secret : tout le monde voit les collections. */
+  collections: Record<string, Collection>;
 }
 
 /** Vue envoyée à un client : la version joueur retire les secrets. */

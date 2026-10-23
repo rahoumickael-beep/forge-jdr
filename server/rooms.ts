@@ -5,6 +5,7 @@ import { uid } from "../shared/random";
 import { visibleCells } from "../shared/vision";
 import { nomVuParLesJoueurs } from "../shared/bestiary";
 import { campagnePourJoueur, nettoyerCampagne, nouvelleCampagne } from "../shared/campagne";
+import { nettoyerCollections } from "../shared/collection";
 import { GENRES, TONS } from "../shared/genres";
 import type { Character, ChatEntry, GameMap, GenreId, Player, RoomState, RoomView, Token, Ton } from "../shared/types";
 
@@ -38,6 +39,7 @@ export function loadRooms() {
       stored.state.mapKnown ??= false;
       stored.state.campagne = nettoyerCampagne(stored.state.campagne, stored.state.genre);
       stored.state.carte ??= null;
+      stored.state.collections = nettoyerCollections(stored.state.collections, stored.state.genre, stored.state.players.map((p) => p.id));
       rooms.set(stored.state.code, stored);
     } catch (err) {
       console.warn(`Partie illisible ignorée : ${file}`, err);
@@ -99,6 +101,7 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
     scene: "",
     campagne: nouvelleCampagne(isGenre(opts.genre) ? opts.genre : "fantasy"),
     carte: null,
+    collections: {},
   };
   const stored = { state, gmKey: uid("gm_") + uid() };
   rooms.set(code, stored);
@@ -257,5 +260,6 @@ export function sanitizeImport(data: unknown, current: RoomState): RoomState {
     scene: str("scene", 2000, ""),
     campagne: nettoyerCampagne(data.campagne, isGenre(data.genre) ? data.genre : current.genre),
     carte: null,
+    collections: nettoyerCollections(data.collections, isGenre(data.genre) ? data.genre : current.genre, current.players.map((p) => p.id)),
   };
 }

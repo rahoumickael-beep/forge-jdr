@@ -3,6 +3,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import { test } from "node:test";
 import { BESTIARY } from "./bestiary";
 import { AUBRETERRE, anachronismesDans, datesImpossibles, nomsDuCanon, nomsInconnus } from "./canon";
+import { catalogue } from "./collection";
 import { generateEncounter, generateScenario } from "./generators";
 import { getGenre } from "./genres";
 import { LIBRARY } from "./library";
@@ -28,6 +29,7 @@ const chapitresJoueurs = readdirSync(LIVRE_JOUEURS).map((f) => [f, readFileSync(
 const POUR_LES_JOUEURS: [string, string][] = [
   ...chapitresJoueurs,
   ...textes(C.cartes, "cartes"),
+  ...textes(catalogue("fantasy"), "collection"),
   ...textes(fantasy(ORIGINS), "origines"),
   ...textes(fantasy(BACKGROUNDS), "historiques"),
   ...textes(fantasy(CLASSES), "classes"),
@@ -39,6 +41,7 @@ const TOUT: [string, string][] = [
   ...textes(fantasy(BESTIARY), "bestiaire"),
   ...textes(getGenre("fantasy"), "genre"),
   ...textes(C.cartes, "cartes"),
+  ...textes(catalogue("fantasy"), "collection"),
 ];
 
 test("canon : chronologie dans l'ordre, âges et années d'accord", () => {

@@ -534,7 +534,7 @@ textarea.input { resize: vertical; min-height: 70px; }
 
 /* ——— Cartes « relique noire » ———
    Toutes les tailles en cqw (pour cent de la largeur de la carte) : la même carte en grand, en pioche ou posée au coin. */
-.carte { position: relative; width: 100%; aspect-ratio: 330 / 520; container-type: inline-size; border-radius: 4.8cqw; overflow: hidden;
+.carte { position: relative; width: 100%; aspect-ratio: 330 / 520; container-type: inline-size; border-radius: 4.8% / 3.05%; overflow: hidden;
   background: #0d0907; border: 1px solid #000; color: #e6d6b2; font-family: "EB Garamond", Georgia, serif; text-align: center; user-select: none; }
 .carte::before { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none;
   box-shadow: inset 0 0 0 2.1cqw #8a6428, inset 0 0 0 2.4cqw #2a1a08, inset 0 0 0 3.3cqw #c9a04e, inset 0 0 0 3.6cqw #3a2408, inset 0 0 18cqw #000; }
@@ -607,3 +607,107 @@ textarea.input { resize: vertical; min-height: 70px; }
   filter: drop-shadow(0 8px 10px #000c); transition: transform .2s; }
 .carte-posee:hover, .carte-posee:focus-visible { transform: rotate(0) scale(1.05); }
 @media (max-width: 720px) { .pioches { left: 8px; bottom: 56px; gap: 6px; } .pioche { width: 46px; } .carte-posee { width: 70px; top: 8px; left: 8px; } }
+
+@property --mx { syntax: "<percentage>"; inherits: true; initial-value: 30%; }
+@property --my { syntax: "<percentage>"; inherits: true; initial-value: 20%; }
+/* ——— Cartes à collectionner : grammaire des raretés ———
+   Commune : laiton terni, gemme ronde de bronze. Peu commune : laiton poli, rivets d'argent, gemme triangulaire.
+   Rare : cadre d'or, gemme carrée, reflet doré qui suit la souris. Relique : un liseré d'or, la peinture plein cadre,
+   gemme pentagonale rouge sang. Signée : un trait de plume doré, cadeau du MJ. */
+.carte-col.rar-commune::before { box-shadow: inset 0 0 0 2.1cqw #5c4a30, inset 0 0 0 2.4cqw #241a0e, inset 0 0 0 3.3cqw #8a7650, inset 0 0 0 3.6cqw #2a1f10, inset 0 0 18cqw #000; }
+.carte-col.rar-commune .carte-rivet { background: radial-gradient(circle at 35% 30%, #c9b48a, #6e5a3a 55%, #2a1f10); }
+.carte-col.rar-commune .carte-cartel { background: linear-gradient(180deg, #b9a274, #7c6640 45%, #4a3a20); }
+.carte-col.rar-peu-commune .carte-rivet { background: radial-gradient(circle at 35% 30%, #ffffff, #b9bcc2 50%, #4a4c52); }
+.carte-col.rar-rare::before { box-shadow: inset 0 0 0 2.1cqw #b8862c, inset 0 0 0 2.4cqw #3a2408, inset 0 0 0 3.3cqw #f1d27a, inset 0 0 0 3.6cqw #5a3a0c, inset 0 0 18cqw #000; }
+.carte-col.rar-rare .carte-cartel { background: linear-gradient(180deg, #fff0b8, #d9a948 40%, #8a5a14); }
+/* Relique : le cadre s'efface, la peinture prend toute la carte, le texte vit sur un voile sombre */
+.carte-col.rar-relique::before { box-shadow: inset 0 0 0 1cqw #0d0907, inset 0 0 0 1.5cqw #f1d27a, inset 0 0 0 1.8cqw #5a3a0c, inset 0 0 22cqw #000c; }
+.carte-col.rar-relique .carte-art { height: 100%; -webkit-mask: none; mask: none; }
+.carte-col.rar-relique .carte-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, #0000 38%, #0d0907d0 62%, #0d0907f2 82%); }
+.carte-col.rar-relique .carte-cartel { background: linear-gradient(180deg, #fff3c4, #e0b050 40%, #8a5a14); box-shadow: 0 0 6cqw #f1d27a40, 0 1.8cqw 4.2cqw #000c, inset 0 .3cqw 0 #fff8; }
+.carte-col.rar-relique .carte-rivet { display: none; }
+.carte-col .carte-type { background: linear-gradient(180deg, #3a2a18, #1a120a); }
+.carte-col.fam-allie .carte-type { background: linear-gradient(180deg, #1f3a2a, #0e1c14); }
+.carte-col.fam-faveur .carte-type { background: linear-gradient(180deg, #4a1430, #200810); }
+.carte-col .carte-bas { top: 55%; }
+.carte-col .carte-texte { -webkit-line-clamp: 3; font-size: 4.4cqw; }
+/* Gemme : sa forme et sa couleur disent la rareté */
+.carte-gemme { position: absolute; z-index: 4; left: 50%; bottom: 1.6cqw; width: 6cqw; height: 6cqw; transform: translateX(-50%);
+  background: radial-gradient(circle at 35% 30%, #f3d9a0, #9a6a30 60%, #3a240c); box-shadow: 0 0 0 .5cqw #0d0907, 0 .6cqw 1cqw #000; border-radius: 50%; }
+.rar-peu-commune .carte-gemme { border-radius: 0; clip-path: polygon(50% 4%, 96% 92%, 4% 92%); background: radial-gradient(circle at 50% 40%, #ffffff, #aeb4bd 55%, #3e4248); box-shadow: none; }
+.rar-rare .carte-gemme { border-radius: 0; transform: translateX(-50%) rotate(45deg); width: 5.4cqw; height: 5.4cqw; background: radial-gradient(circle at 35% 30%, #fff6c8, #e2b24c 55%, #7a4e10); box-shadow: 0 0 2.4cqw #f1d27aa0; }
+.rar-relique .carte-gemme { border-radius: 0; width: 7cqw; height: 7cqw; clip-path: polygon(50% 0, 98% 36%, 80% 96%, 20% 96%, 2% 36%); background: radial-gradient(circle at 45% 35%, #ff9a8a, #b0201a 50%, #3a0604); filter: drop-shadow(0 0 2cqw #ff5a3a90); }
+/* Reflet doré (rares et reliques) : il suit la souris quand la carte est en grand */
+.carte-foil { position: absolute; inset: 0; z-index: 2; pointer-events: none; mix-blend-mode: soft-light; opacity: .7;
+  background: linear-gradient(115deg, #0000 calc(var(--mx, 30%) - 25%), #fff1b860 calc(var(--mx, 30%) - 6%), #ffd77a90 var(--mx, 30%), #fff1b850 calc(var(--mx, 30%) + 6%), #0000 calc(var(--mx, 30%) + 25%)),
+    radial-gradient(circle at var(--mx, 30%) var(--my, 20%), #fff4c860, #0000 40%); }
+.rar-relique .carte-foil { opacity: .9; mix-blend-mode: overlay; }
+.carte-col:not(.inclinable) .carte-foil { animation: foil-respire 5s ease-in-out infinite; }
+@keyframes foil-respire { 0%, 100% { --mx: 15%; } 50% { --mx: 85%; } }
+.carte-col.inclinable { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .15s ease-out; }
+/* Signée : un trait de plume doré et la mention, en bas de la carte */
+.carte-signature { position: absolute; z-index: 4; left: 0; right: 0; bottom: 8.6cqw; font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 4cqw; color: #f6d98a;
+  text-shadow: 0 0 2cqw #f1d27a80, 0 .3cqw .6cqw #000; }
+.carte-col.signee .carte-cartel h3 { text-shadow: 0 .3cqw 0 #fff6, 0 0 3cqw #fff3c4; }
+
+/* ——— Collection du joueur ——— */
+.collection-tete { display: flex; gap: 12px; align-items: center; }
+.collection-tete .btn { margin-top: 6px; min-height: 36px; }
+.paquet-mini { position: relative; flex: none; width: 54px; height: 76px; border-radius: 4px; background: linear-gradient(160deg, #3a2414, #140b05); border: 1px solid #8a6428; box-shadow: 0 4px 8px #000a, 3px 3px 0 #1a1008; }
+.paquet-mini .paquet-sceau { width: 22px; height: 22px; }
+.collection-grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px; }
+.collection-pile { position: relative; padding: 0; border: 0; background: none; cursor: zoom-in; transition: transform .2s; }
+.collection-pile:hover, .collection-pile:focus-visible { transform: translateY(-4px); }
+.collection-pile .carte { box-shadow: 0 6px 12px #000b; }
+.collection-pile.epuisee { filter: grayscale(.8) brightness(.6); }
+.collection-nombre { position: absolute; top: -6px; right: -6px; z-index: 5; min-width: 24px; height: 24px; padding: 0 5px; border-radius: 12px; display: grid; place-items: center;
+  font-family: Cinzel, serif; font-size: 12px; color: #2a1606; background: radial-gradient(circle at 35% 30%, #fbe7a8, #b8862c 60%, #6e4a14); box-shadow: 0 2px 4px #000c; }
+
+/* ——— Ouverture d'un paquet ——— */
+.ouverture { position: fixed; inset: 0; z-index: 70; display: grid; grid-template-rows: 1fr auto; place-items: center; padding: 20px 12px 28px;
+  background: radial-gradient(ellipse at 50% 42%, #3a2414cc 0%, #0d0907f2 65%); backdrop-filter: blur(4px); animation: voile-in .35s both; }
+.ouverture-actions { display: flex; gap: 10px; }
+.ouverture-actions .btn { min-height: 40px; min-width: 160px; }
+/* Le paquet : enveloppe de cuir noir, rabat, sceau de cire rouge */
+.paquet { position: relative; width: min(230px, 56vw); aspect-ratio: 330 / 470; border: 0; padding: 0; cursor: pointer; border-radius: 10px; overflow: visible;
+  background: radial-gradient(ellipse at 50% 38%, #3a2414, #160c06 70%), repeating-linear-gradient(45deg, #ffffff05 0 1px, #0000 1px 5px);
+  box-shadow: 0 30px 50px #000d, inset 0 0 0 3px #8a6428, inset 0 0 0 4px #2a1a08, inset 0 0 0 7px #c9a04e; animation: paquet-pose .7s cubic-bezier(.2,.9,.3,1.2) both; }
+.paquet-rabat { position: absolute; left: 7px; right: 7px; top: 7px; height: 42%; transform-origin: top; clip-path: polygon(0 0, 100% 0, 100% 40%, 50% 100%, 0 40%);
+  background: linear-gradient(180deg, #4a2e18, #24150a); box-shadow: inset 0 -4px 10px #000a; transition: transform .7s cubic-bezier(.5,0,.2,1); }
+.paquet-titre { position: absolute; left: 0; right: 0; bottom: 22%; font-family: "IM Fell English SC", serif; font-size: clamp(22px, 6vw, 30px); color: #e9c776; text-shadow: 0 2px 4px #000; }
+.paquet-sous { position: absolute; left: 0; right: 0; bottom: 14%; font-family: Cinzel, serif; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: #b9944c; }
+.paquet-sceau { position: absolute; left: 50%; top: 40%; width: 64px; height: 64px; transform: translate(-50%, -50%); border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #e0574a, #9e1a14 45%, #4a0806 80%); box-shadow: 0 4px 8px #000c, inset 0 -3px 6px #0006, inset 0 2px 3px #fff4;
+  -webkit-mask: radial-gradient(circle, #000 64%, #0000 66%), conic-gradient(#000 0 0); }
+.paquet-sceau::after { content: "♛"; position: absolute; inset: 0; display: grid; place-items: center; font-size: 26px; color: #6e0e0a; text-shadow: 0 1px 0 #f0807066; }
+.paquet-invite { position: absolute; left: 50%; bottom: -46px; transform: translateX(-50%); white-space: nowrap; font-family: Cinzel, serif; font-size: 13px; letter-spacing: .2em; color: #f2d58e;
+  animation: invite 1.6s ease-in-out infinite alternate; }
+.paquet:hover .paquet-sceau, .paquet:focus-visible .paquet-sceau { filter: brightness(1.15); }
+.paquet.ouvert .paquet-sceau { animation: sceau-casse .5s ease-in both; }
+.paquet.ouvert .paquet-rabat { transform: rotateX(160deg); }
+.paquet.ouvert { animation: paquet-tremble .3s .1s both; }
+@keyframes paquet-pose { from { transform: translateY(-60px) scale(.8) rotate(-6deg); opacity: 0; } }
+@keyframes paquet-tremble { 30% { transform: translateX(-4px) rotate(-1deg); } 60% { transform: translateX(4px) rotate(1deg); } }
+@keyframes sceau-casse { 40% { transform: translate(-50%, -50%) scale(1.15); } to { transform: translate(-50%, 40%) scale(.6) rotate(40deg); opacity: 0; } }
+@keyframes invite { to { opacity: .45; } }
+/* L'éventail : six cartes face cachée ; une lueur dessous trahit leur rareté avant qu'on les retourne */
+.eventail { display: flex; justify-content: center; align-items: center; gap: clamp(4px, 1.4vw, 16px); flex-wrap: wrap; max-width: 1100px; }
+.eventail-carte { position: relative; width: clamp(96px, 14vw, 170px); padding: 0; border: 0; background: none; cursor: pointer; perspective: 1200px;
+  animation: eventail-in .55s calc(var(--i) * 90ms) cubic-bezier(.2,.9,.3,1.1) both; }
+.eventail-carte::before { content: ""; position: absolute; inset: 8% 6%; border-radius: 12px; pointer-events: none; z-index: -1; filter: blur(14px); opacity: 0; transition: opacity .4s; }
+.eventail-carte.lueur-peu-commune::before { background: #c9ced6; opacity: .25; }
+.eventail-carte.lueur-rare::before { background: #f1c860; opacity: .55; animation: lueur 1.4s ease-in-out infinite alternate; }
+.eventail-carte.lueur-relique::before { background: #ff6a3a; opacity: .7; animation: lueur .9s ease-in-out infinite alternate; }
+.eventail-carte.vue::before { opacity: .3; animation: none; }
+.eventail-pivot { position: relative; display: block; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.5,0,.2,1); }
+.eventail-carte.derniere .eventail-pivot { transition-duration: 1.2s; }
+.eventail-carte.vue .eventail-pivot { transform: rotateY(180deg); }
+.eventail-carte:not(.vue):hover .eventail-pivot { transform: translateY(-8px); }
+.eventail-dos, .eventail-face { display: block; backface-visibility: hidden; }
+.eventail-face { position: absolute; inset: 0; transform: rotateY(180deg); }
+.eventail-carte.vue.lueur-relique .eventail-face { animation: relique-eclat 1.6s .9s ease-out both; }
+@keyframes eventail-in { from { transform: translateY(70px) rotate(calc((var(--i) - 2.5) * 6deg)) scale(.6); opacity: 0; } }
+@keyframes lueur { to { opacity: .95; filter: blur(20px); } }
+@keyframes relique-eclat { 0% { filter: drop-shadow(0 0 0 #ff6a3a00); } 30% { filter: drop-shadow(0 0 26px #ffb070); } 100% { filter: drop-shadow(0 0 8px #ff6a3a60); } }
+@media (prefers-reduced-motion: reduce) { .eventail-carte, .paquet, .paquet.ouvert, .carte-foil, .eventail-carte::before { animation: none !important; } .eventail-pivot { transition: none; } }
+@media (max-width: 720px) { .eventail { gap: 6px; } .eventail-carte { width: calc((100vw - 48px) / 3); } }

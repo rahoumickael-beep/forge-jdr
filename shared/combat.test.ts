@@ -19,6 +19,7 @@ function etat(tokens: Token[]): RoomState {
     handouts: [], characters: [], scenarios: [], gmNotes: "", movementLocked: false, scene: "",
     campagne: nouvelleCampagne("fantasy"),
     carte: null,
+    collections: {},
   };
 }
 
