@@ -10,7 +10,7 @@ import { rollDice } from "../shared/dice";
 import { uid } from "../shared/random";
 import type { Character, GameMap, InitiativeEntry, Player, RoomState, Scenario, Token } from "../shared/types";
 import { claudeAvailable, generateWithClaude } from "./claude";
-import { addPlayer, createRoom, getRoom, hideUnseen, loadRooms, log, MAX_PLAYERS, saveSoon, updateExplored, viewFor, type StoredRoom } from "./rooms";
+import { addPlayer, characterOwner, createRoom, getRoom, hideUnseen, isGenre, isTon, loadRooms, log, MAX_PLAYERS, sanitizeImport, saveSoon, updateExplored, viewFor, type StoredRoom } from "./rooms";
 
 // Charge .env sans dépendance supplémentaire.
 if (existsSync(".env")) {
@@ -157,6 +157,8 @@ io.on("connection", (socket) => {
     if (!s.player.isGM) {
       if (existing && existing.ownerId !== s.player.id) return ack?.({ ok: false, error: "Ce pion n'est pas à toi." });
       if (!existing && st.tokens.filter((x) => x.ownerId === s.player.id).length >= 2) return ack?.({ ok: false, error: "Deux pions maximum par joueur." });
+      const sheet = t.characterId ? st.characters.find((c) => c.id === t.characterId) : undefined;
+      if (t.characterId && (!sheet || characterOwner(st, sheet) !== s.player.id)) return ack?.({ ok: false, error: "Cette fiche n'est pas à toi." });
       t = { ...t, ownerId: s.player.id, kind: "joueur", hidden: false, vision: existing?.vision };
     }
     const clean: Token = { ...t, id: t.id || uid("t_"), name: String(t.name || "Pion").slice(0, 40) };
@@ -210,9 +212,17 @@ io.on("connection", (socket) => {
     const s = session();
     if (!s) return;
     const st = s.room.state;
+    if (!c || typeof c.id !== "string" || !c.id) return ack?.({ ok: false, error: "Fiche invalide." });
     const linked = st.tokens.find((t) => t.characterId === c.id);
-    if (!s.player.isGM && linked && linked.ownerId !== s.player.id) return ack?.({ ok: false, error: "Ce personnage n'est pas à toi." });
     const i = st.characters.findIndex((x) => x.id === c.id);
+    const owner = i >= 0 ? characterOwner(st, st.characters[i]) : undefined;
+    if (!s.player.isGM) {
+      // Un joueur ne touche qu'à ses fiches, et n'en crée que deux.
+      if (i >= 0 && owner !== s.player.id) return ack?.({ ok: false, error: "Ce personnage n'est pas à toi." });
+      if (i < 0 && st.characters.filter((x) => characterOwner(st, x) === s.player.id).length >= 2) return ack?.({ ok: false, error: "Deux personnages maximum par joueur." });
+    }
+    c = { ...c, name: String(c.name || "Sans nom").slice(0, 60), ownerId: s.player.isGM ? owner : s.player.id };
+    if (c.portrait && c.portrait.length > 300_000) delete c.portrait;
     if (i >= 0) st.characters[i] = c;
     else st.characters.push(c);
     if (linked) {
@@ -271,7 +281,10 @@ io.on("connection", (socket) => {
     endCombat(st);
     log(room, { from: "MJ", text: "Fin du combat.", kind: "narration" });
   });
-  gm<{ title: string; text: string }>("handout:add", (st, p) => st.handouts.unshift({ id: uid("h_"), title: p.title.slice(0, 120), text: p.text.slice(0, 8000), at: Date.now() }));
+  gm<{ title: string; text: string; to?: string[] }>("handout:add", (st, p) => {
+    const to = Array.isArray(p.to) ? p.to.filter((id) => st.players.some((x) => x.id === id && !x.isGM)) : [];
+    st.handouts.unshift({ id: uid("h_"), title: String(p.title).slice(0, 120), text: String(p.text ?? "").slice(0, 8000), at: Date.now(), ...(to.length ? { to } : {}) });
+  });
   gm<string>("handout:remove", (st, id) => (st.handouts = st.handouts.filter((h) => h.id !== id)));
   gm<Scenario>("scenario:add", (st, sc) => st.scenarios.unshift(sc));
   gm<string>("scenario:remove", (st, id) => (st.scenarios = st.scenarios.filter((x) => x.id !== id)));
@@ -283,8 +296,8 @@ io.on("connection", (socket) => {
     if (typeof p.sharedVision === "boolean") st.sharedVision = p.sharedVision;
     if (typeof p.mapKnown === "boolean") st.mapKnown = p.mapKnown;
     if (typeof p.name === "string") st.name = p.name.slice(0, 80);
-    if (p.genre) st.genre = p.genre;
-    if (p.ton) st.ton = p.ton;
+    if (isGenre(p.genre)) st.genre = p.genre;
+    if (isTon(p.ton)) st.ton = p.ton;
     if (typeof p.level === "number") st.level = Math.max(1, Math.min(20, p.level));
     if (typeof p.movementLocked === "boolean") st.movementLocked = p.movementLocked;
   });
@@ -295,11 +308,7 @@ io.on("connection", (socket) => {
     st.tokens = st.tokens.filter((t) => t.ownerId !== id);
     log(room, { from: "Système", text: `${p.name} a quitté la table.`, kind: "systeme" });
   });
-  gm<RoomState>("room:import", (st, data) => {
-    if (!data || typeof data !== "object" || !Array.isArray(data.tokens)) throw new Error("Fichier de partie invalide.");
-    const keep = { code: st.code, players: st.players };
-    Object.assign(st, data, keep);
-  });
+  gm<unknown>("room:import", (st, data) => Object.assign(st, sanitizeImport(data, st)));
 });
 
 loadRooms();

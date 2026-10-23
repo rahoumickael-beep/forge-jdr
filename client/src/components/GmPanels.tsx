@@ -610,6 +610,9 @@ export function NotesPanel({ room }: { room: RoomView }) {
   const [narration, setNarration] = useState("");
   const [hTitle, setHTitle] = useState("");
   const [hText, setHText] = useState("");
+  const [hTo, setHTo] = useState<string[]>([]);
+  const players = room.players.filter((p) => !p.isGM);
+  const nameOf = (id: string) => room.players.find((p) => p.id === id)?.name ?? "?";
   useEffect(() => {
     const t = setTimeout(() => notes !== room.gmNotes && send("notes:set", { text: notes }), 800);
     return () => clearTimeout(t);
@@ -635,10 +638,23 @@ export function NotesPanel({ room }: { room: RoomView }) {
         <h3>Documents pour les joueurs</h3>
         <input id="handout-title" className="input" value={hTitle} onChange={(e) => setHTitle(e.target.value)} placeholder="Titre : Lettre trouvée sur le cadavre" />
         <textarea id="handout-text" className="input" value={hText} onChange={(e) => setHText(e.target.value)} placeholder="Texte du document" />
-        <button className="btn" disabled={!hTitle.trim()} onClick={() => send("handout:add", { title: hTitle, text: hText }).then(() => { setHTitle(""); setHText(""); })}>Distribuer</button>
+        {players.length > 0 && (
+          <div className="row" role="group" aria-label="Destinataires">
+            <span className="small muted">Pour :</span>
+            <label className="small"><input type="checkbox" checked={hTo.length === 0} onChange={() => setHTo([])} /> toute la table</label>
+            {players.map((p) => (
+              <label key={p.id} className="small">
+                <input type="checkbox" checked={hTo.includes(p.id)} onChange={(e) => setHTo(e.target.checked ? [...hTo, p.id] : hTo.filter((x) => x !== p.id))} /> {p.name}
+              </label>
+            ))}
+          </div>
+        )}
+        <button className="btn" disabled={!hTitle.trim()} onClick={() => send("handout:add", { title: hTitle, text: hText, to: hTo }).then(() => { setHTitle(""); setHText(""); setHTo([]); })}>
+          {hTo.length ? `Remettre à ${hTo.map(nameOf).join(", ")}` : "Distribuer à toute la table"}
+        </button>
         {room.handouts.map((h) => (
           <div key={h.id} className="token-row">
-            <span className="name">{h.title}</span>
+            <span className="name">{h.title}{h.to?.length ? <span className="small muted"> · {h.to.map(nameOf).join(", ")}</span> : null}</span>
             <button className="btn small danger" onClick={() => send("handout:remove", h.id)}>Retirer</button>
           </div>
         ))}

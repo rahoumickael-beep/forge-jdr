@@ -69,6 +69,17 @@ try {
   await gm.waitForTimeout(400);
   const log = await gm.locator(".log").textContent();
   if (!log.includes("Léa")) fail("le lancer de dé du joueur n'arrive pas chez le MJ");
+  // Document remis à Léa seule : il doit arriver chez elle, avec la mention qu'il lui est réservé.
+  await gm.getByRole("tab", { name: "Narration" }).click();
+  await gm.fill("#handout-title", "Lettre cachetée de cire grise");
+  await gm.fill("#handout-text", "Ne dis rien aux autres.");
+  await gm.getByRole("group", { name: "Destinataires" }).getByLabel("Léa").check();
+  await gm.getByRole("button", { name: "Remettre à Léa" }).click();
+  await gm.screenshot({ path: "playtest-mj-document.png" });
+  await pl.getByRole("tab", { name: "Documents" }).click();
+  await pl.getByText("Remis à toi seul.").waitFor();
+  console.log("Document remis à un seul joueur : reçu");
+  await gm.getByRole("tab", { name: "Carte" }).click();
   await gm.screenshot({ path: "playtest-mj.png" });
   await pl.screenshot({ path: "playtest-joueur.png" });
   // Ligne de vue : on recache tout, le joueur ne doit plus voir que ce que voit son pion.
