@@ -118,6 +118,8 @@ textarea.input { resize: vertical; min-height: 70px; }
 /* La zone de carte est une case de BD : MapCanvas y dessine la marge et le trait du cadre ; les outils se posent dedans. */
 .map-area { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: #15100b; }
 .map-area canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+/* Dés qui roulent sur la table, par-dessus la carte ; ils ne prennent jamais les clics. */
+.des-table { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 4; }
 .map-empty { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--text-soft); padding: 24px; }
 .map-empty h2 { color: var(--text); font-size: 1.8rem; margin-bottom: 6px; }
 .scene-banner {

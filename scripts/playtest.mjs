@@ -55,7 +55,7 @@ try {
   const tok = await pl.evaluate(() => window.__forge?.().tokens.find((t) => t.name === "Brunhild"));
   if (!tok) fail("le pion du joueur n'apparaît pas");
   else {
-    const box = await pl.locator("canvas").boundingBox();
+    const box = await pl.locator('canvas[aria-label="Carte de jeu"]').boundingBox();
     // Clique sur le pion : on retrouve sa position écran grâce au helper de debug.
     const pos = await pl.evaluate((id) => window.__forgeTokenScreen?.(id), tok.id);
     await pl.mouse.click(box.x + pos.x, box.y + pos.y);

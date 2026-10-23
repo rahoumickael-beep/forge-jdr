@@ -197,6 +197,7 @@ io.on("connection", (socket) => {
         text: `${p.label ? p.label + " : " : ""}${r.expression} → ${r.total} ${r.detail}${crit}`,
         kind: "des",
         secret: !!p.secret,
+        roll: { sides: r.sides, rolls: r.rolls.slice(0, 20), kept: r.kept.slice(0, 20), modifier: r.modifier, total: r.total },
       });
       ack?.({ ok: true, total: r.total });
       void broadcast(s.room);

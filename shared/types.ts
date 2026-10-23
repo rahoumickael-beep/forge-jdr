@@ -144,6 +144,8 @@ export interface ChatEntry {
   text: string;
   kind: "chat" | "des" | "systeme" | "narration";
   secret?: boolean; // visible du MJ seulement
+  /** Lancer de dés : de quoi le rejouer sur la table chez chacun (le résultat vient du serveur). */
+  roll?: { sides: number; rolls: number[]; kept: number[]; modifier: number; total: number };
 }
 
 export interface InitiativeEntry {

@@ -17,6 +17,7 @@ test("modificateurs façon D&D", () => {
 test("dés : formules et bornes", () => {
   const r = rollDice("3d6+2", () => 0.999);
   assert.equal(r.total, 20);
+  assert.equal(r.sides, 6);
   assert.equal(rollDice("1d20adv", () => 0).kept.length, 1);
   assert.equal(rollDice("4d6kh3", () => 0.5).kept.length, 3);
   assert.throws(() => rollDice("bonjour"));
