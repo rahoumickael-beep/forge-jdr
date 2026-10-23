@@ -3,6 +3,8 @@
 Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce qui reste.
 
 ## Choix de Mickael
+- 24/10/2026 : chaque monde est **un jeu à part entière** (classes, origines, bestiaire, scénarios, cartes à jouer, thème d’interface, trois livres PDF), au niveau d’Aubreterre. Les huit autres prémisses A collent à la vision de Mickael.
+- 24/10/2026 : la SF est du **space opera à la Star Wars** (on va de planète en planète) : la Flotte Lente est abandonnée pour **Les Phares** (voir `docs/mondes-propositions.md`). Plusieurs espèces jouables ; un ordre mystique (équivalent de la Force, pouvoir qui coûte) ; blasters et lames ; combats de vaisseaux à postes (pilote, artilleur, mécanicien, capitaine) ; l’équipage part avec un vieux cargo endetté. Monde complet et jouable avant de passer au suivant ; illustrations seulement après le choix du style. Claude pousse sur GitHub après chaque étape qui passe les tests.
 - 24/10/2026 : prémisses des neuf autres mondes, toutes en A (`docs/mondes-propositions.md`) : La Dîme, La Flotte Lente, Ville sous bail, La Côte des Noyés 1923, Le Grand Sec, Le Champ-d’Asile 1878, Les Îles du Vent 1715, L’Exposition éternelle, Cellule Hermès. On commence par la SF (le monde que la table veut jouer ensuite). Noms : Claude choisit, Mickael relit. Styles graphiques : 3 essais A/B/C par genre avant de peindre.
 - 23/10/2026 : travail des cartes et des illustrations commité sur `claude/livre-des-regles` (PR n°2), puis branche `claude/studio` créée à partir de là.
 - 23/10/2026 : plan en 7 étapes validé, dans l'ordre ci-dessous.

@@ -11,6 +11,11 @@ Pour chaque genre : trois prémisses, chacune avec un grand secret que personne 
 - **Recommandation : A.** B ressemble trop à Aubreterre (encore un corps divin) ; A donne un coût de magie neuf et jouable.
 
 ## Science-fiction (couverture des années 70)
+**Remplacée le 24/10/2026** : Mickael veut du space opera (vaisseaux de planète en planète, à la Star Wars). Prémisse retenue :
+- **Les Phares** : on saute d’étoile en étoile par des Phares laissés par une race disparue ; l’Hégémonie tient les Phares, donc la galaxie. Depuis dix ans, ils s’éteignent un à un et des mondes sont coupés. *Secret* : chaque Phare est l’esprit endormi d’un de ces anciens ; ils se réveillent et s’en vont.
+- Écartées : La Guerre des Neuf Soleils (République contre Empire, même lignée derrière les deux), Les Derniers Venus (les vieux empires fondés par des humains oubliés).
+
+Anciennes propositions, en huis clos :
 - **A · La Flotte Lente** : une arche de 40 000 âmes en route depuis six siècles ; chaque pont est devenu une nation. *Secret* : l'arche est arrivée il y a deux siècles, a trouvé son monde empoisonné, et les fondateurs ont choisi de tourner en rond en effaçant la vérité. Le vaisseau s'use.
 - **B · Le Relais d'Ophir** : une station au bord d'un trou de ver qui ne s'ouvre qu'un jour par an ; douze espèces y commercent. *Secret* : le trou de ver est vivant et choisit qui passe.
 - **C · Les Cartographes** : l'humanité hérite des portails d'une race disparue, chacun mène à un monde-tombeau. *Secret* : la race disparue, c'est nous, plus tard.
