@@ -7,6 +7,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - 23/10/2026 : plan en 7 étapes validé, dans l'ordre ci-dessous.
 - 23/10/2026 : carte côté joueur en A′ ; outillage validé avec un serveur MCP pour ComfyUI seulement (pas pour LM Studio).
 - 23/10/2026 : canon en TypeScript (option A) : `shared/canon/fantasy.ts`, importé par les générateurs, les tests et les livres.
+- 24/10/2026 : pions en figurines (option A) : socle dont la tranche porte la couleur du pion, portrait peint tiré des illustrations, figurine soulevée quand on la déplace. Mickael : « comme un jeu de plateau, mais pour notre jeu de rôle » ; c'est le fil de l'étape 6.
 - 23/10/2026 : créatures au nom secret (option A) : un nom public pour les joueurs (Bouche, Langue, Main, Dent du Dessous ; « Ce qui attend en bas » pour le fragment de Gorvan), le MJ garde le vrai nom. Chronologie (option A) : Ostral est arrivé il y a 621 ans, le lore est corrigé.
 
 ## Plan
@@ -38,6 +39,12 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Fiche de préparation sans IA : précédemment, fils, PNJ marquants, ordres qui bougent, Sceau et prochain seuil, accroches de campagne du palier (les 10 du lore, dans le canon), rencontre prête.
 - Vue joueur (onglet Chronique) : ni fil secret, ni note de PNJ, ni Murmures, ni préparation ; le Sceau seulement si le MJ coche « Les joueurs voient la jauge » (décochée par défaut, comme le recommande le lore jusqu'à l'accroche 4).
 - Demande de Mickael (23/10) : des pions plus « figurine à déplacer » pour joueurs, monstres et PNJ. À faire à l'étape 6, avec 3 directions à lui proposer.
+
+## Étape 6, premier morceau : les figurines (24/10/2026)
+- `scripts/vignettes-figurines.mjs` : 71 vignettes de 256 px (57 créatures, 14 classes), recadrées sur le buste, en WebP (656 Ko en tout).
+- Créature du bestiaire : sa vignette ; personnage d'Aubreterre sans portrait : la vignette de sa classe ; sinon le buste dessiné d'avant.
+- Le portrait reste à toute taille de case ; les monstres peints ont un disque plus grand et gardent griffes, cornes ou côtes.
+- Limite connue, à traiter : le code du client contient tout le bestiaire et la bibliothèque, secrets compris ; un joueur curieux peut les lire dans le navigateur. Le nom public protège l'écran, pas le code.
 
 ## État au 23/10/2026
 - Typecheck, 34 tests, build et partie automatique : tout passe.

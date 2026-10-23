@@ -2,7 +2,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { reachable } from "../../../shared/combat";
 import { charte } from "../../../shared/charte";
 import { DEFAULT_VISION } from "../../../shared/vision";
-import type { RoomView, Token } from "../../../shared/types";
+import { BESTIARY } from "../../../shared/bestiary";
+import { CLASSES } from "../../../shared/rules";
+import type { Character, RoomView, Token } from "../../../shared/types";
 import { mapImage } from "../mapImageCache";
 import {
   Lighting,
@@ -444,8 +446,9 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
       drawToken(g, t, cx, cy, cell * s, {
         mine: t.ownerId === room.you.id,
         dpr,
-        portrait: sheet?.portrait ? portraitImage(sheet.portrait) : null,
+        portrait: portraitImage(sheet?.portrait || figurineDe(t, sheet)),
         role: sheet?.archetype,
+        lifted: d?.type === "token" && d.id === t.id,
       });
     }
 
@@ -575,7 +578,14 @@ function arrivalView(W: number, H: number, mw: number, mh: number, t: { x: numbe
   return { cell, ox, oy };
 }
 
-// Portraits des personnages, décodés une fois puis gardés en mémoire.
+/** Vignette peinte d'une figurine : l'illustration de sa créature, sinon celle de la classe du personnage (Aubreterre seulement). */
+function figurineDe(t: Token, sheet: Character | undefined): string | undefined {
+  if (t.creatureId && BESTIARY.some((c) => c.id === t.creatureId && c.genre === "fantasy")) return `/pions/${t.creatureId}.webp`;
+  const cls = sheet?.genre === "fantasy" ? CLASSES.find((c) => c.genre === "fantasy" && c.name === sheet.archetype) : undefined;
+  return cls ? `/pions/classe-${cls.id.replace(/^fantasy-/, "")}.webp` : undefined;
+}
+
+// Portraits et vignettes de figurines, décodés une fois puis gardés en mémoire.
 const portraits = new Map<string, HTMLImageElement>();
 function portraitImage(url: string | undefined): HTMLImageElement | null {
   if (!url) return null;
