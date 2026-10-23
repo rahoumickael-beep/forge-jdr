@@ -199,3 +199,101 @@ export function drawBoard(g: CanvasRenderingContext2D, ox: number, oy: number, m
     g.restore();
   }
 }
+
+// ——— Vue de 3/4 : le plateau couché en perspective ———
+
+/** Perspective d'un plan incliné de `a` radians autour d'une horizontale passant par (xc, yc), vu à la distance D (px). */
+export interface Tilt {
+  a: number;
+  D: number;
+  xc: number;
+  yc: number;
+}
+/** Inclinaison de la vue de 3/4 (34°). */
+export const TILT_MAX = 0.6;
+
+export function makeTilt(a: number, w: number, h: number): Tilt {
+  return { a, D: Math.max(w, h) * 1.5, xc: w / 2, yc: h * 0.55 };
+}
+
+/** Point du plateau à plat → point à l'écran, et l'échelle à cette profondeur. */
+export function project(t: Tilt, x: number, y: number) {
+  const v = y - t.yc;
+  const s = t.D / Math.max(t.D * 0.2, t.D - v * Math.sin(t.a));
+  return { x: t.xc + (x - t.xc) * s, y: t.yc + v * Math.cos(t.a) * s, s };
+}
+
+/** Point de l'écran → point du plateau à plat (pour les clics). */
+export function unproject(t: Tilt, X: number, Y: number) {
+  const q = (Y - t.yc) / t.D;
+  const v = (q * t.D) / Math.max(0.05, Math.cos(t.a) + q * Math.sin(t.a));
+  const Z = t.D - v * Math.sin(t.a);
+  return { x: t.xc + ((X - t.xc) * Z) / t.D, y: t.yc + v };
+}
+
+/** Rectangle du plateau à plat qu'il faut dessiner pour remplir l'écran incliné. */
+export function tiltExtent(t: Tilt, w: number, h: number) {
+  const c = [unproject(t, 0, 0), unproject(t, w, 0), unproject(t, 0, h), unproject(t, w, h)];
+  const lim = Math.max(w, h) * 1.5;
+  return {
+    minX: Math.max(-lim, Math.floor(Math.min(...c.map((p) => p.x)))),
+    maxX: Math.min(w + lim, Math.ceil(Math.max(...c.map((p) => p.x)))),
+    minY: Math.max(-lim, Math.floor(Math.min(...c.map((p) => p.y)))),
+    maxY: Math.ceil(Math.max(h, ...c.map((p) => p.y))),
+  };
+}
+
+/**
+ * Reporte la scène dessinée à plat (`src`, qui couvre le rectangle `ext` du plateau, à `dpr` px par px) sur l'écran incliné,
+ * par bandes horizontales de 2 px : chaque bande est une ligne du plateau, plus étroite au fond, plus large devant.
+ */
+export function warpTilted(g: CanvasRenderingContext2D, src: HTMLCanvasElement, t: Tilt, ext: { minX: number; minY: number; maxX: number; maxY: number }, h: number, dpr: number) {
+  const W2 = ext.maxX - ext.minX;
+  const step = 2;
+  g.save();
+  g.imageSmoothingEnabled = true;
+  g.imageSmoothingQuality = "medium";
+  for (let Y = 0; Y < h; Y += step) {
+    const a = unproject(t, t.xc, Y);
+    const b = unproject(t, t.xc, Y + step);
+    const sy = (a.y - ext.minY) * dpr;
+    const sh = Math.max(0.5, (b.y - a.y) * dpr);
+    if (sy + sh < 0 || sy > src.height) continue;
+    const s = project(t, t.xc, (a.y + b.y) / 2).s;
+    g.drawImage(src, 0, sy, W2 * dpr, sh, t.xc + (ext.minX - t.xc) * s, Y, W2 * s, step + 0.6);
+  }
+  // Le fond de la pièce se perd dans la pénombre.
+  const haze = g.createLinearGradient(0, 0, 0, h * 0.55);
+  haze.addColorStop(0, `rgba(8,5,2,${0.5 * Math.min(1, t.a / TILT_MAX)})`);
+  haze.addColorStop(1, "rgba(8,5,2,0)");
+  g.fillStyle = haze;
+  g.fillRect(0, 0, g.canvas.width, h * 0.55);
+  g.restore();
+}
+
+/** Socle d'une figurine debout, vu de biais : ombre au sol, tranche à la couleur du pion, dessus plus clair. */
+export function drawStandingBase(g: CanvasRenderingContext2D, x: number, y: number, size: number, color: string, flat: number) {
+  const rx = size * 0.42;
+  const ry = rx * flat;
+  const th = size * 0.07;
+  g.save();
+  g.filter = `blur(${Math.max(1.5, size * 0.05)}px)`;
+  g.fillStyle = "rgba(6,3,1,.55)";
+  g.beginPath();
+  g.ellipse(x + size * 0.08, y + ry * 0.5, rx * 1.15, ry * 1.2, 0, 0, Math.PI * 2);
+  g.fill();
+  g.restore();
+  g.fillStyle = color;
+  g.beginPath();
+  g.ellipse(x, y + th, rx, ry, 0, 0, Math.PI * 2);
+  g.fill();
+  g.fillStyle = "rgba(0,0,0,.35)";
+  g.fill();
+  g.fillStyle = "#1a120b";
+  g.beginPath();
+  g.ellipse(x, y, rx, ry, 0, 0, Math.PI * 2);
+  g.fill();
+  g.strokeStyle = color;
+  g.lineWidth = Math.max(1, size * 0.03);
+  g.stroke();
+}
