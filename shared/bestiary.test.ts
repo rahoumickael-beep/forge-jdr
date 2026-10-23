@@ -15,6 +15,7 @@ import {
   toEncounterEnemy,
   xpForCr,
 } from "./bestiary";
+import REGLES_FLUX from "../comfyui/regles-flux.json";
 
 const step = (cr: number) => CR_STEPS.indexOf(cr);
 
@@ -125,13 +126,14 @@ test("bestiaire : conversion en ennemi de rencontre", () => {
 });
 
 test("bestiaire : aucune planche fantasy ne décrit d'objet moderne", () => {
-  // Flux dessine ce qu'on nomme : ni objet moderne, ni « no … », ni route ou poteau qui appellent des pylônes.
-  const moderne = /\b(electric|telephone|power line|pylon|asphalt|car|truck|plastic|concrete|neon|gun|rifle|pistol|road|stake|pole)\b/i;
+  // Flux dessine ce qu'on nomme : ni objet moderne, ni négation, ni route ou poteau qui appellent des pylônes (comfyui/regles-flux.json).
+  const moderne = new RegExp(REGLES_FLUX.anachronismes.fantasy, "i");
+  const negation = new RegExp(REGLES_FLUX.negation, "i");
   for (const c of BESTIARY) {
     const scene = c.illustration.replace(FIN_DE_STYLE, "");
     assert.ok(scene.length > 40, `${c.id} : scène introuvable`);
     assert.ok(!moderne.test(scene), `${c.id} : objet moderne dans la scène`);
-    assert.ok(!/\bno\s/i.test(c.illustration), `${c.id} : négation dans le prompt`);
+    assert.ok(!negation.test(c.illustration), `${c.id} : négation dans le prompt`);
     assert.ok(c.illustration.startsWith(LUMIERE_FAMILLE[c.family]), `${c.id} : la lumière de la famille doit ouvrir le prompt`);
   }
 });
