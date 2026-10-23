@@ -130,6 +130,8 @@ export interface Token {
   size?: number; // 1 = une case
   /** Créature du bestiaire (shared/bestiary.ts) dont ce pion est issu. */
   creatureId?: string;
+  /** Figurine peinte, calculée par le serveur à l'envoi (viewFor) : le client des joueurs n'a pas le bestiaire. */
+  pion?: string;
   /** Bonus d'initiative noté à la main (sinon tiré de la fiche ou du bestiaire). */
   init?: number;
   /** Déplacement en cases par tour (6 par défaut, soit 9 m). */
@@ -222,6 +224,8 @@ export interface Campagne {
   reserve: number;
   /** Notes du MJ pour la séance suivante. */
   preparation: string;
+  /** Vue joueur seulement : nom de la jauge et des factions amies, tirés du canon par le serveur. */
+  noms?: { jauge?: string; factions: { id: string; nom: string }[] };
 }
 
 /** État complet d'une partie, tel que le serveur le garde. */

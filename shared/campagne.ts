@@ -110,9 +110,15 @@ export function reglerReserve(c: Campagne, n: number, canon: Canon | undefined) 
 }
 
 /** Ce qu'un joueur reçoit de la campagne : ni fils secrets, ni notes sur les PNJ, ni réserve, ni préparation. */
-export function campagnePourJoueur(c: Campagne): Campagne {
+export function campagnePourJoueur(c: Campagne, genre?: GenreId): Campagne {
+  const canon = genre ? canonDe(genre) : undefined;
+  const jauge = c.jaugeVisible ? canon?.campagne?.jauge?.nom : undefined;
   return {
     ...c,
+    noms: {
+      ...(jauge ? { jauge } : {}),
+      factions: (canon?.factions ?? []).filter((f) => (c.reputations[f.id] ?? 0) > 0).map((f) => ({ id: f.id, nom: f.nom })),
+    },
     fils: c.fils.filter((f) => !f.secret),
     pnj: c.pnj.map((p) => ({ ...p, secret: "" })),
     jauge: c.jaugeVisible ? c.jauge : null,

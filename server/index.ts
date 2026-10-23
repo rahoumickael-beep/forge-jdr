@@ -14,6 +14,7 @@ import { Server, type Socket } from "socket.io";
 import { rollDice } from "../shared/dice";
 import { uid } from "../shared/random";
 import type { Character, GameMap, InitiativeEntry, Player, RoomState, Scenario, Token } from "../shared/types";
+import { COOKIE_MJ, cookieMJ, estMJ, FICHIER_MJ } from "./acces-mj";
 import { claudeAvailable, generateWithClaude } from "./claude";
 import { addPlayer, characterOwner, createRoom, getRoom, hideUnseen, isGenre, isTon, loadRooms, log, MAX_PLAYERS, sanitizeImport, saveSoon, updateExplored, viewFor, type StoredRoom } from "./rooms";
 
@@ -42,8 +43,17 @@ app.post("/api/claude", async (req, res) => {
   }
 });
 
+// Clé du MJ en cookie, pour que le navigateur puisse charger le code du MJ (voir acces-mj.ts).
+app.post("/api/mj/acces", (req, res) => {
+  const valeur = cookieMJ(req.body?.code, req.body?.gmKey);
+  if (!valeur) return res.status(403).json({ error: "Réservé au maître du jeu." });
+  res.setHeader("Set-Cookie", `${COOKIE_MJ}=${valeur}; Path=/; HttpOnly; SameSite=Strict; Max-Age=${60 * 60 * 24 * 30}`);
+  res.json({ ok: true });
+});
+
 const dist = join(process.cwd(), "dist");
 if (existsSync(dist)) {
+  app.use((req, res, next) => (FICHIER_MJ.test(req.path) && !estMJ(req.headers.cookie) ? res.status(403).send("Réservé au maître du jeu.") : next()));
   app.use(express.static(dist));
   app.get(/^(?!\/(api|socket\.io)).*/, (_req, res) => res.sendFile(join(dist, "index.html")));
 }

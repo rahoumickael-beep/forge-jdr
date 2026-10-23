@@ -1,7 +1,7 @@
 // Fiches papier : personnage, scénario, rencontre.
 import { useState } from "react";
 import { getGenre, TONS } from "../../../shared/genres";
-import { formatMod, modifier } from "../../../shared/generators";
+import { formatMod, modifier } from "../../../shared/personnages";
 import type { Character, Encounter, Scenario } from "../../../shared/types";
 import { send } from "../store";
 

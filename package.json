@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "tsx --test shared/*.test.ts server/*.test.ts",
     "playtest": "node scripts/playtest.mjs",
+    "verifier-secrets": "tsx scripts/verifier-secrets-client.ts",
     "livre": "tsx scripts/livre.ts dist-livre",
     "apercu-cartes": "node scripts/apercu-cartes.mjs",
     "livres": "tsx scripts/livres/index.ts tout dist-livre",

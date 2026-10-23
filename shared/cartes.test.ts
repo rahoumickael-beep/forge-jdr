@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import { test } from "node:test";
-import { creaturesFor } from "./bestiary";
+import { creaturesFor, fichierCreature } from "./bestiary";
 import { AUBRETERRE } from "./canon";
 import { nettoyerCarte, tirerCarte, TYPES_DE_CARTE } from "./cartes";
 import { GENRES } from "./genres";
@@ -21,12 +21,12 @@ test("cartes : une rencontre fantasy a son illustration, et toute la pioche fant
       const c = tirerCarte(t.id, "fantasy", 20, seed);
       vues.add(c.id);
       const json = JSON.stringify(c);
-      for (const s of AUBRETERRE.secrets) assert.ok(!json.includes(s), `${c.id} contient « ${s} »`);
+      for (const s of AUBRETERRE.secrets) assert.ok(!json.toLowerCase().includes(s.toLowerCase()) && !/gorvan/i.test(json), `${c.id} contient « ${s} »`);
       if (c.image) assert.ok(existsSync(`client/public${c.image}`), `${c.image} manque : node scripts/vignettes-figurines.mjs`);
     }
   // Les créatures au nom secret sortent bien, sous leur nom public.
-  assert.ok(vues.has("rencontre:bouche-de-gorvan"));
-  assert.ok(creaturesFor("fantasy").filter((c) => !c.legendary).every((c) => vues.has(`rencontre:${c.id}`)), "toutes les rencontres finissent par sortir");
+  assert.ok(vues.has("rencontre:bouche-du-dessous"));
+  assert.ok(creaturesFor("fantasy").filter((c) => !c.legendary).every((c) => vues.has(`rencontre:${fichierCreature(c)}`)), "toutes les rencontres finissent par sortir");
 });
 
 test("cartes : la pioche évite les cartes déjà sorties", () => {

@@ -1720,6 +1720,19 @@ export function attackSummary(c: Creature): string {
  * Le danger dépend du FP, rapporté au niveau du groupe s'il est donné.
  */
 /** Nom d'un pion tel que le voit un joueur : le nom public remplace le vrai nom de la créature. */
+/** Nom de fichier des illustrations d'une créature (pion, carte) : le nom public quand le vrai nom trahit un secret,
+ * puisque l'adresse de l'image arrive chez les joueurs. scripts/vignettes-figurines.mjs nomme les fichiers pareil. */
+export function fichierCreature(c: Creature): string {
+  if (!c.publicName) return c.id;
+  return c.publicName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/** Figurine peinte d'une créature (Aubreterre seulement), ou rien. */
+export function pionDeCreature(creatureId?: string): string | undefined {
+  const c = creatureId ? BESTIARY.find((x) => x.id === creatureId) : undefined;
+  return c?.genre === "fantasy" ? `/pions/${fichierCreature(c)}.webp` : undefined;
+}
+
 export function nomVuParLesJoueurs(nom: string, creatureId?: string): string {
   const c = creatureId ? BESTIARY.find((x) => x.id === creatureId) : undefined;
   return c?.publicName ? nom.split(c.name).join(c.publicName) : nom;

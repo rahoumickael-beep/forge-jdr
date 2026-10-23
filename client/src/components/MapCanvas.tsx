@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { reachable } from "../../../shared/combat";
+import { reachable } from "../../../shared/maps";
 import { charte } from "../../../shared/charte";
 import { DEFAULT_VISION } from "../../../shared/vision";
 import type { RoomView, Token } from "../../../shared/types";

@@ -43,3 +43,20 @@ export const SUJETS_COLLECTION: Record<string, string> = {
   "faveur-legions": "a grey stone fort on a heather moor in the rain, soldiers in red cloaks swinging the gate open, a smoking pyre in the yard",
   "benediction-enfant": "a small girl with short black hair holding the hand of a kneeling traveler among pilgrim campfires, risen dead men sitting calmly on the ground behind them",
 };
+
+/** Cartes d'événement de la pioche du MJ (les objets de la pioche reprennent les peintures de la collection). */
+export const LUMIERE_EVENEMENTS = "pale overcast light fading to dusk, slate blue shadows, a few warm lantern glows";
+export const SUJETS_EVENEMENTS: Record<string, string> = {
+  "evenement-glas": "a small stone village church at nightfall, its bell swinging alone in the open belfry, frightened villagers in nightshirts holding candles at their doors and looking up",
+  "evenement-file-des-leves": "a long line of pale dead villagers in burial shrouds walking one behind another across a muddy cart track through heather, all at the same pace, two travelers stepping aside",
+  "evenement-barrage": "a heavy iron chain stretched across a narrow stone bridge, two guards in long white cloaks beside a wooden lectern with an open register, one searching a traveler's sack",
+  "evenement-recruteurs": "a sergeant in a red cloak lining up village men in front of a timber barn, mothers watching from small cottage windows, a muddy farmyard",
+  "evenement-pelerins": "a vast muddy pilgrim camp, hundreds of small campfires, an old pilgrim woman pointing east, small bare footprints of a child pressed in the mud in the foreground",
+  "evenement-sel": "a market stall in a timber village square, a salt merchant chalking a high price on a slate board, a weeping woman before the stall beside a wheelbarrow carrying a shrouded body",
+  "evenement-veillee": "an exhausted woman in a plain grey dress sitting beside a shrouded corpse laid on a table in a cottage, her head nodding with sleep, a lantern with blue glass beside her",
+  "evenement-faux-clous": "a sly peddler with a wooden tray of iron nails at a village crossing, a customer bending one of the nails between two fingers",
+  "evenement-rendu": "a pale man with bluish skin standing at a farmhouse door, a black ribbon tied at his left wrist, the wary farmer gripping a hammer behind the half-open door",
+  "evenement-attendants": "people lying in a neat row at the edge of a heath, hands crossed on their chests, braided reed bracelets on their wrists, one of them with eyes open",
+  "evenement-inquisiteur": "an inquisitor in a heavy white robe, white wax dripped on his wrist, with armed men searching a village graveyard at dusk, a scorched patch of earth beside an open grave",
+  "evenement-voix": "a traveler asleep wrapped in a cloak beside a dying campfire, the faint translucent figure of a woman kneeling at his side and whispering in his ear",
+};

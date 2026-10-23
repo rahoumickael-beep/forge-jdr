@@ -9,6 +9,7 @@ import type { Character } from "../shared/types";
 
 process.env.DATA_DIR = mkdtempSync(join(tmpdir(), "forge-test-"));
 const { addPlayer, createRoom, hideUnseen, sanitizeImport, viewFor } = await import("./rooms");
+const { cookieMJ, estMJ, FICHIER_MJ } = await import("./acces-mj");
 
 const fiche = (id: string, name: string, extra: Partial<Character> = {}): Character => ({
   id, name, genre: "fantasy", level: 1, archetype: "Guerrier", origin: "Humain", description: "", backstory: "", personality: "",
@@ -63,9 +64,11 @@ test("vue joueur : une créature au nom secret n'apparaît que sous son nom publ
   const bouche = BESTIARY.find((c) => c.name === "Bouche de Gorvan")!;
   stored.state.tokens.push({ id: "t_bouche", name: "Bouche de Gorvan 2", x: 3, y: 3, color: "#000", kind: "monstre", creatureId: bouche.id });
   stored.state.initiative.entries.push({ tokenId: "t_bouche", name: "Bouche de Gorvan 2", value: 12 });
-  const json = JSON.stringify(hideUnseen(viewFor(stored, lea)));
-  assert.ok(!json.includes("Gorvan"));
+  const vue = hideUnseen(viewFor(stored, lea));
+  const json = JSON.stringify(vue);
+  assert.ok(!/gorvan/i.test(json), "ni le nom ni l'id ni le fichier de la figurine");
   assert.ok(json.includes("Bouche du Dessous 2"));
+  assert.equal(vue.tokens.find((t) => t.id === "t_bouche")?.pion, "/pions/bouche-du-dessous.webp");
   assert.ok(JSON.stringify(hideUnseen(viewFor(stored, gm))).includes("Bouche de Gorvan 2"));
 });
 
@@ -130,4 +133,18 @@ test("import : une carte valide passe, avec son brouillard recalculé si besoin"
   assert.equal(out.map?.width, 4);
   assert.equal(out.fog?.length, 16);
   assert.equal(out.map?.rooms[0].label, "Autel");
+});
+
+test("code du MJ : servi seulement avec la bonne clé de partie", () => {
+  const { stored } = partie();
+  const code = stored.state.code;
+  assert.equal(cookieMJ(code, "mauvaise"), undefined);
+  assert.equal(cookieMJ("ZZZZZZ", stored.gmKey), undefined);
+  const bon = cookieMJ(code, stored.gmKey)!;
+  assert.ok(estMJ(`theme=sombre; forge_mj=${bon}`));
+  assert.ok(!estMJ(undefined));
+  assert.ok(!estMJ(`forge_mj=${encodeURIComponent(`${code}:faux`)}`));
+  assert.ok(!estMJ("forge_mj=%E0%A4%A"));
+  assert.ok(FICHIER_MJ.test("/assets/mj-CGpE8zGg.js"));
+  assert.ok(!FICHIER_MJ.test("/assets/index-CBY_I5uX.js"));
 });

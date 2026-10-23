@@ -1,6 +1,6 @@
 // Créateur de personnage pas à pas, façon Baldur's Gate 3.
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { formatMod, modifier, proficiency } from "../../../shared/generators";
+import { formatMod, modifier, proficiency } from "../../../shared/personnages";
 import { getGenre } from "../../../shared/genres";
 import { uid } from "../../../shared/random";
 import {

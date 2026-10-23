@@ -3,7 +3,7 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { uid } from "../shared/random";
 import { visibleCells } from "../shared/vision";
-import { nomVuParLesJoueurs } from "../shared/bestiary";
+import { nomVuParLesJoueurs, pionDeCreature } from "../shared/bestiary";
 import { campagnePourJoueur, nettoyerCampagne, nouvelleCampagne } from "../shared/campagne";
 import { nettoyerCollections } from "../shared/collection";
 import { GENRES, TONS } from "../shared/genres";
@@ -139,9 +139,16 @@ export function characterOwner(s: RoomState, c: Character): string | undefined {
 }
 
 /** Ce qu'un joueur a le droit de voir. Le MJ voit tout. */
+/** La figurine peinte part avec le pion : le client n'a pas le bestiaire pour la retrouver. */
+function avecPion(t: Token): Token {
+  const { pion: _p, ...reste } = t;
+  const pion = pionDeCreature(t.creatureId);
+  return pion ? { ...reste, pion } : reste;
+}
+
 export function viewFor(room: StoredRoom, player: Player): RoomView {
   const s = room.state;
-  if (player.isGM) return { ...s, you: player };
+  if (player.isGM) return { ...s, you: player, tokens: s.tokens.map(avecPion) };
   const { gmNotes: _hidden, ...rest } = s;
   const base = {
     ...rest,
@@ -151,7 +158,7 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
     scenarios: [], // les scénarios sont la préparation du MJ
     characters: s.characters.filter((c) => characterOwner(s, c)), // les fiches de PNJ restent chez le MJ
     handouts: s.handouts.filter((h) => !h.to?.length || h.to.includes(player.id)),
-    campagne: campagnePourJoueur(s.campagne),
+    campagne: campagnePourJoueur(s.campagne, s.genre),
   };
   const map = s.map;
   if (!map || !s.fogEnabled) return { ...base, tokens: s.tokens.filter((t) => t.ownerId === player.id || !t.hidden) };
@@ -177,7 +184,8 @@ export function hideUnseen(view: RoomView): RoomView {
   const creatureOf = new Map(view.tokens.map((t) => [t.id, t.creatureId]));
   return {
     ...view,
-    tokens: view.tokens.map((t) => (t.creatureId ? { ...t, name: nomVuParLesJoueurs(t.name, t.creatureId) } : t)),
+    // Ni l'id de la créature (certains trahissent un secret) : la figurine est déjà calculée, sous un nom de fichier public.
+    tokens: view.tokens.map(({ creatureId, ...t }) => (creatureId ? { ...avecPion({ ...t, creatureId }), creatureId: undefined, name: nomVuParLesJoueurs(t.name, creatureId) } : t)),
     initiative: {
       ...view.initiative,
       entries: view.initiative.entries.map((e) =>

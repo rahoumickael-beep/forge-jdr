@@ -1,0 +1,100 @@
+// Réserve du maître du jeu, genre par genre : accroches, méchants, ennemis, rebondissements, récompenses.
+// Séparée de genres.ts parce que les joueurs chargent genres.ts : rien de ce qui suit ne doit arriver chez eux
+// (scripts/verifier-secrets-client.ts le contrôle sur le site fabriqué).
+import { AUBRETERRE } from "./canon/fantasy";
+import type { GenreId } from "./types";
+
+export interface Idees {
+  hooks: string[];
+  villains: string[];
+  motivations: string[];
+  /** Ennemis rangés du plus faible au plus fort. */
+  enemies: string[];
+  twists: string[];
+  rewards: string[];
+}
+
+export const IDEES: Record<GenreId, Idees> = {
+  "fantasy": {
+    hooks: AUBRETERRE.accroches.map((a) => a.texte),
+    villains: ["un passeur qui pousse les morts sur la Marche", "un inquisiteur de la Cire qui cloue les vivants", "un Peseur renégat qui veut mesurer le Sceau", "un connétable d'os qui commande une légion morte", "un contremaître de la Hanse qui fait travailler les morts"],
+    motivations: ["rejoindre un être aimé noyé il y a deux hivers", "prouver que le Dieu-Empereur se relèvera", "garder le sel pour sa seule famille", "obéir à une voix qui parle la nuit"],
+    enemies: ["Levés", "Loups de bruyère", "Bandits des routes", "Légionnaires d'os", "Noyés", "Pleureurs", "Gardes du Seuil", "Inquisiteurs de la Cire", "Porte-Voix", "Wyverne des Ossiers", "Colonne de la Marche", "Ver des Ossiers", "Bouche de Gorvan", "Connétable d'os", "Reine sous le Sel"],
+    twists: ["Le commanditaire savait que le village était perdu.", "Le mort qu'on chasse protège quelqu'un.", "La voix qui guide le méchant connaît des choses qu'un mort seul savait.", "Les morts ne marchent pas au hasard : ils suivent une ligne droite."],
+    rewards: ["Un marteau en fer froid forgé à la main", "50 pièces d'or et un clou à l'oreille", "Un laissez-passer de la Chancellerie", "Une part dans une saline", "La reconnaissance des Veilleuses", "Une carte des lignes de la Marche"],
+  },
+  "dark-fantasy": {
+    hooks: ["Les morts reviennent chaque nuit sans lune.", "Une enfant prophétesse est réclamée par trois factions.", "Le seigneur local paie en or pour chaque tête de sorcière.", "La pluie est devenue rouge."],
+    villains: ["un inquisiteur fanatique", "une sorcière vieille de trois siècles", "un dieu oublié qui se réveille", "un seigneur vampire"],
+    motivations: ["purifier le monde par le feu", "échapper à sa propre damnation", "nourrir une faim sans fin"],
+    enemies: ["Rats géants", "Pillards", "Chiens de guerre", "Goules", "Possédés", "Chevaliers morts", "Abomination", "Vampire", "Horreur des fosses", "Archidémon"],
+    twists: ["Les héros sont porteurs de la malédiction.", "L'Église a créé le monstre.", "Le seul remède exige un sacrifice."],
+    rewards: ["Une relique bénie", "Une bourse d'argent terni", "Le pardon d'un crime", "Une lame forgée en enfer"],
+  },
+  "science-fiction": {
+    hooks: ["Un signal de détresse vient d'un vaisseau disparu il y a 200 ans.", "L'IA de la station refuse d'ouvrir les sas.", "Une cargaison ultra-secrète doit traverser le blocus.", "Un artefact alien réagit à la présence d'un héros."],
+    villains: ["une IA devenue consciente", "une amirale rebelle", "une méga-corporation", "une reine alien"],
+    motivations: ["libérer les machines", "contrôler la seule source d'énergie", "sauver son espèce à tout prix"],
+    enemies: ["Drones de sécurité", "Pirates de l'espace", "Robots ouvriers déréglés", "Soldats impériaux", "Créatures xéno", "Mech de combat", "Assassin synthétique", "Reine xéno", "Croiseur ennemi"],
+    twists: ["Le commanditaire est un clone.", "La planète est un être vivant.", "L'équipage est déjà mort depuis longtemps."],
+    rewards: ["Un vaisseau d'occasion", "10 000 crédits", "Des coordonnées secrètes", "Une IA compagnon"],
+  },
+  "cyberpunk": {
+    hooks: ["Un employé corpo veut déserter avec des données explosives.", "Votre fixer a disparu, il vous doit de l'argent.", "Un virus efface les souvenirs des gens dans la rue.", "Une star de la musique est en réalité une IA."],
+    villains: ["un PDG immortel", "un gang de cyberpsychos", "une IA voyou", "un flic qui vend la ville"],
+    motivations: ["télécharger son esprit dans le réseau", "contrôler toute la ville", "effacer son passé"],
+    enemies: ["Gangers", "Agents de sécurité", "Drones de police", "Cyberpsycho", "Escouade corpo", "Netrunner ennemi", "Mech anti-émeute", "Assassin chromé", "IA voyou"],
+    twists: ["Le client est votre propre clone numérique.", "Les données volées contiennent vos souvenirs.", "La corporation finance aussi la rébellion."],
+    rewards: ["Un implant de pointe", "50 000 eddies", "Un appartement en hauteur", "Un contact chez les corpos"],
+  },
+  "horreur": {
+    hooks: ["Un ami vous envoie une lettre puis disparaît.", "Un tableau change chaque nuit.", "Des disparitions suivent les marées.", "Un héritage vous attend dans une maison isolée."],
+    villains: ["un culte d'adorateurs", "une entité venue d'ailleurs", "un médecin aux expériences interdites", "un fantôme vengeur"],
+    motivations: ["ouvrir la porte aux Grands Anciens", "vaincre la mort", "se venger des vivants"],
+    enemies: ["Villageois hostiles", "Cultistes", "Chiens possédés", "Profonds", "Goule", "Spectre", "Shoggoth", "Avatar d'un dieu"],
+    twists: ["Un des héros descend des cultistes.", "La créature essayait de vous prévenir.", "Tout se passe dans un rêve partagé."],
+    rewards: ["Un tome de savoir interdit", "La vérité (coûte de la santé mentale)", "Un héritage maudit"],
+  },
+  "post-apo": {
+    hooks: ["La dernière source d'eau pure est menacée.", "Un abri scellé vient de s'ouvrir.", "Une caravane promet un passage vers une terre verte.", "Un enfant ne craint pas les radiations."],
+    villains: ["un seigneur de guerre", "une IA militaire d'avant-guerre", "un prophète mutant", "une compagnie de l'eau"],
+    motivations: ["contrôler l'eau", "relancer les missiles", "créer une nouvelle humanité"],
+    enemies: ["Rats radioactifs", "Pillards", "Chiens mutants", "Goules irradiées", "Raiders motorisés", "Mutant géant", "Robot de guerre", "Béhémoth"],
+    twists: ["La terre verte est un piège.", "Le seigneur de guerre protège un secret vital.", "L'abri cache l'origine de l'apocalypse."],
+    rewards: ["Un véhicule blindé", "Un stock de munitions", "Un accès à l'eau", "Une carte d'avant-guerre"],
+  },
+  "western": {
+    hooks: ["Le gang Dalton prend la ville en otage.", "Une mine d'or est hantée.", "Un train transporte un prisonnier très recherché.", "Le shérif a été assassiné en plein jour."],
+    villains: ["un baron du chemin de fer", "un hors-la-loi légendaire", "un shérif corrompu", "un marchand d'élixirs"],
+    motivations: ["posséder toute la vallée", "se venger de la ville", "trouver le filon perdu"],
+    enemies: ["Coyotes", "Voleurs de bétail", "Hommes de main", "Pistoleros", "Gang de hors-la-loi", "Chasseur de primes rival", "Le Baron et sa garde"],
+    twists: ["Le shérif est le chef du gang.", "L'or est maudit.", "Le prisonnier est innocent."],
+    rewards: ["Une prime de 1 000 $", "Un ranch", "Un étalon noir", "Une étoile de marshal"],
+  },
+  "pirates": {
+    hooks: ["Une carte mène au trésor du capitaine Flint.", "Le navire est encalminé près d'une île qui bouge.", "La Marine offre le pardon contre une mission suicide.", "Une sirène propose un marché."],
+    villains: ["un capitaine maudit", "un gouverneur cruel", "une sorcière des mers", "le Kraken"],
+    motivations: ["briser sa malédiction", "régner sur les mers", "récupérer son cœur volé"],
+    enemies: ["Crabes géants", "Marins ivres", "Soldats de la Marine", "Pirates rivaux", "Équipage fantôme", "Sirènes", "Capitaine maudit", "Kraken"],
+    twists: ["Le trésor est une personne.", "La carte est fausse mais le vrai trésor est à bord.", "Le capitaine a vendu l'équipage."],
+    rewards: ["Un coffre de doublons", "Un navire", "Une lettre de marque", "Une boussole magique"],
+  },
+  "steampunk": {
+    hooks: ["Une invention capable d'arrêter le temps a été volée.", "Les automates de la ville se mettent à grève.", "Un dirigeable royal a disparu dans un orage.", "Un savant fou défie la reine."],
+    villains: ["un savant fou", "une guilde secrète", "un automate qui se rêve empereur", "un baron de l'industrie"],
+    motivations: ["remplacer les humains par des machines", "réécrire l'histoire", "prouver son génie"],
+    enemies: ["Voyous des docks", "Automates de garde", "Agents de la guilde", "Araignée mécanique", "Tank à vapeur", "Colosse d'airain"],
+    twists: ["La reine est un automate.", "Le savant voulait sauver la ville.", "L'invention vient du futur."],
+    rewards: ["Un brevet lucratif", "Un dirigeable", "Une invention unique", "Une médaille royale"],
+  },
+  "contemporain": {
+    hooks: ["Un témoin clé doit survivre jusqu'au procès.", "Une clé USB contient la liste des agents infiltrés.", "Un milliardaire a disparu de son yacht.", "Un virus informatique bloque la ville."],
+    villains: ["un trafiquant international", "une taupe dans les services", "un milliardaire mégalomane", "une hackeuse anarchiste"],
+    motivations: ["faire tomber le gouvernement", "s'enrichir", "venger sa famille"],
+    enemies: ["Voyous", "Gardes du corps", "Mercenaires", "Policiers corrompus", "Tueur à gages", "Commando", "Le cerveau de l'opération"],
+    twists: ["Votre contact est la taupe.", "La victime a organisé sa disparition.", "Le gouvernement est derrière tout ça."],
+    rewards: ["Une prime", "Une nouvelle identité", "Un dossier compromettant", "Un contact haut placé"],
+  },
+};
+
+export const ideesDe = (genre: GenreId): Idees => IDEES[genre] ?? IDEES.fantasy;

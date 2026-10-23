@@ -1,6 +1,7 @@
 // Canon d'Aubreterre (fantasy), tiré de la bible du monde (content/aubreterre/lore.md)
 // et des noms que la bibliothèque et le bestiaire ont ajoutés depuis. Ajouter un nom ici est une décision :
 // on la note dans docs/journal-de-production.md.
+import { NOMS_AUBRETERRE } from "./fantasy-table";
 import type { Canon } from "./types";
 
 export const AUBRETERRE: Canon = {
@@ -184,11 +185,7 @@ export const AUBRETERRE: Canon = {
     "journal imprimé", "minute près", "OK", "stress",
   ],
 
-  noms: {
-    prenoms: ["Bastienne", "Hubert", "Maëlle", "Colin", "Gaudry", "Ombeline", "Jacquet", "Perrine", "Thiébaut", "Aubin", "Gisle", "Ferréol", "Odile", "Brunissende", "Enguerrand", "Mahaut", "Guérin", "Isaure"],
-    // Les noms de famille des figures (Crolle, Lescot, Varlet, Pell, Mainferrée…) n'y sont pas : un PNJ tiré au hasard ne doit pas devenir l'une d'elles.
-    familles: [" Clouet", " Saulnier", " Tourbier", " de Gué", " Cirier", " Ravel", " Fosseux", " Marchois", " Corbin", " Mortemer", " Sauvelet", " Bourrache", " Lattier"],
-  },
+  noms: NOMS_AUBRETERRE,
 
   accroches: [
     { texte: "Un apprenti cloueur n'est pas revenu d'un village sur pilotis.", factions: ["confrerie"] },

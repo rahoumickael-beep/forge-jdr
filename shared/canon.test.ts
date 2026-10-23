@@ -6,6 +6,8 @@ import { AUBRETERRE, anachronismesDans, datesImpossibles, nomsDuCanon, nomsIncon
 import { catalogue } from "./collection";
 import { generateEncounter, generateScenario } from "./generators";
 import { getGenre } from "./genres";
+import { ideesDe } from "./idees";
+import { LIEUX_AUBRETERRE, NOMS_AUBRETERRE } from "./canon/fantasy-table";
 import { LIBRARY } from "./library";
 import { BACKGROUNDS, ORIGINS } from "./origins";
 import { CLASSES, CONDITIONS, SKILLS } from "./rules";
@@ -40,6 +42,7 @@ const TOUT: [string, string][] = [
   ...textes(fantasy(LIBRARY), "bibliotheque"),
   ...textes(fantasy(BESTIARY), "bestiaire"),
   ...textes(getGenre("fantasy"), "genre"),
+  ...textes(ideesDe("fantasy"), "idees"),
   ...textes(C.cartes, "cartes"),
   ...textes(catalogue("fantasy"), "collection"),
 ];
@@ -121,4 +124,12 @@ test("canon : les rencontres fantasy prennent leurs créatures et leurs lieux da
     }
     assert.ok([...lieux].some((l) => e.title.endsWith(l)), `graine ${seed} : ${e.title}`);
   }
+});
+
+test("canon : la table publique (noms, lieux de rencontre) concorde avec le canon", () => {
+  assert.deepEqual(LIEUX_AUBRETERRE, C.regions.map((r) => r.lieuDeRencontre));
+  assert.equal(C.noms, NOMS_AUBRETERRE);
+  // Ce module part chez les joueurs : aucun secret dedans.
+  const texte = JSON.stringify({ LIEUX_AUBRETERRE, NOMS_AUBRETERRE });
+  for (const secret of C.secrets) assert.ok(!texte.includes(secret), secret);
 });

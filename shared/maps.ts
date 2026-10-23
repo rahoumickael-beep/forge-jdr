@@ -761,3 +761,33 @@ function village(w0: number, h0: number, rng: Rng) {
 export function walkable(t: Tile): boolean {
   return t === T.sol || t === T.route || t === T.porte || t === T.vegetation || t === T.eau;
 }
+
+/** Cases atteignables en `speed` cases de déplacement (diagonales comptées comme une case, façon 5e). */
+export function reachable(map: GameMap, from: { x: number; y: number }, speed: number, blocked: Set<number> = new Set()): Set<number> {
+  const out = new Set<number>();
+  const start = Math.round(from.y) * map.width + Math.round(from.x);
+  const dist = new Map<number, number>([[start, 0]]);
+  const queue = [start];
+  while (queue.length) {
+    const i = queue.shift()!;
+    const d = dist.get(i)!;
+    out.add(i);
+    if (d >= speed) continue;
+    const x = i % map.width;
+    const y = Math.floor(i / map.width);
+    for (let dy = -1; dy <= 1; dy++)
+      for (let dx = -1; dx <= 1; dx++) {
+        if (!dx && !dy) continue;
+        const nx = x + dx;
+        const ny = y + dy;
+        if (nx < 0 || ny < 0 || nx >= map.width || ny >= map.height) continue;
+        const j = ny * map.width + nx;
+        if (dist.has(j) || blocked.has(j) || !walkable(map.tiles[j])) continue;
+        // Pas de diagonale à travers un coin de mur.
+        if (dx && dy && (!walkable(map.tiles[y * map.width + nx]) || !walkable(map.tiles[ny * map.width + x]))) continue;
+        dist.set(j, d + 1);
+        queue.push(j);
+      }
+  }
+  return out;
+}

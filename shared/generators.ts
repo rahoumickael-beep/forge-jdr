@@ -3,92 +3,12 @@
 import { creaturesFor, toEncounterEnemy } from "./bestiary";
 import { canonDe } from "./canon";
 import { getGenre, levelTier } from "./genres";
+import { ideesDe } from "./idees";
+import { makeName, modifier } from "./personnages";
 import { Rng, uid } from "./random";
-import type { Character, Encounter, GenreId, Scenario, Ton } from "./types";
+import type { Encounter, GenreId, Scenario, Ton } from "./types";
 
-export function modifier(value: number): number {
-  return Math.floor((value - 10) / 2);
-}
-
-export function formatMod(value: number): string {
-  const m = modifier(value);
-  return m >= 0 ? `+${m}` : `${m}`;
-}
-
-/** Bonus de maîtrise façon D&D 5e. */
-export function proficiency(level: number): number {
-  return 2 + Math.floor((Math.max(1, level) - 1) / 4);
-}
-
-export function makeName(genre: GenreId, rng: Rng): string {
-  const g = getGenre(genre);
-  const raw = rng.pick(g.nameStart) + rng.pick(g.nameEnd);
-  return raw.charAt(0).toUpperCase() + raw.slice(1);
-}
-
-/** 4d6, on garde les 3 meilleurs. */
-function rollStat(rng: Rng): number {
-  const d = [rng.int(1, 6), rng.int(1, 6), rng.int(1, 6), rng.int(1, 6)].sort((a, b) => b - a);
-  return d[0] + d[1] + d[2];
-}
-
-export interface CharacterOptions {
-  genre: GenreId;
-  level: number;
-  archetype?: string;
-  origin?: string;
-  name?: string;
-  seed?: number;
-  npc?: boolean;
-}
-
-export function generateCharacter(opts: CharacterOptions): Character {
-  const rng = new Rng(opts.seed);
-  const g = getGenre(opts.genre);
-  const level = Math.min(20, Math.max(1, opts.level));
-  const archetype = opts.archetype || rng.pick(g.archetypes);
-  const origin = opts.origin || rng.pick(g.origins);
-  const stats: Record<string, number> = {};
-  for (const s of g.stats) stats[s] = rollStat(rng);
-  // +1 à une caractéristique tous les 4 niveaux, comme les améliorations de D&D
-  for (let i = 0; i < Math.floor(level / 4); i++) {
-    const s = rng.pick(g.stats);
-    stats[s] = Math.min(20, stats[s] + 2);
-  }
-  const con = modifier(stats[g.stats[2]]);
-  const dex = modifier(stats[g.stats[1]]);
-  const hitDie = rng.pick([6, 8, 10, 12]);
-  const hpMax = Math.max(1, hitDie + con + (level - 1) * (Math.floor(hitDie / 2) + 1 + con));
-  const ac = 10 + dex + rng.int(1, 6);
-  const name = opts.name || makeName(opts.genre, rng);
-  const trait = rng.pick(g.traits);
-  const place = rng.pick(g.places);
-  return {
-    id: uid("c_"),
-    name,
-    genre: opts.genre,
-    level,
-    archetype,
-    origin,
-    description: `${origin} ${archetype.toLowerCase()} de niveau ${level}, ${trait}.`,
-    backstory: `${name} a grandi près de ${place}. ${rng.pick([
-      "Un événement tragique l'a poussé·e sur les routes.",
-      "Une dette envers une personne dangereuse l'oblige à partir à l'aventure.",
-      "Un rêve récurrent lui montre un lieu qu'il faut trouver.",
-      "Ancien membre d'un groupe dissous, il·elle cherche ses compagnons perdus.",
-      "Une prophétie mal comprise a fait de lui·elle un paria.",
-    ])}`,
-    personality: trait,
-    stats,
-    hp: hpMax,
-    hpMax,
-    ac,
-    speed: rng.pick([5, 6, 6, 7]),
-    equipment: rng.pickMany(g.equipment, 3 + Math.min(3, Math.floor(level / 5))),
-    abilities: rng.pickMany(g.abilities, 1 + Math.min(4, Math.floor(level / 3))),
-    role: opts.npc ? rng.pick(["Allié", "Informateur", "Marchand", "Rival", "Commanditaire", "Traître caché"]) : undefined,
-  };
-}
+export { formatMod, generateCharacter, makeName, modifier, proficiency, type CharacterOptions } from "./personnages";
 
 /** Profil de danger d'un ennemi selon sa position dans la liste du genre. */
 function enemyProfile(index: number, total: number, level: number) {
@@ -109,8 +29,9 @@ function lieuDeRegion(genre: GenreId, region: string): string | undefined {
 export function generateEncounter(genre: GenreId, level: number, players = 4, seed?: number): Encounter {
   const rng = new Rng(seed);
   const g = getGenre(genre);
+  const idees = ideesDe(genre);
   const tier = levelTier(level).index;
-  const n = g.enemies.length;
+  const n = idees.enemies.length;
   // On choisit des ennemis dans la tranche correspondant au palier.
   const lo = Math.floor((tier / 4) * n);
   const hi = Math.min(n - 1, Math.floor(((tier + 1.6) / 4) * n));
@@ -142,7 +63,7 @@ export function generateEncounter(genre: GenreId, level: number, players = 4, se
     const idx = rng.int(lo, hi);
     const p = enemyProfile(idx, n, level);
     const count = Math.max(1, Math.round(((players * diffFactor) / (1 + idx / n * 3)) * rng.int(5, 12) / 10));
-    return { name: g.enemies[idx], count, hp: p.hp, ac: p.ac, attack: p.attack, danger: idx > n * 0.75 ? "Élevé" : idx > n * 0.4 ? "Moyen" : "Faible" };
+    return { name: idees.enemies[idx], count, hp: p.hp, ac: p.ac, attack: p.attack, danger: idx > n * 0.75 ? "Élevé" : idx > n * 0.4 ? "Moyen" : "Faible" };
   });
   const place = rng.pick(g.places);
   return {
@@ -162,8 +83,9 @@ export function generateEncounter(genre: GenreId, level: number, players = 4, se
 export function generateLoot(genre: GenreId, level: number, seed?: number): string[] {
   const rng = new Rng(seed);
   const g = getGenre(genre);
+  const idees = ideesDe(genre);
   const coins = rng.int(10, 60) * level;
-  return [`${coins} pièces (ou équivalent local)`, ...rng.pickMany(g.equipment, 2), ...(rng.chance(0.25 + level / 40) ? [rng.pick(g.rewards)] : [])];
+  return [`${coins} pièces (ou équivalent local)`, ...rng.pickMany(g.equipment, 2), ...(rng.chance(0.25 + level / 40) ? [rng.pick(idees.rewards)] : [])];
 }
 
 export interface ScenarioOptions {
@@ -185,11 +107,12 @@ const TON_FLAVOR: Record<Ton, string> = {
 export function generateScenario(opts: ScenarioOptions): Scenario {
   const rng = new Rng(opts.seed);
   const g = getGenre(opts.genre);
+  const idees = ideesDe(opts.genre);
   const tier = levelTier(opts.level);
   const villainName = makeName(opts.genre, rng);
-  const villainKind = rng.pick(g.villains);
+  const villainKind = rng.pick(idees.villains);
   const places = rng.pickMany(g.places, 4);
-  const hook = rng.pick(g.hooks);
+  const hook = rng.pick(idees.hooks);
   const actsCount = tier.index >= 2 ? 4 : 3;
   const acts = Array.from({ length: actsCount }, (_, i) => ({
     title: ACT_TITLES[i] ?? `Acte ${i + 1}`,
@@ -213,17 +136,17 @@ export function generateScenario(opts: ScenarioOptions): Scenario {
     level: opts.level,
     players: opts.players,
     hook,
-    synopsis: `${hook} Derrière tout cela se cache ${villainName}, ${villainKind}, qui veut ${rng.pick(g.motivations)}. ${TON_FLAVOR[opts.ton]} Aventure de palier ${tier.label.toLowerCase()} pour ${opts.players} joueurs de niveau ${opts.level}.`,
+    synopsis: `${hook} Derrière tout cela se cache ${villainName}, ${villainKind}, qui veut ${rng.pick(idees.motivations)}. ${TON_FLAVOR[opts.ton]} Aventure de palier ${tier.label.toLowerCase()} pour ${opts.players} joueurs de niveau ${opts.level}.`,
     acts,
-    villain: { name: villainName, motivation: rng.pick(g.motivations), description: `${villainName} est ${villainKind}, ${rng.pick(g.traits)}.` },
+    villain: { name: villainName, motivation: rng.pick(idees.motivations), description: `${villainName} est ${villainKind}, ${rng.pick(g.traits)}.` },
     npcs: Array.from({ length: 3 }, () => ({
       name: makeName(opts.genre, rng),
       role: rng.pick(["Commanditaire", "Informateur", "Allié inattendu", "Marchand", "Témoin", "Rival"]),
       secret: rng.pick(["travaille en secret pour le méchant", "cache un objet important", "est recherché·e par les autorités", "est un parent d'un héros", "ment sur son identité", "n'a aucun secret, mais tout le monde le soupçonne"]),
     })),
     encounters,
-    twists: rng.pickMany(g.twists, 2),
-    rewards: rng.pickMany(g.rewards, 2),
+    twists: rng.pickMany(idees.twists, 2),
+    rewards: rng.pickMany(idees.rewards, 2),
     source: "aleatoire",
   };
 }

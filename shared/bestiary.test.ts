@@ -1,9 +1,13 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
+import { readdirSync, readFileSync } from "node:fs";
 import { FIN_DE_STYLE } from "./charte";
+import { AUBRETERRE } from "./canon/fantasy";
 import {
   averageDice,
   BESTIARY,
+  fichierCreature,
+  pionDeCreature,
   CR_STEPS,
   creaturesFor,
   estimateCr,
@@ -136,4 +140,15 @@ test("bestiaire : aucune planche fantasy ne décrit d'objet moderne", () => {
     assert.ok(!negation.test(c.illustration), `${c.id} : négation dans le prompt`);
     assert.ok(c.illustration.startsWith(LUMIERE_FAMILLE[c.family]), `${c.id} : la lumière de la famille doit ouvrir le prompt`);
   }
+});
+
+test("figurines et cartes : aucun nom de fichier public ne trahit un secret", () => {
+  const script = readFileSync("scripts/vignettes-figurines.mjs", "utf8");
+  for (const c of BESTIARY.filter((x) => x.publicName && x.genre === "fantasy")) {
+    assert.ok(script.includes(`"${c.id}": "${fichierCreature(c)}"`), `alias de ${c.id} dans vignettes-figurines.mjs`);
+    assert.equal(pionDeCreature(c.id), `/pions/${fichierCreature(c)}.webp`);
+  }
+  const mots = AUBRETERRE.secrets.map((s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, "-"));
+  for (const dossier of ["client/public/pions", "client/public/cartes"])
+    for (const f of readdirSync(dossier)) for (const m of [...mots, "gorvan"]) assert.ok(!f.includes(m), `${dossier}/${f} trahit « ${m} »`);
 });

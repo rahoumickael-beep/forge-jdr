@@ -3,7 +3,7 @@ import { originsFor } from "../../../shared/origins";
 import { CharacterCreator } from "./CharacterCreator";
 import { useState } from "react";
 import { getGenre } from "../../../shared/genres";
-import { generateCharacter } from "../../../shared/generators";
+import { generateCharacter } from "../../../shared/personnages";
 import { randomSeed } from "../../../shared/random";
 import type { Character, RoomView } from "../../../shared/types";
 import { tokenForCharacter } from "../placement";

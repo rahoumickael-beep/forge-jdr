@@ -4,10 +4,9 @@ import { preparerSeance, seanceEnCours, texteDePreparation } from "../../../shar
 import { canonDe } from "../../../shared/canon";
 import type { RoomView } from "../../../shared/types";
 import { send, toast } from "../store";
+import { ATTITUDES, attitude } from "./Chronique";
 import { DistributionCartes } from "./Collection";
 
-const ATTITUDES = ["Hostile", "Méfiant", "Neutre", "Bienveillant", "Allié"];
-const attitude = (n: number) => ATTITUDES[n + 2] ?? "Neutre";
 const dateCourte = (t: number) => new Date(t).toLocaleDateString("fr-FR", { day: "numeric", month: "long" });
 
 export function CampagnePanel({ room }: { room: RoomView }) {
@@ -148,41 +147,3 @@ function PnjLigne({ room, id }: { room: RoomView; id: string }) {
 }
 
 /** Ce que les joueurs lisent de la campagne : le serveur leur a déjà retiré les secrets. */
-export function ChroniquePanel({ room }: { room: RoomView }) {
-  const c = room.campagne;
-  const canon = canonDe(room.genre);
-  const closes = c.seances.filter((s) => s.fin).reverse();
-  const fils = c.fils.filter((f) => f.ouvert);
-  const amis = canon?.factions.filter((f) => (c.reputations[f.id] ?? 0) > 0) ?? [];
-  return (
-    <div className="stack">
-      <h3>Chronique</h3>
-      {c.jauge !== null && canon?.campagne?.jauge && <p className="small">{canon.campagne.jauge.nom[0].toUpperCase() + canon.campagne.jauge.nom.slice(1)} : {c.jauge} / 100</p>}
-      {closes.length === 0 && <p className="small muted">Rien encore. Le MJ écrit ici ce qu'on retient de chaque séance.</p>}
-      {closes.map((s) => (
-        <article key={s.numero} className="paper sheet">
-          <h4>Séance {s.numero}</h4>
-          <p className="small" style={{ whiteSpace: "pre-wrap", margin: "6px 0 0" }}>{s.resume || s.faits.join(" ")}</p>
-        </article>
-      ))}
-      {fils.length > 0 && (
-        <div className="section stack">
-          <h3>Ce qui reste en suspens</h3>
-          <ul className="small">{fils.map((f) => <li key={f.id}>{f.texte}</li>)}</ul>
-        </div>
-      )}
-      {c.pnj.length > 0 && (
-        <div className="section stack">
-          <h3>Gens croisés</h3>
-          {c.pnj.map((p) => <p key={p.id} className="small"><strong>{p.nom}</strong> · {attitude(p.attitude)}{p.public ? ` : ${p.public}` : ""}</p>)}
-        </div>
-      )}
-      {amis.length > 0 && (
-        <div className="section stack">
-          <h3>Réputation</h3>
-          {amis.map((f) => <p key={f.id} className="small">{f.nom} : {c.reputations[f.id]} / 3</p>)}
-        </div>
-      )}
-    </div>
-  );
-}
