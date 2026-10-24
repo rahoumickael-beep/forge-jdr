@@ -61,7 +61,7 @@ test("Cellule Hermès : compétences connues, caractéristiques du genre, ids pr
     assert.ok(!/Dextérité|Agilité|Sagesse|Charisme|Intelligence|Constitution/.test(JSON.stringify(c)), `${c.name} : nom de caractéristique d'un autre genre`);
     assert.ok(c.powers.some((p) => p.level === 20), `${c.name} : pas de pouvoir de niveau 20`);
     assert.ok(c.powers.some((p) => p.level === 9) && c.powers.some((p) => p.level === 15), `${c.name} : un pouvoir propre aux niveaux 9 et 15`);
-    assert.ok(c.powers.some((p) => p.level >= 11 && p.level <= 17 && /une fois par semaine de jeu|une fois par mission/i.test(p.effect)), `${c.name} : un réseau ou une faveur aux niveaux 11 à 17`);
+    assert.ok(c.powers.some((p) => p.level >= 11 && p.level <= 17 && /une fois par semaine de jeu|une fois par mission|réseau|te (prête|laisse|donne|dit|passe|fait|souffle|remet|rend|reçoit)|te fait signe|t'évite|à qui tu as|que tu connais|qui t'est/i.test(p.effect)), `${c.name} : un réseau ou une faveur aux niveaux 11 à 17`);
     assert.ok(/^\d+ euros$/.test(c.startingGear[c.startingGear.length - 1]), `${c.name} : une somme en euros au départ`);
   }
   for (const h of HISTORIQUES_HERMES) {
@@ -94,14 +94,14 @@ test("Cellule Hermès : les niveaux hauts donnent des réseaux, pas des surhomme
 test("Cellule Hermès : l'Empreinte, les couvertures, la Caisse et les armes de la bible", () => {
   const texte = JSON.stringify(REGLES_HERMES);
   for (const mot of [
-    "Elle part à 2", "de 0 à 10", "Noté", "Fiché", "Identifié", "Grillé", "repart de l'Empreinte 5", "800 €", "dix jours", "1 000 €", "De 2 par scène où l'on tire",
+    "Elle part à 2", "de 0 à 10", "Noté", "Fiché", "Identifié", "Grillé", "repart de l'Empreinte 5", "800 €", "dix jours", "1 000 €", "De 2 par scène où un coursier tire", "Faveur de réseau : une fois par séance", "ne baisse jamais de plus de 3 par mission", "troisième tour sans soins", "Médecine DD 12", "9/27 m", "15 coups ; changer de chargeur : action bonus", "Manche de pioche",
     "2 400 €", "300 à 1 500 €", "500 € d'un distributeur", "10 000 €", "200 à 500 €", "2 000 €", "garde à vue de 24 à 48 heures",
-    "30 à 40 €", "le double au marché noir", "1 500 à 3 000 €", "200 €", "30 €", "sauvegarde d'Endurance DD 15", "ramper jusqu'à la fin de son prochain tour",
-    "un niveau 15 reste un humain", "60 € par jour", "35 à 120 €", "80 à 150 €", "40 à 130 €", "40 à 200 €", "catégorie D", "interdit en Belgique", "90 à 160 €", "12 à 30 €", "600 €",
+    "30 à 40 €", "le double au marché noir", "1 500 à 3 000 €", "200 €", "30 €", "sauvegarde d'Endurance DD 15", "ramper jusqu'à la fin du premier tour où elle peut agir", "60 € par jour", "35 à 120 €", "80 à 150 €", "40 à 130 €", "40 à 200 €", "catégorie D", "interdit en Belgique", "90 à 160 €", "12 à 30 €", "600 €",
   ]) {
     assert.ok(texte.includes(mot), `règles de la Cellule : « ${mot} »`);
   }
   assert.ok(!/Écoute/.test(texte), "les Écoutes sont dans le guide du MJ, pas dans les règles des joueurs");
+  assert.ok(!/message[^.]{0,40}(lu|ouvert|reçu)[^.]{0,30}avant|(lu|ouvert|reçu)[^.]{0,30}avant (le|son|sa) destinataire/i.test(texteJoueur()), "aucun texte joueur ne parle de message lu, ouvert ou reçu avant le destinataire");
   assert.equal(ECOUTES_MAX, 4);
   assert.equal(C.campagne?.reserve?.max, 4);
   assert.equal(C.campagne?.reserve?.regle, REGLE_DES_ECOUTES);

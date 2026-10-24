@@ -26,7 +26,7 @@ export const ORIGINES_HERMES: Origin[] = [
         blurb: "Dix ans de régiment, départ après une blessure au genou. Tu as tenu des postes de nuit et tu sais compter les secondes.",
         bonus: { 0: 1, 2: 1 },
         traits: [
-          { name: "Un camarade qui trouve", text: "Tu connais un ancien camarade qui te trouve un pistolet une fois par mission, sans le prix du marché noir. L'arme n'a pas de papiers : tu la rends avant la fin de la mission, ou tu t'en débarrasses." },
+          { name: "Un camarade qui trouve", text: "Tu connais un ancien camarade qui te trouve un pistolet une fois par mois de jeu, sans le prix du marché noir. L'arme n'a pas de papiers : tu la rends avant la fin de la mission, ou tu t'en débarrasses." },
         ],
       },
       {
@@ -69,7 +69,7 @@ export const ORIGINES_HERMES: Origin[] = [
         blurb: "Écrans, notes, schémas. Tu as lu des milliers de pages pour en retenir trois lignes.",
         bonus: { 3: 1, 4: 1 },
         traits: [
-          { name: "Ce qui manque au dossier", text: "Une fois par séance, tu demandes au MJ quel élément manque dans un dossier que tu viens de lire. Il répond par une phrase." },
+          { name: "Lecture en diagonale", text: "Lecture en diagonale : avantage aux tests d'Investigation pour trouver une information dans un dossier de plus de cent pages." },
         ],
       },
     ],
@@ -94,7 +94,7 @@ export const ORIGINES_HERMES: Origin[] = [
         blurb: "Tests d'intrusion, contrats avec des banques. Tu sais ouvrir ce que les autres ferment.",
         bonus: { 1: 1, 3: 1 },
         traits: [
-          { name: "Effacer sans témoin", text: "Effacer une trace numérique sans témoin ne te demande aucun jet. Si c'est la seule trace, l'Empreinte baisse quand même de 2, une fois par mission." },
+          { name: "Effacer sans témoin", text: "Effacer une trace numérique sans témoin ne demande aucun jet, mais la baisse reste celle de la règle." },
         ],
       },
       {
@@ -103,7 +103,7 @@ export const ORIGINES_HERMES: Origin[] = [
         blurb: "Antennes, câbles, brouilleurs. Tu sais où l'on cache un micro parce que tu en as posé.",
         bonus: { 1: 1, 4: 1 },
         traits: [
-          { name: "Dix minutes, aucun jet", text: "Poser ou repérer un micro, une balise ou un brouillage te prend dix minutes et aucun jet. Tu répares un équipement sans notice." },
+          { name: "L'antenne du quartier", text: "Tu retrouves en dix minutes l'antenne ou l'armoire de rue qui dessert un quartier. Avantage en Investigation pour remonter l'origine d'un signal." },
         ],
       },
     ],
@@ -137,7 +137,7 @@ export const ORIGINES_HERMES: Origin[] = [
         blurb: "Clients riches, discrétion. Tu sais ce qu'un client cache à la façon dont il s'assoit.",
         bonus: { 3: 1, 5: 1 },
         traits: [
-          { name: "Un compte de réserve", text: "Un compte de 3 000 € de réserve, et on te prend pour un client dans n'importe quelle banque. Un virement de cette réserve compte comme un virement non prévu pour l'Empreinte." },
+          { name: "Un compte de réserve", text: "Un compte de 1 000 € de réserve, et on te prend pour un client dans n'importe quelle banque. Un virement de cette réserve compte comme un virement non prévu pour l'Empreinte." },
         ],
       },
     ],
@@ -251,7 +251,7 @@ export const HISTORIQUES_HERMES: Background[] = [
     skills: ["Histoire", "Intuition"],
     tool: "Tableur et logiciel de cartographie",
     gear: ["Ordinateur portable propre", "Cahier de notes", "Marqueurs de couleur", "Carte routière annotée", "Téléphone jetable", "220 euros"],
-    feature: { name: "Un schéma en une heure", text: "En une heure, avec un dossier et un tableau, tu fais apparaître les liens entre personnes, dates et lieux d'une affaire. Le MJ te montre la lacune la plus importante." },
+    feature: { name: "Un schéma en une heure", text: "En une heure, avec un dossier et un tableau, tu fais apparaître les liens entre personnes, dates et lieux d'une affaire. Avantage à ton test d'Investigation pour repérer la lacune la plus importante du dossier." },
   },
   {
     id: "he-h-informaticien",
@@ -281,7 +281,7 @@ export const HISTORIQUES_HERMES: Background[] = [
     skills: ["Investigation", "Histoire"],
     tool: "Matériel de comptabilité",
     gear: ["Ordinateur portable propre", "Calculatrice", "Dossiers photocopiés", "Costume sombre", "Carte d'expert", "300 euros"],
-    feature: { name: "Un bilan en vingt minutes", text: "Tu lis un bilan, un relevé ou un registre de société en vingt minutes et tu sais où l'argent s'arrête. Le MJ te dit la ligne qui ne colle pas." },
+    feature: { name: "Un bilan en vingt minutes", text: "Tu lis un bilan, un relevé ou un registre de société en vingt minutes et tu sais où l'argent s'arrête. Avantage à ton test d'Investigation pour trouver la ligne qui ne colle pas." },
   },
   {
     id: "he-h-banquier",
