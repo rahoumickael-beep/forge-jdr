@@ -121,7 +121,8 @@ export async function fabriquer(livre: Livre, out: string) {
   final.setTitle(livre.titre);
   final.setAuthor("Mickael et sa table");
   final.setLanguage("fr-FR");
-  const fond = await final.embedJpg(texture);
+  // Copie : un petit JPEG (papier presque uni) vit dans un tampon partagé de Node, que pdf-lib lit depuis son début.
+  const fond = await final.embedJpg(new Uint8Array(texture));
   const morceaux = [
     { pdf: couverture, parchemin: false },
     { pdf: credits, parchemin: true },
