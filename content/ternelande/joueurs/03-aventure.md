@@ -40,9 +40,9 @@ Hors combat, on ne compte pas en cases mais en minutes, en heures et en jours. L
 
 | Rythme | Par minute | Par heure | Par jour (8 h) | Effet |
 |---|---|---|---|---|
-| Rapide | 120 m | 6 km | 45 km | −5 à la Perception passive |
-| Normal | 90 m | 4,5 km | 36 km | — |
-| Lent | 60 m | 3 km | 27 km | Le groupe peut avancer discrètement |
+| Rapide | 100 m | 6 km | 48 km | −5 à la Perception passive |
+| Normal | 75 m | 4,5 km | 36 km | — |
+| Lent | 50 m | 3 km | 24 km | Le groupe peut avancer discrètement |
 
 Le rythme compte pour tout le groupe : on avance à la vitesse du plus lent. Un groupe qui compte un Houilleur n'est pas plus lent pour autant sur de longues distances : la vitesse de combat n'entre pas en compte pour le voyage, seul le rythme choisi.
 
@@ -83,10 +83,10 @@ Les lacs de Vaugelée sont des routes, tant qu'ils tiennent. Le MJ fixe l'épais
 
 | Épaisseur | Ce qu'elle porte |
 |---|---|
-| Moins de 5 cm | Rien. Elle craque sous un homme seul |
+| Moins de 10 cm (glace fine) | Un enfant à plat ventre ; rien de plus lourd |
 | 10 cm | Un piéton |
-| 15 cm | Une file de piétons, un cavalier |
-| 20 cm | Un traîneau léger attelé |
+| 15 cm | Une file de piétons |
+| 20 cm | Un cavalier, un traîneau léger attelé |
 | 30 cm et plus | Un traîneau lourd, un chariot |
 
 Pour juger la glace au bruit, à la couleur et au son d'un coup de hache, fais un test de Volonté (Survie), DD 12. La glace claire et bleue porte plus que la glace blanche et grise, à épaisseur égale. En cas d'échec, le MJ te donne une estimation fausse, sans te dire de combien. Un pêcheur sous la glace n'a pas besoin du test : il sait.
@@ -127,12 +127,14 @@ En cas d'échec, le groupe part dans une mauvaise direction. Il ne s'en rend com
 
 L'hiver est un adversaire. Il n'a pas de PV, il ne rate jamais, et il gagne si on le néglige.
 
-**Bien couvert, le froid ordinaire ne coûte rien.** Un manteau de laine, un bonnet, des gants et des bottes fourrées suffisent pour marcher. Le MJ demande une **sauvegarde d'Endurance** à chaque heure passée dans le **froid extrême** : une tempête, les Neiges Hautes la nuit, des vêtements trempés. DD 10 en général, plus élevé si les conditions empirent. En cas d'échec, un niveau d'épuisement.
+**Bien couvert, le froid ordinaire ne coûte rien.** Un manteau de laine, un bonnet, des gants et des bottes fourrées suffisent pour marcher. Le MJ demande une **sauvegarde d'Endurance** à chaque heure passée dans le **froid extrême**.
+
+**Le grand froid.** Une tempête, une journée sur les Neiges Hautes, des vêtements trempés : sauvegarde d'Endurance DD 10 par heure passée dehors ; un échec donne un niveau d'épuisement. Ces sauvegardes remplacent celle de la nuit dehors.
 
 **Une nuit dehors sans abri ni feu** donne un niveau d'épuisement, sauf sauvegarde d'Endurance DD 12.
 
 - Une tenue adaptée (fourrures, peaux) donne l'avantage à ces sauvegardes, ou en dispense.
-- Les Ternois ont l'avantage à toutes les sauvegardes contre le froid et contre l'épuisement dû au froid. Un Gris des Neiges y résiste, et n'en prend pas d'épuisement.
+- Les Ternois ont l'avantage à toutes les sauvegardes contre le froid et contre l'épuisement dû au froid. Un Gris des Neiges (une lignée de Gris-de-Sang) y résiste, et n'en prend pas d'épuisement.
 - **Trempé** (après une chute à l'eau, une rivière traversée), tu fais la sauvegarde chaque heure tant que tu n'as ni feu ni vêtements secs.
 
 L'**épuisement** s'additionne par niveaux : chaque niveau de plus te ralentit et t'affaiblit un peu plus, jusqu'à la mort. Le chapitre 7 donne l'effet de chaque niveau. Un niveau se perd à chaque repos long, si tu as mangé, bu et dormi au chaud.
@@ -141,7 +143,7 @@ L'**épuisement** s'additionne par niveaux : chaque niveau de plus te ralentit e
 
 ### L'eau glacée
 
-Une chute dans un lac gelé est la première cause de mort des voyageurs. Une créature qui tombe dans l'eau glacée tient un nombre de minutes égal à sa valeur d'Endurance, puis fait une sauvegarde d'Endurance DD 10 à chaque minute supplémentaire, avec un niveau d'épuisement en cas d'échec.
+Une chute dans un lac gelé est la première cause de mort des voyageurs. Une créature qui tombe dans l'eau d'un lac gelé fait une sauvegarde d'Endurance DD 12 dès la chute, puis à la fin de chaque minute passée dedans. Un échec donne un niveau d'épuisement.
 
 - **Sortir du trou** demande une action et un test de Vigueur (Athlétisme), DD 13. Un allié qui tend une corde, une perche ou une main donne l'avantage.
 - Si le courant t'a emporté sous la glace, le MJ peut demander un test de Volonté (Survie), DD 15, pour retrouver le trou.
@@ -213,7 +215,7 @@ Un personnage qui fourrage en marchant (au rythme normal ou lent) fait un test d
 | Blancs-Bois, Landes Effacées | 15 |
 | Neiges Hautes | 20 |
 
-En cas de réussite, il trouve de quoi nourrir **1d6 + son modificateur de Volonté** personnes pour la journée, et du bois pour autant de nuits. L'eau n'est jamais un problème : c'est de la neige.
+En cas de réussite, il trouve de quoi nourrir **1d6 + son modificateur de Volonté** personnes pour la journée, et du bois pour autant de personnes, une nuit. L'eau n'est jamais un problème : c'est de la neige.
 
 > **La sève des Blancs-Bois.** Les bouleaux des Blancs-Bois saignent une sève claire, un peu sucrée. Les Sylvains en boivent chaque jour depuis l'enfance. Toi, ne la bois pas sans savoir ce que c'est : on dit que celui qui en boit trop ne sait plus très bien ce qu'il a vécu. Demande au MJ avant.
 
@@ -340,7 +342,7 @@ Un personnage qui n'a plus aucun souvenir intact est **Vide**. Le joueur garde s
 
 ### Cas particuliers
 
-- **Gris-de-Sang.** La magie des autres (les Reflets, les pouvoirs qui volent des souvenirs) ne rend jamais flou un de tes souvenirs. Tes propres sorts te coûtent, mais rien ne s'efface à moitié chez toi : le souvenir est perdu d'un coup. La Dîme te prend comme les autres. Tu ne peux ni raconter pour en retrouver un, ni qu'on te le raconte : ce que tu perds ne revient pas. Les Reflets te cherchent.
+- **Gris-de-Sang.** La magie des autres (les Reflets, les pouvoirs qui volent des souvenirs) ne rend jamais flou un de tes souvenirs. Tes propres sorts te coûtent comme aux autres : un sort de niveau 3 à 5 rend flou un souvenir ; mais un sort de niveau 6 ou plus te le fait perdre d'un coup, parce que rien ne s'efface à moitié chez toi. La Dîme te prend comme les autres. Tu ne peux ni raconter pour en retrouver un, ni qu'on te le raconte : ce que tu perds ne revient pas. Les Reflets te cherchent.
 - **Effacés.** Tu commences avec deux souvenirs, et tu en gagnes un à chaque niveau jusqu'à six, puis un par niveau pair. Tu as l'avantage contre tout ce qui charme, effraie ou trompe en jouant sur un souvenir.
 - **Houilleurs.** Le Récitant de famille a un trait qui l'aide à redire un souvenir à un allié : lis-le.
 - **Les classes.** Certaines savent garder, rendre ou prendre des souvenirs : le Complainteur, la Sorcière gardienne, le Pèlerin porte-noms, le Mémorialiste lecteur, le Dîmier renégat. Leurs pouvoirs disent comment.
@@ -366,7 +368,7 @@ Avant de la jouer, la table se met d'accord, hors jeu, sur ce qu'elle veut voir 
 - **Fuir.** Tu quittes le village avant la pierre. Les Dîmiers repasseront, ou ne repasseront pas. Le MJ dit ce que ta fuite coûte à ceux qui restent.
 - **Ne rien donner.** Voir « L'aube », ci-dessus.
 
-> **Exemple.** La nuit de la Dîme, dans un village de Vaugelée. Le MJ : « Le Dîmier vous regarde à travers son masque d'étain. Il dit : "Deux. Chacun." » Perrin s'approche de la pierre. Son joueur dit : « Je pose le front et je dis : la voix de ma sœur Douce, qui chantait faux. » Il raye la ligne. Le MJ : « Au matin, tu trouves, au fond de ton sac, un sifflet d'os. Tu ne sais pas à qui il était. » Puis Perrin donne le deuxième : le nom de sa jument, Fleurie. Il lui reste quatre souvenirs. Les autres joueurs se taisent.
+> **Exemple.** La nuit de la Dîme, dans un village de Vaugelée. Le MJ : « Le Dîmier vous regarde à travers son masque d'étain. Il dit : “Deux. Chacun.” » Perrin s'approche de la pierre. Son joueur dit : « Je pose le front et je dis : la voix de ma sœur Douce, qui chantait faux. » Il raye la ligne. Le MJ : « Au matin, tu trouves, au fond de ton sac, un sifflet d'os. Tu ne sais pas à qui il était. » Puis Perrin donne le deuxième : le nom de sa jument, Fleurie. Il lui reste quatre souvenirs. Les autres joueurs se taisent.
 
 ### Après
 
@@ -417,8 +419,8 @@ On monte de niveau **après un repos long**, pas au milieu d'un combat.
 
 **Les points de vie.**
 - Au **niveau 1**, un personnage a le maximum de son dé de vie + son modificateur d'Endurance. Un mercenaire avec Endurance 14 commence avec 10 + 2 = 12 PV.
-- À **chaque niveau suivant**, il lance son dé de vie et ajoute son Endurance, ou il prend la valeur fixe : 4 pour un d6, 5 pour un d8, 6 pour un d10, plus son Endurance. Il gagne toujours au moins 1 PV. Certains peuples ajoutent des PV à chaque niveau.
-- Si son Endurance augmente, ses PV maximum augmentent rétroactivement de 1 par niveau.
+- À **chaque niveau suivant**, il lance son dé de vie et ajoute son modificateur d'Endurance, ou il prend la valeur fixe : 4 pour un d6, 5 pour un d8, 6 pour un d10, plus son modificateur d'Endurance. Il gagne toujours au moins 1 PV. Certains peuples ajoutent des PV à chaque niveau.
+- Si son modificateur d'Endurance augmente, ses PV maximum augmentent rétroactivement de 1 par niveau.
 
 **Un dé de vie de plus**, puisqu'il en a autant que de niveaux.
 
@@ -445,8 +447,8 @@ Chaque jour de temps libre coûte de l'argent, selon la façon dont on vit. Le p
 | Train de vie | Prix par jour | Ce que ça veut dire en Ternelande |
 |---|---|---|
 | Misérable | Rien | Dormir dans l'étable du prêtre, mendier à la porte de l'abbaye |
-| Sordide | 2 deniers | De la paille dans une grange, de la soupe claire |
-| Pauvre | 4 deniers | Un lit partagé à l'auberge, du pain noir |
+| Sordide | 5 deniers | De la paille dans une grange, de la soupe claire |
+| Pauvre | 7 deniers | Un lit partagé à l'auberge, du pain noir |
 | Modeste | 8 deniers | Une nuit à l'auberge et deux repas chauds |
 | Confortable | 2 sous | Une chambre à soi, du vin, du bois à volonté |
 | Riche | 5 sous | Une maison louée, un domestique, du chêne dans la cheminée |
@@ -458,7 +460,7 @@ Le train de vie a des effets. Les gens d'un quartier riche ne parlent pas à que
 
 Voici ce qu'un personnage peut faire de ses journées. Chaque activité demande que le personnage s'y consacre au moins huit heures par jour.
 
-**Fabriquer.** Avec les outils qu'il maîtrise, un personnage fabrique un objet ordinaire : arme, armure, matériel, remède s'il maîtrise le matériel d'herboriste. Il avance de **1 livre de valeur par jour** et dépense **la moitié du prix** de l'objet en matériaux. Plusieurs personnages peuvent travailler ensemble sur le même objet. Fabriquer une épée (10 livres) prend 10 jours et coûte 5 livres de matériaux.
+**Fabriquer.** Avec les outils qu'il maîtrise, un personnage fabrique un objet ordinaire : arme, armure, matériel, remède s'il maîtrise le matériel d'herboriste. Il avance de **3 livres d'ouvrage par jour** et dépense **la moitié du prix** de l'objet en matériaux. Plusieurs personnages peuvent travailler ensemble sur le même objet. Fabriquer une épée (10 livres) prend 4 jours et coûte 5 livres de matériaux.
 
 **Exercer un métier.** Un personnage qui travaille (comme copiste pour l'Église, comme barbier, comme fossoyeur, comme pêcheur) gagne de quoi vivre à un train de vie **modeste** sans dépenser. S'il maîtrise une compétence ou un outil adapté (les outils de calligraphe pour le copiste, les outils de fossoyeur pour le fossoyeur), il vit **confortablement**.
 

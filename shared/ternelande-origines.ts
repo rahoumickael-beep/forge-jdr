@@ -47,7 +47,7 @@ export const ORIGINES_TERNELANDE: Origin[] = [
     darkvision: 12,
     unique: true,
     traits: [
-      { name: "Rien ne s'efface", text: "La magie des autres (Reflets, pouvoirs de vol de souvenir, sorts d'oubli) ne rend jamais flou un de tes souvenirs. Tes propres sorts te coûtent comme aux autres, mais rien ne s'efface à moitié chez toi : le souvenir que ton sort aurait rendu flou est perdu d'un coup. Les pouvoirs qui te font rendre flou un souvenir de ton plein gré (comme Brûler un souvenir) ne marchent pas pour toi." },
+      { name: "Rien ne s'efface", text: "La magie des autres ne rend jamais flou un de tes souvenirs. Tes propres sorts te coûtent comme aux autres : un sort de niveau 3 à 5 rend flou un souvenir ; mais un sort de niveau 6 ou plus te le fait perdre d'un coup, parce que rien ne s'efface à moitié chez toi. Les pouvoirs qui te font rendre flou un souvenir de ton plein gré (comme Brûler un souvenir) ne marchent pas pour toi." },
       { name: "Rien à raconter", text: "La Dîme te prend tes souvenirs comme aux autres. Tu ne peux pas raconter pour en retrouver un, et on ne peut pas te le raconter : ce que tu perds ne revient pas. Les pouvoirs qui rendraient un souvenir intact ne marchent pas sur toi." },
       { name: "Les Reflets te cherchent", text: "Un Reflet qui te voit te préfère aux autres. Les Reflets ont l'avantage aux tests pour te trouver." },
     ],

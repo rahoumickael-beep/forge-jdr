@@ -38,7 +38,7 @@ Si tu n'as plus de souvenir intact, tu uses un souvenir flou : il est perdu. Une
 
 C'est le joueur qui choisit lequel. Dis-le à haute voix à la table, nomme-le : « Le prénom de ma sœur. » Un souvenir qui ne se nomme pas n'a pas de prix.
 
-> **Exemple.** Tiphaine, sorcière des ronces de niveau 11, a six souvenirs intacts. Dans la journée, elle lance deux *Ronces* et un *Remède de village* : rien. Elle lance *Les ronces se lèvent* (sort de niveau 3), le premier de ce niveau depuis son repos long : le goût du pain chez sa grand-mère devient flou. Elle relance *Les ronces se lèvent* : rien de plus. Puis elle lance *Ronce noire* (sort de niveau 6) : la chanson du mariage devient floue. Elle le relance au second tour. Elle pourrait rendre flou un troisième souvenir ; elle choisit d'user la chanson, déjà floue. Elle est perdue : Tiphaine la raye de sa fiche, et ne la chantera plus jamais. Le lendemain, après un repos long, elle raconte à Douce le goût du pain chez sa grand-mère. Il redevient intact. La chanson, non.
+> **Exemple.** Tiphaine, sorcière des ronces de niveau 13, a six souvenirs intacts. Dans la journée, elle lance deux *Ronces* et un *Remède de village* : rien. Elle lance *Les ronces se lèvent* (sort de niveau 3), le premier de ce niveau depuis son repos long : le goût du pain chez sa grand-mère devient flou. Elle relance *Les ronces se lèvent* : rien de plus. Puis elle lance *Ronce noire* (sort de niveau 6) : la chanson du mariage devient floue. Elle lance enfin *Passer par les racines* (autre sort de niveau 6) : le chemin de la maison devient flou à son tour. Deux sorts de niveau 6, deux souvenirs rendus flous. Le lendemain, après un repos long, elle raconte à Douce le goût du pain chez sa grand-mère. Il redevient intact. La chanson et le chemin de la maison attendent.
 
 ### Raconter
 
@@ -48,7 +48,7 @@ Un souvenir flou peut redevenir intact. **Pendant un repos long**, le personnage
 - Il faut un auditeur : un autre personnage, joueur ou non. Raconter à son cheval ne compte pas.
 - Le joueur dit à la table ce que son personnage raconte. Ce n'est pas obligé d'être long. C'est obligé d'être précis.
 
-> **Le plafond.** Un souvenir ne redevient intact qu'**une fois par repos long, quelle que soit la source** : Raconter, une complainte, une fiole de lait d'oubli, un pouvoir de classe. Si deux de ces choses sont possibles dans la même nuit, le joueur choisit laquelle, et l'autre attend.
+> **Le plafond.** Un même souvenir ne redevient intact qu'**une fois par repos long, quelle que soit la source** (Raconter, une complainte, une fiole de lait d'oubli, un pouvoir de classe). Si deux sources visent le même souvenir la même nuit, le joueur choisit laquelle, et l'autre attend.
 
 ### Nouveaux souvenirs
 
@@ -62,8 +62,8 @@ Voir le chapitre 7 pour le détail de l'état.
 
 ### Ceux que la règle change
 
-- **Les Gris-de-Sang** n'oublient rien de ce qu'on leur fait : un Reflet ou un sort d'oubli ne rend jamais flou un de leurs souvenirs. Mais leurs propres sorts les coûtent comme à tous, et rien ne s'efface à moitié chez eux : le souvenir qu'un sort aurait rendu flou est perdu d'un coup. Ils ne peuvent pas raconter pour en retrouver un, ni qu'on le leur raconte.
-- **Les Effacés** commencent avec deux souvenirs seulement. Un seul sort de niveau 3 leur coûte la moitié de ce qu'ils ont. Les joueurs d'Effacés le savent, et lancent leurs sorts en conséquence.
+- **Les Gris-de-Sang** n'oublient rien de ce qu'on leur fait : la magie des autres ne rend jamais flou un de leurs souvenirs. Leurs propres sorts les coûtent comme à tous : un sort de niveau 3 à 5 rend flou un souvenir ; mais un sort de niveau 6 ou plus le leur fait perdre d'un coup, parce que rien ne s'efface à moitié chez eux. Ils ne peuvent pas raconter pour en retrouver un, ni qu'on le leur raconte.
+- **Les Effacés** commencent avec deux souvenirs seulement. Un seul sort de niveau 3 leur coûte la moitié de ce qu'ils ont. Un Effacé n'a aucun souvenir de rechange : la première nuit de la Dîme peut le laisser Vide. Les joueurs d'Effacés le savent, et lancent leurs sorts en conséquence.
 
 ## Lire un pouvoir
 
@@ -163,7 +163,7 @@ Les coups critiques, l'avantage, le désavantage, les abris, la règle du tir au
 | Mercenaire | Vigueur (pour les rares sauvegardes qu'il impose) |
 | Coupe-jarret | Agilité (idem) |
 
-> **Exemple.** Tiphaine, sorcière des ronces de niveau 5, a Volonté 18 (+4) et un bonus de maîtrise de +3. Son DD de pouvoir vaut 8 + 3 + 4 = 15. Quand elle lance *Ronces* sur un loup d'hiver, il fait une sauvegarde d'Agilité DD 15. Perrin, lui, tire à l'arbalète avec une attaque d'arme : son bonus d'attaque ne dépend pas de la classe, mais de son Agilité.
+> **Exemple.** Tiphaine, sorcière des ronces de niveau 5, a Volonté 18 (+4) et un bonus de maîtrise de +3. Son DD de pouvoir vaut 8 + 3 + 4 = 15. Quand elle lance *Ronces* sur un loup d'hiver, il fait une sauvegarde d'Agilité DD 15. Lambert, lui, tire à l'arbalète avec une attaque d'arme : son bonus d'attaque ne dépend pas de la classe, mais de son Agilité.
 
 ## Les zones d'effet
 
@@ -177,7 +177,7 @@ Beaucoup de pouvoirs touchent une zone plutôt qu'une cible. La zone a un **poin
 | **Cône** | Part de toi et s'élargit ; sa largeur au bout égale sa longueur | Une gerbe de glace de 4,5 m |
 | **Cube** | Le point d'origine est sur une face du cube | La *Haie d'épines* : cube de 6 m |
 | **Cylindre** | Un cercle au sol, qui monte à une hauteur donnée | Une colonne de brume qui tombe des branches |
-| **Ligne** | Part de toi, en ligne droite, avec une largeur | Un mur d'encre de 30 m sur 1,5 m |
+| **Ligne** | Part de toi, en ligne droite, avec une largeur | Un mur d'encre de 18 m sur 1,5 m |
 
 Les **cercles** et **carrés** des descriptions sont des zones au sol, sur la hauteur d'une créature, sauf mention contraire.
 
@@ -236,7 +236,7 @@ Les **techniques** ne demandent aucune composante. La *Trousse de barbier* deman
 
 ## Les rituels
 
-Certains pouvoirs peuvent être utilisés **en rituel**. Leur description porte la mention *Rituel*, ou le sort du SRD dont ils viennent a cette mention.
+Certains pouvoirs peuvent être utilisés **en rituel**. Leur description porte la mention *Rituel*, ou le sort du SRD dont ils viennent porte cette mention.
 
 - Un pouvoir utilisé en rituel prend **10 minutes de plus** que son activation normale.
 - Il **ne dépense pas d'utilisation**.
@@ -370,7 +370,7 @@ Un joueur peut demander au MJ de remplacer un pouvoir de sa classe par un sort c
 
 On échange en montant de niveau, un pouvoir à la fois. Les pouvoirs passifs qui définissent la classe (*Attaque sournoise*, *Fer froid*, *Le vœu*, *Le prix des sorts*) ne s'échangent pas.
 
-> **Un mercenaire qui apprend un tour.** Anseau, mercenaire de niveau 3, a passé un hiver chez une sage-femme de Vaugelée. Il demande à échanger *Fougue* contre un sort. Le MJ refuse l'échange, mais lui propose de gagner à la place *Lumière* (*Light*, tour de magie) en plus, puisqu'il est au niveau 3. Anseau peut désormais faire luire le bout de sa pique comme une lanterne sourde. Les chiens de traîneau le regardent d'un drôle d'air.
+> **Un mercenaire qui apprend un tour.** Gauvain, mercenaire de niveau 3, a passé un hiver chez une sage-femme de Vaugelée. Il demande à échanger *Fougue* contre un sort. Le MJ refuse l'échange, mais lui propose de gagner *Lumière* (*Light*, tour de magie) en plus, puisqu'il est au niveau 3. Gauvain peut désormais faire luire le bout de sa pique comme une lanterne sourde. Les chiens de traîneau le regardent d'un drôle d'air.
 
 ### Jouer avec des emplacements de sorts
 

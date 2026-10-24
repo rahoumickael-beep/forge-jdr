@@ -10,7 +10,7 @@ export const REGLES_TERNELANDE: RuleSection[] = [
       "Chaque personnage écrit sur sa fiche six souvenirs précis : le visage de sa mère, le nom de son premier cheval, la chanson du mariage, le chemin de la maison. Ils sont son histoire, sa monnaie pour la Dîme, et le prix de sa magie.",
       "Un souvenir est intact, flou ou perdu. Un souvenir flou qu'on use encore est perdu : on le raye, et le personnage ne s'en souviendra plus jamais.",
       "- Raconter : pendant un repos long, un personnage raconte un souvenir flou à un autre personnage ; le souvenir redevient intact. Une fois par palier de niveaux (1 à 4, 5 à 10, 11 à 16, 17 à 20) et par souvenir.",
-      "- Un souvenir ne redevient intact qu'une fois par repos long, quelle que soit la source.",
+      "- Un même souvenir ne redevient intact qu'une fois par repos long, quelle que soit la source (Raconter, une complainte, une fiole de lait d'oubli, un pouvoir de classe). Si deux sources visent le même souvenir la même nuit, le joueur choisit laquelle, et l'autre attend.",
       "- Nouveaux souvenirs : un à chaque niveau pair, tiré de ce que le personnage a vécu en jeu.",
       "- Vide : un personnage sans aucun souvenir intact. À chaque grand choix moral, le MJ dit ce que ferait quelqu'un qui ne se souvient de personne ; le joueur le fait, ou use un souvenir flou.",
     ],

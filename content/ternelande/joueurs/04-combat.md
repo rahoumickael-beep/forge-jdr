@@ -24,7 +24,7 @@ Une créature **surprise** :
 
 La surprise est individuelle. Dans un groupe, certains peuvent être surpris et d'autres non. Un camp entier peut aussi être surpris par une bande qui ne l'était pas.
 
-> **Exemple.** Un soir de neige, Anseau, Douce et Tiphaine passent la porte d'une grange près de Saint-Ours-des-Glaces. Trois soldats d'une compagnie franche y dorment à moitié, les bottes près du feu, tournés vers la porte de derrière. Ils n'ont pas entendu les voyageurs. Le MJ compare la Discrétion de Tiphaine à la Perception passive des soldats : personne dans la grange ne remarque rien. Les soldats sont surpris. Pendant le premier round, ils ne feront rien. Anseau, Douce et Tiphaine ont six secondes d'avance.
+> **Exemple.** Un soir de neige, Gauvain, Douce et Tiphaine passent la porte d'une grange près de Saint-Ours-des-Glaces. Trois soldats d'une compagnie franche y dorment à moitié, les bottes près du feu, tournés vers la porte de derrière. Ils n'ont pas entendu les voyageurs. Le MJ compare la Discrétion de Tiphaine à la Perception passive des soldats : personne dans la grange ne remarque rien. Les soldats sont surpris. Pendant le premier round, ils ne feront rien. Gauvain, Douce et Tiphaine ont six secondes d'avance.
 
 ## L'initiative
 
@@ -77,7 +77,7 @@ Chaque créature occupe un espace sur la carte selon sa taille.
 
 ### Les actions bonus
 
-Tu n'as une action bonus que si un pouvoir, un trait ou une règle te le dit. Le *Second souffle* du Mercenaire, *Marquer la proie* du Chasseur de sorcières, la *Ruse* du Coupe-jarret, *Mettre en terre* du Fossoyeur, le *Glas* du Complainteur sont des actions bonus. Tu ne peux en faire **qu'une par tour**, et tu choisis quand pendant ton tour. Si quelque chose t'empêche d'agir, tu ne peux pas non plus faire d'action bonus.
+Tu n'as une action bonus que si un pouvoir, un trait ou une règle te le dit. Le *Second souffle* du Mercenaire, *Marquer la proie* du Chasseur de sorcières, la *Ruse* du Coupe-jarret, *Mettre en terre* du Fossoyeur, le *Glas* du Fossoyeur sonneur de glas, la *Complainte* du Complainteur sont des actions bonus. Tu ne peux en faire **qu'une par tour**, et tu choisis quand pendant ton tour. Si quelque chose t'empêche d'agir, tu ne peux pas non plus faire d'action bonus.
 
 ### Les interactions simples
 
@@ -127,7 +127,7 @@ Tu peux aussi aider un allié à **attaquer** une créature à 1,5 m de toi : tu
 
 ### Se cacher
 
-Tu fais un test de **Agilité (Discrétion)** pour te cacher. Il faut pour ça que la créature dont tu te caches ne puisse pas te voir clairement : un abri suffisant, une zone fortement obscurcie, le dos tourné de l'ennemi. Si tu réussis, tu es caché jusqu'à ce que tu sois découvert, ou que tu fasses du bruit, ou que tu attaques.
+Tu fais un test d'**Agilité (Discrétion)** pour te cacher. Il faut pour ça que la créature dont tu te caches ne puisse pas te voir clairement : un abri suffisant, une zone fortement obscurcie, le dos tourné de l'ennemi. Si tu réussis, tu es caché jusqu'à ce que tu sois découvert, ou que tu fasses du bruit, ou que tu attaques.
 
 Le MJ compare ton résultat à la Perception passive de ceux qui pourraient te voir, ou à leur test de Perception s'ils te cherchent activement (l'action Chercher).
 
@@ -146,7 +146,7 @@ Quand le déclencheur se produit, tu peux utiliser ta **réaction** pour faire l
 
 Si l'action prévue est un pouvoir, tu l'utilises dès maintenant (tu dépenses l'utilisation), et tu retiens son effet jusqu'au déclencheur. Il faut te **concentrer** pour le retenir (chapitre 5). Si ta concentration est brisée, le pouvoir est perdu.
 
-> **Exemple.** Perrin se tient prêt derrière un tonneau, l'arbalète bandée : « Si quelque chose sort de la cave, je tire. » Au tour du MJ, un loup d'hiver monte les marches. Perrin utilise sa réaction et tire avant qu'il n'atteigne Douce.
+> **Exemple.** Lambert se tient prêt derrière un tonneau, l'arbalète bandée : « Si quelque chose sort de la cave, je tire. » Au tour du MJ, un loup d'hiver monte les marches. Lambert utilise sa réaction et tire avant qu'il n'atteigne Douce.
 
 ### Chercher
 
@@ -176,7 +176,7 @@ Une attaque, qu'elle se fasse à l'épée, à l'arbalète ou avec un pouvoir, su
 - Arme au contact : **Vigueur**.
 - Arme à distance : **Agilité**.
 - Arme à **finesse** : Vigueur ou Agilité, au choix. Le même modificateur sert à l'attaque et aux dégâts.
-- Arme de **jet** : la caractéristique qu'on utiliserait au contact (une dague lancée utilise la Agilité si on veut, grâce à la finesse ; une hachette lancée utilise la Vigueur).
+- Arme de **jet** : la caractéristique qu'on utiliserait au contact (une dague lancée utilise l'Agilité si on veut, grâce à la finesse ; une hachette lancée utilise la Vigueur).
 - Pouvoir : la caractéristique de ta classe.
 
 **20 naturel** : l'attaque touche, quelle que soit la CA. C'est un **coup critique**.
@@ -260,7 +260,7 @@ Tu fais un **test de Vigueur (Athlétisme)**, opposé à un test de Vigueur (Ath
 - la cible tombe **à terre** ;
 - ou elle est **repoussée de 1,5 m**.
 
-> **Exemple.** Un soldat de compagnie avance vers Douce, qui soigne Tiphaine tombée à terre. Anseau prend l'action Attaquer et remplace son attaque par une bousculade. Vigueur (Athlétisme) +5 : il fait 16. Le soldat, qui n'a pas de compétence, fait 8 avec sa Vigueur. Anseau choisit de le mettre à terre. Perrin, qui joue juste après, a l'avantage au contact mais le désavantage à distance : les attaques contre une créature à terre ont l'avantage à 1,5 m et le désavantage au-delà. Il est à 12 m. Il sort sa dague et court au contact.
+> **Exemple.** Un soldat de compagnie avance vers Douce, qui soigne Tiphaine tombée à terre. Gauvain prend l'action Attaquer et remplace son attaque par une bousculade. Vigueur (Athlétisme) +5 : il fait 16. Le soldat, qui n'a pas de compétence, fait 8 avec sa Vigueur. Gauvain choisit de le mettre à terre. Lambert, qui joue juste après, a l'avantage au contact mais le désavantage à distance : les attaques contre une créature à terre ont l'avantage à 1,5 m et le désavantage au-delà. Il est à 12 m. Il sort sa dague et court au contact.
 
 ## Le combat monté
 
@@ -286,8 +286,8 @@ Les lacs de Vaugelée gèlent à l'automne et portent les traîneaux jusqu'au d�
 
 - **Glace nue.** Sur la glace sans neige, chaque fois que tu prends l'action **Se précipiter**, ou que tu es poussé, tiré ou bousculé, tu fais une **sauvegarde d'Agilité DD 10**. Échec : tu tombes **à terre**. Des patins ou des crampons (chapitre 6) te dispensent de cette sauvegarde. Sous une couche de neige, la glace ne change rien : c'est du terrain ordinaire.
 - **Bousculer sur la glace.** Une créature que tu repousses glisse de **3 m** au lieu de 1,5 m.
-- **Glace fine.** Près d'un cours d'eau, d'une source, d'un trou de pêche, la glace peut être fine. Le MJ la traite comme un objet : CA 13, 3 PV par case de 1,5 m. Une créature Grande ou plus lourde, ou n'importe quelle créature qui tombe dessus de tout son poids, la fait céder. Quiconque se trouve dans une case qui cède fait une **sauvegarde d'Agilité DD 12** : en cas d'échec, il tombe dans l'eau.
-- **Tomber dans l'eau.** Pour se hisser hors du trou, il faut une action et un test de **Vigueur (Athlétisme) DD 12**, et la glace qui casse sous les mains n'aide pas. L'eau glacée use vite : voir « Le froid » au chapitre 7.
+- **Glace fine.** Près d'un cours d'eau, d'une source, d'un trou de pêche, la glace peut être fine. Le MJ la traite comme un objet : CA 13. Glace fine = moins de 10 cm. Au-delà, 3 PV par case et par 5 cm d'épaisseur. Quiconque se trouve dans une case qui cède fait une **sauvegarde d'Agilité DD 12** : en cas d'échec, il tombe dans l'eau.
+- **Tomber dans l'eau.** Pour se hisser hors du trou, il faut une action et un test de **Vigueur (Athlétisme) DD 13**, et la glace qui casse sous les mains n'aide pas. L'eau glacée use vite : voir « Le froid » au chapitre 7.
 - **Frapper la glace.** Un coup de masse, de hache ou de pioche dans la glace la brise. C'est une attaque contre la CA de la glace. On peut ouvrir sous un ennemi une case que l'on a repérée fine.
 
 > **Les Reflets sous la glace.** Un Reflet peut frapper depuis le fond d'un trou ou de dessous une plaque de glace, et il frappe celui qui se tient dessus comme on frappe un plafond. Les gens de Vaugelée ne se tiennent pas debout deux fois au même endroit, et ne pêchent plus un lac où l'on a vu des visages.
@@ -320,7 +320,7 @@ Un pouvoir ou une arme qui touche plusieurs cibles lance ses dégâts **une seul
 
 Sur un coup critique, tu lances **deux fois tous les dés de dégâts** de l'attaque, puis tu ajoutes les modificateurs une seule fois. Les dés de dégâts supplémentaires (l'*Attaque sournoise* du Coupe-jarret, le *Fer froid* du Fossoyeur, le *Mauvais œil* de la Sorcière des ronces) sont aussi doublés.
 
-> **Exemple.** Perrin fait un 20 naturel avec sa dague (1d4 perforant, Agilité +3) contre un soldat de compagnie qui lui tourne le dos. Son *Attaque sournoise* ajoute 1d6. Il lance 2d4 perforant + 2d6 + 3.
+> **Exemple.** Lambert fait un 20 naturel avec sa dague (1d4 perforant, Agilité +3) contre un soldat de compagnie qui lui tourne le dos. Son *Attaque sournoise* ajoute 1d6. Il lance 2d4 perforant + 2d6 + 3.
 
 ### Les types de dégâts
 
@@ -350,7 +350,7 @@ Chaque attaque et chaque pouvoir infligent un type de dégâts. Le type n'a pas 
 
 On applique d'abord tous les autres modificateurs (bonus, réductions comme l'*Esquive instinctive* du Coupe-jarret), puis la résistance, puis la vulnérabilité. Plusieurs résistances au même type ne se cumulent pas : la moitié reste la moitié.
 
-> **Exemple.** Une meute affamée résiste aux dégâts contondants, perforants et tranchants des armes ordinaires. Anseau la frappe de son épée : 9 dégâts tranchants. La meute n'en subit que 4, la moitié arrondie à l'inférieur. Si Tiphaine lui lance des *Ronces* (1d8 perforants), la résistance ne joue pas : un pouvoir n'est pas une arme ordinaire. Elle fait 6, et la meute perd 6 PV.
+> **Exemple.** Une meute affamée résiste aux dégâts contondants, perforants et tranchants des armes ordinaires. Gauvain la frappe de son épée : 9 dégâts tranchants. La meute n'en subit que 4, la moitié arrondie à l'inférieur. Si Tiphaine lui lance des *Ronces* (1d8 perforants), la résistance ne joue pas : un pouvoir n'est pas une arme ordinaire. Elle fait 6, et la meute perd 6 PV.
 
 ### Les Reflets et le fer froid
 
@@ -358,7 +358,7 @@ Les Reflets résistent aux dégâts contondants, perforants et tranchants des **
 
 Le fer froid coûte plus cher que le fer ordinaire et se trouve surtout au nord (chapitre 6). Il ne change rien contre les créatures vivantes, sauf si une règle le dit.
 
-> **Exemple.** Anseau frappe un Reflet de son épée ordinaire : 9 dégâts tranchants. Le Reflet résiste aux armes ordinaires et n'en subit que 4. Le tour suivant, Perrin lui plante un couteau de fer froid. Il fait 9 aussi, et le Reflet les prend tous.
+> **Exemple.** Gauvain frappe un Reflet de son épée ordinaire : 9 dégâts tranchants. Le Reflet résiste aux armes ordinaires et n'en subit que 4. Le tour suivant, Lambert lui plante un couteau de fer froid. Il fait 9 aussi, et le Reflet les prend tous.
 
 **Quand un Reflet te touche.** Un Reflet qui touche quelqu'un peut lui rendre flou un souvenir : le MJ demande une **sauvegarde de Volonté**. En cas d'échec, le joueur choisit lequel de ses souvenirs intacts devient flou (chapitre 5). Un personnage qui n'a plus de souvenir intact use un souvenir flou, qui est alors perdu.
 
@@ -455,7 +455,7 @@ Certains pouvoirs et traits donnent des **PV temporaires** : l'*Échange honnêt
 - Ce ne sont **pas des soins**. Ils ne peuvent pas dépasser, ni compléter, ton maximum de PV ; ils s'ajoutent à côté. Un personnage à 0 PV qui reçoit des PV temporaires ne reprend pas conscience.
 - Ils disparaissent après un **repos long**, ou à la fin de la durée indiquée par le pouvoir.
 
-> **Exemple.** Perrin a 18 PV sur 24. Un Dîmier renégat lui offre 2d8 PV temporaires : 11. Un loup d'hiver le mord pour 14 : les 11 PV temporaires disparaissent, et Perrin perd 3 PV normaux. Il en a 15.
+> **Exemple.** Lambert a 18 PV sur 24. Un Dîmier renégat lui offre 2d8 PV temporaires : 11. Un loup d'hiver le mord pour 14 : les 11 PV temporaires disparaissent, et Lambert perd 3 PV normaux. Il en a 15.
 
 ## Les objets
 
@@ -477,27 +477,27 @@ Enfoncer une porte, plutôt que la frapper, se fait par un test de Vigueur (Athl
 
 Pour finir, voici un combat du début à la fin.
 
-**La situation.** Anseau (mercenaire), Douce (chirurgienne-barbière), Tiphaine (sorcière des ronces) et Perrin (coupe-jarret) traversent un lac gelé de Vaugelée, à la tombée du jour, entre deux villages de pêcheurs. Perrin a vu des traces dans la neige légère : des pattes plus larges que celles d'un chien, qui suivent le groupe depuis la rive. Il prévient les autres. Quand trois loups d'hiver sortent des roseaux gelés, à 24 m, personne n'est surpris. Le MJ les place sur la carte. La glace est nue : le vent a balayé la neige.
+**La situation.** Gauvain (mercenaire), Douce (chirurgienne-barbière), Tiphaine (sorcière des ronces) et Lambert (coupe-jarret) traversent un lac gelé de Vaugelée, à la tombée du jour, entre deux villages de pêcheurs. Lambert a vu des traces dans la neige légère : des pattes plus larges que celles d'un chien, qui suivent le groupe depuis la rive. Il prévient les autres. Quand trois loups d'hiver sortent des roseaux gelés, à 24 m, personne n'est surpris. Le MJ les place sur la carte. La glace est nue : le vent a balayé la neige.
 
-**Initiative.** Perrin 17, loups 14 (un seul jet pour les trois), Anseau 11, Tiphaine 8, Douce 5.
+**Initiative.** Lambert 17, loups 14 (un seul jet pour les trois), Gauvain 11, Tiphaine 8, Douce 5.
 
 **Round 1.**
-- *Perrin* tire à l'arbalète sur le loup de tête (24 m, dans la portée normale). Il touche et fait 7 dégâts. Pas d'*Attaque sournoise* : il n'a ni avantage ni allié près de la cible.
-- *Les loups* prennent l'action Se précipiter pour franchir les 24 m. Sur la glace nue, chacun fait une sauvegarde d'Agilité DD 10. Deux la réussissent et s'arrêtent à 1,5 m d'Anseau, qui s'est mis devant. Le troisième la rate : il glisse, tombe à terre et reste à 3 m. Personne ne mord ce round, puisqu'ils ont utilisé leur action pour courir.
-- *Anseau* choisit l'action Esquiver : les attaques contre lui auront le désavantage, et ses sauvegardes d'Agilité l'avantage.
+- *Lambert* tire à l'arbalète sur le loup de tête (24 m, dans la portée normale). Il touche et fait 7 dégâts. Pas d'*Attaque sournoise* : il n'a ni avantage ni allié près de la cible.
+- *Les loups* prennent l'action Se précipiter pour franchir les 24 m. Sur la glace nue, chacun fait une sauvegarde d'Agilité DD 10. Deux la réussissent et s'arrêtent à 1,5 m de Gauvain, qui s'est mis devant. Le troisième la rate : il glisse, tombe à terre et reste à 3 m. Personne ne mord ce round, puisqu'ils ont utilisé leur action pour courir.
+- *Gauvain* choisit l'action Esquiver : les attaques contre lui auront le désavantage, et ses sauvegardes d'Agilité l'avantage.
 - *Tiphaine* lance *Ronces* sur l'un des deux loups debout. Il rate sa sauvegarde, prend 5 dégâts perforants, et sa vitesse tombe de 3 m. C'est un tour de magie : il ne coûte aucun souvenir.
 - *Douce* se tient prête : « Si quelqu'un tombe, je le relève. » Elle retient son action et sa réaction.
 
 **Round 2.**
-- *Perrin* tire sur le loup déjà blessé par sa première flèche. Il est à 1,5 m d'Anseau, un allié : *Attaque sournoise*. Il touche : 1d8 + 3 + 1d6 = 10. Le loup meurt.
-- *Les loups* : le loup touché par les *Ronces* mord Anseau. Il a l'avantage grâce à sa tactique de meute (son compagnon est à 1,5 m de la cible), qui annule le désavantage dû à l'Esquive : un seul d20. Il touche pour 8. Anseau fait sa sauvegarde de Vigueur DD 11 et la rate : il tombe à terre sur la glace. Le troisième loup se relève, ce qui lui coûte la moitié de sa vitesse, et mord Anseau à son tour. Il rate.
-- *Anseau* se relève (4,5 m de sa vitesse de 9) et frappe le loup blessé par les *Ronces* : 1d8 + 3 = 9. Le loup avait 8 PV de reste. Il tombe.
+- *Lambert* tire sur le loup déjà blessé par sa première flèche. Il est à 1,5 m de Gauvain, un allié : *Attaque sournoise*. Il touche : 1d8 + 3 + 1d6 = 10. Le loup meurt.
+- *Les loups* : le loup touché par les *Ronces* mord Gauvain. Il a l'avantage grâce à sa tactique de meute (son compagnon est à 1,5 m de la cible), qui annule le désavantage dû à l'Esquive : un seul d20. Il touche pour 8. Gauvain fait sa sauvegarde de Vigueur DD 11 et la rate : il tombe à terre sur la glace. Le troisième loup se relève, ce qui lui coûte la moitié de sa vitesse, et mord Gauvain à son tour. Il rate.
+- *Gauvain* se relève (4,5 m de sa vitesse de 9) et frappe le loup blessé par les *Ronces* : 1d8 + 3 = 9. Le loup avait 8 PV de reste. Il tombe.
 - *Tiphaine* lance de nouveau *Ronces*, sur le dernier loup : 7 dégâts. Il tombe sous la moitié de ses PV.
-- *Douce* n'avait prévu de réagir que si quelqu'un tombait à 0 PV. Personne n'y est. Son action prévue ne se déclenche pas et est perdue. Elle se déplace de 4,5 m sur la glace, sans courir donc sans sauvegarde, et utilise sa *Trousse de barbier* sur Anseau : 1d8 + 3 = 8 PV rendus.
+- *Douce* n'avait prévu de réagir que si quelqu'un tombait à 0 PV. Personne n'y est. Son action prévue ne se déclenche pas et est perdue. Elle se déplace de 4,5 m sur la glace, sans courir donc sans sauvegarde, et utilise sa *Trousse de barbier* sur Gauvain : 1d8 + 3 = 8 PV rendus.
 
 **Round 3.**
-- *Perrin* arme son arbalète, vise le dernier loup, et le MJ lui annonce que ce n'est plus la peine.
+- *Lambert* arme son arbalète, vise le dernier loup, et le MJ lui annonce que ce n'est plus la peine.
 - *Le loup*, sous la moitié de ses PV, tourne les talons. Il prend l'action Se précipiter, glisse, rate sa sauvegarde et finit sur le flanc, à 20 m. Il se relève et disparaît vers la rive.
 - Le combat est fini.
 
-**Après le combat.** Douce écorche le loup de tête avec le couteau de Perrin : une peau grise et blanche, encore épaisse, qui épargnera à l'un d'eux le froid d'une nuit dehors. À deux cents pas, un pêcheur à genoux au bord de son trou de pêche, une lanterne à la main, n'a pas bougé pendant tout le combat. Il n'a pas levé la tête.
+**Après le combat.** Douce écorche le loup de tête avec le couteau de Lambert : une peau grise et blanche, encore épaisse, qui épargnera à l'un d'eux le froid d'une nuit dehors. À deux cents pas, un pêcheur à genoux au bord de son trou de pêche, une lanterne à la main, n'a pas bougé pendant tout le combat. Il n'a pas levé la tête.

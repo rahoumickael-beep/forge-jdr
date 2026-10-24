@@ -61,8 +61,7 @@ La créature a peur de quelque chose ou de quelqu'un.
 - Elle a le **désavantage** à ses **tests de caractéristique** et à ses **jets d'attaque** tant que la source de sa peur est **dans son champ de vision**.
 - Elle ne peut pas **se rapprocher volontairement** de la source de sa peur.
 
-Une créature effrayée peut agir normalement, y compris attaquer la source de sa peur à distance. Elle ne peut simplement pas avancer vers elle. Le *Glas* du Fossoyeur sonneur de glas impose cet état aux Reflets et aux morts qui marchent. Les soldats des compagnies franches n'ont pas peur du masque d'étain : ils ne paient pas la Dîme, et ils ont l'avantage aux sauvegardes contre l'effroi qu'un Dîmier provoque.
-
+Une créature effrayée peut agir normalement, y compris attaquer la source de sa peur à distance. Elle ne peut simplement pas avancer vers elle. Le *Glas* du Fossoyeur sonneur de glas impose cet état aux Reflets et aux morts qui marchent.
 ### Empoigné
 
 Quelque chose ou quelqu'un tient la créature.
@@ -202,16 +201,16 @@ L'hiver dure cinq mois. Le froid est la première cause de mort en Ternelande, a
 
 **Une nuit dehors.** Une nuit passée dehors en hiver, **sans abri ni feu**, donne **un niveau d'épuisement**, sauf sauvegarde d'**Endurance DD 12** réussie. Un feu qui tient la nuit, une grange, une cabane, une grotte : pas de sauvegarde.
 
-**Le grand froid.** Une tempête, une journée sur les Neiges Hautes, une nuit sans lune sur un lac : le MJ demande **une sauvegarde d'Endurance DD 10 par heure** passée dehors. En cas d'échec, un niveau d'épuisement.
+**Le grand froid.** Une tempête, une journée sur les Neiges Hautes, des vêtements trempés : sauvegarde d'Endurance DD 10 par heure passée dehors ; un échec donne un niveau d'épuisement. Ces sauvegardes remplacent celle de la nuit dehors.
 
-**L'eau glacée.** Une créature qui tombe dans l'eau d'un lac gelé fait une **sauvegarde d'Endurance DD 12 à la fin de chaque minute** passée dedans. En cas d'échec, elle gagne un niveau d'épuisement.
+**L'eau glacée.** Une créature qui tombe dans l'eau d'un lac gelé fait une sauvegarde d'Endurance DD 12 dès la chute, puis à la fin de chaque minute passée dedans. Un échec donne un niveau d'épuisement.
 
 Ce qui aide :
 
 - Les **vêtements d'hiver** (chapitre 6) donnent l'**avantage** à ces sauvegardes.
 - Une **peau de loup d'hiver** évite à son porteur le niveau d'épuisement d'une nuit dehors (une fois par séance).
 - Un **sac de couchage fourré** et un **feu** permettent de dormir dehors comme dans une grange.
-- Les **Ternois** ont l'avantage aux sauvegardes contre le froid et l'épuisement dû au froid. Les **Gris des Neiges** n'en prennent pas du tout. Les **Gens des Comtés**, eux, trouvent toujours un moyen de dormir à l'intérieur.
+- Les **Ternois** ont l'avantage aux sauvegardes contre le froid et l'épuisement dû au froid. Les **Gris des Neiges** (une lignée de Gris-de-Sang) n'en prennent pas du tout. Les **gens des Comtés**, eux, trouvent toujours un moyen de dormir à l'intérieur.
 - Une créature qui a la **résistance aux dégâts de froid** ne prend pas non plus de niveau d'épuisement dû au froid, sauf mention contraire.
 
 > **La nuit de la Dîme.** C'est la nuit la plus longue, et la plus froide. Les Dîmiers passent dans les villages, et personne n'est dehors s'il peut l'éviter. Ceux qui y sont se comptent le matin.
@@ -341,9 +340,9 @@ Ce qui suit tient sur une page. Imprime-la, pose-la à côté de ta fiche.
 - **Voyage** : rapide 6 km/h (−5 Perception passive), normal 4,5 km/h, lent 3 km/h (discrétion possible). 8 h par jour. Un jour de traîneau vaut une journée et demie de marche.
 - **Marche forcée** : sauvegarde d'Endurance DD 10 + 1 par heure en plus, échec = épuisement.
 - **Chute** : 1d6 par 3 m, max 20d6, à terre.
-- **Souffle** : 1 + Endurance minutes (30 s min.), puis Endurance rounds (1 min.), puis 0 PV.
+- **Souffle** : 1 min + 1 min par point de modificateur d'Endurance (30 s min.), puis autant de rounds que ce modificateur (1 min.), puis 0 PV.
 - **Lumière faible** : désavantage en Perception à la vue. **Obscurité** : aveuglé. **Vision dans le noir** : obscurité = lumière faible, pas de couleurs.
-- **Faim** : 3 + Endurance jours, puis 1 niveau d'épuisement par jour. **Soif** : la moitié de l'eau = sauvegarde d'Endurance DD 15.
+- **Faim** : 3 + modificateur d'Endurance jours, puis 1 niveau d'épuisement par jour. **Soif** : la moitié de l'eau = sauvegarde d'Endurance DD 15.
 - **Froid** : une nuit dehors sans abri ni feu, sauvegarde d'Endurance DD 12 ou un niveau d'épuisement. Avantage avec des vêtements d'hiver.
 
 ### La Ternelande

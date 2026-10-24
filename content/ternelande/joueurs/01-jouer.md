@@ -291,7 +291,7 @@ Quelques mots reviennent souvent à la table.
 - **Rends flou un souvenir** : tu choisis un de tes souvenirs intacts et tu le marques flou sur ta fiche (voir le chapitre 3).
 - **Repos court / repos long** : voir le chapitre 3.
 
-> **En ligne.** Forge JdR te montre tes jets dans le journal, mais la table vit à la voix. Annoncez à voix haute ce que vous lancez avant de lancer (« Perception, avec avantage »), et ce que vous rayez avant de le rayer. Quand un souvenir part, tout le monde doit l'entendre.
+> **En ligne.** Forge JdR te montre tes jets dans le journal, mais la table vit à la voix. Annonce à voix haute ce que tu lances avant de lancer (« Perception, avec avantage »), et ce que tu rayes avant de le rayer. Quand un souvenir part, tout le monde doit l'entendre.
 
 ## Créer ton personnage
 
@@ -300,7 +300,7 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 1. **Une idée.** Avant de cliquer, pense à une personne, pas à des chiffres. Qui était-elle avant la dernière Dîme ? Que fait-elle sur la route en plein hiver ? Une phrase suffit : « Un fossoyeur qui ne dort plus depuis qu'il a creusé une tombe trop petite. »
 2. **Ton origine.** Choisis ton peuple, puis ta lignée : Humain (Ternois ou gens des Comtés), Gris-de-Sang, Effacé, Sylvain ou Houilleur. Le chapitre des origines décrit leurs traits. L'origine donne des bonus de caractéristiques, la vitesse, parfois la vision dans le noir, et deux ou trois traits qui te suivront toute la partie.
 3. **Ta classe.** Dix classes, de la Sorcière des ronces au Mercenaire. Elle donne ton dé de vie, tes armes et armures, tes sauvegardes, tes pouvoirs, et ta façon de te battre. Ta **voie** (Mandat, Compagnie, Pratique, Chemin, Haie, Charge, Paroisse, Métier, Rupture ou Répertoire, selon la classe) se choisit au niveau 3. Lis les classes avant de choisir : une classe qui lance des sorts coûte des souvenirs.
-4. **Ton historique.** Ce que tu faisais avant. Il te donne deux compétences, un outil, un peu d'équipement, de l'argent, et un privilège. Fossoyeur de paroisse, soldat d'une compagnie franche, moine scribe, enfant des Landes, marchand de morts à gage, pêcheur sous la glace, écuyer dîmier, apprentie gardienne : choisis celui qui raconte quelque chose avec ta classe, ou contre elle.
+4. **Ton historique.** Ce que tu faisais avant. Il te donne deux compétences, un outil, un peu d'équipement, de l'argent, et un privilège. Fossoyeur de paroisse, soldat d'une compagnie franche, moine scribe, enfant des Landes, marchand de morts à gage, pêcheur sous la glace, Écuyer dîmier, apprentie gardienne : choisis celui qui raconte quelque chose avec ta classe, ou contre elle.
 5. **Tes caractéristiques.** Vigueur, Agilité, Endurance, Savoir, Volonté, Présence. Valeurs fixes, achat par points ou dés : le chapitre 2 donne les trois méthodes. Mets tes meilleures valeurs dans les caractéristiques de ta classe.
 6. **Tes compétences.** Celles de ton historique sont données. Ta classe t'en laisse choisir quelques-unes dans une liste. Ton peuple peut t'en ajouter une.
 7. **Ta personnalité.** Un trait, un idéal, un lien, un défaut. L'écran te propose des phrases toutes faites de la Ternelande (« Je mets toujours une assiette de trop à table », « J'ai donné le souvenir de mon frère à la Dîme. Je veux savoir qui il était »). Prends-en, change-les, ou écris les tiennes. Ce sont elles que le MJ utilisera.

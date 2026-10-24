@@ -242,7 +242,7 @@ export const CLASSES_TERNELANDE: CharacterClass[] = [
       S("sorciere-seve", "Buveuse de sève", "Elle boit le lait d'oubli à la cuillère. Ce qu'elle y voit, elle le garde pour elle.",
         "Certaines sorcières vont dans les Blancs-Bois entailler les grands bouleaux et recueillir leur sève. Elles en boivent un peu, en vendent le reste très cher. On dit que la sève fait voir des choses ; les buveuses ne disent pas lesquelles.",
         [
-          P(3, "Une gorgée", "action", "repos long", "Tu bois une gorgée de lait d'oubli et poses une question au MJ sur un lieu, un objet ou une personne devant toi : il répond par une image vraie, courte. Sauvegarde de Volonté DD 10, ou ce pouvoir rend flou un souvenir.", { uses: 1 }),
+          P(3, "Une gorgée", "action", "repos long", "Tu bois une gorgée de lait d'oubli et poses une question au MJ sur un lieu, un objet ou une personne devant toi : il répond par une image vraie, courte. Sauvegarde de Volonté DD 15, ou ce pouvoir rend flou un souvenir.", { uses: 1 }),
           P(6, "Écorce", "passif", "passif", "Sans armure, ta CA vaut 13 + Agilité. Résistance aux dégâts de froid."),
           P(10, "Brume des Blancs-Bois", "action", "repos court", "Sphère de brume blanche de 6 m de rayon à 27 m, une minute : très obscurcie. Un ennemi qui y commence son tour fait une sauvegarde de Volonté ou ne sait plus où il est ni qui il combat : il ne peut que se déplacer. Concentration." + sort(3), { uses: 1, range: "27 m" }),
           P(14, "Racines profondes", "passif", "passif", "Avantage aux sauvegardes de concentration, et Ronces ajoute ta Volonté aux dégâts."),
@@ -264,7 +264,7 @@ export const CLASSES_TERNELANDE: CharacterClass[] = [
     startingGear: ["Registre relié de cuir gris", "Encre, plumes et grattoir", "Bâton", "Robe de laine noire à plume blanche brodée", "Chandelles de suif"],
     powers: [
       P(1, "Le prix des sorts", "passif", "passif", PRIX),
-      P(1, "Le registre", "passif", "passif", "Tes sorts sont écrits dans un registre. Sans lui, tu ne récupères pas tes sorts au repos long ; le recopier de mémoire prend une semaine. Quand un sort rend flou un de tes souvenirs, tu peux l'écrire en marge en trois lignes :"),
+      P(1, "Le registre", "passif", "passif", "Tes sorts sont écrits dans un registre. Sans lui, tu ne récupères pas tes sorts au repos long ; le recopier de mémoire prend une semaine. Quand un sort rend flou un de tes souvenirs, tu peux l'écrire en marge en trois lignes. Une fois par palier de niveaux, tu peux raconter ce souvenir toi-même, en relisant la marge, sans l'aide d'un autre personnage."),
       P(1, "Trait d'encre", "action", "à volonté", "Attaque à distance : 1d10 dégâts de froid (2d10 au niveau 5, 3d10 au 11, 4d10 au 17). Tour, sans prix.", { range: "36 m" }),
       P(1, "Page tournée", "réaction", "repos long", "+5 CA jusqu'à ton prochain tour, même contre l'attaque qui allait te toucher." + sort(1), { uses: 2 }),
       P(1, "Lire ce qui est écrit", "action", "repos long", "Pendant une heure, tu lis toute écriture, tout code, et tu sais ce que fait un objet ou un reliquaire que tu tiens." + sort(1), { uses: 2 }),

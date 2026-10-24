@@ -48,7 +48,7 @@ Tu as **27 points**. Chaque caractéristique commence à 8. Tu dépenses des poi
 | 10 | 2 | | 14 | 7 |
 | 11 | 3 | | 15 | 9 |
 
-Exemple de répartition : 15, 15, 15, 8, 8, 8 (27 points). Ou 15, 14, 13, 12, 10, 8 (27 points aussi : c'est la série fixe). Ou 14, 14, 14, 12, 10, 10.
+Exemple de répartition : 15, 15, 15, 8, 8, 8 (27 points). Ou 15, 14, 13, 12, 10, 8 (27 points aussi : c'est la série fixe). Ou 14, 14, 13, 12, 10, 10.
 
 ### Lancer les dés
 
@@ -58,7 +58,7 @@ Lance **4d6**, retire le plus faible, additionne les trois autres. Recommence si
 
 ### Les bonus d'origine
 
-Ton peuple et ta lignée (Ternois, gens des Comtés, Gris des Neiges, Sylvain de lisière, Houilleur de la veine…) ajoutent des bonus à certaines caractéristiques. Ils sont indiqués dans la description de l'origine, et l'écran de création les applique pour toi. Les Ternois sont plus endurants, les gens des Comtés plus à l'aise dans une conversation, les Houilleurs plus trapus, les Sylvains plus agiles.
+Ton peuple et ta lignée (Ternois, gens des Comtés, Gris des Neiges (une lignée de Gris-de-Sang), Sylvain de lisière, Houilleur de la veine…) ajoutent des bonus à certaines caractéristiques. Ils sont indiqués dans la description de l'origine, et l'écran de création les applique pour toi. Les Ternois sont plus endurants, les gens des Comtés plus à l'aise dans une conversation, les Houilleurs plus trapus, les Sylvains plus agiles.
 
 Après les bonus, aucune valeur ne peut dépasser 20 au niveau 1.
 
@@ -261,7 +261,7 @@ La table ci-dessus donne la caractéristique habituelle de chaque compétence. L
 - Nager une heure dans l'eau froide : **Endurance (Athlétisme)**, l'endurance compte plus que la puissance.
 - Impressionner un sergent par un tour de force : **Vigueur (Intimidation)**.
 - Se souvenir de la route qu'on a prise à l'aller : **Savoir (Survie)**.
-- Repérer d'instinct l'endroit où un mur sonne creux : **Volonté (Investigation)** est discutable ; **Savoir (Investigation)** est la règle. Le MJ tranche.
+- Repérer d'instinct l'endroit où un mur sonne creux : **Savoir (Investigation).**
 
 Le joueur peut proposer : « Je peux faire ça avec ma Vigueur ? » Le MJ accepte s'il trouve l'idée juste.
 

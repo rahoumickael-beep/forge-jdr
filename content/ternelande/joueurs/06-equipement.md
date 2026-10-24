@@ -12,8 +12,7 @@ Chaque personnage commence avec l'équipement de sa **classe** et celui de son *
 |---|---|
 | Sorcière des ronces | 2d4 × 7 livres |
 | Mémorialiste, Coupe-jarret, Dîmier renégat | 4d4 × 7 livres |
-| Chasseur de sorcières, Mercenaire, Pèlerin, Fossoyeur | 5d4 × 7 livres |
-| Chirurgien-barbier, Complainteur | 5d4 × 7 livres |
+| Chasseur de sorcières, Mercenaire, Pèlerin, Fossoyeur, Chirurgien-barbier, Complainteur | 5d4 × 7 livres |
 
 ## La monnaie
 
@@ -25,7 +24,7 @@ La Ternelande compte en trois mots. Le **denier d'argent** est la pièce courant
 | Un sou | 1 s | 12 | 1 |
 | Une livre | 1 l | 240 | 20 |
 
-Les pièces ne comptent pas dans la charge, sauf au-delà de cinq livres. Un journalier gagne environ **6 deniers** par jour, un artisan qualifié ou un soldat de compagnie environ **2 sous**. Un repas d'auberge coûte 2 deniers, une nuit 4 deniers, une épée 10 livres.
+Les pièces ne comptent pas dans la charge, sauf au-delà de cinq livres. Un journalier gagne environ **8 deniers** par jour, un artisan qualifié ou un soldat de compagnie environ **6 sous**. Un repas d'auberge coûte 2 deniers, une nuit 4 deniers, une épée 10 livres.
 
 > **Convertir un prix du SRD.** Pour les prix qui ne figurent pas ici : 1 po du SRD vaut 13 sous, 1 pa vaut 16 deniers, 1 pc vaut un peu plus d'un denier. Un prix qui sert à mesurer le haut de gamme (harnois, cuirasse) s'arrondit à la dizaine de livres.
 
@@ -79,7 +78,7 @@ Attaquer avec une arme qu'on ne maîtrise pas reste possible : on n'ajoute simpl
 |---|---|---|---|---|
 | Arbalète légère | 16 l | 1d8 perforant | 2,5 kg | Munitions (24/96 m), chargement, deux mains |
 | Arc court | 16 l | 1d6 perforant | 1 kg | Munitions (24/96 m), deux mains |
-| Fléchette | 6 d | 1d4 perforant | 0,1 kg | Finesse, lancer (6/18 m) |
+| Fléchette | 8 d | 1d4 perforant | 0,1 kg | Finesse, lancer (6/18 m) |
 | Fronde | 1 s | 1d4 contondant | — | Munitions (9/36 m) |
 
 ### Armes de guerre au contact
@@ -161,11 +160,11 @@ Quelques armes ont un nom d'ici. Elles se jouent avec les statistiques du tablea
 | Arbalète de chasse | Arbalète légère | Fût de frêne, corde qui ne gèle pas |
 | Bourdon ferré | Bâton | Embout de fer, bague de cuivre. L'arme du Pèlerin |
 | Fourche | Lance | Dents de fer. L'arme de ceux qui n'ont que ça |
-| Faux de récolte | Hallebarde | Lame redressée sur le manche. Prix : 2 l |
+| Faux de récolte | Hallebarde | 1d8 tranchant, allonge, deux mains. Lame redressée sur le manche. Prix : 2 l |
 | Pique de compagnie | Pique | Six pas de frêne. Les Piquiers les plantent en rang |
 | Pelle de fossoyeur | Arme improvisée | Les chiffres du Fossoyeur sont sur sa fiche |
 
-**Le fer froid.** Le fer froid est battu sans feu, à la forge du nord, à coups de masse et de patience. Il reste glacé dans la main, même près d'un poêle, et brûle les doigts nus dès les premières gelées. **Une arme en fer froid coûte le triple du prix normal** et ne se trouve qu'au nord ou chez ceux qui en ramènent. Elle blesse les Reflets sans que leur résistance joue (chapitre 4). Contre les créatures vivantes, c'est une arme ordinaire, sauf si une règle le dit. Une pointe de flèche ou de carreau en fer froid coûte 1 l les cinq.
+**Le fer froid.** Le fer froid est battu sans feu, à la forge du nord, à coups de masse et de patience. Il reste glacé dans la main, même près d'un poêle, et brûle les doigts nus dès les premières gelées. **Une arme en fer froid coûte le triple du prix normal** et ne se trouve qu'au nord ou chez ceux qui en ramènent. Elle blesse les Reflets sans que leur résistance joue (chapitre 4). Contre les créatures vivantes, c'est une arme ordinaire, sauf si une règle le dit. Une pointe de flèche ou de carreau en fer froid coûte 10 s les cinq.
 
 ## Les armures et les boucliers
 
@@ -243,7 +242,7 @@ Avec de l'aide, le temps pour mettre une armure lourde est divisé par deux. Un 
 | Parchemin (une feuille) | 1 s | — |
 | Pied-de-biche | 1 l 5 s | 2,5 kg |
 | Piège à mâchoires | 3 l | 12,5 kg |
-| Pitons (10) | 1 d pièce | 0,125 kg pièce |
+| Pitons (10) | 8 d | 0,125 kg pièce |
 | Plume d'écriture | 2 d | — |
 | Registre vierge | 16 l | 2,5 kg |
 | Sac (toile) | 1 d | 0,25 kg |
@@ -251,7 +250,7 @@ Avec de l'aide, le temps pour mettre une armure lourde est divisé par deux. Un 
 | Sacoche d'herbes et de sel | 16 l | 1 kg |
 | Savon | 2 d | — |
 | Serrure | 6 l | 0,5 kg |
-| Sifflet | 6 d | — |
+| Sifflet | 8 d | — |
 | Tente de toile (pour deux) | 1 l 5 s | 10 kg |
 | Torche | 1 d | 0,5 kg |
 | Thériaque (fiole, contre les poisons) | 33 l | — |
@@ -304,14 +303,14 @@ L'hiver dure cinq mois. On ne le traverse pas avec une cape de voyage.
 | Vêtements d'hiver (manteau de peaux, bonnet, moufles, bottes fourrées) | 3 l | 4 kg |
 | Patins d'os (paire) | 1 l | 1 kg |
 | Crampons de glace (paire) | 12 s | 1 kg |
-| Raquettes à neige (paire) | 15 s | 1,5 kg |
+| Raquettes à neige (paire) | 1 l 5 s | 1,5 kg |
 | Lunettes de neige (os percé d'une fente) | 6 d | — |
 | Sac de couchage fourré | 1 l | 3,5 kg |
 | Tarière à glace | 3 l | 4 kg |
 | Graisse de phoque (pot) | 2 d | 0,25 kg |
-| Fagot de bois sec (une nuit de feu) | 1 d | 5 kg |
+| Fagot de bois sec (une nuit, une personne) | 1 d | 5 kg |
 | Chien de traîneau | 3 l | — |
-| Traîneau | 12 l | 150 kg |
+| Traîneau | 13 l | 150 kg |
 | Pain de route (1 jour) | 6 d | 1 kg |
 | Sel de veillée (une poignée dans un mouchoir) | 2 d | — |
 
@@ -319,13 +318,13 @@ L'hiver dure cinq mois. On ne le traverse pas avec une cape de voyage.
 
 **Patins et crampons.** Sur la glace nue, ils te dispensent de la sauvegarde d'Agilité de l'action Se précipiter, et d'être bousculé plus loin (chapitre 4). Patins d'os : déplacement normal sur la glace. Crampons : déplacement normal sur la glace, **et** sur une pente verglacée.
 
-**Raquettes.** La neige profonde ne compte plus comme terrain difficile.
+**Raquettes.** La neige profonde ne compte plus comme terrain difficile, mais tu ne peux pas te précipiter, et en forêt dense (Blancs-Bois) elles ne servent plus.
 
 **Lunettes de neige.** Une journée au soleil sur la neige, sans elles, aveugle à moitié : le MJ peut imposer le désavantage à la Perception le lendemain.
 
 **Traîneau.** Un traîneau tiré par six chiens porte 360 kg de passagers et de charge. Un jour de traîneau vaut une journée et demie de marche, sur la neige ou sur un lac gelé. Chaque chien de traîneau tire jusqu'à 60 kg et se nourrit de poisson ou de viande : ça se compte dans les rations.
 
-> **Une nuit dehors.** Sans abri ni feu, une nuit passée dehors en hiver donne un niveau d'épuisement, sauf sauvegarde d'Endurance DD 12 réussie (chapitre 7). Une grange, une cabane de pêcheur, un feu qui tient la nuit : pas de sauvegarde. Un fagot de bois sec fait un feu pour une nuit. Un sac de couchage fourré, des vêtements d'hiver ou une peau de loup d'hiver aident, chacun à sa façon.
+> **Une nuit dehors.** Sans abri ni feu, une nuit passée dehors en hiver donne un niveau d'épuisement, sauf sauvegarde d'Endurance DD 12 réussie (chapitre 7). Une grange, une cabane de pêcheur, un feu qui tient la nuit : pas de sauvegarde. Un fagot de bois sec par personne fait un feu pour la nuit. Un fagot fond aussi de quoi boire pour deux personnes. Un sac de couchage fourré, des vêtements d'hiver ou une peau de loup d'hiver aident, chacun à sa façon.
 
 ## Les outils
 
@@ -380,6 +379,8 @@ Quelques usages en Ternelande :
 | Poney | 20 l | 12 m | 112 kg |
 | Renne | 33 l | 15 m | 200 kg |
 
+Le renne n'est jamais ralenti par la neige : le terrain difficile de neige est ignoré pour lui et son cavalier.
+
 Une monture qui tire un véhicule déplace trois fois sa charge (chariot ou charrette compris). Plusieurs bêtes attelées additionnent leur force.
 
 | Harnachement et véhicules | Prix | Poids |
@@ -394,7 +395,7 @@ Une monture qui tire un véhicule déplace trois fois sa charge (chariot ou char
 | Bardes (armure de monture) | × 4 le prix de l'armure | × 2 le poids |
 | Charrette | 10 l | 100 kg |
 | Chariot | 23 l | 200 kg |
-| Traîneau | 12 l | 150 kg |
+| Traîneau | 13 l | 150 kg |
 | Barque à rames | 33 l | — |
 
 La **selle militaire** donne l'avantage aux tests pour rester en selle (chapitre 4). Un cheval qu'on garde dehors par grand froid veut une couverture et du fourrage double, sans quoi le MJ peut lui compter un niveau d'épuisement comme à un personnage.
@@ -429,7 +430,7 @@ La **selle militaire** donne l'avantage aux tests pour rester en selle (chapitre
 | Bière, une cruche de 4 litres | 4 d |
 | Vin ordinaire, un pichet | 4 d |
 | Vin fin du sud, une bouteille | 3 s |
-| Pain, une miche | 1 d |
+| Pain, une miche | 2 d |
 | Fromage, un morceau | 2 d |
 | Viande, un morceau | 6 d |
 | Banquet (par convive) | 5 s |
@@ -438,8 +439,8 @@ La **selle militaire** donne l'avantage aux tests pour rester en selle (chapitre
 
 | Service | Prix |
 |---|---|
-| Journalier, porteur, guide de village (par jour) | 6 d |
-| Artisan, soldat de compagnie, guide qualifié (par jour) | 2 s |
+| Journalier, porteur, guide de village (par jour) | 8 d |
+| Artisan, soldat de compagnie, guide qualifié (par jour) | 6 s |
 | Messager (par lieue, environ 4 km) | 1 d |
 | Péage d'une route ou d'un pont | 1 d (ou ce que le sergent demande) |
 | Passeur de Vaugelée (une traversée de lac gelé) | 2 d à 6 d selon la glace |
@@ -481,7 +482,7 @@ Certains objets n'ont pas de prix sur un marché. Ils s'achètent d'une Gardienn
 
 **Dé à coudre de Gardienne.** Un dé d'étain cabossé. Dedans, quelque chose de tiède que personne ne voit. À la Dîme, un personnage garde un souvenir qu'il aurait dû rayer. Si un Dîmier le trouve, c'est la corde. Une fois.
 
-**Fiole de lait d'oubli.** Une fiole de sève claire des Blancs-Bois, scellée à la cire. Elle sent le sucre et la neige. Un souvenir flou redevient intact. Ou, au choix du MJ, le personnage voit une image qui n'est pas à lui. Une fois. Elle compte dans le plafond d'un souvenir par repos long (chapitre 5).
+**Fiole de lait d'oubli.** Une fiole de sève claire des Blancs-Bois, scellée à la cire. Elle sent le sucre et la neige. Un souvenir flou redevient intact. Ou, au choix du MJ, le personnage voit une image qui n'est pas à lui. Une fois. Elle compte dans le plafond : ce souvenir ne peut pas être rendu intact par une autre source cette nuit-là.
 
 **Masque d'étain volé.** Un masque de Dîmier, lisse, sans expression, avec deux fentes pour les yeux. Pendant une scène, les gens prennent le porteur pour un Dîmier. Le vrai Dîmier, s'il passe, ne s'y trompe pas. Une fois.
 
