@@ -30,8 +30,7 @@ export interface Carte {
 export function tirerCarte(type: TypeDeCarte, genre: GenreId, level: number, seed?: number, deja: string[] = []): Carte {
   const rng = new Rng(seed);
   if (type === "rencontre") {
-    // Une créature à nom public cache un secret du canon : le MJ la place, le hasard jamais.
-    const toutes = creaturesFor(genre).filter((c) => !c.legendary && !c.publicName && c.cr <= Math.max(1, level + 1));
+    const toutes = creaturesFor(genre).filter((c) => !c.legendary && c.cr <= Math.max(1, level + 1));
     const choix = toutes.filter((c) => !deja.includes(`rencontre:${fichierCreature(c)}`));
     const c = choix.length ? rng.pick(choix) : toutes.length ? rng.pick(toutes) : undefined;
     if (c)
