@@ -1,5 +1,5 @@
 // Sujets des peintures Flux de la Cellule Hermès (en anglais pour Flux ; jamais de négation ; la lumière en premier).
-// Le style vient de la charte contemporain (promptPeinture), provisoire tant que Mickael n'a pas choisi : photo de dossier, flash direct, grain 35 mm.
+// Le style vient de la charte contemporain (promptPeinture) : roman graphique noir, encre franche, une seule touche de rouge (choix de Mickael, 24/10/2026).
 // Couvertures des livres, images fortes des lieux (lore.md, section 2) et figures marquantes. Rien du secret : ni ce que le Service est devenu,
 // ni ce que le Cabinet assemble, ni le Coffre, ni le Rachat ; la caserne de Luxembourg n'est montrée que de l'extérieur, barrière et guérite.
 // Novembre 2026, Europe : gares, trains, caméras, téléphones, conteneurs. Rien de surnaturel, rien de futuriste.
@@ -12,7 +12,7 @@ export const PEINTURES_HERMES: Record<string, Peinture> = {
   // ——— Couvertures ———
   "couverture-joueurs": {
     cadrage: "couverture",
-    lumiere: "harsh direct flash in a dim stairwell, cold fluorescent glow from a station platform behind",
+    lumiere: "single bare bulb in a dim stairwell, cold fluorescent glow from a station platform behind",
     sujet: "four people in plain dark coats and backpacks walking away along an empty railway platform at dawn, one of them carrying a sealed grey paper envelope, a departure board glowing above them, security cameras on the pillars, a train waiting with its doors open, a wet floor reflecting the lights",
   },
   "couverture-mj": {
@@ -69,7 +69,7 @@ export const PEINTURES_HERMES: Record<string, Peinture> = {
   },
   "figure-aldebert": {
     cadrage: "portrait",
-    lumiere: "harsh direct flash on a station concourse, cold daylight behind",
+    lumiere: "hard white overhead light on a station concourse, cold daylight behind",
     sujet: "a forty-four-year-old woman with dark hair tied back, in a dark suit and small earrings, a heavy leather briefcase in one hand and a tricolour card in a black wallet shown once to the camera, standing at the exit of a railway station, calm and exact, her eyes on the viewer",
   },
   "figure-scalvini": {

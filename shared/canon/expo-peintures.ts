@@ -1,5 +1,5 @@
 // Sujets des peintures Flux de l'Exposition éternelle (en anglais pour Flux ; jamais de négation ; la lumière en premier).
-// Le style vient de la charte steampunk (promptPeinture), provisoire tant que Mickael n'a pas choisi : gravure victorienne rehaussée d'aquarelle.
+// Le style vient de la charte steampunk (promptPeinture) : affiche Art nouveau, or et sarcelle (choix de Mickael, 24/10/2026).
 // Couvertures des livres, images fortes des lieux (lore.md, section 2) et figures marquantes. Rien du secret : ni ce qui dort sous le Champ,
 // ni ce que le Commissariat en tire, ni la Nuit du Siècle. Les machines ne sont montrées que comme la foule les voit : vapeur, laiton, courroies, lampes à arc.
 // Paris, 1899 : fer, verre, vapeur, électricité naissante, gaz, dirigeables à enveloppe, automates à cames. Rien d'après, aucune magie.

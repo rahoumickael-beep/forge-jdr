@@ -3,6 +3,8 @@
 Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce qui reste.
 
 ## Choix de Mickael
+- 24/10/2026, tout en A : piratage de la Résidence au prix × maîtrise (à appliquer) ; Champ-d’Asile : convois d’esclaves tolérés avant 1865, jamais légalisé ; « Cellule Hermès » gardé, Service en France ; Villages coloniaux de l’Exposition dénoncés, origines jouables gardées ; Escrimeur à la place du Veilleur ; interface cyberpunk en orange sodium et sarcelle (fait) ; **nom du jeu : Forge des Mondes**.
+- 24/10/2026 : styles des 8 mondes **validés** selon les recommandations : dark fantasy A, cyberpunk **C** (huile noire, sodium et sarcelle), horreur A, post-apo A, western A, pirates A, steampunk **B** (affiche Art nouveau, or et sarcelle), thriller **B** (roman graphique noir, une touche de rouge). Les dix chartes de `charte.ts` sont validées.
 - 24/10/2026 : tokens : **Opus reste le cerveau** (délègue et contrôle) ; travail délégué vers Antigravity gratuit (`scripts/deleguer.mjs`). OmniRoute : **A, pas maintenant**, seulement si Antigravity sature souvent.
 - 24/10/2026 : style de la SF (Les Phares) : **A, couverture de poche des années 70** (gouache à l’aérographe, bleus outremer et ambre), contre l’huile usée et la sérigraphie. Charte SF validée. Odile Varlet repeinte et posée (pas encore bleutée, mais mouillée et pâle).
 - 24/10/2026 : chaque monde est **un jeu à part entière** (classes, origines, bestiaire, scénarios, cartes à jouer, thème d’interface, trois livres PDF), au niveau d’Aubreterre. Les huit autres prémisses A collent à la vision de Mickael.
@@ -36,6 +38,5 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
 - Planche du demi-orc à repeindre.
 - Agrandissement 300 dpi de toutes les planches, version imprimeur des livres.
-- Styles graphiques des 9 autres genres.
-- Nom définitif du jeu (Forge des Mondes, Mille Royaumes, Le Carrefour des Destins).
+- Appliquer le nom « Forge des Mondes » (interface, livres) et le prix du piratage × maîtrise (Résidence).
 - `comfyui/generer-v2.mjs` non suivi : pas à Claude, laissé tel quel.

@@ -1,5 +1,5 @@
 // Sujets des peintures Flux de la Résidence (en anglais pour Flux ; jamais de négation ; la lumière en premier).
-// Le style vient de la charte cyberpunk (promptPeinture), provisoire tant que Mickael n'a pas choisi.
+// Le style vient de la charte cyberpunk (promptPeinture), validée par Mickael le 24/10/2026.
 // Couvertures des livres, images fortes des quartiers (lore.md, section 2) et figures marquantes.
 import type { Peinture } from "./archipel-peintures";
 
@@ -7,7 +7,7 @@ export const PEINTURES_RESIDENCE: Record<string, Peinture> = {
   // ——— Couvertures ———
   "couverture-joueurs": {
     cadrage: "couverture",
-    lumiere: "neon magenta and cyan reflections in falling rain",
+    lumiere: "neon signs and wet reflections in falling rain",
     sujet: "a long apartment tower corridor four hundred meters above a drowned city at night, a hundred identical grey doors, buckets catching rain from the ceiling, four young tenants standing guard in front of one door with a family behind them, green numbers glowing on their wrists",
   },
   "couverture-mj": {
@@ -28,7 +28,7 @@ export const PEINTURES_RESIDENCE: Record<string, Peinture> = {
   },
   "region-blocs": {
     cadrage: "scene",
-    lumiere: "neon magenta and cyan reflections in falling rain",
+    lumiere: "neon signs and wet reflections in falling rain",
     sujet: "a concrete residential corridor three hundred meters high with hundreds of identical doors, a family sitting on its suitcases in front of one of them while an officer in a yellow armband changes the lock",
   },
   "region-port-franc": {
@@ -64,7 +64,7 @@ export const PEINTURES_RESIDENCE: Record<string, Peinture> = {
   },
   "figure-mado-ferrandi": {
     cadrage: "portrait",
-    lumiere: "neon magenta and cyan reflections in falling rain",
+    lumiere: "neon signs and wet reflections in falling rain",
     sujet: "a tired woman of thirty who looks forty, former nurse in a worn parka, a crossed-out key painted on the door behind her, talking fast to a crowd of neighbours in a stairwell",
   },
   "figure-la-grue": {

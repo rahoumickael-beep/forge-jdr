@@ -1,6 +1,6 @@
 // Bestiaire de l'Exposition éternelle (steampunk, Paris, octobre 1899).
 // Fiches façon D&D 5e, mêmes outils que les autres mondes (fiches.ts) ; le style des planches vient de la charte steampunk
-// (provisoire : gravure victorienne rehaussée à l'aquarelle, en attendant le choix de Mickael).
+// (affiche Art nouveau, or et sarcelle : choix de Mickael, 24/10/2026).
 // Quatre familles : Automates et machines de la foire, Gens de la foire et de la pègre, Gardes, Sûreté et Commissariat, Figures et grandes machines.
 // Conventions : aucune magie. Les automates sont des mécaniques à cames et à vapeur, les grandes machines des appareils que personne ne comprend tout à fait.
 // Les Gens des Villages, les ouvrières et les mécaniciens de la Chambre syndicale n'ont pas de fiche : ce ne sont pas des monstres. Les Réfractaires et l'impresario

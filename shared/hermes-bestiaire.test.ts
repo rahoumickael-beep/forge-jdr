@@ -163,13 +163,13 @@ test("hermès : les noms propres des textes des joueurs sont dans le canon", () 
   }
 });
 
-test("hermès : photos de dossier, lumière de la famille en tête, créature en pied, ni négation ni marque", () => {
+test("hermès : roman graphique noir, lumière de la famille en tête, créature en pied, ni négation ni marque", () => {
   const interdit = new RegExp(REGLES_FLUX.anachronismes["contemporain"], "i");
   const negation = new RegExp(REGLES_FLUX.negation, "i");
   const seeds = new Set<number>();
   for (const c of HE) {
     assert.ok(c.illustration.startsWith(LUMIERE_FAMILLE[c.family]), `${c.id} : lumière de la famille`);
-    assert.ok(c.illustration.includes("candid documentary photograph"), `${c.id} : style contemporain`);
+    assert.ok(c.illustration.includes("noir graphic novel art"), `${c.id} : style contemporain`);
     assert.ok(/full body, centered, eye-level view/.test(c.illustration), `${c.id} : créature en pied, centrée, à hauteur d'yeux`);
     const scene = c.illustration.replace(FIN_DE_STYLE, "");
     assert.ok(scene.length > 80, `${c.id} : scène trop courte`);
@@ -186,7 +186,7 @@ test("hermès : photos de dossier, lumière de la famille en tête, créature en
 
 test("hermès : la charte contemporain ouvre sur la lumière et cadre la créature en pied", () => {
   assert.ok(stylePeinture("contemporain", "creature", "").length > 0);
-  assert.ok(stylePeinture("contemporain", "creature").startsWith("harsh direct flash"), "lumière par défaut en tête");
+  assert.ok(stylePeinture("contemporain", "creature").startsWith("sodium street lights and rain"), "lumière par défaut en tête");
   assert.match(stylePeinture("contemporain", "creature"), /full body, centered, eye-level view/);
 });
 

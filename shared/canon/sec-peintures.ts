@@ -1,5 +1,5 @@
 // Sujets des peintures Flux du Grand Sec (en anglais pour Flux ; jamais de négation ; la lumière en premier).
-// Le style vient de la charte post-apo (promptPeinture), provisoire tant que Mickael n'a pas choisi.
+// Le style vient de la charte post-apo (promptPeinture), validée par Mickael le 24/10/2026.
 // Couvertures des livres, images fortes du Bas-Pays (lore.md, section 2) et figures marquantes. Rien du secret.
 import type { Peinture } from "./archipel-peintures";
 

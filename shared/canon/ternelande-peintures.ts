@@ -1,5 +1,5 @@
 // Sujets des peintures Flux de la Ternelande (en anglais pour Flux ; jamais de négation ; la lumière en premier).
-// Le style vient de la charte dark fantasy (promptPeinture), provisoire tant que Mickael n'a pas choisi.
+// Le style vient de la charte dark fantasy (promptPeinture), validée par Mickael le 24/10/2026.
 // Couvertures des livres, images fortes des Comtés (lore.md, section 2) et figures marquantes.
 import type { Peinture } from "./archipel-peintures";
 

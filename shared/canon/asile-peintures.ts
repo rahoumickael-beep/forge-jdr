@@ -1,5 +1,5 @@
 // Sujets des peintures Flux du Champ-d'Asile (en anglais pour Flux ; jamais de négation ; la lumière en premier).
-// Le style vient de la charte western (promptPeinture), provisoire tant que Mickael n'a pas choisi : peinture de l'Ouest du XIXe siècle.
+// Le style vient de la charte western (promptPeinture), validée par Mickael le 24/10/2026 : peinture de l'Ouest du XIXe siècle.
 // Couvertures des livres, images fortes des terres du Champ (lore.md, section 2) et figures marquantes. Rien du secret :
 // ni le Traité ni sa date n'apparaissent dans un sujet.
 // 1878 : chevaux, diligences, locomotives à vapeur, lampes à huile, télégraphe. Rien d'après.

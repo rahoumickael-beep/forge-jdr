@@ -1,6 +1,6 @@
 // Bestiaire du Champ-d'Asile (western, haut Brazos et Comanchería, 1878).
 // Fiches façon D&D 5e, mêmes outils que les autres mondes (fiches.ts) ; le style des planches vient de la charte western
-// (provisoire : peinture de l'Ouest à la Remington, en attendant le choix de Mickael).
+// (peinture de l'Ouest à la Remington, validée par Mickael le 24/10/2026).
 // Quatre familles : Bêtes de la prairie, Gens de la loi, Hors-la-loi, Gens du rail.
 // Conventions : pas de magie. Les Comanches (Numunuu) ne sont pas des monstres : le seul Numunuu de ce bestiaire est un gardien du Traité,
 // rangé avec les gens de la loi de son propre peuple, et le MJ peut toujours lui parler.

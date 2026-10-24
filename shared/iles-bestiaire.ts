@@ -1,6 +1,6 @@
 // Bestiaire des Îles du Vent (pirates, Antilles, 1716).
 // Fiches façon D&D 5e, mêmes outils que les autres mondes (fiches.ts) ; le style des planches vient de la charte pirates
-// (provisoire : marine à l'huile du XVIIIe siècle, en attendant le choix de Mickael).
+// (marine à l'huile du XVIIIe siècle, validée par Mickael le 24/10/2026).
 // Quatre familles : Bêtes de mer et de côte, Gens de mer, Soldats et chasseurs, Figures et navires.
 // Conventions : aucun surnaturel (le Navire blanc est une frégate, l'ouragan est une tempête). Les marrons ne sont jamais des ennemis par défaut :
 // la seule fiche de marron est une sentinelle, rangée avec ceux qui portent les armes, et le MJ peut toujours lui parler.

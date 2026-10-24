@@ -164,13 +164,13 @@ test("exposition : les noms propres des textes des joueurs sont dans le canon", 
   }
 });
 
-test("exposition : planches à la gravure victorienne, lumière de la famille en tête, créature en pied, ni négation ni anachronisme", () => {
+test("exposition : planches en affiche Art nouveau, lumière de la famille en tête, créature en pied, ni négation ni anachronisme", () => {
   const interdit = new RegExp(REGLES_FLUX.anachronismes["steampunk"], "i");
   const negation = new RegExp(REGLES_FLUX.negation, "i");
   const seeds = new Set<number>();
   for (const c of EX) {
     assert.ok(c.illustration.startsWith(LUMIERE_FAMILLE[c.family]), `${c.id} : lumière de la famille`);
-    assert.ok(c.illustration.includes("Victorian engraving with watercolor tint"), `${c.id} : style steampunk`);
+    assert.ok(c.illustration.includes("Art Nouveau poster illustration"), `${c.id} : style steampunk`);
     assert.ok(/full body, centered, eye-level view/.test(c.illustration), `${c.id} : créature en pied, centrée, à hauteur d'yeux`);
     const scene = c.illustration.replace(FIN_DE_STYLE, "");
     assert.ok(scene.length > 80, `${c.id} : scène trop courte`);
@@ -187,7 +187,7 @@ test("exposition : planches à la gravure victorienne, lumière de la famille en
 
 test("exposition : la charte steampunk ouvre sur la lumière et en a une par défaut", () => {
   assert.ok(stylePeinture("steampunk", "creature", "").length > 0);
-  assert.ok(stylePeinture("steampunk", "creature").startsWith("pale gaslit haze"), "lumière par défaut en tête");
+  assert.ok(stylePeinture("steampunk", "creature").startsWith("warm gaslight evening glow"), "lumière par défaut en tête");
   assert.match(stylePeinture("steampunk", "creature"), /full body, centered, eye-level view/);
 });
 

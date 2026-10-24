@@ -1,6 +1,6 @@
 // Bestiaire de la Cellule Hermès (contemporain, thriller d'espionnage, Europe, novembre 2026).
 // Fiches façon D&D 5e, mêmes outils que les autres mondes (fiches.ts) ; le style des planches vient de la charte contemporain
-// (provisoire : photo de dossier, flash direct et grain 35 mm, en attendant le choix de Mickael).
+// (roman graphique noir, une touche de rouge : choix de Mickael, 24/10/2026).
 // Quatre familles : La rue et les témoins, Forces de l'ordre, Les privés, Figures et scènes.
 // Conventions : rien de surnaturel. Les policiers, les douaniers et les inspecteurs ne sont pas des monstres : aucun n'est un ennemi par défaut,
 // et chaque fiche dit comment éviter le combat et ce que coûte un coup de feu en Empreinte (2 par scène où l'on tire, plus 1 par blessé grave ou mort).

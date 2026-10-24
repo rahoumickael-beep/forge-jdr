@@ -65,7 +65,6 @@ export const CHARTES: Record<GenreId, Charte> = {
   "dark-fantasy": {
     genre: "dark-fantasy",
     nom: "Gravure à l'eau-forte, sang et cendre",
-    provisoire: true,
     peinture: "{lumiere}, dark etching with red ink wash, grim dark fantasy {support}, heavy crosshatching, ash grey and dried blood palette, {cadrage}, clean unmarked image",
     lumiere: "torchlight from one side in falling snow",
     supports: supportsGeneriques("grimdark"),
@@ -87,19 +86,17 @@ export const CHARTES: Record<GenreId, Charte> = {
   },
   cyberpunk: {
     genre: "cyberpunk",
-    nom: "Néon sous la pluie, photographie de nuit",
-    provisoire: true,
-    peinture: "{lumiere}, cinematic night photograph look, cyberpunk {support}, rain, neon magenta and cyan reflections, film grain, {cadrage}, clean unmarked image",
-    lumiere: "neon magenta and cyan reflections in falling rain",
+    nom: "Huile noire, sodium et sarcelle",
+    peinture: "{lumiere}, realistic oil painting, cyberpunk {support}, dark noir palette with sodium orange and teal, painterly brushwork, {cadrage}, clean unmarked image",
+    lumiere: "neon signs and wet reflections",
     supports: supportsGeneriques("cyberpunk"),
-    palette: { fond: "#0a0612", papier: "#140d24", papier2: "#1d1236", filet: "#ff2fa0", encre: "#f6e8ff", encreDouce: "#b493d4", or: "#ff2fa0", sang: "#ff3b3b" },
+    palette: { fond: "#070b0d", papier: "#0f1518", papier2: "#16201f", filet: "#ff8a2a", encre: "#f3ebe0", encreDouce: "#9fb3ad", or: "#ff8a2a", sang: "#ff3b3b" },
     polices: { titre: "Chakra Petch", deco: "Chakra Petch", texte: "Chakra Petch", petitesCapitales: "Chakra Petch" },
     ornements: { chapitre: "▚", fin: "▞" },
   },
   horreur: {
     genre: "horreur",
     nom: "Photographie argentique années 20",
-    provisoire: true,
     peinture: "{lumiere}, 1920s silver gelatin photograph, archival horror {support}, sepia and grey, vignetting, scratches and dust, {cadrage}, clean unmarked image",
     lumiere: "grey dawn mist over the shore, soft diffuse overcast",
     supports: supportsGeneriques("archival horror"),
@@ -110,7 +107,6 @@ export const CHARTES: Record<GenreId, Charte> = {
   "post-apo": {
     genre: "post-apo",
     nom: "Affiche au pochoir, rouille et poussière",
-    provisoire: true,
     peinture: "{lumiere}, gritty gouache painting, post-apocalyptic {support}, rust orange and dust palette, {cadrage}, clean unmarked image",
     lumiere: "white noon sun, bleached sky, ochre dust",
     supports: supportsGeneriques("wasteland"),
@@ -121,7 +117,6 @@ export const CHARTES: Record<GenreId, Charte> = {
   western: {
     genre: "western",
     nom: "Peinture de l'Ouest à la Remington",
-    provisoire: true,
     peinture: "{lumiere}, oil painting in the style of 19th century American western art, {support}, ochre and sage palette, {cadrage}, clean unmarked image",
     lumiere: "golden late afternoon sun low over the prairie, ochre dust",
     supports: supportsGeneriques("frontier"),
@@ -132,7 +127,6 @@ export const CHARTES: Record<GenreId, Charte> = {
   pirates: {
     genre: "pirates",
     nom: "Marine à l'huile du XVIIIe siècle",
-    provisoire: true,
     peinture: "{lumiere}, 18th century maritime oil painting, pirate {support}, teal and brass palette, {cadrage}, clean unmarked image",
     lumiere: "stormy sea light",
     supports: {
@@ -145,10 +139,9 @@ export const CHARTES: Record<GenreId, Charte> = {
   },
   steampunk: {
     genre: "steampunk",
-    nom: "Gravure victorienne rehaussée",
-    provisoire: true,
-    peinture: "{lumiere}, Victorian engraving with watercolor tint, steampunk {support}, brass and copper tones, fine linework, {cadrage}, clean unmarked image",
-    lumiere: "pale gaslit haze over a crowded fairground",
+    nom: "Affiche Art nouveau, or et sarcelle",
+    peinture: "{lumiere}, Art Nouveau poster illustration, steampunk {support}, flowing decorative borders, muted gold and teal, flat colors, {cadrage}, clean unmarked image",
+    lumiere: "warm gaslight evening glow",
     supports: {
       ...supportsGeneriques("Victorian steampunk"),
       creature: { support: "bestiary plate", cadrage: "single creature shown full body, centered, eye-level view, uncluttered background" },
@@ -159,10 +152,9 @@ export const CHARTES: Record<GenreId, Charte> = {
   },
   contemporain: {
     genre: "contemporain",
-    nom: "Photo de dossier, flash et grain",
-    provisoire: true,
-    peinture: "{lumiere}, candid documentary photograph, thriller {support}, direct flash, muted cold colors, 35mm grain, {cadrage}, clean unmarked image",
-    lumiere: "harsh direct flash in a dim stairwell",
+    nom: "Roman graphique noir, une touche de rouge",
+    peinture: "{lumiere}, noir graphic novel art, thriller {support}, stark black ink, a single red accent, {cadrage}, clean unmarked image",
+    lumiere: "sodium street lights and rain",
     supports: {
       ...supportsGeneriques("modern thriller"),
       creature: { support: "case file photograph", cadrage: "single subject shown full body, centered, eye-level view, uncluttered background" },

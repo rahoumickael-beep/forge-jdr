@@ -1,5 +1,5 @@
 // Sujets des peintures Flux des Îles du Vent (en anglais pour Flux ; jamais de négation ; la lumière en premier).
-// Le style vient de la charte pirates (promptPeinture), provisoire tant que Mickael n'a pas choisi : marine à l'huile du XVIIIe siècle.
+// Le style vient de la charte pirates (promptPeinture), validée par Mickael le 24/10/2026 : marine à l'huile du XVIIIe siècle.
 // Couvertures des livres, images fortes des îles (lore.md, section 2) et figures marquantes. Rien du secret : ni le faux argent,
 // ni le nom de la frégate blanche, ni ce qu'elle charge ou coule. Le Navire blanc n'est montré que comme les marins le voient : une coque pâle sur l'eau.
 // 1716 : voiles, bois, goudron, poudre noire, pistolets à silex, mousquets, sabres, lanternes à huile. Rien d'après.

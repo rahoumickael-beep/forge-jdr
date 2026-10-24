@@ -1,6 +1,6 @@
 // Bestiaire du Grand Sec (post-apocalyptique, vallée du Rhône asséchée, 2071).
 // Fiches façon D&D 5e, mêmes outils que les autres mondes (fiches.ts) ; le style des planches vient de la charte post-apo
-// (provisoire : affiche des années 1960 passée au soleil, en attendant le choix de Mickael).
+// (affiche des années 1960 passée au soleil, validée par Mickael le 24/10/2026).
 // Quatre familles : Bêtes du Sec, Gens de la Route, Gens des citadelles, Machines d'avant.
 // Conventions : pas de magie, pas de mutants, pas de radiations. Le danger vient de la soif, de la chaleur et de ceux qui ont de l'eau.
 // Presque chaque fiche a une sortie autre que tuer : payer en godets, négocier, partager l'eau, attendre la nuit ou la fin du vent.
