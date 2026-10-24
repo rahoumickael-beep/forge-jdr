@@ -2,7 +2,7 @@
 
 Dans la cour du Palais, la file avance d'un pas. Le Puisatier plonge son seau dans la cuve, le lève, le verse godet par godet dans les bidons qu'on lui tend. Il ne dit rien et ne fait aucun geste inutile. Personne dans la file n'y voit un miracle : il y a trois cent dix mètres de corde, un treuil à manège, quatre hommes qui poussent, et un homme qui sait lire le niveau du seau à l'œil.
 
-Voilà ce qu'on appelle un pouvoir dans le Bas-Pays : un métier poussé très loin. Quand il force le corps, il coûte de l'eau. Ce chapitre explique comment lire les pouvoirs de ta classe, ce que coûtent ceux qui forcent, ce que valent l'eau qu'ils produisent, et comment une Sourcière trouve l'eau sans baguette.
+Un pouvoir, dans le Bas-Pays, c'est un métier poussé très loin. Quand il force le corps, il coûte de l'eau. Ce chapitre explique comment lire les pouvoirs de ta classe, ce que coûtent ceux qui forcent, ce que valent l'eau qu'ils produisent, et comment une Sourcière trouve l'eau sans baguette.
 
 > **Si tu viens d'un autre jeu.**
 >
@@ -17,8 +17,6 @@ Ce que tu gagnes en montant de niveau (chapitre 3) tient en trois choses :
 - des **savoir-faire** plus sûrs et plus fins ;
 - des **relations** : un patron de convoi, un maître de puits, un revendeur, une sage-femme ;
 - des **réserves** : une ration plus courte, un puits recreusé, un convoi à toi.
-
-Un Batelier de niveau 17 est quelqu'un que les relais attendent. Il boit pourtant ses huit godets en été, comme tout le monde.
 
 Voici, classe par classe, à quoi ressemble un pouvoir.
 
@@ -106,19 +104,19 @@ Les autres pouvoirs (soigner, réparer à l'ordinaire, négocier, pister, tirer,
 
 Un allié peut te verser quelques godets de sa gourde avant l'effort : ils comptent alors comme les tiens, et ils lui manqueront à lui.
 
-Ce plafond de 4 godets n'est pas fait pour t'arrêter. Une bonne journée n'y arrive presque jamais. Il est là pour qu'un groupe qui a de l'eau ne la transforme pas en dégâts.
+Une bonne journée n'atteint presque jamais 4 godets. Le plafond sert à ce qu'un groupe qui a de l'eau ne la change pas en dégâts.
 
 > **Exemple.**
 >
-> Yanis, pillard repenti de niveau 2, porte une gourde de dix godets, pleine au départ. Il boit sa ration du jour : 8 godets, en été. Il lui en reste 2. Dans la journée, il utilise *Prise de vitesse* deux fois (une fois pour se désengager d'un pillard, une fois pour rattraper un baril qui roule) : 2 godets versés, 0 dans la gourde. Sa gourde est vide, et le soleil n'est pas encore couché. Après un repos court, il pourrait utiliser le pouvoir une troisième fois, mais sans eau : un niveau d'épuisement, tout de suite.
+> Yanis, pillard repenti de niveau 2, porte une gourde de dix godets, pleine au départ. Il boit sa ration du jour : 8 godets, en été. Il lui en reste 2. Dans la journée, il utilise *Prise de vitesse* deux fois (une fois pour semer un pillard, une fois pour rattraper un baril qui roule) : 2 godets versés, 0 dans la gourde. Sa gourde est vide, et le soleil n'est pas encore couché. Après un repos court, il pourrait utiliser le pouvoir une troisième fois, mais sans eau : un niveau d'épuisement, tout de suite.
 >
-> Estève, puisatier de niveau 2, utilise *Coup de masse* pour renverser un pillard : 1 godet versé de sa gourde. Il en avait déjà payé un plus tôt dans la journée, pour un autre pouvoir. Le compte de la journée est à 2 godets de pouvoirs, sur un plafond de 4.
+> Estève, puisatier de niveau 2, utilise *Coup de masse* pour renverser un pillard : 1 godet versé de sa gourde. Il en avait déjà payé un plus tôt dans la journée, pour un premier coup de masse. Le compte de la journée est à 2 godets de pouvoirs, sur un plafond de 4.
 
 ### Les classes à passif
 
 Le Batelier de sable, le Puisatier, le Pillard repenti, le Mécano des ruines, le Gardian, le Pénitent, le Médecin des sables et le Fouilleur ont le passif *Ce que coûte l'effort* sur leur fiche. Il répète cette règle, mot pour mot. Le Pénitent y ajoute son avantage : il peut payer en **jeûne**.
 
-**Le jeûne du Pénitent.** Au lieu de retirer des godets de sa gourde, le Pénitent renonce à autant de godets de sa ration du jour. Ils comptent comme de l'eau non bue ; la règle de la soif s'applique le soir, et il a l'avantage à sa sauvegarde. Le plafond de 4 godets par jour vaut aussi pour lui.
+**Le jeûne du Pénitent.** Au lieu de retirer des godets de sa gourde, le Pénitent renonce à autant de godets de sa ration du jour. Ils comptent comme de l'eau non bue : le soir, il fait la sauvegarde d'Endurance contre la soif, avec l'avantage, mais son DD augmente de 1 par godet de jeûne, et l'annulation du premier niveau de *Soif choisie* ne vaut pas pour ce jeûne-là. Le plafond de 4 godets par jour vaut aussi pour lui.
 
 Le MJ te dit, à chaque pouvoir, quel est son prix. Ne le devine pas : lis la fiche.
 
@@ -129,7 +127,7 @@ Certains pouvoirs font venir de l'eau : la *Rosée du matin* de la Sourcière, l
 **L'eau que tu trouves, que tu récoltes ou que tu fabriques ne compte que jusqu'à 6 godets par personne et par jour** (chapitre 3). Le surplus s'évapore, se gâte ou ne se garde pas. Cela s'applique à ce que donnent tes pouvoirs, ton origine, tes cartes, et à ce que tu fais toi-même : cueillette, rosée, alambic, pompe, cache.
 
 - Le plafond se compte **par personne qui en profite**. Un groupe de quatre qui reçoit l'eau d'un alambic peut en compter jusqu'à 24 godets dans la journée. Un personnage seul n'en garde que 6.
-- Le surplus est perdu. Une journée d'alambic qui donne souvent plus de 6 godets ne remplit pas deux gourdes pour un Salinier qui voyage seul.
+- Le surplus est perdu. Un Salinier qui voyage seul et tire 9 godets de son alambic n'en garde que 6 : de quoi ne pas remplir même une gourde de douze.
 - L'eau que tu **achètes** au relais, que tu **reçois** d'un patron ou que tu tires du **Grand Puits** à la file n'est pas concernée par le plafond. Elle se compte au godet près, comme de l'argent.
 - Aucun personnage ne vit de ce qu'il trouve à lui seul. Il boit sa ration, il trouve un peu, et il achète le reste.
 
@@ -192,7 +190,7 @@ Une grande partie des pouvoirs de niveau élevé ne se joue pas en combat. Ils s
 
 ## Échanger un pouvoir
 
-Ce livre ne prévoit pas de règles pour mélanger deux classes (chapitre 3). Un joueur qui veut qu'un Batelier apprenne un peu de médecine en parle au MJ : le plus simple est de remplacer un pouvoir de sa classe par un pouvoir de même niveau d'une autre. Le MJ refuse tout ce qui contournerait le prix en eau, et tout pouvoir à prix pour une classe qui n'en a pas.
+Le principe est au chapitre 3 (« Multiclassage »). Ici, une seule précision : le MJ refuse tout pouvoir à prix pour une classe qui n'en a pas.
 
 > **Résumé du chapitre.**
 >

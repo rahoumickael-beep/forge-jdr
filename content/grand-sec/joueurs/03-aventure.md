@@ -44,9 +44,9 @@ On voyage à pied la nuit, à dos d'âne, ou en char à voile sur la Route du Rh
 
 | Mode | Vitesse | Par jour de route |
 |---|---|---|
-| À pied | 4 km/h | 30 km en huit heures de marche |
-| À dos d'âne | 4 km/h | 30 km en huit heures de marche |
-| Cheval (Gardian) | 8 km/h | 50 km |
+| À pied | 4 km/h | 32 km en huit heures de marche |
+| À dos d'âne | 4 km/h | 32 km en huit heures de marche |
+| Cheval (Gardian), en voyage | 8 km/h | 50 km |
 | Char à voile, mistral dans le dos | 12 km/h | 100 km |
 | Char à voile, vent faible | 6 km/h | 50 km |
 | Char à voile, marin de face | 6 km/h | 50 km |
@@ -70,7 +70,7 @@ Un âne coûte 150 godets. Il marche comme toi, à 4 km/h, et il porte jusqu'à 
 
 Un char à voile est un plateau de douze mètres monté sur roues de camion, avec une voile carrée et un équipage de six. Chaque convoi a un patron. Sur le lit du Rhône, il va plus vite qu'un cheval au galop, et ne s'arrête que si le vent tombe.
 
-**La barre.** Piloter un char demande un test d'Agilité ou d'Instinct (pilotage). Le DD est de **10** en conditions normales, **13** par mistral fort ou de nuit, **15** en tempête de sable. Un Batelier de sable ou un Enfant de la Route a l'avantage. On ne lance pas le dé à chaque heure : le MJ demande un test aux moments difficiles, un pont tordu, une rafale, un virage serré, un autre char à croiser.
+**La barre.** Piloter un char demande un test d'Agilité ou d'Instinct, plus ta maîtrise des outils de batelier si tu l'as. Le DD est de **10** en conditions normales, **13** par mistral fort ou de nuit, **15** en tempête de sable. Un Batelier de sable ou un Enfant de la Route a l'avantage. On ne lance pas le dé à chaque heure : le MJ demande un test aux moments difficiles, un pont tordu, une rafale, un virage serré, un autre char à croiser.
 
 Un échec ralentit le char de moitié jusqu'au prochain test. Deux échecs de suite, il verse : chacun à bord fait une sauvegarde d'Agilité DD 12 ou prend 2d6 dégâts contondants et tombe à terre, et la cargaison s'éparpille sur le sable.
 
@@ -87,7 +87,7 @@ Un échec ralentit le char de moitié jusqu'au prochain test. Deux échecs de su
 
 > **Tempête de sable.**
 >
-> Une tempête monte du sud : un mur brun qui avance plus vite qu'un cheval. Un test d'Instinct (Survie) DD 12 permet de la voir venir une heure avant. Un test de pilotage DD 15 permet de mettre le char à l'abri d'un pont, d'une péniche couchée ou d'un quai.
+> Une tempête monte du sud : un mur brun qui avance plus vite qu'un cheval. Un test d'Instinct (Survie) DD 12 permet de la voir venir une heure avant. Un test d'Agilité ou d'Instinct DD 15 permet de mettre le char à l'abri d'un pont, d'une péniche couchée ou d'un quai.
 >
 > Dans la tempête, la vue tombe à 3 m : désavantage aux tests de Perception qui reposent sur la vue. Chaque heure à découvert demande une sauvegarde d'Endurance DD 12, ou un niveau d'épuisement. Des lunettes de sable et un chèche donnent l'avantage. Un abri annule la sauvegarde.
 
@@ -118,11 +118,9 @@ Un repos long, pris après avoir bu ta ration complète, te retire un niveau d'�
 
 ### Le coup de chaleur
 
-En été, entre midi et quatre heures, au soleil, chaque heure de marche ou d'effort demande une sauvegarde d'Endurance **DD 10**. Le DD passe à **15** en armure intermédiaire ou lourde, ou en combat. Tu as l'avantage à l'ombre, ou si tu bois un godet de plus dans l'heure.
+En été, entre midi et quatre heures, au soleil, chaque heure de marche ou d'effort demande une sauvegarde d'Endurance **DD 10**. Le DD est de **12** en combat, et de **15** en armure intermédiaire. Tu as l'avantage à l'ombre (une arche de pont, un mur, une bâche), ou si tu bois un godet de plus dans l'heure. Sous un toit ou dans une cave, tu n'as aucune sauvegarde à faire : l'ombre d'une arche allège le coup de chaleur, elle ne l'annule pas.
 
-Un échec donne un niveau d'épuisement, mais **pas plus d'un par après-midi** (deux en armure intermédiaire ou lourde).
-
-Une journée de marche de nuit ne demande aucune de ces sauvegardes. C'est pour ça que les gens du Bas-Pays ne marchent pas le jour.
+Un échec donne un niveau d'épuisement, mais **pas plus d'un par après-midi** (deux en armure intermédiaire).
 
 ### L'eau sale
 
@@ -198,7 +196,7 @@ Dans le Bas-Pays, on dort le jour et on marche la nuit. Un repos long se prend d
 
 ### Quand le corps lâche
 
-Le repos long ne retire qu'un niveau d'épuisement, et pas plus de deux par jour. Un personnage à trois niveaux met donc trois repos longs à s'en remettre, s'il boit sa ration. Un pouvoir de soin ou un Médecin des sables peuvent aller plus vite, jamais au-delà de deux niveaux par jour.
+Le repos long ne retire qu'un niveau d'épuisement, et pas plus de deux par jour. Un personnage à trois niveaux met donc trois repos longs à s'en remettre, s'il boit sa ration. Les pouvoirs de soin du Médecin des sables vont plus vite, sans jamais retirer plus de deux niveaux par jour.
 
 ## Trouver de l'eau
 
@@ -221,7 +219,7 @@ Quand le groupe cherche de l'eau hors des endroits connus, le MJ demande un test
 | Un lit de rivière, une plaine, une garrigue | 15 |
 | Du sable, du sel, de la caillasse nue | 20 |
 
-Une réussite donne **1d6 + ton modificateur d'Instinct godets** (au minimum 1), trouvés en une heure de recherche : une flaque sous une pierre, une racine qui garde l'eau, un suintement de cave. Cette eau est rarement propre : elle demande souvent la sauvegarde de l'eau sale.
+Une réussite donne **1d4 + la moitié de ton modificateur d'Instinct** (arrondie à l'inférieur, au minimum 1) **godets pour le groupe entier**, par heure de recherche : une flaque sous une pierre, une racine qui garde l'eau, un suintement de cave. Cette eau est rarement propre : elle demande souvent la sauvegarde de l'eau sale.
 
 **Un plafond.** L'eau que tu trouves, que tu récoltes ou que tu fabriques (cueillette, rosée, alambic, pompe, cache) ne compte que jusqu'à **6 godets par personne et par jour**. Le surplus s'évapore, se gâte ou ne se garde pas. Aucun personnage ne vit de ce qu'il trouve à lui seul.
 
@@ -239,7 +237,7 @@ Quand une rumeur annonce une citerne pleine, le MJ n'est pas tenu de la remplir.
 
 ### Faire de l'eau avec le feu
 
-Avec un alambic de camp, un fagot et une journée de feu, un Salinier tire de l'eau douce de l'eau de mer ou de l'eau saumâtre. Rien n'empêche un autre personnage d'essayer, avec un alambic, un test de Savoir (Arcanes / Savoir) DD 15, et le même plafond que plus haut : 6 godets par personne et par jour. Le bois est le vrai prix : chaque godet de la côte a coûté un arbre.
+Avec un alambic de camp, un fagot et une journée de feu, un Salinier tire de l'eau douce de l'eau de mer ou de l'eau saumâtre. Il y réussit sans jet. Tout autre personnage fait un test de Savoir (Arcanes / Savoir) DD 15, avec le même plafond que plus haut : 6 godets par personne et par jour. L'eau vient de la mer ou de l'étang de Vaccarès ; l'alambic de camp coûte 60 godets, et chaque journée de feu demande un fagot (3 godets, 6 sur la côte). Le bois est le vrai prix : chaque godet de la côte a coûté un arbre.
 
 ### Les godets faux
 
@@ -386,7 +384,7 @@ On monte de niveau **après un repos long**, pas au milieu d'une scène.
 
 **La spécialité de ta classe** (Poste, Chantier, Habitude, École, Atelier, Mas, Règle, Pratique, Spécialité ou Convoi, selon la classe) se choisit au **niveau 3**. Voir le chapitre des classes.
 
-**Des relations, pas des surhommes.** Dans le Bas-Pays, les niveaux hauts ne font pas des héros. Ils donnent des relations (un patron de convoi, un maître de puits, un revendeur), des talents, et des réserves : une ration réduite, un puits recreusé, un convoi à soi. Le corps reste celui d'une personne qui a soif.
+**Des relations, pas des surhommes.** Au niveau 20, tu as encore soif comme au niveau 1. Ce qui change : un patron de convoi te doit un service, un maître de puits connaît ton nom, un revendeur te garde sa meilleure table. Et tu as des réserves : une ration réduite, un puits recreusé, un convoi à toi.
 
 > **Multiclassage.**
 >

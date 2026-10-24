@@ -115,7 +115,7 @@ Tu t'agenouilles auprès d'un personnage à 0 PV et tu tentes un test d'**Instin
 
 ### Improviser
 
-Pousser un baril, couper un cordage, jeter une poignée de sable à la figure de quelqu'un, renverser une lampe sur de la paille : décris ce que tu fais. Le MJ te dit quel test, quel DD, et ce qui arrive. Le sable ne manque pas dans le Bas-Pays : une poignée envoyée dans les yeux se joue comme une attaque d'Agilité (Escamotage), et ce qui est touché est aveuglé jusqu'à la fin de son prochain tour.
+Pousser un baril, couper un cordage, jeter une poignée de sable à la figure de quelqu'un, renverser une lampe sur de la paille : décris ce que tu fais. Le MJ te dit quel test, quel DD, et ce qui arrive. Le sable ne manque pas dans le Bas-Pays, et la poignée dans les yeux se joue ainsi : jet d'Agilité (Escamotage) contre la CA, à 1,5 m. Si tu touches, la cible a le désavantage à sa prochaine attaque. Une même créature ne peut être visée qu'une fois par combat.
 
 ## Les attaques
 
@@ -152,7 +152,7 @@ Si tu tiens une arme **légère** dans chaque main et que tu attaques avec l'une
 
 ### Les armes de fortune
 
-Un tuyau, une barre de treuil, un pied de table, un tesson, un bout de pare-chocs : si l'objet ressemble à une arme du tableau du chapitre 6, on utilise ses statistiques. Sinon, il fait **1d4** dégâts d'un type logique, sans bonus de maîtrise.
+Un tuyau, une barre de treuil, un tesson, un bout de pare-chocs : les règles des armes improvisées sont au chapitre 6.
 
 Personne n'assomme quelqu'un avec une gourde pleine. Elle pèse trois kilos, et on ne risque pas douze godets pour un coup.
 
@@ -163,7 +163,7 @@ Les armes de trait et les armes à feu se jouent comme des armes à distance, av
 - **Chargement.** Une arbalète se bande avant de tirer. Même avec plusieurs attaques par action, tu ne tires qu'un carreau par action.
 - **Chargeur (N).** Un fusil contient N cartouches. Quand elles sont tirées, il faut **recharger**, ce qui prend une action.
 - **Bruyant.** Un coup de fusil s'entend à deux kilomètres, plus loin la nuit sur le lit du fleuve. Le MJ décide qui l'entend, qui vient, et dans combien de rounds. Un carreau fait un claquement sec qui porte à trente mètres, pas davantage.
-- **Compte tes munitions.** Note-les sur ta fiche. Une cartouche tirée est une cartouche perdue : **cinq godets**, la valeur de deux repas et demi. Après un combat, la moitié des carreaux tirés se ramasse, arrondie à l'inférieur. Une cartouche vide, jamais, sauf pour un Mécano des ruines (voir sa spécialité).
+- **Compte tes munitions.** Note-les sur ta fiche. Une cartouche tirée est une cartouche perdue : **cinq godets**, la valeur de deux repas et demi. Après un combat, la moitié des carreaux tirés se ramasse, arrondie à l'inférieur. Les douilles vides ne se ramassent que pour être rechargées, et seul l'Armurier de fortune (spécialité du Mécano des ruines) sait le faire.
 - **Cacher une arme.** Une machette se glisse dans une ceinture, une arbalète de poing sous une chemise : Agilité (Escamotage) contre la Perception passive de qui te regarde. Une arbalète ou un fusil ne se cachent pas.
 
 > **Après le coup de feu.**
@@ -196,7 +196,7 @@ On frappe parfois un baril plutôt qu'un homme.
 | Mur de pierre sèche | 17 | 27 |
 | Béton | 17 | on ne l'abat pas |
 
-**Un baril percé fuit.** Un baril plein touché par une arme perforante laisse échapper environ dix godets par round, par le trou. Boucher la fuite avec un chiffon, un doigt ou un bouchon de bois est une action, sans test. Cinquante litres valent deux cents godets : le MJ compte à voix haute. Une cargaison de vingt barils vaut quatre mille godets, et une bande qui veut votre eau ne tire pas dans les barils.
+**Un baril percé fuit.** Un tir qui rate sa cible de 2 ou moins touche l'abri. Un baril plein touché par une arme perforante laisse échapper environ dix godets par round, par le trou. Boucher la fuite avec un chiffon, un doigt ou un bouchon de bois est une action, sans test. Cinquante litres valent deux cents godets : le MJ compte à voix haute. Une cargaison de vingt barils vaut quatre mille godets, et une bande qui veut ton eau ne tire pas dans les barils.
 
 Enfoncer une porte plutôt que la frapper est un test de Force (Athlétisme) : DD 10 pour une cabane, DD 15 pour une porte de tôle, DD 20 pour une porte de citerne. Une serrure neuve ne se force pas : elle s'ouvre avec des outils et un test d'Agilité DD 15, ou elle se perce.
 
@@ -219,9 +219,9 @@ Trois cents mètres de sable gris et de galets. On y voit de loin et on n'y avan
 Un plateau de douze mètres sur quatre roues de camion, une voile carrée, un mât. Six personnes d'équipage, plus la cargaison.
 
 - **Les barils et les caisses** du plateau donnent un demi-abri. Le mât et le flanc du plateau donnent trois quarts à qui s'accroupit derrière. La voile cache sans protéger : ce qui est derrière n'est pas vu, mais un carreau la traverse.
-- **Quelqu'un tient la barre.** Tant que le char va droit, c'est une interaction par tour. Un virage, un pont tordu, un autre char à croiser : c'est l'action du pilote et un test de pilotage (chapitre 3). Un Batelier de sable tient la barre et la voile seul. Un char sans barre dérive : au bout d'un round sans pilote, test de pilotage DD 13.
-- **Un char qui roule fait 20 m par round**, mistral dans le dos. Il laisse sur place tout ce qui tombe. Un personnage jeté à terre par un coup, un virage ou une rafale perd le char de vue en deux rounds, si personne ne l'accroche.
-- **Le plateau secoue.** Tant que le char roule vite, quiconque veut courir, se précipiter ou attaquer au contact lance **Agilité (Acrobaties) DD 10** au début de son tour. Un échec : à terre sur le plateau. Un 1 naturel : par-dessus bord, 1d6 dégâts contondants et le char file. L'Enfant de char (son origine) et le Coureur de char (sa spécialité) ne tombent pas.
+- **Quelqu'un tient la barre.** Tant que le char va droit, c'est une interaction par tour. Un virage, un pont tordu, un autre char à croiser : c'est l'action du pilote et un test d'Agilité ou d'Instinct (chapitre 3). Un Batelier de sable tient la barre et la voile seul. Un char sans barre dérive : au bout d'un round sans pilote, celui qui reprend la barre fait un test d'Agilité ou d'Instinct DD 13.
+- **Un char qui roule fait 20 m par round**, mistral dans le dos. Il laisse sur place tout ce qui tombe. Un personnage jeté à terre par un coup, un virage ou une rafale se retrouve à 40 m du char en deux rounds, à 100 m en cinq, si personne ne l'accroche.
+- **Le plateau secoue.** Tant que le char roule vite, quiconque veut courir, se précipiter ou attaquer au contact lance **Agilité (Acrobaties) DD 10** au début de son tour. Un échec : à terre sur le plateau. Un 1 naturel : par-dessus bord, 1d6 dégâts contondants et le char file, sauf sauvegarde d'Agilité DD 10 pour s'accrocher au bastingage. L'Enfant de char (son origine) et le Coureur de char (sa spécialité) ne tombent pas.
 - **Monter à bord d'un char en marche** : Force (Athlétisme) ou Agilité (Acrobaties) DD 12, avantage si on l'a accroché au harpon.
 - **Le mât** monte à neuf mètres. La vigie y voit à plus de trois kilomètres et peut tirer en plongée. Grimper coûte le double.
 
@@ -241,14 +241,14 @@ La ville a transformé ses remparts en citerne, et c'est ce qui change tout. Le 
 
 - **Les créneaux** : un tireur accroupi derrière un merlon a trois quarts de couverture, et un demi-abri dès qu'il se redresse pour viser.
 - **Escalader** une échelle de dix mètres coûte quatorze cases de déplacement, soit trois tours pour un personnage ordinaire.
-- **Pousser quelqu'un du chemin de ronde** : dix mètres de chute, 3d6.
+- **Pousser quelqu'un du chemin de ronde** : dix mètres de chute, 3d6. Une créature poussée dans le vide a droit à une sauvegarde d'Agilité DD 12 pour s'agripper au bord.
 - **La pierre brûle.** Au soleil de midi, un mur blanc cuit la main nue qui s'y appuie : un dégât de feu pour qui s'y adosse sans gant ou sans tissu.
 - **Ne perce pas la citerne.** Un carreau qui crève le parement du réservoir fait fuir de l'eau de la ville. À Avignon, on n'a pas peur d'un coup de lance, on a peur du tribunal qui compte les godets perdus.
 - **Les arbalétriers du Puits** ne tirent que sur ordre, et ils tirent bien. Ne leur donne pas de motif.
 
 ### La chaleur de midi
 
-En été, entre midi et quatre heures, un combat au soleil compte comme **une heure d'effort** : à sa fin, ou au bout d'une minute s'il dure, chaque participant fait une **sauvegarde d'Endurance DD 15** (chapitre 3). Un combat se déroule toujours à ce DD. L'avantage s'applique à l'ombre ou à qui a bu un godet de plus dans l'heure. Deux combats dans la même heure ne comptent qu'une fois. Un échec donne un niveau d'épuisement, mais pas plus d'un par après-midi (deux en armure intermédiaire).
+En été, entre midi et quatre heures, un combat au soleil compte comme **une heure d'effort** : chaque participant fait une **sauvegarde d'Endurance DD 12** à la fin du combat (**DD 15** en armure intermédiaire, chapitre 3). Une seule par heure. L'avantage s'applique à l'ombre ou à qui a bu un godet de plus dans l'heure. Un échec donne un niveau d'épuisement, mais pas plus d'un par après-midi (deux en armure intermédiaire).
 
 - **Le métal chauffe.** Ramasser à main nue une arme de fer restée au soleil coûte 1 dégât de feu. Un gant, un chiffon ou un moment à l'ombre l'évitent.
 - **Les armures pèsent.** C'est pour cela qu'on ne trouve pas d'armure lourde dans le Bas-Pays (chapitre 6).
@@ -290,7 +290,7 @@ Un arbalétrier qui plaque un voleur de capsules contre le mur du Palais le fait
 
 ### Bousculer
 
-Tu remplaces une attaque par un test de **Force (Athlétisme)** contre le même test de la cible. Si tu gagnes, tu la pousses de 1,5 m ou tu la jettes à terre. Au bord d'un plateau, d'un quai ou d'un rempart, **dans le vide** : voir « Les chutes », plus bas.
+Tu remplaces une attaque par un test de **Force (Athlétisme)** contre le même test de la cible. Si tu gagnes, tu la pousses de 1,5 m ou tu la jettes à terre. Au bord d'un plateau, d'un quai ou d'un rempart, **dans le vide** : la cible a droit à une sauvegarde d'Agilité DD 12 pour s'agripper au bord, sinon voir « Les chutes », plus bas.
 
 ## Fuir
 
@@ -300,7 +300,7 @@ Dans le Bas-Pays, partir est souvent la bonne décision. Partir bien est une aff
 - Un adversaire qui a ta vitesse ne te rattrape pas tant que tu cours et qu'il ne peut pas tirer ; il te rattrape si tu t'arrêtes ou si le terrain te ralentit. **Le sable mou compte double pour tout le monde**, sauf pour qui a un pouvoir qui l'ignore.
 - Pour **disparaître**, il faut sortir de la vue de tes poursuivants, puis réussir un test de groupe d'Agilité (Discrétion) contre leur Perception passive. Une arche, une ruine, une péniche couchée : le MJ décide ce qui compte comme « hors de vue ».
 - **Un char est plus rapide que toi**, et plus rapide qu'un poursuivant à pied : 20 m par round, mistral dans le dos. Sans vent, c'est l'inverse : un char à l'arrêt est une cible, et ceux qui le poussent ne courent pas.
-- **Lâcher de l'eau.** Une bande qui veut votre eau s'arrête souvent pour la ramasser. Jeter un baril du plateau, une gourde derrière soi, une poignée de capsules sur le sable : le MJ peut décider que les poursuivants s'arrêtent un round ou deux. Compte ce que cela te coûte avant de le faire.
+- **Lâcher de l'eau.** Une bande qui veut ton eau s'arrête souvent pour la ramasser. Jeter un baril du plateau, une gourde derrière soi, une poignée de capsules sur le sable : le MJ peut décider que les poursuivants s'arrêtent un round ou deux. Compte ce que cela te coûte avant de le faire.
 - **Pas de course à midi.** Fuir au soleil entre midi et quatre heures te demande la sauvegarde de chaleur du combat (voir plus haut), et celui qui se fait distancer boit moins que celui qui reste.
 - Dans Forge JdR, quand tous les pions d'un groupe sont sortis de la portée de ceux qui les poursuivent, le MJ peut **résumer** la fuite et la jouer en une phrase.
 
@@ -320,7 +320,7 @@ Un personnage peut se rendre à tout moment : il lâche son arme, lève les main
 - **Les Puisatiers d'Avignon** t'arrêtent, te conduisent au Palais, te jugent. C'est long, c'est humiliant, ça se plaide : un registre en règle et un témoin valent mieux qu'une arbalète.
 - **Une cagoule grise** ne te prend rien. Elle ne te touche pas non plus, et elle refuse l'eau que tu lui offres.
 - **Les Gardes-Mâts et les soldats de la République** tirent sur ceux qui approchent. Il n'y a pas de reddition à négocier : on s'éloigne les mains visibles, ou on ne s'approche pas.
-- **Le soleil** ne prend pas de prisonniers. Il n'est pas un camp.
+- **Le soleil** n'écoute personne : il n'y a rien à lui rendre, il faut aller à l'ombre.
 
 Les adversaires du MJ se rendent aussi. Un homme sous la moitié de ses PV, qui ne se bat pas pour sa vie, lâche son arme et crie qu'il se rend. Les pillards en bande de trois ou quatre le font vite quand leur char n'est plus en vue ; les bêtes se sauvent.
 
@@ -331,11 +331,11 @@ Négocier se fait avec la voix, au milieu du combat, à ton tour : c'est une **a
 | Ce que tu mets sur la table | Effet sur le DD |
 |---|---|
 | Un godet par tête, le prix d'un péage | Aucun : c'est le péage |
-| **Dix godets par adversaire**, ou un baril entier pour toute une bande | −5 |
+| **Dix godets par adversaire et par point de FP** (minimum 1), ou un baril entier pour une bande de huit au plus | −5 |
 | **Une menace crédible** (une arbalète lourde braquée, un harpon planté dans la roue) | −5 |
 | **Une demande absurde** (« rendez-moi mon eau et dites merci ») | +5 |
 
-Un DD ne descend jamais sous 5. Un baril de cinquante litres vaut deux cents godets : l'offrir, c'est se priver de deux jours de ration pour quatre personnes. **Compte avant d'offrir.** Ce que tu donnes, tu ne le boiras pas.
+Un DD ne descend jamais sous 5, et le MJ garde le dernier mot. Un baril de cinquante litres vaut deux cents godets : l'offrir, c'est se priver de six jours de ration pour quatre personnes (200 godets pour 32 par jour en été). **Compte avant d'offrir.** Ce que tu donnes, tu ne le boiras pas.
 
 Une négociation réussie arrête le combat. Elle laisse une trace : un pillard à qui tu as acheté sa fuite reconnaît ton char, et une bande qui a pris la moitié de ton eau sait où tu vas la remplir.
 
@@ -452,8 +452,6 @@ Un blessé stable reste inconscient, à 0 PV, sans défense. Les sources de mort
 
 ### Mourir
 
-Les morts restent morts. Personne ne ramène personne.
-
 Dans le Bas-Pays, on ne laisse pas l'eau d'un mort au sable. Sa gourde se boit à la table du feu, un godet chacun, en disant son nom à voix haute. Ses godets vont à qui il avait nommé, ou à son convoi. On l'enterre sous les galets du lit, avec sa capsule vide dans la main : une capsule vide sonne clair. Un groupe qui perd l'un des siens fait ces gestes, ou la table les raconte en une phrase.
 
 ## Remplacer un personnage mort
@@ -509,17 +507,17 @@ Les trois sont sous la moitié de leurs PV. Plus personne à l'arche ne se sent 
 - *Les pillards* lâchent leurs lances et reculent. Le harponné attend qu'on le détache.
 - *Fatima* range sa mallette. *Magali* décroche son harpon. *Estève* compte ses carreaux : il en a tiré un, il ne le retrouvera pas dans le sable.
 
-Le combat est fini : trois rounds, dix-huit secondes. Le MJ ajoute : « Il est une heure moins le quart, au soleil de midi, et vous avez bougé. Sauvegarde d'Endurance DD 15, avec l'avantage de l'ombre. » Estève fait 11 et 13, +4 : 17, réussi. Fatima fait 8 et 12, +4 : 16, réussi. Yanis fait 12 et 15, +1 : 16, réussi. Magali fait 9 et 4, +1 : 10. Elle prend un niveau d'épuisement : désavantage à tous ses tests de caractéristique, jusqu'à ce qu'un repos long le lui retire (chapitre 3). Elle tient la barre ce soir, et le vent revient.
+Le combat est fini : trois rounds, dix-huit secondes. Le MJ ajoute : « Il est une heure moins le quart, au soleil de midi, et vous avez bougé. Sauvegarde d'Endurance DD 12, avec l'avantage de l'ombre. » Estève fait 11 et 13, +4 : 17, réussi. Fatima fait 8 et 12, +4 : 16, réussi. Yanis fait 12 et 15, +1 : 16, réussi. Magali fait 9 et 4, +1 : 10. Elle prend un niveau d'épuisement : désavantage à tous ses tests de caractéristique, jusqu'à ce qu'un repos long le lui retire (chapitre 3). Elle tient la barre ce soir, et le vent revient.
 
 > **Résumé du chapitre.**
 >
 > - Round de 6 secondes, cases de 1,5 m, vitesse 9 m. Une action, un déplacement, une action bonus, une réaction.
 > - Surprise : Discrétion contre Perception passive. Un coup de fusil s'entend à deux kilomètres, et une cartouche coûte cinq godets.
 > - Abri : +2 (demi), +5 (trois quarts), total (aucune attaque directe). Un baril percé fuit, un godet versé est perdu.
-> - Midi en été : un combat au soleil compte pour une heure d'effort, sauvegarde d'Endurance DD 15, avantage à l'ombre. Tempête de sable : vue à 3 m.
+> - Midi en été : un combat au soleil compte pour une heure d'effort, sauvegarde d'Endurance DD 12 (15 en armure intermédiaire), avantage à l'ombre. Tempête de sable : vue à 3 m.
 > - Noir : vive, faible (désavantage vue), obscurité (aveuglé). La lampe te rend visible.
 > - Chute : 1d6 par 3 m. Rempart d'Avignon : 3d6. Pilier de pont : 4d6.
 > - Fuir : se désengager, se précipiter, hors de vue, test de groupe de Discrétion. Lâcher de l'eau arrête une bande.
 > - Se rendre et négocier : action, test de Présence contre l'attitude (10, 15, 20). Dix godets par adversaire ou une menace crédible : −5.
 > - À 0 PV : jets contre la mort (10 ou plus), Médecine DD 10 pour stabiliser. Stable n'est pas sauvé : soleil, vautours.
-> - Mort : les morts restent morts. Remplacement : A, B ou C, annoncé avant la première séance.
+> - Mort : sans retour. Remplacement : A, B ou C, annoncé avant la première séance.

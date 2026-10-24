@@ -50,7 +50,7 @@ export const BESTIAIRE_SEC: Creature[] = [
     ],
     actions: [hit("Coup de bec", "contact", 2, "1,5 m", "1d6", "perforants")],
     lore: "Grand, chauve, le jabot gris de poussière. Les vautours sont venus avec le Sec et ne sont plus repartis. Ils s'installent sur les toits des relais et sur les mâts des chars cassés, et attendent. Les bateliers les saluent d'un geste : un vautour qui descend, c'est qu'il y a quelque chose à moins d'un kilomètre.",
-    gmNotes: "Un cercle de vautours au-dessus d'une piste signale un corps, un char abandonné ou une citerne pas tout à fait vide. L'oiseau n'attaque que ce qui bouge à peine (Survie ou Perspicacité DD 11 pour le comprendre). Un morceau de viande ou un godet de bouillon lancé à 9 m détourne toute la volée. Niveaux 1 et 2, par deux ou trois.",
+    gmNotes: "Un cercle de vautours au-dessus d'une piste signale un corps, un char abandonné ou une citerne pas tout à fait vide. L'oiseau n'attaque que ce qui bouge à peine (Survie ou Intuition DD 11 pour le comprendre). Un morceau de viande ou un godet de bouillon lancé à 9 m détourne toute la volée. Niveaux 1 et 2, par deux ou trois.",
     scene: "a large bald vulture with a dusty grey ruff perched on the broken mast of a wrecked sand cart, wings half open, head turned to one side, a flat dry riverbed and a ruined roadside inn far behind it",
   }),
   creature({
@@ -139,13 +139,13 @@ export const BESTIAIRE_SEC: Creature[] = [
     languages: "—",
     traits: [
       { name: "Mur de sable", text: "Dans un rayon de 36 m, la visibilité est nulle : toute créature est dans une zone lourdement obscurcie, les attaques à distance se font avec désavantage, et le feu ne prend pas. Un voile de batelier ou un tissu serré sur le visage évite le désavantage aux tests de Perception. Elle ne peut pas être blessée : ses PV ne servent qu'au calcul du FP." },
-      { name: "Elle passe", text: "Elle dure 1d4+4 rounds, puis se dissipe. Une créature abritée (couchée contre un mur, sous un char ancré ou dans un trou creusé : action, Survie DD 12) n'est pas soumise à son sablage." },
+      { name: "Elle passe", text: "Le front passe en 1d4+4 rounds ; la tempête qui le suit dure 1d4 heures, puis se dissipe. Une créature abritée (couchée contre un mur, sous un char ancré ou dans un trou creusé : action, Survie DD 12) n'est pas soumise à son sablage." },
     ],
     actions: [
       save("Sablage", "Con", 13, "Au début de chaque round, chaque créature à découvert fait ce jet de sauvegarde d'Endurance. En cas d'échec, elle est aussi déplacée de 3 m dans une direction tirée au hasard ; en cas de réussite, moitié des dégâts et pas de déplacement. Une créature abritée n'y est pas soumise. Une gourde non fermée perd 1 godet, une fois par scène.", "2d8", "contondants", 4),
     ],
     lore: "Au sud, l'horizon devient brun, puis monte. Un mur de sable de mille mètres de haut avance sur le lit du fleuve plus vite qu'un cheval, avec un bruit de toile qu'on déchire. Les bateliers l'appellent la muraille et amarrent tout ce qui roule. Les enfants de la Route apprennent à reconnaître le goût de la poussière qui la précède.",
-    gmNotes: "Quand le sud devient brun, il reste une minute pour amarrer le char et se couvrir le visage. La tempête n'a pas de volonté et ne peut pas être blessée : les joueurs la survivent, ils ne la combattent pas. Sorties : s'abriter (sous le char amarré, contre un pilier de pont, dans un trou), s'attacher les uns aux autres, attendre. Elle dure 1d4+4 rounds. Un Coup de mistral (réserve du MJ, voir la bible) peut la lever ou la faire tomber sur un combat. Niveaux 3 à 6.",
+    gmNotes: "Quand le sud devient brun, il reste une minute pour amarrer le char et se couvrir le visage. La tempête n'a pas de volonté et ne peut pas être blessée : les joueurs la survivent, ils ne la combattent pas. Sorties : s'abriter (sous le char amarré, contre un pilier de pont, dans un trou), s'attacher les uns aux autres, attendre. Le front passe en 1d4+4 rounds ; la tempête qui le suit dure 1d4 heures. Un Coup de mistral (réserve du MJ, voir la bible) peut la lever ou la faire tomber sur un combat. Niveaux 3 à 6.",
     scene: "a colossal wall of brown sand rising thousands of feet into a pale sky and rolling across a flat dry riverbed, a small ragged sand cart with a square sail tiny in the foreground, grey pebbles and a broken stone bridge in the distance",
   }),
 
@@ -176,7 +176,7 @@ export const BESTIAIRE_SEC: Creature[] = [
     family: "Gens de la Route", size: "Moyenne", type: "humanoïde (humain)", region: "Les Salins",
     cr: 0.25, ac: 12, acNote: "manteau doublé", hd: 3, speed: { marche: 9 },
     stats: [10, 14, 12, 12, 12, 14],
-    skills: { Tromperie: 4, Escamotage: 4, Perspicacité: 3 },
+    skills: { Tromperie: 4, Escamotage: 4, Intuition: 3 },
     languages: "français, argot de port",
     traits: [
       { name: "Capsule à double fond", text: "Il peut passer une capsule fausse pour une vraie : avantage à Tromperie. Il faut une action et Investigation DD 13 pour voir la soudure." },
@@ -364,7 +364,7 @@ export const BESTIAIRE_SEC: Creature[] = [
     cr: 2, ac: 15, acNote: "casaque bleue renforcée", hd: 11, speed: { marche: 9 },
     stats: [15, 12, 14, 10, 12, 12],
     saves: { Con: 4 },
-    skills: { Perception: 3, Perspicacité: 3, Intimidation: 3 },
+    skills: { Perception: 3, Intuition: 3, Intimidation: 3 },
     languages: "français",
     traits: [
       { name: "Sans laissez-passer", text: "Il a l'avantage à l'attaque contre une créature qui approche de la porte basse sans avoir montré de laissez-passer à 18 m." },

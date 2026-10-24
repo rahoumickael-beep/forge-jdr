@@ -77,7 +77,7 @@ Un relayeur fait crédit à ceux qu'il connaît, une nuit, deux au plus. Un Puis
 
 ### Troquer
 
-Les Saliniers paient en eau douce, en sel et en bois. Un fagot vaut trois godets, un sac de sel quatre. Une journée de pelle dans une bouillerie vaut ce que vaut un manœuvre ; une nuit sous le toit d'un village vaut un service. Un godet de bois, trouvé, en vaut deux.
+Les Saliniers paient en eau douce, en sel et en bois. Un fagot vaut trois godets, un sac de sel quatre. Une journée de pelle dans une bouillerie vaut ce que vaut un manœuvre ; une nuit sous le toit d'un village vaut un service. Un fagot ramassé sur place, et non acheté, se troque deux godets.
 
 ## Les armes
 
@@ -117,7 +117,7 @@ Attaquer avec une arme qu'on ne maîtrise pas reste possible : on n'ajoute simpl
 | Arbalète | 120 | 1d8 perforant | 3 kg | Munitions (24/96 m), chargement, deux mains |
 | Arbalète lourde | 180 | 1d10 perforant | 8 kg | Munitions (30/120 m), chargement, lourde, deux mains |
 | Fusil de chasse (deux canons) | 500 | 2d6 perforant | 3 kg | Munitions (30/90 m), chargeur (2), deux mains, bruyant |
-| Fusil de convoi (à verrou) | 500 | 2d8 perforant | 4 kg | Munitions (60/180 m), chargeur (5), deux mains, bruyant |
+| Fusil de convoi (à verrou) | 500 | 2d6 perforant | 4 kg | Munitions (60/180 m), chargeur (5), deux mains, bruyant |
 | Fusil rafistolé | 250 | 2d6 perforant | 3 kg | Comme le fusil de chasse, mais sur un 1 naturel il s'enraye (une action pour le dégager) |
 
 Le fusil de convoi est celui qu'un Chef de convoi reçoit au départ. À 500 godets, un fusil est un fusil : la différence tient à la chance d'en trouver un.
@@ -150,7 +150,7 @@ Une cartouche tirée est perdue. Tu notes ton compte sur ta fiche, et tu le reli
 
 **Légère.** Permet le combat à deux armes (chapitre 4).
 
-**Lourde.** Une arme de poids que demandent certains pouvoirs (le *Coup de masse* du Puisatier).
+**Lourde.** Une arme de poids (la masse). Le *Coup de masse* du Puisatier marche avec une masse ou avec une pioche.
 
 **Munitions (N/M).** Les deux nombres sont la portée normale et la portée longue. Plus loin, tu ne tires pas. Le mistral fort divise la portée normale par deux (chapitre 4).
 
@@ -201,7 +201,8 @@ C'est ton équipement le plus important. Tu l'écris sur ta fiche sous la forme 
 - **Tu n'as qu'une gourde** (la plus grande des deux que citent ta classe et ton historique, chapitre 1). Un bidon ou un baril se porte sur un âne ou un plateau, jamais à l'épaule.
 - **La gourde de cuir double** garde l'eau fraîche une demi-journée, et le cuir sent la chèvre.
 - **L'outre de chèvre** se vide d'un coup, sans bruit de capsule, et ne vaut rien sans eau.
-- Un baril plein de cinquante litres pèse cinquante kilos et en vaut deux cents godets. Un char à voile de six en porte vingt.
+- Un baril plein de cinquante litres pèse cinquante kilos et en vaut deux cents godets. Un char à voile, avec son équipage de six, en porte vingt.
+
 ## Vêtements et matériel de route
 
 | Objet | Prix | Remarques |
@@ -255,10 +256,10 @@ Une trousse de soins donne l'**avantage** à un test d'Instinct (Médecine) pour
 | Bête | Prix | Porte | Boit comme | Vitesse |
 |---|---|---|---|---|
 | **Âne** | 150 | 100 kg | 2 personnes | 4 km/h |
-| **Cheval maigre** | 400 | 100 kg | 3 personnes | 18 m par round |
+| **Cheval maigre** | 400 | 100 kg | 2 personnes | 18 m par round en combat, 8 km/h en voyage |
 | **Chèvre** | 40 | 15 kg | 1 personne | 4 km/h |
 
-- Un âne coûte aussi **2 godets de fourrage par jour** et ses 2 rations d'eau : en été, 16 godets par jour. Un âne qui meurt de soif est une perte de 150 godets et d'un compagnon (chapitre 3).
+- Un âne coûte aussi **2 godets de fourrage par jour** et ses 2 rations d'eau : en été, 18 godets par jour (16 d'eau, 2 de fourrage). Un âne qui meurt de soif est une perte de 150 godets et d'un compagnon (chapitre 3).
 - Un **cheval** est la bête des Gardians et du delta. Il vaut plus que son cavalier, et ce dernier le sait.
 - Un **char à voile** ne s'achète pas à un étal. Quand un patron en vend un, il en demande plus de mille godets, et la dette qui va avec. Un plateau de douze mètres, quatre roues de camion, une voile carrée et un mât se louent, ou se gagnent.
 - La **voile de rechange**, elle, se trouve : 120 godets (voir la collection).
@@ -280,7 +281,7 @@ Un personnage porte sans gêne **Force × 7,5 kg** (chapitre 2) : Magali 90 kg, 
 
 > **Exemple.**
 >
-> Estève porte une arbalète lourde (8 kg), quinze carreaux (1 kg), une pioche (2,5 kg), un tablier (3 kg), une corde (3 kg), un ciseau et une lampe (2 kg), une gourde pleine de 12 godets (3,5 kg), et 40 godets en bourse (10 kg). Total : une trentaine de kilos. Il est loin de ses 112 kg. S'il ajoute un baril de cinquante litres, il dépasse : il le met sur l'âne, ou il le roule.
+> Estève porte une arbalète lourde (8 kg), quinze carreaux (1 kg), une pioche (2,5 kg), un tablier (3 kg), une corde (3 kg), un ciseau et une lampe (2 kg), une gourde pleine de 12 godets (3,5 kg), et 40 godets en bourse (10 kg). Total : 33 kilos. Il est loin de ses 112 kg. S'il ajoute un baril de cinquante litres, il monte à 83 kg et le porte encore. Deux barils le feraient dépasser (133 kg) : le second va sur l'âne, ou il le roule.
 
 ## Les objets de la collection
 
@@ -298,7 +299,7 @@ Certains objets n'ont pas de prix sur un étal. Ils se glanent chez un relayeur,
 | Carte des relais de la Route | Peu commune | Un relayeur |
 | Capsules au sceau d'Avignon | Peu commune | Le Palais, un Puisatier |
 | Sceau de laissez-passer de Montclair | Rare | La caravane du premier du mois |
-| Panneau solaire plié | Rare | Une ville vide |
+| Panneau solaire de poche | Rare | Une ville vide |
 | Fusil d'avant le Sec | Relique | Une cache, un vieux garde |
 
 **Chèche et lunettes de sable.** Trois mètres de coton passé au soleil, et des lunettes dont un verre est fendu. Avantage aux sauvegardes d'Endurance contre le coup de chaleur, et aucun désavantage dans une tempête de sable ou au vent du lit. Ça ne remplace pas la ration. Une fois par séance.
@@ -309,7 +310,7 @@ Certains objets n'ont pas de prix sur un étal. Ils se glanent chez un relayeur,
 
 **Pastilles de sel.** Une boîte de fer-blanc pleine de sel gris pressé. Avantage à la prochaine sauvegarde d'Endurance contre le coup de chaleur, et à la suivante si elle est ratée. Ça aide à tenir, pas à boire : le godet reste dû. Une fois.
 
-**Outre de chèvre.** Une peau entière, retournée. Porte 4 godets en plus de la gourde et se vide d'un coup. Sans eau, elle ne vaut rien : le MJ ne la remplit pas pour vous. Une fois par séance.
+**Outre de chèvre.** Une peau entière, retournée. Porte 4 godets en plus de la gourde et se vide d'un coup. Sans eau, elle ne vaut rien : le MJ ne la remplit pas pour toi. Une fois par séance.
 
 **Harpon de batelier.** Une hampe de frêne, une pointe barbelée, trois mètres de filin. Attaque à 6 m (jet 6/18 m), 1d8 perforant ; sur un coup au but, la cible fait une sauvegarde de Force DD 12 ou est tirée de 3 m vers toi. Peut accrocher un char à voile en marche : avantage au test d'Athlétisme pour monter à bord. Une fois par séance.
 
@@ -321,9 +322,9 @@ Certains objets n'ont pas de prix sur un étal. Ils se glanent chez un relayeur,
 
 **Sceau de laissez-passer de Montclair.** Un cachet de cire bleue frappé d'une goutte d'argent. Il vaut plus qu'un fusil : sans lui, on ne passe pas la porte basse. Une fois : tu entres dans Montclair avec jusqu'à trois compagnons, sans qu'on te demande d'explication. Les Fontainiers te regardent, ne te protègent pas, et le sceau se brise à l'entrée.
 
-**Panneau solaire plié.** Trois volets de verre noir dans un cadre de ferraille. Posé au soleil quelques heures, il recharge une lampe, un outil à batterie ou une radio d'avant le Sec : le MJ dit ce qui marche encore. Il ne produit ni eau, ni chaleur, ni bruit. Une fois par séance.
+**Panneau solaire de poche.** Trois volets de verre noir dans un cadre de ferraille. Posé au soleil quelques heures, il recharge une lampe, un outil à batterie ou une radio d'avant le Sec : le MJ dit ce qui marche encore. Il ne produit ni eau, ni chaleur, ni bruit. Une fois par séance.
 
-**Fusil d'avant le Sec.** Un fusil de chasse à deux canons, la crosse refaite en olivier, graissé tous les soirs. Il vaut cinq cents godets et il a la chance d'avoir trois cartouches. Attaque à distance (30/90 m), 2d6 perforant, jusqu'à trois coups. Un coup de feu s'entend à deux kilomètres, et la Horde du Mistral aussi. Une fois.
+**Fusil d'avant le Sec.** Un fusil de chasse à deux canons, la crosse refaite en olivier, graissé tous les soirs. Il vaut cinq cents godets et il a la chance d'avoir trois cartouches en tout. Attaque à distance (30/90 m), 2d6 perforant, deux coups avant de recharger. Un coup de feu s'entend à deux kilomètres, et la Horde du Mistral aussi. Une fois.
 
 La collection compte aussi des **alliés** (un batelier du Vieux Fabre, un relayeur, un gardian du sel) et des **faveurs** (une nuit à l'ombre d'un relais, une place sur la *Belle-Méjane*, un âne pour la route). Leurs prix, quand on peut les acheter, sont ceux de ce chapitre.
 
@@ -333,7 +334,7 @@ La collection compte aussi des **alliés** (un batelier du Vieux Fabre, un relay
 > - Argent de départ : la plus haute des sommes de la classe, de l'origine et de l'historique. L'équipement de classe est gratuit.
 > - Armes : machette 20, harpon 25, arbalète 120, arbalète lourde 180. Un fusil à 500, une cartouche à 5. Un coup de feu s'entend à deux kilomètres.
 > - Pas d'armure lourde. Du cuir, des peaux, de la tôle. En armure intermédiaire, la chaleur passe au DD 15.
-> - Gourde : 12 godets à 6 godets. Outre : 4 de plus. Baril de cinquante litres : 200 godets, 50 kg.
+> - Gourde de 12 godets : elle coûte 6 godets. Outre : 4 godets de plus à porter. Baril de cinquante litres : 200 godets, 50 kg.
 > - Chèche 3, lunettes 8, bâche 6, fagot 3. Le bois est cher, l'ombre aussi.
 > - Un personnage porte Force × 7,5 kg. Cinq cents godets font cent vingt-cinq kilos.
 > - Les objets des cartes ont un effet de jeu ; ceux qu'on peut aussi acheter ont leur prix dans ce chapitre.

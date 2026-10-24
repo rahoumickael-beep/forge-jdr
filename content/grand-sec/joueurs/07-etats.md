@@ -42,7 +42,7 @@ La créature ne voit rien.
 - Elle a le **désavantage** à ses jets d'attaque.
 - Les attaques contre elle ont l'**avantage**.
 
-Une poignée de sable dans les yeux, une lampe qui s'éteint dans une cave, la nuit sans lune sur le lit du fleuve, un projecteur du Mur braqué en pleine face : une créature aveuglée peut encore entendre, sentir et toucher. Elle sait souvent à peu près où se trouve un adversaire bruyant, mais pas exactement (chapitre 4).
+Une lampe qui s'éteint dans une cave, la nuit sans lune sur le lit du fleuve, un projecteur du Mur braqué en pleine face : une créature aveuglée peut encore entendre, sentir et toucher. Elle sait souvent à peu près où se trouve un adversaire bruyant, mais pas exactement (chapitre 4).
 
 L'**éblouissement** d'un lit de sable blanc à midi n'aveugle pas : il impose le désavantage aux tests de Perception qui reposent sur la vue (chapitre 2). Des lunettes de sable l'annulent.
 
@@ -72,7 +72,7 @@ Quelque chose ou quelqu'un tient la créature.
 - L'état prend fin si l'empoigneur est neutralisé, ou si un effet éloigne la créature de lui.
 - La créature peut se libérer en utilisant son action pour un test de Force (Athlétisme) ou d'Agilité (Acrobaties) contre celui de l'empoigneur (chapitre 4).
 
-Un arbalétrier qui plaque un voleur de capsules contre le mur du Palais, un Batelier qui retient un équipier par la ceinture : même état.
+Des exemples sont donnés au chapitre 4, à « Empoigner ».
 
 ### Empoisonné
 
@@ -147,7 +147,7 @@ Dans le Bas-Pays, c'est presque toujours le corps, pas la tête.
 |---|---|---|
 | **Un jour sans la ration complète** | Un niveau, sauf sauvegarde d'Endurance DD 12 | 3 |
 | **Un jour sans boire du tout** | Un niveau sans sauvegarde, et un second sur une sauvegarde d'Endurance DD 15 ratée | 3 |
-| **Le coup de chaleur** | Midi à quatre heures, en été : sauvegarde d'Endurance DD 10 (15 en armure intermédiaire ou en combat), un niveau en cas d'échec, au plus un par après-midi (deux en armure intermédiaire) | 3, 4 |
+| **Le coup de chaleur** | Midi à quatre heures, en été : sauvegarde d'Endurance DD 10 (12 en combat, 15 en armure intermédiaire), un niveau en cas d'échec, au plus un par après-midi (deux en armure intermédiaire) | 3, 4 |
 | **La marche longue** | Après 8 heures de marche, sauvegarde d'Endurance DD 10, +1 par heure suivante | 3 |
 | **La tempête de sable** | Chaque heure à découvert, sauvegarde d'Endurance DD 12 ; lunettes et chèche donnent l'avantage, un abri annule | 3 |
 | **L'eau de mer** | Un niveau par jour à qui s'y risque | 3 |
@@ -170,8 +170,6 @@ La faim existe, mais on meurt de soif longtemps avant. C'est la règle de la cin
 > Estève, lui, est à 3 niveaux après trois jours de lit de fleuve. Au relais, il boit sa ration, Fatima lui fait boire à l'ombre et utilise *Réhydrater* : un niveau en moins. Il dort : un niveau de moins encore. Il est à 1. Deux niveaux retirés dans la journée : c'est le plafond. Un troisième soin, même celui de Fatima, ne retirerait rien avant le lendemain.
 
 ## La soif
-
-C'est ici que le Bas-Pays se distingue des autres jeux. Les règles sont courtes. Les appliquer chaque jour est ce qui est long.
 
 ### La ration
 
@@ -197,13 +195,13 @@ Une gourde pleine de douze godets tient un jour et demi en été, deux jours en 
 
 **Combien de temps tient-on ?** Un personnage qui ne boit pas du tout, et qui ne peut donc pas se reposer pour de bon, perd :
 
-| Après | Niveaux perdus |
+| Après | Niveaux perdus au total |
 |---|---|
-| Le 1<sup>er</sup> jour | 1 ou 2 |
-| Le 2<sup>e</sup> jour | 2 à 4 |
-| Le 3<sup>e</sup> jour | 3 à 6 |
+| Le 1er jour | 1 ou 2 |
+| Le 2e jour | 2 à 4 |
+| Le 3e jour | 3 à 6 |
 
-Les plus malchanceux sont morts le troisième jour. Les plus chanceux tiennent six jours, à demi morts. Ceux qui sont à trois niveaux ont le désavantage à leurs sauvegardes : ils ratent plus que les autres.
+Les niveaux se cumulent d'un jour à l'autre : sans repos qui les retire, rien ne les efface. Les plus malchanceux sont morts le troisième jour. Les plus chanceux ne perdent qu'un niveau par jour et meurent le sixième, après cinq jours à demi morts. Ceux qui sont à trois niveaux ont le désavantage à leurs sauvegardes : ils ratent plus que les autres.
 
 ### Boire
 
@@ -213,7 +211,7 @@ L'eau de mer ne se boit jamais : elle donne un niveau d'épuisement par jour à 
 
 ## Le coup de chaleur
 
-En été, entre midi et quatre heures, au soleil, chaque heure de marche ou d'effort demande une sauvegarde d'Endurance **DD 10**. Le DD passe à **15** en armure intermédiaire, ou en combat. Tu as l'avantage à l'ombre, ou si tu bois un godet de plus dans l'heure. Un échec donne un niveau d'épuisement, mais **pas plus d'un par après-midi** (deux en armure intermédiaire).
+En été, entre midi et quatre heures, au soleil, chaque heure de marche ou d'effort demande une sauvegarde d'Endurance **DD 10**. Le DD est de **12** en combat, et de **15** en armure intermédiaire. Tu as l'avantage à l'ombre, ou si tu bois un godet de plus dans l'heure. Un échec donne un niveau d'épuisement, mais **pas plus d'un par après-midi** (deux en armure intermédiaire).
 
 - **Marcher de nuit** ne demande aucune sauvegarde. C'est pour cela que le Bas-Pays voyage la nuit et dort le jour.
 - **L'hiver** ne demande rien.
@@ -249,7 +247,7 @@ L'eau d'une citerne oubliée, d'un étang salé, d'un puits souillé se boit. El
 
 - **Retenir son souffle.** Une créature retient son souffle **1 + son modificateur d'Endurance minutes** (au minimum 30 secondes, soit cinq rounds). Un Pêcheur de la côte tient trois minutes ; un Rat de cave ou un Puisatier chevronné, dix.
 - **Étouffer.** Quand elle n'a plus d'air, elle survit **un nombre de rounds égal à son modificateur d'Endurance** (au minimum 1). Au début de son tour suivant, elle tombe à **0 PV** et ne peut ni récupérer de PV ni se stabiliser tant qu'elle ne respire pas. Une galerie effondrée, un puits dont le fond est bouché, un éboulement : même règle. Un Puisatier a l'avantage aux sauvegardes contre le manque d'air (niveau 17).
-- **Les gaz de galerie.** Dans une galerie qui n'a pas été ouverte depuis longtemps, le MJ peut demander une sauvegarde d'Endurance DD 12 à l'entrée : un échec, et tu es empoisonné jusqu'à ce que tu en sortes.
+- **Les gaz de galerie.** Dans une galerie qui n'a pas été ouverte depuis longtemps, le MJ peut demander une sauvegarde d'Endurance DD 12 à l'entrée : un échec, et tu es empoisonné jusqu'à ce que tu en sortes, et tu subis 1d6 dégâts de poison par dix minutes passées dedans.
 - **La tempête de sable.** Voir le chapitre 3 : la vue tombe à 3 m, chaque heure à découvert demande une sauvegarde d'Endurance DD 12. Lunettes et chèche donnent l'avantage, un abri annule.
 
 ## La peur
@@ -262,6 +260,7 @@ La peur se règle par une sauvegarde d'Instinct et passe avec la scène. Elle n'
 | Un convoi pillé, une scène de massacre | DD 12 |
 | Un Mât qui chante la nuit, si l'on dort dehors | DD 12 |
 
+- Une seule sauvegarde par jour contre ce genre de spectacle.
 - En cas d'échec, le personnage est **effrayé** jusqu'à la fin de la scène.
 - Il a le désavantage aux tests tant qu'il voit ce qui lui fait peur, et ne s'en approche pas.
 - Il refait la sauvegarde à la fin de chacun de ses tours.
@@ -316,7 +315,7 @@ Court : une heure, des dés de vie. Long : huit heures dont six de sommeil, tous
 
 ### La soif
 
-6 godets par jour, 8 en été. Un jour sans ration : un niveau, sauf DD 12. Un jour sans boire : un niveau, plus un second sauf DD 15. Coup de chaleur : midi à quatre heures, DD 10 (15 en combat ou en armure intermédiaire), un niveau par après-midi. Eau sale : DD 12, empoisonné. Eau de mer : jamais.
+6 godets par jour, 8 en été. Un jour sans ration : un niveau, sauf DD 12. Un jour sans boire : un niveau, plus un second sauf DD 15. Coup de chaleur : midi à quatre heures, DD 10 (12 en combat, 15 en armure intermédiaire), un niveau par après-midi. Eau sale : DD 12, empoisonné. Eau de mer : jamais.
 
 ### L'argent
 

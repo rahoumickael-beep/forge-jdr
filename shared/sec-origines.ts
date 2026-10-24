@@ -48,7 +48,7 @@ export const ORIGINES_SEC: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Lire le vent", text: "Avantage aux tests de Survie pour prévoir le temps, et aux tests de pilotage d'un char à voile. Argent de départ : 30 godets." },
+      { name: "Lire le vent", text: "Avantage aux tests de Survie pour prévoir le temps, et aux tests d'Agilité ou d'Instinct pour piloter un char à voile. Argent de départ : 30 godets." },
       { name: "Voyageur sec", text: "Quand tu voyages (char, convoi, marche de plus de quatre heures), ta ration passe à 5 godets (7 en été), au lieu de 6 (8 en été). Ne se cumule pas avec une autre réduction de ration." },
       { name: "Mal de terre ferme", text: "Après trois nuits passées au même endroit, tu as le désavantage à ton initiative et à tes tests de Perception le lendemain, jusqu'à ce que tu aies bougé." },
     ],

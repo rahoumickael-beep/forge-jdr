@@ -37,7 +37,7 @@ Le maître du jeu tient plusieurs rôles à la fois.
 - **Il joue le soleil.** Le vent, l'heure, le niveau du puits, la gourde qui baisse. Quand l'ombre raccourcit, c'est lui qui regarde la table.
 - **Il choisit certains réglages de la campagne**, en particulier la règle de la mort d'un personnage (chapitre 4) et la façon de gagner des niveaux (chapitre 3). Il les annonce avant la première séance.
 
-Le MJ n'est pas l'adversaire des joueurs : son travail est de rendre la partie intéressante. Un MJ qui voudrait vous laisser mourir de soif n'aurait pas besoin de dés. Il lui suffirait de ne rien dire sur l'endroit où est le puits.
+Le MJ n'est pas l'adversaire des joueurs : son travail est de rendre la partie intéressante. Un MJ qui voudrait te laisser mourir de soif n'aurait pas besoin de dés. Il lui suffirait de ne rien dire sur l'endroit où est le puits.
 
 ## Le rôle des joueurs
 
@@ -317,7 +317,7 @@ Entre midi et quatre heures, en été, au soleil, chaque heure de marche ou d'ef
 Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de création de Forge JdR suit les étapes ci-dessous, dans cet ordre. Tu peux revenir en arrière tant que tu n'as pas validé.
 
 1. **Une idée.** Avant de cliquer, pense à une personne, pas à des chiffres. Que fait-elle quand on lui dit « à sec » ? À qui doit-elle de l'eau ? Une phrase suffit : « Une fille de bouilleur de sel qui soigne les convois, parce que les convois paient, et qui ne dit à personne qu'elle a quitté la côte à cause d'un mort. »
-2. **Ton origine.** Gens des puits, Enfants de la Route, Saliniers, Gens de la Porte-d'Attente, Montagnards ou Descendus de Montclair. Chacune a deux variantes. L'origine donne des bonus de caractéristiques, la vitesse (9 m pour toutes), ton argent de départ et deux ou trois traits qui te suivront toute la partie.
+2. **Ton origine.** Gens des puits, Enfants de la Route, Saliniers, Gens de la Porte-d'Attente, Montagnards ou Descendus de Montclair. Chacune a deux variantes. L'origine donne des bonus de caractéristiques, la vitesse (9 m pour toutes), l'une des trois sommes dont tu tireras ton argent de départ (voir plus bas) et deux ou trois traits qui te suivront toute la partie.
 3. **Ta classe.** Dix métiers du Bas-Pays, du Batelier de sable au Chef de convoi. Elle donne ton dé de vie, tes armes et armures, tes sauvegardes, tes pouvoirs et ta façon de te battre. Ta **spécialité** (le mot change selon la classe : Poste, Chantier, Habitude, École, Atelier, Mas, Règle, Pratique, Spécialité, Convoi) se choisit au niveau 3. Lis les classes avant de choisir : un pouvoir qui force le corps coûte de l'eau.
 4. **Ton historique.** Ce que tu faisais avant. Il te donne deux compétences, un outil, un peu d'équipement, quelques godets, et un privilège. Batelier de sable, Puisatier, Bouilleur de sel, Pillard repenti, Pénitent, Fouilleur des ruines, Gardian du sel, Enfant du Mur : choisis celui qui raconte quelque chose avec ta classe, ou contre elle.
 5. **Tes caractéristiques.** Force, Agilité, Endurance, Savoir, Instinct, Présence. Valeurs fixes, achat par points ou dés : le chapitre 2 donne les trois méthodes. Mets tes meilleures valeurs dans les caractéristiques de ta classe.
@@ -342,8 +342,6 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 | Médecin des sables | d8 | Instinct, Savoir | Il sait ce que le soleil fait au corps et ce que l'eau sale fait au ventre. |
 | Fouilleur | d8 | Agilité, Savoir | Il entre où personne n'ose et il ressort avec ce qui valait la peine. |
 | Chef de convoi | d8 | Présence, Instinct | Il compte, il commande, il négocie, il paie quand ça tourne mal. |
-
-La Sourcière ne trouve pas l'eau « à la baguette ». Elle la lit : la géologie, les plantes, les relevés d'avant le Sec, la sonde de fer.
 
 ### Les six origines
 
@@ -446,7 +444,7 @@ Un pouvoir qui force le corps te coûte de l'eau. Un saut, un coup, un souffle. 
 
 ### Un convoi vaut ceux qui y restent
 
-On voyage à plusieurs parce que la Route est longue, et que quelqu'un doit garder l'eau pendant que les autres dorment. Un personnage seul meurt de soif ou de dette. La table est un convoi. Elle vaut ce que valent ceux qui y restent.
+On voyage à plusieurs parce que la Route est longue, et que quelqu'un doit garder l'eau pendant que les autres dorment. Un personnage seul meurt de soif ou de dette. La table est un convoi.
 
 ### La Route a ses patrons
 
@@ -458,7 +456,7 @@ Ce livre ne prévoit pas tout. Quand une situation sort des règles, le MJ chois
 
 ### Quand ça va trop loin
 
-Le jeu parle de soif, de mort au bord de la Route, de gens qui attendent devant un mur. Avant la première séance, la table discute de ce qu'elle veut voir à l'écran et de ce qu'elle préfère laisser hors champ. Un joueur peut demander de passer une scène sans avoir à se justifier. Le MJ la résume en une phrase et on continue.
+Une ligne ou un voile se pose avant la séance, mais on peut en réclamer un à tout moment (voir « Lignes et voiles », plus haut). Dis-le à voix haute, sans te justifier.
 
 > **Résumé du chapitre.**
 >

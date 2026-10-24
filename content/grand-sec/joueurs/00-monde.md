@@ -14,13 +14,13 @@ On a donc recompté les années. On les compte **du Sec**, depuis cette pluie-l�
 
 En 2038, la République du Nord a bâti un mur à Valence, vingt mètres de béton en travers de la vallée, pour garder sa pluie et ses champs. Elle ne laisse plus passer personne. Au sud du Mur, il reste ce qu'il reste : des villes vides, des clans, des puits, et la Route du Rhône, où les caravanes vont à la voile sur le sable.
 
-Dans les oliviers morts, les cigales chantent encore. C'est le bruit du pays. Il commence avant l'aube, il s'arrête à la nuit, et si tu le rates un jour, tu entends que quelque chose cloche. Elles sont les seules bêtes du pays à n'avoir jamais l'air de manquer de rien.
+Dans les oliviers morts, les cigales chantent encore. C'est le bruit du pays. Il commence à l'aube, il s'arrête à la nuit, et si tu le rates un jour, tu entends que quelque chose cloche. Elles sont les seules bêtes du pays à n'avoir jamais l'air de manquer de rien.
 
 ## L'eau
 
 Tout se paie en eau. La monnaie s'appelle **le godet** : un quart de litre d'eau propre, scellé dans une capsule de métal frappée du sceau de celui qui l'a tirée. Une capsule peut se boire. Alors elle est dépensée, et pas d'une façon qu'on puisse rattraper.
 
-Un homme a besoin de huit godets par jour pour vivre en été, six en hiver. Cela, c'est pour boire, et c'est en plus de ce qu'il mange. Un repas coûte deux godets, une nuit à l'abri quatre. Un fusil coûte cinq cents godets : trois mois de travail d'un manœuvre, une fois sa soif payée.
+Un homme a besoin de huit godets par jour pour vivre en été, six en hiver. Cela, c'est pour boire, et c'est en plus de ce qu'il mange. Un repas coûte deux godets, une nuit à l'abri quatre. Un fusil coûte cinq cents godets : trois mois de travail d'un manœuvre qui vit à la dure, une fois sa soif payée.
 
 L'eau vient de trois endroits.
 
@@ -34,7 +34,7 @@ Mont Chauve, c'est le surnom du Ventoux depuis qu'il a perdu ses arbres, sauf ce
 
 **Nous sommes en été, l'an 40 du Sec.**
 
-Le grand puits d'Avignon a baissé de dix mètres en un an. Les Puisatiers ont doublé le prix du godet. Montclair a fermé sa porte basse et ne vend plus que par la caravane du premier du mois. Sur la Route, la Horde du Mistral a pris trois convois depuis le printemps. Et dans les Cévennes, les gens qui vivent près des **Mâts** disent que les tours se sont mises à chanter la nuit.
+Le Grand Puits d'Avignon a baissé de dix mètres en un an. Les Puisatiers ont doublé le prix du godet. Montclair a fermé sa porte basse et ne vend plus que par la caravane du premier du mois. Sur la Route, la Horde du Mistral a pris trois convois depuis le printemps. Et dans les Cévennes, les gens qui vivent près des **Mâts** disent que les tours se sont mises à chanter la nuit.
 
 Les Mâts, tu en as entendu parler : de grandes tours de métal plantées sur les crêtes avant le Sec. Tout le monde les évite. On ne s'en approche pas, et on n'en parle pas à table.
 
@@ -43,7 +43,7 @@ Les Mâts, tu en as entendu parler : de grandes tours de métal plantées sur le
 > - La monnaie est le godet, un quart de litre d'eau propre dans une capsule scellée.
 > - En été, il faut huit godets par jour pour boire.
 > - Il pleut au sommet du Mont Chauve, à Montclair, et nulle part ailleurs. Personne ne sait pourquoi.
-> - Le grand puits d'Avignon baisse. Montclair ne vend plus que par la caravane du premier du mois.
+> - Le Grand Puits d'Avignon baisse. Montclair ne vend plus que par la caravane du premier du mois.
 > - La Horde du Mistral prend les convois sur la Route.
 > - Les Mâts des crêtes chantent la nuit. On les évite.
 > - Au nord, le Mur de Valence est fermé. Les gens qui attendent devant s'appellent la Porte-d'Attente.
@@ -88,7 +88,7 @@ Sur les crêtes se dressent les **Mâts** : des tours de métal blanc de quarant
 
 On y voit parfois, sur les crêtes, des gens en combinaison blanche rapiécée et lunettes noires : les **Gardes-Mâts**. Ils tirent sur ceux qui approchent.
 
-Image à retenir : une crête au coucher du soleil, une rangée de tours blanches qui tournent sans bruit contre le ciel orange, et au premier plan, une chèvre morte de soif au pied d'un châtaignier gris.
+Au coucher du soleil, une rangée de tours blanches tourne sans bruit contre le ciel orange. Au premier plan, une chèvre est morte de soif au pied d'un châtaignier gris.
 
 ### Le Mont Chauve et Montclair
 
@@ -98,7 +98,7 @@ Deux mille **Fontainiers** y vivent dans la pluie. Ils prient chaque matin pour 
 
 Ils craignent de perdre la grâce, les pillards du bas et les péchés qui fâchent le ciel. Leurs voisins d'en bas craignent surtout qu'ils ferment la porte.
 
-Image à retenir : une route en lacets sous un orage d'été. La pluie tombe en rideau sur le sommet et s'arrête net à mi-pente. En bas, sur la caillasse sèche, des gens regardent l'eau tomber à deux kilomètres d'eux.
+Sur la route en lacets, la pluie tombe en rideau sur le sommet et s'arrête net à mi-pente. En bas, sur la caillasse sèche, des gens regardent l'eau tomber à deux kilomètres d'eux.
 
 ### Le Mur de Valence
 
@@ -114,7 +114,7 @@ Le delta est devenu un désert blanc de sel craquelé, avec des carcasses de che
 
 Les **Gardians du sel** y ont gardé quelques chevaux et des taureaux maigres. Ils guident les caravanes de sel à travers le delta.
 
-On y craint le mirage, les sables mouvants de sel et les bêtes de Vaccarès. Image à retenir : un cavalier sur un cheval maigre au milieu d'une plaine aveuglante, une perche à la main, et au loin, tremblant dans la chaleur, un troupeau de taureaux noirs qui n'existe peut-être pas.
+On y craint le mirage, les sables mouvants de sel et les bêtes de Vaccarès. Un cavalier avance sur un cheval maigre au milieu d'une plaine aveuglante, une perche à la main. Au loin, tremblant dans la chaleur, un troupeau de taureaux noirs n'existe peut-être pas.
 
 [[saut]]
 
@@ -129,7 +129,7 @@ Elles ne tirent pas dans le même sens. Tu en croiseras une avant la fin de la s
 - **Les Pénitents de la Pluie.** *But :* faire revenir la pluie par la prière et la pénitence. *Méthode :* les processions, les jeûnes d'eau, la destruction de ce qu'ils appellent les « idoles du Sec ». *Ennemis :* les Mâts, et les Fontainiers qu'ils jugent orgueilleux. *Signe :* une cagoule grise et un bâton de pluie. *Prédicateur :* Frère Anselme Garcin.
 - **Les Gardes-Mâts.** *But :* que les Mâts tournent. *Méthode :* la réparation, la surveillance, le fusil. *Ennemis :* quiconque approche des tours. *Signe :* une combinaison blanche rapiécée et des lunettes noires. *Doyenne :* Zélie Brun.
 
-Toutes ont une bonne raison. Les Puisatiers ont raison de garder un puits qui baisse. Les Fontainiers ont raison de se barricader quand deux mille bouches regardent leur citerne. Les Bateliers ont raison de réclamer un péage : le vent, ça se paie. La Horde a faim. Les Pénitents ont perdu des enfants. Les Gardes-Mâts, personne ne sait ce qu'ils veulent, sinon qu'on les laisse tranquilles.
+Toutes ont une bonne raison. Les Puisatiers gardent un puits qui baisse, et on ne leur en voudra pas. Quand deux mille bouches regardent leur citerne, les Fontainiers se barricadent. Le vent se paie, disent les Bateliers, et leur péage n'est que cela. La Horde a faim. Chez les Pénitents, presque chacun a enterré un enfant. Quant aux Gardes-Mâts, personne ne sait ce qu'ils veulent, sinon qu'on les laisse tranquilles.
 
 ## Ceux dont on parle
 
@@ -183,7 +183,7 @@ On paie en godets.
 | Le salaire d'un batelier | 20 godets par jour |
 | Le salaire d'un garde de convoi | 30 godets par jour |
 
-Dans ce livre, « 150 godets » veut dire cent cinquante capsules. Un manœuvre qui gagne 14 godets par jour en paie huit pour boire en été. Il lui en reste six : il met trois mois à s'offrir un fusil, une fois sa soif payée.
+Dans ce livre, « 150 godets » veut dire cent cinquante capsules. Un manœuvre qui gagne 14 godets par jour en paie huit pour boire en été. Il lui en reste six : il met trois mois à s'offrir un fusil, s'il vit à la dure et sa soif payée.
 
 Un **godet faux**, c'est une capsule au sceau d'Avignon pleine d'eau salée. C'est un crime. À Avignon, on le prouve en deux minutes : un Puisatier connaît le poids d'une capsule.
 

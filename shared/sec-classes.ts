@@ -18,7 +18,7 @@ const PRIX_COMMUN =
 
 const PRIX_PENITENT =
   PRIX_COMMUN +
-  " Toi seul peux payer en jeûne : au lieu de retirer des godets, tu renonces à autant de godets de ta ration du jour (ils comptent comme de l'eau non bue ; la règle de la soif s'applique le soir, avec l'avantage à ta sauvegarde).";
+  " Toi seul peux payer en jeûne : au lieu de retirer des godets, tu renonces à autant de godets de ta ration du jour (ils comptent comme de l'eau non bue ; la règle de la soif s'applique le soir, avec l'avantage à ta sauvegarde). Le DD de la sauvegarde du soir augmente de 1 par godet de jeûne, et l'annulation du premier niveau de Soif choisie ne s'applique pas au jeûne de pouvoir.";
 
 /** DD des pouvoirs qui demandent une sauvegarde. */
 const DD = " DD de la sauvegarde : 8 + ta maîtrise + ton modificateur de caractéristique principale.";
@@ -41,12 +41,12 @@ export const CLASSES_SEC: CharacterClass[] = [
       P(1, "Ce que coûte l'effort", "passif", "passif", PRIX_COMMUN),
       P(1, "Lire le vent", "passif", "passif", "Tu sais d'où vient le vent, sa force, et le temps probable des vingt-quatre heures à venir. Avantage aux tests de Survie pour prévoir une tempête de sable, un calme ou un changement de vent. Tu sais à une heure près quand il va tomber."),
       P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance, harpon compris)."),
-      P(1, "Mains sur la barre", "passif", "passif", "Avantage aux tests de pilotage d'un char à voile et de manœuvre (voile, cordage, mât). Tu peux tenir la barre et la voile à toi seul, là où il faut d'ordinaire deux marins."),
+      P(1, "Mains sur la barre", "passif", "passif", "Avantage aux tests d'Agilité ou d'Instinct pour piloter un char à voile, et aux tests de manœuvre (voile, cordage, mât). Tu peux tenir la barre et la voile à toi seul, là où il faut d'ordinaire deux marins."),
       P(1, "Coup de harpon", "action", "repos court", "Attaque avec un harpon, portée 9 m. Si elle touche, la cible est ancrée (vitesse 0) jusqu'à ce qu'elle réussisse un test de Force contre 8 + ta maîtrise + ton Agilité, en action. Tu peux la haler de 3 m vers toi.", { uses: 2, range: "9 m" }),
       P(2, "Plein vent", "action bonus", "repos court", "Ta vitesse augmente de 9 m jusqu'à la fin du tour, et tu ne provoques pas d'attaque d'opportunité." + EAU(1), { uses: 2 }),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
       P(6, "Pied de sable", "passif", "passif", "Le sable mou, les galets et le gravier ne sont jamais un terrain difficile pour toi. Avantage aux tests d'Athlétisme et d'Acrobaties sur un plateau qui roule, un pont tordu ou une péniche couchée."),
-      P(7, "Virer de bord", "réaction", "repos court", "Ton char évite un obstacle, un abordage ou une embûche : le test de pilotage réussit tout seul. Ou bien un allié à 9 m réussit une sauvegarde qu'il vient de rater, si le danger est un choc, une chute ou un renversement.", { uses: 2, range: "9 m" }),
+      P(7, "Virer de bord", "réaction", "repos court", "Ton char évite un obstacle, un abordage ou une embûche : le test pour piloter réussit tout seul. Ou bien un allié à 9 m réussit une sauvegarde qu'il vient de rater, si le danger est un choc, une chute ou un renversement.", { uses: 2, range: "9 m" }),
       P(9, "Rester debout", "réaction", "repos long", "Relance un jet de sauvegarde raté.", { uses: 1 }),
       P(11, "Vent arrière", "action", "repos long", "Pendant une minute, toi et les alliés à 9 m gagnez 3 m de vitesse et ignorez le terrain difficile. Le char que tu pilotes gagne un quart de vitesse en plus pour la journée." + EAU(2), { uses: 1, range: "9 m" }),
       P(13, "Par tous les temps", "passif", "passif", "Le mistral, le sable soulevé et la tempête ne t'imposent ni désavantage ni malus. Tes alliés à bord de ton char non plus."),
@@ -61,7 +61,7 @@ export const CLASSES_SEC: CharacterClass[] = [
         [
           P(3, "Allonger la course", "passif", "passif", "Un char que tu pilotes fait un quart de chemin en plus chaque jour de voile. Avantage à l'initiative quand tu es à la barre."),
           P(7, "Dérapage", "réaction", "repos court", "Ton char est visé par une attaque ou un effet de zone : il dérape. L'attaque a le désavantage, ou les passagers ont l'avantage à leur sauvegarde.", { uses: 2 }),
-          P(11, "Sillage", "action bonus", "repos court", "Les chars alliés à 36 m dans ton sillage ont l'avantage à leurs tests de pilotage pendant dix minutes." + EAU(1), { uses: 2, range: "36 m" }),
+          P(11, "Sillage", "action bonus", "repos court", "Les chars alliés à 36 m dans ton sillage ont l'avantage à leurs tests pour piloter pendant dix minutes." + EAU(1), { uses: 2, range: "36 m" }),
           P(15, "Plus vite que la Horde", "action", "repos long", "Pendant dix minutes, ton char double sa vitesse et aucune embuscade ne peut te surprendre. Si le vent tombe, il avance quand même d'un quart de vitesse." + EAU(2), { uses: 1 }),
         ]),
       S("batelier-harponneur", "Harponneur", "Un harpon, une corde, et ce qui court derrière le char ne court plus.",
@@ -93,7 +93,7 @@ export const CLASSES_SEC: CharacterClass[] = [
       P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance, arbalètes lourdes comprises)."),
       P(1, "Creuser", "action", "à volonté", "Dix minutes de pioche : un trou à l'abri de la vue pour toi, ou une tranchée qui donne trois quarts de couverture à trois personnes. En une heure : un abri pour six personnes contre le soleil. Tu creuses deux fois plus vite que les autres (ne se cumule pas avec une origine qui le permet déjà)."),
       P(1, "Tenir", "action bonus", "repos court", "Récupère 1d10 + niveau PV.", { uses: 1 }),
-      P(2, "Coup de masse", "action", "repos court", "Une attaque au corps à corps avec une arme lourde : +1d8 dégâts (2d8 au niveau 11), et la cible fait une sauvegarde de Force ou tombe à terre." + DD + EAU(1), { uses: 2 }),
+      P(2, "Coup de masse", "action", "repos court", "Une attaque au corps à corps avec une pioche ou une masse : +1d8 dégâts (2d8 au niveau 11), et la cible fait une sauvegarde de Force ou tombe à terre." + DD + EAU(1), { uses: 2 }),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
       P(5, "Connaître le sol", "passif", "passif", "Avantage aux tests d'Investigation et de Survie sur la roche, la terre et la galerie : tu sais si un mur va tenir, si un sol creux sonne creux, à quelle profondeur est le dur."),
       P(6, "Tenir la galerie", "réaction", "repos court", "Un éboulement, un effondrement ou une chute de pierres vise un allié à 9 m : il a l'avantage à sa sauvegarde, et les dégâts baissent de 2d10 + ton Endurance.", { uses: 2, range: "9 m" }),
@@ -141,10 +141,10 @@ export const CLASSES_SEC: CharacterClass[] = [
     powers: [
       P(1, "Ce que coûte l'effort", "passif", "passif", PRIX_COMMUN),
       P(1, "Coup de la Horde", "passif", "passif", "Une fois par tour, +1d6 dégâts à une attaque avec une arme légère ou à distance, si tu as l'avantage ou si un allié est à 1,5 m de la cible. 2d6 au niveau 5, 3d6 au 11, 4d6 au 17."),
-      P(1, "Pied léger", "passif", "passif", "Tu gagnes 1,5 m de vitesse tant que tu ne portes pas d'armure intermédiaire ou lourde."),
+      P(1, "Pied léger", "passif", "passif", "Tu gagnes 1,5 m de vitesse tant que tu ne portes pas d'armure intermédiaire."),
       P(1, "Ruses de la Horde", "passif", "passif", "Avantage aux tests de Perception et de Survie pour repérer une embuscade, un guet ou un piège posé sur une route, un pont ou un col. Tu connais les signes de la Horde et leur sens."),
       P(2, "Pas de course", "action bonus", "à volonté", "Foncer ou te désengager."),
-      P(2, "Prise de vitesse", "action bonus", "repos court", "Ta vitesse double jusqu'à la fin du tour, tu ne provoques pas d'attaque d'opportunité et tu as l'avantage aux tests d'Acrobaties." + EAU(1), { uses: 2 }),
+      P(2, "Prise de vitesse", "action bonus", "repos court", "Ta vitesse double ce tour, et tu peux te déplacer de la moitié de ta vitesse en réaction quand un ennemi entre à 3 m de toi." + EAU(1), { uses: 2 }),
       P(5, "Esquive instinctive", "réaction", "à volonté", "Un attaquant que tu vois te touche : les dégâts sont réduits de moitié."),
       P(6, "Expertise", "passif", "passif", "Double maîtrise dans deux compétences que tu maîtrises parmi Discrétion et Intimidation."),
       P(7, "Disparaître dans le sable", "passif", "passif", "Quand tu subis la moitié des dégâts d'une sauvegarde d'Agilité, tu n'en subis aucun, et la moitié seulement si tu la rates."),
@@ -294,7 +294,7 @@ export const CLASSES_SEC: CharacterClass[] = [
     startingGear: ["Cheval maigre et sa selle", "Lasso de vingt mètres", "Trident de gardian (une perche à fer)", "Chapeau noir à large bord", "Gourde de douze godets", "20 godets"],
     powers: [
       P(1, "Ce que coûte l'effort", "passif", "passif", PRIX_COMMUN),
-      P(1, "Cheval", "passif", "passif", "Un cheval de selle te suit (CA 10, 13 PV, vitesse 18 m) : il boit comme trois personnes et porte 100 kg. S'il meurt, tu en retrouves un après une semaine de jeu. Monté, tu combats sans désavantage et tu montes ou descends en 1,5 m de déplacement."),
+      P(1, "Cheval", "passif", "passif", "Un cheval de selle te suit (CA 10, 13 PV, vitesse 18 m) : il boit comme deux personnes et porte 100 kg, et ton historique ou le mas où tu as servi t'avance son fourrage. S'il meurt, tu en retrouves un après une semaine de jeu. Monté, tu combats sans désavantage et tu montes ou descends en 1,5 m de déplacement."),
       P(1, "Bête du sel", "passif", "passif", "Avantage aux tests de Survie dans le sel, les marais et les plaines nues. Tu reconnais un mirage à ses bords et tu sais où le sol porte."),
       P(1, "Lasso", "action", "à volonté", "Attaque à distance (portée 9 m) : si elle touche, une créature de taille Grande ou moins est entravée (vitesse 0) jusqu'à ce qu'elle réussisse un test de Force ou d'Agilité (sauvegarde de Force, DD du Gardian : 8 + ta maîtrise + ton Agilité). Tu peux aussi la tirer de 3 m ou la renverser."),
       P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance)."),
@@ -346,7 +346,7 @@ export const CLASSES_SEC: CharacterClass[] = [
       P(1, "Ce que coûte l'effort", "passif", "passif", PRIX_PENITENT),
       P(1, "Soif choisie", "passif", "passif", "Avantage à tes sauvegardes d'Endurance contre la soif, le coup de chaleur et l'épuisement. Les jours où tu as renoncé à boire par choix, ton premier niveau d'épuisement dû à la soif est annulé."),
       P(1, "Bâton de pluie", "passif", "passif", "Avec un bâton, tu utilises ton Endurance au lieu de ta Force pour attaquer et pour les dégâts. Un bâton à deux mains fait 1d8."),
-      P(1, "Psaume", "action bonus", "repos long", "Un allié à 18 m gagne un dé de psaume (d4) à ajouter à une attaque, un test ou une sauvegarde dans la minute. Le dé passe à d6 au niveau 5, d8 au 10, d10 au 15. Autant d'utilisations que ta Présence (au moins une) ; elles reviennent après un repos court à partir du niveau 5.", { uses: 3, range: "18 m" }),
+      P(1, "Psaume", "action bonus", "repos long", "Un allié à 18 m gagne un dé de psaume (d4) à ajouter à une attaque, un test ou une sauvegarde dans la minute. Le dé passe à d6 au niveau 5, d8 au 10, d10 au 15. Autant d'utilisations que ta Présence (au moins une).", { uses: 3, range: "18 m" }),
       P(2, "Marcher sous le soleil", "passif", "passif", "Avantage aux sauvegardes d'Endurance du coup de chaleur, et tu peux marcher une heure de plus par jour avant que la fatigue compte."),
       P(2, "Mortification", "réaction", "repos court", "Tu subis des dégâts : ils baissent de 1d8 + ton Endurance (deux utilisations au niveau 9)." + EAU(1), { uses: 1 }),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
@@ -455,7 +455,7 @@ export const CLASSES_SEC: CharacterClass[] = [
       P(7, "Lecture des lieux", "action", "repos court", "En entrant dans une pièce, le MJ te dit où sont les pièges, les issues et les dangers, et si quelqu'un est passé récemment.", { uses: 2 }),
       P(9, "Un revendeur par ville", "passif", "passif", "Dans toute ville, un revendeur te rachète tes trouvailles à bon prix : +25 % sur tout ce que tu vends. Il te dit aussi ce que les autres fouilleurs ont rapporté."),
       P(11, "Œil fiable", "passif", "passif", "Pour celles de ces compétences que tu maîtrises : Investigation, Perception et Acrobaties, un résultat de 9 ou moins au d20 compte comme un 10."),
-      P(11, "Cache d'avant le Sec", "action", "repos long", "Une ruine que tu as fouillée recèle une cache : 1d8 + 4 godets d'objets utiles (eau en capsules, conserves, outils), jamais plus de la moitié en eau, une fois par ruine.", { uses: 1 }),
+      P(11, "Cache d'avant le Sec", "action", "repos long", "Une ruine que tu as fouillée recèle une cache : (1d8 + 4) × 10 godets d'objets utiles (eau en capsules, conserves, outils), jamais plus de la moitié en eau, une fois par ruine.", { uses: 1 }),
       P(13, "Carte des ruines", "passif", "passif", "Tu sais où sont les ruines importantes dans trois jours de marche. Le MJ te dit, une fois par semaine de jeu, où chercher un objet précis (une pompe, un panneau, une arme)."),
       P(15, "Trouvaille rare", "action", "repos long", "Dans une grande ruine, après une journée de fouille : tu remontes une pièce rare d'avant le Sec (une arme, un outil, un panneau, un engin). Le MJ décide ce que c'est.", { uses: 1 }),
       P(17, "Pas un piège pour toi", "passif", "passif", "Avantage aux sauvegardes contre les pièges, et résistance aux dégâts qu'ils font."),
@@ -477,7 +477,7 @@ export const CLASSES_SEC: CharacterClass[] = [
           P(3, "Œil du marchand", "passif", "passif", "Tu estimes la valeur d'un objet d'avant le Sec à 10 % près, et tu as l'avantage aux tests d'Histoire sur une trouvaille."),
           P(7, "Ça sert à quelque chose", "action", "repos court", "Dix minutes sur un objet inconnu : le MJ te dit à quoi il servait et s'il peut encore servir.", { uses: 2 }),
           P(11, "Plus qu'on ne croit", "passif", "passif", "Tes trouvailles valent 50 % de plus à la revente, et tu trouves d'ordinaire un objet de plus quand tu fouilles. Les bonus de revente ne se cumulent pas : on garde le plus haut."),
-          P(15, "Le plus gros lot", "action", "repos long", "Une ruine que tu connais abrite un entrepôt, une cache ou une cave pleine : le MJ te la désigne, et ce que tu y trouves vaut 5 × ton niveau en godets.", { uses: 1 }),
+          P(15, "Le plus gros lot", "action", "repos long", "Une ruine que tu connais abrite un entrepôt, une cache ou une cave pleine : le MJ te la désigne, et ce que tu y trouves vaut 40 × ton niveau en godets.", { uses: 1 }),
         ]),
     ],
   },
@@ -493,7 +493,7 @@ export const CLASSES_SEC: CharacterClass[] = [
     armor: "Armures légères et intermédiaires",
     weapons: "Armes courantes, arbalètes, fusils",
     skills: { choose: 4, from: ["Persuasion", "Intuition", "Intimidation", "Survie", "Histoire", "Perception", "Tromperie", "Représentation"] },
-    startingGear: ["Fusil de convoi (2d8 perforants, portée 60/180 m) et quinze cartouches", "Carnet de comptes et crayon", "Sceau de patron", "Longue-vue", "Gourde de douze godets", "50 godets"],
+    startingGear: ["Fusil de convoi (2d6 perforants, portée 60/180 m) et quinze cartouches", "Carnet de comptes et crayon", "Sceau de patron", "Longue-vue", "Gourde de douze godets", "50 godets"],
     powers: [
       P(1, "Dé d'ordre", "action bonus", "repos long", "Un allié à 18 m qui t'entend gagne un dé d'ordre (d4) à ajouter à une attaque, un test ou une sauvegarde dans la minute. Le dé passe à d6 au niveau 5, d8 au 10, d10 au 15. Autant d'utilisations que ta Présence (au moins une) ; elles reviennent après un repos court à partir du niveau 5.", { uses: 3, range: "18 m" }),
       P(1, "Tenir le convoi", "passif", "passif", "Avantage aux tests de Persuasion et d'Intimidation pour calmer une foule, arrêter une mutinerie ou imposer un ordre à ton équipage."),
@@ -508,7 +508,7 @@ export const CLASSES_SEC: CharacterClass[] = [
       P(11, "Œil fiable", "passif", "passif", "Pour celles de ces compétences que tu maîtrises : Persuasion, Intuition et Survie, un résultat de 9 ou moins au d20 compte comme un 10."),
       P(11, "Ordre de bataille", "action", "repos long", "Pendant une minute, toi et les alliés à 18 m ajoutez 1 à votre CA et avez l'avantage à l'initiative.", { uses: 1, range: "18 m" }),
       P(13, "Un contact par relais", "passif", "passif", "À chaque relais de la Route, un gérant te vend l'eau et le fourrage au prix coûtant. Une fois par semaine de jeu, un patron te prête un char, un garde ou un guide pour la journée."),
-      P(15, "Ton convoi", "passif", "passif", "Six gardes et un char à voile sont à toi et suivent tes ordres (le MJ joue les gardes). Ils coûtent chacun 20 godets par jour que tu leur dois."),
+      P(15, "Ton convoi", "passif", "passif", "Six gardes et un char à voile sont à toi et suivent tes ordres (le MJ joue les gardes). Ils coûtent chacun 30 godets par jour que tu leur dois."),
       P(17, "Rien ne t'étonne", "passif", "passif", "Tu ne peux pas être surpris tant que tu es conscient, et tes alliés à 9 m ont +2 à l'initiative."),
       P(20, "Vingt personnes, six chars", "passif", "passif", "Une fois par semaine de jeu, un clan ou un relais t'obéit une journée : vingt personnes, ou un convoi de six chars prêtés. Il ne se retourne pas contre toi, mais il en parle."),
     ],

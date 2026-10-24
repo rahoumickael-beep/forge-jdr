@@ -31,7 +31,7 @@ Note sur ta fiche le modificateur à côté de la valeur, en gros. C'est lui que
 
 > **Les valeurs impaires.**
 >
-> Passer de 14 à 15 ne change pas le modificateur. Passer de 15 à 16, si. Quand tu montes une caractéristique, vise les valeurs paires. Les valeurs impaires servent quand même : certaines armures demandent 13 ou 15 en Force, et un bonus de +1 arrivera plus tard pour compléter.
+> Passer de 14 à 15 ne change pas le modificateur. Passer de 15 à 16, si. Quand tu montes une caractéristique, vise les valeurs paires. Les valeurs impaires servent quand même : un bonus de +1 arrivera plus tard pour compléter.
 
 ## Déterminer ses caractéristiques
 
@@ -356,7 +356,7 @@ Un **jet de sauvegarde** est un d20 + modificateur de caractéristique, + bonus 
 
 > **Exemple.**
 >
-> Un arbalétrier du Puits ordonne à Estève de lui remettre sa gourde pour une « inspection ». Le MJ demande une sauvegarde de Présence, DD 13. Estève, qui ne maîtrise pas la Présence, lance d20 − 1. Il fait 12 : raté de justesse. Il tend la gourde. Il avait mis le plus gros de son eau dans une capsule au fond de sa botte.
+> Un arbalétrier du Puits ordonne à Estève de lui remettre sa gourde pour une « inspection ». Le MJ demande une sauvegarde de Présence, DD 13. Estève, qui ne maîtrise pas la Présence, lance d20 − 1. Il fait 12 au dé, soit 11 au total contre DD 13 : raté de justesse. Il tend la gourde. Il avait mis le plus gros de son eau dans une capsule au fond de sa botte.
 
 ## La Perception passive
 
@@ -423,9 +423,9 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 >
 > Sauvegardes : Force +3, Agilité +5, les autres au modificateur seul.
 >
-> Compétences maîtrisées : Athlétisme +3 et Survie +4 (historique) ; Acrobaties +5 (origine : la Survie, déjà prise, est remplacée par Intimidation +2) ; Perception +4, Intuition +4 et Discrétion +5 (classe). Sans maîtrise : Escamotage +3, Médecine +2, Investigation −1, et ainsi de suite.
+> Compétences maîtrisées : Athlétisme +3 et Survie +4 (historique) ; Acrobaties +5 (origine) ; Perception +4, Intuition +4 et Discrétion +5 (classe). Son origine lui offre aussi la Survie, déjà prise : elle la remplace par Représentation +2, pour les complaintes de batelier. Sans maîtrise : Escamotage +3, Médecine +2, Investigation −1, et ainsi de suite.
 >
-> Perception passive 14. Initiative +3. Points de vie 11 (d10 + Endurance +1). Outils de batelier (cordages, voile). Langue : le français.
+> Perception passive 14. Initiative +3. Classe d'armure 13 (sans armure : 10 + Agilité +3). Points de vie 11 (10 + 1 : le maximum du d10, plus l'Endurance). Outils de batelier (cordages, voile). Langue : le français.
 >
 > Gourde : 12 / 12. Argent : 30 godets. Épuisement : 0.
 
@@ -445,6 +445,7 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 | Points de vie | 11 | 12 | 10 | 9 |
 | Sauvegardes | Force +3, Agilité +5 | Force +4, Endurance +4 | Savoir +4, Endurance +4 | Agilité +5, Présence +3 |
 | Perception passive | 14 | 14 | 15 | 14 |
+| Classe d'armure | 13 | 12 | 11 | 15 |
 | Initiative | +3 | +1 | +1 | +3 |
 | Gourde | 12 | 12 | 15 | 10 |
 | Argent | 30 godets | 40 godets | 30 godets | 20 godets |
