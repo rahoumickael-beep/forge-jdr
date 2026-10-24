@@ -140,7 +140,7 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Mécanique nouvelle : la Collection monte (départ 12) au lieu de s'épuiser. `JaugeDuMonde.monte` ; seuils franchis vers le haut dans `reglerJauge` et `preparerSeance`, libellé « atteint » / « À » dans le serveur et le panneau Campagne. Le bestiaire du monde reste à faire (gardes privés, policiers en civil, douaniers, hommes d'Ostrevent, filateurs de la Section, chiens de garde).
 
 ## Bilan au 25/10/2026
-- Les dix mondes ont leur bible, leur canon, leurs classes et origines, leur bestiaire, leurs cartes, leur scénario de départ et leur livre des joueurs ; neuf jeux de livres PDF envoyés (Aubreterre, Archipel, Ternelande, Résidence, Côte des Noyés, Grand Sec, Champ-d'Asile, Îles du Vent, Exposition éternelle), le thriller suit.
+- Les dix mondes ont leur bible, leur canon, leurs classes et origines, leur bestiaire, leurs cartes, leur scénario de départ et leur livre des joueurs ; les dix jeux de livres PDF sont envoyés.
 - Créateur de personnage corrigé pour tous : CA d'après l'armure portée, équipement sans doublon, argent de départ lu dans l'origine.
 - Réserves du MJ (Grains, Pannes, Écoutes) dans le code du MJ seulement.
 - Reste : styles graphiques des 8 mondes (choix de Mickael), puis les peintures ; combat entre navires pour les Îles du Vent ; relecture des noms par Mickael.
