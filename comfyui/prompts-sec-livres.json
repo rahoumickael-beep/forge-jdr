@@ -1,0 +1,233 @@
+[
+  {
+    "id": "region-route",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a dry riverbed of grey sand and pebbles three hundred meters wide between old stone quays, bridges spanning nothing, a barge lying on its side, sand yachts with square sails moving in the distance",
+    "width": 1344,
+    "height": 768,
+    "seed": 3442068861
+  },
+  {
+    "id": "origine-pa-gens-puits",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a family of well-town people in the shade of medieval ramparts turned into a cistern, holding stamped metal water capsules",
+    "width": 896,
+    "height": 1152,
+    "seed": 1768602540
+  },
+  {
+    "id": "origine-pa-enfants-route",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a child of the Route sitting at the top of a sand yacht mast, squinting at the horizon, scarf over the mouth",
+    "width": 896,
+    "height": 1152,
+    "seed": 3531941330
+  },
+  {
+    "id": "origine-pa-saliniers",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a salt boiler with soot on her face standing beside a smoking copper still on a black beach",
+    "width": 896,
+    "height": 1152,
+    "seed": 670326369
+  },
+  {
+    "id": "origine-pa-porte-attente",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a young man in front of a vast camp of tents and corrugated sheds, looking up at a high concrete wall",
+    "width": 896,
+    "height": 1152,
+    "seed": 1599089839
+  },
+  {
+    "id": "origine-pa-montagnards",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a mountain goatherd among dry stone terraces and dead chestnut trees, a long knife and a coil of rope",
+    "width": 896,
+    "height": 1152,
+    "seed": 704788397
+  },
+  {
+    "id": "origine-pa-descendus",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a pale young woman in a faded blue scarf walking down a dry stony mountain path, looking back at the green summit",
+    "width": 896,
+    "height": 1152,
+    "seed": 3852887989
+  },
+  {
+    "id": "classe-batelier",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a sand yacht sailor with a harpoon on his back hauling on a rope, the patched square sail full above him, a dry riverbed rushing by",
+    "width": 896,
+    "height": 1152,
+    "seed": 1921900579
+  },
+  {
+    "id": "classe-puisatier",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a broad well digger in a leather apron turning a wooden winch in a stone well shaft, a heavy hammer at his belt",
+    "width": 896,
+    "height": 1152,
+    "seed": 2200232881
+  },
+  {
+    "id": "classe-pillard",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a lean former raider with a scarf over her face crouched behind a broken bridge pier, a sling in hand, a red hand tattoo half scrubbed off her wrist",
+    "width": 896,
+    "height": 1152,
+    "seed": 3309082771
+  },
+  {
+    "id": "classe-sourciere",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a woman kneeling on dry ground with an old geological map spread out, reading the plants and stones, a hand drill and a soil sample beside her",
+    "width": 896,
+    "height": 1152,
+    "seed": 524314742
+  },
+  {
+    "id": "classe-mecano",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a scavenger mechanic fixing a rusted water pump with salvaged parts, a folded solar panel on his back",
+    "width": 896,
+    "height": 1152,
+    "seed": 2540232336
+  },
+  {
+    "id": "classe-gardian",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a rider in a wide hat on a thin grey horse with a long pole, driving black bulls across a white salt plain",
+    "width": 896,
+    "height": 1152,
+    "seed": 1035388893
+  },
+  {
+    "id": "classe-penitent",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a gaunt penitent in a grey hood carrying a rain stick, walking barefoot in a procession under the white sun",
+    "width": 896,
+    "height": 1152,
+    "seed": 3904895238
+  },
+  {
+    "id": "classe-medecin",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a desert doctor kneeling beside a collapsed traveller in the shade of a sail, wetting his lips from a small water skin",
+    "width": 896,
+    "height": 1152,
+    "seed": 151091138
+  },
+  {
+    "id": "classe-fouilleur",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a scavenger climbing through the half-buried ruins of an old supermarket, a lamp and a bag of salvaged tins",
+    "width": 896,
+    "height": 1152,
+    "seed": 582911692
+  },
+  {
+    "id": "classe-chef",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland character portrait, rust orange and dust palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a caravan leader standing on a sand yacht deck with a ledger and a rifle, counting water barrels being loaded",
+    "width": 896,
+    "height": 1152,
+    "seed": 1301167913
+  },
+  {
+    "id": "couverture-joueurs",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland cover art, rust orange and dust palette, monumental composition, empty space at the top for the title, clean unmarked image, a twelve-meter sand yacht on truck wheels racing down a dry riverbed three hundred meters wide under a white sky, its square patched sail full of wind, a child standing at the top of the mast, four travellers with water skins and scarves on the deck",
+    "width": 1024,
+    "height": 1448,
+    "seed": 3025381207
+  },
+  {
+    "id": "region-mont-chauve",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a winding road up a bare white stony mountain, a fortified town and a green pine forest at the summit under a dark storm cloud, rain falling on the top and stopping at mid-slope",
+    "width": 1344,
+    "height": 768,
+    "seed": 1436920837
+  },
+  {
+    "id": "region-avignon",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a long queue of two hundred people with water cans winding through the courtyard of a half-buried medieval palace, at its end a well keeper in a leather apron pouring water by the cup under the eye of four crossbowmen",
+    "width": 1344,
+    "height": 768,
+    "seed": 2791632718
+  },
+  {
+    "id": "figure-roumanille",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a heavy bald well keeper of sixty in a leather apron, wet hands resting on the wooden winch of a deep well in a palace courtyard",
+    "width": 1344,
+    "height": 768,
+    "seed": 3808464844
+  },
+  {
+    "id": "region-salins",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a black sooty beach with a row of twenty copper stills smoking under the sun, children scraping white salt from the bottom of vats with shovels taller than themselves, piles of olive stumps beside each still",
+    "width": 1344,
+    "height": 768,
+    "seed": 1723204336
+  },
+  {
+    "id": "region-mur",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a twenty-meter concrete wall across a valley at night lit by searchlights, a vast camp of tents and corrugated metal sheds against it as far as the eye can see, storm clouds over green fields beyond the wall",
+    "width": 1344,
+    "height": 768,
+    "seed": 3669982316
+  },
+  {
+    "id": "region-camargue",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a rider on a thin horse in the middle of a cracked white salt plain, a long pole in hand, and far away, shimmering in the heat, a herd of black bulls",
+    "width": 1344,
+    "height": 768,
+    "seed": 958749735
+  },
+  {
+    "id": "figure-la-cigale",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a small fast woman of thirty with a red painted hand, standing on the prow of a raider sand yacht, singing, her scarf whipping in the wind",
+    "width": 1344,
+    "height": 768,
+    "seed": 3992821921
+  },
+  {
+    "id": "region-cevennes",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a ridge at sunset with a row of tall white metal towers with blades and antennas turning slowly against the orange sky, dead grey chestnut trees and collapsed stone terraces in the foreground",
+    "width": 1344,
+    "height": 768,
+    "seed": 1573733629
+  },
+  {
+    "id": "scenario-bib-pa-aramon",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a single standing arch of a broken stone bridge in the middle of a dry riverbed at dusk, three sand yachts with red hands painted on their sails lying across the passage under it, a man walking alone toward the viewer with open arms",
+    "width": 1344,
+    "height": 768,
+    "seed": 550346808
+  },
+  {
+    "id": "couverture-mj",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland cover art, rust orange and dust palette, monumental composition, empty space at the top for the title, clean unmarked image, a lone white mountain with a green forest only at its summit, a summer storm pouring rain on the top and stopping sharply halfway down the slope, people on the dry stony plain below looking up at the falling water",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2332077311
+  },
+  {
+    "id": "famille-betes-du-sec",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a pack of wild dogs drinking from a muddy puddle under a broken bridge in a dry riverbed, vultures waiting on the bridge parapet",
+    "width": 1344,
+    "height": 768,
+    "seed": 3763175961
+  },
+  {
+    "id": "famille-gens-de-la-route",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a caravan of sand yachts stopped at a road relay of stone and canvas, travellers and raiders bargaining over water barrels in the heat",
+    "width": 1344,
+    "height": 768,
+    "seed": 1016894511
+  },
+  {
+    "id": "famille-gens-des-citadelles",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, crossbowmen on the ramparts of a medieval town turned into a cistern, guarding a queue of people with water cans below",
+    "width": 1344,
+    "height": 768,
+    "seed": 866456817
+  },
+  {
+    "id": "famille-machines-d-avant",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland illustration, rust orange and dust palette, wide establishing scene, clean unmarked image, a rusted old water pump at a desert relay spraying water in a wild arc, travellers ducking away, a tall white metal tower on the ridge behind",
+    "width": 1344,
+    "height": 768,
+    "seed": 3527419270
+  },
+  {
+    "id": "couverture-bestiaire",
+    "prompt": "white noon sun, bleached sky, ochre dust, gritty gouache painting, post-apocalyptic wasteland cover art, rust orange and dust palette, monumental composition, empty space at the top for the title, clean unmarked image, raiders on a sand yacht with a red hand painted on its sail charging across a dry riverbed at dusk, a wild dog pack running alongside, a broken stone bridge arch ahead",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2003006638
+  }
+]
