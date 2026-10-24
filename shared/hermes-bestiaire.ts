@@ -8,7 +8,7 @@
 // Armes (table de shared/hermes-regles.ts) : couteau de poche (1d4), matraque télescopique (1d4), manche de pioche ou barre de chantier (1d6, 1d8 à deux mains),
 // pistolet à impulsion électrique (attaque à distance 3/9 m, puis sauvegarde d'Endurance DD 13, aucun dégât), pistolet semi-automatique de 9 mm
 // (1d10, 15/45 m, quinze coups, changer de chargeur en action bonus), fusil de chasse (2d6, 9/27 m, deux coups).
-// Une créature réduite à 0 PV par une arme à feu est mourante et meurt à la fin de son troisième tour sans soins : le texte des tirs le rappelle.
+// Une créature réduite à 0 PV par une arme à feu est mourante : sauvegarde d'Endurance DD 10 à la fin de chacun de ses trois premiers tours, deux réussites la stabilisent, sinon elle meurt à la fin de son troisième tour sans soins. Le texte des tirs le rappelle.
 // Le coup de filet (police, FP 13) est une fiche de scène, pas un adversaire : on en sort, on ne le combat pas.
 // Les PX d'une scène à éviter reviennent au groupe qui s'en sort sans tuer.
 // Les grandes fiches (équipes, dispositifs, sites) sont des fiches de rencontre rapide : elles résument des gens qu'on ne combat pas, on les contourne.
@@ -23,7 +23,7 @@ const CHARGEUR = "Son pistolet tient quinze cartouches ; changer de chargeur pre
 const CHARGEUR_GROUPE = "Chaque tireur a quinze cartouches. Sur un 1 naturel, ce tireur-là s'enraye : la fiche perd un tir par round tant qu'un autre n'a pas pris son action pour le dégager.";
 
 const pistolet = (toHit: number, degats: string) =>
-  hit("Pistolet semi-automatique de 9 mm", "distance", toHit, "15/45 m", degats, "perforants", "Quinze coups ; changer de chargeur prend une action bonus. Une créature réduite à 0 PV par une arme à feu est mourante et meurt à la fin de son troisième tour sans soins.");
+  hit("Pistolet semi-automatique de 9 mm", "distance", toHit, "15/45 m", degats, "perforants", "Quinze coups ; changer de chargeur prend une action bonus. Une créature réduite à 0 PV par une arme à feu est mourante : à la fin de chacun de ses trois premiers tours, elle fait une sauvegarde d'Endurance DD 10 ; deux réussites la stabilisent, sinon elle meurt à la fin de son troisième tour sans soins.");
 const matraque = (toHit: number, degats: string) => hit("Matraque télescopique", "contact", toHit, "1,5 m", degats, "contondants");
 const couteau = (toHit: number, degats: string) => hit("Couteau de poche", "contact", toHit, "1,5 m", degats, "tranchants");
 const manche = (toHit: number, degats: string) =>
@@ -171,7 +171,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
     ],
     actions: [matraque(3, "1d4+1"), pistolet(3, "1d10+1")],
     lore: "Une tablette dans la main, le regard qui passe sur les plaques, un gilet fluo sur un blouson sombre. À Trieste, ils contrôlent un camion sur dix, et chacun sait lequel il sera.",
-    gmNotes: "Il veut remplir sa feuille et rentrer. Il a le droit de fouiller, pas celui de s'énerver. Sans combat : Tromperie DD 13 avec des papiers de chargement en règle, Persuasion DD 12 pour qu'il tire un autre camion, ou 200 à 500 € glissés à l'employé de la barrière, jamais à lui. Une fouille qui trouve une arme ou 10 000 € ou plus en espèces est une garde à vue, et l'Empreinte monte de 1. Tirer sur un douanier : Empreinte +2, +1 par blessé grave ou mort, 7 au moins, 10 s'il meurt. Trieste ferme le port. Niveaux 1 à 3.",
+    gmNotes: "Il veut remplir sa feuille et rentrer. Il a le droit de fouiller, pas celui de s'énerver. Sans combat : Tromperie DD 13 avec des papiers de chargement en règle, Persuasion DD 12 pour qu'il tire un autre camion, ou 200 à 500 € glissés à l'employé de la barrière, jamais à lui. Une fouille qui trouve une arme est un fermo (la police italienne garde le suspect, un juge valide ou non dans les jours qui suivent), et l'Empreinte monte de 1. Tirer sur un douanier : Empreinte +2, +1 par blessé grave ou mort, 7 au moins, 10 s'il meurt. Trieste ferme le port. Niveaux 1 à 3.",
     scene: "a customs officer in a navy jacket and a reflective vest, a tablet in one hand and a clipboard under his arm, standing beside the open rear doors of a white freight truck on a port quay, stacked pallets and a stone warehouse behind him",
   }),
   creature({
@@ -235,7 +235,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
       matraque(3, "1d4+1"),
     ],
     lore: "Une tasse de thé froid sur le bureau, un tableau de liège couvert de photographies, un imperméable beige trop long sur le dossier de la chaise. Il écoute avec le coude sur la table et pose la même question trois fois, à trois endroits différents.",
-    gmNotes: "Il suit un dossier que sa hiérarchie veut classer, comme le coursier de la valise ou le plombier de la rue de la Brasserie. Il n'est pas hostile à un témoin honnête, il note chaque version. Éviter le combat : Persuasion DD 14 avec un récit qui tient et un avocat à sa suite, Investigation DD 14 pour lui donner une autre piste, ou une disparition rapide avant la garde à vue. Un coup de feu sur lui : Empreinte +2, +1 par blessé grave ou mort, 7 au moins, mandat sous 48 heures. Niveaux 2 à 5.",
+    gmNotes: "Il suit un dossier que sa hiérarchie veut classer, comme le coursier de la valise ou le plombier de la rue de la Brasserie. Il n'est pas hostile à un témoin honnête, il note chaque version. Éviter le combat : Persuasion DD 14 avec un récit qui tient et un avocat à sa suite, Investigation DD 14 pour lui donner une autre piste, ou une disparition rapide avant l'arrestation judiciaire (24 heures, puis le juge d'instruction décide d'un mandat d'arrêt). Un coup de feu sur lui : Empreinte +2, +1 par blessé grave ou mort, 7 au moins, mandat sous 48 heures. Niveaux 2 à 5.",
     scene: "a tired plainclothes detective in a beige raincoat that is too long, a notebook in one hand, a mug of tea on the desk behind him, standing in a cramped open-plan office with metal filing drawers and stacked folders, a corkboard of photographs on the wall",
   }),
   creature({
@@ -318,8 +318,26 @@ export const BESTIAIRE_HERMES: Creature[] = [
     ],
     actions: [pistolet(4, "1d10+2"), matraque(3, "1d4+1")],
     lore: "Des gants de conduite, une oreillette, le siège reculé d'un cran pour tout voir sans bouger la tête. Il attend dans la voiture, vitres fermées, une bouteille isotherme sur le siège passager. Il sait quelle rue est en sens unique pour les caméras et laquelle ne l'est pas.",
-    gmNotes: "Il est payé 3 800 € par mois pour attendre et partir vite. Il ne descend pas sans ordre. Il tire sur une voiture qui bloque la sienne, pas sur un piéton qui passe. Éviter le combat : laisser la voiture passer, noter la plaque (Perception DD 13), ou bloquer l'issue avec un utilitaire pour lui laisser le choix de s'arrêter (Intimidation DD 13). S'il la suit, la fiche « Poursuite en voiture » s'applique. Un coup de feu dans la rue : Empreinte +2, +1 par blessé. Niveaux 1 à 4.",
+    gmNotes: "Il est payé 3 800 € par mois pour attendre et partir vite. Il ne descend pas sans ordre. Il tire sur une voiture qui bloque la sienne, pas sur un piéton qui passe. Éviter le combat : laisser la voiture passer, noter la plaque (Perception DD 13), ou bloquer l'issue avec un utilitaire pour lui laisser le choix de s'arrêter (Intimidation DD 13). S'il la suit, la fiche « Poursuite en voiture » s'applique. Un coup de feu dans la rue : Empreinte +2, +1 par blessé. Niveaux 2 à 4. Pour le niveau 1, utiliser le chauffeur armé novice.",
     scene: "a broad man in a dark jacket and leather driving gloves leaning against the open driver door of a grey saloon car in a quiet street, one hand on the roof, an earpiece in his ear, scanning the street, an insulated flask on the car seat, rows of shipping containers at the end of the road",
+  }),
+  creature({
+    id: "chauffeur-arme-novice",
+    name: "Chauffeur armé novice",
+    family: "Les privés", size: "Moyenne", type: "humanoïde", region: "Rotterdam",
+    cr: 0.25, ac: 13, acNote: "blouson renforcé", hd: 4, speed: { marche: 9 },
+    stats: [12, 14, 13, 10, 13, 10],
+    skills: { Perception: 3 },
+    languages: "néerlandais, français, anglais",
+    traits: [
+      { name: "Au volant", text: "Avantage aux tests d'Adresse faits au volant. Il garde le moteur tournant et ne s'éloigne pas de sa portière de plus de 6 m." },
+      { name: "Une berline grise", text: "Une plaque de société, aucune plaque d'équipe, un siège arrière à fond de tapis lisse. Perception DD 13 pour noter le numéro avant qu'il ne démarre." },
+      { name: "Chargeur", text: CHARGEUR },
+    ],
+    actions: [pistolet(4, "1d10+2")],
+    lore: "Des gants de conduite encore raides, une oreillette qu'il touche trop souvent, le siège reculé d'un cran comme on le lui a montré. Il est là depuis trois mois, et il regarde sa montre plus que la rue.",
+    gmNotes: "Le chauffeur armé sans son second tir, pour un groupe de niveau 1 : une seule attaque par tour, 22 PV. Il ne tire qu'après un coup de feu des coursiers, ou si on bloque sa voiture. Éviter le combat : laisser la voiture passer, noter la plaque (Perception DD 13), ou bloquer l'issue avec un utilitaire pour lui laisser le choix de s'arrêter (Intimidation DD 13). Un coup de feu dans la rue : Empreinte +2, +1 par blessé. Niveau 1.",
+    scene: "a young broad man in a dark jacket and stiff new leather driving gloves leaning against the open driver door of a grey saloon car in a quiet street, an earpiece in his ear, glancing at his wristwatch, rows of shipping containers at the end of the road",
   }),
   creature({
     id: "garde-d-ostrevent",
@@ -335,8 +353,25 @@ export const BESTIAIRE_HERMES: Creature[] = [
     ],
     actions: [pistolet(4, "1d10+2"), matraque(3, "1d4+1")],
     lore: "Un blouson sombre, une oreillette, une carte professionnelle en plastique sans photo. Il traverse un trottoir sans courir et monte un escalier en regardant les portes plutôt que les marches.",
-    gmNotes: "Il est payé pour monter, regarder et redescendre avec ce qu'on lui a demandé. Il frappe d'abord à la matraque et ne tire que sur celui qui sort une arme. Il tue un personnage de niveau 1 en un tour avec deux touches de pistolet : annonce-le. Éviter le combat : Discrétion DD 12 dans l'escalier pendant que son équipier est à l'étage, Persuasion DD 14 (son patron ne gagne rien à un mort dans la maison), Athlétisme DD 13 pour lui couper la cour. Un coup de feu dans une maison : Empreinte +2, +1 par blessé grave ou mort, et la police est prévenue avant la sortie. Niveaux 1 à 4, par deux.",
+    gmNotes: "Il est payé pour monter, regarder et redescendre avec ce qu'on lui a demandé. Il frappe d'abord à la matraque et ne tire que sur celui qui sort une arme. Une touche de pistolet met un personnage de niveau 1 à 0 PV environ une fois sur quatre : annonce-le. Éviter le combat : Discrétion DD 12 dans l'escalier pendant que son équipier est à l'étage, Persuasion DD 14 (son patron ne gagne rien à un mort dans la maison), Athlétisme DD 13 pour lui couper la cour. Un coup de feu dans une maison : Empreinte +2, +1 par blessé grave ou mort, et la police est prévenue avant la sortie. Niveaux 2 à 4, par deux. Pour le niveau 1, utiliser le garde d'Ostrevent novice.",
     scene: "a broad man in a dark jacket with a plain plastic ID card on a cord and an earpiece, climbing the wooden stairs of a narrow townhouse, one hand on the banister, his eyes on the closed doors of the landing, a brass door plate and a worn runner carpet",
+  }),
+  creature({
+    id: "garde-d-ostrevent-novice",
+    name: "Garde d'Ostrevent novice",
+    family: "Les privés", size: "Moyenne", type: "humanoïde", region: "Bruxelles",
+    cr: 0.25, ac: 13, acNote: "blouson renforcé", hd: 4, speed: { marche: 9 },
+    stats: [12, 14, 13, 10, 13, 10],
+    skills: { Perception: 3 },
+    languages: "néerlandais, français, anglais",
+    traits: [
+      { name: "Deux par deux", text: "Il ne monte jamais seul : avantage à l'attaque si son équipier non neutralisé est à 9 m ou moins de la cible." },
+      { name: "Chargeur", text: CHARGEUR },
+    ],
+    actions: [pistolet(4, "1d10+2")],
+    lore: "Un blouson sombre trop neuf, une carte professionnelle en plastique sans photo qu'il vérifie dans sa poche. Il monte l'escalier derrière son équipier, en regardant ses pieds quand il croit que personne ne le voit.",
+    gmNotes: "Le garde d'Ostrevent sans son second tir, pour un groupe de niveau 1 : une seule attaque par tour, 22 PV. Il ne sort le pistolet qu'après un coup de feu des coursiers. Éviter le combat : Discrétion DD 12 dans l'escalier pendant que son équipier est à l'étage, Persuasion DD 14 (son patron ne gagne rien à un mort dans la maison), Athlétisme DD 13 pour lui couper la cour. Un coup de feu dans une maison : Empreinte +2, +1 par blessé grave ou mort, et la police est prévenue avant la sortie. Niveau 1, par deux.",
+    scene: "a young broad man in a dark jacket still creased from the packet with a plain plastic ID card on a cord and an earpiece, climbing the wooden stairs of a narrow townhouse behind a colleague, his eyes on his own feet, a brass door plate and a worn runner carpet",
   }),
   creature({
     id: "homme-de-main-d-ostrevent",
@@ -348,7 +383,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
     languages: "français, néerlandais",
     traits: [
       { name: "En équipe", text: "Avantage à l'attaque si un allié non neutralisé se tient à 1,5 m de la cible." },
-      { name: "Père de famille", text: "Dès qu'il est blessé gravement, ou qu'un de ses camarades tombe, il se rend ou bat en retraite. Il ne meurt pas pour 3 800 € par mois." },
+      { name: "Père de famille", text: "Dès qu'il passe sous la moitié de ses PV, ou qu'un de ses camarades tombe, il se rend ou bat en retraite. Il ne meurt pas pour 3 800 € par mois." },
       { name: "Chargeur", text: CHARGEUR },
     ],
     actions: [
@@ -357,8 +392,26 @@ export const BESTIAIRE_HERMES: Creature[] = [
       matraque(4, "1d4+2"),
     ],
     lore: "Les cheveux courts, une alliance, une carte professionnelle sur un cordon qu'il rentre dans sa chemise en descendant de voiture. Ancien militaire ou ancien policier, il porte les mêmes chaussures depuis cinq ans. Ses collègues l'appellent par son prénom ; lui, il ne les appelle pas.",
-    gmNotes: "Ostrevent envoie deux à quatre de ces hommes quand un client veut « une conversation ». Ils ont la consigne de ne rien casser en ville et de revenir avec ce qui a été demandé. Éviter le combat : Persuasion DD 14 (leur patron paie moins qu'un témoin se tait), Intimidation DD 15 si le groupe est plus nombreux, ou couper la route à l'arrière (Athlétisme DD 13). Un coup de feu en ville : Empreinte +2, +1 par blessé grave ou mort, et la police est là avant que vous ayez quitté les lieux. Niveaux 4 à 7 pour deux à quatre hommes ; aux niveaux 1 à 3, un seul, à la matraque, qui ne sort le pistolet qu'après un coup de feu des coursiers.",
+    gmNotes: "Ostrevent envoie deux à quatre de ces hommes quand un client veut « une conversation ». Ils ont la consigne de ne rien casser en ville et de revenir avec ce qui a été demandé. Éviter le combat : Persuasion DD 14 (leur patron paie moins qu'un témoin se tait), Intimidation DD 15 si le groupe est plus nombreux, ou couper la route à l'arrière (Athlétisme DD 13). Un coup de feu en ville : Empreinte +2, +1 par blessé grave ou mort, et la police est là avant que vous ayez quitté les lieux. Niveaux 4 à 7 pour deux à quatre hommes ; aux niveaux 2 et 3, un seul, à la matraque, qui ne sort le pistolet qu'après un coup de feu des coursiers. Pour le niveau 1, utiliser l'homme de main novice.",
     scene: "a stocky man in a dark jacket with a plain plastic ID card on a cord at his chest, short hair and a wedding ring, standing in an underground car park beside a grey unmarked van, hands loose at his sides, concrete pillars and painted bay numbers behind him",
+  }),
+  creature({
+    id: "homme-de-main-novice",
+    name: "Homme de main novice",
+    family: "Les privés", size: "Moyenne", type: "humanoïde", region: "Paris",
+    cr: 0.25, ac: 13, acNote: "blouson renforcé", hd: 4, speed: { marche: 9 },
+    stats: [14, 14, 12, 10, 12, 10],
+    skills: { Perception: 3, Intimidation: 2 },
+    languages: "français, néerlandais",
+    traits: [
+      { name: "En équipe", text: "Avantage à l'attaque si un allié non neutralisé se tient à 1,5 m de la cible." },
+      { name: "Père de famille", text: "Dès qu'il passe sous la moitié de ses PV, ou qu'un de ses camarades tombe, il se rend ou bat en retraite. Il ne meurt pas pour son premier salaire." },
+      { name: "Chargeur", text: CHARGEUR },
+    ],
+    actions: [pistolet(4, "1d10+2"), matraque(4, "1d4+2")],
+    lore: "Les cheveux coupés de la veille, une alliance toute neuve, une carte professionnelle qu'il tient encore à la main au lieu de la glisser dans sa chemise. Ancien de l'armée de terre, il a signé en octobre et ne sait pas encore ce que l'on dit à qui l'on suit.",
+    gmNotes: "L'homme de main sans son second tir, pour un groupe de niveau 1 : une seule attaque par tour, 22 PV. Il ne sort le pistolet qu'après un coup de feu des coursiers. Éviter le combat : Persuasion DD 14 (leur patron paie moins qu'un témoin se tait), Intimidation DD 15 si le groupe est plus nombreux, ou couper la route à l'arrière (Athlétisme DD 13). Un coup de feu en ville : Empreinte +2, +1 par blessé grave ou mort. Deux novices font 100 PX bruts, 150 avec le multiplicateur de 1,5 : entre la rencontre facile et la moyenne pour quatre personnages de niveau 1. Niveau 1.",
+    scene: "a young stocky man in a new dark jacket with a plain plastic ID card held in his hand, short hair just cut and a wedding ring, standing in an underground car park beside a grey unmarked van, shoulders stiff, concrete pillars and painted bay numbers behind him",
   }),
   creature({
     id: "garde-du-corps",
@@ -475,18 +528,18 @@ export const BESTIAIRE_HERMES: Creature[] = [
     id: "poursuite-en-voiture",
     name: "Poursuite en voiture",
     family: "Figures et scènes", size: "Gigantesque", type: "scène (véhicule lancé)", region: "Partout",
-    cr: 5, ac: 15, acNote: "carrosserie", hd: 10, speed: { marche: 60 },
-    stats: [20, 10, 18, 2, 10, 1],
+    cr: 3, ac: 15, acNote: "carrosserie", hd: 10, speed: { marche: 60 },
+    stats: [16, 10, 18, 2, 10, 1],
     immunities: ["poison", "psychiques"],
     conditionImmunities: ["empoisonné", "épuisement", "charmé", "effrayé", "paralysé", "étourdi"],
     languages: "—",
     traits: [
-      { name: "Circulation", text: "Chaque round, le MJ place un obstacle : un camion qui déboîte, un feu rouge, un cycliste, une voie qui se rétrécit. Adresse DD 13 au volant pour l'éviter, sinon 2d6 dégâts de collision à tous les occupants." },
+      { name: "Circulation", text: "Chaque round, le MJ place un obstacle : un camion qui déboîte, un feu rouge, un cycliste, une voie qui se rétrécit. Adresse DD 13 au volant pour l'éviter ; sinon le véhicule heurte quelque chose et chaque occupant fait une sauvegarde d'Adresse DD 13 : 2d6 dégâts contondants, moitié si elle réussit." },
       { name: "Aller plus vite", text: "Chaque round, chaque conducteur fait le test de Circulation. Si le poursuivi réussit et le poursuivant échoue, le poursuivi gagne 1 point d'avance ; dans le cas inverse, il en perd 1 ; sinon rien ne bouge. À 3 points d'avance, la poursuite est gagnée ; à −3, perdue." },
-      { name: "Les caméras de la route", text: "Une poursuite en ville est lue par au moins trois caméras : l'Empreinte monte de 1 si la plaque est relevée." },
+      { name: "Les caméras de la route", text: "Une poursuite en ville est lue par au moins trois caméras que le MJ connaît : une plaque relevée compte comme être filmé nettement (Empreinte +1)." },
     ],
     actions: [
-      save("Collision", "Dex", 16, "Le véhicule rabat, serre ou percute. Une créature dans une voiture à 1,5 m fait un jet de sauvegarde, moitié des dégâts en cas de réussite ; en cas d'échec sa voiture dérape et perd 1 point d'avance.", "4d10", "contondants"),
+      save("Collision", "Dex", 13, "Le véhicule rabat, serre ou percute. Une créature dans une voiture à 1,5 m fait un jet de sauvegarde, moitié des dégâts en cas de réussite ; en cas d'échec sa voiture dérape et perd 1 point d'avance.", "2d6", "contondants"),
       special("Freinage brutal", "Le véhicule s'arrête net. Les créatures qui suivent de trop près font un test d'Adresse DD 13, sinon elles percutent son arrière."),
     ],
     lore: "Une berline grise sans plaque de société qui change de file à toute allure, un feu de détresse clignotant à l'arrière. Elle double sur la droite, serre une camionnette, passe sous un pont. Le conducteur ne lève jamais la tête.",

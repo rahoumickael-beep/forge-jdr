@@ -102,7 +102,7 @@ export const CELLULE_HERMES: Canon = {
     },
   ],
   autresLieux: [
-    "Partout", "l'Europe", "Paris-Nord", "la France", "la Belgique", "le Luxembourg", "la Suisse", "l'Italie", "les Pays-Bas", "l'Allemagne", "Berlin", "Ixelles",
+    "Partout", "l'Europe", "Paris-Nord", "la France", "la Belgique", "le Luxembourg", "la Suisse", "l'Italie", "les Pays-Bas", "l'Allemagne", "Berlin", "Ixelles", "Namur", "Rungis", "Saint-Denis", "Lille", "l'A31",
     "la mer du Nord", "l'Adriatique", "les Balkans", "la Corse", "la Sardaigne", "l'Algérie", "la Méditerranée", "le commissariat", "le tribunal", "la douane", "la frontière",
     "les consignes", "la gare", "l'aéroport", "l'autoroute", "le péage", "la clinique", "l'hôtel de la gare", "le bar", "la rédaction",
   ],
@@ -241,7 +241,7 @@ export const CELLULE_HERMES: Canon = {
       { titre: "Un enregistreur discret", texte: "Un stylo épais, une prise USB sous le capuchon, huit heures de son.", effet: "Il enregistre une conversation à 5 m. Il vaut 120 €. Un balayage le trouve (Investigation DD 14). Un enregistrement obtenu sans accord est un délit, et une pièce à conviction contre vous." },
       { titre: "Une matraque télescopique", texte: "Un tube noir de vingt centimètres qui se déploie d'un coup de poignet. Le grip est usé.", effet: "1d4 contondants, légère. Elle vaut 30 €. Son port est interdit sans motif légitime : un contrôle qui la trouve vous conduit au commissariat." },
       { titre: "Un gilet de chantier", texte: "Orange fluo, des bandes réfléchissantes, un nom de société effacé sur le dos. Avec une casquette, on a l'air de quelqu'un qui doit être là.", effet: "Avantage au premier test de Tromperie de la scène pour entrer dans un chantier, un entrepôt ou un parking. Il vaut 25 € avec la casquette." },
-      { titre: "Une clé de chiffrement", texte: "Un petit objet noir sans marque, un trou pour un cordon. La Boîte ne s'ouvre pas sans.", effet: "Elle ouvre la Boîte, rien d'autre. La perdre, c'est perdre le canal : il faut passer par la Traitante, qui en fait une autre en deux jours. Elle vaut 60 €." },
+      { titre: "Une clé de chiffrement", texte: "Un petit objet noir sans marque, un trou pour un cordon. Un voyant qui ne s'allume qu'à l'insertion.", effet: "Elle protège tes fichiers et tes messages personnels. La Boîte, elle, tient sur le téléphone fermé que te remet la Traitante. Elle vaut 60 €." },
       { titre: "Un pistolet semi-automatique de 9 mm", texte: "Noir, froid, plus lourd qu'on croit. Un numéro de série limé, un chargeur de quinze cartouches.", effet: "1d10 perforants, portée 15/45 m, quinze coups. Illégal : 1 500 à 3 000 € au marché noir. Une scène où l'on tire fait monter l'Empreinte de 2, plus 1 par blessé grave ou mort. La police est prévenue." },
       { titre: "Un appareil photo à téléobjectif", texte: "Un boîtier lourd, un objectif long comme l'avant-bras, un sac de toile qui ressemble à celui d'un photographe de mariage.", effet: "Photographier à 100 m un visage assez net pour le reconnaître. Il vaut 400 €. Les photos sont une pièce, pas une preuve : le MJ dit qui voudrait les voir." },
     ],

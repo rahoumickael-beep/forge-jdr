@@ -493,7 +493,7 @@ export const CLASSES_HERMES: CharacterClass[] = [
       P(1, "Style de combat", "passif", "passif", STYLE_CORPS),
       P(1, "Périmètre", "passif", "passif", "Quand tu entres dans un lieu, tu repères en une minute ses entrées, ses angles morts et ses postes d'observation. Avantage aux tests de Perception et d'Investigation pour trouver ce qui menace une personne que tu protèges."),
       P(1, "Second souffle", "action bonus", "repos court", "Récupère 1d10 + ton niveau en PV.", { uses: 1 }),
-      P(1, "Corps entre", "réaction", "repos court", "Un allié à 1,5 m est visé par une attaque : tu te places devant, et les dégâts qu'il subirait sont réduits de moitié.", { uses: 2, range: "1,5 m" }),
+      P(1, "Corps entre", "réaction", "repos court", "Un allié à 1,5 m est visé par une attaque : tu te places devant, et les dégâts que l'allié aurait subis sont réduits de moitié.", { uses: 2, range: "1,5 m" }),
       P(2, "Sortie dégagée", "action bonus", "repos court", "Un allié à 9 m que tu vois se déplace de sa vitesse, sans provoquer d'attaque d'opportunité, tant que tu es entre lui et le danger.", { uses: 3, range: "9 m" }),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
       P(6, "Œil du service d'ordre", "passif", "passif", "Double maîtrise dans deux compétences que tu maîtrises parmi Perception et Intuition."),

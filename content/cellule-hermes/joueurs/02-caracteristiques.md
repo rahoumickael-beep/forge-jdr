@@ -1,8 +1,6 @@
 # Chapitre 2 — Les caractéristiques
 
-Chaque personnage, et chaque créature, se décrit par six chiffres. Ils disent ce qu'il a dans les bras, dans les mains, dans le ventre, dans la tête, dans le regard et dans la voix. Ce sont les **caractéristiques** : Force, Adresse, Endurance, Savoir, Instinct et Présence.
-
-Ce chapitre explique ce qu'elles mesurent, comment on les utilise, et comment la maîtrise vient s'y ajouter : compétences, sauvegardes, outils. Il se termine par deux valeurs que tu consulteras à chaque séance, la Perception passive et l'initiative, puis par les fiches complètes de quatre personnages.
+Six chiffres décrivent chaque personnage : Force, Adresse, Endurance, Savoir, Instinct, Présence. Ils disent ce qu'il a dans les bras, dans les mains, dans le ventre, dans la tête, dans le regard et dans la voix. Ce sont les **caractéristiques**, et chaque créature en a autant.
 
 > **Si tu viens d'un autre jeu.**
 >
@@ -155,7 +153,7 @@ Voici les seize compétences, par caractéristique.
 
 > **Arcanes / Savoir.**
 >
-> Le mot est celui de la fiche, et il recouvre ici tout ce qu'on apprend dans les livres, les écoles et les ateliers : l'électronique, les réseaux, la chimie d'un solvant, le calcul d'une charge, le droit. Il n'y a pas de magie dans la Cellule. À la table, on dit simplement « un Savoir de technicien ». La « Perspicacité » d'autres traductions s'appelle ici **Intuition**.
+> Le mot est celui de la fiche. Il recouvre ici tout ce qu'on apprend dans les livres, les écoles et les ateliers : l'électronique, les réseaux, la chimie d'un solvant, le calcul d'une charge, le droit. À la table, on dit « un Savoir de technicien ». La « Perspicacité » d'autres traductions s'appelle ici **Intuition**.
 
 ### Athlétisme (Force)
 
@@ -205,7 +203,7 @@ Les faits du passé : l'histoire d'une société, les procédures d'un tribunal,
 
 Chercher des indices et en tirer des conclusions.
 
-> Hélène examine les relevés d'un compte : il manque un virement sur trois, et ceux qui manquent tombent un jeudi. Savoir (Investigation), DD 13 : les montants sont ronds, et ils partent tous du même immeuble.
+> Hélène examine les relevés d'un compte : il manque un virement sur trois, et ceux qui manquent tombent un jeudi. Savoir (Investigation), DD 13 : les montants sont ronds, et ils tombent tous un jeudi.
 
 Autres usages : balayer une pièce à la recherche d'un micro (DD 14), nettoyer une trace (DD 15), deviner qui a loué un véhicule, comprendre d'où vient une fuite.
 
@@ -247,7 +245,7 @@ Vivre dehors, ou dans une ville qui n'a pas de place pour toi : trouver où dorm
 
 Faire peur pour obtenir quelque chose : menaces, gestes, réputation, un regard qui dit « je sais où tu travailles ».
 
-> Un chauffeur-livreur refuse de dire qui lui a donné la clef d'un entrepôt. Tomasz s'appuie sur la portière sans rien dire. Présence (Intimidation), DD 12. Le chauffeur donne un prénom.
+> Un chauffeur-livreur refuse de dire qui lui a donné la clé d'un entrepôt. Tomasz s'appuie sur la portière sans rien dire. Présence (Intimidation), DD 12. Le chauffeur donne un prénom.
 
 On peut parfois utiliser la Force pour intimider : poser une main sur une portière fait aussi bien l'affaire. Le MJ décide.
 
@@ -365,7 +363,7 @@ La **Perception passive** mesure ce que ton personnage remarque sans chercher. E
 Note-la sur ta fiche, en évidence. Le MJ s'en sert tout le temps :
 
 - pour savoir si un personnage remarque une **créature cachée** (il compare au résultat de Discrétion de la créature) ;
-- pour un **détail** que les joueurs ne pensent pas à chercher : une caméra dans un coin de plafond, un vigile qui repasse pour la troisième fois, un rétroviseur qui reste braqué sur vous ;
+- pour un **détail** que les joueurs ne pensent pas à chercher : une caméra dans un coin de plafond, un reflet dans une vitrine, un rétroviseur qui reste braqué sur toi ;
 - pour savoir qui voit venir une **embuscade** (la surprise, au chapitre 4) ;
 - pendant le **déplacement**, pour les personnages qui surveillent les alentours (chapitre 3).
 
@@ -448,7 +446,7 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 | Compétences | Survie +4, Perception +4, Discrétion +4, Intuition +4, Escamotage +4 | Perception +3, Investigation +4, Escamotage +4, Discrétion +4, Intuition +3 | Histoire +4, Intuition +4, Investigation +4, Perception +4, Persuasion +3, Discrétion +3 | Athlétisme +5, Perception +3, Intimidation +2, Intuition +3, Discrétion +4 |
 | Perception passive | 14 | 13 | 14 | 13 |
 | Initiative | +2 | +2 | +1 | +2 |
-| Armes | Couteau de poche, +4, 1d4 + 2 | Couteau de poche, +4, 1d4 + 2 | aucune | Pistolet, +6, 1d10 + 2 ; matraque, +5, 1d4 + 3 ; couteau, +5, 1d4 + 3 |
+| Armes | Couteau de poche, +4, 1d4 + 2 | aucune | aucune | Pistolet, +6, 1d10 + 2 ; matraque, +5, 1d4 + 3 ; couteau, +5, 1d4 + 3 |
 | Cartouches | aucune | aucune | aucune | 30 (deux chargeurs de quinze) |
 | Protection | Blouson renforcé | Blouse renforcée | Manteau renforcé | Gilet pare-balles souple |
 | Argent | 160 € | 220 € | 220 € | 200 € |

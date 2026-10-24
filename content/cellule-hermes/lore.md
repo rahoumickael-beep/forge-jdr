@@ -7,6 +7,7 @@
 > Fiction : le Service, les groupes, les entreprises et toutes les personnes de cette bible sont inventés. Aucun service réel n'agit dans le jeu, aucune personne réelle non plus ; les villes, les gares, les ports et les lois générales (frontières ouvertes, caméras, port d'arme interdit) sont réels, les immeubles, sociétés et institutions qu'on y visite sont inventés. Si un nom ressemble à celui de quelqu'un, c'est un hasard à corriger.
 > Ton : la violence est brève, laide, et elle a des suites (blessés, police, témoins). La surveillance se fait à coups de caméras, de relevés bancaires et d'attentes dans une voiture. Personne ne saute d'un toit. Les niveaux donnent de l'influence et des réseaux, pas des surhommes.
 > Il n'y a rien de surnaturel. **[MJ]** Le seul mystère est celui des personnes qui donnent les ordres.
+> Nom : Suzanne dit « Hermès, c'est le dieu des messagers, et le nom de code qu'on a donné à la Cellule en 2011. Ça a servi pour ça. » Mention légale des livres : « Hermès est ici un nom de code de fiction. Aucun lien avec une marque ou une société existante. »
 > Images : « Hermès » est aussi le nom d'une maison de luxe. Ici c'est un nom de code de cellule : jamais de logo ni de produit de cette maison dans les illustrations.
 
 ---
@@ -66,7 +67,7 @@ Une **Traitante**, Suzanne Mercadier, fait le lien : c'est elle qui reçoit les 
 
 **Date de jeu : novembre 2026.**
 
-L'Europe de la Cellule est celle des gares, des aéroports à bas prix et des frontières qu'on traverse sans s'en apercevoir, sauf quand un contrôle aléatoire tombe sur vous. Toutes les rues ont des caméras, tous les achats laissent une ligne dans un relevé, tous les téléphones parlent à leur opérateur toutes les minutes. Un coursier travaille contre cela : il paie en espèces, change de train, laisse son téléphone dans un sac au fond d'une consigne. Et il est observé quand même.
+L'Europe de la Cellule est celle des gares, des aéroports à bas prix et des frontières qu'on traverse sans s'en apercevoir, sauf quand un contrôle aléatoire tombe sur vous. Toutes les rues ont des caméras, tous les achats laissent une ligne dans un relevé, tous les téléphones parlent à leur opérateur plusieurs fois par heure. Un coursier travaille contre cela : il paie en espèces, change de train, laisse son téléphone dans un sac au fond d'une consigne.
 
 Suzanne répète que les plis sont plus précis depuis la rentrée. Vous n'avez rien à comparer : vous êtes là depuis septembre. Elle dit que le Service s'est modernisé. Personne n'a envie de demander comment.
 
@@ -114,7 +115,7 @@ On compte en heures de train. Paris-Bruxelles : une heure vingt. Paris-Genève :
 
 **Paysage.** Un bureau de traduction dans une maison de maître d'Ixelles, façade en brique noircie, escalier à rampe en bois, une plaque de cuivre : « Aldenhove & Fils, traductions assermentées ». Des dictionnaires jusqu'au plafond, des rames de papier, une imprimante qui n'a jamais tourné à plein régime.
 
-**Culture.** C'est un quartier d'avocats, de lobbyistes et d'étudiants. L'agence travaille réellement : actes, jugements, contrats en dix langues. Elle sert de boîte aux lettres depuis 1998.
+**Culture.** C'est un quartier d'avocats, de lobbyistes et d'étudiants. L'agence travaille réellement : actes, jugements, contrats en dix langues. Elle sert de boîte aux lettres au Service depuis 1998, et à la Cellule depuis sa création.
 
 **Ce qu'on craint.** Le client qui arrive sans rendez-vous. La concierge qui voit les visiteurs. Le téléphone qui sonne sur la ligne du fond, celle qu'on ne décroche pas.
 
@@ -256,9 +257,9 @@ La Cellule laisse des traces. Chaque personnage a sa fiche, mais la Cellule a **
 
 ### Ce que fait l'Empreinte [Joueurs]
 
-- **3, Noté** : on s'est souvenu de vous. Un policier, un hôtelier ou un voisin peut répondre à une question sur vous. À la frontière, un contrôle de plus.
-- **5, Fiché** : un dossier existe quelque part. Les jets de Discrétion et de Tromperie en ville où vous avez opéré ont un DD augmenté de 2. La Traitante vous demande de lever le pied.
-- **7, Identifié** : une de vos couvertures est reliée à votre vrai nom. Désavantage aux jets de Tromperie sous cette couverture, qui est brûlée dès la fin de la mission. Ostrevent et la Section ont votre photographie ; les Partenaires la reçoivent de la Traitante si elle ne vous couvre plus.
+- **3, Noté** : on s'est souvenu de la Cellule. Un policier, un hôtelier ou un voisin peut répondre à une question sur elle. À la frontière, un contrôle de plus.
+- **5, Fiché** : un dossier existe quelque part. Dans les villes où la Cellule a opéré, les jets de Discrétion et de Tromperie ont un DD augmenté de 2. La Traitante demande au groupe de lever le pied.
+- **7, Identifié** : une couverture du groupe est reliée à un vrai nom. Désavantage aux jets de Tromperie sous cette couverture, qui est brûlée dès la fin de la mission. Ostrevent et la Section ont la photographie de son porteur ; les Partenaires la reçoivent de la Traitante si elle ne le couvre plus.
 - **10, Grillé** : un mandat, un témoin, une enquête ouverte : la Cellule ne peut plus rester. Il faut disparaître, ou être arrêté. La Traitante coupe la Boîte. Si la Cellule survit, elle repart de l'Empreinte **5**, avec des couvertures neuves et le sentiment d'avoir déjà tout perdu une fois.
 
 ### Les Écoutes [Joueurs]
@@ -336,28 +337,29 @@ Le **train** d'abord : Paris-Bruxelles 35 à 120 € selon la veille, Paris-Gen�
 
 ### Le matériel [Joueurs]
 
-Un téléphone jetable (30 à 50 €), une carte SIM étrangère, un ordinateur propre, une clé de chiffrement, un sac à dos neutre. Un appareil photo à téléobjectif (400 €), un enregistreur discret (120 €), une balise de suivi (80 €), un brouilleur de poche (150 €, interdit presque partout). Un kit de crochetage (90 €). Des gants fins, un gilet de chantier, une casquette : on a l'air de quelqu'un qui doit être là.
+Un téléphone jetable (30 à 50 € ; son numéro est enregistré au nom d'un tiers, ou d'un nom qui n'existe pas : l'opérateur exige une pièce d'identité, et on la paie en plus), une carte SIM étrangère, un ordinateur propre, une clé de chiffrement, un sac à dos neutre. Un appareil photo à téléobjectif (400 €), un enregistreur discret (120 €), une balise de suivi (80 €), un brouilleur de poche (150 €, interdit presque partout). Un kit de crochetage (90 €). Des gants fins, un gilet de chantier, une casquette : on a l'air de quelqu'un qui doit être là.
 
 ### Les armes [Joueurs]
 
 Elles sont **illégales** pour un coursier, dans tous les pays du jeu. On ne les introduit pas par une frontière sans risque, on ne les montre pas en ville, on ne les emporte pas dans un hôtel. En pratique :
 
-- un **couteau** de poche ou une **matraque télescopique** (30 €), arme de catégorie D, dont le port est interdit sans motif légitime ;
+- un **couteau de poche** (15 €), autorisé tel quel ; sorti pour menacer, c'est une arme par destination, et un couteau à cran ou de combat est interdit sans motif légitime ;
+- une **matraque télescopique** (30 €), arme de catégorie D, dont le port est interdit sans motif légitime ;
 - un **pistolet à impulsion électrique** (200 €), soumis à autorisation en France, interdit en Belgique ;
 - un **pistolet semi-automatique de 9 mm** (1 500 à 3 000 € au marché noir, quand on trouve) ;
 - un **fusil de chasse**, légal pour un chasseur déclaré, pas dans un coffre de voiture en ville.
 
 Une boîte de 50 cartouches de 9 mm vaut 30 à 40 € en vente légale et le double au marché noir.
 
-Un coup de feu entraîne une enquête de police, des témoins et une balle à retrouver. Un mort entraîne des mois de vigilance. Dans le jeu, on tire rarement, et on s'en souvient. **Tir à bout portant** : un tir à bout portant sur une cible surprise impose une sauvegarde d'Endurance DD 15 ; en cas d'échec, elle tombe à terre et ne fait que ramper jusqu'à la fin de son prochain tour. Les points de vie suivent la 5e, sans plafond particulier : un niveau 15 reste un humain.
+Un coup de feu entraîne une enquête de police, des témoins et une balle à retrouver. Un mort entraîne des mois de vigilance. Dans le jeu, on tire rarement, et on s'en souvient. **Tir à bout portant** : un tir à bout portant sur une cible surprise impose une sauvegarde d'Endurance DD 15 ; en cas d'échec, elle tombe à terre et ne fait que ramper jusqu'à la fin de son prochain tour. Les points de vie suivent la 5e, sans plafond particulier : un niveau 15 reste un humain. Une créature réduite à 0 PV par une arme à feu est mourante : à la fin de chacun de ses trois premiers tours, elle fait une sauvegarde d'Endurance DD 10 ; deux réussites la stabilisent, sinon elle meurt à la fin de son troisième tour sans soins. Un nouveau coup de feu sur une créature mourante la tue. La stabiliser demande une action et un test de Médecine DD 12 (15 sous le feu).
 
 ### L'argent [Joueurs]
 
-Le coursier touche **2 400 €** par mois sur une carte rechargeable au nom de sa couverture, plus **300 à 1 500 €** par mission réussie. Un hôtel de gare : 90 à 160 € la nuit ; un repas : 12 à 30 € ; une couverture neuve : 800 € ; un appartement meublé de passage : 600 € la semaine. Un coursier ne retire jamais plus de 500 € d'un distributeur le même jour. Passer 10 000 € ou plus par une frontière se déclare à la douane : un coursier les divise ou prend le risque. Les pots-de-vin se paient en espèces : 200 à 500 € pour un portier, 2 000 € pour un employé de port, 10 000 € ou plus pour un fonctionnaire qui risque sa place.
+Le coursier touche **2 400 €** par mois sur une carte rechargeable au nom de sa couverture, plus **300 à 1 500 €** par mission réussie. Un hôtel de gare : 90 à 160 € la nuit ; un repas : 12 à 30 € ; une couverture neuve : 800 € ; un appartement meublé de passage : 600 € la semaine. Un coursier ne retire jamais plus de 500 € d'un distributeur le même jour. Passer 10 000 € ou plus par la frontière suisse, ou en France, se déclare à la douane. Entre Bruxelles et Luxembourg, rien à déclarer, mais une fouille qui les trouve pose des questions. Les pots-de-vin se paient en espèces : 200 à 500 € pour un portier, 2 000 € pour un employé de port, 10 000 € ou plus pour un fonctionnaire qui risque sa place.
 
 ### La loi [Joueurs]
 
-Un coursier commet des délits à chaque pli : usage de faux, intrusion, écoute, filature, recel de documents, détention d'arme. Aucun texte ne le protège. Le Service a dit à l'embauche : *vous ne nous connaissez pas, nous ne vous connaissons pas*. La police traite les coursiers arrêtés comme n'importe quel suspect : garde à vue de 24 à 48 heures, avocat commis d'office, aucun coup de téléphone providentiel.
+Un coursier commet des délits à chaque pli : usage de faux, intrusion, écoute, filature, recel de documents, détention d'arme. Aucun texte ne le protège. Le Service a dit à l'embauche : *vous ne nous connaissez pas, nous ne vous connaissons pas*. La police traite les coursiers arrêtés comme n'importe quel suspect : en France, garde à vue de 24 à 48 heures, avocat commis d'office ; en Belgique, arrestation judiciaire de 24 heures, avocat de permanence, puis un juge d'instruction décide ; en Suisse, 24 heures ; aucun coup de téléphone providentiel.
 
 ---
 

@@ -1,6 +1,6 @@
 # Chapitre 3 — L'aventure
 
-Entre deux scènes tendues, les coursiers attendent dans un hall de gare, comptent leurs euros et leurs cartouches, relisent un pli avant de le détruire, cherchent un hôtel qui ne note qu'un nom. Ce chapitre donne les règles de tout ce qui n'est pas le combat : se déplacer, passer une frontière, tenir l'Empreinte, porter une couverture, payer ce qu'il faut, se procurer du matériel et des armes, se reposer, vivre entre deux plis, et monter de niveau.
+Entre deux scènes tendues, les coursiers attendent dans un hall de gare, comptent leurs euros et leurs cartouches, retiennent un pli avant de le détruire, cherchent un hôtel qui ne note qu'un nom.
 
 ## Le déplacement
 
@@ -49,13 +49,13 @@ Un billet de train international porte un nom : on le prend au nom de sa couvert
 
 Les frontières sont officiellement ouvertes : on traverse la Belgique, le Luxembourg, la Suisse, l'Italie ou les Pays-Bas sans s'en apercevoir. La France contrôle pourtant certaines liaisons, aux gares frontalières et dans les trains de nuit. Un coursier évite les deux.
 
-**Le contrôle aléatoire.** Il peut tomber sur n'importe qui, à n'importe quel moment : deux douaniers en gilet fluo remontent un quai, regardent les valises, puis votre visage. Passer sans fouille demande un test de Tromperie ou de Persuasion DD 13. Passer avec un faux document fait monter l'Empreinte de 1 (la couverture sert à un acte risqué). Une fouille qui trouve une arme, ou 10 000 € et plus en espèces, finit en garde à vue. Avec une Empreinte de 3 ou plus, il y a un contrôle de plus.
+**Le contrôle aléatoire.** Il peut tomber sur n'importe qui, à n'importe quel moment : deux douaniers en gilet fluo remontent un quai, regardent les valises, puis le visage de chacun. Passer sans fouille demande un test de Tromperie ou de Persuasion DD 13. Passer avec un faux document fait monter l'Empreinte de 1 (la couverture sert à un acte risqué). Une fouille qui trouve une arme finit en garde à vue. Avec une Empreinte de 3 ou plus, il y a un contrôle de plus.
 
-**L'argent à la frontière.** Passer 10 000 € ou plus en espèces se déclare à la douane. Un coursier les divise entre plusieurs mains ou plusieurs passages, ou prend le risque d'une fouille.
+**L'argent à la frontière.** Passer 10 000 € ou plus par la frontière suisse, ou en France, se déclare à la douane. Entre Bruxelles et Luxembourg, rien à déclarer, mais une fouille qui les trouve pose des questions. Un coursier divise la somme entre plusieurs mains ou plusieurs passages, ou prend le risque d'une fouille.
 
 **Les armes.** Une arme à feu qui franchit une frontière est une infraction de plus, dans le pays qu'on quitte et dans celui où l'on arrive. On ne les passe pas dans un train, on ne les laisse pas dans un coffre de voiture en ville, on ne les emporte pas dans un hôtel.
 
-**La garde à vue.** Un coursier arrêté est un suspect comme un autre : 24 à 48 heures, un avocat commis d'office, aucun coup de téléphone providentiel. Se faire arrêter ne retire pas un joueur de la table : la garde à vue se joue en scène, avec ce que le personnage a dans les poches, ce qu'il dit, et ce qu'il ne dit pas.
+**La garde à vue.** Un coursier arrêté est un suspect comme un autre. En France, garde à vue de 24 à 48 heures, avec un avocat commis d'office. En Belgique : 24 heures d'arrestation judiciaire et un avocat de permanence, puis un juge d'instruction décide. En Suisse : 24 heures. Aucun coup de téléphone providentiel. Se faire arrêter ne retire pas un joueur de la table : la garde à vue se joue en scène, avec ce que le personnage a dans les poches, ce qu'il dit, et ce qu'il ne dit pas.
 
 ## L'Empreinte
 
@@ -65,7 +65,7 @@ La Cellule laisse des traces. Chaque personnage a sa fiche, mais la Cellule a **
 
 - De **1** quand un coursier utilise sa couverture pour un acte risqué : passer une frontière avec un faux document, ouvrir un compte, louer un véhicule.
 - De **1** quand la Cellule est filmée nettement dans une scène d'action, par une caméra que le MJ connaît.
-- De **1** quand une filature ou une infiltration échoue de 5 ou plus au jet.
+- De **1** quand une filature ou une infiltration échoue de 5 ou plus au jet (une fois par filature ou par infiltration).
 - De **1** quand la Cellule quitte un lieu dans l'urgence : porte forcée, alarme, cri.
 - De **1** quand un coursier paie plus de 1 000 € en espèces en France, ou fait un virement non prévu.
 - De **1** quand un coursier appelle un proche ou rallume son téléphone personnel.
@@ -81,12 +81,12 @@ Plafond : tous moyens confondus (règle, pouvoirs, origines), l'Empreinte ne bai
 
 ### Ce que fait l'Empreinte
 
-- **3, Noté** : on s'est souvenu de vous. Un policier, un hôtelier ou un voisin peut répondre à une question sur vous. À la frontière, un contrôle de plus.
-- **5, Fiché** : un dossier existe quelque part. Les jets de Discrétion et de Tromperie, dans les villes où vous avez opéré, ont un DD augmenté de 2. La Traitante vous demande de lever le pied.
-- **7, Identifié** : une de vos couvertures est reliée à votre vrai nom. Désavantage aux jets de Tromperie sous cette couverture, qui est brûlée dès la fin de la mission. Ostrevent et la Section ont votre photographie ; les Partenaires la reçoivent de la Traitante si elle ne vous couvre plus.
+- **3, Noté** : on s'est souvenu de la Cellule. Un policier, un hôtelier ou un voisin peut répondre à une question sur elle. À la frontière, un contrôle de plus.
+- **5, Fiché** : un dossier existe quelque part. Dans les villes où la Cellule a opéré, les jets de Discrétion et de Tromperie ont un DD augmenté de 2. La Traitante demande au groupe de lever le pied.
+- **7, Identifié** : une couverture du groupe est reliée à un vrai nom. Désavantage aux jets de Tromperie sous cette couverture, qui est brûlée dès la fin de la mission. Ostrevent et la Section ont la photographie de son porteur ; les Partenaires la reçoivent de la Traitante si elle ne le couvre plus.
 - **10, Grillé** : un mandat, un témoin, une enquête ouverte. La Cellule ne peut plus rester : il faut disparaître, ou être arrêté. La Traitante coupe la Boîte. Si la Cellule survit, elle repart de l'Empreinte **5**, avec des couvertures neuves et le sentiment d'avoir déjà tout perdu une fois.
 
-Les effets se cumulent : à 7, vous subissez aussi ceux de 3 et de 5.
+Les effets se cumulent : à 7, on subit aussi ceux de 3 et de 5.
 
 Quand le MJ fait entendre quelque chose à quelqu'un (un témoin qui parle, un chauffeur qui prévient, un policier qui se souvient), les joueurs peuvent annuler la complication en prenant 1 d'Empreinte, sans franchir de seuil nouveau.
 
@@ -101,7 +101,7 @@ Une couverture est une vie d'emprunt : un nom, des papiers, une carte de paiemen
 - Chaque fois que tu t'en sers pour un acte risqué (frontière, compte, location), l'Empreinte monte de 1.
 - Une couverture dont on s'est servi est brûlée dès que quelqu'un la relie à ton visage. Brûler une couverture à temps, c'est baisser l'Empreinte de 2.
 - Une couverture neuve coûte 800 € et dix jours de travail à la Traitante. Pendant ces dix jours, tu n'as que ton vrai nom, et tu restes à l'ombre.
-- Un Faussaire peut raccourcir ce délai (voir sa classe). Personne ne le fait en une nuit.
+- Un Faussaire peut raccourcir ce délai (voir sa classe).
 
 Avoir ton vrai nom sur un billet, un hôtel ou une location, c'est le laisser dans un relevé. Ne le fais que si tu y as renoncé.
 
@@ -112,7 +112,7 @@ L'argent des missions s'appelle la **Caisse** : cartes prépayées, espèces, re
 Au départ, tu prends la plus haute des sommes de ta classe, de ton historique et de ton origine, pas leur total (chapitre 1).
 
 - Un coursier ne retire jamais plus de 500 € à un distributeur le même jour.
-- Passer 10 000 € ou plus par une frontière se déclare à la douane : un coursier les divise, ou prend le risque.
+- Passer 10 000 € ou plus à la frontière : voir « Les frontières et les contrôles ».
 - Payer plus de 1 000 € en espèces en France, ou faire un virement non prévu, fait monter l'Empreinte de 1.
 - Les pots-de-vin se paient en espèces : 200 à 500 € pour un portier, 2 000 € pour un employé de port, 10 000 € ou plus pour un fonctionnaire qui risque sa place.
 
@@ -136,7 +136,7 @@ Un coursier a l'air de quelqu'un qui doit être là : gants fins, gilet de chant
 
 | Objet | Ce qu'il fait | Prix |
 |---|---|---|
-| Téléphone jetable | Un numéro lié à aucun nom. Tu le jettes après trois jours. | 30 à 50 € |
+| Téléphone jetable | Un numéro enregistré au nom d'un tiers, ou d'un nom qui n'existe pas. L'opérateur exige une pièce d'identité : on la paie en plus. Tu le jettes après trois jours. | 30 à 50 € |
 | Carte SIM étrangère | Un numéro hors du pays où tu opères. | 20 € |
 | Ordinateur propre | Jamais connecté à ton nom, jamais ouvert chez toi. | 600 € |
 | Clé de chiffrement | Elle protège tes fichiers et tes messages personnels. La Boîte, elle, tient sur le téléphone fermé que te remet la Traitante. | 60 € |
@@ -146,13 +146,13 @@ Un coursier a l'air de quelqu'un qui doit être là : gants fins, gilet de chant
 | Balise de suivi | Se pose sous un véhicule en une action (Escamotage DD 12 sans être vu). Un balayage la trouve (Investigation DD 14). | 80 € |
 | Brouilleur de poche | Coupe téléphones et balises à 10 m. Interdit presque partout. Un agent de sécurité ou une patrouille à 30 m le remarque sur Perception DD 12. Batterie : une heure. | 150 € |
 | Kit de crochetage | Serrures à cylindre : maîtrise d'outils de cambrioleur. | 90 € |
-| Gilet de chantier, casquette, gants fins | On a l'air de quelqu'un qui doit être là : le DD du premier test de Tromperie de la scène baisse de 2. | 25 € |
+| Gilet de chantier, casquette, gants fins | On a l'air de quelqu'un qui doit être là : le DD du premier test de Tromperie de la scène baisse de 2 ; ne se cumule pas avec Quelqu'un qui doit être là. | 25 € |
 
 Un enregistrement obtenu sans accord est un délit, et une pièce à conviction contre toi. Les photographies sont une pièce, pas une preuve : le MJ dit qui voudrait les voir.
 
 ### Ce qui laisse une trace
 
-Toutes les rues ont des caméras, tous les achats laissent une ligne dans un relevé, tous les téléphones parlent à leur opérateur toutes les minutes. Un coursier travaille contre cela : il paie en espèces, change de train, laisse son téléphone dans un sac au fond d'une consigne. Et il est observé quand même.
+Toutes les rues ont des caméras, tous les achats laissent une ligne dans un relevé, tous les téléphones parlent à leur opérateur plusieurs fois par heure. Un coursier travaille contre cela : il paie en espèces, change de train, laisse son téléphone dans un sac au fond d'une consigne.
 
 - **Les caméras.** Si le MJ connaît une caméra et que tu es filmé nettement dans une scène d'action, l'Empreinte monte de 1.
 - **Le téléphone personnel.** L'allumer, c'est donner ta position à ton opérateur. Appeler un proche aussi. L'Empreinte monte de 1.
@@ -165,7 +165,7 @@ Elles sont **illégales** pour un coursier, dans tous les pays du jeu. On ne les
 
 | Arme | Dégâts | Portée | Propriétés | Prix |
 |---|---|---|---|---|
-| Couteau de poche | 1d4 tranchants | contact, 6/18 m | léger, finesse, lancer ; arme de catégorie D, port interdit sans motif légitime | 15 € |
+| Couteau de poche | 1d4 tranchants | contact, 6/18 m | léger, finesse, lancer ; autorisé tel quel, mais sorti pour menacer c'est une arme par destination (un couteau à cran ou de combat est interdit sans motif légitime) | 15 € |
 | Matraque télescopique | 1d4 contondants | contact | légère ; arme de catégorie D, port interdit sans motif légitime | 30 € |
 | Manche de pioche ou barre de chantier | 1d6 contondants (1d8 à deux mains) | contact | polyvalente | 20 € |
 | Pistolet à impulsion électrique | aucun dégât | 3/9 m | un tir, voir plus bas ; soumis à autorisation en France, interdit en Belgique | 200 € |
@@ -178,13 +178,13 @@ Elles sont **illégales** pour un coursier, dans tous les pays du jeu. On ne les
 
 **Le pistolet à impulsion électrique.** Jet d'attaque à distance. Si le tir touche, la cible fait une sauvegarde d'Endurance DD 13. Échec : elle est incapable d'agir et sa vitesse tombe à 0 jusqu'à la fin de son prochain tour. Réussite : désavantage à ses attaques jusqu'à la fin de son prochain tour. Une même créature ne peut pas être touchée deux fois en dix minutes. Un tir, puis une action pour remettre une cartouche. Compte comme une scène où l'on tire pour l'Empreinte.
 
-**Les suites.** Un coup de feu entraîne une enquête de police, des témoins et une balle à retrouver. Un mort entraîne des mois de vigilance. Dans le jeu, on tire rarement, et on s'en souvient : l'Empreinte monte de 2 par scène où un coursier tire, plus 1 par blessé grave ou mort. Un coup de feu s'entend dans tout l'immeuble et dans la rue ; la police est prévenue avant que vous ayez quitté les lieux.
+**Les suites.** Un coup de feu entraîne une enquête de police, des témoins et une balle à retrouver. Un mort entraîne des mois de vigilance. Dans le jeu, on tire rarement, et on s'en souvient : l'Empreinte monte de 2 par scène où un coursier tire, plus 1 par blessé grave ou mort. Un coup de feu s'entend dans tout l'immeuble et dans la rue ; la police est prévenue avant que la Cellule ait quitté les lieux. Si ce sont des adversaires qui ouvrent le feu, la scène coûte 1 d'Empreinte (la Cellule quitte les lieux dans l'urgence) ; si un coursier tire aussi, le +2 s'ajoute au +1 du départ.
 
-**Le mourant.** Les points de vie suivent la cinquième édition. Une créature réduite à 0 PV par une arme à feu est **mourante** : elle meurt à la fin de son troisième tour sans soins, sans jet contre la mort. La stabiliser demande une action et un test de Médecine DD 12 (15 sous le feu). Ce qui est réduit à 0 PV par un coup de matraque ou de poing suit les règles ordinaires du chapitre 4.
+**Le mourant.** Les points de vie suivent la cinquième édition. Une créature réduite à 0 PV par une arme à feu est **mourante** : à la fin de chacun de ses trois premiers tours, elle fait une sauvegarde d'Endurance DD 10. Deux réussites la stabilisent ; sinon elle meurt à la fin de son troisième tour sans soins. Un nouveau coup de feu sur une créature mourante la tue. La stabiliser demande une action et un test de Médecine DD 12 (15 sous le feu). Ce qui est réduit à 0 PV par un coup de matraque ou de poing suit les règles ordinaires du chapitre 4.
 
 > **Exemple.**
 >
-> Dans un couloir d'hôtel, un homme tire sur Tomasz à bout portant et le touche : 12 PV, 7 dégâts, il en reste 5. Tomasz riposte, l'homme tombe à 0 PV d'une balle. Il est mourant. Hélène s'agenouille : Médecine, DD 15 sous le feu, mais elle n'a pas la compétence, elle fait 8. Il lui reste deux tours avant qu'il meure. Elle essaie une seconde fois pendant qu'une alarme se déclenche à l'étage. L'Empreinte monte de 2 pour la scène de tir, plus 1 pour le blessé grave.
+> Dans un couloir d'hôtel, un homme tire sur Tomasz à bout portant et le touche : 12 PV, 7 dégâts, il en reste 5. Tomasz riposte, l'homme tombe à 0 PV d'une balle. Il est mourant. À la fin de son premier tour, il fait sa sauvegarde d'Endurance DD 10 : 7, raté. Hélène s'agenouille : Médecine, DD 15 sous le feu, mais elle n'a pas la compétence, elle fait 8. À la fin de son deuxième tour, l'homme fait 13 : une réussite sur les deux qu'il lui faut. Hélène essaie une seconde fois pendant qu'une alarme se déclenche à l'étage, et fait 16 : il est stabilisé. L'Empreinte monte de 2 parce que Tomasz a tiré, de 1 pour le blessé grave, et de 1 quand le groupe quitte l'hôtel dans l'urgence : 4.
 
 ## Ce qu'on porte sur le dos
 
@@ -197,8 +197,7 @@ Presque personne ne porte d'armure : on porte des vêtements qui ont l'air de v�
 | Gilet pare-balles souple sous le manteau | 12 + Adresse | 600 €, au marché noir ou à l'étranger |
 | Gilet pare-balles à plaques | 15 + Adresse (au plus 2), désavantage en Discrétion | 1 400 € |
 
-Un gilet à plaques demande la maîtrise des armures intermédiaires, que le Garde du corps a. Il ne passe pas inaperçu : il se voit sous un manteau, et un contrôle qui le trouve pose des questions. Il n'y a pas de bouclier dans une rue de Marseille.
-
+Un gilet à plaques demande la maîtrise des armures intermédiaires, que le Garde du corps a. Il ne passe pas inaperçu : il se voit sous un manteau, et un contrôle qui le trouve pose des questions.
 Un gilet souple arrête une balle de pistolet, pas un couteau planté de haut en bas, ni le coup de trop. Il se porte sous le vêtement et change la CA, pas la douleur.
 
 ## Le repos
@@ -240,6 +239,7 @@ Le repos long est **interrompu** si les personnages passent au moins une heure �
 À la fin d'un repos long :
 
 - le personnage récupère **tous ses PV** ;
+- il retire **un niveau d'épuisement**, s'il a mangé et bu un repas complet (chapitre 7) ;
 - il récupère **la moitié de ses dés de vie** (la moitié de son nombre total de dés de vie, arrondie à l'inférieur, au minimum un) ;
 - **tous ses pouvoirs** reviennent, ceux de repos court comme ceux de repos long.
 
@@ -270,12 +270,12 @@ Quand le groupe cherche une chambre, un repas ou un endroit où se cacher hors d
 
 ## Gagner sa vie
 
-Un coursier est payé 2 400 € par mois sur sa carte, plus une prime de 300 à 1 500 € par mission réussie, que le MJ fait varier selon le risque, le client et l'urgence. Les frais passent par la Caisse, sur facture, quand elle rembourse. Un homme de main d'Ostrevent gagne 3 800 € par mois en virement.
+Le salaire et la prime sont ceux de la Caisse (voir plus haut). Le MJ fait varier la prime selon le risque, le client et l'urgence.
 
 ### Ce qu'un pli demande
 
 - **Porter.** Une enveloppe, une valise, une personne d'un point à un autre.
-- **Suivre.** Un homme, une voiture, une femme qui rentre chez elle tard.
+- **Suivre.** Un directeur financier qui rentre à pied, une voiture grise, un chauffeur de livraison.
 - **Entrer.** Dans un bureau, un appartement, un entrepôt, sans mandat.
 - **Convoyer.** Un véhicule, un fourgon, un camion, jusqu'à une adresse.
 - **Récupérer.** Un document, un coffret, un téléphone, avant quelqu'un d'autre.
@@ -325,9 +325,9 @@ Les personnages commencent au niveau 1 et peuvent monter jusqu'au niveau 20. Le 
 
 ### Par les points d'expérience
 
-Le MJ attribue des **points d'expérience** (XP) après chaque séance : pour les adversaires vaincus (battus, mis en fuite, ou évités par la ruse), pour les objectifs atteints, pour les scènes bien jouées. Quand le total d'un personnage atteint le seuil du niveau suivant, il monte.
+Le MJ attribue des **points d'expérience** (PX) après chaque séance : pour les objectifs atteints, les adversaires évités ou mis en fuite, les scènes bien jouées. Quand le total d'un personnage atteint le seuil du niveau suivant, il monte.
 
-| Niveau | XP requis | Bonus de maîtrise |
+| Niveau | PX requis | Bonus de maîtrise |
 |---|---|---|
 | 1 | 0 | +2 |
 | 2 | 300 | +2 |
@@ -370,7 +370,7 @@ On monte de niveau **après un repos long**, pas au milieu d'une scène.
 
 **L'amélioration de caractéristique** aux niveaux **4, 8, 12, 16 et 19** : +2 à une caractéristique, ou +1 à deux caractéristiques. Une valeur ne peut pas dépasser 20 de cette façon.
 
-**La sous-classe de ta classe** (Volant pour le Chauffeur, Terrain pour le Filocheur, Spécialité pour le Technicien, Table pour le Négociateur, Rôle pour l'Infiltré, Position pour le Tireur, Pratique pour le Médecin, Atelier pour le Faussaire, Méthode pour l'Analyste, Mission pour le Garde du corps) se choisit au **niveau 3**. Voir le chapitre des classes.
+**La sous-classe de ta classe** (Volant pour le Chauffeur, Terrain pour le Filocheur, Spécialité pour le Technicien, Table pour le Négociateur, Rôle pour l'Infiltré, Position pour le Tireur, Pratique pour le Médecin, Atelier pour le Faussaire, Méthode pour l'Analyste, Mission pour le Garde du corps) se choisit au **niveau 3**. Voir le chapitre 5.
 
 ### Ce que donne un niveau
 
@@ -379,7 +379,7 @@ Dans la Cellule, les niveaux hauts ne font pas des surhommes. Ils donnent des ge
 - **Niveaux 1 à 4** : on fait le travail, seul. Une couverture, un contact par ville.
 - **Niveaux 5 à 10** : un réseau. Un fournisseur, un médecin, un policier qui rend des services. On sait quel fournisseur est fiable.
 - **Niveaux 11 à 16** : un accès. Un conseiller d'un ministre, un juge, une rédaction, un banquier. On peut demander une faveur à quelqu'un qui compte.
-- **Niveaux 17 à 20** : un nom. On est connu des services, craint de certains, protégé par d'autres. Cela ne remplace pas une balle : une porte close ne s'ouvre pas parce qu'on est célèbre.
+- **Niveaux 17 à 20** : un nom. On est connu des services, craint de certains, protégé par d'autres. Cela ne remplace pas une balle. Une porte close reste close, même pour un nom connu.
 
 **Faveur de réseau** : une fois par séance au plus. À la première utilisation, le MJ donne un nom au contact ; c'est lui qu'on retrouve ensuite.
 

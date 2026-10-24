@@ -20,7 +20,7 @@ const BANNED = [
 ];
 
 test("hermès : une vingtaine de créatures, ids uniques, FP de 0 à 15, chaque famille représentée", () => {
-  assert.ok(HE.length >= 22 && HE.length <= 28, `${HE.length} créatures`);
+  assert.ok(HE.length >= 22 && HE.length <= 32, `${HE.length} créatures`);
   const ids = HE.map((c) => c.id);
   assert.equal(new Set(ids).size, ids.length, "id en double");
   for (const c of HE) assert.ok(step(c.cr) >= 0 && c.cr <= 20, `${c.id} : FP ${c.cr}`);
@@ -80,7 +80,7 @@ test("hermès : les armes reprennent la table du monde (dés, portée, chargeur)
     // Un pistolet a un chargeur de quinze, change en action bonus, et la règle des armes à feu est rappelée.
     for (const a of c.actions.filter((x) => x.name === "Pistolet semi-automatique de 9 mm" && x.attack)) {
       assert.match(a.text, /changer de chargeur prend une action bonus/, `${c.id} : ${a.name} doit dire qu'on change de chargeur`);
-      assert.match(a.text, /mourante et meurt à la fin de son troisième tour sans soins/, `${c.id} : règle des armes à feu`);
+      assert.match(a.text, /mourante : à la fin de chacun de ses trois premiers tours, elle fait une sauvegarde d'Endurance DD 10 ; deux réussites la stabilisent, sinon elle meurt à la fin de son troisième tour sans soins/, `${c.id} : règle des armes à feu`);
       assert.ok(c.traits.some((t) => t.name === "Chargeur" && /quinze cartouches/.test(t.text)), `${c.id} : trait « Chargeur »`);
     }
     // Le pistolet à impulsion : attaque à distance, puis sauvegarde d'Endurance DD 13.

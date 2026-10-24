@@ -5,6 +5,8 @@
 // Les sujets des planches clés viennent de shared/canon/hermes-peintures.ts, comme pour ComfyUI.
 // Rien du secret dans ce que lisent les joueurs : ni ce que le Service est devenu, ni ce que le Cabinet assemble, ni le Coffre, ni le Rachat.
 // Aucun logo, aucune marque, aucune vraie personne ; rien de la maison de luxe Hermès.
+// Mention légale à faire figurer aux crédits : « Hermès est ici un nom de code de fiction. Aucun lien avec une marque ou une société existante. »
+// (Le type Monde n'a pas de champ pour les mentions, CREDITS_SRD est commun à tous les mondes : à ajouter dans scripts/livres/communs.ts.)
 import { PEINTURES_HERMES as P } from "../../shared/canon/hermes-peintures";
 import type { Monde } from "./monde";
 
@@ -105,7 +107,7 @@ export const HERMES_LIVRES: Monde = {
       "Première séance": ["figure-meyssonnier", sujet("figure-meyssonnier"), "Dorian Meyssonnier, d'Ostrevent, observe la rue d'Ixelles depuis une camionnette grise."],
     },
     introRencontres: "Un combat à la Cellule se prépare comme dans la cinquième édition : on additionne les PX des adversaires, on corrige selon leur nombre, et on compare au seuil du groupe. Mais ici, un coup de feu s'entend dans tout l'immeuble, la police est prévenue avant que les coursiers aient quitté les lieux, et l'Empreinte monte de 2 par scène où l'on tire : comptez-la avant de compter les points de vie.",
-    encartRencontres: `<aside class="encart"><h4>Ce qu'un combat coûte</h4><p>Toutes les armes sont interdites aux coursiers. Un coup de feu entraîne une enquête, des témoins et une balle à retrouver. Un mort entraîne des mois de vigilance. Une créature réduite à 0 PV par une arme à feu est mourante : elle meurt à la fin de son troisième tour sans soins. Dans la plupart des scènes, on gagne en partant, en parlant ou en payant. Laissez toujours une sortie : un escalier de service, un train qui part, une foule.</p></aside>`,
+    encartRencontres: `<aside class="encart"><h4>Ce qu'un combat coûte</h4><p>Toutes les armes sont interdites aux coursiers. Un coup de feu entraîne une enquête, des témoins et une balle à retrouver. Un mort entraîne des mois de vigilance. Une créature réduite à 0 PV par une arme à feu est mourante : à la fin de chacun de ses trois premiers tours, elle fait une sauvegarde d'Endurance DD 10, et deux réussites la stabilisent ; sinon elle meurt à la fin de son troisième tour sans soins. Dans la plupart des scènes, on gagne en partant, en parlant ou en payant. Laissez toujours une sortie : un escalier de service, un train qui part, une foule.</p></aside>`,
     chapeauRencontres: "Les chiffres de la cinquième édition, et ce que l'Empreinte et la loi y changent.",
     planchesScenarios: { "bib-he-coffret-d-ixelles": "harsh direct flash in a narrow stairwell, an old translator's office in a Brussels townhouse, a grey cardboard archive box on a cluttered desk beside a cup of tea, an elderly man in a cardigan holding an envelope against his chest, a grey van parked in the street seen through a rain-streaked window" },
     couverture: sujet("couverture-mj"),

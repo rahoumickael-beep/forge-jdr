@@ -2,11 +2,11 @@
 
 Au deuxième sous-sol d'un parking d'Ixelles, un tube fluorescent sur deux grésille. Un homme sort de derrière un pilier de béton, une matraque télescopique déployée le long de la cuisse, et le bruit de ses semelles revient quatre fois depuis les murs nus. Au bout de la rampe, une barrière attend qu'on lui présente un ticket. Une berline grise est garée en travers de la sortie, vitres teintées, sans plaque de société. Personne n'a encore crié. Au rez-de-chaussée, dans la loge de la gardienne, une télévision parle toute seule.
 
-Ce chapitre donne les règles pour se battre, du premier regard au dernier jet : le parking, un hall d'immeuble, l'escalier de service d'un hôtel, le quai d'une gare à dix-huit heures. Il dit aussi ce qui se joue autour d'un coup de poing ou d'un coup de feu : fuir, suivre quelqu'un, entrer quelque part, parler, se rendre, se faire arrêter et en sortir. Les armes, l'argent et la règle du mourant sont au chapitre 3, le matériel au chapitre 6, les états au chapitre 7. Pour chaque geste, ce chapitre compte aussi ce qu'il coûte en Empreinte.
+Armes, argent et règle du mourant : chapitre 3. Matériel : chapitre 6. États : chapitre 7.
 
 > **Si tu viens d'un autre jeu.**
 >
-> Le combat suit la cinquième édition : rounds de six secondes, cases de 1,5 m, initiative au d20, une action, un déplacement, une action bonus et une réaction par tour. Trois choses changent dans la Cellule. Un pistolet tient quinze cartouches et se recharge en action bonus, mais chaque scène où un coursier tire coûte de l'Empreinte au groupe entier. Une créature réduite à 0 PV par une balle n'a pas de jet contre la mort : elle a trois tours. Et très peu de pouvoirs soignent en pleine mêlée : la *Trousse de terrain* du Médecin et le *Second souffle* du Tireur et du Garde du corps.
+> Le combat suit la cinquième édition : rounds de six secondes, cases de 1,5 m, initiative au d20, une action, un déplacement, une action bonus et une réaction par tour. Trois choses changent dans la Cellule. Un pistolet tient quinze cartouches et se recharge en action bonus, mais chaque scène où un coursier tire coûte de l'Empreinte au groupe entier. Une créature réduite à 0 PV par une balle ne suit pas les jets contre la mort ordinaires : elle a trois tours et deux sauvegardes d'Endurance à réussir (chapitre 3). Et très peu de pouvoirs soignent en pleine mêlée : la *Trousse de terrain* du Médecin et le *Second souffle* du Tireur et du Garde du corps.
 
 ## Le déroulé d'un combat
 
@@ -18,7 +18,7 @@ Un combat se découpe en **rounds** de six secondes. Pendant un round, chaque pa
 4. **On joue les tours**, du résultat le plus haut au plus bas.
 5. **Le round suivant** reprend dans le même ordre, jusqu'à ce que le combat s'arrête : fuite, reddition, quelqu'un à terre, quelqu'un qui a trouvé quoi dire, ou une sirène au bout de la rue.
 
-Un combat dure peu. Dix rounds font une minute, et presque personne n'attend le dixième. Un homme de main payé 3 800 € par mois a un loyer, des enfants, et un patron qui déteste les articles de presse : il ne se fait pas tuer pour une chemise cartonnée. Un vigile appelle du renfort au lieu de s'interposer. Un chauffeur garde le moteur tournant et regarde ses rétroviseurs. Presque tous les adversaires de la Cellule arrêtent de se battre au premier de leurs camarades qui tombe, et le MJ le joue ainsi.
+Un combat dure peu. Dix rounds font une minute, et presque personne n'attend le dixième. Un homme de main payé au virement a un loyer, des enfants, et un patron qui déteste les articles de presse : il ne se fait pas tuer pour une chemise cartonnée. Un vigile appelle du renfort au lieu de s'interposer. Un chauffeur garde le moteur tournant et regarde ses rétroviseurs. Presque tous les adversaires de la Cellule arrêtent de se battre au premier de leurs camarades qui tombe, et le MJ le joue ainsi.
 
 ## La surprise
 
@@ -31,7 +31,7 @@ Quand un camp ne s'attend pas à l'autre, il peut être **surpris**.
 - Le MJ tient compte de la lumière. Dans la lumière faible, la Perception passive baisse de 5 pour tout ce qui se voit. Un parking dont un tube sur deux est mort, une ruelle sans lampadaire, un quai à quatre heures du matin : c'est là que l'on se fait surprendre.
 - Quelqu'un qui reste derrière une vitre teintée n'est pas remarquable avant d'avoir baissé la vitre. Le MJ ne lance aucun dé pour lui.
 
-Cinq pouvoirs jouent sur cette règle. Le Garde du corps repère ce qui menace la personne qu'il protège (*Périmètre*, niveau 1) et ne tombe pas dans une embuscade ordinaire sur un trajet qu'il a reconnu (*Itinéraire repéré*, niveau 9). Le Tireur donne le désavantage à la première attaque de qui l'approche sans qu'il l'ait vu (*Distance tenue*, niveau 9). La Garde rapprochée ne peut pas être surprise tant qu'elle est consciente, et la personne qu'elle protège non plus, si elle se tient à 3 m d'elle (*Voir avant*, niveau 11). L'Analyste de renseignement, lui et ses alliés, n'est pas surpris par une action qu'il a pu anticiper (*Signal faible*, niveau 15).
+Cinq pouvoirs jouent sur cette règle : *Périmètre* (niveau 1), *Itinéraire repéré* et *Distance tenue* (niveau 9), *Voir avant* (niveau 11) et *Signal faible* (niveau 15). Leurs effets sont au chapitre 5.
 
 ## L'initiative
 
@@ -39,7 +39,7 @@ Au début du combat, chacun fait un **test d'Adresse** : c'est son initiative (c
 
 Forge JdR range les pions dans l'ordre d'initiative. L'ordre ne change plus, sauf si quelqu'un perd connaissance ou quitte la carte. Un personnage surpris garde sa place dans l'ordre, mais il perd son premier tour.
 
-Aux premiers niveaux, l'Adresse décide : Inès, à +2, passe avant Hélène, à +1. Un seul pouvoir ajoute à l'initiative : le Tireur de proximité entre dans une pièce avec l'avantage à l'initiative et à sa première attaque contre qui ne l'attendait pas (*Entrer dans la pièce*, niveau 11).
+Aux premiers niveaux, l'Adresse décide : Inès, à +2, passe avant Hélène, à +1. Un seul pouvoir joue sur l'initiative : *Entrer dans la pièce* (Tireur de proximité, niveau 11, chapitre 5).
 
 ## Ton tour
 
@@ -58,11 +58,11 @@ Ta vitesse est de **9 m (6 cases)**, comme celle de toutes les origines. Tu la r
 
 ### Les actions bonus
 
-Une action bonus est un geste rapide que seuls un pouvoir, une arme ou une règle permettent. Le plus courant : **changer de chargeur** d'un pistolet semi-automatique. Parmi les pouvoirs : un manteau retourné pour ne plus être reconnu (*Changer de silhouette*, niveau 1), un second souffle pris en pleine mêlée (*Second souffle*, niveau 1), un mot soufflé à un allié (*Le mot juste*, niveau 1), un pas de côté pour se cacher (*Fausse sortie*, niveau 2), trois mètres vers un pilier (*Prendre un couvert*, niveau 2), un allié que l'on fait passer devant soi (*Sortie dégagée*, niveau 2). Sans l'un de ces moyens, tu n'as pas d'action bonus.
+Une action bonus est un geste rapide que seuls un pouvoir, une arme ou une règle permettent. Le plus courant : **changer de chargeur** d'un pistolet semi-automatique. Parmi les pouvoirs : *Changer de silhouette*, *Second souffle* et *Le mot juste* (niveau 1), *Fausse sortie*, *Prendre un couvert* et *Sortie dégagée* (niveau 2), décrits au chapitre 5. Sans l'un de ces moyens, tu n'as pas d'action bonus.
 
 ### Les gestes sans coût
 
-Pendant ton tour, tu as droit à **une interaction avec un objet** sans dépenser d'action : sortir ou ranger une arme, ouvrir une portière, tourner une clef de contact, déployer une matraque télescopique, pousser une porte. Une deuxième interaction demande ton action. Dire une phrase courte ou crier un nom ne coûte rien.
+Pendant ton tour, tu as droit à **une interaction avec un objet** sans dépenser d'action : sortir ou ranger une arme, ouvrir une portière, tourner une clé de contact, déployer une matraque télescopique, pousser une porte. Une deuxième interaction demande ton action. Dire une phrase courte ou crier un nom ne coûte rien.
 
 Un personnage a au plus deux armes en main. Un téléphone, une lampe ou une chemise cartonnée occupent une main.
 
@@ -112,7 +112,7 @@ Tu fouilles du regard ou à tâtons : test d'Instinct (Perception) ou de Savoir 
 
 ### Utiliser un objet
 
-Quand un objet demande plus qu'une interaction : dégager une arme enrayée, poser une balise sous un véhicule (Escamotage DD 12 sans être vu), crocheter une serrure (Adresse DD 15 en combat, avec le kit), panser une plaie (Médecine DD 12), couper une sangle. Remplir un chargeur avec des cartouches en vrac prend une minute : on ne le fait pas en combat.
+Quand un objet demande plus qu'une interaction : dégager une arme enrayée, poser une balise sous un véhicule (Escamotage DD 12 sans être vu), crocheter une serrure (Adresse DD 12, +3 sous pression, soit 15 en combat, avec le kit), panser une plaie (Médecine DD 12), couper une sangle. Remplir un chargeur avec des cartouches en vrac prend une minute : on ne le fait pas en combat.
 
 ### Stabiliser un mourant
 
@@ -169,7 +169,7 @@ La table des armes est au chapitre 3. Voici ce qu'elle change à la table.
 - **Le chargeur.** Changer de chargeur prend une action bonus, si tu en as un autre chargé sur toi. Un pistolet qui s'enraye (1 naturel au d20) demande une action pour être dégagé. Le fusil de chasse tient deux cartouches et se recharge en une action.
 - **Le bout portant.** Un tir à 1,5 m ou moins n'a pas le désavantage des attaques à distance au contact. Quand la cible est **surprise**, elle fait une sauvegarde d'Endurance DD 15 : sur un échec, elle tombe à terre et ne peut que ramper jusqu'à la fin du premier tour où elle peut agir. Le Tireur de proximité n'a pas besoin de la surprise : à 4,5 m ou moins, sa cible fait la sauvegarde même si elle l'attendait (*Tir à bout portant*, niveau 3).
 - **Le pistolet à impulsion.** Un jet d'attaque à distance, sans dégâts. Si le tir touche, la cible fait une sauvegarde d'Endurance DD 13 : sur un échec, elle est incapable d'agir et sa vitesse tombe à 0 jusqu'à la fin de son prochain tour ; sur une réussite, elle a le désavantage à ses attaques jusqu'à la fin de son prochain tour. La même créature ne se touche qu'une fois en dix minutes. Le tir compte comme une scène où l'on tire pour l'Empreinte.
-- **Viser bas.** Le Tireur peut renoncer à la moitié des dégâts d'un tir qui touche : la cible fait une sauvegarde d'Endurance, ou sa vitesse tombe à 0 jusqu'à la fin de son prochain tour (*Viser bas*, niveau 2).
+- **Viser bas.** Voir *Viser bas* (Tireur, niveau 2, chapitre 5).
 - **Le bruit.** Un coup de feu dans un parking, un hall ou une cage d'escalier s'entend de tout le niveau et de l'étage au-dessus. Savoir d'où il est parti demande un test d'Instinct (Perception) DD 12 dans un lieu clos, avec le désavantage dans un parking, où les murs renvoient tout.
 
 > **Après le coup de feu.**
@@ -214,13 +214,13 @@ Des piliers de béton tous les 7,5 m (cinq cases), des places numérotées, une 
 - **La lumière** est faible presque partout : un tube sur deux est mort, et les lampes de secours rougissent les murs. La Perception passive baisse de 5 pour ce qui se voit.
 - **L'écho.** Tout bruit revient trois fois. Les tests de Perception qui reposent sur l'ouïe se font avec le désavantage.
 - **La caméra** de la barrière est connue du MJ : il dit ce qu'elle couvre. Qui est filmé nettement dans une scène d'action fait monter l'Empreinte de 1 (chapitre 3). Le fond d'un sous-sol, derrière trois rangées de voitures, n'est souvent couvert par rien.
-- **Les sorties** sont trois : la rampe, l'escalier, l'ascenseur. L'ascenseur se retient d'une main, s'arrête entre deux étages, et ne contient que quatre personnes. Aucun de ceux qui s'y battent n'a de couvert.
+- **Les sorties** sont trois : la rampe, l'escalier, l'ascenseur. L'ascenseur peut s'arrêter entre deux étages ; il ne contient que quatre personnes. Aucun de ceux qui s'y battent n'a de couvert.
 
 ### Le hall d'immeuble
 
 Un sol en marbre ciré, une porte à tambour, un interphone, une loge de gardien, un ascenseur, un escalier avec une rampe de bois. Un immeuble de bureaux la nuit, un immeuble d'habitation à six heures du matin, un hôtel de gare.
 
-- **Le sol.** Une créature qui Fonce sur un sol mouillé ou ciré fait une sauvegarde d'Adresse DD 10, ou tombe à terre à mi-course.
+- **Le sol.** Une créature qui fonce sur un sol mouillé ou ciré fait une sauvegarde d'Adresse DD 10, ou tombe à terre à mi-course.
 - **La porte à tambour** n'accepte que deux personnes. Qui y entre pour fuir bloque le suivant d'un tour. Elle se bloque d'un coup de pied ou d'une chaise (Force DD 12).
 - **Les vitres** sont de verre : CA 13, et elles tombent en morceaux. Un coup de feu les fait éclater, et le bruit se retrouve dans la rue.
 - **La loge** a un gardien ou une concierge qui voit les entrées. Il appelle, ou il se cache. Un gardien que l'on a bien traité est un allié ; un gardien que l'on a bousculé est un témoin.
@@ -284,10 +284,10 @@ Une poursuite se joue en **points d'avance**.
 - **Qui gagne le round.** Si le poursuivi réussit et le poursuivant échoue, le poursuivi gagne 1 point d'avance. Dans le cas inverse, il en perd 1. Dans les autres cas, rien ne bouge.
 - **La fin.** À **3 points d'avance**, la poursuite est gagnée : le poursuivi disparaît de la vue. À **−3**, elle est perdue : le poursuivant le rattrape, l'empoigne ou le coince. Le MJ peut y mettre fin plus tôt si un obstacle l'impose.
 - **Les chutes.** À pied, un échec de 5 ou plus au test oblige à une sauvegarde d'Adresse DD 12 : sur un échec, le coureur tombe à terre et subit 1d4 dégâts contondants.
-- **Les collisions.** Au volant, un échec au test signifie que le véhicule heurte quelque chose. Chaque occupant fait une sauvegarde d'Adresse DD 13 : 2d6 dégâts contondants, moitié si elle réussit. *Freinage court* (Chauffeur, niveau 1) est une réaction : le véhicule ne subit que la moitié des dégâts de collision, et ses occupants ont l'avantage à leur sauvegarde.
+- **Les collisions.** Au volant, un échec au test signifie que le véhicule heurte quelque chose. Chaque occupant fait une sauvegarde d'Adresse DD 13 : 2d6 dégâts contondants, moitié si elle réussit. *Freinage court* (Chauffeur, niveau 1, réaction) : un obstacle, un piéton, un choc, et le véhicule que tu conduis ne subit que la moitié des dégâts de collision, ses occupants ayant l'avantage à leurs sauvegardes.
 - **La vitesse.** Dans un parking, un véhicule avance de 18 m par round ; en ville, de 60 m. Une poursuite qui sort d'un parking passe de l'un à l'autre en un round.
 
-Les pouvoirs de la route comptent ici. Le Chauffeur a l'avantage à ses tests d'Adresse au volant (*Les mains sur le volant*, niveau 1). Son *Itinéraire de repli* (niveau 1), fixé une heure avant l'opération, retire le désavantage aux tests de tout le groupe pour échapper à une poursuite ou à une filature tant qu'il le suit. *Contre-filature* (niveau 5) lui dit, après dix minutes de trajet, si un véhicule le suit : un test de Perception contre la Discrétion du suiveur. *Retrait propre* (niveau 7) lui permet de quitter un lieu dans l'urgence sans faire monter l'Empreinte, sur un test d'Adresse au volant DD 13. Le Convoyeur coupe par une rampe ou une cour : le poursuivant fait un test d'Adresse, ou perd son véhicule de vue (*Couper par la rampe*, niveau 7). Une plaque lue par une caméra fait monter l'Empreinte de 1 ; *Plaques propres* (niveau 2) et *Trajet sans caméra* (niveau 9) s'y opposent.
+Les pouvoirs de la route comptent ici (chapitre 5) : *Les mains sur le volant*, *Itinéraire de repli* et *Contre-filature* du Chauffeur, son *Retrait propre* (niveau 7), *Couper par la rampe* du Convoyeur (niveau 7), *Plaques propres* (niveau 2) et *Trajet sans caméra* (niveau 9) pour les plaques. Une plaque lue par une caméra que le MJ connaît, pendant une poursuite, compte comme être filmé nettement (+1, chapitre 3).
 
 > **Dans le hall.**
 >
@@ -297,7 +297,7 @@ Les pouvoirs de la route comptent ici. Le Chauffeur a l'avantage à ses tests d'
 >
 > *Deuxième round.* Obstacle : le sol ciré du hall. Karim fait 15 au dé, +2 : 17. Réussi. Le vigile fait 4 au dé, +1 : 5. Raté. Karim regagne 1 point : 0.
 >
-> *Troisième round.* Obstacle : un escalier de service qui tourne. Karim fait 18, +2 : 20. Le vigile fait 7, +1 : 8. +1 : Karim est à 1.
+> *Troisième round.* Obstacle : un escalier de service qui tourne. Karim fait 18, +2 : 20. Le vigile fait 7, +1 : 8, raté. Karim, réussi, gagne 1 point : il est à 1.
 >
 > *Quatrième round.* Obstacle : un camion de livraison qui bloque la rue. Karim fait 12, +2 : 14. Réussi. Le vigile fait 6, +1 : 7. Raté. Karim est à 2.
 >
@@ -313,11 +313,11 @@ Suivre quelqu'un à pied ou en voiture est le métier du Filocheur et de beaucou
 | Une personne qui se méfie (elle a vu deux fois le même visage, elle a déjà eu peur) | Un test actif d'Instinct (Perception), avec avantage |
 | Un policier, un chauffeur d'Ostrevent, quelqu'un du métier | Sa Perception passive + 5, ou un test actif |
 
-- Dans une foule, une gare ou un transport en commun, le suiveur a l'avantage à son test. Dans une rue vide, à quatre heures du matin, il a le désavantage. Le Filocheur ne perd pas sa cible de vue tant qu'elle reste à moins de 18 m dans la foule (*Dans le flux*, niveau 1).
-- Un échec de 5 ou plus au jet fait monter l'Empreinte de 1 (chapitre 3). Le Filocheur peut éviter ce point une fois par mission, en abandonnant à temps (*Lâcher la filature*, niveau 2).
-- Un manteau retourné, une casquette ôtée, un sac changé de main : la cible qui vient de voir le Filocheur ne le reconnaît pas (*Changer de silhouette*, niveau 1).
-- Passer la cible à un allié prépare le suivant (*Relais*, niveau 5). Trois suiveurs peuvent se partager une cible sur une journée, avec un seul test (*Filature à trois*, niveau 15).
-- Le Chauffeur sait si un véhicule le suit (*Contre-filature*, niveau 5).
+- Dans une foule, une gare ou un transport en commun, le suiveur a l'avantage à son test. Dans une rue vide, à quatre heures du matin, il a le désavantage. *Dans le flux* (Filocheur, niveau 1) aide à garder la cible.
+- Un échec de 5 ou plus au jet fait monter l'Empreinte de 1, une fois par filature (chapitre 3). *Lâcher la filature* (niveau 2) l'évite.
+- *Changer de silhouette* (niveau 1) sert à ne pas être reconnu de la cible.
+- *Relais* (niveau 5) et *Filature à trois* (niveau 15) partagent la cible entre suiveurs.
+- *Contre-filature* (Chauffeur, niveau 5) renverse la situation.
 
 Une filature réussie ne laisse rien. Une filature ratée de peu laisse un doute : la cible change de trottoir, entre dans un café, sort par l'autre porte. Le MJ le joue.
 
@@ -326,12 +326,12 @@ Une filature réussie ne laisse rien. Une filature ratée de peu laisse un doute
 Entrer quelque part où l'on n'a rien à faire se joue en quatre temps : le prétexte, l'accès, le parcours, la sortie.
 
 - **Le prétexte.** Un livreur, un technicien, un visiteur, un client. Le MJ fixe un DD selon l'**attitude** de celui qui garde : **10** pour qui a envie d'aider (un agent d'accueil qui s'ennuie, un collègue), **15** pour qui est indifférent (un vigile à son poste), **20** pour qui est sur ses gardes (un site qui s'est alerté, une zone interdite). Le test est un test de Présence (Tromperie, Persuasion ou Représentation).
-- **La tenue.** Un gilet de chantier, une casquette, des gants fins, un badge d'emprunt : le DD du premier test de Tromperie de la scène baisse de 2. L'Infiltré a l'avantage avec la tenue de son rôle (*Quelqu'un qui doit être là*, niveau 1). Les deux ne se cumulent pas.
-- **L'accès.** Un badge, une serrure, un digicode. Le Technicien ouvre ce qui est fermé (*Ce qui est fermé*, niveau 1). Crocheter une serrure à cylindre : Adresse DD 12 ; une serrure de sûreté : DD 15 ; un lecteur de badge : Savoir DD 15.
-- **Le parcours.** Une caméra qui voit le couloir, un vigile qui repasse toutes les huit minutes, un employé qui demande « Vous êtes avec qui ? ». Test de groupe de Discrétion, ou une nouvelle réponse au prétexte.
+- **La tenue.** Un gilet de chantier, une casquette, des gants fins, un badge d'emprunt : voir le matériel du chapitre 3. L'Infiltré a l'avantage avec la tenue de son rôle (*Quelqu'un qui doit être là*, niveau 1). Les deux ne se cumulent pas.
+- **L'accès.** Un badge, une serrure, un digicode. Le Technicien ouvre ce qui est fermé (*Ce qui est fermé*, niveau 1). Crocheter une serrure à cylindre : Adresse DD 12, +3 sous pression ; une serrure de sûreté : DD 15 ; un lecteur de badge : Savoir DD 15.
+- **Le parcours.** Une caméra qui voit le couloir, un veilleur qui ferme les portes toutes les huit minutes, un employé qui demande « Vous êtes avec qui ? ». Test de groupe de Discrétion, ou une nouvelle réponse au prétexte.
 - **La sortie.** Elle est plus difficile que l'entrée. Quitter un lieu après une alerte demande un nouveau prétexte, ou une fuite.
 
-Un échec de 5 ou plus fait monter l'Empreinte de 1. Un échec plus léger laisse un doute que l'agent d'accueil garde pour lui jusqu'à ce qu'il en parle à quelqu'un.
+Un échec de 5 ou plus fait monter l'Empreinte de 1, une fois par infiltration. Un échec plus léger laisse un doute que l'agent d'accueil garde pour lui jusqu'à ce qu'il en parle à quelqu'un.
 
 ## Se rendre, parler, être arrêté
 
@@ -362,7 +362,7 @@ Négocier se fait avec la voix, au milieu du combat, à ton tour : c'est une **a
 
 Un DD ne descend jamais sous 10, et le MJ garde le dernier mot. Une attitude change en cours de scène : un homme indifférent le temps d'une conversation devient hostile dès que tu l'as frappé. Une négociation réussie arrête le combat. Elle laisse une trace : un homme que tu as payé te reconnaît dans une rue de Marseille, un vigile qui t'a laissé partir se souvient de ton visage. Payer plus de 1 000 € en espèces en France fait monter l'Empreinte de 1 (chapitre 3) : pour deux adversaires, 400 € passent, 1 200 € ne passent pas.
 
-Quelques pouvoirs prolongent la parole. *Désamorcer* (Négociateur, niveau 7) fait hésiter une créature à 9 m qui allait crier, frapper ou appeler, jusqu'à la fin de son prochain tour. *Trois silences* (Négociateur, niveau 2) fait dire à une créature plus qu'elle ne voulait. *L'accord est signé* (Négociateur, niveau 17) obtient, après une heure, une trêve de vingt-quatre heures entre deux camps hostiles.
+Quelques pouvoirs prolongent la parole : *Trois silences* (Négociateur, niveau 2), *Désamorcer* (niveau 7) et *L'accord est signé* (niveau 17), au chapitre 5.
 
 ### L'arrestation et ses suites
 
@@ -370,15 +370,15 @@ Un coursier arrêté reste à la table : la scène continue de l'autre côté de
 
 - **L'interpellation.** « Police, les mains où je les vois. » Obéir ne demande aucun jet. Fuir ouvre une poursuite (plus haut). Frapper un policier ou lui tirer dessus est la pire décision que décrit ce chapitre : l'Empreinte monte comme pour tout tir (chapitre 3), et la police ne lâche plus l'affaire.
 - **La fouille.** Une arme, 10 000 € ou plus en espèces, de faux papiers ou un téléphone qui n'est pas à ton nom mènent à une garde à vue.
-- **La garde à vue.** 24 heures, renouvelables une fois (48 heures au plus). Un avocat commis d'office arrive après quelques heures. Personne ne téléphone pour te sortir de là.
-- **L'interrogatoire.** Chaque heure d'interrogatoire, le MJ demande une **sauvegarde de Présence**. DD 13 face à un policier ordinaire, DD 15 face à un enquêteur de police judiciaire, DD 17 si deux versions du même fait ne concordent pas. Sur un échec, tu dis une chose de plus que tu ne voulais, que le MJ choisit parmi ce que ton personnage sait. Elle est écrite. Se taire, sur le conseil de l'avocat, donne l'avantage à la sauvegarde. Mentir demande un test de Présence (Tromperie) contre l'Intuition de l'enquêteur, à chaque fois, sur chaque détail ; la même version, à chaque question.
+- **La garde à vue.** En France, 24 heures, renouvelables une fois (48 heures au plus) ; un avocat commis d'office arrive après quelques heures. En Belgique, c'est une arrestation judiciaire de 24 heures, puis un juge d'instruction décide : le suspect voit son avocat avant le premier interrogatoire. Ailleurs, le MJ garde ces durées et change le mot. Personne ne téléphone pour te sortir de là.
+- **L'interrogatoire.** À chaque interrogatoire (au plus deux par jour), le MJ demande une **sauvegarde de Présence**. DD 13 face à un policier ordinaire, DD 15 face à un enquêteur de police judiciaire, DD 17 si deux versions du même fait ne concordent pas. Sur un échec, tu dis une chose de plus que tu ne voulais, que le MJ choisit parmi ce que ton personnage sait. Elle est écrite. Se taire, sur le conseil de l'avocat, donne l'avantage à la sauvegarde. Mentir demande un test de Présence (Tromperie) contre l'Intuition de l'enquêteur, à chaque fois, sur chaque détail ; la même version, à chaque question.
 - **Les nuits.** Passer deux jours en garde à vue sans repos long demande une sauvegarde d'Endurance DD 10 à la fin : un niveau d'épuisement sur un échec (chapitre 7).
 - **La couverture.** On te prend les empreintes et une photographie. La couverture avec laquelle tu as été arrêté est reliée à ton visage : elle est brûlée (chapitre 3). L'Empreinte ne baisse pas pour cela : la baisse de 2 est réservée à celui qui brûle sa couverture à temps.
 - **La sortie.** Une garde à vue peut finir en libération, avec ou sans convocation, ou en défèrement devant un juge. Le MJ décide, et les autres joueurs peuvent peser : une avocate qui arrive dans l'heure (carte « Une avocate pénaliste », chapitre 6), un témoin qui change de version, un dossier classé sans suite. Ni la Traitante ni le Service ne téléphonent.
 
 > **Une garde à vue.**
 >
-> Tomasz a été fouillé à un contrôle de gare, pistolet sous le manteau. On l'emmène dans un commissariat de Paris. Au bout de sept heures, un avocat commis d'office entre dans la pièce et lui conseille de ne rien dire. Le premier interrogatoire est celui d'un policier ordinaire : sauvegarde de Présence DD 13. Tomasz, Présence +0, fait 8 : raté. Il explique que le pistolet lui a été donné par un ancien camarade, et le policier écrit « ancien camarade ». Au deuxième, l'avocat lui conseille de se taire : l'avantage. Deux d20 : 14 et 6. Il garde 14 : réussi. Il répond « Je n'ai rien à déclarer » à chaque question. Quarante heures plus tard, il sort avec une convocation. Sa couverture, Thomas Vidal, est brûlée. La Traitante lui en prépare une neuve, pour 800 € et dix jours, et son pistolet est resté au commissariat.
+> Tomasz a été fouillé à un contrôle de gare, pistolet sous le manteau. On l'emmène dans un commissariat de Paris. Au bout de sept heures, un avocat commis d'office entre dans la pièce et lui conseille de ne rien dire. Le premier interrogatoire est celui d'un policier ordinaire : sauvegarde de Présence DD 13. Tomasz, Présence +0, fait 8 : raté. Il explique que le pistolet lui a été donné par un ancien camarade, et le policier écrit « ancien camarade ». Au deuxième, l'avocat lui conseille de se taire : l'avantage. Deux d20 : 14 et 6. Il garde 14 : réussi. Il répond « Je n'ai rien à déclarer » à chaque question. Quarante-quatre heures plus tard, le parquet le fait déférer. Un juge le laisse sortir sous contrôle judiciaire, avec interdiction de quitter le territoire. Sa couverture, Thomas Vidal, est brûlée… et le pistolet est resté sous scellés. La Traitante lui en prépare une neuve, pour 800 € et dix jours.
 
 ## Ce qui ne se combat pas
 
@@ -411,6 +411,7 @@ Une attaque qui touche fait les dégâts de l'arme (1d10 pour un pistolet), plus
 | Perforants | Balle |
 | Tranchants | Couteau, verre brisé |
 | Feu | Incendie de voiture ou de local |
+| Électriques (la « foudre » du code des fiches) | Câble dénudé, armoire forcée |
 
 Le pistolet à impulsion ne fait aucun dégât. Il fait des états (chapitre 7).
 
@@ -437,7 +438,7 @@ Une voiture qui brûle, un local de moquette qui prend, un bidon d'essence renve
 
 On récupère des PV par le repos (chapitre 3), par les pouvoirs de soin (*Trousse de terrain*, niveau 1, *Second souffle*, niveau 1 du Tireur et du Garde du corps), par les soins d'un médecin (chapitre 2, « Médecine »). Les PV rendus s'ajoutent au total, sans dépasser le maximum. Un mort ne récupère rien. Un personnage à 0 PV qui récupère au moins 1 PV **reprend conscience** et peut agir à son prochain tour.
 
-Le Médecin stabilise un allié qui tombe à 0 PV à 1,5 m de lui, y compris par une balle, et lui rend 1 PV aussitôt (*Premiers gestes*, niveau 1). Le Garde du corps met un allié à couvert quand il tombe, et celui-ci reste à 1 PV (*Couvrir*, niveau 7).
+*Premiers gestes* (Médecin, niveau 1) et *Couvrir* (Garde du corps, niveau 7) sont décrits au chapitre 5.
 
 ## Tomber à 0 PV
 
@@ -445,7 +446,7 @@ Quand un personnage tombe à 0 PV, ce qui l'a mis à terre décide de la suite.
 
 ### Par une arme à feu : le mourant
 
-Une créature réduite à 0 PV par une arme à feu est **mourante** : inconsciente, à terre, elle **meurt à la fin de son troisième tour** sans soins. Il n'y a pas de jet contre la mort. Les tours se comptent à partir du premier tour de la créature qui suit sa chute : tombée au milieu d'un round, elle laisse passer son tour de ce round, puis les deux suivants. Un nouveau coup de feu sur une créature mourante la tue.
+Une créature réduite à 0 PV par une arme à feu est **mourante** : inconsciente, à terre. À la fin de chacun de ses trois premiers tours, elle fait une **sauvegarde d'Endurance DD 10**. Deux réussites la stabilisent ; sinon elle **meurt à la fin de son troisième tour** sans soins. Les tours se comptent à partir du premier tour de la créature qui suit sa chute : tombée au milieu d'un round, elle laisse passer son tour de ce round, puis les deux suivants. Un nouveau coup de feu sur une créature mourante la tue.
 
 - **La stabiliser** demande une action et un test d'**Instinct (Médecine) DD 12** (DD 15 sous le feu, c'est-à-dire tant qu'un adversaire peut tirer sur elle ou sur toi). Sur un échec, tu peux recommencer au tour suivant.
 - Un allié qui **t'aide** (tenir la lampe, appuyer sur la plaie) te donne l'avantage au test.
@@ -503,26 +504,26 @@ Un coup se compte pour le groupe entier. L'Empreinte (chapitre 3) est un nombre 
 | Chaque créature réduite à 0 PV ou tuée, une fois par créature et par scène | +1 |
 | La Cellule quitte le lieu dans l'urgence (porte forcée, alarme, cri, départ en voiture) | +1 |
 | Une caméra connue du MJ filme nettement une scène d'action | +1 |
-| Seuls des adversaires ouvrent le feu | +1 pour la scène, qui est celui du départ dans l'urgence ; pas de +2 |
-| Le MJ annonce qu'un témoin parle à un policier ou qu'un chauffeur prévient | Les joueurs l'annulent en prenant 1 d'Empreinte |
+| Seuls des adversaires ouvrent le feu | +1 pour la scène (le départ dans l'urgence), pas de +2. Si un coursier tire, le +2 s'ajoute. |
+| Le MJ annonce qu'un témoin parle à un policier ou qu'un chauffeur prévient | Les joueurs l'annulent en prenant 1 d'Empreinte, si ce point ne franchit aucun seuil |
 
 Plusieurs pouvoirs en annulent un point (chapitre 5), et le plafond du chapitre 3 reste le même : au plus 3 points de moins par mission, tous moyens confondus.
 
-Les seuils se franchissent en cours de scène, et leurs effets s'appliquent aussitôt. À **3**, un voisin, un hôtelier ou un policier peut répondre à une question sur vous. À **5**, les DD de Discrétion et de Tromperie montent de 2 là où vous avez opéré. À **7**, une de vos couvertures est reliée à votre nom. À **10**, la Cellule ne peut plus rester.
+Les seuils se franchissent en cours de scène, et leurs effets s'appliquent aussitôt. À **3**, un voisin, un hôtelier ou un policier peut répondre à une question sur la Cellule. À **5**, les DD de Discrétion et de Tromperie montent de 2 là où la Cellule a opéré. À **7**, une de ses couvertures est reliée à un vrai nom. À **10**, la Cellule ne peut plus rester.
 
 ## Un combat complet
 
 Voici un combat du début à la fin, avec le compte de l'Empreinte à chaque pas.
 
-**La situation.** Un soir de novembre, 23 h 10, au deuxième sous-sol d'un parking d'Ixelles. Le groupe vient de récupérer une chemise cartonnée dans un casier du rez-de-chaussée et redescend par l'ascenseur. Inès a garé l'utilitaire à 13,5 m de la porte, loué sous la couverture de Karim, Samir Delorme. L'Empreinte du groupe est à **2**. La rampe de sortie est à 30 m, une berline grise est garée en travers, et une caméra surveille la barrière. Un tube sur deux est allumé : lumière faible dans la rangée des piliers. Karim et Tomasz sortent les premiers de l'ascenseur, Hélène et Inès derrière eux. Hélène va s'abriter contre le pilier le plus proche, à 1,5 m de la porte ; Karim s'arrête près d'elle. Tomasz porte son pistolet sous le manteau, avec un chargeur de rechange dans la poche.
+**La situation.** Un soir de novembre, 23 h 10, au deuxième sous-sol d'un parking d'Ixelles. Le groupe vient de récupérer une chemise cartonnée dans un casier du rez-de-chaussée et redescend par l'ascenseur. Inès a garé à 13,5 m de la porte l'utilitaire de société que Suzanne leur a prêté. L'Empreinte du groupe est à **2**. La rampe de sortie est à 30 m, une berline grise est garée en travers, et une caméra surveille la barrière. Un tube sur deux est allumé : lumière faible dans la rangée des piliers. Karim et Tomasz sortent les premiers de l'ascenseur, Hélène et Inès derrière eux. Hélène va s'abriter contre le pilier le plus proche, à 1,5 m de la porte ; Karim s'arrête près d'elle. Tomasz porte son pistolet sous le manteau, avec un chargeur de rechange dans la poche.
 
 Dans la berline, un chauffeur armé d'Ostrevent regarde sa montre. Derrière le pilier voisin, un homme de main se tient prêt avec une matraque télescopique : son patron veut « une conversation » et la chemise.
 
 > **Comment le MJ a dosé la rencontre.**
 >
-> Un homme de main d'Ostrevent est une créature de FP 1 (200 PX) : 60 PV, CA 14, deux tirs de pistolet par tour. Un chauffeur armé est une créature de FP 1/2 (100 PX) : 55 PV, CA 13, un tir par tour. Pour des personnages de niveau 1, le MJ ramène l'homme de main à FP 1/2 (100 PX) : 22 PV (4d8 + 4), une seule attaque par tour, matraque à +4 (1d4 + 2 contondants) ou pistolet à +4 (1d10 + 2 perforants). Il garde *En équipe* (avantage à l'attaque si un allié non neutralisé est à 1,5 m de la cible) et *Père de famille* (il se rend ou bat en retraite quand il tombe sous la moitié de ses PV, ou quand un camarade tombe). Il ne sort son pistolet qu'après un coup de feu des coursiers. Le chauffeur est ramené de 55 à 18 PV (4d8), CA 13, pistolet à +4 (1d10 + 2).
+> Un homme de main d'Ostrevent entier est une créature de FP 1 (200 PX) : 60 PV, CA 14, deux tirs de pistolet par tour. Un chauffeur armé entier est une créature de FP 1/2 (100 PX) : 55 PV, CA 13, un tir par tour. Pour des personnages de niveau 1, le MJ prend leurs fiches novices, de FP 1/4 (50 PX chacune) : 22 PV (4d8 + 4), CA 13, une seule attaque par tour, pistolet à +4 (1d10 + 2 perforants) et, pour l'homme de main, matraque à +4 (1d4 + 2 contondants). L'homme de main garde *En équipe* (avantage à l'attaque si un allié non neutralisé est à 1,5 m de la cible) et *Père de famille* (il se rend ou bat en retraite quand il passe sous la moitié de ses PV, ou quand un camarade tombe). Il ne sort son pistolet qu'après un coup de feu des coursiers.
 >
-> Deux créatures de FP 1/2 font 200 PX bruts. Pour deux adversaires, on multiplie par 1,5 : 300. Pour quatre personnages de niveau 1, une rencontre moyenne vaut 200 PX, une difficile 300, une mortelle 400. Celle-ci est donc difficile. Les deux fiches entières (200 + 100 = 300, fois 1,5) vaudraient 450, plus haut que la mortelle.
+> Deux créatures de FP 1/4 font 100 PX bruts, 150 avec le multiplicateur de 1,5 pour deux adversaires. Pour quatre personnages de niveau 1, une rencontre facile vaut 100 PX, une moyenne 200, une difficile 300, une mortelle 400. Celle-ci est donc entre facile et moyenne ; la surprise et les PV du groupe la rendent plus dure que son chiffre.
 >
 > Les quatre personnages ont 39 PV à eux tous (9, 9, 9 et 12) et une CA de 12 à 14. Un tir de pistolet a quatre chances sur dix de mettre à 0 un personnage de 9 PV, et un second tir sur un mourant le tue.
 
@@ -532,7 +533,7 @@ Dans la berline, un chauffeur armé d'Ostrevent regarde sa montre. Derrière le 
 
 **Round 1.**
 
-- *Inès* a les clefs de l'utilitaire. Elle **fonce** : 13,5 m jusqu'à la portière, qu'elle ouvre (une interaction). Il lui reste 4,5 m de déplacement, juste de quoi s'installer au volant.
+- *Inès* a les clés de l'utilitaire. Elle **fonce** : 13,5 m jusqu'à la portière, qu'elle ouvre (une interaction). Il lui reste 4,5 m de déplacement, juste de quoi s'installer au volant.
 - *Tomasz* est surpris. Il ne se déplace pas, n'agit pas et ne réagit pas.
 - *L'homme de main* sort de derrière son pilier, parcourt 7,5 m et frappe Karim, le plus proche, de sa matraque : 11 au dé, +4, total 15 contre CA 13. Touché. Dégâts : 1d4 donne 3, +2 : 5. Karim passe de 9 à 4 PV.
 - *Le chauffeur* ne descend pas sans ordre. Il baisse sa vitre et regarde.
@@ -541,11 +542,11 @@ Dans la berline, un chauffeur armé d'Ostrevent regarde sa montre. Derrière le 
 
 **Round 2.**
 
-- *Inès* tourne la clef (son interaction) et conduit l'utilitaire de 18 m, la vitesse d'un véhicule dans un parking, jusqu'au pilier d'Hélène.
+- *Inès* tourne la clé (son interaction) et conduit l'utilitaire de 18 m, la vitesse d'un véhicule dans un parking, jusqu'au pilier d'Hélène.
 - *Tomasz* n'est plus surpris. Il pourrait frapper à la matraque. Il sait ce que coûte un tir, et il sait aussi que Karim est à 4 PV. Il sort son pistolet (une interaction) et tire sur l'homme de main, à 6 m : 12 au dé, +6, total 18 contre CA 14. Touché. Dégâts : 1d10 donne 6, +2 : 8. L'homme de main passe de 22 à 14 PV. « Quatorze », dit Tomasz : il reste quatorze cartouches dans le chargeur. **Un coursier a tiré : l'Empreinte passe de 2 à 4.**
 - *L'homme de main* a attendu cela. Il laisse tomber la matraque, sort son pistolet (son interaction) et tire sur Karim, à 1,5 m : 11 au dé, +4, total 15 contre CA 13. Touché. Dégâts : 1d10 donne 6, +2 : 8. Karim, à 4 PV, tombe à 0. Une arme à feu : il est **mourant**. **Un blessé grave : l'Empreinte passe de 4 à 5. Le seuil de 5 est franchi, la Cellule est au niveau Fiché.** Les DD de Discrétion et de Tromperie du groupe montent de 2 dans les villes où il a opéré.
 - *Le chauffeur*, qui a vu les coursiers tirer, descend de la berline et tire sur Tomasz, à 12 m : 9 au dé, +4, total 13 contre CA 14. Raté. La balle éclate un pilier.
-- *Karim* est à terre. Il mourra à la fin de son troisième tour : celui-ci est le premier, il passe.
+- *Karim* est à terre. À la fin de son premier tour, sauvegarde d'Endurance DD 10 : 6 au dé, +1, total 7. Raté.
 - *Hélène*, à 1,5 m de Karim, s'agenouille sans quitter son pilier et tente de le stabiliser : Instinct (Médecine) DD 15 (sous le feu). Elle ne maîtrise pas la Médecine. 9 au dé, +2, total 11. Raté.
 
 **Round 3.**
@@ -554,16 +555,16 @@ Dans la berline, un chauffeur armé d'Ostrevent regarde sa montre. Derrière le 
 - *Tomasz* se déplace de 6 m jusqu'au pilier, pour être à 1,5 m d'Hélène, et tire sur l'homme de main, à 3 m : 15 au dé, +6, total 21. Touché. Dégâts : 1d10 donne 7, +2 : 9. L'homme de main passe de 14 à 5 PV. « Treize. »
 - *L'homme de main* est sous la moitié de ses PV (11). *Père de famille* : il bat en retraite vers la berline, laissant Karim à terre. Il ne tire pas.
 - *Le chauffeur* tire sur Hélène, accroupie derrière le pilier (trois quarts, CA 17) : 13 au dé, +4, total 17. Touché, de justesse. Dégâts : 1d10 donne 7, +2 : 9. Tomasz, à 1,5 m, utilise sa réaction : *Corps entre*. Les dégâts sont réduits de moitié : 4. Hélène passe de 9 à 5 PV.
-- *Karim*, mourant, passe son deuxième tour.
+- *Karim*, mourant, finit son deuxième tour par une sauvegarde d'Endurance DD 10 : 12 au dé, +1, total 13. Réussi : une réussite, un échec.
 - *Hélène* retente sa stabilisation, avec l'avantage de la lampe d'Inès : 6 et 13, elle garde 13, +2 : 15. DD 15 : réussi. Karim est **stabilisé**. Il est toujours inconscient, à 0 PV, mais il ne mourra pas. Il lui restait un tour.
 
 Le combat a duré trois rounds, dix-huit secondes.
 
-**Après.** Tomasz soulève Karim (75 kg, moins que les 120 kg qu'il porte sans gêne) et le met dans l'utilitaire. Au round suivant, l'homme de main atteint la berline. Le chauffeur démarre, repasse la barrière et part. Inès sort par la rampe. Le MJ avait lancé 1d4 en secret : 3. Une patrouille arrive trois minutes après le premier coup de feu, et le parking est vide. **Le groupe a quitté les lieux dans l'urgence : l'Empreinte passe de 5 à 6.** La caméra de la barrière ne couvre pas le fond du sous-sol, où s'est joué le combat : le MJ ne compte pas de point pour une scène filmée. Elle a lu la plaque de l'utilitaire, loué sous la couverture de Karim, ce qui laisse une trace à nettoyer. Le total : **de 2 à 6, en trois rounds.**
+**Après.** Tomasz soulève Karim (75 kg, moins que les 120 kg qu'il porte sans gêne) et le met dans l'utilitaire. Au round suivant, l'homme de main atteint la berline. Le chauffeur démarre, repasse la barrière et part. Inès sort par la rampe. Le MJ avait lancé 1d4 en secret : 3. Une patrouille arrive trois minutes après le premier coup de feu, et le parking est vide. **Le groupe a quitté les lieux dans l'urgence : l'Empreinte passe de 5 à 6.** La caméra de la barrière ne couvre pas le fond du sous-sol, où s'est joué le combat : le MJ ne compte pas de point pour une scène filmée. Elle a lu la plaque de l'utilitaire de société, ce qui laisse une trace à nettoyer. Le total : **de 2 à 6, en trois rounds.**
 
 Le lendemain, Hélène passe une heure à effacer les images de la barrière auprès d'un gestionnaire de parking : Investigation DD 15, 11 au dé, +4, total 15. Réussi. L'Empreinte baisse de 2 : **elle retombe à 4.** Karim, à 0 PV, a repris 1 PV au bout de deux heures, sans que personne le soigne. Il lui faudra un repos long pour retrouver le reste.
 
-Le MJ attribue 300 PX à partager entre quatre : 75 chacun. L'homme de main a été mis en fuite et le chauffeur s'est replié avec lui : chacun compte (chapitre 3). La chemise cartonnée est intacte. Tomasz a tiré deux balles sur quinze, et il lui reste vingt-huit cartouches.
+Le MJ attribue 100 PX à partager entre quatre : 25 chacun. L'homme de main a été mis en fuite et le chauffeur s'est replié avec lui : chacun compte (chapitre 3). La chemise cartonnée est intacte. Tomasz a tiré deux balles sur quinze, et il lui reste vingt-huit cartouches.
 
 > **Et sans tirer ?**
 >
@@ -579,7 +580,7 @@ Le MJ attribue 300 PX à partager entre quatre : 75 chacun. L'homme de main a é
 > - Surprise : Discrétion contre Perception passive, −5 en lumière faible, créature par créature.
 > - Un pistolet tient 15 coups ; changer de chargeur est une action bonus. Un 1 naturel l'enraye. Une scène où un coursier tire : +2 d'Empreinte, plus 1 par blessé grave.
 > - Abri : +2 (demi), +5 (trois quarts), total (aucune attaque directe).
-> - À 0 PV par une balle : mourant, mort à la fin du troisième tour. Stabiliser : Médecine DD 12, 15 sous le feu. À 0 PV par autre chose : jets contre la mort.
+> - À 0 PV par une balle : mourant, sauvegarde d'Endurance DD 10 à la fin de chacun des trois premiers tours, deux réussites pour se stabiliser, sinon mort à la fin du troisième. Stabiliser : Médecine DD 12, 15 sous le feu. À 0 PV par autre chose : jets contre la mort.
 > - Poursuite : points d'avance, gagnée à +3, perdue à −3. Test DD 12 à pied, DD 13 au volant.
 > - Filature : Discrétion contre Perception passive de la cible. Échec de 5 ou plus : +1 d'Empreinte.
 > - Négocier : action, test de Présence contre 10, 15 ou 20, jamais sous 10. La vie sauve, 200 € par homme, une menace crédible : −5 chacun.

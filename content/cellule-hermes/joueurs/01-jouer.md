@@ -1,8 +1,10 @@
 # Chapitre 1 — Comment on joue
 
-Une partie de Cellule Hermès ressemble à une soirée à la Mercerie : le rideau baissé, une lampe de couturière, une carte routière dépliée sur la table de coupe. Cinq personnes autour d'une table, ou d'un salon vocal, des dés, des fiches, une carte. L'une d'elles connaît le terrain, les gens qui paient et ceux qui regardent : c'est le maître du jeu. Les quatre autres incarnent chacune un coursier, un chauffeur qui connaît les haltes, une analyste qui lit des dossiers, un technicien, un garde du corps. Ensemble, on raconte ce qui leur arrive, et ce que ça leur laisse comme Empreinte et comme dettes.
+Une partie de Cellule Hermès ressemble à une soirée à la Mercerie, avec une carte routière dépliée sur la table de coupe. Cinq personnes autour d'une table, ou d'un salon vocal, des dés, des fiches, une carte. L'une d'elles connaît le terrain, les gens qui paient et ceux qui regardent : c'est le maître du jeu. Les quatre autres incarnent chacune un coursier, un chauffeur qui connaît les haltes, une analyste qui lit des dossiers, un technicien, un garde du corps. Ensemble, on raconte ce qui leur arrive, et ce que ça leur laisse comme Empreinte et comme dettes.
 
-Ce chapitre explique la mécanique de base, ce qu'est un pli quand on le joue à voix haute, puis comment créer ton personnage, compter ton matériel et tes euros. Tout le reste du livre s'appuie dessus. Si tu as déjà joué à un jeu compatible avec la cinquième édition du plus vieux jeu de rôle du monde, tu reconnaîtras presque tout ; lis quand même les encadrés, ils signalent ce qui change dans la Cellule.
+> **Si tu viens d'un autre jeu.**
+>
+> Si tu as déjà joué à un jeu compatible avec la cinquième édition du plus vieux jeu de rôle du monde, tu reconnaîtras presque tout. Pas de magie ici : l'Empreinte tient la place du surnaturel, et aucune classe ne lance de sort. Lis les encadrés, ils signalent ce qui change dans la Cellule.
 
 ## La conversation
 
@@ -31,17 +33,17 @@ Le MJ n'a pas demandé de jet à Hélène pour chronométrer un vigile : il pass
 Le maître du jeu tient plusieurs rôles à la fois.
 
 - **Il décrit.** Les lieux, la lumière d'un néon de parking, les visages, le bip d'un portique. Il le fait avec des détails concrets plutôt qu'avec des adjectifs.
-- **Il joue tout ce qui n'est pas un personnage joueur.** Suzanne, qui finit ses phrases en « voilà » ; l'inspectrice de la Section, qui parle en listes ; le patron d'Ostrevent, qui demande « Combien ? » ; le vigile qui regarde deux fois.
+- **Il joue tout ce qui n'est pas un personnage joueur.** Suzanne, qui finit ses phrases en « voilà » ; l'inspectrice de la Section, qui parle en listes ; le patron d'Ostrevent, qui demande « Combien ? » ; le veilleur de nuit qui regarde deux fois.
 - **Il arbitre.** Il fixe la difficulté des tests, applique les règles, et tranche quand elles ne disent rien. Ses décisions valent pour la séance ; on en discute à la pause si besoin, pas au milieu d'une scène.
-- **Il garde les secrets.** Le MJ en sait plus que toi sur la Cellule et sur ceux qui lui envoient des plis. C'est voulu : les personnages cherchent, et les joueurs découvrent le monde en même temps qu'eux.
+- **Il garde les secrets.** Le MJ en sait plus que toi sur le monde : il connaît les gens qui paient, ceux qui regardent et ce qui s'est passé avant septembre. C'est voulu : les personnages cherchent, et les joueurs découvrent le monde en même temps qu'eux.
 - **Il joue le monde.** Les caméras, les opérateurs, les douaniers, les gens qui se souviennent de ce que tu as fait. Il tient aussi la jauge d'Empreinte avec toi.
 - **Il choisit certains réglages de la campagne**, en particulier la façon de gagner des niveaux (chapitre 3) et la règle de la mort d'un personnage (chapitre 4). Il les annonce avant la première séance.
 
-Le MJ n'est pas l'adversaire des joueurs : son travail est de rendre la partie intéressante.
+Le MJ n'est pas l'adversaire des joueurs. Il a pour travail de rendre la partie intéressante.
 
 ## Le rôle des joueurs
 
-Chaque joueur fait vivre un personnage. Il décide de ce que son personnage dit, pense, tente. Il ne décide pas du résultat : c'est le rôle du MJ et des dés.
+Chaque joueur fait vivre un personnage. Il décide de ce que son personnage dit, pense, tente. Le résultat revient au MJ et aux dés.
 
 Quelques habitudes rendent la table plus agréable.
 
@@ -53,7 +55,7 @@ Quelques habitudes rendent la table plus agréable.
 
 > **Joueurs et personnages.**
 >
-> Ce que sait le joueur et ce que sait le personnage ne sont pas toujours la même chose. Tu as lu le chapitre 0 jusqu'au bout et tu sais ce qu'on murmure sur Trieste ? Ton personnage est là depuis septembre et personne ne lui en a parlé. Joue ce qu'il sait.
+> Ce que sait le joueur et ce que sait le personnage ne sont pas toujours la même chose. Tu as lu l'introduction jusqu'au bout et tu sais ce qu'on murmure sur Trieste ? Ton personnage l'a peut-être entendu au détour d'une conversation, mais il n'en connaît pas les détails. Joue ce qu'il sait.
 
 ## Jouer sur Forge JdR
 
@@ -67,7 +69,7 @@ Il n'y a pas de chat écrit. La voix passe par Discord, comme autour d'une vraie
 
 Ici, on ne se bat pas tous les quarts d'heure. On attend dans une voiture, on suit un homme jusqu'à un café, on loue une camionnette, on fait la queue à un guichet de gare. On rentre à la Mercerie avec un pli accompli et une trace de plus qu'au départ. Le combat existe (chapitre 4), mais il laisse des blessés, des témoins, une enquête de police. Il arrive en général parce que quelqu'un a menti, parce que quelqu'un a eu peur, ou parce qu'un détail a été oublié.
 
-Le groupe a une seule jauge d'**Empreinte**, qui mesure ce que la Cellule laisse derrière elle. Elle monte quand une caméra vous filme nettement, quand un coursier paie plus de 1 000 € en espèces, quand on quitte un lieu en urgence, quand on tire. À partir de 3, on s'est souvenu de vous. À 10, tout s'arrête.
+Le groupe a une seule jauge d'**Empreinte**, qui mesure ce que la Cellule laisse derrière elle. Elle monte quand la Cellule se fait voir, entendre ou payer (la liste est plus bas). À partir de 3, on s'est souvenu d'elle. À 10, tout s'arrête.
 
 ### Ce que la voix change
 
@@ -111,7 +113,7 @@ Quand une règle demande de diviser, on **arrondit à l'inférieur**, sauf menti
 
 ### Le spécifique l'emporte sur le général
 
-Ce livre donne des règles générales. Un pouvoir, une origine ou un objet peut les contredire : dans ce cas, c'est le texte particulier qui gagne. La règle dit qu'on change de chargeur en action bonus ; le pouvoir de ta classe dit peut-être autre chose. Le pouvoir gagne.
+Ce livre donne des règles générales. Un pouvoir, une origine ou un objet peut les contredire : dans ce cas, c'est le texte particulier qui gagne. La règle dit qu'on change de chargeur en action bonus ; le pouvoir de ta classe dit peut-être autre chose. Le texte du pouvoir l'emporte.
 
 ## Le d20 et les trois jets
 
@@ -144,7 +146,7 @@ Le MJ choisit un DD selon ce qui s'oppose à toi.
 | Tâche | DD | Dans la Cellule |
 |---|---|---|
 | Très facile | 5 | Trouver la bonne voie à Paris-Nord, panneau en vue |
-| Facile | 10 | Remarquer que le vigile repasse par le même chemin pour la troisième fois |
+| Facile | 10 | Remarquer qu'un homme n'a pas bougé du quai depuis une heure |
 | Moyenne | 15 | Effacer les images d'une caméra de parking avant qu'on ne les demande (nettoyer une trace) |
 | Difficile | 20 | Faire dire à un gestionnaire de banque privée ce qu'un client lui a confié |
 | Très difficile | 25 | Convaincre un douanier qui vient d'ouvrir ton sac que l'enveloppe n'est pas à toi |
@@ -158,7 +160,7 @@ Rater un test ne veut pas dire que rien ne se passe. Le MJ peut accorder la réu
 
 ### Les jets automatiques
 
-Certaines tâches n'ont pas besoin de dé. Si le MJ juge qu'elles ne peuvent pas échouer, ou ne peuvent pas réussir, il tranche. Acheter un billet de train au guichet avec une carte de paiement en règle : pas de jet. Convaincre un agent de sécurité de te laisser seul dans un local fermé à clef, sans raison : pas de jet non plus.
+Certaines tâches n'ont pas besoin de dé. Si le MJ juge qu'elles ne peuvent pas échouer, ou ne peuvent pas réussir, il tranche. Acheter un billet de train au guichet avec une carte de paiement en règle : pas de jet. Convaincre un agent de sécurité de te laisser seul dans un local fermé à clé, sans raison : pas de jet non plus.
 
 ## Les jets d'attaque
 
@@ -280,11 +282,11 @@ Quelques mots reviennent souvent à la table.
 
 ## L'Empreinte et les couvertures
 
-Deux choses vont de pair. Elles servent dans tous les chapitres : en voici le principe. Le chapitre 3 donne leurs règles complètes, le chapitre 4 les armes, le chapitre 5 les pouvoirs de classe.
+Deux choses vont de pair. Elles servent dans tous les chapitres : en voici le principe. Le chapitre 3 donne leurs règles complètes et les armes, le chapitre 4 le combat, le chapitre 5 les pouvoirs de classe.
 
 ### L'Empreinte
 
-Dans la Cellule, il n'y a pas de magie. Il y a des traces. Le groupe a **une seule jauge d'Empreinte**, de 0 à 10, notée sur la fiche de groupe. Elle part à **2**. Elle monte de 1 quand un coursier utilise sa couverture pour un acte risqué, quand la Cellule est filmée nettement dans une scène d'action, quand on quitte un lieu dans l'urgence, quand quelqu'un paie plus de 1 000 € en espèces en France ou rallume son téléphone personnel, et de 2 par scène où l'on tire. Elle baisse quand on se fait oublier, quand on brûle une couverture à temps, quand on nettoie une trace. Plus elle est haute, plus on se souvient de vous : à 3 vous êtes **Noté**, à 5 **Fiché**, à 7 **Identifié**, à 10 **Grillé**, et la Cellule ne peut plus rester.
+La Cellule laisse des traces. Le groupe a **une seule jauge d'Empreinte**, de 0 à 10, notée sur la fiche de groupe. Elle part à **2**. Elle monte de 1 quand un coursier utilise sa couverture pour un acte risqué, quand la Cellule est filmée nettement dans une scène d'action, quand une filature ou une infiltration échoue de 5 ou plus au jet, quand on quitte un lieu dans l'urgence, quand quelqu'un paie plus de 1 000 € en espèces en France ou fait un virement non prévu, quand il appelle un proche ou rallume son téléphone personnel, et de 2 par scène où un coursier tire. Elle baisse quand on se fait oublier, quand on brûle une couverture à temps, quand on nettoie une trace. Plus elle est haute, plus on se souvient de la Cellule : 3 s'appelle **Noté**, 5 **Fiché**, 7 **Identifié**, 10 **Grillé**, et à 10 la Cellule ne peut plus rester.
 
 ### Les couvertures
 
@@ -298,7 +300,7 @@ Chaque personnage a **une couverture** : un nom, des papiers, une carte de paiem
 
 Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de création de Forge JdR suit les étapes ci-dessous, dans cet ordre. Tu peux revenir en arrière tant que tu n'as pas validé.
 
-1. **Une idée.** Avant de cliquer, pense à une personne, pas à des chiffres. Que fait-elle quand on lui dit « la police cherche un témoin » ? À qui téléphone-t-elle quand elle n'a plus le droit de le faire ? Une phrase suffit : « Une ancienne régulatrice du SAMU qui ne dort plus bien depuis qu'elle a raccroché sur un appel, et qui ne dit à personne pourquoi elle a quitté son poste. »
+1. **Une idée.** Avant de cliquer, pense à une personne, pas à des chiffres. Que fait-elle quand on lui dit « la police cherche un témoin » ? À qui téléphone-t-elle quand elle n'a plus le droit de le faire ? Une phrase suffit : « Une ancienne régulatrice d'ambulances qui ne dort plus bien depuis qu'elle a raccroché sur un appel, et qui ne dit à personne pourquoi elle a quitté son poste. »
 2. **Ton origine.** Gens d'armes, Gens de l'enquête, Gens du chiffre, Gens de l'argent, Gens du monde, Gens de passage. Chacune a deux variantes. L'origine donne un bonus de caractéristique, la vitesse (9 m pour toutes) et trois traits qui te suivront toute la partie : un avantage, un contact (avec l'argent de départ) et un défaut. Ta variante ajoute deux autres bonus de caractéristique et un trait propre.
 3. **Ta classe.** Dix métiers de la Cellule, du Chauffeur au Garde du corps. Elle donne ton dé de vie, tes armes et armures, tes sauvegardes, tes pouvoirs et ta façon de te battre. Ta **sous-classe** (le mot change selon la classe : Volant, Terrain, Spécialité, Table, Rôle, Position, Pratique, Atelier, Méthode, Mission) se choisit au niveau 3. Lis les classes avant de choisir : certains pouvoirs règlent l'Empreinte, d'autres l'évitent, et aucun ne l'augmente.
 4. **Ton historique.** Ce que tu faisais avant. Il te donne deux compétences, un outil, un peu d'équipement, quelques euros et un privilège. Chaque variante d'origine a le sien, et tu peux en choisir un autre si l'histoire de ton personnage le demande.
@@ -320,13 +322,13 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 | Technicien | d8 | Savoir, Adresse | Il sait où l'on cache un micro parce qu'il en a posé. Micros, balises, serrures, téléphones. |
 | Négociateur | d8 | Présence, Savoir | Il est dans la pièce, et personne ne le regarde. Langues, intermédiaires, argent. |
 | Infiltré | d8 | Présence, Adresse | Il entre quelque part parce qu'il a l'air de devoir y être. Couverture, rôle, accès. |
-| Tireur | d10 | Adresse, Instinct | Il tire rarement, et il s'en souvient chaque fois. Armes à feu, patience, couvert. |
+| Tireur | d10 | Adresse, Instinct | Il sait où se mettre et combien de temps attendre. Armes à feu, patience, couvert. |
 | Médecin | d8 | Instinct, Savoir | Il a vu mourir quelqu'un le premier soir et recommencé le lendemain. Soins de terrain, patients sans papiers. |
 | Faussaire | d8 | Adresse, Savoir | Il fait un papier qui a l'air d'avoir toujours existé. Papiers, couvertures, comptes. |
 | Analyste | d8 | Savoir, Instinct | Il a lu des milliers de pages pour en retenir trois lignes. Dossiers, recoupements, relevés. |
 | Garde du corps | d10 | Force, Endurance | Il se place entre la personne et ce qui la menace. Protection, porte, retrait. |
 
-Aucune classe ne lance de sort. Le Tireur et le Garde du corps portent une arme en toutes circonstances et se battent mieux que les autres ; les huit autres s'en servent quand il le faut, et préfèrent presque toujours l'éviter. Le Faussaire et le Technicien fabriquent ce que les autres utilisent. Le Négociateur, l'Infiltré et le Filocheur travaillent avec les gens ; le Chauffeur, avec la route ; l'Analyste et le Médecin, avec ce que les autres ont laissé.
+Le Tireur et le Garde du corps portent une arme en toutes circonstances et se battent mieux que les autres ; les huit autres s'en servent quand il le faut, et préfèrent presque toujours l'éviter. Le Faussaire et le Technicien fabriquent ce que les autres utilisent. Le Négociateur, l'Infiltré et le Filocheur travaillent avec les gens ; le Chauffeur, avec la route ; l'Analyste et le Médecin, avec ce que les autres ont laissé.
 
 ### Les six origines
 
@@ -349,27 +351,27 @@ Les variantes ne donnent pas de compétences : elles viennent de l'historique.
 
 Chaque historique donne deux compétences, un outil, quelques objets, des euros et un privilège.
 
-| Historique | Compétences | Euros |
-|---|---|---|
-| Parachutiste | Athlétisme, Perception | 200 |
-| Logisticien | Survie, Investigation | 180 |
-| Enquêteur | Investigation, Intimidation | 180 |
-| Analyste | Histoire, Intuition | 220 |
-| Informaticien | Investigation, Escamotage | 250 |
-| Technicien télécoms | Perception, Investigation | 200 |
-| Comptable | Investigation, Histoire | 300 |
-| Banquier | Persuasion, Intuition | 400 |
-| Interprète | Persuasion, Intuition | 250 |
-| Journaliste | Persuasion, Tromperie | 220 |
-| Routier | Survie, Perception | 160 |
-| Urgentiste | Médecine, Intuition | 160 |
+| Historique | Compétences | Euros | Privilège |
+|---|---|---|---|
+| Parachutiste | Athlétisme, Perception | 200 | *Le poste de nuit.* Tu restes immobile et attentif toute une nuit sans en payer la fatigue le lendemain, et un ancien du régiment te trouve un lit et un repas dans n'importe quelle ville de garnison. |
+| Logisticien | Survie, Investigation | 180 | *Ce qu'un convoi laisse.* Devant une plate-forme logistique, un parking de camions ou un plan de chargement, tu sais en dix minutes quand part quoi, et avec qui. |
+| Enquêteur | Investigation, Intimidation | 180 | *Un collègue qui répond.* Dans un commissariat ou une brigade, quelqu'un te répond à voix basse : une fois par semaine de jeu, il te dit si une personne est connue des services ou recherchée. |
+| Analyste | Histoire, Intuition | 220 | *Un schéma en une heure.* Avec un dossier et un tableau, tu fais apparaître en une heure les liens entre personnes, dates et lieux, et tu as l'avantage à ton test d'Investigation pour repérer la lacune la plus importante. |
+| Informaticien | Investigation, Escamotage | 250 | *Une porte dérobée.* Dans un bureau ou un hôtel, tu trouves une prise, un terminal ou une borne que personne ne surveille ; dix minutes et un ordinateur te suffisent pour lire ce que l'équipement dit de lui-même. |
+| Technicien télécoms | Perception, Investigation | 200 | *Le gilet qui ouvre.* En gilet de chantier, mallette en main, tu entres sans question dans un local technique, un sous-sol ou un toit-terrasse, tant que personne ne connaît l'équipe qui y travaille vraiment. |
+| Comptable | Investigation, Histoire | 300 | *Un bilan en vingt minutes.* Tu lis un bilan, un relevé ou un registre de société en vingt minutes et tu sais où l'argent s'arrête ; avantage à ton test d'Investigation pour trouver la ligne qui ne colle pas. |
+| Banquier | Persuasion, Intuition | 400 | *Un accueil de client.* Dans une banque, un hôtel ou un bureau d'avocats, on te traite en client : on te sert un thé, on te laisse seul un instant, on ne te demande pas pourquoi tu es venu. |
+| Interprète | Persuasion, Intuition | 250 | *Une pièce, quatre langues.* Dans une réunion ou un salon, on te laisse entendre ce qu'on n'oserait pas dire devant un invité ; tu comprends quatre langues sans qu'on te le fasse remarquer. |
+| Journaliste | Persuasion, Tromperie | 220 | *Une carte de presse.* Une fois par semaine de jeu, une rédaction, un standard ou un attaché de presse te donne un rendez-vous ou un document public que les autres attendraient une semaine. |
+| Routier | Survie, Perception | 160 | *Les haltes.* Dans toute aire de repos ou parking de poids lourds, on te laisse passer la nuit et on te dit, sans que tu le demandes, ce qui a bougé sur la route : barrages, contrôles, accidents. |
+| Urgentiste | Médecine, Intuition | 160 | *On ne refuse pas un secouriste.* Un cordon de police, un vigile ou un portier laisse passer celui qui porte une trousse rouge et annonce un blessé ; les services d'urgence te traitent en collègue. |
 
 > **Quatre personnages pour ce livre.**
 >
 > Tu les retrouveras dans tous les chapitres.
 >
 > - **Inès Rouvray**, Chauffeur, Gens de passage (variante Chauffeur routier), historique Routier. Trente-quatre ans. Elle a conduit neuf ans des quarante-tonnes entre Rotterdam et Marseille pour un transporteur dont la paie s'est arrêtée un mois d'été sans prévenir. Suzanne l'a abordée sur une aire de repos de l'A31, un thermos à la main. Elle dort dans sa cabine par habitude, même quand elle a un lit. Sa couverture : Laura Pichon, chauffeuse-livreuse.
-> - **Karim Bensaïd**, Technicien, Gens du chiffre (variante Technicien télécoms), historique Technicien télécoms. Trente-huit ans, habitant de Saint-Denis. Il a tiré du câble et monté des relais sur des toits pour un sous-traitant d'opérateur, jusqu'au changement de prestataire. Il ne dit pas à sa mère où il travaille ; il lui envoie des messages de la gare avec un téléphone jetable. Sa couverture : Samir Delorme, technicien de maintenance.
+> - **Karim Bensaïd**, Technicien, Gens du chiffre (variante Technicien télécoms), historique Technicien télécoms. Trente-huit ans, habitant de Saint-Denis. Il a tiré du câble et monté des relais sur des toits pour un sous-traitant d'opérateur, jusqu'au changement de prestataire. Il ne dit pas à sa mère où il travaille. Il passe la voir le dimanche, sans prévenir, et repart avant qu'elle pose la question. Sa couverture : Samir Delorme, technicien de maintenance.
 > - **Hélène Vasseur**, Analyste, Gens de l'enquête (variante Analyste de renseignement), historique Analyste. Quarante-sept ans. Elle a passé onze ans à écrire des notes de trois pages pour une direction d'analyse dont elle ne parle pas, et on l'a poussée dehors le jour où l'une de ses notes a eu raison trop tôt. Elle lit tout, y compris les étiquettes de bouteille. Sa couverture : Nadine Brossard, assistante de gestion.
 > - **Tomasz Wierzbicki**, Garde du corps, Gens d'armes (variante Ancien parachutiste), historique Parachutiste. Quarante et un ans, né à Lille de parents polonais. Dix ans de régiment, un genou qui ne plie plus à l'identique, puis cinq ans à garder des dirigeants pour une société de protection. Il ne regarde pas le client : il regarde les mains des autres. Sa couverture : Thomas Vidal, agent de sécurité.
 >
@@ -400,11 +402,11 @@ Ces euros sont dans ta poche : quelques billets, une carte, de la monnaie. Écri
 
 > **Exemple.**
 >
-> **Inès** compare 150 (Gens de passage), 150 (classe) et 160 (historique Routier) : 160 €. Elle part avec son téléphone jetable et sa carte SIM étrangère, ses gants fins et sa casquette, son gilet de chantier, son couteau de poche, son triangle, sa lampe torche et ses cartes routières, son blouson renforcé, son atlas routier, son thermos, sa lampe frontale, ses gants de travail et sa carte de chauffeur.
+> **Inès** compare 150 (Gens de passage), 150 (classe) et 160 (historique Routier) : 160 €. Elle part avec son téléphone jetable et sa carte SIM étrangère, ses gants fins et sa casquette, son gilet de chantier, son couteau de poche, son triangle, sa lampe torche et ses cartes routières, son blouson renforcé, son atlas routier, son thermos, sa lampe frontale et sa carte de chauffeur. Une seule paire de gants : ceux de la classe et ceux de l'historique comptent pour une.
 >
 > **Karim** compare 220 (Gens du chiffre), 150 (classe) et 200 (historique) : 220 €, et c'est son origine qui l'emporte. Il part avec son kit de crochetage, son brouilleur de poche et son enregistreur discret, ses deux balises de suivi, son ordinateur propre et sa clé de chiffrement, son téléphone jetable, son gilet de chantier, sa blouse renforcée, sa mallette d'outils, son détecteur de champ et un rouleau de câble.
 >
-> **Hélène** compare 180 (Gens de l'enquête), 150 (classe) et 220 (historique Analyste) : 220 €. Elle part avec son ordinateur propre et sa clé de chiffrement, son ordinateur portable propre, son carnet, ses crayons et ses surligneurs, son cahier de notes, ses marqueurs de couleur, sa carte routière annotée, son téléphone jetable, ses lunettes de lecture, son sac à dos neutre et son manteau renforcé. Elle n'a pas d'arme.
+> **Hélène** compare 180 (Gens de l'enquête), 150 (classe) et 220 (historique Analyste) : 220 €. Elle part avec son ordinateur propre (un seul, celui de la classe et celui de l'historique comptent pour un) et sa clé de chiffrement, son carnet, ses crayons et ses surligneurs, son cahier de notes, ses marqueurs de couleur, sa carte routière annotée, son téléphone jetable, ses lunettes de lecture, son sac à dos neutre et son manteau renforcé. Elle n'a pas d'arme.
 >
 > **Tomasz** compare 200 (Gens d'armes), 150 (classe) et 200 (historique Parachutiste) : 200 €. Il part avec son pistolet semi-automatique de 9 mm sans papiers et ses deux chargeurs, sa matraque télescopique, son oreillette et son téléphone jetable, ses gants fins, son gilet pare-balles souple sous le manteau, sa boussole et sa carte routière, sa lampe frontale, son sac à dos neutre, son couteau de poche, ses rations et sa gourde.
 
@@ -424,7 +426,7 @@ Quand elle monte, le MJ le dit. Quand tu la fais monter par un geste, dis-le ava
 
 ### La couverture ne se prête pas
 
-Une couverture dont on s'est servi se relie à un visage, et un visage se relie à un nom. Tu n'en as qu'une. Ne la mets pas sur un billet pour un autre.
+Tu n'en as qu'une. Ne la mets pas sur un billet pour un autre : un visage se relie à un nom.
 
 ### Les gens qui n'ont rien demandé sont des gens
 

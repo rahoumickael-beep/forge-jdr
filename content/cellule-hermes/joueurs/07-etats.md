@@ -1,8 +1,6 @@
 # Chapitre 7 — Les états
 
-Il est trois heures du matin, sur un banc du hall de la gare du Nord. Un homme a quitté son poste de planque dix minutes plus tôt, après trente heures sans fermer l'œil, et il s'est assis pour souffler. Il dit que ça va. Il relit trois fois le numéro de quai affiché sur le panneau, et ne sait pas si c'est celui qu'il cherchait. À côté de lui, un vigile qui fait sa ronde ralentit, le regarde, et note l'heure sur sa main. Un coup de crosse, une décharge électrique, une nuit blanche de plus, une fumée de voiture qui brûle : les **états** décrivent ce qui arrive à une créature quand quelque chose la gêne, l'immobilise ou la met hors de combat.
-
-Ce chapitre détaille les états un par un, puis le plus fréquent hors des combats, l'épuisement, et tout ce qui le cause : la veille, le froid, la fumée, la fièvre d'une plaie. Il rappelle aussi la peur, les sédatifs, et ce que l'Empreinte ajoute aux états. Il se termine par un aide-mémoire d'une page.
+Sur un banc du hall de la gare du Nord, un homme s'est assis pour souffler. Il a quitté son poste de planque dix minutes plus tôt, après trente heures sans fermer l'œil. Il dit que ça va. Il relit trois fois le numéro de quai affiché sur le panneau, et ne sait pas si c'est celui qu'il cherchait. À côté de lui, un employé de la gare qui fait sa ronde ralentit, le regarde, et note l'heure sur sa main. Un coup de crosse, une décharge électrique, une nuit blanche de plus, une fumée de voiture qui brûle : les **états** décrivent ce qui arrive à une créature quand quelque chose la gêne, l'immobilise ou la met hors de combat.
 
 ## Comment fonctionnent les états
 
@@ -32,7 +30,7 @@ La créature n'entend rien.
 - Elle **rate automatiquement** tout test qui demande d'entendre.
 - Elle ne peut pas entendre les ordres de ses alliés : un pouvoir qui demande « qui t'entend » ne marche pas sur elle.
 
-Un coup de feu tiré à moins de 1,5 m d'une oreille sans protection impose une sauvegarde d'Endurance DD 12, sous peine d'être assourdi pendant une minute. Le bruit ambiant d'un parking, d'une gare ou d'un chantier n'assourdit pas : il couvre les voix et donne le désavantage aux tests d'écoute (chapitre 2).
+La première détonation de la scène dans un lieu clos impose une sauvegarde d'Endurance DD 12 à toute créature à 9 m ou moins, sans protection, ou elle est assourdie une minute. Le bruit ambiant d'un parking, d'une gare ou d'un chantier n'assourdit pas : il couvre les voix et donne le désavantage aux tests d'écoute (chapitre 2).
 
 ### Aveuglé
 
@@ -78,7 +76,7 @@ Le Garde du corps empoigne un homme qui veut passer. Un collier de serrage ou un
 
 La créature a le **désavantage** à ses jets d'attaque et à ses tests de caractéristique.
 
-La fièvre d'une plaie est la cause la plus courante (voir plus bas). Un sédatif glissé dans un verre, une viande avariée d'un buffet d'hôtel, un excès d'alcool font de même. Le poison se soigne par une sauvegarde d'Endurance, par un repos long, par les soins d'un médecin : *Rincer, perfuser* (Médecin, niveau 7) soulage une intoxication, une drogue ou une infection légère, et rend 1d8 PV ; *Soins hors circuit* (Médecin de passage, niveau 7) débarrasse un patient d'un état sans qu'aucun dossier ne soit ouvert.
+La fièvre d'une plaie est la cause la plus courante (voir plus bas). Un sédatif glissé dans un verre, une viande avariée d'un buffet d'hôtel, un excès d'alcool font de même. Le poison se soigne par une sauvegarde d'Endurance, par un repos long, par les soins d'un médecin (*Rincer, perfuser* et *Soins hors circuit*, niveau 7, chapitre 5).
 
 ### Entravé
 
@@ -116,15 +114,15 @@ La créature ne sait pas ce qui se passe.
 - Elle rate ses sauvegardes de Force et d'Adresse.
 - Les attaques contre elle ont l'**avantage**, et toute attaque au contact qui touche est un **coup critique**.
 
-On tombe inconscient à 0 PV (chapitre 4) ou assommé. On y tombe aussi endormi par un *Calmant* (Médecin, niveau 2) : une créature consentante, entravée ou surprise s'endort dix minutes sur une sauvegarde d'Endurance ratée, et un seul dégât la réveille. Un dormeur ne voit rien et ne réagit pas ; un bruit, un coup ou une secousse le réveille au bout de quelques instants.
+On tombe inconscient à 0 PV (chapitre 4) ou assommé. On y tombe aussi endormi par un *Calmant* (Médecin, niveau 2, chapitre 5). Un dormeur ne voit rien et ne réagit pas ; un bruit, un coup ou une secousse le réveille au bout de quelques instants.
 
 ### Invisible
 
-Personne n'est invisible dans la Cellule, mais on se cache. Un tireur sans lumière, un homme couché derrière une voiture, un manteau sombre sous un tube qui grésille, une foule de gare où l'on se fond : l'attaquant qui ne voit pas sa cible a le désavantage, et celui qu'on ne voit pas a l'avantage quand il attaque (chapitre 4). Le Filocheur se perd dans le flux (*Dans le flux*, niveau 1), l'Infiltré se déplace et se cache d'un geste (*Fausse sortie*, niveau 2).
+Rien ne rend invisible : on se cache. Un tireur sans lumière, un homme couché derrière une voiture, un manteau sombre sous un tube qui grésille, une foule de gare où l'on se fond : l'attaquant qui ne voit pas sa cible a le désavantage, et celui qu'on ne voit pas a l'avantage quand il attaque (chapitre 4). Le Filocheur se perd dans le flux (*Dans le flux*, niveau 1), l'Infiltré se déplace et se cache d'un geste (*Fausse sortie*, niveau 2).
 
 ### Mourant
 
-C'est l'état de qui tombe à 0 PV sous une balle (chapitre 4). La créature est **inconsciente** (donc incapable d'agir et à terre), et elle **meurt à la fin de son troisième tour** sans soins. Un nouveau coup de feu la tue. La stabiliser demande une action et un test d'Instinct (Médecine) DD 12 (DD 15 sous le feu). Un soin qui lui rend au moins 1 PV (*Trousse de terrain*, niveau 1 ; *Premiers gestes*, niveau 1) met fin à l'état.
+C'est l'état de qui tombe à 0 PV sous une balle (chapitre 4). La créature est **inconsciente** (donc incapable d'agir et à terre), et elle fait une **sauvegarde d'Endurance DD 10** à la fin de chacun de ses trois premiers tours : deux réussites la stabilisent, sinon elle **meurt à la fin de son troisième tour** sans soins. Un nouveau coup de feu la tue. La stabiliser demande une action et un test d'Instinct (Médecine) DD 12 (DD 15 sous le feu). Un soin qui lui rend au moins 1 PV (*Trousse de terrain*, niveau 1 ; *Premiers gestes*, niveau 1) met fin à l'état.
 
 ### Paralysé
 
@@ -155,7 +153,7 @@ Dans la Cellule, c'est presque toujours le corps, et presque toujours la veille 
 |---|---|
 | **La veille** | Vingt-quatre heures sans dormir : sauvegarde d'Endurance DD 10 au matin, ou un niveau. Chaque jour de veille de plus ajoute 2 au DD. |
 | **Le froid** | Une nuit dehors sans abri ni couverture épaisse, ou dans une voiture sans chauffage : sauvegarde d'Endurance DD 10 à l'aube, DD 13 par gel dur. Un échec donne un niveau, et le repos long de la nuit ne compte pas. Un manteau renforcé ou un blouson donnent l'avantage. |
-| **La fumée épaisse** | Chaque minute dans la fumée d'un incendie de voiture, de local ou de cage d'escalier, sans linge sur le visage : sauvegarde d'Endurance DD 12, ou un niveau. Un linge mouillé donne l'avantage. |
+| **La fumée épaisse** | Toutes les cinq minutes dans la fumée d'un incendie de voiture, de local ou de cage d'escalier, sans linge sur le visage : sauvegarde d'Endurance DD 12, ou un niveau. Un linge mouillé donne l'avantage. |
 | **La garde à vue** | Deux jours sans repos long : sauvegarde d'Endurance DD 10 à la fin, ou un niveau (chapitre 4). |
 | **Une plaie sans soins** | Voir « La fièvre d'une plaie », plus bas. |
 
@@ -165,8 +163,8 @@ Certains pouvoirs protègent : le Chauffeur conduit toute une nuit sans fatigue 
 
 - Un **repos long** retire **un niveau**, si le personnage a mangé et bu un repas complet (chapitre 3).
 - Une fièvre bloque cette récupération tant qu'elle n'est pas soignée.
-- Un pouvoir de soin en retire un de plus : la *Visite générale* du Médecin (niveau 17), une fois par semaine de jeu, dans une clinique de son réseau.
-- Un personnage au niveau 6 est mort, et rien de ce chapitre ne l'en tire.
+- Un pouvoir de soin en retire un de plus : la *Visite générale* du Médecin (niveau 17, chapitre 5).
+- Un personnage à l'épuisement de niveau 6 est mort, et rien de ce chapitre ne l'en tire.
 
 > **Un exemple de glissade.**
 >
@@ -176,7 +174,7 @@ Certains pouvoirs protègent : le Chauffeur conduit toute une nuit sans fatigue 
 
 - **Retenir son souffle.** Un personnage tient 1 + son modificateur d'Endurance minutes (au moins 30 secondes). Passé ce temps, il tombe à 0 PV après un nombre de rounds égal à son modificateur d'Endurance (au moins 1), puis il commence à mourir. Tomasz, Endurance +2, tient trois minutes ; Hélène, Endurance +1, deux.
 - **La fumée.** Un incendie dans un parking, un local ou une cage d'escalier donne une zone faiblement éclairée pour la vue (chapitre 4). La fumée épaisse épuise (voir plus haut).
-- **Le courant.** Un câble dénudé, une armoire électrique forcée à mains nues : sauvegarde d'Endurance DD 12, 2d6 dégâts de feu, la moitié sur une réussite. Seul le pistolet à impulsion rend incapable d'agir ; un courant ne le fait que si le MJ le dit.
+- **Le courant.** Un câble dénudé, une armoire électrique forcée à mains nues : sauvegarde d'Endurance DD 12, 2d6 dégâts électriques, la moitié sur une réussite. Seul le pistolet à impulsion rend incapable d'agir ; un courant ne le fait que si le MJ le dit.
 - **Le feu** inflige des dégâts (chapitre 4) et n'impose aucun état par lui-même.
 
 ## La fièvre d'une plaie
@@ -185,12 +183,12 @@ Une plaie ouverte qui t'a laissé sous la moitié de tes PV et qu'on n'a pas net
 
 ## Les sédatifs et l'alcool
 
-- **Un verre trafiqué.** Un sédatif glissé dans une boisson demande une sauvegarde d'Endurance DD 12, ou l'état **inconscient** pendant une heure. Un bruit fort, une secousse ou un dégât réveillent au bout de dix minutes. C'est une des rares façons de prendre un coursier sans tirer.
+- **Un verre trafiqué.** Un sédatif glissé dans une boisson demande une sauvegarde d'Endurance DD 12, ou l'état **inconscient** pendant une heure. Un dégât ou une secousse le réveille aussitôt ; il garde le désavantage à ses tests jusqu'à la fin de la scène. C'est une des rares façons de prendre un coursier sans tirer.
 - **L'alcool.** Boire plus de trois verres dans la soirée demande une sauvegarde d'Endurance DD 10 le lendemain matin, sous peine d'un désavantage au premier test de la journée.
 
 ## La peur
 
-La peur arrive par un cri, par une sirène, par un coup de feu tout près. Une créature qui la subit fait une **sauvegarde d'Instinct** (chapitre 2).
+La peur arrive par un cri, par une sirène, par un coup de feu tout près. Une créature qui la subit fait une **sauvegarde d'Instinct** (chapitre 2). Le MJ n'appelle cette sauvegarde qu'une fois par créature et par scène, pour la première cause de peur nouvelle.
 
 | La peur | DD |
 |---|---|
@@ -217,16 +215,16 @@ Un échec donne l'état **effrayé** pendant une minute. Une sauvegarde réussie
 | Étourdi | Incapable d'agir ; rate Force et Adresse ; avantage contre lui |
 | Inconscient | Incapable d'agir, à terre ; avantage contre lui ; coup critique au contact |
 | Incapable d'agir | Pas d'action, pas de réaction (le pistolet à impulsion y ajoute vitesse 0) |
-| Mourant | Inconscient ; meurt à la fin de son troisième tour ; un nouveau coup de feu le tue |
+| Mourant | Inconscient ; sauvegarde d'Endurance DD 10 à la fin de chacun de ses trois premiers tours, deux réussites pour se stabiliser, sinon mort à la fin du troisième ; un nouveau coup de feu le tue |
 | Paralysé | Incapable d'agir ; ne bouge pas ; rate Force et Adresse |
 
-## L'Empreinte à côté des états
+## Ce que l'Empreinte fait à côté des états
 
 L'Empreinte se note sur la fiche de groupe, à côté des états. Aucun état de ce chapitre ne la baisse ni ne la fait monter, et elle ne rend personne aveuglé, à terre ou épuisé. Ses seuils (3, 5, 7 et 10) agissent à part, sur le groupe : un voisin se souvient, les DD de Discrétion et de Tromperie montent de 2, une couverture est reliée à un visage, la Cellule ne peut plus rester (chapitre 3). Seuls les gestes du chapitre 3 et les pouvoirs du chapitre 5 qui le disent la font bouger.
 
 ## Résumé des règles courantes
 
-Tout ce qui précède ne sert que si on le retrouve sans chercher. Voici l'essentiel, en une page.
+L'essentiel, en une page.
 
 ### Le jet de base
 
@@ -242,7 +240,7 @@ Le DD d'un pouvoir ajoute 8, ta maîtrise et la caractéristique que sa fiche no
 
 ### Les points de vie
 
-À 0 PV par une balle : mourant, mort à la fin du troisième tour, Médecine DD 12 pour stabiliser (15 sous le feu). À 0 PV par autre chose : jets contre la mort (10 ou plus, trois succès, trois échecs), Médecine DD 10 pour stabiliser. Repos court : dés de vie. Repos long : tous les PV, la moitié des dés de vie, tous les pouvoirs.
+À 0 PV par une balle : mourant, sauvegarde d'Endurance DD 10 à la fin de chacun des trois premiers tours, deux réussites pour se stabiliser, sinon mort à la fin du troisième ; Médecine DD 12 pour stabiliser (15 sous le feu). À 0 PV par autre chose : jets contre la mort (10 ou plus, trois succès, trois échecs), Médecine DD 10 pour stabiliser. Repos court : dés de vie. Repos long : tous les PV, la moitié des dés de vie, tous les pouvoirs.
 
 ### L'Empreinte
 
@@ -254,8 +252,8 @@ Quinze cartouches par chargeur, changer de chargeur en action bonus. Un 1 nature
 
 ### L'argent
 
-Des euros, de préférence en espèces. 500 € au plus par jour à un distributeur. Plus de 1 000 € en espèces en France : +1 d'Empreinte. 10 000 € ou plus se déclarent à la frontière. Départ : la plus haute des trois sommes (classe, origine, historique).
+Des euros, de préférence en espèces. 500 € au plus par jour à un distributeur. Plus de 1 000 € en espèces en France : +1 d'Empreinte. 10 000 € ou plus se déclarent à la frontière suisse ou en France. Départ : la plus haute des trois sommes (classe, origine, historique).
 
 ### La garde à vue
 
-Vingt-quatre heures, une fois renouvelables. À chaque heure d'interrogatoire, une sauvegarde de Présence : DD 13 face à un policier ordinaire, 15 face à un enquêteur de police judiciaire, 17 si deux versions ne concordent pas. Se taire, sur le conseil de l'avocat, donne l'avantage. Deux jours sans repos long : un niveau d'épuisement sur une sauvegarde d'Endurance DD 10 ratée.
+En France, 24 heures renouvelables une fois ; en Belgique, 24 heures, puis un juge d'instruction décide. À chaque interrogatoire (au plus deux par jour), une sauvegarde de Présence : DD 13 face à un policier ordinaire, 15 face à un enquêteur de police judiciaire, 17 si deux versions ne concordent pas. Se taire, sur le conseil de l'avocat, donne l'avantage. Deux jours sans repos long : un niveau d'épuisement sur une sauvegarde d'Endurance DD 10 ratée.

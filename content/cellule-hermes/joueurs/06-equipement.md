@@ -1,16 +1,16 @@
 # Chapitre 6 — L'équipement
 
-À la sortie de la gare de Bruxelles-Midi, un kiosque vend des cartes SIM sous blister, des chargeurs de toutes les formes et des téléphones sans nom. Karim en prend deux, paie en espèces, et le vendeur compte les billets sans lever les yeux. Dans la poche de son blouson, la carte de paiement rechargeable de Samir Delorme reste au fond, avec la monnaie. Il n'a pas demandé de reçu.
+À la sortie de la gare de Bruxelles-Midi, un kiosque vend des cartes SIM sous blister. Celles de Karim sont déjà enregistrées au nom d'un client qui n'existe pas, et il paie dix euros de plus par carte pour ça. Il en prend deux, paie en espèces, et le vendeur compte les billets sans lever les yeux. Dans la poche de sa blouse, la carte de paiement rechargeable de Samir Delorme reste au fond, avec la monnaie. Il n'a pas demandé de reçu.
 
-Ce chapitre donne ce que les personnages peuvent acheter, porter, cacher et revendre : l'argent, les armes, ce qu'on porte sur le dos, le matériel, les outils des métiers, les véhicules, ce qu'un sac pèse, et les cartes d'objets, d'alliés et de faveurs qu'on ne trouve pas sur un étal. Tout se compte en **euros**. Les règles de l'Empreinte, de la Caisse et des armes sont au chapitre 3 ; ce chapitre les complète sans les reprendre.
+Tout se compte en **euros**. Les règles de l'Empreinte, de la Caisse et des armes sont au chapitre 3 ; ce chapitre les complète sans les reprendre.
 
 ## L'argent
 
 Tu paies presque toujours en espèces, parce qu'une carte laisse une ligne dans un relevé. Ta couverture a pourtant une carte rechargeable : elle sert pour les billets de train, les locations et les hôtels qui demandent un nom, et chaque usage risqué compte pour l'Empreinte (chapitre 3).
 
-- **Les retraits.** 500 € par jour et par distributeur, pas plus. Un coursier qui a besoin de 1 500 € les retire en trois jours, ou à trois distributeurs de trois villes différentes, ce qui laisse trois lignes.
+- **Les retraits.** Le plafond est celui du chapitre 3. Un coursier qui a besoin de 1 500 € les retire en trois jours, ou à trois distributeurs de trois villes différentes, ce qui laisse trois lignes.
 - **Le liquide.** Payer plus de 1 000 € en espèces en France fait monter l'Empreinte de 1. Un achat de 1 000 € passe ; un achat de 1 200 € coûte un point.
-- **Les frontières.** 10 000 € ou plus en espèces se déclarent à la douane (chapitre 3).
+- **Les frontières.** À la frontière suisse ou en France, 10 000 € ou plus se déclarent à la douane (chapitre 3).
 - **Les factures.** La Caisse rembourse sur facture, quand elle rembourse. Une facture est une trace : garde-la pour la Traitante, jette le reste.
 
 Une journée sur la route, pour deux personnes, ressemble à cela : un hôtel de gare (90 à 160 €), trois repas chacun (12 à 30 € le repas), un billet de train (35 à 120 €), un téléphone jetable de plus (30 à 50 €). Compte entre 230 et 510 € selon la ville. Tu retrouves la plupart de ces prix au chapitre 3 ; voici ceux qu'il ne donne pas.
@@ -25,7 +25,7 @@ Une journée sur la route, pour deux personnes, ressemble à cela : un hôtel de
 
 Marchander est un test de Présence (Persuasion) contre le DD de l'attitude du vendeur : 10 pour un vendeur qui t'apprécie, **15** pour un vendeur indifférent, 20 pour un vendeur qui se méfie. Une réussite baisse le prix d'un cinquième : un téléphone jetable de 50 € passe à 40 € ; une balise de 80 € à 64 €. Un échec ne ferme pas la porte, mais le vendeur ne descendra plus pendant cette visite. Un vendeur du marché noir marchande volontiers ; un magasin d'électronique de gare, jamais.
 
-Les Gens du chiffre ont un fournisseur qui leur fait déjà 20 % de moins (chapitre 1). Le Négociateur sait ce que vaut un pot-de-vin : il a l'avantage à son test de Persuasion quand il paie, et le MJ lui dit le montant juste (*Le pot-de-vin bien placé*, niveau 1).
+Les Gens du chiffre ont un fournisseur qui leur fait déjà 20 % de moins (le trait *Un fournisseur*, chapitre 1) : ce rabais ne se cumule pas avec le marchandage, et le meilleur des deux s'applique. Le Négociateur sait ce que vaut un pot-de-vin : il a l'avantage à son test de Persuasion quand il paie, et le MJ lui dit le montant juste (*Le pot-de-vin bien placé*, niveau 1).
 
 ### Vendre et rendre
 
@@ -48,7 +48,7 @@ Elles sont **illégales** pour un coursier, dans tous les pays du jeu (chapitre 
 | Pistolet semi-automatique de 9 mm | 1 500 à 3 000 € au marché noir | 1d10 perforants | 15/45 m | 0,9 kg | Quinze coups, changer de chargeur : action bonus |
 | Fusil de chasse | environ 700 € | 2d6 perforants | 9/27 m | 3,2 kg | Deux coups, recharger (action), deux mains |
 
-Le couteau de poche et la matraque télescopique sont des armes de catégorie D en France : leur port est interdit sans motif légitime, et un contrôle qui les trouve mène au commissariat. Le pistolet à impulsion exige une autorisation en France et il est interdit en Belgique. Le pistolet de 9 mm se trouve au marché noir, quand on le trouve, ou chez un ancien camarade (l'Ancien parachutiste en connaît un, une fois par mois de jeu). Le fusil de chasse n'est légal que pour un chasseur déclaré, et pas dans un coffre de voiture en ville.
+Le couteau de poche est autorisé tel quel ; sorti pour menacer, c'est une arme par destination, et un couteau à cran ou de combat est interdit sans motif légitime. La matraque télescopique est une arme de catégorie D en France : son port est interdit sans motif légitime, et un contrôle qui la trouve mène au commissariat. Le pistolet à impulsion exige une autorisation en France et il est interdit en Belgique. Le pistolet de 9 mm se trouve au marché noir, quand on le trouve, ou chez un ancien camarade (l'Ancien parachutiste en connaît un, une fois par mois de jeu). Le fusil de chasse n'est légal que pour un chasseur déclaré, et pas dans un coffre de voiture en ville.
 
 ### Les propriétés des armes
 
@@ -70,11 +70,11 @@ Une boîte de 50 cartouches de 9 mm pèse 600 g et vaut 30 à 40 € en vente l�
 
 ### Cacher une arme
 
-Un pistolet sous un manteau passe un regard, pas une palpation. Un vigile ou un policier qui te palpe le trouve, sans jet. Un regard attentif oppose ton Adresse (Escamotage) à sa Perception passive : une arme glissée dans le dos, sous un manteau ample, DD 13. Un portique d'aéroport est presque impossible à passer, DD 30 (chapitre 1).
+Un pistolet sous un manteau passe un regard, pas une palpation. Un vigile ou un policier qui te palpe le trouve, sans jet. Un regard attentif oppose ton Adresse (Escamotage) à sa Perception passive, ou à un DD 13 si elle est plus basse : une arme glissée dans le dos, sous un manteau ample. Un portique d'aéroport est presque impossible à passer, DD 30 (chapitre 1).
 
 ### Les armes improvisées
 
-Un barreau de rampe, un pied de table, un extincteur, une clef à molette : si l'objet ressemble à une arme du tableau, on utilise ses statistiques. Sinon il fait **1d4** dégâts d'un type logique, sans bonus de maîtrise.
+Un barreau de rampe, un pied de table, un extincteur, une clé à molette : si l'objet ressemble à une arme du tableau, on utilise ses statistiques. Sinon il fait **1d4** dégâts d'un type logique, sans bonus de maîtrise.
 
 ## Les protections
 
@@ -108,21 +108,19 @@ Un coursier a l'air de quelqu'un qui doit être là. Le matériel fait le reste.
 
 | Objet | Prix | Poids | Usage |
 |---|---|---|---|
-| Téléphone jetable | 30 à 50 € | 0,2 kg | Un numéro lié à aucun nom. On le jette au bout de trois jours. Appeler un proche avec lui fait quand même monter l'Empreinte de 1. |
+| Téléphone jetable | 30 à 50 € | 0,2 kg | Un numéro enregistré au nom d'un tiers, ou d'un nom qui n'existe pas. L'opérateur exige une pièce d'identité : on la paie en plus. On le jette au bout de trois jours. Appeler un proche avec lui fait quand même monter l'Empreinte de 1. |
 | Carte SIM étrangère | 20 € | — | Un numéro hors du pays où tu opères. |
 | Ordinateur propre | 600 € | 1,5 kg | Jamais connecté à ton nom, jamais ouvert chez toi. |
-| Clé de chiffrement | 60 € | — | Elle ferme tes fichiers et tes messages personnels. Elle ne touche pas à la Boîte, qui vit sur le téléphone de la Traitante. |
+| Clé de chiffrement | 60 € | — | Elle ferme tes fichiers et tes messages personnels. Elle ne touche pas à la Boîte, qui vit sur le téléphone fermé que la Traitante te remet. |
 | Sac à dos neutre | 40 € | 0,8 kg | Rien ne le distingue de ceux de la gare. |
 | Appareil photo à téléobjectif | 400 € | 1,6 kg | Un visage assez net pour être reconnu, à 100 m. |
 | Enregistreur discret | 120 € | 0,1 kg | Huit heures de son dans une poche ou sous une table. Le trouver demande Investigation DD 14. |
 | Balise de suivi | 80 € | 0,1 kg | Une action pour la poser sous un véhicule, sur un test d'Escamotage DD 12 si personne ne regarde. La retrouver demande un balayage, Investigation DD 14. |
 | Brouilleur de poche | 150 € | 0,3 kg | Coupe téléphones et balises à 10 m, pendant une heure de batterie. Interdit presque partout. Perception DD 12 pour le remarquer, depuis 30 m, quand on est agent de sécurité ou patrouille. |
 | Kit de crochetage | 90 € | 0,3 kg | Serrures à cylindre : maîtrise d'outils de cambrioleur. Adresse DD 12 pour une serrure de porte, DD 15 pour une serrure de sûreté. |
-| Gilet de chantier, casquette, gants fins | 25 € | 0,5 kg | Le DD du premier test de Tromperie de la scène baisse de 2. Ne se cumule pas avec *Quelqu'un qui doit être là* (niveau 1). |
+| Gilet de chantier, casquette, gants fins | 25 € | 0,5 kg | Voir le matériel du chapitre 3 : le DD du premier test de Tromperie de la scène baisse de 2. |
 
 Les objets de classe qui ne sont pas sur cette liste (jumelles, lampe torche, stéthoscope, imprimante portative, kit de faussaire) ont un prix que le MJ fixe par comparaison avec un objet voisin du tableau. Un Technicien et un Faussaire fabriquent ou réparent ce que les autres achètent : *Poser sans jet* (niveau 1) lui épargne le test pour une balise ou un micro, *Ce qui est fermé* (niveau 1) lui donne les outils et l'avantage pour une serrure, *Des papiers qui tiennent* (niveau 1) permet au Faussaire de fabriquer un document avec une heure et 50 € de matériel.
-
-Enregistrer des gens à leur insu est un délit, et le fichier devient une preuve contre celui qui l'a fait. Une photographie se montre à quelqu'un qui peut s'en servir : c'est le MJ qui dit qui.
 
 ### Les outils des métiers
 
@@ -147,7 +145,7 @@ D'autres outils viennent de la classe : le kit de crochetage du Technicien et de
 
 **La trousse de soins.** Elle contient des pansements, des aiguilles, du fil, un flacon d'antiseptique. Elle sert à panser une plaie (Instinct (Médecine) DD 12), à stabiliser un personnage tombé à 0 PV (DD 10, DD 12 s'il est tombé sous une balle, DD 15 sous le feu : chapitre 4). Elle pèse deux kilos.
 
-**Les menottes et les colliers de serrage.** Un homme menotté ou lié par un collier de serrage est **entravé** (chapitre 7). Ouvrir des menottes sans clef demande un test d'Adresse DD 15 avec des outils de cambrioleur. Un collier se défait en se tortillant (Adresse (Acrobaties) DD 12) ou à la force (Force (Athlétisme) DD 15).
+**Les menottes et les colliers de serrage.** Un homme menotté ou lié par un collier de serrage est **entravé** (chapitre 7). Ouvrir des menottes sans clé demande un test d'Adresse DD 15 avec des outils de cambrioleur. Un collier se défait en se tortillant (Adresse (Acrobaties) DD 12) ou à la force (Force (Athlétisme) DD 15).
 
 ## Les véhicules
 
@@ -169,7 +167,7 @@ Un personnage porte sans gêne **Force × 7,5 kg** (chapitre 2). Inès, Karim et
 
 > **Exemple.**
 >
-> Inès porte son couteau de poche (0,1 kg), son téléphone jetable (0,2 kg), son blouson renforcé (1,5 kg), son triangle (0,8 kg), sa lampe torche (0,4 kg), ses cartes routières (0,5 kg), ses gants et sa casquette (0,2 kg), son atlas (0,6 kg), son thermos (0,7 kg) et sa lampe frontale (0,2 kg). Total : 5,2 kg. Pour sortir un carton de dossiers de 22 kg d'un bureau, elle monte à 27,2 kg : elle porte encore sans gêne. Si elle ajoute un homme inconscient de 75 kg, elle dépasse sa limite : elle avance de 1,5 m par round. Tomasz, avec ses 120 kg de limite, soulève le même homme sans que son allure change.
+> Inès porte son couteau de poche (0,1 kg), son téléphone jetable (0,2 kg), son blouson renforcé (2 kg), son triangle (0,8 kg), sa lampe torche (0,4 kg), ses cartes routières (0,5 kg), son gilet de chantier, sa casquette et ses gants (0,5 kg), son atlas (0,6 kg), son thermos (0,7 kg) et sa lampe frontale (0,2 kg). Total : 6 kg. Pour sortir un carton de dossiers de 22 kg d'un bureau, elle monte à 28 kg : elle porte encore sans gêne. Si elle ajoute un homme inconscient de 75 kg, elle dépasse sa limite : elle avance de 1,5 m par round. Tomasz, avec ses 120 kg de limite, soulève le même homme sans que son allure change.
 
 ## Les cartes de la table
 
