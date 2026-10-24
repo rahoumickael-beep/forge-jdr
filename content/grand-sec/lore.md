@@ -31,7 +31,7 @@ Au nord, à Valence, l'ancienne République a construit un mur en 2038 pour gard
 
 ### L'eau [Joueurs]
 
-Tout se paie en eau. La monnaie est le **godet**, un quart de litre d'eau propre, scellé dans une capsule de métal frappée du sceau de celui qui l'a tirée. Un homme a besoin de huit godets par jour pour vivre en été, six en hiver, à boire, en plus de ce qu'il mange. Un repas coûte deux godets, une nuit à l'abri quatre, un fusil cinq cents : un an de salaire d'un manœuvre.
+Tout se paie en eau. La monnaie est le **godet**, un quart de litre d'eau propre, scellé dans une capsule de métal frappée du sceau de celui qui l'a tirée. Un homme a besoin de huit godets par jour pour vivre en été, six en hiver, à boire, en plus de ce qu'il mange. Un repas coûte deux godets, une nuit à l'abri quatre, un fusil cinq cents : trois mois de travail d'un manœuvre, une fois sa soif payée.
 
 L'eau vient de trois endroits : les puits profonds des villes, que tiennent les **Puisatiers** ; les bouilleries de sel de la côte, qui font de l'eau douce avec de l'eau de mer et beaucoup de bois ; et **Montclair**, la citadelle du Mont Chauve (c'est le surnom qu'on donne au Ventoux depuis qu'il a perdu ses arbres, sauf au sommet), où il pleut encore. Personne ne sait pourquoi il pleut là-haut et nulle part ailleurs. Les **Fontainiers** disent que c'est la grâce.
 
@@ -248,7 +248,7 @@ Les fusils d'avant le Sec existent encore, mais les cartouches sont rares (cinq 
 
 ### L'argent [Joueurs]
 
-Le godet. Un repas coûte 2 godets, une nuit à l'abri 4, une semaine de place sur un char à voile 30, un âne 150, une arbalète 120, un fusil 500, une cartouche 5. Un manœuvre gagne 14 godets par jour, un batelier 20, un garde de convoi 30. Un fusil vaut un an de salaire d'un manœuvre, une fois sa soif payée.
+Le godet. Un repas coûte 2 godets, une nuit à l'abri 4, une semaine de place sur un char à voile 30, un âne 150, une arbalète 120, un fusil 500, une cartouche 5. Un manœuvre gagne 14 godets par jour, un batelier 20, un garde de convoi 30. Un fusil vaut trois mois de travail d'un manœuvre, une fois sa soif payée.
 
 ---
 

@@ -33,6 +33,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   "Gens de 1923": "paraffin lamp and lighthouse lantern in rain, sepia and tarred wool tones",
   "Ce que rend la mer": "flat pre-dawn grey light on wet sand, drowned pallor and cold silver tones",
   "La Fosse": "faint green light seen from underwater, murk and drifting silt tones",
+  // Le Grand Sec (affiche des années 1960 passée au soleil)
+  "Bêtes du Sec": "white noon sun on bleached ground, ochre dust and sun-faded poster tones",
+  "Gens de la Route": "low evening backlight and warm campfire embers through blowing ochre dust, faded lavender shadows and rust tones",
+  "Gens des citadelles": "hard white midday sun with deep lavender blue shadows, whitewashed stone and ochre tones",
+  "Machines d'avant": "ochre dust haze under a pale chalky sun on peeling paint, long lavender blue shadows and rust tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */

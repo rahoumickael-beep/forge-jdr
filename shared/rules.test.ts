@@ -1,19 +1,22 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL, COTE_DES_NOYES, RESIDENCE, TERNELANDE } from "./canon";
+import { ARCHIPEL, COTE_DES_NOYES, GRAND_SEC, RESIDENCE, TERNELANDE } from "./canon";
 import { classesFor, CLASSES, SKILLS } from "./rules";
 import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import { REGLES_RESIDENCE } from "./residence-regles";
 import { HISTORIQUES_NOYES, ORIGINES_NOYES, PERSONNALITE_NOYES } from "./noyes-origines";
 import { REGLES_NOYES } from "./noyes-regles";
+import { HISTORIQUES_SEC, ORIGINES_SEC, PERSONNALITE_SEC } from "./sec-origines";
+import { REGLES_SEC } from "./sec-regles";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
 const ternelande = classesFor("dark-fantasy");
 const residence = classesFor("cyberpunk");
 const noyes = classesFor("horreur");
-const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes];
+const sec = classesFor("post-apo");
+const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
@@ -21,6 +24,7 @@ test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(ternelande.length, 10);
   assert.equal(residence.length, 10);
   assert.equal(noyes.length, 10);
+  assert.equal(sec.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -178,6 +182,52 @@ test("classes de la Côte des Noyés : le prix des pouvoirs est dit, la Marée n
     for (const p of [...c.powers, ...c.subclasses.flatMap((s) => s.powers)]) {
       const m = p.effect.match(/Prix : Marée \+(\d)/);
       if (m) assert.ok(Number(m[1]) <= 2, `${c.name} : ${p.name} coûte trop de Marée`);
+    }
+  }
+});
+
+test("classes du Grand Sec : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify([sec, ORIGINES_SEC, HISTORIQUES_SEC, REGLES_SEC, PERSONNALITE_SEC]);
+  for (const secret of GRAND_SEC.secrets) assert.ok(!text.includes(secret), secret);
+  for (const mot of ["Gardes-Mâts", "Conseil des Eaux", "consortium", "ensemencement", "Rose Faucon", "Lucas Arnaud"]) {
+    assert.ok(!text.toLowerCase().includes(mot.toLowerCase()), `texte joueur du Grand Sec : « ${mot} »`);
+  }
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes du Grand Sec : « ${word} »`);
+  }
+  for (const mot of GRAND_SEC.anachronismes) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${mot.toLowerCase()}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `anachronisme dans le Grand Sec : « ${mot} »`);
+  }
+});
+
+test("classes du Grand Sec : compétences connues, caractéristiques du genre, ids préfixés", () => {
+  const noms = new Set(SKILLS.map((s) => s.name));
+  const stats = new Set(["Force", "Agilité", "Endurance", "Savoir", "Instinct", "Présence"]);
+  for (const c of sec) {
+    assert.ok(c.id.startsWith("pa-"), c.id);
+    for (const s of c.skills.from) assert.ok(noms.has(s), `${c.name} : compétence « ${s} » inconnue`);
+    for (const s of [...c.mainStats, ...c.saves]) assert.ok(stats.has(s), `${c.name} : caractéristique « ${s} » inconnue`);
+    const niveaux = c.subclasses.map((s) => s.powers.map((p) => p.level).join(","));
+    assert.equal(niveaux[0], niveaux[1], `${c.name} : les deux sous-classes n'ont pas les mêmes niveaux`);
+    assert.equal(c.subclasses[0].powers[0].level, 3, `${c.name} : premier pouvoir de sous-classe au niveau 3`);
+  }
+  for (const h of HISTORIQUES_SEC) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
+  assert.equal(ORIGINES_SEC.length, 6);
+  assert.equal(HISTORIQUES_SEC.length, 8);
+  for (const o of ORIGINES_SEC) assert.equal(o.subs.length, 2, `${o.name} : deux variantes`);
+});
+
+test("classes du Grand Sec : le prix des pouvoirs est dit en godets, au plus 2 par pouvoir", () => {
+  for (const c of sec) {
+    const tous = [...c.powers, ...c.subclasses.flatMap((s) => s.powers)];
+    const aPrix = tous.some((p) => /Prix : \d godets?\./.test(p.effect));
+    const aPassif = c.powers.some((p) => p.name === "Ce que coûte l'effort");
+    assert.equal(aPrix, aPassif, `${c.name} : pouvoir à prix et passif « Ce que coûte l'effort » vont ensemble`);
+    for (const p of tous) {
+      const m = p.effect.match(/Prix : (\d) godets?\./);
+      if (m) assert.ok(Number(m[1]) <= 2, `${c.name} : ${p.name} coûte trop d'eau`);
     }
   }
 });

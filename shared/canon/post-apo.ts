@@ -115,6 +115,8 @@ export const GRAND_SEC: Canon = {
     { nom: "Zélie Brun", alias: ["Brun", "la doyenne Brun", "la doyenne"], titre: "doyenne des Gardes-Mâts", ou: "le centre de maintenance des Cévennes", faction: "gardesmats", age: 62, etat: "vivant" },
     { nom: "Lucas Arnaud", alias: ["Lucas", "le gamin de la Porte"], titre: "gamin de la Porte-d'Attente", ou: "la Porte-d'Attente", faction: "porte", age: 14, etat: "vivant" },
     // À la première séance (bible, section 11)
+    { nom: "Bastien Coulomb", alias: ["Bastien", "Coulomb"], titre: "lieutenant de la Horde du Mistral", ou: "La Route du Rhône", etat: "vivant" },
+    { nom: "Honorine Pellegrin", alias: ["Honorine", "Pellegrin"], titre: "bouilleuse de sel à Beaucaire", ou: "Les Salins", etat: "vivant" },
     { nom: "Rose Faucon", alias: ["Faucon", "Rose"], titre: "jeune femme qui cherche une place pour Beaucaire", ou: "La Route du Rhône", etat: "vivant" },
   ],
 

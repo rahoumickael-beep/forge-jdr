@@ -5,6 +5,7 @@ import { HISTORIQUES_ARCHIPEL, ORIGINES_ARCHIPEL, PERSONNALITE_ARCHIPEL } from "
 import { HISTORIQUES_TERNELANDE, ORIGINES_TERNELANDE, PERSONNALITE_TERNELANDE } from "./ternelande-origines";
 import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import { HISTORIQUES_NOYES, ORIGINES_NOYES, PERSONNALITE_NOYES } from "./noyes-origines";
+import { HISTORIQUES_SEC, ORIGINES_SEC, PERSONNALITE_SEC } from "./sec-origines";
 import type { GenreId } from "./types";
 
 /** Index des caractéristiques : 0 For, 1 Dex, 2 Con, 3 Int, 4 Sag, 5 Cha (noms adaptés au genre). */
@@ -300,6 +301,7 @@ export const ORIGINS: Origin[] = [
   ...ORIGINES_TERNELANDE,
   ...ORIGINES_RESIDENCE,
   ...ORIGINES_NOYES,
+  ...ORIGINES_SEC,
 ];
 
 export const BACKGROUNDS: Background[] = [
@@ -387,6 +389,7 @@ export const BACKGROUNDS: Background[] = [
   ...HISTORIQUES_TERNELANDE,
   ...HISTORIQUES_RESIDENCE,
   ...HISTORIQUES_NOYES,
+  ...HISTORIQUES_SEC,
 ];
 
 /** Suggestions de personnalité. Le joueur peut toujours écrire la sienne. */
@@ -426,7 +429,7 @@ export const PERSONALITY: Record<"trait" | "ideal" | "bond" | "flaw", string[]> 
 };
 
 /** Suggestions de personnalité du monde de la partie. */
-export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : genre === "dark-fantasy" ? PERSONNALITE_TERNELANDE : genre === "cyberpunk" ? PERSONNALITE_RESIDENCE : genre === "horreur" ? PERSONNALITE_NOYES : PERSONALITY);
+export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : genre === "dark-fantasy" ? PERSONNALITE_TERNELANDE : genre === "cyberpunk" ? PERSONNALITE_RESIDENCE : genre === "horreur" ? PERSONNALITE_NOYES : genre === "post-apo" ? PERSONNALITE_SEC : PERSONALITY);
 
 /** Achat par points (27 points, valeurs de 8 à 15). */
 export const POINT_BUY_BUDGET = 27;
