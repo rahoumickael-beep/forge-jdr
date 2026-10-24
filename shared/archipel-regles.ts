@@ -40,7 +40,7 @@ export const REGLES_ARCHIPEL: RuleSection[] = [
       "| Artilleur | Réflexes | Tirer : d20 + Réflexes + bonus de l'arme contre la CA de la cible",
       "| Mécanicien | Technique | Réparer la coque (1d8 + Technique) ou relancer les boucliers (2d6 + Technique)",
       "| Vigie | Instinct | Désigner une cible (DD 12) : le prochain tir a l'avantage",
-      "Le maître de la classe ajoute sa maîtrise aux tests de poste. Un 20 naturel au tir double les dés de dégâts ; un 1 naturel manque toujours.",
+      "Le serveur ajoute ta maîtrise aux tests de capitaine, de pilote et de vigie ; un tir ajoute le bonus de l'arme à tes Réflexes. Les bonus de classe (Mains sur le manche, Artilleur, Commandement de bord…) se comptent à la main : annonce-les au MJ. Un 20 naturel au tir double les dés de dégâts ; un 1 naturel manque toujours.",
     ],
   },
   {
@@ -49,8 +49,8 @@ export const REGLES_ARCHIPEL: RuleSection[] = [
     body: [
       "Le combat se joue sur une carte d'espace, avec les mêmes dés et la même initiative. Le vide se traverse partout ; les astéroïdes bloquent le passage et la vue ; les nébuleuses et les débris se traversent.",
       "À chaque round, chaque poste joue une action. Le MJ ouvre un nouveau round : esquives, ordres et cibles désignées retombent.",
-      "Un vaisseau à 0 point de coque est désemparé : plus de moteurs ni d'armes jusqu'à une réparation. L'équipage peut encore se battre à bord, fuir en capsule ou se rendre.",
-      "Fuir : le pilote gagne trois manches de Réflexes (DD fixé par le MJ selon le poursuivant) avant que le vaisseau ne prenne trois tirs à la coque.",
+      "Un vaisseau à 0 point de coque est désemparé : plus de moteurs ni d'armes jusqu'à ce qu'une réparation remonte la coque à 1 ou plus. L'équipage peut encore se battre à bord, fuir en capsule ou se rendre.",
+      "Fuir remplace l'action du pilote : il doit réussir deux tests de Réflexes (DD fixé par le MJ selon le poursuivant) avant que le vaisseau n'ait été touché trois fois. À chaque test raté, le poursuivant tire une fois.",
     ],
   },
   {
