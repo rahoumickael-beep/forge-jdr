@@ -1,12 +1,12 @@
 # Chapitre 1 — Comment on joue
 
-Une partie de l'Exposition éternelle ressemble à une soirée de relève, à six heures, quand quatre mille hommes sortent par la porte de Javel et que chacun a une histoire à raconter à celui qui marche à côté. Cinq personnes autour d'une table, ou d'un salon vocal, des dés, des fiches, une carte. L'une d'elles connaît la foire, ses portes et ses mensonges : c'est le maître du jeu. Les autres incarnent chacune un personnage, une ouvrière du bobinage, un interprète du Village, un reporter de vingt ans, une aéronaute venue de Strasbourg. Ensemble, on raconte ce qui leur arrive, et ce que ça leur coûte en francs et en Pression.
+Une partie de l'Exposition éternelle ressemble à un dimanche dans une cour de Javel : chacun parle de son étage, personne ne dit le nom du contremaître, et quelqu'un finit par sortir la bouteille. Cinq personnes autour d'une table, ou d'un salon vocal, des dés, des fiches, une carte. L'une d'elles connaît la foire, ses portes et ses mensonges : c'est le maître du jeu. Les autres incarnent chacune un personnage, une ouvrière du bobinage, un interprète du Village, un reporter de vingt ans, une aéronaute venue de Strasbourg. Ensemble, on raconte ce qui leur arrive, et ce que ça leur coûte en francs et en Pression.
 
-Ce chapitre explique la mécanique de base, ce qu'est une aventure de foire quand on la joue à voix haute, puis comment créer ton personnage, compter tes cartouches et tes francs. Tout le reste du livre s'appuie dessus. Si tu as déjà joué à un jeu compatible avec la cinquième édition du plus vieux jeu de rôle du monde, tu reconnaîtras presque tout ; lis quand même les encadrés, ils signalent ce qui change à l'Éternelle.
+Si tu as déjà joué à un jeu compatible avec la cinquième édition du plus vieux jeu de rôle du monde, tu reconnaîtras presque tout ; lis quand même les encadrés, ils signalent ce qui change à l'Éternelle.
 
 ## La conversation
 
-Le jeu avance par allers-retours. Il n'y a pas de tour de parole fixe hors combat : on parle quand on a quelque chose à dire, comme dans une cour de Grenelle, un dimanche.
+Le jeu avance par allers-retours. Il n'y a pas de tour de parole fixe hors combat : on parle quand on a quelque chose à dire, comme dans une cour de Grenelle.
 
 1. **Le MJ décrit la situation.** Où sont les personnages, ce qu'ils voient, ce qu'ils entendent, ce qui sent la vapeur, le charbon ou le café des buvettes.
 2. **Les joueurs disent ce que font leurs personnages.** Un joueur parle pour le sien, à la première personne (« je ») ou à la troisième (« Léonie pose la main à plat sur le bâti »), comme il préfère.
@@ -16,7 +16,7 @@ Puis on recommence.
 
 > **Exemple.**
 >
-> *Le MJ :* « La porte de Javel, six heures du soir. La relève. Quatre mille blouses bleues sortent, quatre mille entrent. Au portillon, trois contrôleurs et un guichet automate qui rend la monnaie en cliquetant. Sur le poteau, un avis neuf, la colle encore humide : un règlement de l'Exposition, avec le cachet du Commissariat au bas. »
+> *Le MJ :* « Le portillon de la Tour, midi. Une file de visiteurs en habit, trois contrôleurs et un guichet automate qui rend la monnaie en cliquetant. Sur le poteau, un avis neuf, la colle encore humide : un règlement de l'Exposition, avec le cachet du Commissariat au bas. »
 >
 > *La joueuse d'Ottilie, aéronaute :* « Je compte les contrôleurs, et je regarde s'ils fouillent ou s'ils regardent seulement les cartes. »
 >
@@ -37,7 +37,7 @@ Le maître du jeu tient plusieurs rôles à la fois.
 - **Il joue le monde.** La lumière qui baisse, les grilles qui se ferment à six heures, la Sûreté qui passe, les gens qui se souviennent de ce que tu as fait.
 - **Il choisit certains réglages de la campagne**, en particulier la règle de la mort d'un personnage (chapitre 4) et la façon de gagner des niveaux (chapitre 3). Il les annonce avant la première séance.
 
-Le MJ n'est pas l'adversaire des joueurs : son travail est de rendre la partie intéressante.
+Le MJ ne joue pas contre toi. S'il fait siffler un garde, c'est pour que la scène coûte quelque chose, pas pour que tu perdes.
 
 ## Le rôle des joueurs
 
@@ -59,15 +59,15 @@ Quelques habitudes rendent la table plus agréable.
 
 Forge JdR est une table en ligne. Le MJ ouvre une partie et donne son code à la table. Chacun arrive chez soi, devant son écran, et déplace son pion sur la carte en temps réel. Le MJ voit toute la carte ; tu ne vois que ce que ton personnage voit, et le brouillard cache le reste. Ta fiche est dans l'application : points de vie, Pression, pouvoirs, francs.
 
-Deux choses se tiennent à la main. Ta Pression se note sur ta fiche, sous tes points de vie, et tu la montes ou la baisses chaque fois que le MJ le dit. Ta licence, elle, se paie : la fiche garde le compte des semaines de jeu où tu dois quelque chose au Bureau des Brevets. Les deux comptent autant que tes points de vie.
+Ta Pression se note sur ta fiche, sous tes points de vie, et la fiche garde le compte des semaines de jeu où tu dois quelque chose au Bureau des Brevets. Les deux comptent autant que tes points de vie.
 
 Il n'y a pas de chat écrit. La voix passe par Discord, comme autour d'une vraie table. Le **journal** de la partie, lui, garde les jets de dés, ce que le MJ narre et les événements importants. Si tu as manqué une phrase, relis-la.
 
 ## Une aventure à l'Éternelle
 
-Ici, on ne se bat pas tous les quarts d'heure. On fait la queue à un guichet, on attend qu'un contrôleur se lasse, on négocie avec un impresario qui a la clef des grilles, on guette un dirigeable qui n'arrive pas. On rentre à Grenelle avec une licence à payer et un témoin de moins qu'au départ. Le combat existe (chapitre 4), mais dans l'enceinte il fait venir les gardes, et un garde qui siffle fait venir tous les autres. Il arrive en général parce que quelqu'un a menti, parce que quelqu'un a eu peur, ou parce qu'un papier a été mal lu.
+Ici, on ne se bat pas tous les quarts d'heure. On fait la queue à un guichet, on attend qu'un contrôleur se lasse, on négocie avec un impresario qui a la clef des grilles, on guette un dirigeable qui n'arrive pas. On rentre à Grenelle avec une licence à payer et un témoin de moins qu'au départ. Le combat existe (chapitre 4), mais dans l'enceinte il fait venir les gardes, et un garde qui siffle fait venir tous les autres. Il arrive en général parce que quelqu'un a menti ou qu'un papier a été mal lu.
 
-Chacun dans ton groupe doit quelque chose au Bureau des Brevets, et chacun porte un numéro gravé sur son appareil, qui dit qui l'a avancé. La **Pression** de chacun mesure à quel point il a poussé son appareil. Une Pression qui monte attire les contrôleurs. Quand l'appareil lâche, il le fait devant tout le monde.
+Chacun dans ton groupe doit quelque chose au Bureau des Brevets, et chacun porte un numéro gravé sur son appareil, qui dit qui l'a avancé. Quand l'appareil lâche, il le fait devant tout le monde.
 
 ### Ce que la voix change
 
@@ -82,7 +82,7 @@ On joue à distance. Le silence d'un salon vocal pèse plus lourd que celui d'un
 
 ### Lignes et voiles
 
-L'Éternelle parle de choses dures. Quatre cents personnes exposées derrière des cordes, payées un franc par jour retenues déduites, dont le livret est gardé au Trocadéro et à qui l'on refuse le permis de sortie. Des médecins du Muséum qui mesurent des crânes, des visiteurs qui jettent des sous et touchent les cheveux. Des ouvrières payées la moitié, des femmes qui ne signent rien sans leur mari. Une grève de 1892 où la troupe a tiré. Des rafles de la Sûreté, des bombes, des dépôts où le règlement autorise à retenir un mois. L'hiver, la poitrine. Le livre ne les arrange pas et ne les décore pas, et aucune scène ne fait des Villages un décor.
+L'Éternelle parle de choses dures. Quatre cents personnes exposées derrière des cordes, payées un franc par jour retenues déduites, dont le livret est gardé au Trocadéro et à qui l'on refuse le permis de sortie. Des médecins du Muséum qui mesurent des crânes, des visiteurs qui jettent des sous et touchent les cheveux. Des ouvrières payées la moitié, des femmes qui ne signent rien d'important sans l'accord de leur mari. Une grève de 1892 où la troupe a tiré. Des rafles de la Sûreté, des bombes, des dépôts où le règlement autorise à retenir un mois. L'hiver, la poitrine. Le livre ne les arrange pas et ne les décore pas, et aucune scène ne fait des Villages un décor.
 
 Avant la première séance, la table discute de ce qu'elle veut voir à l'écran et de ce qu'elle préfère laisser hors champ. Une **ligne**, c'est ce qui ne sera pas joué du tout. Un **voile**, c'est ce qui sera présent mais pas décrit : on sait que ça s'est passé, on ne regarde pas.
 
@@ -211,10 +211,7 @@ Un **test passif** est un test sans dé. Il vaut **10 + les modificateurs** qui 
 
 ## Prendre son temps
 
-Quand un personnage a tout le temps qu'il veut, qu'aucun danger ne le presse et que l'échec n'a pas de conséquence, le MJ peut lui accorder le résultat qu'il obtiendrait en essayant encore et encore.
-
-- **Prendre dix** : on considère que le dé a fait 10. Le personnage réussit si 10 + son modificateur atteint le DD.
-- **Prendre vingt** : la tâche prend environ vingt fois plus de temps, et on considère que le dé a fait 20. Si ça ne suffit pas, il ne peut pas réussir seul.
+Quand un personnage a tout le temps qu'il veut, qu'aucun danger ne le presse et que l'échec n'a pas de conséquence, il peut **prendre dix** : on considère que le dé a fait 10. Il réussit si 10 + son modificateur atteint le DD.
 
 Le MJ décide si c'est permis. Feuilleter à loisir les registres d'une bibliothèque de quartier, oui. Démonter un guichet automate au milieu de la relève, avec la file qui s'allonge et un contrôleur qui s'approche, non : le temps est justement ce qui manque.
 
@@ -260,7 +257,7 @@ Le temps de jeu ne suit pas le temps réel. Le MJ le comprime ou le dilate selon
 | **Heures** | Trajet, attente, purge d'un appareil | On attend que la relève passe (une heure) |
 | **Jours** | Contrat, attente, licence à payer | On attend le permis (une journée) |
 
-Le MJ dit à quelle échelle on se trouve. Une scène peut passer d'une échelle à l'autre en une phrase : « Vous attendez jusqu'au soir sans que rien ne bouge. Puis les lampes de Grenelle baissent une fois, deux fois, et vous cherchez vos cartes. »
+Le MJ dit à quelle échelle on se trouve. Une scène peut passer d'une échelle à l'autre en une phrase : « Tu attends jusqu'au soir sans que rien ne bouge. Puis les lampes de Grenelle baissent une fois, deux fois, et tu cherches tes cartes. »
 
 ## Ce que le MJ peut te demander d'autre
 
@@ -269,11 +266,11 @@ Quelques mots reviennent souvent à la table.
 - **Lancer l'initiative** : un combat commence. Chacun lance un test d'Adresse (chapitre 4).
 - **Faire une sauvegarde de X** : lance un d20 + le modificateur de cette caractéristique, + ta maîtrise si tu la maîtrises.
 - **Fais-moi un X (compétence)** : un test de caractéristique avec cette compétence. « Fais-moi une Perception » veut dire un test d'Instinct (Perception).
-- **Montre ta carte** : tu donnes ton billet, ta carte de Permanent ou ta carte de presse. **Montre ton numéro** : celui de ta licence, gravé sur ton appareil.
+- **Montre ta carte** : tu donnes ton billet, ta carte de Permanent ou la carte de ton journal. **Montre ton numéro** : celui de ta licence, gravé sur ton appareil.
 - **Paie** : tu retires de ta fiche la somme annoncée, en francs ou en centimes.
 - **Compte tes cartouches** : tu dis à voix haute combien il t'en reste dans le barillet et dans la poche.
 - **Dépense une utilisation** : coche une case du pouvoir que tu viens d'utiliser.
-- **Note ta Pression** : elle monte de 1 chaque fois que tu emploies un appareil à plein régime ou que tu le forces (voir plus bas).
+- **Note ta Pression** : elle monte de 1 chaque fois que tu emploies un appareil à plein régime ou que tu le forces (chapitre 3).
 - **Purge ton appareil** : une heure chez un mécanicien, 5 francs, une fois par jour, et ta Pression baisse de 2 (chapitre 3).
 - **Repos court / repos long** : voir le chapitre 3.
 
@@ -283,19 +280,11 @@ Quelques mots reviennent souvent à la table.
 
 ## La Pression et les brevets
 
-Deux choses vont de pair. Elles servent dans tous les chapitres : en voici le principe. Le chapitre 3 donne leurs règles complètes, le chapitre 4 les armes, le chapitre 5 les pouvoirs de classe.
-
-### La Pression
-
-À l'Éternelle, il n'y a pas de magie. Il y a des appareils que presque personne ne comprend, brevetés au Trocadéro et loués aux particuliers : un gant à ressort, une lampe à arc de poche, une canne-grappin, une cuirasse à vapeur. Chaque personnage a une **Pression**, de 0 à 10, notée sur sa fiche sous ses points de vie. Elle part à 0. Elle monte de 1 quand tu emploies un appareil à plein régime (les pouvoirs qui portent la mention **« Chaudière »**) ou quand tu le forces plus loin que sa conception. Elle baisse quand tu fais purger l'appareil chez un mécanicien, et après un repos long. Plus elle est haute, plus l'appareil chauffe, s'enraye, brûle les mains, puis éclate.
-
-### Les brevets
-
-Chaque personnage peut porter jusqu'à **deux brevets**. Un brevet, c'est un appareil et sa licence : 200 francs par appareil, payables au Bureau des Brevets du Trocadéro, qui grave un numéro sur le métal. Personne n'a 200 francs en poche au départ : la licence est avancée, et ce qui l'avance dit qui te tient. Ta loge, la Chambre syndicale, ton impresario, ton patron, ta légation, ou personne. Tu la rembourses chaque semaine de jeu. Quatre semaines sans payer, et le Bureau reprend l'appareil.
+Deux notions reviennent dans tous les chapitres. Une **Pression**, de 0 à 10, dit à quel point tu as poussé tes appareils ; un **brevet**, c'est un appareil et sa licence, avancée par ton origine. Le chapitre 3 donne leurs règles, le chapitre 4 ce qu'elles changent au combat, le chapitre 5 les pouvoirs de classe qui les emploient.
 
 > **Pression et brevet.**
 >
-> La Pression appartient à ton personnage, pas à l'appareil : elle monte quand tu emploies un appareil, et elle te suit. Le brevet appartient à celui qui l'a avancé tant que tu n'as pas fini de payer. Les deux se notent sur ta fiche, et aucun ne disparaît avec un repos, sauf la Pression, qui baisse.
+> La Pression appartient à ton personnage, pas à l'appareil : elle te suit. Le brevet appartient à celui qui l'a avancé tant que tu n'as pas fini de payer.
 
 ## Créer ton personnage
 
@@ -308,7 +297,7 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 5. **Tes caractéristiques.** Force, Adresse, Endurance, Savoir, Instinct, Présence. Valeurs fixes, achat par points ou dés : le chapitre 2 donne les trois méthodes. Mets tes meilleures valeurs dans les caractéristiques de ta classe.
 6. **Tes compétences.** Celles de ton historique sont données. Ta classe t'en laisse choisir quelques-unes dans une liste. Ta variante d'origine t'en ajoute deux ; si une compétence tombe en double, tu en prends une autre.
 7. **Ta personnalité.** Un trait, un idéal, un lien, un défaut. Prends des phrases courtes qui sentent la vapeur (« Je pose la main à plat sur tout ce qui tourne, pour sentir si ça ralentit », « Je compte les francs à voix basse avant de répondre », « Je note tout sur le dos de ma main, même ce que je ne comprends pas »). Ce sont elles que le MJ utilisera.
-8. **Ton prénom et ton allure.** Un prénom et un nom de famille, comme Léonie Cabassol, Mamadou Faye, Ernest Viardot ou Ottilie Brandt. Note aussi un détail qu'on voit de loin : une blouse bleue, un fichu, une médaille retournée, un calepin à ressort. Tu peux envoyer un portrait.
+8. **Ton prénom et ton allure.** Un prénom et un nom de famille, comme Léonie Cabassol, Mamadou Faye, Ernest Tardivon ou Ottilie Brandt. Note aussi un détail qu'on voit de loin : une blouse bleue, un fichu, une médaille retournée, un calepin à ressort. Tu peux envoyer un portrait.
 9. **Ton appareil breveté.** Tu pars avec un brevet : l'appareil de ton choix dans le catalogue du chapitre 3, d'un prix de 120 francs au plus. Sa licence est avancée, et c'est ton origine qui dit par qui.
 10. **Tes cartouches et tes francs.** Pas d'écran pour les cartouches : tu les écris sur ta fiche. Elles ont leur section plus bas.
 
@@ -329,7 +318,7 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 | Interprète | d8 | Présence, Savoir | Il parle trois langues et il a traduit les contrats que personne ne lisait. Langues, négociation. |
 | Escrimeur | d10 | Adresse, Présence | Une canne-épée dans la rue, un fleuret dans la salle. Duel, salle d'armes. |
 
-Aucune classe ne lance de sort. Le Mécanicien, l'Aéronaute et l'Ingénieur vivent de la Pression : ils ont des pouvoirs « Chaudière » qui passent par un de leurs appareils, et leur fiche porte le passif « Sous pression ». Les autres classes portent un appareil comme tout le monde et peuvent le forcer, mais leurs pouvoirs ne le leur demandent pas. Le Garde, le Médecin et l'Escrimeur travaillent au corps ; le Reporter, l'Interprète et le Chansonnier travaillent avec la voix ; le Réfractaire travaille dans l'ombre des deux.
+Aucune classe ne lance de sort. Le Mécanicien, l'Aéronaute et l'Ingénieur vivent de la Pression : leurs pouvoirs « Chaudière » passent par un de leurs appareils (chapitre 5). Le Garde, le Médecin et l'Escrimeur travaillent au corps ; le Reporter, l'Interprète et le Chansonnier travaillent avec la voix ; le Réfractaire travaille dans l'ombre des deux.
 
 ### Les six origines
 
@@ -339,14 +328,14 @@ Chaque origine ajoute 1 à une caractéristique, et sa variante en ajoute deux a
 |---|---|---|
 | Parisiens de l'Éternelle : Enfant de la foire, Gamin des quais | Adresse +1, plus Adresse +1 et Présence +1 (Adresse +2 en tout), ou Adresse +1 et Endurance +1 (Adresse +2 en tout) | Chaque porte, chaque raccourci ; licence prêtée par la loge ; jamais vu d'autre ville |
 | Gens des ateliers : Mécanicien de la Galerie, Ouvrière des ateliers | Endurance +1, plus Endurance +1 et Savoir +1 (Endurance +2 en tout), ou Instinct +1 et Présence +1 | Des mains qui savent ; la caisse de la Chambre ; les contrôleurs te regardent deux fois |
-| Gens des Villages : Sénégalais du Village, Annamite du Village | Endurance +1, plus Endurance +1 et Présence +1 (Endurance +2 en tout), ou Adresse +1 et Instinct +1 | Un savoir-faire que la foire expose ; plusieurs langues ; le livret au Trocadéro |
+| Gens des Villages : Village du Sénégal, Village du Vietnam | Endurance +1, plus Endurance +1 et Présence +1 (Endurance +2 en tout), ou Adresse +1 et Instinct +1 | Un savoir-faire que la foire expose ; plusieurs langues ; retenu : livret au Trocadéro |
 | Employés et Signataires : Fils (ou fille) de Signataire, Employé du Commissariat | Présence +1, plus Savoir +1 et Présence +1 (Présence +2 en tout), ou Savoir +1 et Endurance +1 | Un patron ; du crédit chez les fournisseurs ; surveillé |
 | Visiteurs restés : Provincial, Étranger | Instinct +1, plus Instinct +1 et Savoir +1 (Instinct +2 en tout), ou Savoir +1 et Présence +1 | Un regard neuf ; personne pour t'attendre ; un billet périmé |
 | Gens de la Butte : Artiste ou chansonnier, Réfractaire | Présence +1, plus Adresse +1 et Présence +1 (Présence +2 en tout), ou Adresse +1 et Instinct +1 | Cabarets, logeurs, police ; sous le manteau ; mal vu de la police |
 
 > **Les noms des variantes.**
 >
-> « Annamite du Village » est le nom que porte la variante dans l'application, un mot de l'époque. Elle convient aussi à un Kanak de la Nouvelle-Calédonie ou à un Kabyle : prends-la, et dis le reste à la table. De même, « Sénégalais du Village » recouvre le wolof, le sérère et le bambara.
+> Dans l'application, les deux variantes s'appellent Village du Sénégal et Village du Vietnam. Un Kanak ou un Kabyle prend celle dont les bonus lui servent, et la table écrit le nom de son Village sur sa fiche. Le livre dit le Vietnam, sauf quand il cite une affiche ou une variante de l'application.
 
 Chaque variante ajoute en plus la maîtrise de deux compétences, avec un trait qui la raconte : l'Enfant de la foire maîtrise Tromperie et Perception, le Gamin des quais Acrobaties et Escamotage, l'Ouvrière des ateliers Investigation et Intuition, l'Étranger Histoire et Persuasion. Les deux variantes des Villages ne lient personne à un métier : tu choisis librement deux compétences dans leur liste.
 
@@ -369,10 +358,10 @@ Chaque historique donne deux compétences, un outil, quelques objets, des francs
 >
 > Tu les retrouveras dans tous les chapitres.
 >
-> - **Léonie Cabassol**, Mécanicien, Gens des ateliers (variante Ouvrière des ateliers), historique Mécanicien. Vingt-quatre ans, bobineuse à la Galerie, payée deux francs cinquante par jour pour un travail que les hommes de l'étage au-dessus signent à cinq. Elle a appris la mécanique en réparant leurs courroies, et personne ne l'a jamais écrit sur sa carte. Elle vit chez sa mère, dans une cour de Javel, et chaque samedi l'enveloppe de paie passe d'abord par la table de la cuisine.
-> - **Mamadou Faye**, Interprète, Gens des Villages (variante Sénégalais du Village), historique Interprète. Vingt-sept ans, fils d'un forgeron wolof, engagé il y a trois ans dans le Village du Sénégal. Il a appris le français chez des sœurs, puis l'impresario lui a trouvé un emploi : traduire à ses camarades les contrats qu'il leur fait signer. Il les lit avant eux, chaque soir. Son contrat est renouvelable chaque année. Il répond aux questions par une question, et il ne signe rien sans relire la dernière ligne.
-> - **Ernest Viardot**, Reporter, Parisiens de l'Éternelle (variante Enfant de la foire), historique Reporter. Vingt ans. Sa mère tient une buvette sous la Tour depuis 1890, et il a grandi entre les plates-formes et les caisses, avec une carte de Permanent à son nom depuis qu'il sait écrire. Son père est mort à la Galerie, d'une courroie, et le contrôleur a écrit que c'était sa faute. Ernest vend ses lignes à un journal du soir, au prix du pain.
-> - **Ottilie Brandt**, Aéronaute, Visiteurs restés (variante Étranger), historique Aéronaute. Vingt-sept ans, née à Strasbourg, qui est allemande depuis 1871 : son passeport porte l'aigle de l'Empire, elle parle allemand à l'administration et alsacien à sa grand-mère. Elle est venue à Paris pour une semaine, avec un cercle de ballons libres, et elle est restée quand le Commissariat a cherché des gens qui sachent charger un dirigeable. Les contrôleurs lui demandent deux fois ses papiers, et elle les leur tend la deuxième fois avec un sourire exact.
+> - **Léonie Cabassol**, Mécanicien, Gens des ateliers (variante Ouvrière des ateliers), historique Mécanicien. Vingt-quatre ans, bobineuse à la Galerie, payée deux francs cinquante par jour pour un travail que les hommes de l'étage au-dessus se font payer cinq francs. Elle a appris la mécanique en réparant leurs courroies, et personne ne l'a jamais écrit sur sa carte. Elle vit chez sa mère, dans une cour de Javel, et chaque samedi l'enveloppe de paie passe d'abord par la table de la cuisine.
+> - **Mamadou Faye**, Interprète, Gens des Villages (variante Village du Sénégal), historique Interprète. Vingt-sept ans, fils d'un forgeron sérère de Joal, engagé il y a trois ans dans le Village du Sénégal. Il a appris le français chez les sœurs, puis l'impresario l'a pris pour interprète : il traduit aux autres les contrats que l'impresario leur fait signer, et c'est l'impresario qui le paie, un franc de plus par semaine que les autres. Le Village le sait et le lui rend en silence. Il traduit toujours un peu plus lentement qu'on ne lui parle, pour voir qui écoute. Son contrat est renouvelable chaque année, et il ne signe rien sans relire la dernière ligne.
+> - **Ernest Tardivon**, Reporter, Parisiens de l'Éternelle (variante Enfant de la foire), historique Reporter. Vingt ans. Sa mère tient une buvette sous la Tour depuis 1890, et il a grandi entre les plates-formes et les caisses, avec une carte de Permanent à son nom depuis qu'il sait écrire. Son père est mort à la Galerie, d'une courroie, et le contrôleur a écrit que c'était sa faute. Ernest vend ses lignes à un journal du soir, au prix du pain.
+> - **Ottilie Brandt**, Aéronaute, Visiteurs restés (variante Étranger), historique Aéronaute. Vingt-sept ans, née à Strasbourg, allemande depuis 1871 : son passeport porte l'aigle de l'Empire, elle parle allemand à l'administration et alsacien à sa grand-mère. Elle est venue à Paris pour une semaine, avec un cercle de ballons libres, et elle est restée quand le Commissariat a cherché des gens qui sachent charger un dirigeable. Les contrôleurs lui demandent deux fois ses papiers, et elle les leur tend la deuxième fois avec un sourire exact.
 >
 > Quelques figurants (un contrôleur, un garde de porte, un contremaître, un visiteur aux mains propres) passent dans les exemples.
 
@@ -380,9 +369,9 @@ Chaque historique donne deux compétences, un outil, quelques objets, des francs
 
 C'est la dernière étape, et celle qu'on oublie. Elle tient en trois gestes.
 
-**Note tes cartouches.** Ta classe te donne tes armes et leurs cartouches. Un revolver d'ordonnance tire six coups, puis il faut le recharger. Douze cartouches pèsent 300 grammes et coûtent un franc. Le Mécanicien, l'Aéronaute, l'Ingénieur, le Garde et l'Escrimeur en reçoivent douze, six dans le barillet et six dans la poche. Le Reporter, le Médecin, l'Interprète et le Réfractaire en reçoivent six, dans le barillet. Écris-les sur ta fiche arme par arme : « Revolver : six dans le barillet, six dans la poche ». Les armes à feu sont interdites dans l'enceinte, et on les laisse en consigne contre un jeton de laiton : tes cartouches comptent, mais elles ne servent pas partout.
+**Note tes cartouches.** Ta classe te donne tes armes et leurs cartouches. Un revolver d'ordonnance tire six coups, puis il faut le recharger (poids et prix des cartouches : chapitre 6). Le Mécanicien, l'Aéronaute, l'Ingénieur, le Garde et l'Escrimeur en reçoivent douze, six dans le barillet et six dans la poche. Le Reporter, le Médecin, l'Interprète et le Réfractaire en reçoivent six, dans le barillet. Écris-les sur ta fiche arme par arme : « Revolver : six dans le barillet, six dans la poche ». Les armes à feu sont interdites dans l'enceinte, et on les laisse en consigne contre un jeton de laiton : tes cartouches comptent, mais elles ne servent pas partout.
 
-**Compte tes francs.** Ton argent de départ est la plus haute des sommes de ta classe, de ton origine et de ton historique, pas leur total. Voici les trois listes.
+**Compte tes francs.** Ton argent de départ est la plus haute des sommes de ta classe, de ton origine et de ton historique, pas leur total. Les classes et les historiques donnent 15 francs (10 pour le Réfractaire, 12 pour le Bonimenteur) : c'est le plancher. Seule une origine plus riche change la somme. Voici les trois listes.
 
 | Source | Francs |
 |---|---|
@@ -390,13 +379,13 @@ C'est la dernière étape, et celle qu'on oublie. Elle tient en trois gestes.
 | Origine : Employé du Commissariat | 30 |
 | Origine : Parisiens de l'Éternelle, Visiteurs restés | 25 |
 | Origine : Gens des ateliers | 20 |
-| Origine : Gens des Villages, Gens de la Butte | 12 |
+| Origine : Gens des Villages, Gens de la Butte (ne dépassent jamais le plancher) | 12 |
 | Classe : Mécanicien, Aéronaute, Garde, Reporter, Médecin, Chansonnier, Ingénieur, Interprète, Escrimeur | 15 |
 | Classe : Réfractaire | 10 |
 | Historique : tous sauf Bonimenteur | 15 |
 | Historique : Bonimenteur | 12 |
 
-Ces francs sont dans ta poche : quelques pièces, un billet plié, des sous. Écris-les à part sur ta fiche. Le fils ou la fille de Signataire a de plus un compte de 20 francs par mois chez son père, et un crédit chez les fournisseurs de 10 francs par semaine, avec 60 francs de dettes ouvertes au plus.
+Ces francs sont dans ta poche : quelques pièces, un billet plié, des sous. Écris-les à part sur ta fiche. Les Employés et Signataires ont un crédit de 10 francs par semaine chez les fournisseurs, 60 francs de dettes au plus. Le fils ou la fille de Signataire a en plus un compte de 20 francs par mois chez son père.
 
 **Fais ton équipement.** Ton équipement de départ est celui de ta classe. Ton historique y ajoute son outil et les objets que ta classe ne cite pas. Les doublons (une gourde, une clef anglaise, une corde) ne comptent qu'une fois : on ne porte qu'une corde, et personne n'a deux fois la même blouse.
 
@@ -404,9 +393,9 @@ Ces francs sont dans ta poche : quelques pièces, un billet plié, des sous. Éc
 >
 > **Léonie** compare 20 (Gens des ateliers), 15 (classe) et 15 (historique) : 20 francs. Elle part avec sa clef anglaise, sa trousse d'ajusteur, son revolver et ses douze cartouches, sa blouse renforcée de cuir, ses gants épais et ses lunettes de forge, sa carte syndicale, son pain et sa gourde.
 >
-> **Mamadou** compare 12 (Gens des Villages), 15 (classe) et 15 (historique) : 15 francs, et les 12 de son origine ne servent à rien. Il part avec ses dictionnaires de poche et ses carnets, son cachet et son encre, sa canne plombée, son revolver et ses six cartouches, sa redingote de ville et son chapeau. Son revolver reste au fond d'un sac : dans l'enceinte il est interdit, et un engagé qu'on fouille à la porte n'a pas la ressource d'un Parisien.
+> **Mamadou** compare 12 (Gens des Villages), 15 (classe) et 15 (historique) : 15 francs, et les 12 de son origine ne servent à rien. Il part avec ses dictionnaires de poche et ses carnets, son cachet et son encre, sa canne plombée, son revolver et ses six cartouches, sa redingote de ville et son chapeau. Son revolver reste en consigne à la porte de Javel : dans l'enceinte il est interdit, et un engagé qu'on fouille à la porte n'a pas la ressource d'un Parisien.
 >
-> **Ernest** compare 25 (Parisiens de l'Éternelle), 15 (classe) et 15 (historique) : 25 francs. Son calepin à ressort et ses crayons, son appareil photographique à soufflet et ses dix plaques, sa poudre-éclair de magnésium, son revolver et ses six cartouches, sa carte de presse, son veston de cycliste.
+> **Ernest** compare 25 (Parisiens de l'Éternelle), 15 (classe) et 15 (historique) : 25 francs. Son calepin à ressort et ses crayons, son appareil photographique à soufflet et ses dix plaques, sa poudre-éclair de magnésium, son revolver et ses six cartouches, la carte de son journal, son veston de cycliste.
 >
 > **Ottilie** compare 25 (Visiteurs restés), 15 (classe) et 15 (historique) : 25 francs. Son revolver et ses douze cartouches, son couteau, sa vareuse d'aéronaute en toile huileuse, ses lunettes à verres jaunes, sa corde de vingt mètres et son mousqueton, son baromètre de poche, sa montre à gousset et sa casquette de cuir.
 
@@ -414,11 +403,11 @@ Quand tu auras terminé, lis ton personnage à voix haute devant la table : qui 
 
 ## Les grands principes de l'Éternelle
 
-Huit choses que le MJ répète à chaque séance. Il est utile que les joueurs les aient en tête.
+Sept choses que le MJ répète à chaque séance. Il est utile que les joueurs les aient en tête.
 
 ### Un papier se lit jusqu'au bout
 
-Un contrat, un avis, un livret d'engagé, une licence : la dernière ligne est souvent celle qui compte, et elle est rarement celle qu'on te lit à voix haute.
+Un contrat, un avis, un livret d'engagé, une licence : la dernière ligne est souvent celle qui compte.
 
 ### La Pression se note
 
@@ -426,21 +415,17 @@ Chaque fois que tu emploies un appareil à plein régime ou que tu le forces, tu
 
 ### La licence se paie
 
-Cinq francs par semaine, ou un franc retenu sur ta paie. Quatre semaines sans payer et le Bureau reprend l'appareil.
+Chaque semaine de jeu, selon qui l'a avancée (chapitre 3). Le Bureau reprend l'appareil de qui laisse traîner.
 
-### Les gens des Villages sont des personnes
-
-Ce principe est écrit une fois, plus haut, à « Lignes et voiles » ; ici, retiens seulement qu'un engagé en scène a un contrat, une famille, et une idée précise de ce que tu fais là.
-
-### Chacun sa voie
+### Demande ce que ça te coûtera
 
 Quand une puissance te demande ton aide, demande-lui ce qu'elle t'offre et ce qu'elle te fera porter. Le Commissariat et la Chambre syndicale ne te demanderont pas la même chose, et les deux se souviennent de la réponse.
 
-### Un groupe vaut ceux qui restent
+### Quelqu'un fait le guet
 
-Quelqu'un fait le guet pendant que les autres travaillent, et ce n'est presque jamais le même deux nuits de suite.
+Pendant que les autres travaillent, l'un de vous veille.
 
-### Les règles sont des outils
+### Quand le livre se tait
 
 Ce livre ne prévoit pas tout. Quand une situation sort des règles, le MJ choisit la caractéristique la plus proche, fixe un DD, et on lance. Si ça marche bien, on le note pour la prochaine fois.
 
@@ -457,7 +442,6 @@ Une ligne ou un voile se pose avant la séance, mais on peut en réclamer un à 
 > - Passif : 10 + modificateurs, ±5 pour avantage ou désavantage.
 > - Groupe : si la moitié réussit, tout le monde réussit.
 > - Cartouches : une arme à feu a un nombre de coups, puis il faut la recharger.
-> - Pression : de 0 à 10, elle part à 0 ; l'appareil employé à plein régime ou forcé la fait monter de 1.
-> - Brevets : deux au plus, 200 francs de licence, avancés par ton origine.
+> - Pression et brevets : chapitre 3.
 > - Ton personnage : origine, classe, historique, caractéristiques, compétences, personnalité, prénom, appareil, cartouches et francs.
 > - Ton argent de départ est la plus haute des sommes de ta classe, de ton origine et de ton historique.

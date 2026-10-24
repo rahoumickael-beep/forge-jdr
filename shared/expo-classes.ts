@@ -21,7 +21,7 @@ const DD = (stat: string) => ` DD de la sauvegarde : 8 + ta maîtrise + ton modi
 const PRESSION_COMMUN = "Voir « La Pression » et « Les appareils brevetés ». Les pouvoirs « Chaudière » de ta fiche passent par l'un de tes appareils : choisis-en un qui y correspond.";
 
 const STYLE_TIR = "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main et rien dans l'autre), Tir (+2 aux attaques à distance) ou Deux armes (ajoute ton modificateur aux dégâts de la seconde arme).";
-const STYLE_CORPS = "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance).";
+const STYLE_CORPS = "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main et rien dans l'autre), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance).";
 
 export const CLASSES_EXPO: CharacterClass[] = [
   // ————————————————————————————————————————————————————————————— Mécanicien
@@ -98,7 +98,7 @@ export const CLASSES_EXPO: CharacterClass[] = [
       P(1, "Tir en surplomb", "passif", "passif", "Une fois par tour, +1d6 dégâts à une attaque à distance contre une créature située au moins 3 m plus bas que toi. 2d6 au niveau 5, 3d6 au 9, 4d6 au 13, 5d6 au 17."),
       P(2, "Toile de secours", "réaction", "repos long", "Tu tombes : tu ouvres une toile huilée. Tu ne subis aucun dégât de chute, et tu descends de 18 m par tour pendant une minute en glissant de côté de ta vitesse.", { uses: 1 }),
       P(2, "Jeter du lest", "action bonus", "repos court", "Tu lâches ce qui t'alourdit : tu te libères d'une prise ou d'une entrave de ton choix, puis tu fonces ou tu te désengages.", { uses: 2 }),
-      P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
+      P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer. Avec une arme à feu, chaque attaque tire un coup : deux attaques vident deux coups du chargeur (chapitre 4)."),
       P(6, "Œil de vigie", "passif", "passif", "Double maîtrise dans deux compétences que tu maîtrises parmi Perception et Acrobaties."),
       P(7, "Se rétablir", "passif", "passif", "Quand une sauvegarde d'Adresse t'infligerait la moitié des dégâts en cas de réussite, tu n'en subis aucun ; si tu la rates, tu en subis la moitié."),
       P(9, "Pilote d'instinct", "passif", "passif", "Quand tu pilotes un dirigeable, un ballon ou un bateau à vapeur, tu ajoutes ta maîtrise une seconde fois à ses tests de manœuvre, et il vire sans perdre de vitesse. Si ta Pression atteint 10 alors que tu pilotes, le véhicule perd 4d6 PV de coque au lieu d'exploser."),
@@ -150,8 +150,8 @@ export const CLASSES_EXPO: CharacterClass[] = [
       P(1, "Fouille", "passif", "passif", "Avantage aux tests de Perception et d'Investigation pour trouver ce qu'une personne cache sur elle."),
       P(1, "Second souffle", "action bonus", "repos court", "Récupère 1d10 + ton niveau en PV.", { uses: 1 }),
       P(2, "Coup de sifflet", "action bonus", "repos court", "Un allié à 18 m qui t'entend se déplace de sa vitesse, sans provoquer d'attaque d'opportunité.", { uses: 3, range: "18 m" }),
-      P(2, "Redoubler le pas", "action", "repos court", "Tu fais une action de plus ce tour (pas de Second souffle).", { uses: 1 }),
-      P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
+      P(2, "Redoubler le pas", "action", "repos court", "Tu fais une action de plus ce tour.", { uses: 1 }),
+      P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer. Avec une arme à feu, chaque attaque tire un coup : deux attaques vident deux coups du chargeur (chapitre 4)."),
       P(6, "Œil du contrôleur", "passif", "passif", "Double maîtrise dans deux compétences que tu maîtrises parmi Perception et Intimidation."),
       P(7, "Entre la foule et lui", "réaction", "repos court", "Un allié à 1,5 m est visé par une attaque : tu te places devant, et les dégâts qu'il subirait sont réduits de moitié.", { uses: 2, range: "1,5 m" }),
       P(9, "Consigne de porte", "passif", "passif", "Quand tu touches une créature avec une attaque d'opportunité, sa vitesse tombe à 0 jusqu'à la fin de son tour. Tu fais des attaques d'opportunité même si la créature s'est désengagée."),
@@ -196,13 +196,13 @@ export const CLASSES_EXPO: CharacterClass[] = [
     armor: "Armures légères",
     weapons: "Armes courantes",
     skills: { choose: 4, from: ["Investigation", "Persuasion", "Intuition", "Perception", "Tromperie", "Histoire", "Discrétion", "Représentation"] },
-    startingGear: ["Calepin à ressort et crayons", "Appareil photographique à soufflet et dix plaques", "Poudre-éclair de magnésium", "Revolver d'ordonnance et six cartouches", "Carte de presse", "Veston de cycliste", "15 francs"],
+    startingGear: ["Calepin à ressort et crayons", "Appareil photographique à soufflet et dix plaques", "Poudre-éclair de magnésium", "Revolver d'ordonnance et six cartouches", "Carte de son journal", "Veston de cycliste", "15 francs"],
     powers: [
       P(1, "Trois questions à la fois", "action", "repos court", "Une créature à 9 m qui te comprend fait une sauvegarde de Présence : si elle échoue, elle répond sincèrement à la dernière des trois questions que tu viens de lui poser. Si elle réussit, elle sait qu'on a voulu la piéger." + DD("Présence"), { uses: 3, range: "9 m" }),
       P(1, "Calepin", "passif", "passif", "Dix minutes d'observation suffisent : tu retiens ce que tu as vu et entendu, et tu peux le relire plus tard à la lettre. Avantage aux tests d'Investigation sur ce que tu as noté."),
       P(1, "Souffler la réplique", "action bonus", "repos long", "Un allié à 18 m qui t'entend ajoute 1d6 à un test de Persuasion, de Tromperie ou d'Intuition, ou à une attaque ou une sauvegarde, dans les dix minutes. Le dé passe à d8 au niveau 5, d10 au 10, d12 au 15.", { uses: 3, range: "18 m" }),
       P(1, "Plaque au magnésium", "action", "repos court", "Un éclair de magnésium dans un cône de 4,5 m : sauvegarde d'Endurance, ou aveuglé jusqu'à la fin de ton prochain tour. Si tu as le temps de cadrer (action bonus la veille ou au tour précédent), tu as aussi une plaque." + DD("Instinct"), { uses: 2, range: "4,5 m" }),
-      P(2, "Carte de presse", "passif", "passif", "Avantage aux tests de Persuasion pour entrer quelque part au nom d'un journal. Les contrôleurs te demandent ta carte de presse avant ton numéro de brevet, et se contentent souvent de la première."),
+      P(2, "Carte de son journal", "passif", "passif", "Avantage aux tests de Persuasion pour entrer quelque part au nom d'un journal. Les contrôleurs te demandent la carte de ton journal avant ton numéro de brevet, et se contentent souvent de la première."),
       P(5, "Recoupement", "action", "repos court", "Dix minutes avec ton calepin : le MJ te dit si deux récits que tu as recueillis se contredisent, et sur quoi.", { uses: 2 }),
       P(6, "Œil du reporter", "passif", "passif", "Double maîtrise dans deux compétences que tu maîtrises parmi Investigation et Persuasion."),
       P(7, "Flair", "réaction", "repos court", "Une créature à 9 m ment : tu relances un test d'Intuition contre elle avec l'avantage.", { uses: 2, range: "9 m" }),
@@ -355,9 +355,9 @@ export const CLASSES_EXPO: CharacterClass[] = [
     skills: { choose: 3, from: ["Discrétion", "Persuasion", "Intimidation", "Investigation", "Escamotage", "Survie", "Tromperie", "Perception"] },
     startingGear: ["Craie, affiches et pot de colle", "Couteau", "Deux bâtons de dynamite et mèche lente", "Pèlerine doublée de cuir", "Brochure imprimée à la main", "Revolver d'ordonnance et six cartouches", "10 francs"],
     powers: [
-      P(1, "Maître de la mèche", "passif", "passif", "Ajoute ton modificateur d'Adresse aux dégâts d'un seul explosif par tour. Le DD de leur sauvegarde est 8 + ta maîtrise + ton modificateur d'Adresse. Avec une journée de travail et 3 francs de matériel, tu confectionnes un bâton de dynamite, trois au plus par repos long."),
+      P(1, "Maître de la mèche", "passif", "passif", "Ajoute ton modificateur d'Adresse aux dégâts d'un seul explosif par tour. Le DD de leur sauvegarde est 8 + ta maîtrise + ton modificateur d'Adresse. Avec une heure de travail et 3 francs de matériel, tu confectionnes un bâton de dynamite, trois au plus par repos long."),
       P(1, "La roue brisée", "passif", "passif", "Avec de la craie, tu traces un signe que seuls les tiens lisent : un message, un danger, une cache. Les Réfractaires et ceux qui les aident le comprennent ; la Sûreté, non, sauf sur un test d'Investigation DD 17."),
-      P(1, "Mot d'ordre", "action bonus", "repos court", "Les alliés à 9 m qui t'entendent gagnent 1d6 + ta Présence en PV temporaires, et ne sont plus effrayés.", { uses: 3, range: "9 m" }),
+      P(1, "Mot d'ordre", "action bonus", "repos court", "Les alliés à 9 m qui t'entendent gagnent des PV temporaires égaux à ton niveau + ta Présence (au moins 1), et ne sont plus effrayés.", { uses: 1, range: "9 m" }),
       P(1, "Caches", "passif", "passif", "Dans un quartier pauvre, tu trouves une cave, un grenier ou une arrière-boutique où cacher jusqu'à six personnes et leurs affaires pour une nuit, sans test."),
       P(2, "Pétard de diversion", "action", "repos court", "Un vacarme et une fumée à 9 m, dans un rayon de 3 m : sauvegarde d'Endurance, ou assourdi et aveuglé jusqu'à la fin de ton prochain tour." + DD("Adresse"), { uses: 2, range: "9 m" }),
       P(2, "Disparaître dans la foule", "action bonus", "à volonté", "Tu te caches dans une foule, même sous les regards."),
@@ -384,7 +384,7 @@ export const CLASSES_EXPO: CharacterClass[] = [
       S("refractaire-artificier", "Artificier", "Il compte le temps de la mèche, et le nombre de gens derrière le mur.",
         "Ancien mineur, forgeron ou mécanicien, il sait ce que la poudre fait à la pierre. Il connaît les quartiers où une charge tombe sans blesser personne, et il sait que sa tête vaut plus que ses bâtons.",
         [
-          P(3, "Mèche vive", "passif", "passif", "Un explosif que tu lances fait 1d6 dégâts de plus à partir du niveau 7 seulement ; avant, +1 par tranche de 2 niveaux. Sa mèche brûle même sous la pluie."),
+          P(3, "Mèche vive", "passif", "passif", "Un explosif que tu lances fait +1 dégât par tranche de 2 niveaux de Réfractaire jusqu'au niveau 6, puis +1d6 dès le niveau 7. Sa mèche brûle même sous la pluie."),
           P(7, "Fumée épaisse", "action", "repos court", "Tu lances un pot de fumée à 9 m : nuage de 4,5 m de rayon, opaque pendant une minute.", { uses: 2, range: "9 m" }),
           P(11, "Mine de pavé", "action", "repos long", "Tu piéges un pavé, une porte ou une marche : la première créature qui la touche fait une sauvegarde d'Adresse, ou subit 6d6 dégâts contondants ; moitié si elle réussit." + DD("Adresse"), { uses: 1 }),
           P(15, "Dernière charge", "réaction", "repos long", "Une créature t'agrippe ou te met à 0 PV : tu déclenches aussitôt un explosif que tu as posé à moins de 9 m (Mèche réglée). Si tu étais tombé à 0 PV, tu restes à 1 PV.", { uses: 1, range: "9 m" }),
@@ -420,7 +420,7 @@ export const CLASSES_EXPO: CharacterClass[] = [
       P(11, "Point faible", "action", "repos court", "Un coup d'œil sur un appareil, un automate, une machine ou un bâtiment : tu sais où il cède. Pendant dix minutes, tes alliés et toi avez l'avantage aux attaques contre lui, et il subit 2d6 dégâts de plus par touche, une fois par tour.", { uses: 2 }),
       P(11, "Surtension de laboratoire", "action", "repos long", "Toi et jusqu'à trois alliés à 9 m : un appareil de chacun fait 2d6 dégâts de plus de son type, et le prochain forçage de chacun ne coûte pas de Pression, pendant une minute." + CHAUDIERE, { uses: 1, range: "9 m" }),
       P(13, "Une planche dans chaque école", "passif", "passif", "Dans toute école d'ingénieurs, tout atelier d'essais et tout bureau de dessin, on te prête une table, des crayons et un cahier. Une fois par semaine de jeu, un ancien camarade te dit ce qui se construit en ville."),
-      P(15, "Plan de bataille", "action", "repos long", "Cinq minutes de dessin sur un lieu que tu viens d'étudier : jusqu'à six alliés qui regardent ton plan ont l'avantage à l'initiative, ne peuvent pas être surpris, et connaissent chaque issue et chaque passage de ce lieu pendant une heure.", { uses: 1 }),
+      P(15, "Plan de bataille", "action", "repos long", "Dix minutes de dessin sur un lieu que tu viens d'étudier : jusqu'à six alliés qui regardent ton plan ont l'avantage à l'initiative, ne peuvent pas être surpris, et connaissent chaque issue et chaque passage de ce lieu pendant une heure.", { uses: 1 }),
       P(17, "Grand chantier", "action", "repos long", "Pendant une heure, avec trois aides, tu montes un appareil du catalogue de n'importe quel prix (cuirasse à vapeur comprise). Il tient un jour, n'a pas de numéro, et ne compte pas dans tes brevets. Un appareil monté ainsi ne peut pas être revendu et disparaît à la fin de sa durée.", { uses: 1 }),
       P(20, "Le dernier chantier", "passif", "passif", "Tu peux monter deux Grand chantier par repos long, en dix minutes chacun au lieu d'une heure. Une fois par semaine de jeu, un atelier, un laboratoire ou un chantier te prête ses établis, ses hommes et ses stocks pendant vingt-quatre heures."),
     ],
@@ -430,7 +430,7 @@ export const CLASSES_EXPO: CharacterClass[] = [
         "Il règle un tir, un levier, un pont, une chute. Pour lui, le monde est une suite de forces et d'angles, et il sait donner à ses compagnons le chiffre qu'il leur faut avant même qu'ils en aient besoin.",
         [
           P(3, "Règle à calcul", "action bonus", "repos court", "Tu calcules l'angle, la portée, la charge : un allié à 18 m ajoute ton modificateur de Savoir à son prochain jet d'attaque ou de dégâts.", { uses: 3, range: "18 m" }),
-          P(7, "Tout est mesuré", "passif", "passif", "Tes alliés à 9 m ignorent la demi-couverture pour leurs attaques à distance, et tu as l'avantage aux tests de Savoir sur une structure, une trajectoire ou une machine."),
+          P(7, "Trajectoire mesurée", "passif", "passif", "Tes alliés à 9 m ignorent la demi-couverture pour leurs attaques à distance, et tu as l'avantage aux tests de Savoir sur une structure, une trajectoire ou une machine."),
           P(11, "Table de tir", "réaction", "repos court", "Un allié à 18 m rate une attaque à distance : il la relance avec l'avantage.", { uses: 2, range: "18 m" }),
           P(15, "Cote de sûreté", "passif", "passif", "Un appareil que tu as calculé ou monté ne subit aucun dégât de sa propre Pression : son porteur ignore les effets du seuil de fuite (7)."),
         ]),
@@ -460,7 +460,7 @@ export const CLASSES_EXPO: CharacterClass[] = [
     skills: { choose: 4, from: ["Persuasion", "Histoire", "Intuition", "Tromperie", "Perception", "Investigation", "Représentation", "Discrétion"] },
     startingGear: ["Dictionnaires de poche et carnets", "Cachet et encre", "Canne plombée", "Revolver d'ordonnance et six cartouches", "Redingote de ville et chapeau", "15 francs"],
     powers: [
-      P(1, "Trois langues de plus", "passif", "passif", "Tu parles le français et trois langues de plus, choisies avec le MJ (wolof, vietnamien, kabyle, anglais, russe, italien, allemand…). Tu en apprends une de plus en trois semaines de jeu."),
+      P(1, "Trois langues de plus", "passif", "passif", "Tu parles le français et trois langues de plus, choisies avec le MJ (wolof, sérère, vietnamien, kabyle, anglais, russe, italien, allemand…). Les langues que ton origine te donne déjà comptent parmi les trois. Tu en apprends une de plus en trois semaines de jeu."),
       P(1, "Mot qui cingle", "action", "à volonté", "Une créature à 18 m qui t'entend fait une sauvegarde de Présence, ou subit 1d6 dégâts psychiques et le désavantage à sa prochaine attaque. 2d6 au niveau 5, 3d6 au 11, 4d6 au 17." + DD("Présence"), { range: "18 m" }),
       P(1, "Contrat lu", "passif", "passif", "Dix minutes sur un contrat, un règlement ou un livret : tu repères les clauses qui piègent. Avantage aux tests d'Investigation et d'Histoire sur un texte écrit."),
       P(1, "Mot juste", "réaction", "repos court", "Un allié à 9 m rate un test de Persuasion, de Tromperie ou d'Intuition, ou une sauvegarde de Présence : tu glisses le bon mot, il relance le d20 et garde le nouveau résultat.", { uses: 2, range: "9 m" }),
@@ -472,10 +472,10 @@ export const CLASSES_EXPO: CharacterClass[] = [
       P(9, "La clause oubliée", "passif", "passif", "Une fois par semaine de jeu, un contrat, un règlement ou une loi que tu as lu contient une clause utile à ta cause : le MJ te dit laquelle. S'il n'en contient aucune, tu le sais."),
       P(11, "Tout le monde comprend", "action", "repos long", "Pendant une heure, toi et jusqu'à six alliés à 9 m comprenez et êtes compris de toute créature qui parle une langue, parce que tu traduis chaque mot au vol.", { uses: 1, range: "9 m" }),
       P(11, "Mémoire des mots", "passif", "passif", "Tu retiens mot pour mot toute conversation que tu as entendue dans les vingt-quatre dernières heures."),
-      P(13, "Un carnet d'adresses dans toutes les langues", "passif", "passif", "Dans chaque légation, agence maritime ou consulat de Paris, on te reçoit. Une fois par semaine de jeu, un secrétaire ou un copiste te dit ce qui se prépare."),
+      P(13, "Un carnet d'adresses dans toutes les langues", "passif", "passif", "Dans chaque ambassade, légation, agence maritime ou consulat de Paris, on te reçoit. Une fois par semaine de jeu, un secrétaire ou un copiste te dit ce qui se prépare."),
       P(15, "L'oreille des deux camps", "action", "repos long", "Pendant dix minutes d'une négociation que tu traduis, tu sais, à chaque échange, si l'un des deux camps ment.", { uses: 1 }),
       P(17, "Parler avant le premier coup", "action", "repos long", "Tu parles au chef d'un groupe hostile qui te comprend : sauvegarde de Présence, ou il cesse tout combat et accepte de t'écouter pendant une minute. Une attaque contre lui ou les siens met fin à l'effet." + DD("Présence"), { uses: 1, range: "9 m" }),
-      P(20, "Toutes les portes parlent", "passif", "passif", "Dans n'importe quel quartier, village ou légation, on t'accueille. Une fois par repos long, un test de Persuasion ou d'Intuition que tu viens de rater réussit. Une fois par semaine de jeu, tu obtiens d'un chef de groupe, d'un consul ou d'un doyen un entretien d'une heure, sans rendez-vous."),
+      P(20, "Toutes les portes parlent", "passif", "passif", "Dans n'importe quel quartier, village ou ambassade, on t'accueille. Une fois par repos long, un test de Persuasion ou d'Intuition que tu viens de rater réussit. Une fois par semaine de jeu, tu obtiens d'un chef de groupe, d'un consul ou d'un doyen un entretien d'une heure, sans rendez-vous."),
     ],
     subclassTitle: "Cabinet",
     subclasses: [
@@ -487,13 +487,13 @@ export const CLASSES_EXPO: CharacterClass[] = [
           P(11, "Livret retrouvé", "action", "repos long", "Tu obtiens un livret d'engagé, un laissez-passer ou un permis de sortie pour une personne, par une clause oubliée ou un employé complaisant, sans test.", { uses: 1 }),
           P(15, "Avocat de fortune", "passif", "passif", "Quand tu plaides pour quelqu'un devant un juge de police, un commissaire ou un fonctionnaire, tu as l'avantage à tous tes tests, et la partie adverse ne peut pas t'interrompre."),
         ]),
-      S("interprete-legation", "Interprète de légation", "Il sert deux pays et les mots entre eux.",
-        "Il a travaillé dans une légation de la rue de Grenelle, au service d'un ministre plénipotentiaire, d'un attaché ou d'un consul. Il connaît le protocole, les formules, et l'art de répondre sans rien promettre.",
+      S("interprete-legation", "Interprète d'ambassade", "Il sert deux pays et les mots entre eux.",
+        "Il a travaillé dans une ambassade de la rue de Grenelle, au service d'un ambassadeur, d'un attaché ou d'un consul. Il connaît le protocole, les formules, et l'art de répondre sans rien promettre.",
         [
-          P(3, "Passeport diplomatique", "passif", "passif", "Avantage aux tests de Persuasion avec les fonctionnaires, les officiers et les notables. Une carte de ta légation t'ouvre une porte du Trocadéro par semaine de jeu."),
-          P(7, "Valise de la légation", "action", "repos court", "Une demi-heure : tu fais parvenir à un destinataire de ton choix, en ville, une lettre ou un petit paquet, sans que la poste ni la Sûreté ne l'ouvrent.", { uses: 2 }),
+          P(3, "Passeport diplomatique", "passif", "passif", "Avantage aux tests de Persuasion avec les fonctionnaires, les officiers et les notables. Une carte de ton ambassade t'ouvre une porte du Trocadéro par semaine de jeu."),
+          P(7, "Valise d'ambassade", "action", "repos court", "Une heure : tu fais parvenir à un destinataire de ton choix, en ville, une lettre ou un petit paquet, sans que la poste ni la Sûreté ne l'ouvrent.", { uses: 2 }),
           P(11, "Protocole", "passif", "passif", "Tu sais qui doit parler en premier, qui doit s'asseoir, qui se vexe. Dans une salle de réception, tu as l'avantage à tous tes tests de Persuasion et d'Intuition."),
-          P(15, "Franchise de légation", "réaction", "repos long", "On veut t'arrêter, te fouiller ou saisir ton courrier : tu invoques ta légation, et l'agent ou le fonctionnaire fait une sauvegarde de Présence, ou renonce pour la journée et en réfère à son supérieur." + DD("Présence"), { uses: 1, range: "9 m" }),
+          P(15, "Franchise d'ambassade", "réaction", "repos long", "On veut t'arrêter, te fouiller ou saisir ton courrier : tu invoques ton ambassade, et l'agent ou le fonctionnaire fait une sauvegarde de Présence, ou renonce pour la journée et en réfère à son supérieur." + DD("Présence"), { uses: 1, range: "9 m" }),
         ]),
     ],
   },
@@ -513,12 +513,12 @@ export const CLASSES_EXPO: CharacterClass[] = [
     skills: { choose: 3, from: ["Acrobaties", "Athlétisme", "Intimidation", "Persuasion", "Représentation", "Perception", "Intuition", "Tromperie"] },
     startingGear: ["Épée de salle d'armes", "Canne plombée", "Revolver d'ordonnance et douze cartouches", "Gilet matelassé", "Gants et plastron d'escrime", "15 francs"],
     powers: [
-      P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Deux armes (ajoute ton modificateur aux dégâts de la seconde arme) ou Tir (+2 aux attaques à distance)."),
+      P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main et rien dans l'autre), Deux armes (ajoute ton modificateur aux dégâts de la seconde arme) ou Tir (+2 aux attaques à distance)."),
       P(1, "Salle d'armes", "passif", "passif", "Avec une arme à finesse, tu relances un 1 sur tes dés de dégâts. Tirer une canne-épée de sa gaine ne te coûte pas d'interaction d'objet."),
       P(1, "Botte secrète", "action bonus", "repos court", "Ajoute 1d6 aux dégâts de ta prochaine attaque ce tour. Si elle touche, la cible ne peut pas faire d'attaque d'opportunité contre toi jusqu'à ton prochain tour.", { uses: 3 }),
       P(1, "Rompre", "réaction", "repos court", "Une créature te touche au corps à corps et tu tiens une arme à finesse : ajoute ta maîtrise à ta CA contre cette attaque.", { uses: 3 }),
       P(2, "Rompre et reprendre", "action bonus", "repos court", "Se désengager en action bonus, 3 fois par repos court.", { uses: 3 }),
-      P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
+      P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer. Avec une arme à feu, chaque attaque tire un coup : deux attaques vident deux coups du chargeur (chapitre 4)."),
       P(6, "Maître de salle", "passif", "passif", "Double maîtrise dans deux compétences que tu maîtrises parmi Acrobaties et Représentation."),
       P(7, "Riposte", "réaction", "repos court", "Une créature à 1,5 m rate son attaque contre toi : tu l'attaques en réaction.", { uses: 2 }),
       P(9, "Duel d'honneur", "action bonus", "repos long", "Tu défies une créature à 9 m qui te voit et t'entend : pendant une minute, tes attaques contre elle font 1d8 dégâts de plus, et elle a le désavantage à ses attaques contre tout autre que toi. Le défi s'achève si tu attaques quelqu'un d'autre.", { uses: 1, range: "9 m" }),

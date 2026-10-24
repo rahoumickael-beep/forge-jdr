@@ -1,6 +1,6 @@
 # Chapitre 3 — L'aventure
 
-Entre deux scènes tendues, les personnages font la queue à un guichet, attendent un permis, discutent le prix d'une réparation, comptent leurs francs et leurs cartouches, regardent les lampes de Grenelle. Ce chapitre donne les règles de tout ce qui n'est pas le combat : se déplacer, passer les portes de la foire, tenir sa Pression, porter un appareil breveté, payer sa licence, se reposer, vivre entre deux affaires, et monter de niveau.
+Entre deux scènes tendues, les personnages font la queue à un guichet, attendent un permis, discutent le prix d'une réparation, comptent leurs francs et leurs cartouches, regardent les lampes de Grenelle.
 
 ## Le déplacement
 
@@ -41,7 +41,7 @@ On compte en quarts d'heure à pied. Du Trocadéro à la Galerie des Machines, i
 
 Hors de la foire, il y a l'omnibus à chevaux, le tramway, le fiacre. Le télégraphe est partout ; le téléphone, dans les bureaux et les grands hôtels ; à Paris, un pneumatique traverse la ville en deux heures dans ses tuyaux.
 
-Un dirigeable ne part pas sans billet, et le contrôleur compte les passagers sur une ardoise. Par grand vent, la passerelle d'embarquement demande un test d'Acrobaties ou d'Athlétisme DD 12 : un échec fait faire une chute de trois mètres (1d6 dégâts).
+Un dirigeable ne part pas sans billet, et le contrôleur compte les passagers sur une ardoise. Par grand vent, la passerelle d'embarquement est un passage dangereux (chapitre 4).
 
 **Faire le guet.** Les patrouilles, les contrôleurs qui reviennent, les curieux qui s'approchent d'une cour ne préviennent pas. Un personnage veille, chacun son tour. Le MJ compare la Perception passive du veilleur à la Discrétion de ce qui approche. Un quart par nuit suffit à quatre.
 
@@ -59,17 +59,17 @@ L'Exposition occupe le Champ-de-Mars, l'esplanade des Invalides, le Trocadéro e
 
 **Les Villages.** Les gens engagés sous contrat à l'esplanade des Invalides ont leur livret d'engagé et leur laissez-passer gardés au Trocadéro, et il leur faut un permis pour sortir de l'enceinte. On le refuse souvent. Pour un personnage engagé des Villages, obtenir un permis est un test de Persuasion DD 15 devant l'employé du Trocadéro, ou un service que le Conseil des Villages accepte de rendre. Un second essai est possible après un service rendu au Conseil. Avantage si le personnage présente un employeur ou un médecin qui le réclame. Un engagé arrêté hors de l'enceinte sans permis est renvoyé à son impresario, avec une amende retenue sur sa paie.
 
-**Les grilles.** Les grilles des Villages se ferment à six heures du soir. Qui reste dehors passe la nuit dehors.
+**Les grilles.** Les grilles des Villages se ferment à six heures du soir.
 
 > **Exemple.**
 >
 > Ottilie veut passer la porte de la Tour avec son couteau. Elle tente Adresse (Discrétion) contre la Perception du garde : DD 12. Elle fait 11 au dé, +4 (Adresse +2, maîtrise +2) : 15. Le garde fouille son sac, pas la doublure de sa vareuse. Le couteau passe.
 >
-> Mamadou, lui, veut un permis de sortie pour une journée. Il se présente devant l'employé du Trocadéro avec le papier de l'impresario, et le joueur lance Présence (Persuasion), DD 15. Il fait 8 au dé, +5 : 13. Raté. L'employé lui dit de repasser. Mamadou retourne au Village et en parle à madame Hạnh, qui lui demande un service pour le Conseil : porter un message à la cour du Village du Vietnam avant six heures. Il le fait, et il aura un second essai.
+> Mamadou, lui, veut un permis de sortie pour une journée. Il se présente devant l'employé du Trocadéro avec le papier de l'impresario, et le joueur lance Présence (Persuasion), DD 15. Il fait 8 au dé, +5 : 13. Raté. L'employé lui dit de repasser. Mamadou retourne au Village et en parle à madame Hạnh, qui ne lui répond pas le jour même. Le lendemain, elle lui demande un service pour le Conseil : porter un message à la cour du Village du Vietnam avant six heures. Il le fait, et il aura un second essai.
 
 ## La Pression
 
-À l'Éternelle, il n'y a pas de magie. Il y a des appareils que presque personne ne comprend, brevetés au Trocadéro et loués aux particuliers : un gant à ressort, une lampe à arc de poche, une canne-grappin, une cuirasse à vapeur. Chaque personnage a une Pression, de 0 à 10, notée sur sa fiche sous ses points de vie. Elle part à 0.
+Des appareils que presque personne ne comprend, brevetés au Trocadéro et loués aux particuliers, font à l'Éternelle ce que d'autres mondes demandent à la magie : un gant à ressort, une lampe à arc de poche, une canne-grappin, une cuirasse à vapeur. Chaque personnage a une Pression, de 0 à 10, notée sur sa fiche sous ses points de vie. Elle part à 0.
 
 ### Comment elle monte
 
@@ -80,7 +80,7 @@ L'Exposition occupe le Champ-de-Mars, l'esplanade des Invalides, le Trocadéro e
 
 - De **2** quand tu fais **purger** l'appareil chez un mécanicien (5 francs, une heure, une fois par jour). Le mécanicien de ton groupe purge gratuitement, comme pour la réparation.
 - De **2** après un repos long **dans le Champ**.
-- De **4** après un repos long **hors de l'enceinte** de l'Exposition. Un engagé sans permis du jour ne baisse que de **1** après un repos long. Avec un permis, comme un autre.
+- De **4** après un repos long **hors de l'enceinte** de l'Exposition. Un engagé sans permis du jour ne baisse que de **1** après un repos long. Avec un permis du jour il baisse comme un autre : de 2 dans le Champ, de 4 hors de l'enceinte.
 
 La Pression ne passe jamais sous 0, et elle s'arrête à 10 : à 10, l'appareil éclate.
 
@@ -111,10 +111,10 @@ Personne n'a 200 francs en poche au départ : la licence est avancée, et ce qui
 | Gens des ateliers | la Chambre syndicale | 5 francs par semaine |
 | Gens des Villages | ton impresario | une retenue de 1 franc par semaine |
 | Employés et Signataires | ton patron | rien tant que tu le sers ; il reprend l'appareil si tu le quittes |
-| Visiteurs restés | ta légation (étranger) ou un notaire de ta ville (provincial) | 5 francs par semaine |
+| Visiteurs restés | ton ambassade ou ta légation (étranger), ou un notaire de ta ville (provincial) | 5 francs par semaine |
 | Gens de la Butte | personne : ton appareil est acheté sous le manteau | rien, mais il n'a pas de numéro |
 
-À la création, tu pars avec un brevet : l'appareil de ton choix dans le catalogue ci-dessous, d'un prix de 120 francs au plus, dont la licence est avancée. Une semaine de jeu = une séance, ou sept jours de récit si la séance en couvre plusieurs. Quatre semaines de jeu sans payer, et le Bureau reprend l'appareil. Pour un engagé des Villages, la retenue se prend sur la paie.
+À la création, tu pars avec un brevet : l'appareil de ton choix dans le catalogue ci-dessous, d'un prix de 120 francs au plus, dont la licence est avancée. Une semaine de jeu = une séance, ou sept jours de récit si la séance en couvre plusieurs. Quatre semaines de jeu sans payer, et le Bureau reprend l'appareil. Pour un engagé des Villages, la retenue se prend sur la paie, et la retenue d'un franc ne finit de payer la licence qu'en quatre ans : l'impresario renouvelle le contrat avant.
 
 Un appareil sans numéro (acheté sous le manteau, ou monté à la main par un ingénieur) marche comme un autre. Mais un contrôleur qui le voit le saisit et inflige 50 francs d'amende, ou t'emmène au dépôt de l'enceinte si tu ne les as pas.
 
@@ -126,12 +126,12 @@ Le prix est celui de l'appareil, sans la licence. Les pouvoirs de classe qui por
 
 | Appareil | Ce qu'il fait | À plein régime (Chaudière) | Prix |
 |---|---|---|---|
-| Gant à ressort | Coups de poing de 1d6 contondants, avec la maîtrise. | Un coup de 2d6 de force qui repousse la cible de 3 m (sauvegarde de Force DD 12). | 60 francs |
-| Lampe à arc de poche | Éclaire à 9 m (pénombre à 18 m) pendant une heure, sans flamme. | Un éclair : les créatures à 6 m font une sauvegarde d'Endurance DD 12, ou sont aveuglées jusqu'à la fin de ton prochain tour. | 40 francs |
-| Canne-grappin | Un grappin lancé à 18 m : tu te hisses de 9 m, ou tu tires une créature de taille Moyenne ou moins (test de Force en opposition). | Le ressort est tendu à fond : portée de 27 m et tu te hisses de 18 m, en action bonus. | 55 francs |
-| Cuirasse à vapeur | Armure : CA 14 + Adresse (au plus 2), désavantage en Discrétion, pas de bouclier. | En action bonus : +2 CA et avantage aux tests de Force, jusqu'à la fin de ton prochain tour. | 300 francs |
-| Lance-vapeur | Chaque jet est un usage à plein régime. | Un cône de 4,5 m : sauvegarde d'Adresse DD 12, ou 2d6 dégâts de feu ; moitié si elle réussit. | 120 francs |
-| Bottes à ressorts | Tes sauts vont deux fois plus loin, et tu ne subis rien d'une chute de 6 m ou moins. | Un saut de 9 m en hauteur ou de 18 m en longueur, sans élan. | 70 francs |
+| Gant à ressort | Coups de poing de 1d6 contondants, avec la maîtrise. | Une action (l'attaque) : si le coup touche, 2d6 contondants, et la cible est repoussée de 3 m (sauvegarde de Force DD 12). | 60 francs |
+| Lampe à arc de poche | Éclaire à 9 m (pénombre à 18 m) pendant une heure, sans flamme. | Une action : un éclair, les créatures à 6 m font une sauvegarde d'Endurance DD 12, ou sont aveuglées jusqu'à la fin de ton prochain tour. | 40 francs |
+| Canne-grappin | Un grappin lancé à 18 m : tu te hisses de 9 m, ou tu tires une créature de taille Moyenne ou moins (test de Force en opposition). | Une action bonus : le ressort est tendu à fond, portée de 27 m et tu te hisses de 18 m. | 55 francs |
+| Cuirasse à vapeur | Armure : CA 14 + Adresse (au plus 2), désavantage en Discrétion, pas de bouclier. | Une action bonus : +2 CA et avantage aux tests de Force, jusqu'à la fin de ton prochain tour. | 300 francs |
+| Lance-vapeur | Chaque jet est un usage à plein régime. | Une action : un cône de 4,5 m, sauvegarde d'Adresse DD 12, ou 2d6 dégâts de feu ; moitié si elle réussit. Pression +2 par cône. | 120 francs |
+| Bottes à ressorts | Tes sauts vont deux fois plus loin, et tu ne subis rien d'une chute de 6 m ou moins. | Une action : un saut de 9 m en hauteur ou de 18 m en longueur, sans élan. | 70 francs |
 
 Seule la cuirasse à vapeur dépasse les 120 francs de la création. Elle se paie, avec sa licence, quand tu en as les moyens.
 
@@ -139,9 +139,9 @@ Seule la cuirasse à vapeur dépasse les 120 francs de la création. Elle se pai
 
 Une foire de machines blesse plus de monde qu'une taverne. Ces dangers sont ordinaires dans les ateliers et dans la Galerie ; le MJ en juge la gravité selon le lieu.
 
-- Une **fuite de vapeur** : sauvegarde d'Adresse DD 12 ou 2d6 dégâts de feu. Une conduite maîtresse : DD 15 et 4d6.
-- Une **courroie** qui happe une manche : sauvegarde d'Adresse DD 13, ou 2d10 dégâts contondants, et la victime est entravée jusqu'à ce qu'on arrête la machine (un test de Force DD 15 pour se dégager sans aide).
-- Un **courant d'atelier** : sauvegarde d'Endurance DD 12, ou 2d10 dégâts de foudre. Un câble du Palais de l'Électricité : DD 15 et 4d10 (10d10 à partir du niveau 11).
+- Une **fuite de vapeur** : sauvegarde d'Adresse DD 12, ou 2d6 de feu, moitié si elle réussit. Une conduite maîtresse : DD 15, 4d6, moitié si elle réussit.
+- Une **courroie** qui happe une manche : sauvegarde d'Adresse DD 13, ou 2d6 contondants (4d6 dès le niveau 5), et la victime est entravée jusqu'à ce qu'on arrête la machine (un test de Force DD 15 pour se dégager sans aide).
+- Un **courant d'atelier** : sauvegarde d'Endurance DD 12, ou 2d8 de foudre, moitié si elle réussit (4d8 dès le niveau 5). Un câble du Palais de l'Électricité : DD 15, 4d10, moitié si elle réussit (10d10 dès le niveau 11). Le MJ ne s'en sert pas avant le niveau 3 sans avertissement : un grésillement, un tableau ouvert.
 - Un **chaudron qui éclate** : 3d6 dégâts de feu dans un rayon de 3 m, sauvegarde d'Adresse pour moitié.
 
 Les poitrinaires des Villages et les brûlés de la Galerie ont les mêmes soins : un test de Médecine DD 12 pour panser, DD 15 pour une brûlure grave. Sans soins, une brûlure grave donne un niveau d'épuisement à la fin du jour.
@@ -154,22 +154,10 @@ Les armes à feu de 1899 ont un nombre de coups, puis il faut les recharger. Cha
 - Dégainer ou ranger une arme est une interaction d'objet. Un personnage a au plus deux armes en main.
 - Sur un **1 naturel** au d20, l'arme **s'enraye** : l'attaque rate et il faut une action pour la dégager.
 - L'eau fait pire : une arme à feu mouillée (la Seine, une cuve, une averse sans abri) ne tire pas avant d'avoir été essuyée.
-- Les **cartouches** : douze cartouches pèsent 300 grammes et coûtent un franc. Un personnage en porte autant que ses poches le permettent ; le MJ compte celles qu'il dit manquer.
+- Les **cartouches** : un personnage en porte autant que ses poches le permettent ; le MJ compte celles qu'il dit manquer (poids et prix : chapitre 6).
 - **Dans l'enceinte**, les armes à feu sont interdites et l'on fouille aux portes (voir « La foire, ses portes et ses contrôleurs »). À Paris, elles sont libres.
 
-| Arme | Dégâts | Portée | Propriétés | Prix |
-|---|---|---|---|---|
-| Revolver d'ordonnance (8 mm) | 1d8 perforants | 12/36 m | six coups, recharger (action) | 25 francs |
-| Pistolet à répétition | 1d8 perforants | 12/36 m | huit coups, recharger (action) | 45 francs |
-| Fusil de chasse | 2d6 perforants | 9/27 m | deux coups, recharger (action), deux mains | 90 francs |
-| Fusil Lebel | 1d10 perforants | 24/72 m | huit coups, recharger (action), deux mains ; arme de l'armée | 110 francs au marché noir |
-| Bâton de dynamite | 2d6 contondants, rayon 3 m | 9 m | un usage, mèche | 6 francs au marché noir |
-
-Ce sont des armes courantes : toutes les classes savent s'en servir. Les armes blanches et les armures sont au chapitre 6.
-
-**La dynamite.** Allumer la mèche et lancer le bâton prend une action. Toute créature dans le rayon fait une sauvegarde d'Adresse DD 12 ; elle subit la moitié des dégâts si elle réussit. Une cloison de bois, une porte, un mur de brique mince ne résistent pas. Un personnage ne porte que trois bâtons à la fois, et les vendeurs ne se vantent pas.
-
-**La matraque à tension.** Une tige de cuivre gainée de cuir qui envoie une décharge d'accumulateur. Elle fait 1d6 contondants, plus 1d6 de foudre sur la décharge : un seul coup par tour peut la porter, et il consomme une des quatre décharges de l'accumulateur. La cible fait une sauvegarde d'Endurance DD 12, ou elle a le désavantage à ses attaques jusqu'au début de ton prochain tour. Accumulateur vide, la matraque fait 1d6 contondants. Elle se recharge en une heure au Palais de l'Électricité ou à n'importe quel poste de garde. Elle est réservée aux gardes : l'acheter, c'est déjà un délit.
+Les armes elles-mêmes (revolver, pistolet, fusils, dynamite, matraque) sont au tableau du chapitre 6. Ce sont des armes courantes : toutes les classes savent s'en servir.
 
 Un personnage qui n'a plus de cartouches se bat à la clef anglaise, à la canne ou au couteau. Compte tes cartouches avant de lever ton revolver.
 
@@ -228,7 +216,7 @@ Un repos long se prend dans une loge, dans un garni, chez un habitant, dans une 
 - **Dans le Champ.** Une loge, un baraquement ou une couchette de service : il faut une carte de Permanent (5 francs par mois), ou l'accord de celui qui t'héberge. Le repos compte comme un repos dans le Champ.
 - **Un hôtel garni** coûte 2 francs la nuit, une chambre à Grenelle 15 francs par mois. C'est hors de l'enceinte.
 - **Chez un habitant.** Gratuit si on connaît quelqu'un. Sinon, un service ou quelques francs. Une cour de Javel héberge celui dont un des siens répond.
-- **Dans un Village.** Les engagés dorment dans leur case, derrière des grilles qui se ferment à six heures. Un visiteur n'y entre pas de nuit sans l'accord du Conseil, et ne le reçoit qu'en échange d'un service.
+- **Dans un Village.** Les engagés dorment dans leur case, derrière des grilles qui se ferment à six heures. Un visiteur n'y entre pas de nuit sans l'accord du Conseil, et ne l'obtient qu'en échange d'un service.
 - **Chez les Gens de la Butte.** Une fois par semaine de jeu, ceux de la Butte trouvent une chambre sans papiers dans un garni de la rue des Saules.
 - **Dehors.** Un banc, un seuil, un escalier de la Tour. L'hiver tue de la poitrine : par grand froid ou sans abri, le MJ peut refuser le repos long.
 
@@ -256,6 +244,7 @@ Ce que l'on gagne, par jour : un mécanicien, 5 francs ; un garde, 4 francs ; un
 | 17 à 20 | 1 000 francs et plus |
 
 Une mission de niveau 1 paie de quoi s'équiper : un revolver (25 francs), une canne-épée (20 francs), la purge d'un appareil (5 francs). Une licence neuve coûte 200 francs, soit la paie d'une bonne mission de niveau 5.
+
 ### Ce qu'on peut faire
 
 - **Travailler** pour la Galerie, un atelier, un guichet : payé à la journée.
@@ -272,7 +261,7 @@ Une mission de niveau 1 paie de quoi s'équiper : un revolver (25 francs), une c
 - **Le Commissariat** paie en francs, en laissez-passer et en silence. Il regarde ce que tu portes, et le numéro qui est gravé dessus.
 - **Les Signataires** paient bien et vite, par la main d'un secrétaire. Ils ne veulent pas qu'on voie leur atelier.
 - **La Chambre syndicale** ne paie pas de salaires. Elle avance, elle prête, elle ouvre sa caisse de secours, et elle se souvient de qui a répondu quand elle a demandé.
-- **Le Conseil des Villages** ne vend pas son temps. On échange avec lui : des services, des nouvelles, une signature. Madame Hạnh répond à chaque proposition par une question de prix.
+- **Le Conseil des Villages** ne vend pas son temps. On échange avec lui : des services, des nouvelles, une signature. Madame Hạnh ne répond à aucune proposition le jour même, et veut savoir qui d'autre l'a déjà entendue.
 - **Les Réfractaires** ne paient pas. Ils demandent un service, et ils attendent qu'on réponde sans compter.
 
 Un travail pour le Commissariat laisse une ligne dans un registre. Un travail pour le Conseil laisse une dette qu'on ne chiffre pas en francs.
@@ -369,7 +358,7 @@ On monte de niveau **après un repos long**, pas au milieu d'une scène.
 
 **La spécialité de ta classe** (Atelier pour le Mécanicien, Poste pour l'Aéronaute et le Garde, Plume pour le Reporter, Pratique pour le Médecin, Spécialité pour le Chansonnier et l'Ingénieur, Moyen pour le Réfractaire, Cabinet pour l'Interprète, École pour l'Escrimeur) se choisit au **niveau 3**. Voir le chapitre des classes.
 
-**Des légendes de la foire, pas des surhommes.** À l'Éternelle, les niveaux hauts ne font pas des surhommes. À partir du niveau 13, ils donnent des relations (un atelier qui te prête ses établis, un poste de garde qui te laisse passer, une rédaction qui t'ouvre ses archives), et aux niveaux 17 à 20, un nom que tout le monde connaît dans l'enceinte.
+**Les niveaux hauts.** À partir du niveau 13, ils donnent des relations (un atelier qui te prête ses établis, un poste de garde qui te laisse passer, une rédaction qui t'ouvre ses archives). Au niveau 17, on n'est pas plus fort : le cocher de la Compagnie dit ton nom avant que tu l'aies dit.
 
 > **Multiclassage.**
 >

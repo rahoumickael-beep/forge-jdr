@@ -79,19 +79,19 @@ export const ORIGINES_EXPO: Origin[] = [
     id: "ex-villages",
     genre: "steampunk",
     name: "Gens des Villages",
-    blurb: "Engagés sous contrat de l'Exposition, avec leurs savoir-faire, leurs langues et leurs familles. Des Sénégalais, des Annamites (le Vietnam d'aujourd'hui), mais aussi des Kanaks et des Kabyles : prends la variante qui s'en rapproche, et dis le reste. Les variantes ne lient personne à un métier : chacune donne le choix libre de deux maîtrises. Derrière la corde, on est regardé, et on regarde.",
+    blurb: "Engagés sous contrat de l'Exposition, avec leurs savoir-faire, leurs langues et leurs familles. Des gens du Sénégal et du Vietnam, mais aussi des Kanaks et des Kabyles : prends la variante dont les bonus te servent, et dis le reste, la table écrit le nom de ton Village sur ta fiche. Les variantes ne lient personne à un métier : chacune donne le choix libre de deux maîtrises. Derrière la corde, on est regardé, et on regarde.",
     bonus: { 2: 1 },
     speed: 6,
     unique: true,
     traits: [
       { name: "Un savoir-faire que la foire expose", text: "Tu maîtrises un artisanat de ton peuple (tissage, ferronnerie, vannerie, laque, couture ou herboristerie) : avantage aux tests qui s'y rapportent, et tu fabriques ce que tu vends." },
       { name: "Plusieurs langues", text: "Tu parles ta langue, le français et celle d'un autre Village. Avantage aux tests d'Histoire et de Persuasion avec ceux d'un autre Village, et aux tests de Perception pour écouter une conversation où l'on te croit sourd ou ignorant." },
-      { name: "Le livret au Trocadéro", text: "Ton livret d'engagé et ton laissez-passer sont gardés au Trocadéro, et il te faut un permis pour sortir de l'enceinte (voir « La foire, ses portes et ses contrôleurs »). Ton impresario t'avance la licence de ton premier brevet, avec une retenue de 1 franc par semaine. Un engagé sans permis du jour ne baisse que de 1 de Pression après un repos long ; avec un permis, comme un autre. Hors de l'enceinte sans permis, tu es un engagé en fuite. Argent de départ : 12 francs." },
+      { name: "Le livret au Trocadéro", text: "Ton livret d'engagé et ton laissez-passer sont gardés au Trocadéro, et il te faut un permis pour sortir de l'enceinte (voir « La foire, ses portes et ses contrôleurs »). Ton impresario t'avance la licence de ton premier brevet, avec une retenue de 1 franc par semaine. Un engagé sans permis du jour ne baisse que de 1 de Pression après un repos long. Avec un permis du jour, il baisse comme un autre : de 2 dans le Champ, de 4 hors de l'enceinte. Hors de l'enceinte sans permis, tu es un engagé en fuite. Argent de départ : 12 francs." },
     ],
     subs: [
       {
         id: "ex-villages-senegalais",
-        name: "Sénégalais du Village",
+        name: "Village du Sénégal",
         blurb: "Wolof, sérère ou bambara. Tu as vu ce que valent les promesses de l'impresario, et tu comptes sur ceux de ton Village.",
         bonus: { 2: 1, 5: 1 },
         traits: [
@@ -100,7 +100,7 @@ export const ORIGINES_EXPO: Origin[] = [
       },
       {
         id: "ex-villages-annamite",
-        name: "Annamite du Village",
+        name: "Village du Vietnam",
         blurb: "Couturier, herboriste, laqueur : la variante convient aussi à un Kanak ou à un Kabyle. Tu as appris à soigner par les plantes et à coudre la soie fine, et personne n'a encore su te dire le prix de ce que tu sais.",
         bonus: { 1: 1, 4: 1 },
         traits: [
@@ -119,7 +119,7 @@ export const ORIGINES_EXPO: Origin[] = [
     unique: true,
     traits: [
       { name: "Un patron", text: "Ton patron (un père, un chef de bureau) t'avance la licence de ton premier brevet, sans rien te demander tant que tu le sers. Il la reprend, avec l'appareil, si tu le quittes. Argent de départ : 30 francs." },
-      { name: "Du crédit chez les fournisseurs", text: "Chez un tailleur, un armurier, un libraire de la foire, tu obtiens jusqu'à 10 francs de crédit par semaine de jeu, à payer le mois suivant, avec 60 francs de dettes ouvertes au plus." },
+      { name: "Du crédit chez les fournisseurs", text: "Chez un tailleur, un armurier, un libraire de la foire, tu as un crédit de 10 francs par semaine chez les fournisseurs, à payer le mois suivant, avec 60 francs de dettes au plus." },
       { name: "Surveillé", text: "Tu dépends d'un patron, et on te surveille : désavantage à ton premier test de Discrétion de chaque séance dans un bâtiment du Commissariat." },
     ],
     subs: [
@@ -153,7 +153,7 @@ export const ORIGINES_EXPO: Origin[] = [
     unique: true,
     traits: [
       { name: "Un regard neuf", text: "Tu vois ce que les Permanents ne voient plus : avantage à ton premier test de Perception ou d'Intuition de chaque séance sur une scène que tu découvres." },
-      { name: "Personne pour t'attendre", text: "Personne ne te cherche. Ta légation (si tu es étranger) ou un notaire de ta ville (si tu es provincial) t'avance la licence de ton premier brevet, à 5 francs par semaine. Argent de départ : 25 francs." },
+      { name: "Personne pour t'attendre", text: "Personne ne te cherche. Ton ambassade ou ta légation (si tu es étranger) ou un notaire de ta ville (si tu es provincial) t'avance la licence de ton premier brevet, à 5 francs par semaine. Argent de départ : 25 francs." },
       { name: "Un billet périmé", text: "Ton billet d'entrée est périmé depuis longtemps : si un contrôleur te demande ta carte de Permanent, tu as le désavantage à ton premier test de Tromperie ou de Persuasion pour t'en tirer." },
     ],
     subs: [
@@ -169,10 +169,10 @@ export const ORIGINES_EXPO: Origin[] = [
       {
         id: "ex-visiteurs-etranger",
         name: "Étranger",
-        blurb: "Anglais, Russe, Américain, Italien. Tu as une langue de plus, une légation derrière toi, et des contrôleurs qui te demandent deux fois tes papiers.",
+        blurb: "Anglais, Russe, Américain, Italien. Tu as une langue de plus, une ambassade derrière toi, et des contrôleurs qui te demandent deux fois tes papiers.",
         bonus: { 5: 1, 3: 1 },
         traits: [
-          { name: "Une légation derrière toi", text: "Maîtrise d'Histoire et de Persuasion. Tu parles une langue de plus, et tu as des relations dans une légation (le MJ dit laquelle avec toi). Désavantage à ton premier test pour éviter un contrôle." },
+          { name: "Une ambassade derrière toi", text: "Maîtrise d'Histoire et de Persuasion. Tu parles une langue de plus, et tu as des relations dans une ambassade ou une légation (le MJ dit laquelle avec toi). Désavantage à ton premier test pour éviter un contrôle." },
         ],
       },
     ],
@@ -241,7 +241,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     blurb: "Tu as couru la foire un calepin à la main.",
     skills: ["Intuition", "Persuasion"],
     tool: "Calepin et crayons",
-    gear: ["Calepin à ressort", "Crayons et plumes", "Carte de presse", "Veston de cycliste", "15 francs"],
+    gear: ["Calepin à ressort", "Crayons et plumes", "Carte de son journal", "Veston de cycliste", "15 francs"],
     feature: { name: "Un nom dans le journal", text: "Les camelots, les typographes et les cochers te connaissent : une fois par semaine de jeu, l'un d'eux te raconte ce qu'il a vu avant d'aller le dire à la Sûreté." },
   },
   {
@@ -252,7 +252,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     skills: ["Persuasion", "Histoire"],
     tool: "Dictionnaires de poche",
     gear: ["Dictionnaires de poche", "Plume et encre", "Cachet d'interprète", "Redingote râpée", "15 francs"],
-    feature: { name: "Trois langues, un contrat", text: "Dans un bureau, une légation ou un comptoir de la foire, on te donne du temps et un siège, et on te laisse relire avant de signer." },
+    feature: { name: "Trois langues, un contrat", text: "Dans un bureau, une ambassade ou un comptoir de la foire, on te donne du temps et un siège, et on te laisse relire avant de signer." },
   },
   {
     id: "ex-h-aeronaute",

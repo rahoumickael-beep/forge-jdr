@@ -2,7 +2,7 @@
 
 Sur un étal du boulevard de Grenelle, entre un tas de ressorts et une boîte de manomètres d'occasion, un carton de cartouches attend, ficelé de gros fil. Le client compte ses francs, regarde la porte, et en prend deux boîtes. Le marchand note le prix sur le dos de sa main et ne demande pas pour quoi faire. Dans l'enceinte de la foire, la même boîte lui vaudrait des questions à la porte.
 
-Ce chapitre donne ce que les personnages peuvent acheter, porter, réparer et revendre : l'argent, les armes, les armures, les appareils et leur entretien, le matériel des métiers, et les objets de la collection qu'on ne trouve pas sur un étal. Tout se compte en **francs** de 1899, et en centimes quand la somme est petite.
+Tout se compte en **francs** de 1899, et en centimes quand la somme est petite.
 
 ## L'argent
 
@@ -31,7 +31,7 @@ Un repas par jour, un garni par nuit et une course en fiacre font déjà 4 franc
 
 ### Marchander
 
-Marchander est un test de Présence (Persuasion) contre le DD de l'attitude du marchand (chapitre 4) : 15 pour un marchand ordinaire. Une réussite baisse le prix d'un cinquième : un revolver de 25 francs passe à 20, un fusil Lebel de 110 francs à 88. Un échec ne ferme pas la porte, mais le vendeur ne descendra plus pendant cette visite. Un étal du marché noir marchande volontiers ; le Bureau des Brevets, jamais.
+Marchander est un test de Présence (Persuasion) contre le DD de l'attitude du marchand (chapitre 4) : 15 pour un marchand ordinaire. Une réussite baisse le prix d'un cinquième : un revolver de 25 francs passe à 20, un fusil Lebel de 110 francs à 88. Une tentative par objet et par visite ; pas de rabais sur les prix fixes (Bureau des Brevets, licence). Un échec ne ferme pas la porte, mais le vendeur ne descendra plus pendant cette visite. Un étal du marché noir marchande volontiers.
 
 ### Vendre et troquer
 
@@ -39,7 +39,7 @@ Un objet en bon état se revend à moitié prix. Un appareil numéroté ne se re
 
 ### Crédit
 
-Une loge fait crédit à ceux qu'elle connaît, dix francs de vivres ou de matériel. Les fournisseurs de la ville font crédit à celui dont le patron répond : le fils ou la fille de Signataire a dix francs par semaine, avec soixante francs de dettes ouvertes au plus. Un crédit qu'on ne rend pas se sait dans la cour avant de se savoir au guichet, et il coûte un service plutôt que des francs.
+Une loge fait crédit à ceux qu'elle connaît, 10 francs de vivres ou de matériel. Les Employés et Signataires ont un crédit de 10 francs par semaine chez les fournisseurs, 60 francs de dettes au plus. Le fils ou la fille de Signataire a en plus un compte de 20 francs par mois chez son père. Un crédit qu'on ne rend pas se sait dans la cour avant de se savoir au guichet, et il coûte un service plutôt que des francs.
 
 > **Exemple.**
 >
@@ -61,16 +61,18 @@ Toutes les armes de ce chapitre sont des **armes courantes** : toutes les classe
 
 Le revolver d'ordonnance est l'arme de poche de tout le monde : une ouvrière en a un dans sa cuisine, un reporter dans sa doublure, un garde à la hanche. Le pistolet à répétition coûte presque le double et recharge au même rythme, avec deux coups d'avance. Le fusil de chasse se garde pour les distances courtes : deux coups de 2d6, puis il faut le recharger. Le fusil Lebel est celui de l'armée ; on ne l'achète qu'à des gens qui n'ont pas de numéro de série à donner.
 
-**Les cartouches.** Une boîte de douze coûte un franc et pèse trois cents grammes. Tu en emportes selon la place de tes poches et le poids que tu veux sentir au soir. Une cartouche tirée ne se retrouve pas. Les règles du tir, du rechargement et de l'enrayement sont aux chapitres 3 et 4.
+**Les cartouches.** Une boîte de douze coûte un franc et pèse 300 grammes. Tu en emportes selon la place de tes poches et le poids que tu veux sentir au soir. Une cartouche tirée ne se retrouve pas. Les règles du tir, du rechargement et de l'enrayement sont aux chapitres 3 et 4.
 
-**La dynamite.** Elle se joue comme il est dit au chapitre 3 : une action pour allumer et lancer, une sauvegarde d'Adresse DD 12 pour moitié. Elle est vendue au marché noir, enveloppée de papier journal, et on ne la fait pas passer par une porte. Un personnage en porte trois au plus.
+**La dynamite.** Allumer la mèche et lancer le bâton prend une action. Toute créature dans le rayon fait une sauvegarde d'Adresse DD 12 ; elle subit la moitié des dégâts si elle réussit. Une cloison de bois, une porte, un mur de brique mince ne résistent pas : le MJ retire l'abri qu'ils donnaient. Elle est vendue au marché noir, enveloppée de papier journal, et on ne la fait pas passer par une porte. Un personnage ne porte que trois bâtons à la fois, et les vendeurs ne se vantent pas.
+
+**La matraque à tension.** Une tige de cuivre gainée de cuir qui envoie une décharge d'accumulateur. Elle fait 1d6 contondants, plus 1d6 de foudre sur la décharge : un seul coup par tour peut la porter, et il consomme une des quatre décharges de l'accumulateur. La cible fait une sauvegarde d'Endurance DD 12, ou elle a le désavantage à ses attaques jusqu'au début de ton prochain tour. Accumulateur vide, la matraque fait 1d6 contondants. Elle se recharge en une heure au Palais de l'Électricité ou à n'importe quel poste de garde. Elle est réservée aux gardes : l'acheter, c'est déjà un délit.
 
 ### Les armes de contact
 
 | Arme | Prix | Dégâts | Poids | Propriétés |
 |---|---|---|---|---|
 | À mains nues | — | 1 + Force, contondants | — | |
-| Canne-épée | 20 francs | 1d6 perforants | 0,8 kg | Finesse ; on ne la voit pas avant de la tirer |
+| Canne-épée | 20 francs | 1d6 perforants | 0,8 kg | Finesse, léger ; on ne la voit pas avant de la tirer |
 | Épée de salle d'armes | 35 francs | 1d8 perforants | 1 kg | Finesse |
 | Sabre-baïonnette | 30 francs | 1d8 tranchants | 1,2 kg | Polyvalente (1d10) ; arme des gardes |
 | Matraque à tension | 80 francs au marché noir | 1d6 contondants (+1d6 foudre sur la décharge) | 1 kg | Quatre décharges ; arme des gardes |
@@ -79,7 +81,7 @@ Le revolver d'ordonnance est l'arme de poche de tout le monde : une ouvrière en
 | Canne plombée | 6 francs | 1d6 contondants | 1 kg | Finesse |
 | Crosse de revolver, manche de pioche | — | 1d4 contondants | — | Arme improvisée |
 
-La canne-épée est l'arme du promeneur, du chansonnier et de l'Escrimeur : un jonc de bambou et soixante centimètres de lame. La clef anglaise est celle de la Galerie, et elle se passe à la ceinture comme une carte de visite. La canne plombée est celle de la Butte et des cafés. Le sabre-baïonnette et la matraque sont ceux des gardes ; la matraque est réservée à eux, et l'acheter est déjà un délit.
+La canne-épée est l'arme du promeneur, du chansonnier et de l'Escrimeur : un jonc de bambou et soixante centimètres de lame. La clef anglaise est celle de la Galerie, et elle se passe à la ceinture comme une carte de visite. La canne plombée est celle de la Butte et des cafés. Le sabre-baïonnette et la matraque sont ceux des gardes.
 
 ### Les propriétés des armes
 
@@ -91,7 +93,7 @@ La canne-épée est l'arme du promeneur, du chansonnier et de l'Escrimeur : un j
 
 **Lancer (N/M).** L'arme se lance. Les deux nombres sont la portée normale et la portée longue, avec le désavantage dans la seconde. Une arme de jet se joue avec la Force ou l'Adresse, au choix.
 
-**Léger.** Permet le combat à deux armes (chapitre 4). Le couteau est la seule arme légère de la table.
+**Léger.** Permet le combat à deux armes (chapitre 4). Le couteau et la canne-épée sont les deux armes légères de la table.
 
 **Polyvalente.** À une ou deux mains. Le chiffre entre parenthèses donne les dégâts à deux mains.
 
@@ -99,7 +101,7 @@ La canne-épée est l'arme du promeneur, du chansonnier et de l'Escrimeur : un j
 
 **Un usage.** Le bâton est détruit par l'usage.
 
-**Quatre décharges.** La matraque à tension porte une décharge par tour au plus, et son accumulateur n'en tient que quatre (chapitre 3).
+**Quatre décharges.** L'accumulateur de la matraque à tension n'en tient que quatre (voir plus haut).
 
 ### Les armes improvisées
 
@@ -122,7 +124,7 @@ En 1899, presque personne ne porte d'armure. Ce qui protège, c'est le cuir, la 
 - **Les maîtrises.** Toutes les classes savent porter une armure légère. La pelisse, la capote de garde, la cuirasse et la cuirasse à vapeur demandent la maîtrise des armures intermédiaires, que le Garde et le Mécanicien ont. Un personnage qui en endosse une sans cette maîtrise a le désavantage aux tests, aux sauvegardes et aux attaques de Force et d'Adresse.
 - **Les vêtements** n'ajoutent rien : une redingote de ville, un chapeau, un fichu, une blouse de toile laissent la CA à 10 + Adresse. C'est la tenue de Mamadou (CA 11) et d'Ernest (CA 12) ; la blouse renforcée de cuir de Léonie et la vareuse d'Ottilie donnent 11 + Adresse, soit 13 pour toutes deux.
 - **Le cuir doublé** est la protection de presque toutes les classes. Il amortit un coup de canne ou un couteau et ne fait rien contre une balle.
-- **La cuirasse** est lourde, bruyante, et la nuit elle s'entend d'un bout à l'autre d'une nef. La cuirasse à vapeur est celle du catalogue des appareils (voir plus bas) : elle suit la même règle, et sa licence se paie comme celle des autres. L'*Ajusteur de la Galerie* la porte sans désavantage en Discrétion et gagne 1 de CA (*Cuirasse bien réglée*, niveau 7).
+- **La cuirasse** pèse neuf kilos, et la nuit elle s'entend d'un bout à l'autre d'une nef. La cuirasse à vapeur est celle du catalogue des appareils (voir plus bas) : elle suit la même règle, et sa licence se paie comme celle des autres. L'*Ajusteur de la Galerie* la porte sans désavantage en Discrétion et gagne 1 de CA (*Cuirasse bien réglée*, niveau 7).
 - **Il n'y a pas de bouclier** dans les ruelles et les ateliers : on a besoin de ses deux mains.
 - **Mettre une armure** prend une minute pour une tenue légère, cinq pour une intermédiaire. L'enlever prend une minute.
 - **L'eau.** Une cuirasse entraîne vers le fond : la défaire demande le test de Force du chapitre 3.
@@ -130,7 +132,7 @@ En 1899, presque personne ne porte d'armure. Ce qui protège, c'est le cuir, la 
 
 ## Les appareils
 
-Un appareil se paie deux fois : une fois à celui qui le fabrique ou le vend, une fois au Bureau des Brevets qui grave le numéro. Au départ, la licence est avancée par ton origine et le premier appareil coûte 120 francs au plus (chapitre 3). Voici ce que coûte chaque appareil, tout compris.
+Un appareil se paie deux fois : une fois à celui qui le fabrique ou le vend, une fois au Bureau des Brevets qui grave le numéro. Au départ, un appareil t'est remis, avec sa licence avancée, pour 120 francs de valeur au plus (chapitre 3). Voici ce que coûte chaque appareil, tout compris.
 
 | Appareil | Prix | Licence | Tout compris |
 |---|---|---|---|
@@ -143,9 +145,9 @@ Un appareil se paie deux fois : une fois à celui qui le fabrique ou le vend, un
 
 Ce qu'il fait et ce que fait le plein régime se lit au chapitre 3 ; comment on l'emploie en combat, au chapitre 4.
 
-**L'entretien.** Une purge chez un mécanicien : 5 francs, une heure, une fois par jour. Une réparation : 10 francs, une heure. Le Mécanicien du groupe fait l'une et l'autre sans frais, et plus vite. Ta licence se paie chaque semaine de jeu, 5 francs, une retenue d'un franc ou rien du tout selon qui l'a avancée (chapitre 3) ; après quatre semaines sans payer, le Bureau reprend l'appareil.
+**L'entretien.** Une purge chez un mécanicien : 5 francs, une heure, une fois par jour. Une réparation : 10 francs, une heure. Le Mécanicien du groupe fait l'une et l'autre sans frais, et plus vite. La licence se paie selon qui l'a avancée (chapitre 3).
 
-**L'appareil sans numéro.** Acheté sous le manteau, ou monté à la main par un ingénieur, il marche comme un autre. Un contrôleur qui le voit le saisit et inflige 50 francs d'amende, ou emmène son porteur au dépôt s'il ne les a pas. Les Gens de la Butte n'ont pas d'autre appareil : personne n'avance leur licence.
+**L'appareil sans numéro.** Acheté sous le manteau, ou monté à la main par un ingénieur, il a les risques décrits au chapitre 3. Les Gens de la Butte n'ont pas d'autre appareil : personne n'avance leur licence.
 
 **Les brevets.** Deux appareils au plus par personnage, trois pour l'Ingénieur à partir du niveau 5 (*Trois brevets*). La cuirasse à vapeur est le seul appareil qui dépasse les 120 francs de la création : elle s'achète, avec sa licence, quand on en a les moyens.
 
@@ -174,7 +176,7 @@ D'autres outils viennent de la classe : les outils de cambrioleur du Chansonnier
 
 ## Peser son sac
 
-Un personnage porte sans gêne **Force × 7,5 kg** (chapitre 2). Les quatre personnages du livre ont tous Force 8 : 60 kg chacun. Chargé davantage, il avance de 1,5 m par round.
+Un personnage porte sans gêne **Force × 7,5 kg** (chapitre 2). Les quatre personnages du livre ont tous Force 8 : 60 kg chacun. Entre Force × 7,5 kg et Force × 15 kg, il avance de 1,5 m par round.
 
 > **Exemple.**
 >
@@ -214,7 +216,7 @@ La collection compte aussi des **alliés** et des **faveurs**.
 | Un aéronaute de la Tour | Rare | Une soirée d'orgue à vapeur | Rare |
 | L'équipe de nuit de la Galerie | Relique | Un mot du Trocadéro | Relique |
 
-Les alliés viennent de leur plein gré et peuvent dire non ; les faveurs se rendent. Aucune carte ne porte sur une personne qu'on achète ou qu'on vend, et aucune ne range un engagé des Villages parmi les objets.
+Les alliés viennent de leur plein gré et peuvent dire non ; les faveurs se rendent.
 
 > **Résumé du chapitre.**
 >

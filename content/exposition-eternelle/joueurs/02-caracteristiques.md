@@ -1,8 +1,6 @@
 # Chapitre 2 — Les caractéristiques
 
-Chaque personnage, et chaque créature, se décrit par six chiffres. Ils disent ce qu'il a dans les bras, dans les mains, dans le ventre, dans la tête, dans le regard et dans la voix. Ce sont les **caractéristiques** : Force, Adresse, Endurance, Savoir, Instinct et Présence.
-
-Ce chapitre explique ce qu'elles mesurent, comment on les utilise, et comment la maîtrise vient s'y ajouter : compétences, sauvegardes, outils. Il se termine par deux valeurs que tu consulteras à chaque séance, la Perception passive et l'initiative, puis par les fiches complètes de quatre personnages.
+Chaque personnage, et chaque créature, se décrit par six chiffres. Ils disent ce qu'il a dans les bras, dans la tête et dans la voix. Ce sont les **caractéristiques** : Force, Adresse, Endurance, Savoir, Instinct et Présence.
 
 > **Si tu viens d'un autre jeu.**
 >
@@ -31,7 +29,7 @@ Note sur ta fiche le modificateur à côté de la valeur, en gros. C'est lui que
 
 > **Les valeurs impaires.**
 >
-> Passer de 14 à 15 ne change pas le modificateur. Passer de 15 à 16, si. Quand tu montes une caractéristique, vise les valeurs paires. Les valeurs impaires servent quand même : un bonus de +1 d'origine arrivera plus tard pour compléter.
+> Passer de 14 à 15 ne change pas le modificateur. Passer de 15 à 16, si. Quand tu montes une caractéristique, vise les valeurs paires. Les valeurs impaires servent quand même : un bonus d'origine de +1 viendra plus tard compléter ce nombre impair.
 
 ## Déterminer ses caractéristiques
 
@@ -81,7 +79,7 @@ La puissance du corps : soulever, pousser, frapper, grimper, tenir sous un poids
 
 **Porter et soulever.** Un personnage porte sans gêne jusqu'à **Force × 7,5 kg**. Il peut pousser, tirer ou soulever jusqu'à deux fois plus (**Force × 15 kg**), mais il n'avance alors que de 1,5 m par round. Les créatures de taille Grande doublent ces chiffres ; les Très Petites les divisent par deux.
 
-Douze cartouches pèsent 300 grammes. Personne ne porte une cinquantaine de cartouches, un appareil, une trousse et une blouse de rechange sans le sentir au soir.
+Personne ne porte une cinquantaine de cartouches, un appareil, une trousse et une blouse de rechange sans le sentir au soir.
 
 **Sauter.**
 - *En longueur* : avec au moins 3 m d'élan, tu sautes jusqu'à **Force × 0,3 m** (Force 15 = 4,5 m, soit trois cases). Sans élan, la moitié.
@@ -94,7 +92,7 @@ L'espace entre une plate-forme de pont roulant et la suivante fait rarement moin
 
 Les réflexes, la précision, l'équilibre : viser, esquiver, se faufiler, ne pas tomber.
 
-- **Tests d'Adresse** : tenir debout sur la passerelle d'un dirigeable par grand vent, crocheter une serrure, ramper sous un tapis roulant, régler une came à la main.
+- **Tests d'Adresse** : tenir debout sur une poutre mouillée, crocheter une serrure, ramper sous un tapis roulant, régler une came à la main.
 - **Attaques et dégâts** : avec une arme à distance ou une arme à finesse, on ajoute l'Adresse. Un revolver, un pistolet à répétition, un fusil de chasse, une canne-épée, un couteau : l'Adresse.
 - **Classe d'armure** : la plupart des tenues ajoutent tout ou partie du modificateur d'Adresse à la CA. En vêtements de ville, ta CA vaut 10 + Adresse.
 - **Pouvoirs** : c'est la caractéristique du Mécanicien, de l'Aéronaute, du Chansonnier, du Réfractaire, de l'Ingénieur et de l'Escrimeur.
@@ -114,7 +112,7 @@ Il n'y a aucune compétence associée à l'Endurance.
 
 ### Savoir
 
-La mémoire, le raisonnement, l'instruction : comprendre un contrat, relier des indices, lire un plan. Rien à voir avec ta débrouille : un ajusteur qui n'a jamais ouvert un livre peut être plus malin qu'un clerc du Commissariat qui en a lu cent. Le Savoir mesure ce que tu as appris et ce que tu retiens.
+La mémoire, le raisonnement, l'instruction : comprendre un contrat, relier des indices, lire un plan. Le Savoir mesure ce que tu as appris et ce que tu retiens, à l'école comme à l'atelier : un ajusteur qui n'a jamais ouvert un livre peut en savoir plus long qu'un clerc du Commissariat qui en a lu cent.
 
 - **Tests de Savoir** : lire un contrat, déchiffrer un numéro de brevet limé, estimer ce qu'un appareil vaut, relier trois témoignages qui se contredisent.
 - **Pouvoirs** : c'est la caractéristique du Mécanicien, du Médecin, de l'Ingénieur et de l'Interprète. Ces quatre classes en maîtrisent la sauvegarde.
@@ -155,7 +153,7 @@ Voici les seize compétences, par caractéristique.
 
 > **Arcanes / Savoir.**
 >
-> Le mot est celui de la fiche, et il recouvre ici tout ce qu'on apprend dans les livres, les écoles et les ateliers : la mécanique, l'électricité, la chimie d'une teinture ou d'une poudre, le calcul d'une charge. Il n'y a pas de magie à l'Éternelle. À la table, on dit simplement « un Savoir de technicien ». La « Perspicacité » d'autres traductions s'appelle ici **Intuition**.
+> Le nom de la compétence est commun à tous les mondes de Forge JdR. Dans l'Éternelle, il désigne un savoir de livres et de machines : la mécanique, l'électricité, la chimie d'une teinture ou d'une poudre, le calcul d'une charge. Il n'y a pas de magie à l'Éternelle. À la table, on dit simplement « un Savoir de technicien ». La « Perspicacité » d'autres traductions s'appelle ici **Intuition**.
 
 ### Athlétisme (Force)
 
@@ -169,7 +167,7 @@ Autres usages : monter à un échafaudage à la force des bras, tenir une porte 
 
 Rester sur ses pieds dans une situation délicate : une passerelle qui bouge, une plate-forme grillagée, une échelle de corde, un toit mouillé. Aussi les roulades et les chutes bien tombées.
 
-> Ottilie traverse la passerelle d'embarquement d'un dirigeable par grand vent. Pour ne pas tomber, elle fait un test d'Adresse (Acrobaties), DD 12. En cas d'échec, elle chute de trois mètres : 1d6 dégâts.
+> Ottilie suit une poutre mouillée sous la verrière pour passer d'une passerelle d'entretien à la suivante. Pour ne pas tomber, elle fait un test d'Adresse (Acrobaties), DD 12. En cas d'échec, elle chute de 4,5 m : 1d6 dégâts (chapitre 4).
 
 On utilise aussi Acrobaties pour se dégager d'une empoignade en se tortillant plutôt qu'en forçant.
 
@@ -233,7 +231,7 @@ Panser une plaie demande un test de Médecine DD 12. Stabiliser un personnage à
 
 Voir, entendre, sentir. Remarquer ce qui cloche : un dirigeable qui n'a pas le bon cap, un pas derrière une cloison, une odeur de mèche allumée. C'est la compétence la plus demandée du jeu.
 
-> La nuit tombe sur la rue de Grenelle. Ottilie fait un test d'Instinct (Perception). Parmi les lampes à arc, il y en a une qui vacille avant les autres, puis une deuxième, dans l'ordre exact de la rue.
+> La nuit tombe sur la rue de Grenelle. Ottilie fait un test d'Instinct (Perception). Parmi les lampes à arc, il y en a une qui vacille avant les autres, puis une deuxième.
 
 À ne pas confondre avec l'Investigation : la Perception trouve la trappe, l'Investigation comprend comment elle s'ouvre.
 
@@ -247,7 +245,7 @@ Vivre dehors, ou dans une ville qui n'a pas de place pour toi : prévoir le temp
 
 Faire peur pour obtenir quelque chose : menaces, gestes, réputation, un sourire qui dit « je sais ce que tu as fait cet hiver ».
 
-> Un contremaître de la Galerie veut lui faire refaire une équipe de nuit. Léonie lui fait remarquer qu'elle sait quel soir il a laissé une chaudière sans surveillance. Présence (Intimidation), DD 12. Il oublie l'équipe de nuit.
+> Un contremaître de la Galerie veut lui imposer une équipe de nuit. Léonie lui fait remarquer qu'elle sait quel soir il a laissé une chaudière sans surveillance. Présence (Intimidation), DD 12. Il oublie l'équipe de nuit.
 
 On peut parfois utiliser la Force pour intimider : poser la main sur un bâti fait aussi bien l'affaire. Le MJ décide.
 
@@ -322,7 +320,7 @@ Un personnage qui ne maîtrise pas un outil peut parfois s'en servir quand même
 
 ### Les langues et la lecture
 
-Tous les personnages se font comprendre en français. Les Gens des Villages parlent aussi leur langue, le wolof, le sérère, le bambara, le vietnamien, une langue kanak ou le kabyle, et celle d'un autre Village ; l'Interprète en parle trois de plus, qu'il choisit avec le MJ. Les Visiteurs restés ont une langue de plus, le patois du pays pour un provincial, la langue de leur légation pour un étranger. L'écrit est répandu à Paris, où l'école est obligatoire depuis les années 1880. Il l'est moins dans les Villages, où beaucoup d'engagés ne lisent pas le français, et c'est une clause de plus que l'impresario ne leur a pas traduite. Le MJ décide pour les autres selon ton historique.
+Tous les personnages se font comprendre en français. Les Gens des Villages parlent aussi leur langue, le wolof, le sérère, le bambara, le vietnamien, une langue kanak ou le kabyle, et celle d'un autre Village ; l'Interprète en parle trois de plus, qu'il choisit avec le MJ, et les langues que son origine lui donne déjà comptent parmi les trois. Les Visiteurs restés ont une langue de plus, le patois du pays pour un provincial, la langue de leur ambassade ou de leur légation pour un étranger. L'écrit est répandu à Paris, où l'école est obligatoire depuis les années 1880. Il l'est moins dans les Villages, où beaucoup d'engagés ne lisent pas le français, et c'est une clause de plus que l'impresario ne leur a pas traduite. Le MJ décide pour les autres selon ton historique.
 
 ## Les jets de sauvegarde
 
@@ -354,7 +352,7 @@ Un **jet de sauvegarde** est un d20 + modificateur de caractéristique, + bonus 
 
 > **Exemple.**
 >
-> Dans la Galerie, une conduite maîtresse siffle et lâche un jet de vapeur. Le MJ demande une sauvegarde d'Adresse DD 12 à Léonie et à Mamadou, sous peine de 2d6 dégâts de feu. Léonie, qui ne maîtrise pas l'Adresse, lance d20 + 2. Elle fait 12 au dé, 14 avec son +2 : elle s'écarte à temps. Mamadou lance d20 + 1. Il fait 7 au dé, 8 avec son +1 : raté. Il lance 2d6, 3 et 5, et prend 8 points de feu sur le bras.
+> Dans la Galerie, une conduite maîtresse siffle et lâche un jet de vapeur. Le MJ demande une sauvegarde d'Adresse DD 12 à Léonie et à Mamadou, sous peine de 2d6 dégâts de feu, la moitié en cas de réussite. Léonie, qui ne maîtrise pas l'Adresse, lance d20 + 2. Elle fait 12 au dé, 14 avec son +2 : elle s'écarte à temps. Mamadou lance d20 + 1. Il fait 7 au dé, 8 avec son +1 : raté. Le MJ lance 2d6 une fois pour les deux, 3 et 5. Mamadou prend 8 points de feu sur le bras ; Léonie, qui a réussi, en prend 4.
 
 ## La Perception passive
 
@@ -426,14 +424,14 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 >
 > Perception passive 13. Initiative +2. Points de vie 10 (d8 au maximum + Endurance +2). Classe d'armure 13 : sa blouse renforcée de cuir donne 11, plus son Adresse +2. Pression 0. Outil : outils d'ajusteur.
 >
-> Clef anglaise : attaque +1 (Force −1, maîtrise +2), dégâts 1d6 − 1 contondants (1d8 − 1 à deux mains). Revolver d'ordonnance : attaque +4 (Adresse +2, maîtrise +2), dégâts 1d8 + 2 perforants ; six coups, puis recharger ; douze cartouches. Jet de vapeur : DD 12 (8 + maîtrise 2 + Savoir +2), 1d8 dégâts de feu à 4,5 m. Appareil : un lance-vapeur, dont la Chambre syndicale lui a avancé la licence (5 francs par semaine). Argent : 20 francs. Langue : français.
+> Clef anglaise : attaque +1 (Force −1, maîtrise +2), dégâts 1d6 − 1 contondants (1d8 − 1 à deux mains). Revolver d'ordonnance : attaque +4 (Adresse +2, maîtrise +2), dégâts 1d8 + 2 perforants ; six coups, puis recharger ; douze cartouches. Jet de vapeur : DD 12 (8 + maîtrise 2 + Savoir +2), à 4,5 m. Avec son lance-vapeur, chaque jet est à plein régime : 2d8 dégâts de feu et Pression +1. Appareil : un lance-vapeur, dont la Chambre syndicale lui a avancé la licence (5 francs par semaine). Argent : 20 francs. Langue : français.
 
 ### Les quatre fiches du livre
 
 | | Léonie | Mamadou | Ernest | Ottilie |
 |---|---|---|---|---|
 | Classe | Mécanicien | Interprète | Reporter | Aéronaute |
-| Origine | Gens des ateliers (Ouvrière des ateliers) | Gens des Villages (Sénégalais du Village) | Parisiens de l'Éternelle (Enfant de la foire) | Visiteurs restés (Étranger) |
+| Origine | Gens des ateliers (Ouvrière des ateliers) | Gens des Villages (Village du Sénégal) | Parisiens de l'Éternelle (Enfant de la foire) | Visiteurs restés (Étranger) |
 | Historique | Mécanicien | Interprète | Reporter ou dessinateur de presse | Aéronaute |
 | Force | 8 (−1) | 8 (−1) | 8 (−1) | 8 (−1) |
 | Adresse | 14 (+2) | 12 (+1) | 14 (+2) | 15 (+2) |
@@ -452,8 +450,8 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 | Revolver d'ordonnance | +4, 1d8 + 2 | +3, 1d8 + 1 | +4, 1d8 + 2 | +6, 1d8 + 2 |
 | Cartouches | 12 | 6 | 6 | 12 |
 | Appareil | Lance-vapeur | Lampe à arc de poche | Bottes à ressorts | Canne-grappin |
-| Licence avancée par | la Chambre syndicale, 5 francs par semaine | son impresario, 1 franc retenu par semaine | sa loge, 5 francs par semaine | sa légation, 5 francs par semaine |
+| Licence avancée par | la Chambre syndicale, 5 francs par semaine | son impresario, 1 franc retenu par semaine | sa loge, 5 francs par semaine | son ambassade, 5 francs par semaine |
 | Argent | 20 francs | 15 francs | 25 francs | 25 francs |
-| Langues | français | wolof, vietnamien, kabyle, français | français | français, allemand |
+| Langues | français | sérère, vietnamien, kabyle, français | français | français, allemand |
 
 Ottilie a choisi le style de combat Tir (+2 aux attaques à distance), ce qui explique son +6 au revolver. Léonie, Mamadou et Ernest n'ont pas de style. La CA des quatre vient de ce qu'ils portent : la blouse renforcée de cuir de Léonie et la vareuse de toile huileuse d'Ottilie donnent 11, plus leur Adresse ; la redingote de ville de Mamadou et le veston de cycliste d'Ernest n'ajoutent rien, et leur CA est 10 plus leur Adresse. Les pouvoirs du premier niveau se lisent au chapitre 5 ; trois valeurs en sortent déjà, le DD du Jet de vapeur de Léonie (8 + maîtrise 2 + Savoir +2, soit 12), le DD du Mot qui cingle de Mamadou (8 + maîtrise 2 + Présence +3, soit 13) et celui des Trois questions à la fois d'Ernest (8 + maîtrise 2 + Présence +2, soit 12).

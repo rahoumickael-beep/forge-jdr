@@ -132,7 +132,7 @@ On compte en quarts d'heure à pied. Du Trocadéro à la Galerie des Machines, i
 
 ### Les Villages
 
-**Paysage.** Sur l'esplanade des Invalides, des reconstitutions : un village sénégalais de cases et de greniers à mil, un village annamite avec sa pagode et sa maison sur pilotis, un pavillon kanak, des échoppes kabyles. Des cordes tendues les séparent du public. Au pied de chaque corde, un guichet.
+**Paysage.** Sur l'esplanade des Invalides, des reconstitutions : un village sénégalais de cases et de greniers à mil, un village du Vietnam avec sa pagode et sa maison sur pilotis, un pavillon kanak, des échoppes kabyles. Des cordes tendues les séparent du public. Au pied de chaque corde, un guichet.
 
 **Culture.** Quatre cents personnes y vivent sous contrat avec un impresario, engagées pour un an, renouvelables. On les paie un franc par jour, retenues déduites. Les livrets d'engagé et les laissez-passer sont gardés au Trocadéro. Un permis est nécessaire pour sortir, et on le refuse souvent. Les visiteurs regardent, jettent des sous, tendent la main pour toucher les cheveux, photographient. Les mêmes gens fabriquent des paniers, tissent, battent le mil, tiennent des échoppes, et le soir, quand les grilles se ferment, parlent entre eux. Des enfants naissent ici.
 
@@ -230,7 +230,7 @@ On compte en quarts d'heure à pied. Du Trocadéro à la Galerie des Machines, i
 À l'Éternelle, il n'y a pas de magie. Il y a des appareils que presque personne ne comprend, brevetés au Trocadéro et loués aux particuliers : un gant à ressort, une lampe à arc de poche, une canne-grappin, une cuirasse à vapeur. Chaque personnage peut porter jusqu'à **deux brevets** (licence de 200 francs par appareil, payable au Bureau ; l'employé et le fils de Signataire se la font avancer par leur patron, l'ouvrier la reçoit de la Chambre, qui la prête à 5 francs par semaine, l'engagé des Villages de son impresario, avec une retenue de 1 franc par semaine). Il a aussi une **Pression**, de 0 à 10, notée sur sa fiche. Elle part à 0.
 
 - La Pression monte de **1** à chaque fois qu'un pouvoir ou un objet porte la mention **« Chaudière »** : un appareil qu'on emploie à plein régime. Elle monte aussi de 1 quand on **force** un appareil plus loin que sa conception (avantage au jet, ou +1d6 aux dégâts, une fois par scène).
-- Elle baisse de **2** quand on fait **purger** l'appareil chez un mécanicien (5 francs, une heure, une fois par jour), de **2** après un repos long dans le Champ, de **4** après un repos long hors de l'enceinte de l'Exposition (les gens des Villages, faute de permis de sortie, ne baissent que de **1** après un repos long).
+- Elle baisse de **2** quand on fait **purger** l'appareil chez un mécanicien (5 francs, une heure, une fois par jour), de **2** après un repos long dans le Champ, de **4** après un repos long hors de l'enceinte de l'Exposition (les gens des Villages, faute de permis du jour, ne baissent que de **1** après un repos long ; avec un permis du jour, ils baissent comme les autres : de 2 dans le Champ, de 4 hors de l'enceinte). Les appareils que presque personne ne comprend tiennent la place de la magie.
 
 ### Ce que fait la Pression [Joueurs]
 
@@ -271,14 +271,14 @@ Mécaniciens, bobineuses, ajusteurs, ouvriers de la Chambre syndicale. En jeu : 
 
 Engagés sous contrat de l'Exposition, avec leurs savoir-faire, leurs langues, leurs familles. En jeu : un artisanat que la foire exhibe (tissage, ferronnerie, vannerie), plusieurs langues, et le silence des gens qu'on ne regarde pas vraiment. Votre livret d'engagé et votre laissez-passer sont gardés au Trocadéro et il vous faut un permis pour sortir.
 
-- **Sénégalais du Village** : wolof, sérère ou bambara, ancien tirailleur ou fils d'artisan. Avantage aux tests de forge et de métal, et dans les négociations avec les autres Villages.
-- **Annamite du Village** : couturier, herboriste, laqueur. Avantage aux tests de Médecine par les plantes et à l'artisanat fin.
+- **Village du Sénégal** : wolof, sérère ou bambara, ancien tirailleur ou fils d'artisan. Avantage aux tests de forge et de métal, et dans les négociations avec les autres Villages.
+- **Village du Vietnam** : couturier, herboriste, laqueur. Un Kanak ou un Kabyle prend la variante dont les bonus lui servent, et la table écrit le nom de son Village sur sa fiche. Avantage aux tests de Médecine par les plantes et à l'artisanat fin.
 
 ### Employés et Signataires
 
 Fils de famille, clercs du Commissariat, gens du monde. En jeu : on porte la redingote, on entre aux Salons, on a un crédit chez les fournisseurs, mais on est surveillé et on dépend d'un patron.
 
-- **Fils (ou fille) de Signataire** : votre père a gravé son nom sur une plaque de cuivre ; il en est fier, et il ferme à clef la porte de son atelier. Avantage aux tests de Persuasion auprès des gens du monde, un compte de 50 francs par mois.
+- **Fils (ou fille) de Signataire** : votre père a gravé son nom sur une plaque de cuivre ; il en est fier, et il ferme à clef la porte de son atelier. Avantage aux tests de Persuasion auprès des gens du monde, un compte de 20 francs par mois.
 - **Employé du Commissariat** : un bureau, une carte d'accès, un supérieur. Avantage pour entrer dans un bâtiment du Commissariat avec un prétexte, et une idée de l'organigramme.
 
 ### Visiteurs restés
@@ -286,7 +286,7 @@ Fils de famille, clercs du Commissariat, gens du monde. En jeu : on porte la red
 Venus pour une semaine de curiosité, restés après le billet. En jeu : un regard neuf sur la foire, et personne pour vous attendre.
 
 - **Provincial** : un paysan, un petit notaire, un instituteur. Avantage aux tests de Perspicacité face à un menteur de la ville, une langue de plus (le patois du pays).
-- **Étranger** : un Anglais, un Russe, un Américain, un Italien. Une langue de plus, des relations dans une légation, et des contrôleurs qui vous demandent deux fois vos papiers.
+- **Étranger** : un Anglais, un Russe, un Américain, un Italien. Une langue de plus, des relations dans une ambassade ou une légation, et des contrôleurs qui vous demandent deux fois vos papiers.
 
 ### Gens de la Butte
 
@@ -309,7 +309,7 @@ Le revolver d'ordonnance de 8 mm, le pistolet à répétition, le fusil de chass
 
 ### L'argent [Joueurs]
 
-Le franc, de 100 centimes. Un repas à la gargote coûte un franc, un pain d'un kilo trente-cinq centimes, une nuit d'hôtel garni deux francs, une chambre à Grenelle quinze francs par mois. Un billet d'entrée vaut un franc ; la carte de Permanent, cinq francs par mois. Un revolver coûte 25 francs, une canne-épée 20, un fusil de chasse 90, une lampe à arc de poche 40. Une licence de brevet : 200 francs. Un mécanicien gagne cinq francs par jour, une ouvrière deux et demi, un garde quatre, un engagé des Villages un franc, retenues déduites. Un Signataire touche trois mille francs par mois.
+Le franc, de 100 centimes. Un repas à la gargote coûte un franc, un pain d'un kilo trente-cinq centimes, une nuit d'hôtel garni deux francs, une chambre à Grenelle quinze francs par mois. Un billet d'entrée vaut un franc ; la carte de Permanent, cinq francs par mois. Un revolver coûte 25 francs, une canne-épée 20, un fusil de chasse 90, une lampe à arc de poche 40. Une licence de brevet : 200 francs. Argent de départ : la plus haute des sommes de la classe, de l'historique et de l'origine (15 francs pour les classes et les historiques, 10 pour le Réfractaire, 12 pour le Bonimenteur : c'est le plancher ; ateliers 20, Parisiens et Visiteurs 25, Employés 30, fils de Signataire 40 ; Villages et Butte 12). Les Employés et Signataires ont un crédit de 10 francs par semaine chez les fournisseurs, 60 francs de dettes au plus ; le fils ou la fille de Signataire a en plus un compte de 20 francs par mois chez son père. Un mécanicien gagne cinq francs par jour, une ouvrière deux et demi, un garde quatre, un engagé des Villages un franc, retenues déduites. Un Signataire touche trois mille francs par mois.
 
 ---
 
@@ -333,7 +333,7 @@ On compte les années comme partout. Les Permanents comptent aussi **de l'Exposi
 | 1895 | Les Villages deviennent permanents. Les automates remplacent les guichetiers. |
 | 1896 | **[Secret]** Les nuits de grand courant passent à quatre par mois. |
 | 1897 | Un incendie dans un baraquement sert de prétexte au Commissariat : fouille générale des Permanents et nouveau règlement des Villages. |
-| 1898 | La Chambre syndicale ouvre sa caisse de secours. Un hiver tue neuf personnes au Village annamite. |
+| 1898 | La Chambre syndicale ouvre sa caisse de secours. Un hiver tue neuf personnes au Village du Vietnam. |
 | 1899 | **Année de jeu.** En septembre, la grâce. En octobre, la lumière baisse chaque semaine, et on a cessé de compter. |
 | 1900 | Décembre : douzième prorogation. 31 décembre : la Nuit du Siècle. **[Secret]** Le Grand Courant continu. |
 
@@ -365,7 +365,7 @@ Cinquante ans, sur l'esplanade des Invalides. Ancien sergent de tirailleurs, gra
 
 ### Madame Hạnh, comptable du Conseil des Villages
 
-Nguyễn Thị Hạnh, que les Français appellent madame Hạnh. Trente-huit ans, au Village annamite. Couturière, herboriste, la seule du Conseil qui sait lire les contrats. **Ce qu'elle veut** : que les Villages tiennent ensemble, et que les enfants nés ici aient des papiers. **Ce qu'elle cache** : elle recopie chaque soir le registre d'un garde du Commissariat qu'elle a corrompu avec de la soie. Il contient les numéros de brevet de toutes les pièces entrées dans le Trocadéro depuis 1890. **Comment elle parle** : en français lent, très exact, et elle répond toujours par une question de prix.
+Nguyễn Thị Hạnh. Au Village on dit madame Hạnh, comme chez elle ; les employés de l'impresario disent madame Nguyen, comme à n'importe laquelle, et elle ne se retourne pas. Trente-huit ans, au Village du Vietnam. Couturière, herboriste, la seule du Conseil qui lit les contrats sans passer par l'interprète de l'impresario. **Ce qu'elle veut** : que les Villages tiennent ensemble, et que les enfants nés ici aient des papiers. **Ce qu'elle cache** : elle recopie chaque soir le registre d'un garde du Commissariat qu'elle a corrompu avec de la soie. Il contient les numéros de brevet de toutes les pièces entrées dans le Trocadéro depuis 1890. **Comment elle parle** : en français lent, très exact, et elle ne répond jamais le jour même ; elle veut savoir qui d'autre a déjà entendu la proposition.
 
 ### Anatole Gerfaux, voix des Réfractaires
 

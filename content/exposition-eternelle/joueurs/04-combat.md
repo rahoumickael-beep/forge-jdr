@@ -2,11 +2,11 @@
 
 Sous le pont roulant n° 3, une courroie de transmission passe à hauteur d'épaule et claque à chaque tour de roue. Dans la lumière d'une lampe à arc qui vacille, un homme lève une canne plombée, et son ombre traverse la nef jusqu'au pied d'un bâti de trente tonnes. Quelqu'un crie le nom de son voisin pour qu'il se baisse. Un revolver claque, et le bruit court d'un bout à l'autre de la Galerie, quatre cents mètres de verre et de fer qui renvoient tout. À la porte de Javel, un contrôleur lève la tête et cherche son sifflet.
 
-Ce chapitre donne les règles pour se battre, du premier regard au dernier jet contre la mort : une nef de la Galerie la nuit, une cour de Javel, la passerelle d'un dirigeable, l'escalier des Carrières. Il dit aussi ce qu'on fait quand on ne tire pas : payer, crier, fuir, se rendre, ou comprendre qu'une machine ne se négocie pas. Les armes à feu et la dynamite sont au chapitre 3, les armes blanches et les armures au chapitre 6, les états au chapitre 7.
+On se bat dans une nef de la Galerie la nuit, une cour de Javel, sur la passerelle d'un dirigeable, dans l'escalier des Carrières ; et on apprend aussi à ne pas tirer : payer, crier, fuir, se rendre, ou comprendre qu'une machine ne se négocie pas. Les armes sont au chapitre 6, les états au chapitre 7.
 
 > **Si tu viens d'un autre jeu.**
 >
-> Le combat est celui de la cinquième édition : rounds de six secondes, cases de 1,5 m, initiative, une action, un déplacement, une action bonus et une réaction par tour. À l'Éternelle, trois choses changent. Une arme à feu a un nombre de coups, puis il faut une action entière pour la recharger. Chaque appareil employé à plein régime fait monter ta Pression, et une Pression haute attire les contrôleurs, puis les gardes. Enfin, dans l'enceinte, le bruit d'un combat se paie : les armes à feu y sont interdites, et un sifflet fait venir les postes voisins. Aucune classe ne lance de sort.
+> Le combat est celui de la cinquième édition : rounds de six secondes, cases de 1,5 m, initiative, une action, un déplacement, une action bonus par tour et une réaction par round. À l'Éternelle, trois choses changent. Une arme à feu a un nombre de coups, puis il faut une action entière pour la recharger. Chaque appareil employé à plein régime fait monter ta Pression, et une Pression haute attire les contrôleurs, puis les gardes. Enfin, dans l'enceinte, le bruit d'un combat se paie : les armes à feu y sont interdites, et un sifflet fait venir les postes voisins. Aucune classe ne lance de sort.
 
 ## Le déroulé d'un combat
 
@@ -76,7 +76,7 @@ Voici ce que tu peux faire avec ton action. Ce qui n'est pas dans la liste, tu p
 
 ### Attaquer
 
-Tu fais une attaque avec une arme, un appareil de corps à corps ou à mains nues. Un pouvoir qui t'en donne plusieurs (*Attaque supplémentaire*, niveau 5 pour l'Aéronaute, le Garde et l'Escrimeur ; chapitre 5) les range toutes sous une seule action. Avec un revolver, deux attaques font deux coups de moins dans le barillet : compte-les avant d'annoncer ce que tu fais.
+Tu fais une attaque avec une arme, un appareil de corps à corps ou à mains nues. Un pouvoir qui t'en donne plusieurs (*Attaque supplémentaire*, niveau 5 pour l'Aéronaute, le Garde et l'Escrimeur ; chapitre 5) les range toutes sous une seule action. Avec une arme à feu, chaque attaque tire un coup : deux attaques vident deux coups du chargeur. Compte-les avant d'annoncer ce que tu fais.
 
 ### Utiliser un pouvoir
 
@@ -88,12 +88,12 @@ Un appareil se joue de deux façons : à régime ordinaire, ce que dit la colonn
 
 | Appareil | À régime ordinaire | À plein régime (Pression +1) |
 |---|---|---|
-| Gant à ressort | Une attaque au contact, avec la Force, 1d6 contondants | Si le coup touche : 2d6, et la cible fait une sauvegarde de Force DD 12 ou est repoussée de 3 m |
+| Gant à ressort | Une attaque au contact, avec la Force, 1d6 contondants | Une action (l'attaque) : si le coup touche, 2d6 contondants, et la cible fait une sauvegarde de Force DD 12 ou est repoussée de 3 m |
 | Lampe à arc de poche | Elle éclaire ; l'allumer ou l'éteindre est une interaction | Une action : toutes les créatures à 6 m de toi, alliés compris, font une sauvegarde d'Endurance DD 12 ou sont aveuglées jusqu'à la fin de ton prochain tour |
 | Canne-grappin | Une action : tu te hisses de 9 m ou tu tires à toi une créature Moyenne ou plus petite | Une action bonus : 27 m de portée, tu te hisses de 18 m |
 | Cuirasse à vapeur | Elle se porte comme une armure (chapitre 6) | Une action bonus : +2 CA et avantage aux tests de Force jusqu'à la fin de ton prochain tour |
-| Lance-vapeur | Chaque jet est déjà à plein régime | Une action : un cône de 4,5 m, sauvegarde d'Adresse DD 12, 2d6 dégâts de feu, moitié si elle réussit |
-| Bottes à ressorts | Tes sauts vont deux fois plus loin | Un saut de 9 m en hauteur ou de 18 m en longueur, sans élan |
+| Lance-vapeur | Chaque jet est déjà à plein régime | Une action : un cône de 4,5 m, sauvegarde d'Adresse DD 12, 2d6 dégâts de feu, moitié si elle réussit. Pression +2 par cône |
+| Bottes à ressorts | Tes sauts vont deux fois plus loin | Une action : un saut de 9 m en hauteur ou de 18 m en longueur, sans élan |
 
 Tu ne peux employer qu'un appareil à plein régime par action. L'éclair de la lampe à arc de poche aveugle tout le monde sans distinction : un allié à 5 m en pâtit comme l'adversaire. Compte qui est dans le cercle avant d'appuyer.
 
@@ -103,7 +103,7 @@ Tu doubles ta vitesse pour ce tour : 18 m (12 cases). C'est ce qu'on fait pour g
 
 ### Se désengager
 
-Tes déplacements du tour ne provoquent pas d'attaque d'opportunité. À employer quand on s'écarte d'un homme qui tient une canne plombée à un mètre.
+Tes déplacements du tour ne provoquent pas d'attaque d'opportunité. À employer quand on s'écarte d'un homme qui tient une canne plombée à 1,5 m.
 
 ### Esquiver
 
@@ -168,9 +168,9 @@ Quand une créature hostile que tu vois **quitte ta portée** sans se désengage
 
 ### Le combat à deux armes
 
-Si tu tiens une arme **légère** dans chaque main et que tu attaques avec l'une, tu peux utiliser ton action bonus pour attaquer avec l'autre. Tu n'ajoutes pas ton modificateur aux dégâts de cette seconde attaque, sauf s'il est négatif ; le style de combat *Deux armes* te l'accorde. Dans la table de 1899, une seule arme est légère, le couteau : se battre à deux armes, c'est tenir deux couteaux. Un revolver et une canne-épée ne forment pas une paire.
+Si tu tiens une arme **légère** dans chaque main et que tu attaques avec l'une, tu peux utiliser ton action bonus pour attaquer avec l'autre. Tu n'ajoutes pas ton modificateur aux dégâts de cette seconde attaque, sauf s'il est négatif ; le style de combat *Deux armes* te l'accorde. Dans la table de 1899, deux armes sont légères : le couteau et la canne-épée. Se battre à deux armes, c'est tenir deux couteaux, deux cannes-épées, ou un de chaque. Un revolver et une canne-épée ne forment pas une paire.
 
-**Les styles de combat.** Au niveau 1, l'Aéronaute, le Garde et l'Escrimeur en choisissent un : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main, rien dans l'autre), Tir (+2 aux attaques à distance), et selon la classe Deux armes ou Arme à deux mains. Le style Duel ne vaut que si l'autre main est vide : une clef anglaise dans la droite et un revolver vide dans la gauche, pas de bonus.
+**Les styles de combat.** Au niveau 1, l'Aéronaute, le Garde et l'Escrimeur en choisissent un : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main et rien dans l'autre), Tir (+2 aux attaques à distance), et selon la classe Deux armes ou Arme à deux mains. Le style Duel ne vaut que si l'autre main est vide : une clef anglaise dans la droite et un revolver vide dans la gauche, pas de bonus.
 
 ### Les armes à feu en combat
 
@@ -178,9 +178,8 @@ La règle de base est au chapitre 3 : un nombre de coups, puis une action pour r
 
 - **Compter à voix haute.** Dis « cinq » après chaque tir. Quand tu dis « zéro », ton prochain tour sera un tour de rechargement, et tout le monde l'aura entendu.
 - **Enrayement.** Un 1 naturel au d20 : l'attaque rate, l'arme s'enraye, et il te faut une action pour la dégager avant de tirer à nouveau. Ton revolver n'est pas un appareil : il s'enraye sur un 1 naturel quelle que soit ta Pression.
-- **Le bruit.** Un coup de feu sous la verrière de la Galerie s'entend jusqu'aux portes. Dans l'enceinte, le MJ lance 1d4 en secret après chaque coup tiré : c'est le nombre de rounds avant que deux gardes de la porte la plus proche entrent dans la nef. Un contrôleur qui siffle (action bonus) a le même effet.
-- **La dynamite.** Elle se joue comme au chapitre 3. Après un bâton, le MJ retire l'abri d'une cloison de bois, d'une porte ou d'un mur de brique mince : ils ne résistent pas.
-- **La matraque à tension.** Un garde frappe d'abord, et tire sur ordre. La décharge n'arrête pas un homme : si sa sauvegarde est ratée, il attaque avec le désavantage jusqu'au début du prochain tour du garde, et il peut encore courir.
+- **Le bruit.** Un coup de feu sous la verrière de la Galerie s'entend jusqu'aux portes. Dans l'enceinte, le MJ lance 1d4 en secret après le premier coup de la scène : c'est le nombre de rounds avant que deux gardes de la porte la plus proche entrent dans la nef. Chaque coup suivant retire 1 round (les gardes entrent au plus tôt au round suivant). Un contrôleur qui siffle (action bonus) a le même effet que le premier coup.
+- **La dynamite et la matraque à tension** sont décrites au chapitre 6. Un garde frappe d'abord, et lâche la décharge sur ordre ; elle n'arrête pas un homme, qui peut encore courir.
 
 > **Après le coup de feu.**
 >
@@ -221,10 +220,10 @@ Un combat se joue autant sur le sol que dans les dés. Voici les endroits où il
 Une nef de quatre cents mètres sans un pilier au milieu, des machines de trente tonnes sur des socles de marbre, des ponts roulants sous la verrière, des courroies, des conduites, des lampes à arc sur des poteaux. On s'y bat entre des bâtis, et la machine continue de tourner.
 
 - **Les bâtis et les socles** donnent les trois quarts d'un abri. Les caisses et les chariots de bobines en donnent la moitié. Une conduite sous pression donne un abri contre les balles et pas contre ce qu'elle contient (voir ci-dessous).
-- **Les courroies** passent à hauteur d'épaule. Marcher à côté n'est pas un danger. Celui qui s'y appuie, s'y accroche ou qu'on y pousse fait la sauvegarde du chapitre 3 (Adresse DD 13, sinon 2d10 contondants et entravé). Pousser quelqu'un est une action Bousculer (voir plus bas) ; la victime a la sauvegarde, et toi tu restes hors de portée de la courroie.
+- **Les courroies** passent à hauteur d'épaule. Marcher à côté n'est pas un danger. Celui qui s'y appuie ou s'y accroche, ou celui qu'on y pousse, fait la sauvegarde du chapitre 3 (Adresse DD 13). Pousser quelqu'un est une action Bousculer (voir plus bas) ; la victime a la sauvegarde, et toi tu restes hors de portée de la courroie.
 - **La vapeur.** Une fuite ou une conduite qui siffle emplit 3 m de rayon d'un brouillard blanc : la vue y est réduite à quelques pas, avec désavantage pour tout ce qui se voit (chapitre 2). Ceux qui s'y trouvent quand elle jaillit font la sauvegarde du chapitre 3 (Adresse DD 12, 2d6 de feu). Le brouillard tient une minute.
 - **Le bruit.** Quand les machines tournent, les ordres se perdent : un pouvoir qui demande à être entendu (*Coup de sifflet*, *Mot d'ordre*, *Souffler la réplique*) ne porte qu'à la moitié de sa distance. Dans la même nef, la nuit, quand les machines ont ralenti, il porte à plein.
-- **Les ponts roulants** portent des plates-formes grillagées : une cage à garde-corps, 3 m de côté, que le MJ place à 12 m du sol en général. Quand un pont démarre, tous ceux qui sont sur la plate-forme font une sauvegarde d'Adresse DD 12, ou tombent à terre. Pousser un homme par-dessus le garde-corps est une Bousculade (voir plus bas) : la cible a droit à une sauvegarde d'Adresse DD 12 pour s'agripper au bord, sinon elle tombe de la hauteur (voir « Les chutes »).
+- **Les ponts roulants** portent des plates-formes grillagées : une cage à garde-corps, 3 m de côté, à 12 m du sol (4d6 de chute : mortel au niveau 1). Avant le niveau 3, le MJ la place à 6 m (2d6). Quand un pont démarre, tous ceux qui sont sur la plate-forme font une sauvegarde d'Adresse DD 12, ou tombent à terre. Pousser un homme par-dessus le garde-corps est une Bousculade (voir plus bas) : la cible a droit à une sauvegarde d'Adresse DD 12 pour s'agripper au bord, sinon elle tombe de la hauteur (voir « Les chutes »).
 - **Les passerelles d'entretien** longent les bâtis à 4,5 m. On y monte par l'échelle (grimper compte double), avec une canne-grappin (action) ou avec des bottes à ressorts à plein régime. Un tireur qui s'y poste domine ses adversaires : l'Aéronaute y trouve les conditions de son *Tir en surplomb* (niveau 1, une cible à 3 m ou plus sous lui).
 
 ### Les cours de Grenelle et de Javel
@@ -235,11 +234,11 @@ Dans une foule serrée, la vitesse compte comme en terrain difficile. Le Réfrac
 
 ### Le vent et les plates-formes
 
-Par grand vent, la plate-forme d'un dirigeable, la passerelle d'embarquement ou le toit d'une halle demandent, au début du tour de qui fonce, saute ou se bat sur le bord, un test d'Acrobaties ou d'Athlétisme DD 12 (DD 15 par tempête). Un échec te met **à terre**. Un 1 naturel, à 1,5 m du bord ouvert : sauvegarde d'Adresse DD 12 pour t'accrocher à la rambarde, sinon tu tombes (voir « Les chutes »). Marcher d'un pas normal, tirer ou frapper ne demandent aucun test. L'Aéronaute ne fait jamais ce test (*Pied de nacelle*, niveau 1).
+Par grand vent, la plate-forme d'un dirigeable, la passerelle d'embarquement ou le toit d'une halle demandent, au début du tour de qui fonce, saute ou se bat sur le bord, un test d'Acrobaties ou d'Athlétisme DD 12 (DD 15 par tempête). Sur la passerelle d'embarquement d'un dirigeable, un échec te fait tomber de 3 m (1d6, voir « Les chutes »). Ailleurs, il te met **à terre**. Un 1 naturel, à 1,5 m du bord ouvert : sauvegarde d'Adresse DD 12 pour t'accrocher à la rambarde, sinon tu tombes (voir « Les chutes »). Marcher d'un pas normal, tirer ou frapper ne demandent aucun test. L'Aéronaute ne fait jamais ce test (*Pied de nacelle*, niveau 1).
 
 ### La lumière
 
-À l'Éternelle, la nuit est rarement noire : des cônes de lumière alternent avec des couloirs d'ombre, et c'est dans l'ombre que les gens se cachent.
+À l'Éternelle, la nuit est rarement noire : des cônes de lumière alternent avec des couloirs d'ombre.
 
 | Lumière | Ce qu'on voit | Effet |
 |---|---|---|
@@ -250,7 +249,7 @@ Par grand vent, la plate-forme d'un dirigeable, la passerelle d'embarquement ou 
 - Une **lampe à arc de nef ou de rue** éclaire en vive sur **18 m** et en faible sur 18 m de plus. Une **lampe à arc de poche** : vive sur 9 m, faible jusqu'à 18 m (chapitre 3). Un **bec de gaz** ou une lanterne : vive sur 6 m, faible sur 6 m de plus.
 - Un soir où les lampes baissent, le MJ le dit : la lumière vive devient faible partout où il l'annonce, et le reste de la nuit suit.
 - **Attaquer quelque chose qu'on ne voit pas** a le désavantage. Être attaqué par quelqu'un qu'on ne voit pas, c'est subir une attaque **avec avantage**.
-- Une lampe à arc de poche qui s'allume te désigne : jusqu'au début de ton prochain tour, ceux qui te voient n'ont pas le désavantage de viser ce qu'ils ne voyaient pas.
+- Celui qui porte une lampe allumée ne se cache pas : on le voit de loin.
 - Dans les Carrières, sans lampe, l'obscurité est complète. Le salpêtre pique les yeux et les voûtes renvoient les voix : le MJ dit d'où elles semblent venir.
 
 ### La Seine et les berges
@@ -273,7 +272,7 @@ Tu remplaces une attaque par un test de **Force (Athlétisme)** contre le même 
 
 Partir est souvent la bonne décision, à condition de savoir par où.
 
-- **Foncer** : 18 m par round à pied. Si un adversaire est au contact, se désengager d'abord prend l'action du premier round. Un Garde fait courir ses alliés : *Coup de sifflet* (niveau 2) déplace un allié à 18 m de sa vitesse, sans attaque d'opportunité.
+- **Foncer** : 18 m par round à pied. Si un adversaire est au contact, se désengager d'abord prend l'action du premier round. Un Garde fait courir ses alliés : *Coup de sifflet* (niveau 2) met en mouvement un allié qui l'entend à 18 m, sans attaque d'opportunité.
 - **Se perdre.** Pour disparaître, il faut sortir de la vue de tes poursuivants, puis réussir un test de groupe d'Adresse (Discrétion) contre leur Perception passive. Une cour de Javel, une foule de relève, un escalier de service : le MJ décide ce qui compte comme « hors de vue ». À six heures du soir, quand quatre mille blouses bleues sortent par la porte, c'est facile.
 - **Les portes de l'enceinte.** Un garde poursuit jusqu'à la porte et pas plus loin : hors de l'enceinte, la justice de police du Commissariat ne te suit plus dans la rue. Il garde ton signalement, et la Sûreté le lira si l'affaire l'intéresse.
 - **Les toits et les plates-formes.** Les bottes à ressorts, la canne-grappin et *Fuite par les toits* (niveau 2) coupent la poursuite à pied. Un chien du Commissariat court à 12 m par round, et un dirigeable ne part pas sans billet.
@@ -297,7 +296,7 @@ Les adversaires du MJ se rendent aussi. Un contrôleur lâche son poinçon dès 
 
 ### Négocier
 
-Négocier se fait avec la voix, au milieu du combat, à ton tour : c'est une **action**, avec un test de Présence (Persuasion, Intimidation ou Tromperie). Le MJ fixe le DD selon l'**attitude** de l'autre : 10 pour un bienveillant, 15 pour un neutre, 20 pour un méfiant. Contre plusieurs adversaires, un seul test, au DD du plus méfiant ; le MJ peut séparer le chef des autres.
+Négocier se fait avec la voix, au milieu du combat, à ton tour : c'est une **action**, avec un test de Présence (Persuasion, Intimidation ou Tromperie). Le MJ fixe le DD selon l'**attitude** de l'autre : 10 pour un bienveillant, 15 pour un neutre, 20 pour un méfiant. Un adversaire qui vient de te frapper est méfiant (DD 20). Il devient neutre (DD 15) s'il a une raison de partir : payé pour une soirée, un camarade à terre, des gardes qui arrivent pour de bon. Les modificateurs ci-dessous ne descendent jamais le DD sous 10. Un seul test pour plusieurs adversaires, au DD du plus méfiant ; il ne règle que ceux qui ont entendu.
 
 | Ce que tu mets sur la table | Effet sur le DD |
 |---|---|
@@ -306,15 +305,15 @@ Négocier se fait avec la voix, au milieu du combat, à ton tour : c'est une **a
 | **Une menace crédible** (une lampe à arc braquée, deux personnes qui couvrent la sortie, des gardes qui arrivent pour de bon) | −5 |
 | **Une demande absurde** (« rends-moi ta canne et dis merci ») | +5 |
 
-Un DD ne descend jamais sous 10, et le MJ garde le dernier mot. Une négociation réussie arrête le combat. Elle laisse une trace : un casseur que tu as payé te reconnaît dans une rue de la Butte, un garde qui t'a laissé partir se souvient de ton visage.
+Le MJ garde le dernier mot. Une négociation réussie arrête le combat pour ceux qui l'ont entendue. Elle laisse une trace : un casseur que tu as payé te reconnaît dans une rue de la Butte, un garde qui t'a laissé partir se souvient de ton visage.
 
-Dans l'enceinte, le temps compte : un combat qui s'éternise appelle les gardes. Deux pouvoirs de l'Interprète le prolongent d'une parole. *Cessez-le-feu* (niveau 5) demande dix minutes de conversation entre deux camps qui se font face : chaque créature qui l'écoute fait une sauvegarde de Présence, ou cesse de se battre jusqu'à la fin de la conversation. *Parler avant le premier coup* (niveau 17) arrête le chef d'un groupe hostile qui le comprend, pendant une minute.
+Dans l'enceinte, le temps compte : un combat qui s'éternise appelle les gardes. Deux pouvoirs de l'Interprète le prolongent d'une parole : *Cessez-le-feu* et *Parler avant le premier coup* (chapitre 5).
 
 ## Ce qui ne se tue pas
 
-Un combat à l'Éternelle n'a pas toujours d'adversaire. Un automate qui tourne à vide, une courroie qui happe, une conduite qui siffle, un chien de garde qui obéit à un autre, une foule qui vous entraîne : tu peux leur tirer dessus, ça ne règle rien. Pour presque chacun, le MJ a prévu une sortie qui ne passe pas par la casse.
+Un combat à l'Éternelle n'a pas toujours d'adversaire. Un automate qui tourne à vide, une courroie qui happe, une conduite qui siffle, un chien de garde qui obéit à un autre, une foule qui t'entraîne : tu peux leur tirer dessus, ça ne règle rien. Pour presque chacun, le MJ a prévu une sortie qui ne passe pas par la casse.
 
-- **Couper la source.** Un robinet de vapeur se ferme sur un test de Force DD 13. Un levier de courroie se cale d'une barre : Force DD 13. Un disjoncteur de poste se coupe, quand on connaît le poste.
+- **Couper la source.** Un robinet de vapeur se ferme sur un test de Force DD 13. Un levier de courroie se cale d'une barre : Force DD 13. Un coupe-circuit de poste se coupe, quand on connaît le poste.
 - **Caler l'automate.** Un automate à cames a presque toujours une came ou une goupille qui le retient : Investigation DD 10 ou 12 pour la trouver, Adresse DD 12 pour la tirer ou la bloquer. Un mécanicien le remonte en cinq minutes ; le Mécanicien du groupe n'a besoin que de sa clef.
 - **Dételer.** Un animal de la Compagnie, cheval de fiacre ou chien de garde, s'apaise à la voix, à la viande ou au coup de sifflet de son maître : Instinct (Dressage) DD 12. Sans maître, le chien hésite et tourne en rond.
 - **Tirer le monde du chemin.** Quand la machine ne s'arrêtera pas de sitôt, le premier travail est d'écarter ceux qui sont sur sa route : Athlétisme ou Acrobaties DD 12 pour entraîner quelqu'un.
@@ -322,7 +321,7 @@ Un combat à l'Éternelle n'a pas toujours d'adversaire. Un automate qui tourne 
 
 > **Comment le savoir ?**
 >
-> Pose des questions. « Qu'est-ce qui le fait avancer ? Qu'est-ce qui l'arrêterait ? Qui est derrière ? » Un test de Savoir (Investigation) ou d'Instinct (Intuition), DD 13, peut t'ouvrir une sortie de plus. Une ouvrière de bobinage, un contrôleur de vingt ans de portes ou un mécanicien de nuit en sait souvent plus que n'importe quel livre. Le MJ ne crée pas de sortie pour te rassurer : il en met là où la scène en comporte.
+> Pose des questions. « Qu'est-ce qui le fait avancer ? Qu'est-ce qui l'arrêterait ? Qui est derrière ? » Un test de Savoir (Investigation) ou d'Instinct (Intuition), DD 13, peut t'ouvrir une sortie de plus. Une ouvrière de bobinage, un contrôleur qui tient les portes depuis vingt ans ou un mécanicien de nuit en sait souvent plus que n'importe quel livre. Le MJ ne crée pas de sortie pour te rassurer : il en met là où la scène en comporte.
 
 ## Les dégâts
 
@@ -349,7 +348,7 @@ La vapeur brûle : elle compte comme du **feu** pour les résistances et les vul
 
 ### Résistance, vulnérabilité, immunité
 
-Résistance : moitié des dégâts. Vulnérabilité : le double. Immunité : rien. Plusieurs sources de résistance ne se cumulent pas. Quelques pouvoirs en donnent : *Poids de chaudière* (Ajusteur de la Galerie, niveau 15, quand la Pression est à 5 ou plus) et *Corps de fer* (Boxeur de savate, niveau 15) contre les dégâts contondants, *Peau de garde* (Matraque de poste, niveau 15) contre la foudre, et *Fil à la patte* (Bobineur, niveau 15) l'immunité contre la foudre. Un automate est immunisé contre le poison et les dégâts psychiques ; le MJ le dit quand tu en affrontes un.
+Résistance : moitié des dégâts. Vulnérabilité : le double. Immunité : rien. Plusieurs sources de résistance ne se cumulent pas. Quelques pouvoirs en donnent (chapitre 5) : *Poids de chaudière* et *Corps de fer* contre les dégâts contondants, *Peau de garde* contre la foudre, et *Fil à la patte* l'immunité contre la foudre. Un automate est immunisé contre le poison et les dégâts psychiques ; le MJ le dit quand tu en affrontes un.
 
 ### Les chutes
 
@@ -373,7 +372,7 @@ L'huile, les bobines enveloppées de papier, les poutres sèches et les toiles d
 
 On récupère des PV par le repos (chapitre 3), par les pouvoirs de soin (la *Trousse du médecin*, *Second souffle* du Garde, *Tisane* de l'Herboriste), par les soins d'un médecin (chapitre 2, « Médecine »). Les PV rendus s'ajoutent au total, sans dépasser le maximum. Un mort ne récupère rien. Un personnage à 0 PV qui récupère au moins 1 PV **reprend conscience** et peut agir à son prochain tour.
 
-Le *Triage* du Médecin (niveau 1) stabilise un allié qui tombe à 0 PV à 1,5 m de lui, et lui rend 1 PV aussitôt.
+Le *Triage* du Médecin (chapitre 5) relève un allié qui vient de tomber.
 
 ## Tomber à 0 PV
 
@@ -430,7 +429,7 @@ Les adversaires du MJ tombent à 0 PV et sortent du combat. Le MJ décide s'ils 
 
 ### Mourir
 
-À l'Éternelle, un mort a presque toujours quelqu'un qui vient le chercher. Un syndiqué de la Chambre a sa caisse de secours et ses camarades de relève ; un Permanent, sa loge et sa cour ; un engagé des Villages, son Conseil et ses anciens, qui ont leurs propres usages ; un visiteur, sa légation, ou personne. Un mort de la Galerie devient un accident dans le registre du contrôleur, et ceux qui l'ont connu ne le croient pas. Le livre ne fixe pas qu'un coup de matraque prive de la vue ou d'une main. Si le MJ juge qu'une séquelle viendra, il le dit avant de lancer les dés, et jamais sans en avoir parlé à la table.
+À l'Éternelle, un mort a presque toujours quelqu'un qui vient le chercher. Un syndiqué de la Chambre a sa caisse de secours et ses camarades de relève ; un Permanent, sa loge et sa cour ; un engagé des Villages, son Conseil et ses anciens, qui ont leurs propres usages ; un visiteur, son ambassade ou sa légation, ou personne. Un mort de la Galerie devient un accident dans le registre du contrôleur, et ceux qui l'ont connu ne le croient pas. Le livre ne dit pas qu'un coup de matraque peut priver de la vue ou d'une main. Si le MJ juge qu'une séquelle viendra, il le dit avant de lancer les dés, et jamais sans en avoir parlé à la table.
 
 ## Remplacer un personnage mort
 
@@ -452,7 +451,7 @@ Certains pouvoirs donnent des **PV temporaires** : *Mot d'ordre* du Réfractaire
 
 ## La Pression pendant le combat
 
-Un combat à l'Éternelle n'engage pas que ton corps. Il engage ton appareil. La Pression (chapitre 3) est un nombre de 0 à 10 que tu notes sur ta fiche et que tu annonces à voix haute chaque fois qu'il change. Voici ce qu'elle fait pendant un combat.
+Un combat à l'Éternelle n'engage pas que ton corps. Il engage ton appareil. Tu annonces ta Pression à voix haute chaque fois qu'elle change. Voici ce qu'elle fait pendant un combat (les règles complètes sont au chapitre 3).
 
 | Pression | Ce qui change dans la scène |
 |---|---|
@@ -461,29 +460,29 @@ Un combat à l'Éternelle n'engage pas que ton corps. Il engage ton appareil. La
 | 7 | Quand tu forces un appareil, il te brûle les mains : 1d6. Les gardes te remarquent à distance. |
 | 10 | L'appareil que tu viens d'employer explose après l'effet du pouvoir, dans un rayon de 3 m. Sauvegarde d'Endurance pour la moitié. |
 
-**Forcer un appareil.** Tu le dis avant de lancer le dé : « Je force. » Tu choisis alors l'avantage au jet, ou +1d6 aux dégâts, une fois par scène, et ta Pression monte de 1. Tu ne peux pas forcer après avoir vu le résultat du dé.
+**Forcer un appareil.** Tu le dis avant de lancer le dé : « Je force. » Tu ne peux pas forcer après avoir vu le résultat du dé. Le prix et l'effet sont au chapitre 3.
 
-**Purger pendant un combat.** La *Soupape* du Mécanicien (niveau 1) baisse de 1 la Pression d'un porteur qu'il touche, lui compris : une action, trois utilisations par repos long, plus une qui revient après chaque repos court. Le *Réglage fin* (niveau 2) évite au prochain forçage de faire monter la Pression, et *Pas comme ça !* (niveau 5) fait relancer le d20 d'un allié dont l'appareil va s'enrayer.
+**Purger pendant un combat.** La *Soupape* du Mécanicien baisse la Pression d'un porteur qu'il touche, lui compris ; le *Réglage fin* et *Pas comme ça !* évitent qu'elle monte ou qu'un appareil s'enraye (chapitre 5).
 
-**L'éclatement.** À 10, l'appareil que tu viens d'employer explose, après l'effet du pouvoir. Tous ceux qui sont dans les 3 m, toi compris, font une sauvegarde d'Endurance (DD 8 + ta maîtrise + ton modificateur d'Endurance) : 2d6 de vapeur, plus 1d6 par tranche de 4 niveaux, moitié si elle réussit. L'appareil est détruit, et ta Pression retombe à 4. Avec *Pièce unique* (Inventeur, niveau 15), un appareil de son invention ne lui fait aucun dégât en éclatant. *Régime stable* (Mécanicien, niveau 9) repousse pour lui seul les seuils de surcharge et de fuite à 6 et 8.
+**L'éclatement.** Tous ceux qui sont dans les 3 m, toi compris, font la sauvegarde du chapitre 3. *Pièce unique* et *Régime stable* y changent quelque chose (chapitre 5).
 
 ## Un combat complet
 
 Voici un combat du début à la fin.
 
-**La situation.** Une nuit de semaine, un peu après minuit, dans la Galerie des Machines. Les machines tournent au ralenti. Le groupe porte le registre de pointage d'un atelier de bobinage, enveloppé de toile cirée : Léonie l'a copié pour la secrétaire de la Chambre, et un contremaître aimerait bien qu'il disparaisse. Léonie, Mamadou, Ernest et Ottilie, tous au niveau 1, traversent la nef par l'allée qui longe les socles. Les armes à feu sont interdites dans l'enceinte : Mamadou et Ernest ont laissé les leurs en consigne à la porte de Javel (un jeton de laiton, 50 centimes chacun), Léonie a rangé le sien dans son casier d'atelier, et Ottilie a fait passer le sien dans la doublure de sa vareuse (Discrétion contre le garde de la porte, DD 14 : réussi). Les appareils ne sont pas interdits.
+**La situation.** Une nuit de semaine, un peu après minuit, dans la Galerie des Machines. Les machines tournent au ralenti. Le groupe porte le registre de pointage d'un atelier de bobinage, enveloppé de toile cirée : Léonie l'a copié pour la secrétaire de la Chambre, et un contremaître aimerait bien qu'il disparaisse. Léonie, Mamadou, Ernest et Ottilie, tous au niveau 1, traversent la nef par l'allée qui longe les socles. Mamadou a un permis de nuit que l'impresario a signé pour une traduction à la Galerie : il vaut jusqu'à l'aube, et il s'en souviendra au renouvellement du contrat. Les armes à feu sont interdites dans l'enceinte : Mamadou et Ernest ont laissé les leurs en consigne à la porte de Javel (un jeton de laiton, 50 centimes chacun), Léonie a rangé le sien dans son casier d'atelier, et Ottilie a fait passer le sien dans la doublure de sa vareuse (Discrétion contre le garde de la porte, DD 14 : réussi). Les appareils ne sont pas interdits.
 
 Une lampe à arc sur deux est allumée. À 9 m sur la gauche, un empilement de bobines de cuivre jette une ombre longue : lumière faible. À droite, un bâti de fonte donne trois quarts d'abri. À 4,5 m au-dessus du sol, une passerelle d'entretien longe les bâtis, avec un garde-corps. Le pont roulant n° 3 dort sous la verrière, à 12 m.
 
-Deux **casseurs de la Butte**, payés par le contremaître, guettent derrière les bobines : l'un avec une canne plombée, l'autre avec un couteau.
+Deux **casseurs novices de la Butte**, payés par le contremaître, guettent derrière les bobines : l'un avec une canne plombée, l'autre avec un couteau.
 
 > **Comment le MJ a dosé la rencontre.**
 >
-> Un casseur de la Butte est une créature de FP 1 (200 PX) : 78 PV, CA 13, deux attaques par tour. Pour des personnages de niveau 1, le MJ le ramène à FP 1/2 (100 PX) : 26 PV (4d8 + 8), une seule attaque par tour, canne plombée à +4 (1d6 + 2 contondants) ou couteau à +4 (1d4 + 2 tranchants). Le reste est inchangé : CA 13, *En bande* (avantage à l'attaque si un allié non neutralisé est à 1,5 m de la cible), *Pas payé pour mourir* (il s'enfuit si l'un des siens tombe, ou si l'on crie « La Sûreté ! » assez fort).
+> Un casseur de la Butte est une créature de FP 1 (200 PX) : 78 PV, CA 13, deux attaques par tour. Pour quatre personnages de niveau 1, une rencontre facile vaut 100 PX, une moyenne 200, une difficile 300, une mortelle 400. Deux fiches entières font 400 × 1,5 = 600 PX, au-dessus de la rencontre mortelle. Le MJ prend donc deux casseurs novices (FP 1/4, 50 PX) : 100 PX bruts, 150 avec le multiplicateur de 1,5, entre la rencontre facile (100) et la moyenne (200).
 >
-> Deux casseurs de FP 1/2 font 200 PX bruts. Pour deux adversaires, on multiplie par 1,5 : 300. Pour quatre personnages de niveau 1, une rencontre moyenne vaut 200 PX, une difficile 300, une mortelle 400. Celle-ci est donc difficile. Les deux fiches entières donneraient 400 × 1,5 = 600, bien plus haut que la mortelle.
+> Un casseur novice a 26 PV (4d8 + 8) et une seule attaque par tour : canne plombée à +4 (1d6 + 2 contondants) ou couteau à +4 (1d4 + 2 tranchants). Le reste est celui de la fiche : CA 13, *En bande* (avantage à l'attaque si un allié non neutralisé est à 1,5 m de la cible), *Pas payé pour mourir* (il s'enfuit si l'un des siens tombe, ou si l'on crie « La Sûreté ! » assez fort).
 >
-> Les quatre personnages ont 36 PV à eux tous et une CA de 11 à 13. Les casseurs frappent peu, mais ensemble, et chaque coup compte.
+> La surprise et les 36 PV de toute la table la rendent plus dure que son chiffre. Les casseurs frappent peu, mais ensemble, et chaque coup compte.
 
 **Surprise.** Les casseurs lancent Discrétion (+4). Le premier fait 12 au dé, total 16. Le second, 5 au dé, total 9. La lumière est faible autour des bobines : les Perceptions passives baissent de 5 pour ce qui se voit. Léonie et Mamadou passent de 13 à 8 ; Ernest et Ottilie, de 14 à 9. Le premier casseur (16) n'est vu de personne. Le second (9) est vu d'Ernest et d'Ottilie, car 9 n'est pas supérieur à 9, mais pas de Léonie ni de Mamadou, car 9 est supérieur à 8. Ernest et Ottilie ne sont donc pas surpris. Léonie et Mamadou, qui ne remarquent personne, le sont.
 
@@ -498,7 +497,7 @@ Deux **casseurs de la Butte**, payés par le contremaître, guettent derrière l
 
 **Round 2.**
 
-- *Ottilie* est sur la passerelle, à 4,5 m au-dessus des casseurs. Elle tire au revolver sur celui de la canne, à 7,5 m : 5 au dé, +6, total 11 contre CA 13. Raté. Elle ajoute le d6 de la *Souffler la réplique* d'Ernest : 3, total 14. Touché. Dégâts : 1d8 donne 4, +2, et son *Tir en surplomb* ajoute 1d6, qui donne 5 : 11. Le casseur à la canne passe de 26 à 15 PV. Le revolver a tiré une fois sur six. **Le MJ lance 1d4 en secret** : un coup de feu dans la nef appelle les gardes.
+- *Ottilie* est sur la passerelle, à 4,5 m au-dessus des casseurs. Elle tire au revolver sur celui de la canne, à 7,5 m : 5 au dé, +6, total 11 contre CA 13. Raté. Elle ajoute le d6 de la *Souffler la réplique* d'Ernest : 3, total 14. Touché. Dégâts : 1d8 donne 4, +2, et son *Tir en surplomb* ajoute 1d6, qui donne 5 : 11. Le casseur à la canne passe de 26 à 15 PV. Le revolver a tiré une fois sur six. **Le MJ lance 1d4 en secret** : c'est le premier coup de feu de la scène, et il appelle les gardes.
 - *Les casseurs.* Celui de la canne attaque Ernest, qui esquive : deux d20, 6 et 15, il garde 6 ; 6 + 4 = 10 contre CA 12. Raté. Celui du couteau attaque Léonie : 15 au dé, +4, total 19. Touché. Dégâts : 1d4 donne 1, +2 : 3. Léonie passe de 10 à 7 PV.
 - *Ernest* a perdu son esquive au début de son tour. Il se **désengage** (action) et court 6 m jusqu'au bâti de fonte, qui lui donne les trois quarts d'abri : sa CA passe de 12 à 17.
 - *Léonie* n'est plus surprise. Elle est à 1,5 m du casseur au couteau. Elle utilise son *Jet de vapeur* avec le lance-vapeur, qui compte chaque jet pour un plein régime : dégâts doublés, Pression +1. Le casseur fait sa sauvegarde d'Adresse contre le DD 12 (8 + maîtrise 2 + Savoir +2) : 9 au dé, +2, total 11. Raté. 2d8 donnent 3 et 6 : 9 dégâts de feu. Le casseur au couteau passe de 26 à 17 PV. **Pression de Léonie : 1.**
@@ -508,23 +507,23 @@ Deux **casseurs de la Butte**, payés par le contremaître, guettent derrière l
 
 - *Ottilie* tire de nouveau : 1 au dé. **1 naturel.** L'attaque rate, et le revolver s'enraye : il lui faudra une action pour le dégager avant de tirer à nouveau. Rien n'est parti : le coup de feu de tout à l'heure reste le seul que la nef ait entendu.
 - *Les casseurs.* Celui de la canne a rejoint Léonie. Il a le désavantage (*Mot qui cingle*) et l'avantage (*En bande* : son camarade est à 1,5 m de Léonie) : ils s'annulent, un seul d20. 8 au dé, +4, total 12 contre CA 13. Raté. Celui du couteau attaque Léonie avec l'avantage : 14 et 6, il garde 14 ; 14 + 4 = 18. Touché. Dégâts : 1d4 donne 2, +2 : 4. Léonie passe de 7 à 3 PV.
-- *Ernest*, derrière son bâti, crie « La Sûreté ! J'entends les gardes ! » : il négocie, Tromperie (Présence +2, maîtrise +2). Le MJ fixe le DD : attitude neutre 15, moins 5 pour la menace crédible (le coup de feu a fait venir du monde), 10. Ernest fait 4 au dé, +4, total 8. Raté : les casseurs ont déjà vu que personne ne siffle.
+- *Ernest*, derrière son bâti, crie « La Sûreté ! J'entends les gardes ! » : il négocie, Tromperie (Présence +2, maîtrise +2). Le MJ fixe le DD : les casseurs viennent de frapper, méfiante 20, moins 5 pour la menace crédible (le coup de feu a fait venir du monde), 15. Ernest fait 4 au dé, +4, total 8. Raté : les casseurs ont déjà vu que personne ne siffle.
 - *Léonie* est à 3 PV, au contact des deux casseurs. Elle **force** son lance-vapeur (+1d6 aux dégâts, une fois par scène) et lance son Jet de vapeur sur le casseur à la canne, qui a 12 PV. Sauvegarde d'Adresse : 6 au dé, +2, total 8. Raté. 2d8 donnent 4 et 3 : 7. Le d6 de forçage donne 5 : 12 dégâts de feu. Le casseur à la canne tombe à 0 PV. **La Pression de Léonie monte de 2** (le jet, puis le forçage) : **elle est à 3.**
-- *Mamadou* voit le casseur au couteau, seul, regarder son camarade. *Pas payé pour mourir* : le MJ le fait hésiter. Mamadou ne lance pas de pouvoir : il utilise son action pour négocier, Persuasion (Présence +3, maîtrise +2). « Dix francs, et tu me dis qui t'a payé. » Le MJ fixe le DD : neutre 15, moins 5 pour l'argent, moins 5 pour la menace (le lance-vapeur de Léonie fume, Ottilie est en surplomb) : le DD tomberait à 5, mais ne descend jamais sous 10. Mamadou fait 7 au dé, +5, total 12. Réussi. Le casseur au couteau lâche sa lame, prend les dix francs et dit : « Le contremaître de l'équipe de nuit. » Il file entre les bâtis.
+- *Mamadou* voit le casseur au couteau, seul, regarder son camarade. *Pas payé pour mourir* : le MJ le fait hésiter. Mamadou ne lance pas de pouvoir : il utilise son action pour négocier, Persuasion (Présence +3, maîtrise +2). « Dix francs, et tu me dis qui t'a payé. » Le MJ fixe le DD : le casseur resté seul, camarade tombé, a une raison de partir, donc neutre 15, moins 5 pour l'argent, moins 5 pour la menace (le lance-vapeur de Léonie fume, Ottilie est en surplomb) : le DD tomberait à 5, mais le plancher est 10. Mamadou fait 7 au dé, +5, total 12. Réussi. Le casseur au couteau lâche sa lame, prend les dix francs et dit : « Le contremaître de l'équipe de nuit. » Il file entre les bâtis.
 
-**Après.** Le casseur à la canne reste à terre, inconscient. Léonie, qui a 3 PV, s'assoit sur un socle. Ernest sort de derrière son bâti. Ottilie descend par la canne-grappin, dégage son revolver et le range dans sa doublure. Le MJ ouvre alors sa main : le d4 donnait 3. Au troisième round après le coup de feu, à la fin du round 5, deux gardes entrent dans la nef par la porte de Javel, avec un contrôleur. À 3 de Pression, Léonie n'échappe pas à ses questions : la carte, puis le numéro de brevet. La licence est à jour, et il note son nom quand même.
+**Après.** Le casseur à la canne reste à terre, inconscient. Léonie, qui a 3 PV, s'assoit sur un socle. Ernest sort de derrière son bâti. Ottilie descend par la canne-grappin, dégage son revolver et le range dans sa doublure. Le MJ ouvre alors sa main : le d4 donnait 3. Trois rounds après le coup de feu (round 2), soit à la fin du round 5, deux gardes entrent dans la nef par la porte de Javel, avec un contrôleur. À 3 de Pression, Léonie n'échappe pas à ses questions : la carte, puis le numéro de brevet. La licence est à jour, et il note son nom quand même.
 
-Le MJ attribue 200 PX à partager entre quatre : 50 chacun. Chaque casseur compte, l'un battu, l'autre évité par la parole (chapitre 3). Le registre est intact. Léonie dort chez sa mère, hors de l'enceinte : sa Pression baissera de 4 au matin, et reviendra à 0.
+Le MJ attribue 100 PX à partager entre quatre : 25 chacun. Chaque casseur compte, l'un battu, l'autre évité par la parole (chapitre 3). Le registre est intact. Léonie dort chez sa mère, hors de l'enceinte : sa Pression baissera de 4 au matin, et reviendra à 0.
 
 > **Et sans tirer ?**
 >
-> Le MJ avait laissé une autre issue ouverte. Si le groupe avait remarqué l'embuscade avant qu'elle ne se referme (une Perception passive plus haute, un guet posté devant), Mamadou pouvait parler : « On sait qui vous paie. On vous donne le double. » Le DD pour deux casseurs est celui du plus méfiant : 15, moins 5 pour l'argent (dix francs chacun, vingt en tout, sortis des poches du groupe), moins 5 pour la menace d'un lance-vapeur braqué. Le résultat tombe à 5 et remonte à 10 : le minimum. Avec +5, Mamadou réussit sur un 5 ou plus au dé, quatre fois sur cinq. Les casseurs auraient repris leur route, le registre serait arrivé au bout de la nef, et le groupe aurait payé vingt francs, soit quatre jours de paie d'un mécanicien. Les PX auraient été les mêmes : un adversaire évité par la ruse compte (chapitre 3).
+> Le MJ avait laissé une autre issue ouverte. Si le groupe avait remarqué l'embuscade avant qu'elle ne se referme (une Perception passive plus haute, un guet posté devant), Mamadou pouvait parler : « On sait qui vous paie. On vous donne le double. » Le DD pour deux casseurs est celui du plus méfiant : 20, moins 5 pour l'argent (dix francs chacun, vingt en tout, sortis des poches du groupe), moins 5 pour la menace d'un lance-vapeur braqué, 10 : le plancher, atteint juste. Avec +5, Mamadou réussit sur un 5 ou plus au dé, quatre fois sur cinq. Les casseurs auraient repris leur route, le registre serait arrivé au bout de la nef, et le groupe aurait payé vingt francs, soit quatre jours de paie d'un mécanicien. Les PX auraient été les mêmes : un adversaire évité par la ruse compte (chapitre 3).
 
 > **Résumé du chapitre.**
 >
-> - Round de 6 secondes, cases de 1,5 m, vitesse 9 m. Une action, un déplacement, une action bonus, une réaction.
+> - Round de 6 secondes, cases de 1,5 m, vitesse 9 m. Par tour : un déplacement, une action, une action bonus ; par round : une réaction.
 > - Surprise : Discrétion contre Perception passive, −5 dans la lumière faible, créature par créature.
-> - Une arme à feu a un nombre de coups ; la recharger prend une action. Un 1 naturel l'enraye. Dans l'enceinte, un coup de feu fait venir des gardes en 1d4 rounds.
+> - Une arme à feu a un nombre de coups ; la recharger prend une action. Un 1 naturel l'enraye. Dans l'enceinte, le premier coup de la scène fait venir des gardes en 1d4 rounds.
 > - Abri : +2 (demi), +5 (trois quarts), total (aucune attaque directe).
 > - Appareil à plein régime : Pression +1 ; forcer, une fois par scène, avantage ou +1d6. À 3, les contrôleurs ; à 5, l'appareil s'enraye sur un 1 ; à 7, 1d6 en forçant ; à 10, il explose.
 > - Chutes : 1d6 par 3 m. Cuirasse : coule dans la Seine. Pont roulant qui démarre : sauvegarde d'Adresse DD 12.

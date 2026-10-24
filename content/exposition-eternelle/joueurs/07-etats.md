@@ -1,9 +1,6 @@
 # Chapitre 7 — Les états
 
 À la sortie de la relève, un chauffeur remonte de la cave aux chaudières en toussant noir. Il dit que ça va passer. L'infirmière du poste lui soulève la paupière, regarde sa langue, lui demande depuis quand la tête lui tourne, et ne le laisse pas reprendre sa place. Un câble qui crache, une fumée d'huile, une courroie qui se resserre sur un poignet, une nuit blanche de plus : les **états** décrivent ce qui arrive à une créature quand quelque chose la gêne, l'immobilise ou la met hors de combat.
-
-Ce chapitre détaille les états un par un, puis le plus fréquent hors des combats, l'épuisement, et tout ce qui le cause à l'Éternelle : la fumée, la chaufferie, le froid, la poitrine, les brûlures. Il rappelle aussi la peur, les intoxications, et pourquoi la Pression n'est pas un état. Il se termine par un aide-mémoire d'une page.
-
 ## Comment fonctionnent les états
 
 - Un état **dure** jusqu'à ce que quelque chose y mette fin : la fin d'une durée, une sauvegarde réussie, un soin, une action, la fin de la scène. L'effet qui l'impose dit comment.
@@ -23,7 +20,7 @@ La créature est allongée par terre, volontairement ou non.
 - Elle a le **désavantage** à ses jets d'attaque.
 - Une attaque contre elle a l'**avantage** si l'attaquant est à **1,5 m** ou moins, et le **désavantage** s'il est plus loin.
 
-On tombe à terre par une bousculade, par un pont roulant qui démarre, sous la morsure d'un chien du Commissariat, sous un *Marteau-pilon* ou un *Coup de talon*. Se jeter à terre derrière un socle est une bonne idée contre un fusil à vingt mètres, et une mauvaise contre un casseur à un mètre.
+On tombe à terre par une bousculade, par un pont roulant qui démarre, sous la morsure d'un chien du Commissariat, sous un *Marteau-pilon* ou un *Coup de talon*. Se jeter à terre derrière un socle est une bonne idée contre un fusil à vingt mètres, et une mauvaise contre un casseur à 1,5 m.
 
 ### Assourdi
 
@@ -46,6 +43,16 @@ L'éclair d'une lampe à arc de poche à plein régime, une *Plaque au magnésiu
 
 L'**éblouissement** d'une lampe à arc qu'on regarde en face n'aveugle pas : il impose le désavantage aux tests de Perception qui reposent sur la vue. Les lunettes à verres jaunes d'un aéronaute ou les lunettes de forge d'un mécanicien l'atténuent.
 
+### Captivé
+
+La créature n'a plus d'yeux ni d'oreilles que pour un chanteur, un orateur, un spectacle.
+
+- Elle ne fait **aucune réaction**.
+- Elle a le **désavantage** à ses tests de Perception.
+- Une attaque contre elle met fin à son état.
+
+C'est ce que laisse le *Tour de chant* du Chansonnier (chapitre 5) : une salle entière, une minute, et personne ne lève la main.
+
 ### Charmé
 
 La créature est sous la coupe d'une autre : un boniment qui sonne juste, une promesse, une confiance.
@@ -53,9 +60,7 @@ La créature est sous la coupe d'une autre : un boniment qui sonne juste, une pr
 - Elle ne peut pas **attaquer** celui qui l'a charmée, ni le viser avec un pouvoir qui lui ferait du mal.
 - Celui qui l'a charmée a l'**avantage** à ses tests de Présence pour interagir avec elle.
 
-Aucun charme surnaturel n'existe à l'Éternelle : l'état vient d'une personne qui a décidé de croire. Une créature charmée garde son jugement. Elle trouve simplement l'autre sympathique, digne de confiance, difficile à contredire. C'est l'état du client d'un Camelot qui a fini par acheter, d'un public qui suit un chanteur, d'un contrôleur qui s'est laissé raconter une histoire. Il est rare et ne dure pas. *Garder la main*, de l'Interprète (niveau 7), donne l'avantage à un allié qu'on tente de charmer, d'effrayer ou de tromper par la parole ; le Garde qui tient sa place a l'avantage contre l'état (*Consigne tenue*, niveau 15).
-
-*Tour de chant* (Chansonnier, niveau 17) laisse une salle **captivée** : les créatures touchées ne font aucune réaction et ont le désavantage à leurs tests de Perception. Une attaque contre l'une d'elles met fin à son état.
+Le charme n'a rien de surnaturel : l'état vient d'une personne qui a décidé de croire. Une créature charmée garde son jugement. Elle trouve simplement l'autre sympathique, digne de confiance, difficile à contredire. C'est l'état du client d'un Camelot qui a fini par acheter, d'un contrôleur qui s'est laissé raconter une histoire. Il est rare et ne dure pas. *Garder la main* et *Consigne tenue* protègent contre lui (chapitre 5).
 
 ### Effrayé
 
@@ -74,13 +79,13 @@ Quelque chose ou quelqu'un tient la créature.
 - L'état prend fin si l'empoigneur est neutralisé, ou si un effet éloigne la créature de lui.
 - La créature peut se libérer en utilisant son action pour un test de Force (Athlétisme) ou d'Adresse (Acrobaties) contre celui de l'empoigneur (chapitre 4). Un étau d'automate ou une poigne de machine fixe un DD d'évasion à la place du test opposé.
 
-Le Garde empoigne un homme qu'il arrête, une canne-grappin tire une créature à soi, un guichet à cames se referme sur un poignet. Un *Jeter du lest* (Aéronaute, niveau 2) délivre l'Aéronaute d'une prise ou d'une entrave de son choix.
+Le Garde empoigne un homme qu'il arrête, une canne-grappin tire une créature à soi, un guichet à cames se referme sur un poignet. Le *Jeter du lest* de l'Aéronaute (chapitre 5) l'en délivre.
 
 ### Empoisonné
 
 La créature a le **désavantage** à ses jets d'attaque et à ses tests de caractéristique.
 
-L'eau sale en est la cause la plus courante (voir plus bas). Une fumée de chaudière avalée, un flacon d'éther ou de chloroforme mal dosé, une viande avariée de gargote et une fièvre mal soignée font de même. Le poison se soigne par une sauvegarde d'Endurance, par un repos long, par trois jours de repos (chapitre 3), ou par les soins d'un médecin : *Antidote* (Médecin, niveau 7), *Tisane* (Herboriste, niveau 7), *Opération* (Médecin d'hôpital, niveau 7), *Sérum* (Médecin, niveau 15).
+L'eau sale en est la cause la plus courante (voir plus bas). Une fumée de chaudière avalée, un flacon d'éther ou de chloroforme mal dosé, une viande avariée de gargote et une fièvre mal soignée font de même. Le poison se soigne par une sauvegarde d'Endurance, par un repos long, par trois jours de repos (chapitre 3), ou par les soins d'un médecin : *Antidote*, *Tisane*, *Opération*, *Sérum* (chapitre 5).
 
 ### Entravé
 
@@ -102,7 +107,7 @@ Des menottes, une corde, un filet, une courroie qui a happé une manche, une toi
 
 ### Étourdi
 
-La créature est neutralisée, ne peut pas bouger, parle de façon hésitante, rate ses sauvegardes de Force et d'Adresse, et les attaques contre elle ont l'avantage. Un coup de crosse sur le crâne, une décharge de matraque en pleine poitrine, un choc contre un bâti : l'étourdissement dure habituellement jusqu'à la fin du prochain tour de la créature. La *Rafle* du Garde (niveau 17) étourdit jusqu'à quatre créatures à 3 m.
+La créature est neutralisée, ne peut pas bouger, parle de façon hésitante, rate ses sauvegardes de Force et d'Adresse, et les attaques contre elle ont l'avantage. Un coup de crosse sur le crâne, une décharge de matraque en pleine poitrine, un choc contre un bâti : l'étourdissement dure habituellement jusqu'à la fin du prochain tour de la créature. La *Rafle* du Garde (chapitre 5) en est une source.
 
 ### Inconscient
 
@@ -112,11 +117,11 @@ La créature ne sait pas ce qui se passe.
 - Elle rate ses sauvegardes de Force et d'Adresse.
 - Les attaques contre elle ont l'**avantage**, et toute attaque au contact qui touche est un **coup critique**.
 
-On tombe inconscient à 0 PV (chapitre 4) ou assommé. On y tombe aussi endormi par une *Compresse de chloroforme* (Médecin, niveau 2), qui endort pour une minute une créature consentante, entravée ou surprise ; un seul dégât la réveille. Un dormeur ne voit rien et ne réagit pas ; un bruit, un coup ou une secousse le réveille. Un garde de nuit qui s'endort sur son poste se réveille sur un seau d'eau.
+On tombe inconscient à 0 PV (chapitre 4) ou assommé. On y tombe aussi endormi par une *Compresse de chloroforme* (chapitre 5) ; un seul dégât la réveille. Un dormeur ne voit rien et ne réagit pas ; un bruit, un coup ou une secousse le réveille. Un garde de nuit qui s'endort sur son poste se réveille sur un seau d'eau.
 
 ### Invisible
 
-Personne n'est invisible à l'Éternelle, mais on se cache. Un tireur sans lumière, un homme couché derrière une caisse, un manteau sombre sous une lampe qui baisse, une foule de relève où l'on se fond : l'attaquant qui ne voit pas sa cible a le désavantage, et celui qu'on ne voit pas a l'avantage quand il attaque (chapitre 4). Un nuage de fumée (*Chute du rideau*, Chansonnier, niveau 11 ; *Fumée épaisse*, Artificier, niveau 7) cache à son tour tous ceux qui s'y tiennent.
+Personne n'est invisible à l'Éternelle, mais on se cache. Un tireur sans lumière, un homme couché derrière une caisse, un manteau sombre sous une lampe qui baisse, une foule de relève où l'on se fond : l'attaquant qui ne voit pas sa cible a le désavantage, et celui qu'on ne voit pas a l'avantage quand il attaque (chapitre 4). Un nuage de fumée (*Chute du rideau*, *Fumée épaisse* : chapitre 5) cache à son tour tous ceux qui s'y tiennent.
 
 ### Neutralisé
 
@@ -149,7 +154,7 @@ Le désavantage aux tests de caractéristique du niveau 1 touche aussi tes tests
 
 | Cause | Règle |
 |---|---|
-| **La fumée épaisse** | Chaque minute passée dans la fumée d'une chaudière, d'une huile qui brûle ou d'un incendie, sans linge sur le visage : sauvegarde d'Endurance DD 12, ou un niveau. Un linge mouillé donne l'avantage. |
+| **La fumée épaisse** | À l'entrée dans la fumée d'une chaudière, d'une huile qui brûle ou d'un incendie, puis toutes les cinq minutes, sans linge sur le visage : sauvegarde d'Endurance DD 12, ou un niveau. Un linge mouillé donne l'avantage. |
 | **La chaufferie** | Une heure d'effort près d'une chaudière sans ventilation : sauvegarde d'Endurance DD 10, ou un niveau, un niveau par jour au plus. De l'eau à boire et un courant d'air annulent la sauvegarde. |
 | **Une relève de trop** | Après vingt-quatre heures de travail enchaînées, sauvegarde d'Endurance DD 10 au matin, ou un niveau. Une seule relève de douze heures ne coûte rien. |
 | **Le froid** | Une nuit dehors sans abri ni couverture épaisse : sauvegarde d'Endurance DD 10 à l'aube, DD 13 par gel dur. Un échec donne un niveau, et le repos long de la nuit ne compte pas. Une pelisse, une capote ou un poêle donnent l'avantage. |
@@ -160,7 +165,7 @@ Le désavantage aux tests de caractéristique du niveau 1 touche aussi tes tests
 
 - Un **repos long** retire **un niveau**, si le personnage a mangé et bu un repas complet (chapitre 3).
 - Une fièvre bloque cette récupération tant qu'elle n'est pas soignée (voir plus bas).
-- Deux pouvoirs de soin retirent un niveau : l'*Onguent* de l'Herboriste (niveau 11) et la *Visite générale* du Médecin (niveau 17).
+- Deux pouvoirs de soin retirent un niveau : l'*Onguent* de l'Herboriste et la *Visite générale* du Médecin (chapitre 5).
 - Un personnage au niveau 6 est mort, et rien de ce chapitre ne l'en tire.
 
 > **Un exemple de glissade.**
@@ -175,11 +180,11 @@ Le désavantage aux tests de caractéristique du niveau 1 touche aussi tes tests
 - **Soigner.** Un test d'Instinct (Médecine) DD 13 et un repos long dans un lit sec et chaud mettent fin à la toux. Sans soins, un repos long au chaud permet une nouvelle sauvegarde d'Endurance DD 13 par semaine de jeu ; deux réussites de suite suffisent.
 - **Reconnaître la maladie.** Un test d'Instinct (Médecine) DD 15, ou le *Diagnostic* du Médecin (niveau 1), distingue la poitrine d'une brûlure, d'une fièvre d'eau sale ou d'une intoxication de fumée.
 - **La fièvre d'une plaie.** Une plaie ouverte qui t'a laissé sous la moitié de tes PV et qu'on n'a pas nettoyée dans la journée (eau bouillie, linge propre, dix minutes) donne une sauvegarde d'Endurance DD 10 à l'aube. Un échec donne la fièvre : empoisonné jusqu'au prochain repos long ou jusqu'à ce qu'un médecin le soigne. Les alliés que le Médecin a soignés ont l'avantage à cette sauvegarde (*Eau bouillie, linges propres*, niveau 1).
-- **Tisane et Sérum.** La *Tisane* de l'Herboriste (niveau 7) met fin à un empoisonnement ou à une fièvre et donne l'avantage à la sauvegarde suivante ; le *Sérum* du Médecin (niveau 15) débarrasse d'une maladie pour vingt-quatre heures.
+- **Tisane et Sérum.** La *Tisane* de l'Herboriste et le *Sérum* du Médecin (chapitre 5) y mettent fin.
 
 ## L'eau sale
 
-L'eau d'un puits de cour, d'un baril ou de la Seine est bue par ceux qui n'ont pas le choix. Elle demande une sauvegarde d'Endurance DD 12, sous peine de fièvre : le personnage est **empoisonné** jusqu'au prochain repos long. L'eau bouillie dix minutes ne demande plus de sauvegarde.
+L'eau d'un puits de cour, d'un baril ou de la Seine est bue par ceux qui n'ont pas le choix. Elle demande une sauvegarde d'Endurance DD 12 par jour, sous peine de fièvre : le personnage est **empoisonné** jusqu'au prochain repos long. L'eau bouillie dix minutes ne demande plus de sauvegarde.
 
 - **Un baril resté ouvert, une cuve de teinturerie, un puits en aval d'un atelier** donnent le même DD 12.
 - **Le chloroforme et l'éther** ne sont pas des boissons. Un flacon respiré par accident, sans dosage de médecin, demande une sauvegarde d'Endurance DD 12 : un échec endort pendant une minute ou jusqu'au premier dégât.
@@ -187,7 +192,7 @@ L'eau d'un puits de cour, d'un baril ou de la Seine est bue par ceux qui n'ont p
 
 ## La fumée, le souffle, le feu
 
-- **Retenir son souffle.** Un personnage tient 1 + son modificateur d'Endurance minutes (au moins 30 secondes). Passé ce temps, il tombe à 0 PV après un nombre de rounds égal à son modificateur d'Endurance (au moins 1), puis il commence à mourir. Léonie, Endurance +2, tient 3 minutes ; Ernest, Endurance 0, 1 minute.
+- **Retenir son souffle.** Un personnage tient 1 + son modificateur d'Endurance minutes (au moins 30 secondes). Passé ce temps, il tombe à 0 PV après un nombre de rounds égal à son modificateur d'Endurance (au moins 1), puis il commence à mourir. Léonie, Endurance +2, tient 3 minutes ; Ernest, Endurance 10 (modificateur 0), 1 minute.
 - **La fumée.** Un incendie dans un atelier de bobinage, dans un entrepôt d'huile ou dans une cave donne une zone faiblement éclairée pour la vue (chapitre 4). La fumée épaisse épuise (voir plus haut).
 - **Le courant.** Un courant d'atelier ou un câble du Palais de l'Électricité inflige des dégâts de foudre et demande la sauvegarde d'Endurance du chapitre 3. La foudre n'est pas un état : une créature ne reste paralysée que si le MJ le dit.
 - **Le feu** n'est pas un état non plus : ce sont des dégâts (chapitre 4).
@@ -198,12 +203,12 @@ La peur arrive par le noir, par un cri, par un sifflet dans le dos, par un autom
 
 | La peur | DD |
 |---|---|
-| Un cri dans la nuit, un coup de feu tout près, une lampe à arc qui éclate | 10 |
+| Un cri dans la nuit, un coup de feu tout près (une seule fois par scène et par créature), une lampe à arc qui éclate | 10 |
 | Une courroie qui happe quelqu'un à côté de toi, une conduite maîtresse qui lâche, un sifflet de garde dans le dos | 12 |
 | Un automate qui ne s'arrête plus, un cordon de gardes qui avance sur toi, une foule qui charge | 13 |
 | Un dirigeable en perdition au-dessus de ta tête, un câble qui crache dans la nuit, la troupe en ligne devant une grille | 15 |
 
-Un échec donne l'état **effrayé** pendant une minute. Une sauvegarde réussie à la fin de chaque tour y met fin. Certains pouvoirs protègent : *Mot d'ordre* du Réfractaire (niveau 1) met fin à l'état chez ses alliés ; *Ligne tenue* du Brigadier d'équipe (niveau 7) fait relancer la sauvegarde avec l'avantage ; l'*Onguent* de l'Herboriste (niveau 11) donne l'avantage pendant une heure ; la *Salle commune* du Médecin (niveau 11) y met fin pendant un repos court.
+Un échec donne l'état **effrayé** pendant une minute. Une sauvegarde réussie à la fin de chaque tour y met fin. Quatre pouvoirs protègent : *Mot d'ordre*, *Ligne tenue*, *Onguent* et *Salle commune* (chapitre 5).
 
 ## Les états en un coup d'œil
 
@@ -211,6 +216,7 @@ Un échec donne l'état **effrayé** pendant une minute. Une sauvegarde réussie
 |---|---|
 | À terre | Rampe ; désavantage en attaque ; avantage contre lui à 1,5 m |
 | Assourdi | N'entend rien ; rate les tests d'ouïe |
+| Captivé | Aucune réaction ; désavantage en Perception ; une attaque contre lui y met fin |
 | Aveuglé | Ne voit rien ; désavantage en attaque ; avantage contre lui |
 | Charmé | N'attaque pas l'autre ; l'autre a l'avantage en Présence |
 | Effrayé | Désavantage aux tests et aux attaques ; ne s'approche pas |
@@ -225,7 +231,7 @@ Un échec donne l'état **effrayé** pendant une minute. Une sauvegarde réussie
 
 ## La Pression n'est pas un état
 
-La Pression se note à côté des états, sur ta fiche, sous tes points de vie. Elle ne donne ni désavantage ni malus aux jets, et aucun effet de ce chapitre ne la baisse. Ni *Antidote*, ni *Salle commune*, ni *Visite générale* n'y changent rien. Seules la purge, la *Soupape* du Mécanicien (niveau 1) et le repos la font redescendre (chapitre 3). Les seuils de la Pression (3, 5, 7 et 10) imposent leurs propres effets, qui n'ont pas de nom d'état : les contrôleurs te regardent, ton appareil s'enraye, il te brûle les mains, il éclate.
+La Pression se note à côté des états, sur ta fiche, sous tes points de vie. Elle ne donne ni désavantage ni malus aux jets, et aucun effet de ce chapitre ne la baisse. Ni *Antidote*, ni *Salle commune*, ni *Visite générale* n'y changent rien. Seules la purge, la *Soupape* du Mécanicien (niveau 1), *Réparer en marche* (niveau 15) et le repos la font redescendre (chapitre 3). Les seuils de la Pression (3, 5, 7 et 10) imposent leurs propres effets, qui n'ont pas de nom d'état : les contrôleurs te regardent, ton appareil s'enraye, il te brûle les mains, il éclate.
 
 ## Résumé des règles courantes
 
@@ -249,7 +255,7 @@ Le DD d'un pouvoir ajoute 8, ta maîtrise et la caractéristique que sa fiche no
 
 ### La Pression
 
-De 0 à 10, elle part à 0. Elle monte de 1 à chaque plein régime ou forçage. Elle baisse de 2 à la purge ou après une nuit dans le Champ, de 4 hors de l'enceinte, de 1 pour un engagé sans permis du jour. À 3, les contrôleurs te demandent tes papiers ; à 5, ton appareil s'enraye sur un 1 naturel ; à 7, il te brûle quand tu le forces ; à 10, il éclate.
+De 0 à 10, elle part à 0. Elle monte de 1 à chaque plein régime ou forçage. Elle baisse de 2 à la purge ou après une nuit dans le Champ, de 4 hors de l'enceinte, de 1 pour un engagé sans permis du jour (avec un permis du jour, comme tout le monde). À 3, les contrôleurs te demandent tes papiers ; à 5, ton appareil s'enraye sur un 1 naturel ; à 7, il te brûle quand tu le forces ; à 10, il éclate.
 
 ### Les armes à feu
 

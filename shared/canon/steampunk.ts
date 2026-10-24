@@ -34,7 +34,7 @@ export const EXPOSITION: Canon = {
     { an: 1894, quoi: "Lois d'exception contre les anarchistes : le Commissariat obtient le droit d'armer ses gardes." },
     { an: 1895, quoi: "Les Villages deviennent permanents. Les automates remplacent les guichetiers." },
     { an: 1897, quoi: "Un incendie dans un baraquement sert de prétexte au Commissariat : fouille générale des Permanents et nouveau règlement des Villages." },
-    { an: 1898, quoi: "La Chambre syndicale ouvre sa caisse de secours. Un hiver tue neuf personnes au Village annamite. Le Palais de l'Électricité est inauguré." },
+    { an: 1898, quoi: "La Chambre syndicale ouvre sa caisse de secours. Un hiver tue neuf personnes au Village du Vietnam. Le Palais de l'Électricité est inauguré." },
     { an: 1899, quoi: "Année de jeu : en septembre, la grâce de l'Affaire ; en octobre, la lumière baisse chaque semaine à Grenelle, et l'on a cessé de compter. Le Commissariat annonce la Nuit du Siècle pour le 31 décembre 1900." },
   ],
 
@@ -82,7 +82,7 @@ export const EXPOSITION: Canon = {
       gens: ["engagés sous contrat", "interprètes", "impresarios", "visiteurs", "enfants nés dans l'enceinte"],
       peur: "l'hiver qui tue de la poitrine, la visite des médecins du Muséum, qu'on les renvoie « au pays » sans eux, ou qu'on ne les renvoie jamais",
       lieuDeRencontre: "l'esplanade des Invalides, devant les grilles des Villages, à l'heure où les gardes les ferment",
-      lieux: ["l'esplanade des Invalides", "le village sénégalais", "le village annamite", "le pavillon kanak", "les échoppes kabyles", "les grilles des Villages"],
+      lieux: ["l'esplanade des Invalides", "le Village du Sénégal", "le Village du Vietnam", "le village sénégalais", "le village annamite", "le pavillon kanak", "les échoppes kabyles", "les grilles des Villages"],
     },
     {
       nom: "Grenelle et Javel",
@@ -109,14 +109,14 @@ export const EXPOSITION: Canon = {
       gens: ["peintres sans le sou", "chansonniers", "couturières", "camelots", "cocottes", "anarchistes"],
       peur: "les rafles de la Sûreté, la police qui ferme les cabarets",
       lieuDeRencontre: "une table de zinc dans un cabaret de la rue des Saules, avec le Champ qui clignote au loin",
-      lieux: ["Montmartre", "la rue des Saules", "les cabarets de la Butte", "les moulins de la Butte"],
+      lieux: ["Montmartre", "la rue Lepic", "les carrières de gypse", "la rue des Saules", "les cabarets de la Butte", "les moulins de la Butte"],
     },
   ],
   autresLieux: [
     "Partout", "l'Éternelle", "le Champ", "le Champ-de-Mars", "les Invalides", "Paris", "la Seine", "la rive droite", "la rive gauche", "le Muséum", "la Préfecture", "la Sûreté", "la Chambre",
     "Versailles", "Strasbourg", "l'Alsace", "l'Empire allemand", "l'Allemagne", "l'hôpital Beaujon", "Saint-Pétersbourg", "New York", "la Manche", "Rennes", "Londres", "l'Angleterre", "la Russie", "l'Italie", "l'Amérique", "la France", "l'Europe", "le Sénégal", "le Vietnam",
     "l'Annam", "le Tonkin", "la Nouvelle-Calédonie", "la Kabylie", "l'Algérie", "l'allée des Palmiers", "les quartiers voisins", "les Salons", "la rue de Grenelle", "la rue Montmartre",
-    "le dépôt de l'enceinte", "la loge", "la légation", "la Compagnie", "l'Affaire", "le procès de Rennes", "l'omnibus", "le tramway", "le fiacre",
+    "le dépôt de l'enceinte", "la loge", "l'ambassade", "la légation", "la Compagnie", "l'Affaire", "le procès de Rennes", "l'omnibus", "le tramway", "le fiacre",
   ],
 
   factions: [
@@ -134,7 +134,7 @@ export const EXPOSITION: Canon = {
     { nom: "Félicien Dorlhac", alias: ["Dorlhac", "monsieur Dorlhac", "le doyen des Signataires"], titre: "doyen des Signataires", ou: "le boulevard de Grenelle", faction: "signataires", age: 55, etat: "vivant" },
     { nom: "Victorine Cordebard", alias: ["Cordebard", "madame Cordebard", "la secrétaire de la Chambre"], titre: "secrétaire de la Chambre syndicale", ou: "Grenelle et Javel", faction: "chambre", age: 44, etat: "vivant" },
     { nom: "Samba Ndoye", alias: ["Ndoye", "le sergent Ndoye", "le doyen du Village sénégalais"], titre: "doyen du Village sénégalais", ou: "Les Villages", faction: "villages", age: 50, etat: "vivant" },
-    { nom: "Nguyễn Thị Hạnh", alias: ["Hạnh", "madame Hạnh", "madame Nguyễn Thị Hạnh", "Nguyễn Thị"], titre: "comptable du Conseil des Villages", ou: "Les Villages", faction: "villages", age: 38, etat: "vivant" },
+    { nom: "Nguyễn Thị Hạnh", alias: ["Hạnh", "madame Hạnh", "madame Nguyễn Thị Hạnh", "Nguyễn Thị", "madame Nguyen"], titre: "comptable du Conseil des Villages", ou: "Les Villages", faction: "villages", age: 38, etat: "vivant" },
     { nom: "Anatole Gerfaux", alias: ["Gerfaux", "monsieur Gerfaux", "la voix des Réfractaires"], titre: "voix des Réfractaires", ou: "La Butte", faction: "refractaires", age: 33, etat: "vivant" },
     { nom: "Blanche Mauvezin", alias: ["Mauvezin", "mademoiselle Mauvezin", "la reporter de La Sirène de Javel"], titre: "reporter à La Sirène de Javel", ou: "Grenelle et Javel", faction: "chambre", age: 29, etat: "vivant" },
     // À la première séance (bible, section 11)
@@ -146,7 +146,7 @@ export const EXPOSITION: Canon = {
   peuples: [
     "Parisiens de l'Éternelle", "Parisien", "Parisiens", "Parisienne", "Parisiennes", "Enfant de la foire", "Gamin des quais",
     "Gens des ateliers", "Mécanicien de la Galerie", "Ouvrière des ateliers",
-    "Gens des Villages", "Sénégalais du Village", "Annamite du Village", "Sénégalais", "Sénégalaise", "Annamite", "Annamites", "Kanak", "Kanaks", "Kabyle", "Kabyles",
+    "Gens des Villages", "Village du Sénégal", "Village du Vietnam", "Sénégalais du Village", "Annamite du Village", "Sénégalais", "Sénégalaise", "Annamite", "Annamites", "Kanak", "Kanaks", "Kabyle", "Kabyles",
     "Wolof", "Sérère", "Bambara", "Vietnamien", "Vietnamienne",
     "Employés et Signataires", "Fils de Signataire", "Fille de Signataire", "Employé du Commissariat",
     "Visiteurs restés", "Visiteur", "Visiteurs", "Provincial", "Étranger", "Anglais", "Russe", "Américain", "Italien", "Français", "Françaises",
@@ -158,7 +158,7 @@ export const EXPOSITION: Canon = {
     // Sous-classes
     "Ajusteur de la Galerie", "Bobineur", "Pilote de ligne", "Ballonnier", "Brigadier d'équipe", "Matraque de poste", "Reporter d'enquête", "Dessinateur de presse",
     "Médecin d'hôpital", "Herboriste", "Monte-en-l'air", "Camelot", "Imprimeur-colleur", "Artificier", "Calculateur", "Inventeur",
-    "Interprète des Villages", "Interprète de légation", "Maître d'armes", "Boxeur de savate",
+    "Interprète des Villages", "Interprète d'ambassade", "Maître d'armes", "Boxeur de savate",
   ],
 
   vocabulaire: [
@@ -173,7 +173,7 @@ export const EXPOSITION: Canon = {
     "accumulateur", "manomètre", "soupape", "bâti", "pont roulant", "ponts roulants", "bobinage", "bobineuse", "bobineuses", "orgue à vapeur", "clef anglaise",
     "matraque à tension", "matraque", "revolver d'ordonnance", "Lebel", "fusil Lebel", "fusil de chasse", "canne-épée", "canne plombée", "sabre-baïonnette", "épée de salle d'armes", "dynamite", "mèche",
     "gant à ressort", "canne-grappin", "cuirasse à vapeur", "lance-vapeur", "bottes à ressorts", "lampe à arc de poche", "képi", "gris-bleu", "médaille de laiton", "roue brisée", "roue dentée", "plaque de cuivre",
-    "La Sirène de Javel", "Sirène", "impresario", "impresarios", "engagé", "engagés", "livret d'engagé", "laissez-passer", "permis de sortie", "carte de Permanent", "carte syndicale", "carte de presse",
+    "La Sirène de Javel", "Sirène", "impresario", "impresarios", "engagé", "engagés", "livret d'engagé", "laissez-passer", "permis de sortie", "carte de Permanent", "carte syndicale", "carte de son journal",
     "gargote", "gargotes", "garni", "omnibus", "tramway", "fiacre", "fiacres", "wolof", "sérère", "bambara", "annamite", "kanak", "kabyle", "tirailleur", "tirailleurs", "pagode", "case", "cases",
     "chansonnier", "chansonniers", "cabaret", "cabarets", "camelot", "camelots", "cocotte", "cocottes", "anarchiste", "anarchistes", "terrassier", "terrassiers", "salle d'armes", "savate", "boxe française",
     "Léon-Ambroise", "Faverolle", "Aymeric", "Delestrade", "Quillebeuf", "Hortense", "Dorlhac", "Félicien", "Cordebard", "Victorine", "Samba", "Ndoye", "Nguyễn", "Thị", "Hạnh", "Gerfaux", "Anatole",
@@ -230,7 +230,7 @@ export const EXPOSITION: Canon = {
       { titre: "La corde des Villages", texte: "Une femme est assise sur le seuil de sa case, derrière la corde, un panier de fibres sur les genoux. Un enfant de Paris lui lance une pièce. Elle ne lève pas les yeux. Elle compte.", effet: "Une scène, pas un décor : qui regarde ? Un personnage peut s'arrêter et lui parler (Persuasion DD 12 pour une information). Les gardes de la corde lèvent la tête à la fin du tour." },
       { titre: "La craie du Trocadéro", texte: "Une roue brisée à la craie sur le mur, encore fraîche. Deux gardes frottent avec un chiffon qui n'enlève rien.", effet: "Investigation DD 13 : la main qui a tracé ça est gauchère, haute et pressée. La Sûreté arrive en dix minutes." },
       { titre: "Le dirigeable de Versailles", texte: "Un dirigeable gris est amarré à la plate-forme, la rosée tombe de l'enveloppe sur les pardessus, un contrôleur compte les passagers sur une ardoise.", effet: "Monter coûte 20 francs, ou Persuasion DD 14 auprès du contrôleur. Par grand vent, Acrobaties ou Athlétisme DD 12 sur la passerelle, sinon 1d6 dégâts de chute." },
-      { titre: "La chaudière qui lâche", texte: "Un sifflement aigu, une courroie qui claque. Les ouvriers de la Galerie reculent d'un pas, tous ensemble.", effet: "Chaque personnage à 6 m : sauvegarde d'Adresse DD 13, ou 2d6 dégâts de feu (moitié si elle réussit)." },
+      { titre: "La chaudière qui lâche", texte: "Un sifflement aigu, une courroie qui claque. Les ouvriers de la Galerie reculent d'un pas, tous ensemble.", effet: "Chaque personnage à 6 m : sauvegarde d'Adresse DD 12, ou 2d6 dégâts de feu (moitié si elle réussit)." },
       { titre: "Le concert d'orgue à vapeur", texte: "Le soir à la Galerie, un orgue à vapeur couvre le bruit des machines. Les mécaniciens parlent à voix basse, la bouche près de l'oreille.", effet: "Une soirée pour parler : Persuasion DD 12 pour une information. Le bruit couvre ce qui se dit à deux pas : avantage aux tests de Discrétion pour une conversation." },
       { titre: "La carte postale de la Butte", texte: "Chez un cabaretier de la rue des Saules, une carte postale de la Tour avec une moustache dessinée. Au dos, une adresse à l'encre violette.", effet: "Investigation DD 13 : l'adresse mène à un chansonnier qui cache quelqu'un. Il ne dira rien sans un verre et sans un nom." },
       { titre: "Les grilles de six heures", texte: "Les gardes ferment les grilles des Villages. La serrure est neuve, et un homme pleure dehors avec un enfant dans les bras.", effet: "Qui est dehors à six heures passe la nuit dehors. Persuasion DD 15 ou Tromperie DD 14 auprès du garde de la grille ; le Conseil des Villages a ses propres moyens, mais il veut quelque chose en retour." },
@@ -244,7 +244,7 @@ export const EXPOSITION: Canon = {
       { titre: "Un numéro de La Sirène de Javel", texte: "Quatre pages mal pliées, une encre qui laisse des traces. En une, un mécanicien mort, et la date du dernier avis de grève.", effet: "5 centimes. Avantage à un test de Persuasion avec un mécanicien ou une ouvrière à qui on le montre ; un garde qui le trouve sur toi le saisit." },
       { titre: "Une médaille de laiton retournée", texte: "Un rond de laiton numéroté, épinglé à l'envers, numéro contre la poitrine.", effet: "Dans les Villages, elle te désigne comme un ami du Conseil : un lit, un repas, une information contre un service. Ailleurs, un garde la remarque." },
       { titre: "Une matraque à tension", texte: "Une tige de cuivre gainée de cuir, lourde comme un manche de marteau, qui tiédit dans la main.", effet: "1d6 contondants ; un coup par tour porte une décharge (+1d6 foudre, sauvegarde d'Endurance DD 12 ou désavantage aux attaques jusqu'à la fin du prochain tour) ; quatre décharges. Elle vaut 80 francs au marché noir, et c'est déjà un délit." },
-      { titre: "Un gant à ressort", texte: "Un gant de cuir clouté, un ressort sous la paume, et un numéro de brevet gravé sur le poignet.", effet: "Coups de poing de 1d6 ; à plein régime, 2d6 de force et la cible est repoussée de 3 m (Force DD 12), la Pression monte de 1. Il vaut 60 francs, plus la licence." },
+      { titre: "Un gant à ressort", texte: "Un gant de cuir clouté, un ressort sous la paume, et un numéro de brevet gravé sur le poignet.", effet: "Coups de poing de 1d6 ; à plein régime, 2d6 contondants et la cible est repoussée de 3 m (Force DD 12), la Pression monte de 1. Il vaut 60 francs, plus la licence." },
       { titre: "Un calepin à ressort", texte: "Un petit carnet de cuir au ressort fatigué, couvert de noms, de dates et de chiffres, à moitié en abréviations.", effet: "Avantage à un test d'Investigation sur ce qui y est noté. Qui le perd perd aussi ce qu'il a retenu : le MJ dit ce que tu ne retrouves pas." },
     ],
   },

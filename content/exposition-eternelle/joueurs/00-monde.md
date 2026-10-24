@@ -1,4 +1,4 @@
-# L'Exposition éternelle
+# Chapitre 0 — L'Exposition éternelle
 
 Garde ton pain sous le bras, pas dans la poche : à six heures, la porte de Javel se vide d'un coup, et celui qui s'arrête au milieu se fait emporter. Tiens-toi contre le kiosque, là, sous l'affiche du savon. C'est le mien. On y vend *La Sirène de Javel*, cinq centimes, quatre pages, l'encre te reste aux doigts jusqu'au dimanche.
 
@@ -22,11 +22,11 @@ Autour, Paris vit de la foire et lui en veut. Les hôteliers, les cochers et les
 
 ## Qui fait tourner la foire
 
-Si tu regardes seulement les dirigeables, tu rates ce qui compte. Une machine de trente tonnes tourne parce que des équipes de douze heures la graissent, la serrent et la rattrapent quand une courroie happe une manche. Un mécanicien gagne cinq francs par jour. Les ouvrières des ateliers de bobinage, au sous-sol de la Galerie, en gagnent deux et demi : la moitié, pour le même fil de cuivre. Une femme mariée ne signe rien sans son mari, et sa paie passe parfois par la poche de celui-ci. À Grenelle, la chambre se loue quinze francs par mois, et quand un automate prend la place d'un guichetier, le guichetier reste là avec ses quinze francs à trouver.
+Si tu regardes seulement les dirigeables, tu rates ce qui compte. Une machine de trente tonnes tourne parce que des équipes de douze heures la graissent, la serrent et la rattrapent quand une courroie happe une manche. Un mécanicien gagne cinq francs par jour. Les ouvrières des ateliers de bobinage, au sous-sol de la Galerie, en gagnent deux et demi : la moitié, pour le même fil de cuivre. Une femme mariée ne signe rien d'important sans l'accord de son mari, et sa paie passe parfois par la poche de celui-ci. À Grenelle, la chambre se loue quinze francs par mois, et quand un automate prend la place d'un guichetier, le guichetier reste là avec ses quinze francs à trouver.
 
 Sur l'esplanade des Invalides, derrière des cordes tendues, quatre cents personnes vivent dans des reconstitutions : un village du Sénégal, un village du Vietnam, un pavillon de la Nouvelle-Calédonie, des échoppes de Kabylie. La foire les appelle les Villages, et ses affiches disent *annamite* pour le Vietnam. Ces gens sont engagés sous contrat par un impresario, pour un an, renouvelable. Ils touchent un franc par jour, retenues déduites. Leurs livrets d'engagé et leurs laissez-passer sont gardés au Trocadéro, et il leur faut un permis pour sortir de l'enceinte, qu'on refuse souvent. Les visiteurs les regardent, jettent des sous, tendent la main pour toucher leurs cheveux, les photographient. Les mêmes gens tissent, forgent, battent le mil, tiennent des échoppes. Le soir, quand les grilles se ferment, ils parlent entre eux. Des enfants sont nés ici. Les médecins du Muséum viennent mesurer des crânes, et l'hiver tue de la poitrine : celui de 1898 a emporté neuf personnes au Village du Vietnam.
 
-La France de 1899 est un empire colonial, et les Villages l'exposent. Le livre ne l'arrange pas et n'en fait pas un décor. Les gens des Villages ont des noms, des langues, des familles à qui rendre des comptes, et une idée précise de ce que vaut une promesse d'impresario. Ils ont aussi un **Conseil**, qui tient leurs comptes à eux. Tu peux jouer l'un d'eux, comme un personnage entier.
+La France de 1899 est un empire colonial, et les Villages l'exposent. Les gens des Villages ont des noms, des langues, des familles, et un **Conseil** qui tient leurs comptes. Tu peux jouer l'un d'eux.
 
 [[saut]]
 
@@ -84,7 +84,7 @@ Ce qu'on y craint : l'hiver, la visite des médecins du Muséum, qu'on les renvo
 
 ### Grenelle et Javel
 
-Le faubourg ouvrier, derrière la foire. Des cheminées, des usines à gaz, des entrepôts, des cités de briques où dorment les mécaniciens, des cours étroites, des fils à linge, des enseignes de gargotes. La Seine charrie de la suie. On y parle de la Chambre syndicale en baissant la voix, le dimanche, en dansant sous les lampions.
+Le faubourg ouvrier, derrière la foire. Des cheminées, des usines à gaz, des entrepôts, des cités de briques où dorment les mécaniciens, des cours étroites, des fils à linge, des enseignes de gargotes. La Seine charrie de la suie, et en crue elle monte aux marches du quai de Javel. On y parle de la Chambre syndicale en baissant la voix, le dimanche, en dansant sous les lampions.
 
 À six heures du soir, la relève : quatre mille hommes en blouse bleue sortent de la Galerie par la porte de Javel, un pain sous le bras, et croisent les quatre mille qui entrent. Personne ne se parle, et chacun tape deux fois sa poche pour sentir la clef anglaise. On craint le chômage, et les nuits où les lampes baissent et les enfants toussent. Les vieux disent que le quartier est bien tranquille depuis qu'il y a moins de lumière.
 
@@ -92,11 +92,11 @@ Le faubourg ouvrier, derrière la foire. Des cheminées, des usines à gaz, des 
 
 Sous le Champ-de-Mars, l'ancienne carrière de calcaire : des galeries à piliers, des flaques d'eau claire, des voûtes qui sentent le salpêtre. Les plans de l'Inspection générale des carrières datent de 1830 et s'arrêtent au bord du Champ-de-Mars. Personne n'y descend, sauf les ouvriers de l'Inspection, qui renforcent les piliers, et quelques gamins de Grenelle qui connaissent les puits. Ces gamins disent qu'on a muré une galerie l'an dernier.
 
-On y craint l'effondrement et les rats. Trois hommes sont morts là en 1886, et leur histoire est devenue une comptine que les mères de Grenelle chantent aux enfants. Un escalier de pierre descend dans le noir, avec une odeur de salpêtre et d'eau froide, et au bas une grille que quelqu'un a repeinte cette année.
+On y craint l'effondrement et les rats. Trois hommes en sont morts en 1886, dit-on à Grenelle, et les mères en ont fait une comptine. Un escalier de pierre descend dans le noir, avec une odeur de salpêtre et d'eau froide, et au bas une grille que quelqu'un a repeinte cette année.
 
 ### La Butte
 
-Montmartre, vu de l'Éternelle : une colline de moulins, de vignes et de cabarets, d'où l'on voit le Champ allumé la nuit comme une braise. Peintres sans le sou, chansonniers, couturières, camelots, cocottes, anarchistes. On y rit de la foire, et les cabarets vendent des cartes postales de la Tour avec une moustache dessinée.
+Montmartre, vu de l'Éternelle : une colline de moulins, de vignes et de cabarets, d'où l'on voit le Champ allumé la nuit comme une braise. Plâtriers des carrières de gypse, blanchisseuses de la rue Lepic, ânes de la rue des Saules qui montent le charbon, chansonniers qui y dorment. On y rit de la foire, et les cabarets vendent des cartes postales de la Tour avec une moustache dessinée.
 
 On y craint les rafles de la Sûreté, qui cherche les Réfractaires parmi les chansonniers, et la police qui ferme les cabarets. Dans un cabaret de la rue des Saules, à une table de zinc, un chansonnier chante la Tour sur l'air d'une berceuse. Par la fenêtre, au loin, le Champ clignote deux fois, trois fois, et reprend.
 
@@ -112,7 +112,7 @@ Elles ne tirent pas dans le même sens. Tu en croiseras une avant la fin de la s
 - **Le Conseil des Villages.** *But :* rentrer chez soi vivants, avec ce qu'on a gagné et les papiers en poche. *Méthode :* le silence, la patience, les caisses communes, les interprètes. *Ennemis :* les impresarios, les gardes, les médecins du Muséum. *Signe :* la médaille de laiton numérotée que chaque engagé porte à la boutonnière, et que le Conseil a retournée, numéro contre la poitrine. *Doyen :* Samba Ndoye, avec madame Nguyễn Thị Hạnh pour tenir les comptes.
 - **Les Réfractaires.** *But :* détruire l'Exposition, qui a pris un quartier de Paris, affamé ses ouvriers et exhibé des hommes. *Méthode :* les affiches, la craie, la dynamite quand on en a. *Ennemis :* le Commissariat, la Sûreté, les mécaniciens qui acceptent de négocier. *Signe :* une roue brisée tracée à la craie. *Voix :* Anatole Gerfaux.
 
-Chacune a ses raisons et ses morts. En 1892, à la première grève des mécaniciens, la troupe a tiré : trois morts. En 1893 et 1894, des bombes anarchistes ont éclaté à Paris, puis sont venues des lois d'exception, et c'est de là que le Commissariat tient le droit d'armer ses gardes. L'hiver de 1898 a tué neuf personnes au Village du Vietnam, et la caisse de secours de la Chambre ne s'ouvre que depuis cette année-là. Quand un incendie a pris dans un baraquement, en 1897, le Commissariat s'en est servi pour fouiller tous les Permanents et réécrire le règlement des Villages.
+Chacune a ses raisons et ses morts. En 1892, à la première grève des mécaniciens, la troupe a tiré : trois morts. Des bombes anarchistes ont éclaté à Paris. Celles de 1893 et 1894 ont surtout blessé des gens qui prenaient un verre. Puis sont venues des lois d'exception, et c'est de là que le Commissariat tient le droit d'armer ses gardes. L'hiver de 1898 a tué neuf personnes au Village du Vietnam, et la caisse de secours de la Chambre ne s'ouvre que depuis cette année-là. Quand un incendie a pris dans un baraquement, en 1897, le Commissariat s'en est servi pour fouiller tous les Permanents et réécrire le règlement des Villages.
 
 ## Ceux dont on parle
 
@@ -120,7 +120,7 @@ Chacune a ses raisons et ses morts. En 1892, à la première grève des mécanic
 - **Félicien Dorlhac**, doyen des Signataires. Cinquante-cinq ans, un hôtel boulevard de Grenelle, un gros homme élégant, les cheveux teints, une rosette à la boutonnière. Son nom est sur les automates à cames qui tiennent tous les guichets de l'Éternelle. Il veut qu'on dise de lui qu'il a donné son génie à la France, et qu'on le dise sans sourire. Il parle en phrases longues, polies, qui cherchent un compliment.
 - **Victorine Cordebard**, secrétaire de la Chambre syndicale. Quarante-quatre ans, bobineuse à la Galerie, les cheveux gris serrés dans un fichu bleu. Veuve, elle signe seule, et c'est pour cela que la Chambre l'a faite secrétaire. Elle veut un jour de repos par semaine et la même paie pour les ouvrières. Elle parle par phrases courtes, avec le nom d'un ouvrier dans chacune, et elle ne dit « monsieur » à personne.
 - **Samba Ndoye**, doyen du Village du Sénégal. Cinquante ans, ancien sergent de tirailleurs, grand, une cicatrice à la tempe, la médaille numérotée retournée sur sa veste. Il veut ramener quarante-trois personnes chez elles, vivantes et payées. Il parle un français de caserne, net, et il cite le règlement de l'Exposition mot pour mot.
-- **Nguyễn Thị Hạnh**, que les Français appellent madame Hạnh. Trente-huit ans, au Village du Vietnam, couturière et herboriste, la seule du Conseil qui sache lire les contrats. Elle veut que les Villages tiennent ensemble et que les enfants nés ici aient des papiers. Elle parle un français lent, très exact, et répond toujours par une question de prix.
+- **Nguyễn Thị Hạnh.** Au Village on dit madame Hạnh, comme chez elle. Les employés de l'impresario disent madame Nguyen, comme à n'importe laquelle, et elle ne se retourne pas. Trente-huit ans, au Village du Vietnam, couturière et herboriste, la seule du Conseil qui lise les contrats sans passer par l'interprète de l'impresario. Elle veut que les Villages tiennent ensemble et que les enfants nés ici aient des papiers. Elle parle un français lent, très exact, et elle ne répond jamais le jour même.
 - **Anatole Gerfaux**, voix des Réfractaires. Trente-trois ans, graveur sur métal, ancien ouvrier de la Galerie, blessé à la main gauche en 1892. Il veut faire taire la foire. Il parle vite, en riant, et laisse toujours la dernière phrase de côté, comme si elle allait de soi.
 - **Blanche Mauvezin**, reporter à *La Sirène de Javel*, le seul journal qui critique la foire. Vingt-neuf ans, fille d'un instituteur, jupe-culotte de cycliste pour pouvoir courir, un calepin à ressort. Elle veut une preuve, pas un témoignage. Elle pose trois questions à la fois, et note la réponse à la dernière.
 
@@ -139,12 +139,12 @@ Six sortes de gens, et tu peux jouer chacune. Les pages des origines donnent leu
 
 - **Les Parisiens de l'Éternelle.** Nés ou élevés à la foire, sans autre ville que celle-ci. Ils connaissent chaque porte, chaque garde, chaque raccourci par les coulisses, et ils se mêlent à la foule sans qu'on les remarque. Hors de Paris, ils ne savent pas où poser les pieds.
 - **Les Gens des ateliers.** Mécaniciens, bobineuses, ajusteurs, ouvriers de la Chambre syndicale. Ils savent réparer, démonter, démonter vite, et le salaire de chaque métier à cinquante centimes près. Les contrôleurs les regardent deux fois, à cause de la blouse.
-- **Les Gens des Villages.** Engagés sous contrat, avec leurs savoir-faire, leurs langues, leurs familles. Sénégalais, Vietnamiens, Kanaks de la Nouvelle-Calédonie, Kabyles : le jeu en propose deux variantes, et tu dis le reste. Ils sont regardés derrière la corde, et ils regardent. Leur livret est au Trocadéro, et leur permis de sortie, quelqu'un d'autre le signe.
+- **Les Gens des Villages.** Engagés sous contrat, avec leurs savoir-faire, leurs langues, leurs familles. Sénégalais, Vietnamiens, Kanaks de la Nouvelle-Calédonie, Kabyles : le jeu en propose deux variantes, le Village du Sénégal et le Village du Vietnam, et tu dis le reste. Ils sont regardés derrière la corde, et ils regardent. Ils savent l'heure où les visiteurs jettent le plus de sous, et celle où les gardes de la corde changent. Leur livret est au Trocadéro, et leur permis de sortie, quelqu'un d'autre le signe.
 - **Les Employés et Signataires.** Fils de famille, clercs du Commissariat, gens du monde. Ils portent la redingote, entrent aux Salons, ont un crédit chez les fournisseurs. Ils dépendent d'un patron qui les surveille.
 - **Les Visiteurs restés.** Venus pour une semaine de curiosité, restés après le billet. Un provincial ou un étranger, avec un regard neuf, et personne pour les attendre.
 - **Les Gens de la Butte.** Artistes sans le sou, camelots, chansonniers, Réfractaires. Ils connaissent les cabarets, les logeurs, les mauvaises compagnies et la police, et la police les connaît aussi.
 
-> **Ne pas confondre.** Un **appareil** est l'objet : le gant, la lampe, la canne-grappin. La **licence** est le droit de le porter, 200 francs payés au Bureau des Brevets, et un **brevet** désigne les deux ensemble. La **Pression** est celle de ton personnage, un nombre de 0 à 10 noté sur ta fiche sous ses points de vie. Le **billet** coûte un franc et ouvre la porte pour la journée ; la **carte de Permanent** coûte cinq francs par mois ; la carte syndicale, la carte de presse et le livret d'engagé sont d'autres papiers, avec d'autres propriétaires. Dans ce livre, la majuscule dit de quoi on parle.
+> **Ne pas confondre.** Un **appareil** est l'objet : le gant, la lampe, la canne-grappin. La **licence** est le droit de le porter, 200 francs payés au Bureau des Brevets, et un **brevet** désigne les deux ensemble. La **Pression** est celle de ton personnage, un nombre de 0 à 10 noté sur ta fiche sous ses points de vie. Le **billet** coûte un franc et ouvre la porte pour la journée ; la **carte de Permanent** coûte cinq francs par mois ; la carte syndicale, la carte de son journal et le livret d'engagé sont d'autres papiers, avec d'autres propriétaires. Dans ce livre, la majuscule dit de quoi on parle.
 
 ## Vivre à l'Éternelle
 
@@ -158,15 +158,15 @@ Le revolver d'ordonnance de 8 mm, le pistolet à répétition, le fusil de chass
 
 ### L'argent
 
-Le franc se divise en 100 centimes. Un sou vaut 5 centimes, donc vingt sous font un franc. Un pain d'un kilo coûte trente-cinq centimes, un repas à la gargote un franc, une nuit d'hôtel garni deux francs, une chambre à Grenelle quinze francs par mois. Un billet d'entrée vaut un franc ; la carte de Permanent, cinq francs par mois. Un revolver coûte 25 francs, une canne-épée 20, un fusil de chasse 90, une lampe à arc de poche 40. Une licence de brevet : 200 francs. Le tableau des prix est au chapitre 6.
+Le franc se divise en 100 centimes. Un sou vaut 5 centimes, donc vingt sous font un franc. Un pain d'un kilo coûte 35 centimes, un repas à la gargote 1 franc, une nuit d'hôtel garni 2 francs, une chambre à Grenelle 15 francs par mois. Un billet d'entrée vaut 1 franc ; la carte de Permanent, 5 francs par mois. Un revolver coûte 25 francs, une canne-épée 20, un fusil de chasse 90, une lampe à arc de poche 40. Une licence de brevet : 200 francs. Le tableau des prix est au chapitre 6.
 
-Pour un engagé des Villages, qui touche un franc par jour retenues déduites, un repas à la gargote est la paie d'une journée, et 200 francs de licence en sont deux cents. Une ouvrière des ateliers devrait travailler quatre-vingts jours pour la même somme.
+Pour un engagé des Villages, qui touche un franc par jour retenues déduites, un repas à la gargote est la paie d'une journée, et la licence de 200 francs vaut deux cents jours de sa paie. Une ouvrière des ateliers devrait travailler quatre-vingts jours pour la même somme.
 
-On ne paie pas toujours en francs. Une dette de loge, un service rendu ou une parole donnée valent parfois plus qu'une pièce. Un contremaître qui te doit un service te laisse passer devant la file, et ça ne se paie pas.
+On ne paie pas toujours en francs. Une dette de loge, un service rendu ou une parole donnée valent parfois plus qu'une pièce. Un contremaître qui te doit un service te laisse passer devant la file.
 
 ### Les gestes
 
-Chaque métier a les siens, et à l'Éternelle on se reconnaît avant de se parler. Les mécaniciens posent la main à plat sur leur bâti pour sentir si la machine ralentit. Les ouvriers de la relève tapent deux fois sur leur poche pour sentir la clef anglaise ; passée à la ceinture, elle dit qu'on est syndiqué. Les engagés des Villages retournent leur médaille de laiton, le numéro contre la poitrine. Les Réfractaires tracent la roue brisée à la craie, et les gardes la frottent. Chez les Signataires, on porte la rosette, et chez les reporters, le calepin à ressort. Tu n'as pas à les jouer tous. Ton personnage en connaît quelques-uns.
+Chaque métier a les siens, et à l'Éternelle on se reconnaît avant de se parler. La clef anglaise passée à la ceinture dit qu'on est syndiqué. Les engagés des Villages retournent leur médaille de laiton, le numéro contre la poitrine. Les Réfractaires tracent la roue brisée à la craie, et les gardes la frottent. Chez les Signataires, on porte la rosette, et chez les reporters, le calepin à ressort. Tu n'as pas à les jouer tous. Ton personnage en connaît quelques-uns.
 
 ### Chaque jour
 
