@@ -415,7 +415,7 @@ Chaque choix a un prix : aider Bras-de-Fer, c'est se faire un protecteur qui n'o
 - Origines propres : Flibustiers de la Côte, Boucaniers, Marrons, Gens de France, Espagnols et Créoles de Cuba, Gens de toutes les mers.
 - Classes propres : Capitaine, Canonnier, Boucanier, Chirurgien de bord, Gabier, Bretteur, Maître de manœuvre, Contrebandier, Aumônier, Plongeur.
 - Bestiaire : requins, barracudas, crocodiles, chiens de chasse ; matelots, pirates, soldats espagnols, chasseurs de marrons, corsaires anglais, garde-côtes ; navires (sloop, brigantin, frégate) ; l'ouragan ; et en fin de campagne la *Santa Clara* et son capitaine.
-- Combat naval : reprendre la mécanique des postes de l'Archipel (`shared/vaisseaux.ts`), avec des navires à voile.
+- Combat naval : fait. Mécanique des postes de l'Archipel (`shared/vaisseaux.ts`) reprise avec des navires à voile (`shared/navires.ts`) ; règles dans le livre des joueurs, chapitre 4.
 - Style graphique : en attente du choix de Mickael (marine à l'huile du XVIIIe siècle).
 - Noms changés par rapport aux premiers brouillons : Vaucelles (lieutenant du roi), Truscott (agent anglais, de Kingston), Abla (cheffe des marrons) ; la réserve du MJ s'appelle les Grains.
 - Niveaux : à partir du niveau 13, les niveaux donnent des coups de main de plus en plus audacieux et des relations, pas des surhommes.

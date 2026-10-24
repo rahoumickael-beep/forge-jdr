@@ -192,7 +192,13 @@ const MAP_KINDS: { id: MapKind; label: string }[] = [
   { id: "nature", label: "Extérieur" },
   { id: "village", label: "Village" },
   { id: "espace", label: "Espace (vaisseaux)" },
+  { id: "mer", label: "Pleine mer (navires)" },
+  { id: "pont", label: "Ponts d'abordage" },
 ];
+
+/** Les cartes de combat de vaisseaux n'ont leur place que dans un monde qui s'en sert : l'espace en SF, la mer et les ponts aux Îles du Vent. */
+const cartesDuGenre = (genre: GenreId) =>
+  MAP_KINDS.filter((k) => (k.id === "espace" ? genre !== "pirates" : k.id === "mer" || k.id === "pont" ? genre === "pirates" : true));
 
 export function MapPanel({ room }: { room: RoomView }) {
   const [kind, setKind] = useState<MapKind>("donjon");
@@ -217,7 +223,7 @@ export function MapPanel({ room }: { room: RoomView }) {
         <label className="field">
           <span>Type</span>
           <select id="map-kind" className="input" value={kind} onChange={(e) => setKind(e.target.value as MapKind)}>
-            {MAP_KINDS.map((k) => <option key={k.id} value={k.id}>{k.label}</option>)}
+            {cartesDuGenre(room.genre).map((k) => <option key={k.id} value={k.id}>{k.label}</option>)}
           </select>
         </label>
         <label className="field">

@@ -20,7 +20,7 @@ export function PanneauMJ({ room, tab, selectedId, onSelect }: { room: RoomView;
       {tab === "Scénarios" && <ScenariosPanel room={room} />}
       {tab === "Narration" && <NotesPanel room={room} />}
       {tab === "Campagne" && <CampagnePanel room={room} />}
-      {tab === "Vaisseaux" && <VaisseauxMJ room={room} />}
+      {(tab === "Vaisseaux" || tab === "Navires") && <VaisseauxMJ room={room} />}
       {tab === "Réglages" && <SettingsPanel room={room} />}
     </>
   );

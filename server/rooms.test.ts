@@ -163,3 +163,28 @@ test("vue joueur : ni vaisseau caché ni note du MJ sur un vaisseau ; l'import d
   assert.equal(importee.vaisseaux[0].coque, 0);
   assert.equal("inconnu" in importee.vaisseaux[0], false);
 });
+
+test("vue joueur, navires des Îles du Vent : ni navire caché, ni note, ni Moral ni équipage d'un autre navire ; le MJ voit tout", async () => {
+  const { nouveauVaisseau } = await import("../shared/vaisseaux");
+  const { stored, gm, lea } = (() => {
+    const { stored: s, gm: g } = createRoom({ name: "Essai", genre: "pirates", ton: "sombre", level: 3, gmName: "MJ" });
+    return { stored: s, gm: g, lea: addPlayer(s, "Léa") };
+  })();
+  const nous = { ...nouveauVaisseau("sloop", "Pie-Noire", "groupe", "pirates"), notes: "SECRET-NAVIRE : Le Goff doit de l'argent" };
+  const garde = { ...nouveauVaisseau("galion-garde-cote", "Garde-côte", "autre", "pirates"), cache: false, moral: 2, hommes: 77, perdus: 3, fuite: { reussites: 1, touches: 1 } };
+  const cache = nouveauVaisseau("fregate", "SECRET-FREGATE", "autre", "pirates");
+  stored.state.vaisseaux.push(nous, garde, cache);
+  const vue = hideUnseen(viewFor(stored, lea));
+  assert.equal(JSON.stringify(vue).includes("SECRET-"), false);
+  const [a, b] = vue.vaisseaux;
+  assert.equal(vue.vaisseaux.length, 2);
+  assert.deepEqual([a.moral, a.hommes], [6, 40], "le groupe voit le Moral et l'équipage de son navire");
+  assert.deepEqual([b.moral, b.hommes, b.hommesMax, b.perdus, b.fuite], [undefined, undefined, undefined, undefined, undefined]);
+  assert.equal(b.coque, b.coqueMax, "la coque d'un navire en vue reste visible");
+  const mj = viewFor(stored, gm);
+  assert.equal(mj.vaisseaux.length, 3);
+  assert.equal(mj.vaisseaux[1].moral, 2);
+  const importee = sanitizeImport({ tokens: [], vaisseaux: [{ ...garde, moral: 99, hommes: 5000 }] }, stored.state);
+  assert.equal(importee.vaisseaux[0].moral, 10);
+  assert.equal(importee.vaisseaux[0].hommes, importee.vaisseaux[0].hommesMax);
+});

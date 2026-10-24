@@ -1,6 +1,7 @@
 import { lazy, Suspense, useCallback, useState } from "react";
 import { getGenre } from "../../../shared/genres";
 import type { RoomView } from "../../../shared/types";
+import { avecVaisseaux, marine } from "../../../shared/vaisseaux";
 import { forgetSession, gmKeyFor, toast, useStore } from "../store";
 import { DiceTray, Log } from "./Dice";
 import { CombatIntro } from "./CombatIntro";
@@ -37,11 +38,15 @@ export function Table({ room }: { room: RoomView }) {
   const { connected } = useStore();
   const isGM = room.you.isGM;
   codeDeLaPartie = room.code;
-  // Les vaisseaux n'ont d'onglet que dans un monde qui en a (la SF) ou dès qu'une partie en compte un.
-  const avecVaisseaux = room.genre === "science-fiction" || room.vaisseaux.length > 0;
+  // Les vaisseaux (ou les navires) n'ont d'onglet que dans un monde qui en a (la SF, les pirates) ou dès qu'une partie en compte un.
+  // L'onglet porte le mot du genre : « Navire » aux Îles du Vent ; le contenu de l'onglet reste « Vaisseau » côté code.
+  const avecNavires = avecVaisseaux(room.genre) || room.vaisseaux.length > 0;
+  const motsVaisseau = marine(room.genre).mots;
+  const ongletMJ = motsVaisseau.nomPluriel;
+  const ongletJoueur = motsVaisseau.nom;
   const tabs: readonly string[] = isGM
-    ? avecVaisseaux ? [...GM_TABS.slice(0, -2), "Vaisseaux", ...GM_TABS.slice(-2)] : GM_TABS
-    : avecVaisseaux ? [...PLAYER_TABS.slice(0, 2), "Vaisseau", ...PLAYER_TABS.slice(2)] : PLAYER_TABS;
+    ? avecNavires ? [...GM_TABS.slice(0, -2), ongletMJ, ...GM_TABS.slice(-2)] : GM_TABS
+    : avecNavires ? [...PLAYER_TABS.slice(0, 2), ongletJoueur, ...PLAYER_TABS.slice(2)] : PLAYER_TABS;
   const [tab, setTab] = useState<string>(isGM ? (room.map ? "Générer" : "Carte") : "Mon perso");
   const [tool, setTool] = useState<MapTool>("deplacer");
   const [brush, setBrush] = useState(3);
@@ -123,7 +128,7 @@ export function Table({ room }: { room: RoomView }) {
             {tab === "Cartes" && <CollectionPanel room={room} />}
             {tab === "Mon perso" && <MyCharacterPanel room={room} />}
             {tab === "Groupe" && <PartyPanel room={room} />}
-            {tab === "Vaisseau" && <VaisseauPanel room={room} />}
+            {!isGM && tab === ongletJoueur && avecNavires && <VaisseauPanel room={room} />}
             {tab === "Documents" && <HandoutsPanel room={room} />}
             {tab === "Règles" && <Rulebook room={room} nav={bookNav} onNav={setBookNav} onOpenWide={() => setBookOpen(true)} />}
           </div>

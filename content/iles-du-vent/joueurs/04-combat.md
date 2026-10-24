@@ -282,7 +282,7 @@ Les navires, les forts et les batteries tirent des pièces qui ne se portent pas
 
 Un canon de 8 ne tire qu'une fois par tour, servi par deux hommes. Le pierrier est la pièce qu'on monte sur une barque, une plage ou le haut d'un mur. Le Canonnier tire mieux que les autres : *Œil de batterie* (niveau 3 du Maître-canonnier de batterie) ajoute son Savoir aux dégâts et ignore le demi-abri de la cible, *Boulet ramé* double les dégâts contre un mât ou une voile, et *Bordée* (niveau 11) fait tirer le navire entier sur un point de 6 m de rayon, à 36 m.
 
-**Combattre de navire à navire.** Ce livre n'en donne pas les règles complètes : qui tire sur quoi, quand on vire, ce que vaut une coque, un gouvernail ou une voile. Le MJ les a. Ce que tu dois savoir à ta place de joueur : chaque personnage tient la place que le MJ lui donne (barre, voiles, pièce, mousquets) ; les tests de manœuvre du navire (Survie pour la route, Athlétisme ou Acrobaties pour la mise en œuvre) se font par celui qui tient la barre ou borde la voile ; et le Moral de l'équipage les soutient ou les gêne (voir « Le navire pendant le combat »).
+**Combattre de navire à navire.** Un navire a sa fiche, cinq postes et ses pièces, qui se tirent et se rechargent : tout est dans « Le combat de navire », plus bas. Les chiffres du tableau ci-dessus y servent tels quels.
 
 ### À terre
 
@@ -315,7 +315,7 @@ Partir est souvent la bonne décision. Partir bien est une affaire de règles.
 - Un adversaire à pied qui a ta vitesse ne te rattrape pas tant que tu cours et qu'il ne peut pas tirer. Un chien de chasse court à 12 m par round.
 - Pour **disparaître**, il faut sortir de la vue de tes poursuivants, puis réussir un test de groupe d'Adresse (Discrétion) contre leur Perception passive. Une ruelle, une mangrove, une rade pleine de navires : le MJ décide ce qui compte comme « hors de vue ». La nuit, c'est plus facile.
 - **Sauter à l'eau** est une fuite que beaucoup de gens de mer ont déjà pratiquée. Elle te sort du combat et te met à la merci de la mer (« Tomber à l'eau »).
-- **Fuir en navire** est un test de manœuvre du navire (chapitre 3), avec l'avantage si le Moral est à 8 ou plus. Un navire à qui une voile s'enflamme ou à qui le gouvernail se brise ne fuit plus.
+- **Fuir en navire** est l'affaire du barreur : deux tests d'Adresse réussis avant la troisième touche (voir « Le combat de navire »), avec l'avantage si le Moral est à 8 ou plus. Un navire dont le gréement est tombé ne fuit plus.
 - Dans Forge JdR, quand tous les pions d'un groupe sont sortis de la portée de ceux qui les poursuivent, le MJ peut **résumer** la fuite et la jouer en une phrase.
 
 ## Se rendre et négocier
@@ -497,6 +497,155 @@ Un combat à bord n'engage pas que quatre personnages. Il engage un équipage, e
 
 Le MJ tient le compte à ta place. Un homme qui tombe près de toi et qu'on ne relève pas, quelqu'un qui compte les morts à voix haute : ce sont des points de Moral qui descendent.
 
+## Le combat de navire
+
+Un navire ne tire pas comme un homme. Il y faut un capitaine qui crie les ordres, un barreur qui garde la barre, un canonnier qui sert les pièces, un maître de manœuvre qui bouche les voies d'eau et rétablit ce que le boulet a déchiré, un gabier dans la hune qui voit ce que la fumée cache. Tant que chacun tient son poste, le navire tient. Quand il en manque un, il traîne.
+
+### Le principe
+
+Le combat de navire se joue sur la carte de **pleine mer**, avec les mêmes dés et la même initiative que le reste. Tout le monde lance son initiative. À chaque round, **chaque poste joue une action**. Le MJ ouvre un nouveau round : les virages, les ordres, les cibles guettées et les vents pris retombent.
+
+Sur la carte, le navire est un pion. Le joueur dont le personnage tient la **barre** le déplace, dans la limite de la vitesse de la fiche. Les **îlots** et les **récifs** bloquent le passage et la vue. Les **hauts-fonds** et les **sargasses** se traversent, mais un navire lourd qui passe sur un haut-fond risque ce que le MJ décide.
+
+Le serveur lance les dés, applique l'effet et l'écrit dans le journal. Tu ne joues que le poste que tient ton personnage. Un poste que personne ne tient reste vide, et ses actions ne se jouent pas : à quatre joueurs sur cinq postes, il en manque un, et c'est toujours celui dont on a le plus besoin. Le MJ joue les postes de ses navires ; un navire du MJ qui n'a pas de personnage à un poste tire avec le seul bonus de l'arme.
+
+### La fiche du navire
+
+Le navire de l'équipage a sa fiche, dans l'onglet *Navire* de la table. Elle donne :
+
+| Ligne | Ce qu'elle dit |
+|---|---|
+| **Coque** | Les points de vie du navire. À 0, il est à la dérive. |
+| **Gréement** | Les voiles, les vergues, les mâts. Quand il tombe, le navire ralentit et manœuvre mal. Un boulet ne l'atteint que si le canonnier le vise. |
+| **Moral** | Le Moral de l'équipage, de 0 à 10 (chapitre 3). |
+| **Hommes** | L'équipage à bord. Une pièce ne se tire pas sans ses servants. |
+| **CA** | La classe d'armure : le d20 d'un tir doit l'égaler. |
+| **Vitesse** | Le déplacement en cases par round sur la carte. |
+| **Pièces** | Pour chaque arme : le nombre de pièces et combien sont chargées, le bonus d'attaque, les dégâts, la portée en cases, les servants. |
+| **Cale** | Le nombre de lots de marchandise que le navire porte. |
+| **Particularités** | Ce qui fait le caractère de ce navire. |
+| **Postes** | Qui tient quoi. |
+
+| Navire | Coque | Gréement | CA | Vitesse | Hommes | Canons de 8 | Pierriers | Cale |
+|---|---|---|---|---|---|---|---|---|
+| Sloop | 100 | 40 | 15 | 12 cases | 40 | 4 (+5) | 2 (+4) | 4 |
+| Goélette | 110 | 45 | 15 | 11 cases | 30 | 4 (+5) | 4 (+4) | 6 |
+| Brigantin | 150 | 60 | 16 | 10 cases | 60 | 6 (+5) | 4 (+4) | 8 |
+| Frégate | 240 | 90 | 17 | 9 cases | 160 | 8 (+6) | 6 (+5) | 10 |
+| Galion garde-côte | 260 | 110 | 17 | 6 cases | 200 | 8 (+5) | 6 (+4) | 20 |
+
+Entre parenthèses, le bonus d'attaque de la pièce. Un canon de 8 fait 4d10 et porte à 24 cases (36 m) ; un pierrier fait 2d8 et porte à 12 cases (18 m). Le pion d'un sloop ou d'une goélette occupe deux cases, celui d'un brigantin ou d'une frégate trois, celui d'un galion quatre. Le nombre d'hommes est celui d'un équipage au complet, et le MJ ajuste la fiche : la *Pie-Noire* n'en a que vingt-deux. Les navires que le MJ lance contre toi ont les mêmes chiffres.
+
+Trois navires ont une particularité. Le **sloop** a un faible tirant d'eau : il passe sur les hauts-fonds où un navire plus lourd s'échoue. La **goélette** remonte au vent : quand la chasse se joue contre le vent, le MJ lui laisse l'avantage de la route. Le **galion garde-côte** a la haute coque et la lenteur : il vire mal, et ses sabords bas ne sont pas faits pour ce qui passe sous son vent, ce que le MJ décide.
+
+### Les postes
+
+Chaque personnage tient **un poste** à la fois, qu'il choisit dans l'onglet *Navire*. **Seul celui qui tient un poste peut en jouer les actions.**
+
+| Poste | Caractéristique | Ce qu'il fait |
+|---|---|---|
+| **Capitaine** | Présence | Crier l'ordre : chaque tir du navire a +2. Ordonner l'abordage |
+| **Barreur** | Adresse | Virer de bord, prendre le vent, fuir. C'est lui qui déplace le pion |
+| **Canonnier** | Adresse | Tirer, lâcher la bordée, recharger |
+| **Maître de manœuvre** | Endurance | Aveugler les voies d'eau, rétablir le gréement |
+| **Gabier de vigie** | Instinct | Guetter la cible, lancer les grappins, couper les grappins |
+
+Le serveur ajoute ta maîtrise aux tests du capitaine, du barreur et du gabier. Un tir ajoute à ton Adresse le bonus de l'arme, sans la maîtrise. Les bonus de classe (les pouvoirs du Canonnier comme *Œil de batterie*, *Œil de hune* de la Vigie, *Plan d'abordage* du Capitaine de course…) se comptent à la main : annonce-les au MJ. Le serveur ne compte pas non plus les actions à ta place : le livre dit une action par poste et par round, c'est la table qui s'y tient.
+
+### Les actions de poste
+
+**Crier l'ordre** (Capitaine). Test de Présence, maîtrise comprise, DD 12. Réussi : chaque tir du navire a **+2** jusqu'au prochain round. Raté : personne n'entend dans la fumée.
+
+**Virer de bord** (Barreur). Test d'Adresse, maîtrise comprise. Sur 12 ou plus, le navire a **+2 CA** jusqu'au prochain round ; sur 18 ou plus, **+4 CA**. En dessous de 12, il n'obéit pas assez vite. Impossible si le gréement est tombé.
+
+**Prendre le vent** (Barreur). Test d'Adresse, maîtrise comprise, DD 12. Réussi : la vitesse du navire monte d'un quart, d'une case au moins, jusqu'au prochain round. Impossible si le gréement est tombé.
+
+**Guetter la cible** (Gabier de vigie). Test d'Instinct, maîtrise comprise, DD 12. Réussi : le prochain tir ou la prochaine bordée du navire a l'**avantage**. Cet avantage ne sert qu'une fois.
+
+**Tirer** (Canonnier). Une seule pièce par action : tu choisis l'arme et un autre navire à portée. Tu lances un d20 et tu ajoutes ton Adresse, le bonus de l'arme, et +2 si le capitaine a crié l'ordre. Si le résultat égale ou dépasse la CA de la cible (augmentée de son virage), le tir touche : tu lances les dégâts de l'arme. Un 20 naturel touche toujours et double les dés de dégâts ; un 1 naturel rate toujours.
+
+- **Le canon de 8** frappe la **coque**. Tu peux aussi viser le **gréement** : le jet a −2, et les dégâts vont au gréement au lieu de la coque.
+- **Le pierrier** balaie le pont. Il vise la CA comme le canon, mais ses dégâts ne touchent ni la coque ni le gréement : chaque tranche de 3 points, arrondie au-dessus, est **un homme** qui tombe.
+- **Une pièce tirée reste vide** jusqu'à ce qu'on la recharge. Un canon se sert à deux hommes, un pierrier à un : un navire qui n'a plus assez d'hommes ne sert pas ses pièces.
+- **La portée** se mesure en cases, de bord à bord, quand les deux pions sont sur la carte : 24 cases pour un canon de 8, 12 pour un pierrier. Plus loin, le serveur refuse le tir.
+
+**Lâcher la bordée** (Canonnier). Toutes les pièces chargées de l'arme choisie tirent ensemble, chacune avec son propre jet d20 contre la même cible. Les dégâts s'additionnent. L'ordre du capitaine donne +2 à chaque pièce, la cible guettée l'avantage à chacune. Le navire ne tire qu'avec les pièces que ses hommes peuvent servir.
+
+**Recharger** (Canonnier). Toutes les pièces de l'arme choisie sont de nouveau chargées. Tant que tu ne l'as pas fait, une pièce tirée reste vide : une bordée, puis un round à recharger, puis une bordée.
+
+**Aveugler les voies d'eau** (Maître de manœuvre). La coque regagne **1d8 + Endurance** points, sans dépasser son maximum.
+
+**Rétablir le gréement** (Maître de manœuvre). Le gréement regagne **2d6 + Endurance** points, sans dépasser son maximum. Un gréement ne se rétablit pas tout seul : sans maître de manœuvre, il ne remonte pas.
+
+### Le gréement
+
+Le gréement est abîmé quand il est à la moitié ou moins de son maximum, tombé quand il est à 0.
+
+| Gréement | Vitesse | Manœuvre |
+|---|---|---|
+| **Abîmé** | Aux trois quarts, arrondie en dessous (une case au moins) | Désavantage aux tests de manœuvre |
+| **Tombé** | À la moitié, arrondie en dessous (une case au moins) | Plus de virage, plus de vent à prendre, plus de fuite |
+
+Les tests de manœuvre sont ceux du barreur (virer, prendre le vent, fuir) et du gabier qui lance les grappins. Le Moral joue dans l'autre sens : à 8 ou plus l'équipage suit et ces tests ont l'**avantage**, à 3 ou moins l'équipage murmure et ils ont le **désavantage**. Un Moral haut et un gréement abîmé s'annulent.
+
+### Les hommes et le Moral
+
+Le serveur branche trois choses sur le Moral du chapitre 3.
+
+- **Le gréement tombe** : le Moral du navire baisse de 1, au moment où il passe à 0.
+- **Des hommes tombent** : le premier homme perdu depuis le début du combat fait baisser le Moral de 1, et dès que plus de cinq hommes sont perdus, il baisse de 1 de plus (−2 en tout). Ce sont les chiffres de « Le navire pendant le combat », comptés à mesure plutôt qu'à la fin. Le MJ clôt le combat naval d'un clic et le compte repart à zéro.
+- **L'abordage** est un coup de main : il coûte 1 de Moral, et il est impossible à 1 ou moins.
+
+À 1 ou moins, le journal le dit : la mutinerie menace dans le navire du groupe, et les hommes d'un navire ennemi parlent d'amener le pavillon. Tout le reste du Moral se règle à la main, comme avant : le partage, l'escale, le repas, les promesses. Le MJ tient la fiche à jour, et il garde le +1 d'un combat gagné sans perdre un homme.
+
+L'équipage d'un autre navire ne te montre ni son Moral ni le nombre de ses hommes. Tu vois ce que la fumée laisse voir : un homme qui tombe, un pavillon qu'on amène, une coque qui s'ouvre.
+
+### Fuir
+
+Un navire qui veut quitter la carte ou semer son poursuivant doit **fuir**. Fuir remplace l'action du barreur : il choisit le poursuivant et lance un test d'Adresse, maîtrise comprise, contre un DD de **12, plus la vitesse du poursuivant, moins celle de son propre navire**, sans jamais descendre sous 8 ni monter sur 18. Il faut **deux réussites avant la troisième touche** : le serveur compte les deux. À chaque test raté, le poursuivant tire une fois, avec la pièce de son choix, et c'est le MJ qui joue ce tir. Un navire dont le gréement est tombé ne fuit plus.
+
+### Les grappins et l'abordage
+
+Deux navires bord à bord ne se touchent pas : un grappin les tient. Le gabier **lance les grappins** : test d'Adresse, maîtrise comprise, DD 12, sur un navire à **3 cases au plus** de bord à bord. Réussi, les deux navires sont accrochés ; raté, les grappins retombent à l'eau. Le gabier peut aussi **couper les grappins** : test de Force, maîtrise comprise, DD 12.
+
+Quand les grappins tiennent, le capitaine peut **ordonner l'abordage**. C'est un coup de main (voir ci-dessus) : 1 point de Moral, et il faut un Moral de 2 ou plus. Aucun jet à faire. Les navires disparaissent de la carte et la table passe sur **deux ponts bord à bord**, le tien en haut, le leur en dessous : une lisse tout autour, deux mâts et une écoutille par pont, trois passages où les lisses s'ouvrent et où les planches sont jetées. Les personnages sont rangés sur leur pont. Le MJ pose l'équipage adverse et lance le combat à pied, tel que ce chapitre le décrit depuis le début, avec « L'abordage » et « Le pont d'un navire » pour guides. Les fiches des navires gardent leur coque, leur gréement et leur Moral. Une fois l'affaire réglée, le MJ pose de nouveau une carte de pleine mer et remet les navires à l'eau.
+
+### À la dérive
+
+Un navire à **0 point de coque** est à la dérive : plus de barre, plus de pièces servies, plus de vent à prendre. Seules trois actions restent permises : aveugler les voies d'eau, rétablir le gréement, couper les grappins. Un navire à la dérive ne coule pas tout seul. Ses hommes peuvent se battre à bord, amener le pavillon, ou abandonner le navire ; si le MJ juge qu'il sombre, il le dit avant le round suivant. Un navire à la dérive peut être abordé : c'est même la façon la plus courante de le prendre.
+
+### Un combat de navire
+
+**La situation.** La *Pie-Noire*, sloop, croise au large de Cuba avec ses vingt-deux hommes, et le garde-côte espagnol de La Havane (un galion) vient de sortir de la passe. Jeanne est capitaine, Dossou barreur, Inés canonnière, Mathurin à la vigie ; le maître de manœuvre est un poste vide. Tous sont au niveau 3 (maîtrise +2). Jeanne a +2 en Présence, Dossou +3 en Adresse, Inés +4 en Adresse, Mathurin +2 en Instinct.
+
+Le sloop : coque 100, gréement 40, CA 15, vitesse 12, quatre canons de 8 chargés (+5), Moral 6. Le galion : coque 260, gréement 110, CA 17, vitesse 6, huit canons de 8 (+5). Le MJ n'ouvre que sa pièce de chasse : le galion vire mal.
+
+**Initiative.** Dossou 19, le garde-côte 15, Jeanne 12, Mathurin 11, Inés 8.
+
+**Round 1.**
+
+- *Dossou* vire de bord. Adresse +3, maîtrise +2 : 12 + 5 = 17. Sous 18 : +2 CA, soit CA 17.
+- *Le garde-côte* tire sa pièce de chasse. Il n'a pas de personnage au poste : 14 + 5 (l'arme) = 19 contre CA 17. Touché, 4d10 = 29. La coque de la *Pie-Noire* passe de 100 à 71.
+- *Jeanne* crie l'ordre. Présence +2, maîtrise +2 : 9 + 4 = 13. Réussi : tous les tirs de la *Pie-Noire* ont +2.
+- *Mathurin* guette la cible. Instinct +2, maîtrise +2 : 11 + 4 = 15. Réussi : le prochain tir a l'avantage.
+- *Inés* lâche la bordée sur le gréement du galion. Chaque canon : Adresse +4, arme +5, ordre +2, gréement −2, soit +9, avec l'avantage. Quatre pièces : 14 (8 et 14) + 9 = 23, touché. 6 (3 et 6) + 9 = 15, raté. 17 (12 et 17) + 9 = 26, touché. 9 (9 et 2) + 9 = 18, touché. Trois touches : 4d10 = 22, 19 et 28, soit 69. Le gréement du galion passe de 110 à 41 : il est abîmé, sa vitesse tombe de 6 à 4. Les quatre canons sont vides.
+
+**Round 2.** Le MJ ouvre un nouveau round : le virage, l'ordre et la cible guettée retombent.
+
+- *Dossou* fuit. Le DD est 12 + 4 (le galion abîmé) − 12 (la *Pie-Noire*) = 4, relevé à 8. Il fait 10 + 5 = 15. Première réussite.
+- *Le garde-côte* tire : 11 + 5 = 16 contre CA 15. Touché, 4d10 = 23. La coque passe de 71 à 48. C'est la première touche sur un navire qui fuit.
+- *Jeanne* n'a rien à ordonner. *Mathurin* regarde le galion tourner sur lui-même.
+- *Inés* recharge les canons de 8 : les quatre pièces sont chargées.
+
+**Round 3.**
+
+- *Dossou* fuit : 7 + 5 = 12 contre DD 8. Deuxième réussite, avant la troisième touche. La *Pie-Noire* décroche et disparaît.
+- *Le garde-côte* n'a plus de cible à tirer.
+
+La *Pie-Noire* a perdu 52 points de coque et pas un homme ; son gréement est intact et son Moral n'a pas bougé. Elle a pris la fuite, ce qui n'est pas gagner : le MJ ne donne pas le +1 d'un combat gagné. Le galion boite de la voilure ; les cales de La Havane sauront qui l'a fait.
+
+> **Pour la table.** Le barreur tient le navire en vie, le canonnier fait mal, le maître de manœuvre prolonge tout. Mais ce sont le capitaine et le gabier qui décident si les autres tirent juste ou à l'aveugle. Dis ce que tu fais à voix haute : tes camarades attendent ton ordre. Et contre un galion, vise d'abord son gréement : un galion qui ne vire plus ne te rattrape plus.
+
 ## Un combat complet
 
 Voici un combat du début à la fin.
@@ -553,7 +702,8 @@ Le pont fait seize cases de long sur quatre de large (24 m sur 6). Chaque lanter
 > - Abri : +2 (demi), +5 (trois quarts), total (aucune attaque directe).
 > - Le pont roule : Acrobaties DD 10, 12 ou 15 pour foncer ou sauter. Les Flibustiers et les Gabiers n'y sont jamais soumis.
 > - Tomber à l'eau : nage double, cuirasse qui coule (action, Force DD 15), armes à feu mouillées. Chute : 1d6 par 3 m.
-> - Artillerie : canon de 8 4d10, 36 m, deux servants ; pierrier 2d8, 18 m, un servant. Le combat de navire à navire est entre les mains du MJ.
+> - Artillerie : canon de 8 4d10, 36 m, deux servants ; pierrier 2d8, 18 m, un servant. Une pièce tirée reste vide jusqu'à ce qu'on la recharge.
+> - Navire : cinq postes (capitaine, barreur, canonnier, maître de manœuvre, gabier de vigie), une action chacun par round. Le canon frappe la coque ou, à −2, le gréement ; le pierrier fauche des hommes. Gréement abîmé : vitesse aux trois quarts et désavantage à la manœuvre ; tombé : vitesse réduite de moitié, plus de virage ni de fuite. Grappins puis abordage : la table passe aux deux ponts.
 > - Fuir : se désengager, foncer, hors de vue, test de groupe de Discrétion. Se rendre : lâcher son arme, lever les mains, le dire à voix haute ; chaque camp répond à sa façon.
 > - Négocier : action, test de Présence contre un DD de 10, 15 ou 20, jamais sous 10. La vie sauve, l'argent, la menace : −5 chacun.
 > - À 0 PV : jets contre la mort (10 ou plus), Médecine DD 10 pour stabiliser. Trois règles au choix du MJ : héroïque, indulgente, impitoyable.

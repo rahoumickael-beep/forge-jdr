@@ -146,6 +146,20 @@ export const REGLES_ILES: RuleSection[] = [
     ],
   },
   {
+    id: "pi-combat-naval",
+    title: "Le combat de navire",
+    body: [
+      "Le navire a une fiche (onglet Navire de la table) : coque, gréement, Moral, hommes, CA, vitesse, pièces. Cinq postes, une action chacun par round : capitaine, barreur, canonnier, maître de manœuvre, gabier de vigie. Seul celui dont le personnage tient le poste en joue les actions ; le serveur lance les dés.",
+      "- Capitaine : crier l'ordre (Présence DD 12, +2 à chaque tir), ordonner l'abordage (grappins crochés, coût 1 de Moral).",
+      "- Barreur : virer de bord (Adresse, DD 12 pour +2 CA, 18 pour +4), prendre le vent (DD 12, vitesse d'un quart de plus), fuir (deux réussites avant la troisième touche).",
+      "- Canonnier : tirer une pièce (d20 + Adresse + bonus de l'arme contre la CA), lâcher la bordée (toutes les pièces chargées), recharger. Le canon de 8 frappe la coque ou, à −2, le gréement ; le pierrier fauche des hommes. Une pièce tirée reste vide jusqu'à ce qu'on la recharge.",
+      "- Maître de manœuvre : aveugler les voies d'eau (1d8 + Endurance en coque), rétablir le gréement (2d6 + Endurance).",
+      "- Gabier de vigie : guetter la cible (Instinct DD 12, le prochain tir a l'avantage), lancer les grappins (Adresse DD 12, à 3 cases au plus), les couper (Force DD 12).",
+      "Gréement abîmé (la moitié ou moins) : vitesse aux trois quarts, désavantage aux tests de manœuvre. Tombé : vitesse réduite de moitié, plus de virage, de vent à prendre ni de fuite, et −1 de Moral. Un homme perdu fait baisser le Moral de 1 au premier et de 1 de plus passé cinq ; l'abordage est un coup de main. Moral à 8 ou plus : avantage aux tests de manœuvre ; à 3 ou moins : désavantage.",
+      "Le détail et un exemple sont au chapitre 4 du livre des joueurs.",
+    ],
+  },
+  {
     id: "pi-armures",
     title: "Ce qu'on porte sur le dos",
     body: [

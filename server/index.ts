@@ -13,7 +13,8 @@ import express from "express";
 import { Server, type Socket } from "socket.io";
 import { rollDice } from "../shared/dice";
 import { nettoyerSouvenirs, nouveauxPerdus } from "../shared/souvenirs";
-import { ACTIONS, jouerAction, nettoyerVaisseaux, nouveauRound, nouveauVaisseau, POSTES, synchroniserPions, type Poste, type Vaisseau } from "../shared/vaisseaux";
+import { finDeCombat, jouerAction, marine, nettoyerVaisseaux, nouveauRound, nouveauVaisseau, synchroniserPions, type Poste, type Vaisseau } from "../shared/vaisseaux";
+import { generateMap } from "../shared/maps";
 import { uid } from "../shared/random";
 import { T, type Character, type GameMap, type InitiativeEntry, type Player, type RoomState, type Scenario, type Token } from "../shared/types";
 import { COOKIE_MJ, cookieMJ, estMJ, FICHIER_MJ } from "./acces-mj";
@@ -111,6 +112,54 @@ function caseLibre(st: RoomState): { x: number; y: number } {
       if (d < meilleur.d) meilleur = { x, y, d };
     }
   return { x: meilleur.x, y: meilleur.y };
+}
+
+/** Distance en cases, de bord à bord, entre les pions de deux vaisseaux (undefined si l'un des deux n'est pas posé). */
+function distanceEntre(st: RoomState, a: Vaisseau, b: Vaisseau): number | undefined {
+  const ta = a.tokenId ? st.tokens.find((t) => t.id === a.tokenId) : undefined;
+  const tb = b.tokenId ? st.tokens.find((t) => t.id === b.tokenId) : undefined;
+  if (!ta || !tb) return undefined;
+  const sa = ta.size ?? 1;
+  const sb = tb.size ?? 1;
+  const dx = Math.abs(ta.x + sa / 2 - (tb.x + sb / 2));
+  const dy = Math.abs(ta.y + sa / 2 - (tb.y + sb / 2));
+  return Math.max(0, Math.ceil(Math.max(dx, dy) - (sa + sb) / 2));
+}
+
+/**
+ * Abordage : les grappins tiennent, le capitaine l'a ordonné. La carte devient les deux ponts bord à bord (le nôtre en haut),
+ * les pions des navires s'en vont, les personnages passent sur leur pont. Le MJ pose l'équipage adverse et lance le combat.
+ */
+function passerALAbordage(room: StoredRoom, a: Vaisseau, b: Vaisseau) {
+  const st = room.state;
+  const nous = b.equipage === "groupe" && a.equipage !== "groupe" ? b : a;
+  const eux = nous === a ? b : a;
+  const map = generateMap({ kind: "pont", width: 40, height: 16, seed: Math.floor(Math.random() * 1_000_000), name: `Abordage : ${nous.nom} et ${eux.nom}` });
+  map.rooms[0].label = `Pont de ${nous.nom}`;
+  map.rooms[1].label = `Pont de ${eux.nom}`;
+  st.map = map;
+  st.fog = new Array(map.width * map.height).fill(st.fogEnabled);
+  st.tokens = st.tokens.filter((t) => t.kind === "joueur" && !t.vaisseauId);
+  for (const v of [nous, eux]) v.tokenId = undefined;
+  // Les personnages se rangent sur leur pont, sur les cases de planches libres.
+  const pont = map.rooms[0];
+  const prises = new Set<number>();
+  for (const t of st.tokens) {
+    let place: { x: number; y: number } | undefined;
+    for (let y = pont.y; y < pont.y + pont.h && !place; y++)
+      for (let x = pont.x; x < pont.x + pont.w && !place; x++) {
+        const i = y * map.width + x;
+        if (map.tiles[i] === T.sol && !prises.has(i)) place = { x, y };
+      }
+    if (!place) continue;
+    prises.add(place.y * map.width + place.x);
+    t.x = place.x;
+    t.y = place.y;
+  }
+  nous.grappins = undefined;
+  eux.grappins = undefined;
+  log(room, { from: "MJ", text: `Nouvelle carte : ${map.name}.`, kind: "systeme" });
+  noterFait(st.campagne, `Abordage : ${nous.nom} et ${eux.nom}.`);
 }
 
 function attach(socket: Socket, room: StoredRoom, player: Player) {
@@ -473,13 +522,13 @@ io.on("connection", (socket) => {
   // --- Vaisseaux (shared/vaisseaux.ts) : le MJ les crée et les pose, chaque joueur tient un poste ---
   gm<{ modele: string; nom: string; equipage: Vaisseau["equipage"] }>("vaisseau:creer", (st, p) => {
     if (st.vaisseaux.length >= 30) throw new Error("Trente vaisseaux au plus.");
-    st.vaisseaux.push(nouveauVaisseau(String(p?.modele ?? ""), String(p?.nom ?? ""), p?.equipage === "groupe" ? "groupe" : "autre"));
+    st.vaisseaux.push(nouveauVaisseau(String(p?.modele ?? ""), String(p?.nom ?? ""), p?.equipage === "groupe" ? "groupe" : "autre", st.genre));
   });
-  /** Le MJ corrige une fiche : nom, coque, boucliers, caché ou non, notes, améliorations. */
+  /** Le MJ corrige une fiche : nom, coque, boucliers (gréement), Moral, hommes, caché ou non, notes, améliorations. */
   gm<Partial<Vaisseau> & { id: string }>("vaisseau:modifier", (st, p) => {
     const v = st.vaisseaux.find((x) => x.id === p?.id);
     if (!v) throw new Error("Vaisseau introuvable.");
-    const [propre] = nettoyerVaisseaux([{ ...v, ...p, id: v.id, postes: v.postes, tokenId: v.tokenId }]);
+    const [propre] = nettoyerVaisseaux([{ ...v, ...p, id: v.id, postes: v.postes, tokenId: v.tokenId }], st.genre);
     Object.assign(v, propre, { effets: v.effets });
     synchroniserPions(st, v);
   });
@@ -514,8 +563,20 @@ io.on("connection", (socket) => {
     synchroniserPions(st, v);
   });
   gm<void>("vaisseau:round", (st, _p, room) => {
-    for (const v of st.vaisseaux) nouveauRound(v);
-    log(room, { from: "MJ", text: "Nouveau round : esquives, ordres et cibles désignées retombent.", kind: "systeme" });
+    for (const v of st.vaisseaux) {
+      nouveauRound(v);
+      synchroniserPions(st, v);
+    }
+    log(room, { from: "MJ", text: marine(st.genre).mots.nouveauRoundJournal, kind: "systeme" });
+  });
+  /** Fin d'un combat de navires : le compte des hommes perdus (qui fait baisser le Moral) et les fuites repartent à zéro. */
+  gm<void>("vaisseau:fin", (st, _p, room) => {
+    for (const v of st.vaisseaux) {
+      finDeCombat(v);
+      nouveauRound(v);
+      synchroniserPions(st, v);
+    }
+    log(room, { from: "MJ", text: marine(st.genre).mots.finDeCombatJournal ?? "Fin du combat.", kind: "systeme" });
   });
 
   /** Un joueur met son personnage à un poste du vaisseau du groupe (ou l'en retire) ; le MJ place qui il veut. */
@@ -524,17 +585,17 @@ io.on("connection", (socket) => {
     if (!s) return;
     const st = s.room.state;
     const v = st.vaisseaux.find((x) => x.id === p?.id);
-    if (!v || !POSTES.some((x) => x.id === p.poste)) return ack?.({ ok: false, error: "Poste introuvable." });
+    if (!v || !marine(st.genre).postes.some((x) => x.id === p.poste)) return ack?.({ ok: false, error: "Poste introuvable." });
     const perso = p.characterId ? st.characters.find((c) => c.id === p.characterId) : undefined;
     if (p.characterId && !perso) return ack?.({ ok: false, error: "Fiche introuvable." });
     if (!s.player.isGM) {
-      if (v.equipage !== "groupe") return ack?.({ ok: false, error: "Ce vaisseau n'est pas le vôtre." });
+      if (v.equipage !== "groupe") return ack?.({ ok: false, error: `Ce ${marine(st.genre).mots.nom.toLowerCase()} n'est pas le vôtre.` });
       const actuel = v.postes[p.poste] ? st.characters.find((c) => c.id === v.postes[p.poste]) : undefined;
       if (perso && characterOwner(st, perso) !== s.player.id) return ack?.({ ok: false, error: "Cette fiche n'est pas à toi." });
       if (!perso && actuel && characterOwner(st, actuel) !== s.player.id) return ack?.({ ok: false, error: "Ce poste est tenu par quelqu'un d'autre." });
     }
     // Un personnage ne tient qu'un poste à la fois.
-    if (perso) for (const x of POSTES) if (v.postes[x.id] === perso.id) delete v.postes[x.id];
+    if (perso) for (const x of marine(st.genre).postes) if (v.postes[x.id] === perso.id) delete v.postes[x.id];
     if (perso) v.postes[p.poste] = perso.id;
     else delete v.postes[p.poste];
     synchroniserPions(st, v);
@@ -543,18 +604,24 @@ io.on("connection", (socket) => {
   });
 
   /** Action de poste : seul le joueur dont le personnage tient le poste (ou le MJ) la joue ; le serveur lance les dés. */
-  socket.on("vaisseau:action", (p: { id: string; action: string; cibleId?: string; arme?: number }, ack?: Ack) => {
+  socket.on("vaisseau:action", (p: { id: string; action: string; cibleId?: string; arme?: number; viser?: string }, ack?: Ack) => {
     const s = session();
     if (!s) return;
     const st = s.room.state;
+    const mar = marine(st.genre);
     const v = st.vaisseaux.find((x) => x.id === p?.id);
-    const action = ACTIONS.find((a) => a.id === p?.action);
+    const action = mar.actions.find((a) => a.id === p?.action);
     if (!v || !action) return ack?.({ ok: false, error: "Action introuvable." });
     const perso = v.postes[action.poste] ? st.characters.find((c) => c.id === v.postes[action.poste]) : undefined;
     if (!s.player.isGM && (!perso || characterOwner(st, perso) !== s.player.id)) return ack?.({ ok: false, error: "Ton personnage ne tient pas ce poste." });
-    const cible = p.cibleId ? st.vaisseaux.find((x) => x.id === p.cibleId && (s.player.isGM || !x.cache)) : undefined;
+    const accessible = (x: Vaisseau) => s.player.isGM || !x.cache;
+    // Couper les grappins vise le navire qu'ils tiennent, sans que le joueur ait à le désigner.
+    const idCible = p.cibleId || (action.id === "couper" ? v.grappins : undefined);
+    const cible = idCible ? st.vaisseaux.find((x) => x.id === idCible && accessible(x)) : undefined;
     try {
-      const r = jouerAction(st.genre, v, action.id, perso, { cible, arme: Number.isInteger(p.arme) ? p.arme : 0 });
+      // Un navire ne tire et ne jette ses grappins qu'à portée : la distance se lit sur la carte, de bord à bord, quand les deux pions y sont.
+      const distance = mar.navire && cible ? distanceEntre(st, v, cible) : undefined;
+      const r = jouerAction(st.genre, v, action.id, perso, { cible, arme: Number.isInteger(p.arme) ? p.arme : 0, viser: p.viser === "greement" ? "greement" : "coque", distance });
       const premier = r.jets[0];
       log(s.room, {
         from: s.player.isGM ? "MJ" : s.player.name,
@@ -565,6 +632,9 @@ io.on("connection", (socket) => {
       });
       synchroniserPions(st, v);
       if (cible) synchroniserPions(st, cible);
+      // L'abordage change la carte : les équipages se battent à pied, bord à bord.
+      const autre = r.abordage ? st.vaisseaux.find((x) => x.id === r.abordage!.avec) : undefined;
+      if (autre) passerALAbordage(s.room, v, autre);
       ack?.({ ok: true });
       void broadcast(s.room);
     } catch (err) {

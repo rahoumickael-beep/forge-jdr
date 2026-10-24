@@ -17,7 +17,7 @@ export type GenreId =
 
 export type Ton = "epique" | "sombre" | "humoristique" | "mysterieux";
 
-export type MapKind = "donjon" | "caverne" | "nature" | "village" | "espace";
+export type MapKind = "donjon" | "caverne" | "nature" | "village" | "espace" | "mer" | "pont";
 
 /** Un type de case de carte. Le rendu dépend du thème visuel du genre. */
 export type Tile = 0 | 1 | 2 | 3 | 4 | 5 | 6;

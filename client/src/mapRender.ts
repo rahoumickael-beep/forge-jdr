@@ -7,6 +7,7 @@ import type { GameMap } from "../../shared/types";
 import { createMapCtx, makeMistPattern, materialFor, type Material } from "./mapCommon";
 import { renderCave } from "./mapCave";
 import { renderDungeon } from "./mapDungeon";
+import { renderMer, renderPont } from "./mapMer";
 import { renderNature } from "./mapNature";
 import { renderSpace } from "./mapSpace";
 import { BASE, hash, shade } from "./mapUtil";
@@ -25,6 +26,10 @@ export function renderMapImage(map: GameMap, theme: MapTheme, material: Material
       return renderVillage(c);
     case "espace":
       return renderSpace(c);
+    case "mer":
+      return renderMer(c);
+    case "pont":
+      return renderPont(c);
     default:
       return renderDungeon(c);
   }

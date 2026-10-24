@@ -417,7 +417,7 @@ export function MapCanvas({ room, tool, brush, selectedId, onSelect }: Props) {
     }
     const look = (t: Token): TokenLook => {
       const sheet = t.characterId ? room.characters.find((c) => c.id === t.characterId) : undefined;
-      return { mine: t.ownerId === room.you.id, dpr, portrait: portraitImage(figurineDe(t, sheet)), role: sheet?.archetype, lifted: d?.type === "token" && d.id === t.id };
+      return { mine: t.ownerId === room.you.id, dpr, portrait: portraitImage(figurineDe(t, sheet)), role: sheet?.archetype, lifted: d?.type === "token" && d.id === t.id, voile: !!t.vaisseauId && room.genre === "pirates" };
     };
 
     // Inclinaison du plateau, animée quand on bascule entre la vue de dessus et la vue de 3/4.

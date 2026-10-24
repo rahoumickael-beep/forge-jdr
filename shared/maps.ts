@@ -18,6 +18,8 @@ const KIND_NAMES: Record<MapKind, string> = {
   nature: "Contrée sauvage",
   village: "Village",
   espace: "Secteur",
+  mer: "Pleine mer",
+  pont: "Abordage",
 };
 
 export function generateMap(opts: MapOptions): GameMap {
@@ -34,6 +36,10 @@ export function generateMap(opts: MapOptions): GameMap {
       return { ...base, ...village(width, height, rng) };
     case "espace":
       return { ...base, ...espace(width, height, rng) };
+    case "mer":
+      return { ...base, ...mer(width, height, rng) };
+    case "pont":
+      return { ...base, ...pont(width, height) };
     default:
       return { ...base, ...dungeon(width, height, rng) };
   }
@@ -339,6 +345,81 @@ function espace(w: number, h: number, rng: Rng) {
   // Les bords restent dégagés pour entrer et sortir du secteur.
   for (let x = 0; x < w; x++) for (const y of [0, h - 1]) if (tiles[y * w + x] === T.mur) tiles[y * w + x] = T.sol;
   for (let y = 0; y < h; y++) for (const x of [0, w - 1]) if (tiles[y * w + x] === T.mur) tiles[y * w + x] = T.sol;
+  return { tiles, rooms };
+}
+
+/**
+ * Carte de pleine mer pour le combat de navires : la mer (sol) se traverse partout ; les îlots et les récifs (murs)
+ * bloquent le passage et la vue ; les hauts-fonds (eau) et les sargasses (végétation) se traversent. Un îlot et une épave
+ * sont posés loin l'un de l'autre, entourés de mer libre.
+ */
+function mer(w: number, h: number, rng: Rng) {
+  const roche = noiseField(w, h, 7, rng);
+  const grain = noiseField(w, h, 2, rng);
+  const fond = noiseField(w, h, 9, rng);
+  const algues = noiseField(w, h, 5, rng);
+  const tiles: Tile[] = roche.map((v, i) => {
+    if (v * 0.75 + grain[i] * 0.25 > 0.8) return T.mur;
+    if (fond[i] > 0.64) return T.eau;
+    if (algues[i] > 0.7 && grain[i] > 0.5) return T.vegetation;
+    return T.sol;
+  });
+  const rooms: Room[] = [];
+  const degager = (cx: number, cy: number, r: number) => {
+    for (let y = cy - r; y <= cy + r; y++) for (let x = cx - r; x <= cx + r; x++) if (x >= 0 && y >= 0 && x < w && y < h) tiles[y * w + x] = T.sol;
+  };
+  const ilot = { x: rng.int(4, Math.floor(w / 3)), y: rng.int(4, h - 6) };
+  degager(ilot.x + 1, ilot.y + 1, 3);
+  for (let y = ilot.y; y < ilot.y + 3; y++) for (let x = ilot.x; x < ilot.x + 3; x++) tiles[y * w + x] = x === ilot.x + 1 && y === ilot.y + 1 ? T.mur : T.eau;
+  rooms.push({ x: ilot.x, y: ilot.y, w: 3, h: 3, label: "Îlot" });
+  const epave = { x: rng.int(Math.floor((2 * w) / 3), w - 6), y: rng.int(3, h - 6) };
+  degager(epave.x + 1, epave.y + 1, 2);
+  rooms.push({ x: epave.x, y: epave.y, w: 3, h: 2, label: rng.pick(["Épave", "Balise de la côte", "Bouée de passe"]) });
+  // Les bords restent dégagés pour entrer et sortir de la zone.
+  for (let x = 0; x < w; x++) for (const y of [0, h - 1]) if (tiles[y * w + x] === T.mur) tiles[y * w + x] = T.sol;
+  for (let y = 0; y < h; y++) for (const x of [0, w - 1]) if (tiles[y * w + x] === T.mur) tiles[y * w + x] = T.sol;
+  return { tiles, rooms };
+}
+
+/**
+ * Deux ponts bord à bord pour l'abordage : le premier en haut, le second en dessous, proue à droite. La lisse (mur)
+ * fait le tour de chaque pont, la mer (vide) l'entoure. Trois planches d'abordage (sol) traversent les deux lisses là où
+ * les grappins tiennent. Chaque pont a deux mâts (murs) et une écoutille (porte). Les deux premières salles sont les
+ * ponts, le nôtre d'abord : c'est là que le serveur pose les personnages.
+ */
+function pont(w: number, h: number) {
+  const L = Math.max(10, Math.min(32, w - 2));
+  const HAUT = 6;
+  const ox = Math.floor((w - L) / 2);
+  const oy = Math.max(0, Math.floor((h - 2 * HAUT) / 2));
+  const tiles: Tile[] = new Array(w * h).fill(T.vide);
+  const rooms: Room[] = [];
+  /** Un pont : la coque est carrée à la poupe et se pince en proue sur trois colonnes. */
+  const coque = (x: number, r: number) => {
+    if (x >= L - 1) return r === 2 || r === 3;
+    if (x >= L - 2) return r >= 1 && r <= 4;
+    return r >= 0 && r < HAUT;
+  };
+  for (let k = 0; k < 2; k++) {
+    const y0 = oy + k * HAUT;
+    for (let x = 0; x < L; x++)
+      for (let r = 0; r < HAUT; r++) {
+        if (!coque(x, r)) continue;
+        const bord = x === 0 || !coque(x + 1, r) || !coque(x, r - 1) || !coque(x, r + 1) || r === 0 || r === HAUT - 1;
+        tiles[(y0 + r) * w + ox + x] = bord ? T.mur : T.sol;
+      }
+    const mat = (f: number) => Math.round(L * f);
+    tiles[(y0 + 2) * w + ox + mat(0.32)] = T.mur;
+    tiles[(y0 + 2) * w + ox + mat(0.62)] = T.mur;
+    tiles[(y0 + 3) * w + ox + mat(0.47)] = T.porte;
+    rooms.push({ x: ox + 1, y: y0 + 1, w: L - 3, h: HAUT - 2, label: k === 0 ? "Notre pont" : "Pont adverse" });
+  }
+  // Les planches d'abordage : la lisse basse du premier pont et la lisse haute du second s'ouvrent aux mêmes colonnes.
+  for (const f of [0.22, 0.5, 0.75]) {
+    const x = ox + Math.round(L * f);
+    tiles[(oy + HAUT - 1) * w + x] = T.sol;
+    tiles[(oy + HAUT) * w + x] = T.sol;
+  }
   return { tiles, rooms };
 }
 

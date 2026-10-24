@@ -92,7 +92,7 @@ export function EncounterBlock({ e, onPlace }: { e: Encounter; onPlace?: () => v
 }
 
 const SOURCE_LABELS: Record<Scenario["source"], string> = { ia: "écrit par l'IA", aleatoire: "tiré au hasard", bibliotheque: "écrit à la main" };
-const MAP_KIND_LABELS = { donjon: "donjon", caverne: "cavernes", nature: "extérieur", village: "village", espace: "espace" } as const;
+const MAP_KIND_LABELS = { donjon: "donjon", caverne: "cavernes", nature: "extérieur", village: "village", espace: "espace", mer: "pleine mer", pont: "ponts d'abordage" } as const;
 
 function Paragraphs({ text }: { text: string }) {
   return <>{text.split(/\n\s*\n/).map((p, i) => <p key={i}>{p.trim()}</p>)}</>;

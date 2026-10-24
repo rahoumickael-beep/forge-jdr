@@ -135,7 +135,7 @@ Sur les navires, dans les forts et aux batteries, on tire des pièces plus lourd
 | Canon de 8 | 4d10 contondants | 36 m | Deux servants, une seule fois par tour |
 | Pierrier | 2d8 perforants | 18 m | Un servant, se porte à terre |
 
-Elles ne s'achètent pas : on les prend sur une prise, on les dresse sur une barque. Les règles de combat de navire à navire sont à la charge du MJ (chapitre 4).
+Elles ne s'achètent pas : on les prend sur une prise, on les dresse sur une barque. Les règles du combat de navire à navire sont au chapitre 4 (« Le combat de navire »).
 
 ## Les armures
 
@@ -207,7 +207,7 @@ On loue rarement un navire : on l'arme, on le prend, ou on y prend une place. Le
 - **Le sloop, la goélette, le brigantin** sont les navires des pirates ; **le galion et la frégate** sont ceux des rois.
 - Un **sloop** fait de cinq à sept nœuds, soit de quarante à soixante lieues par jour. Un sloop d'occasion se paie 800 piastres. Un sloop de flibustiers porte une quarantaine d'hommes, qui touchent une part.
 - Un équipage se paie en **parts** (chapitre 3) : une pour le matelot, deux pour le capitaine, une et demie pour le quartier-maître, une et un quart pour le chirurgien, le canonnier, le charpentier et le maître de manœuvre.
-- Un navire a un **Moral** (chapitre 3) et, pour les règles du combat de navire à navire, le MJ.
+- Un navire a un **Moral** (chapitre 3) et, pour le combat de navire à navire, une fiche, cinq postes et des pièces à recharger (chapitre 4, « Le combat de navire »).
 
 ## Peser son sac
 

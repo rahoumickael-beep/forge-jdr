@@ -40,7 +40,7 @@ export function loadRooms() {
       stored.state.mapKnown ??= false;
       stored.state.campagne = nettoyerCampagne(stored.state.campagne, stored.state.genre);
       stored.state.carte ??= null;
-      stored.state.vaisseaux = nettoyerVaisseaux(stored.state.vaisseaux ?? []);
+      stored.state.vaisseaux = nettoyerVaisseaux(stored.state.vaisseaux ?? [], stored.state.genre);
       stored.state.collections = nettoyerCollections(stored.state.collections, stored.state.genre, stored.state.players.map((p) => p.id));
       rooms.set(stored.state.code, stored);
     } catch (err) {
@@ -212,7 +212,7 @@ function cleanMap(v: unknown): GameMap | null {
   if (!isObj(v) || !isInt(v.width, 4, 200) || !isInt(v.height, 4, 200)) return null;
   const { width, height } = v;
   if (!Array.isArray(v.tiles) || v.tiles.length !== width * height || !v.tiles.every((t) => isInt(t, 0, 6))) return null;
-  const kinds = ["donjon", "caverne", "nature", "village", "espace"];
+  const kinds = ["donjon", "caverne", "nature", "village", "espace", "mer", "pont"];
   return {
     name: String(v.name ?? "Carte").slice(0, 80),
     kind: (kinds.includes(v.kind as string) ? v.kind : "donjon") as GameMap["kind"],
@@ -273,6 +273,6 @@ export function sanitizeImport(data: unknown, current: RoomState): RoomState {
     campagne: nettoyerCampagne(data.campagne, isGenre(data.genre) ? data.genre : current.genre),
     carte: null,
     collections: nettoyerCollections(data.collections, isGenre(data.genre) ? data.genre : current.genre, current.players.map((p) => p.id)),
-    vaisseaux: nettoyerVaisseaux(data.vaisseaux),
+    vaisseaux: nettoyerVaisseaux(data.vaisseaux, isGenre(data.genre) ? data.genre : current.genre),
   };
 }
