@@ -61,3 +61,12 @@ for (const C of Object.values(CANONS) as Canon[]) {
     for (const secret of C.secrets) assert.ok(!texte.includes(secret), secret);
   });
 }
+
+test("campagne : la jauge garde sa valeur de départ, même au-dessus de 100", async () => {
+  const { nettoyerCampagne, nouvelleCampagne, reglerJauge } = await import("./campagne");
+  const { ARCHIPEL } = await import("./canon");
+  const c = nettoyerCampagne(JSON.parse(JSON.stringify(nouvelleCampagne("science-fiction"))), "science-fiction");
+  assert.equal(c.jauge, 131);
+  reglerJauge(c, 200, ARCHIPEL);
+  assert.equal(c.jauge, 131);
+});

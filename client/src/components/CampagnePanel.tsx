@@ -1,6 +1,6 @@
 // Mémoire de campagne : le MJ tient les séances, les fils, les PNJ, les ordres et la jauge ; les joueurs lisent la chronique.
 import { useEffect, useMemo, useState } from "react";
-import { preparerSeance, seanceEnCours, texteDePreparation } from "../../../shared/campagne";
+import { jaugeMax, preparerSeance, seanceEnCours, texteDePreparation } from "../../../shared/campagne";
 import { canonDe } from "../../../shared/canon";
 import type { RoomView } from "../../../shared/types";
 import { send, toast } from "../store";
@@ -92,7 +92,7 @@ export function CampagnePanel({ room }: { room: RoomView }) {
       {jauge && c.jauge !== null && (
         <div className="section stack">
           <h3>{jauge.nom[0].toUpperCase() + jauge.nom.slice(1)} : {c.jauge}</h3>
-          <input type="range" min={0} max={100} value={c.jauge} aria-label={jauge.nom} onChange={(e) => send("campagne:set", { jauge: Number(e.target.value) })} />
+          <input type="range" min={0} max={jaugeMax(canon)} value={c.jauge} aria-label={jauge.nom} onChange={(e) => send("campagne:set", { jauge: Number(e.target.value) })} />
           <div className="row">
             {[-3, -1, 1, 2, 5].map((d) => <button key={d} className="btn small" onClick={() => send("campagne:set", { jauge: c.jauge! + d })}>{d > 0 ? `+${d}` : d}</button>)}
           </div>

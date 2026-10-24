@@ -13,7 +13,7 @@ export function ChroniquePanel({ room }: { room: RoomView }) {
   return (
     <div className="stack">
       <h3>Chronique</h3>
-      {c.jauge !== null && c.noms?.jauge && <p className="small">{c.noms.jauge[0].toUpperCase() + c.noms.jauge.slice(1)} : {c.jauge} / 100</p>}
+      {c.jauge !== null && c.noms?.jauge && <p className="small">{c.noms.jauge[0].toUpperCase() + c.noms.jauge.slice(1)} : {c.jauge}</p>}
       {closes.length === 0 && <p className="small muted">Rien encore. Le MJ écrit ici ce qu'on retient de chaque séance.</p>}
       {closes.map((s) => (
         <article key={s.numero} className="paper sheet">

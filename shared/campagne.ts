@@ -59,7 +59,7 @@ export function nettoyerCampagne(v: unknown, genre: GenreId): Campagne {
     fils,
     pnj,
     reputations,
-    jauge: base.jauge === null ? null : borne(typeof v.jauge === "number" ? v.jauge : base.jauge, 0, 100),
+    jauge: base.jauge === null ? null : borne(typeof v.jauge === "number" ? v.jauge : base.jauge, 0, jaugeMax(canonDe(genre))),
     jaugeVisible: v.jaugeVisible === true,
     reserve: borne(Number(v.reserve) || 0, 0, max),
     preparation: txt(v.preparation, 20000),
@@ -97,11 +97,14 @@ export function noterFait(c: Campagne, texte: string) {
   if (s.faits.length > MAX_FAITS) s.faits.shift();
 }
 
+/** Plafond de la jauge d'un monde : 100, ou plus si elle part plus haut (131 Phares dans l'Archipel). */
+export const jaugeMax = (canon: Canon | undefined) => Math.max(100, canon?.campagne?.jauge?.depart ?? 100);
+
 /** Règle la jauge ; rend les seuils franchis vers le bas, à annoncer au MJ. */
 export function reglerJauge(c: Campagne, valeur: number, canon: Canon | undefined): { valeur: number; effet: string }[] {
   if (c.jauge === null) return [];
   const avant = c.jauge;
-  c.jauge = borne(valeur, 0, 100);
+  c.jauge = borne(valeur, 0, jaugeMax(canon));
   return (canon?.campagne?.jauge?.seuils ?? []).filter((s) => avant > s.valeur && c.jauge! <= s.valeur);
 }
 

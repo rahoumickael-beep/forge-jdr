@@ -1014,6 +1014,7 @@ function paintMedallion(c: CanvasRenderingContext2D, t: Token, cx: number, cy: n
   // Le personnage est plus grand que le disque : les épaules passent sous le métal. Sous 40 px, la silhouette se simplifie.
   const simple = size < 40 * (t.size ?? 1);
   if (o.portrait) paintPortrait(c, o.portrait, cx, cy, ri);
+  else if (t.vaisseauId) shipIcon(c, cx, cy, ri * 0.82, monster);
   else if (objet && CHEST.test(t.name)) chestIcon(c, cx, cy + ri * 0.04, ri * 0.62, lw * 0.9, rr);
   else if (objet) lettre = true;
   else if (boss) silhouette(c, menace, cx, cy + ri * 0.04, ri * 0.82, rng(seed, 15));
@@ -3135,4 +3136,57 @@ export function exploredRooms(map: GameMap, fog: boolean[] | null, fogEnabled: b
     if (seen * 2 > r.w * r.h) out.add(i);
   });
   return out;
+}
+
+/** Vaisseau vu de dessus dans le médaillon : coque en pointe, ailes, deux tuyères allumées. Rouille pour l'ennemi. */
+function shipIcon(c: CanvasRenderingContext2D, cx: number, cy: number, r: number, ennemi: boolean) {
+  const coque = ennemi ? "#c98a5a" : "#e6dcc4";
+  const ombre = ennemi ? "#6b3a20" : "#7d7462";
+  c.save();
+  // Tuyères : lueur sous la poupe.
+  for (const dx of [-0.22, 0.22]) {
+    const halo = c.createRadialGradient(cx + dx * r, cy + r * 0.78, 0, cx + dx * r, cy + r * 0.78, r * 0.35);
+    halo.addColorStop(0, ennemi ? "rgba(255,120,60,.95)" : "rgba(120,200,255,.95)");
+    halo.addColorStop(1, "rgba(0,0,0,0)");
+    c.fillStyle = halo;
+    c.beginPath();
+    c.arc(cx + dx * r, cy + r * 0.78, r * 0.35, 0, Math.PI * 2);
+    c.fill();
+  }
+  // Ailes
+  c.fillStyle = ombre;
+  c.beginPath();
+  c.moveTo(cx - r * 0.16, cy - r * 0.1);
+  c.lineTo(cx - r * 0.86, cy + r * 0.5);
+  c.lineTo(cx - r * 0.74, cy + r * 0.66);
+  c.lineTo(cx - r * 0.14, cy + r * 0.42);
+  c.closePath();
+  c.moveTo(cx + r * 0.16, cy - r * 0.1);
+  c.lineTo(cx + r * 0.86, cy + r * 0.5);
+  c.lineTo(cx + r * 0.74, cy + r * 0.66);
+  c.lineTo(cx + r * 0.14, cy + r * 0.42);
+  c.closePath();
+  c.fill();
+  // Coque
+  const g = c.createLinearGradient(cx - r * 0.3, cy, cx + r * 0.3, cy);
+  g.addColorStop(0, ombre);
+  g.addColorStop(0.45, coque);
+  g.addColorStop(1, ombre);
+  c.fillStyle = g;
+  c.beginPath();
+  c.moveTo(cx, cy - r * 0.92);
+  c.quadraticCurveTo(cx + r * 0.32, cy - r * 0.3, cx + r * 0.3, cy + r * 0.72);
+  c.lineTo(cx - r * 0.3, cy + r * 0.72);
+  c.quadraticCurveTo(cx - r * 0.32, cy - r * 0.3, cx, cy - r * 0.92);
+  c.closePath();
+  c.fill();
+  c.strokeStyle = "rgba(10,6,3,.8)";
+  c.lineWidth = Math.max(1, r * 0.05);
+  c.stroke();
+  // Verrière
+  c.fillStyle = ennemi ? "rgba(255,190,120,.85)" : "rgba(150,210,255,.85)";
+  c.beginPath();
+  c.ellipse(cx, cy - r * 0.42, r * 0.09, r * 0.17, 0, 0, Math.PI * 2);
+  c.fill();
+  c.restore();
 }
