@@ -1675,10 +1675,13 @@ export function fichierCreature(c: Creature): string {
   return c.publicName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
-/** Figurine peinte d'une créature (Aubreterre seulement), ou rien. */
+/** Mondes dont les créatures ont leurs peintures (vignettes et cartes, faites par scripts/vignettes-figurines.mjs). */
+export const MONDES_PEINTS = new Set<GenreId>(["fantasy", "science-fiction"]);
+
+/** Figurine peinte d'une créature, ou rien. */
 export function pionDeCreature(creatureId?: string): string | undefined {
   const c = creatureId ? BESTIARY.find((x) => x.id === creatureId) : undefined;
-  return c?.genre === "fantasy" ? `/pions/${fichierCreature(c)}.webp` : undefined;
+  return c && MONDES_PEINTS.has(c.genre) ? `/pions/${fichierCreature(c)}.webp` : undefined;
 }
 
 export function nomVuParLesJoueurs(nom: string, creatureId?: string): string {

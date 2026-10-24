@@ -246,7 +246,7 @@ export const BESTIAIRE_ARCHIPEL: Creature[] = [
     ],
     lore: "Armure blanche, bouclier haut, visière fermée : la Garde Hégémonique ne parle pas aux gens qu'elle arrête. Elle garde le Palais des Péages, les postes de saut et la porte des Censeurs. On dit qu'elle recrute petit, dans les orphelinats d'État.",
     gmNotes: "Ils ne se corrompent pas, mais ils obéissent aux papiers : un faux ordre bien fait les retourne mieux qu'un pot-de-vin. Casser la Muraille (les prendre de flanc, les séparer) suffit à les rendre ordinaires. Sans casque, c'est un jeune homme de dix-neuf ans qui hésite : une bonne scène pour un joueur qui l'épargne.",
-    scene: "a tall guard in gleaming white segmented plate armor with a closed round visor, a crowned tower emblem on the chest, a tall rectangular shield on the left arm and a humming vibro sword in the right hand, standing at attention on a marble terrace of a vast capital, white towers stacked in terraces behind him",
+    scene: "a tall palace guard in ornate white ceramic plate armor edged with gold filigree, a tall crested helmet with a crimson horsehair plume and an open face guard showing a stern bearded face, a long white cloak, a tall rectangular shield painted with a crowned tower, a humming vibro halberd, standing at attention on a marble terrace of a vast capital of white towers",
   }),
   creature({
     id: "corsaire-de-la-ligue",
@@ -294,7 +294,7 @@ export const BESTIAIRE_ARCHIPEL: Creature[] = [
     ],
     lore: "Rakka Sel-Noir, de la Main Close. Tarrak, quatre bras, la peau grise marbrée de plaques : on dit qu'elle n'a jamais manqué une prime et jamais touché un enfant. Elle se présente chez les gens, s'assoit, et attend qu'on lui serve une tasse.",
     gmNotes: "Elle arrive le lendemain de la première mensualité manquée, après Barnabé Coquerel : « faire une visite ». Elle veut que la dette soit payée, pas qu'on meure. Elle accepte un arrangement honnête, une dette d'honneur équivalente, ou une parole qu'elle jugera tenable. Si vous la combattez, jouez-la en tacticienne : filet, matraque pour étourdir, lames pour finir. Elle peut revenir comme alliée à contrecœur.",
-    scene: "a four-armed Tarrak woman with grey marbled leathery skin and a heavy brow, two arms holding curved vibro blades, a third holding a shock baton and the fourth a weighted net, dark armor plates bolted over her shoulders, standing on a dusty dock with domed buildings and a landing cargo ship behind her, a steaming cup on a crate beside her",
+    scene: "a massive heavy-built alien woman as broad as a wrestler with four thick muscular arms, grey leathery hide marbled with darker plates like a rhinoceros, a bald heavy-browed head with a calm patient face, two curved vibro blades in the upper hands, a weighted net and a steaming cup of tea in the lower hands, dark armor plates bolted over her shoulders, sitting on a crate on a dusty frontier dock",
   }),
   creature({
     id: "censeur",

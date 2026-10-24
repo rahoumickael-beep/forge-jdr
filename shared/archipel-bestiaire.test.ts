@@ -62,3 +62,17 @@ test("archipel : planches au style SF, lumière de la famille en tête, ni néga
   }
   assert.equal(seeds.size, SF.length, "graines en double");
 });
+
+test("archipel : chaque créature a sa vignette et sa carte, sous un nom de fichier qui ne trahit aucun secret", async () => {
+  const { existsSync, readdirSync, readFileSync } = await import("node:fs");
+  const { fichierCreature, pionDeCreature } = await import("./bestiary");
+  const script = readFileSync("scripts/vignettes-figurines.mjs", "utf8");
+  const enAttente = new Set(["garde-hegemonique", "rakka-sel-noir"]); // repeintes (25/10/2026)
+  for (const c of SF) {
+    if (c.publicName) assert.ok(script.includes(`"${c.id}": "${fichierCreature(c)}"`), `alias de ${c.id} dans vignettes-figurines.mjs`);
+    assert.equal(pionDeCreature(c.id), `/pions/${fichierCreature(c)}.webp`);
+    if (!enAttente.has(c.id)) for (const d of ["pions", "cartes"]) assert.ok(existsSync(`client/public/${d}/${fichierCreature(c)}.webp`), `${d}/${fichierCreature(c)}.webp`);
+  }
+  const mots = ARCHIPEL.secrets.map((s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z]+/g, "-"));
+  for (const d of ["client/public/pions", "client/public/cartes"]) for (const f of readdirSync(d)) for (const m of mots) assert.ok(!f.includes(m), `${d}/${f} trahit « ${m} »`);
+});

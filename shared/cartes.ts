@@ -1,6 +1,6 @@
 // Pioches du MJ : rencontres (le bestiaire), événements et objets (le canon). Le MJ pioche en secret, puis retourne
 // la carte devant toute la table ; une carte retournée est publique.
-import { crLabel, creaturesFor, fichierCreature } from "./bestiary";
+import { crLabel, creaturesFor, fichierCreature, MONDES_PEINTS } from "./bestiary";
 import { canonDe } from "./canon";
 import { getGenre } from "./genres";
 import { ideesDe } from "./idees";
@@ -42,7 +42,7 @@ export function tirerCarte(type: TypeDeCarte, genre: GenreId, level: number, see
         titre: c.publicName ?? c.name,
         sousTitre: `${c.region === "Partout" ? "Partout" : c.region} · puissance ${crLabel(c.cr)}`,
         texte: c.lore,
-        image: genre === "fantasy" ? `/cartes/${fichierCreature(c)}.webp` : undefined,
+        image: MONDES_PEINTS.has(genre) ? `/cartes/${fichierCreature(c)}.webp` : undefined,
       };
     const g = getGenre(genre);
     const nom = rng.pick(ideesDe(genre).enemies);
