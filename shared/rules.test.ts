@@ -341,7 +341,7 @@ test("classes des Îles du Vent : un coup, puis recharger ; le coup de main coû
     assert.ok(coup.every((p) => p.level >= 11), `${c.name} : coup de main avant le niveau 11`);
   }
   const texte = JSON.stringify(REGLES_ILES);
-  for (const mot of ["Le Moral part à 6", "1 point de Moral", "Un seul coup de main par scène", "Une cargaison de captifs n'est pas une prise", "Tout le monde commence à 1", "De 0 à 3", "un coup, rechargement long", "mal de Siam", "tafia", "4 réaux"]) {
+  for (const mot of ["Le Moral part à 6", "1 point de Moral", "Un seul coup de main par scène", "Une cargaison de captifs n'est pas une prise", "Tout le monde commence à 1", "De 0 à 3", "un coup, recharger (action)","mal de Siam", "tafia", "4 réaux"]) {
     if (mot === "Le Moral part à 6" || mot === "Tout le monde commence à 1" || mot === "De 0 à 3") continue;
     assert.ok(texte.includes(mot), `règles des Îles du Vent : « ${mot} »`);
   }

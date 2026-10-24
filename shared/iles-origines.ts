@@ -15,7 +15,7 @@ export const ORIGINES_ILES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Le pied marin", text: "Avantage aux tests de mer et de manœuvre. Un pont qui roule ne te gêne pas, et tu t'y déplaces sans désavantage. Argent de départ : 15 piastres." },
+      { name: "Le pied marin", text: "Avantage aux tests de manœuvre. Un pont qui roule ne te gêne pas, et tu t'y déplaces sans désavantage." },
       { name: "Où vendre une prise", text: "Tu connais tous les ports où l'on peut vendre une prise sans trop de questions. Une fois par semaine de jeu, tu trouves un acheteur et un prix honnête pour une marchandise de bord." },
       { name: "Marqué par la Côte", text: "Dans un port du roi, on reconnaît un flibustier à sa démarche. Désavantage à ton premier test de Persuasion avec chaque officier ou fonctionnaire du roi." },
     ],
@@ -49,7 +49,7 @@ export const ORIGINES_ILES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Tir de boucanier", text: "Avantage aux attaques à distance à longue portée avec une arme à feu, et aux tests de Survie en forêt. Argent de départ : 10 piastres et un fusil boucanier." },
+      { name: "Tir de boucanier", text: "Tu ignores le désavantage de la longue portée avec une arme à feu, et tu as l'avantage aux tests de Survie en forêt. Tu pars avec un fusil boucanier." },
       { name: "Viande du boucan", text: "Tu fumes la viande de façon qu'elle tienne un mois : le groupe, avec une journée de chasse, a ses rations pour une semaine. Les bêtes à cornes sauvages te sont familières." },
       { name: "Mal à l'aise en ville", text: "Désavantage à tes tests de Persuasion et de Tromperie dans un bourg de plus de cent habitants : tu sens le boucan, et on te le fait remarquer." },
     ],
@@ -83,7 +83,7 @@ export const ORIGINES_ILES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Les mornes pour maison", text: "Avantage aux tests de Discrétion et de Survie dans les montagnes et la forêt. Tu trouves un sentier là où les autres voient un mur. Argent de départ : 5 piastres et une machette." },
+      { name: "Les mornes pour maison", text: "Avantage aux tests de Discrétion et de Survie dans les montagnes et la forêt. Tu trouves un sentier là où les autres voient un mur." },
       { name: "Les villages des mornes", text: "Dans les mornes, un village de marrons t'accueille pour une nuit sans poser de question, et on y échange des nouvelles. Une fois par semaine de jeu, un éclaireur te dit ce qui se passe sur les routes." },
       { name: "Une prime sur ta tête", text: "Un planteur, quelque part, paie pour ta capture, vivant ou mort. Dans une ville de plantation, le MJ peut faire venir un chasseur de marrons ; tu as le désavantage à tes tests de Persuasion avec un planteur." },
     ],
@@ -117,7 +117,7 @@ export const ORIGINES_ILES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Lettré", text: "Tu sais lire, écrire et compter. Avantage aux tests d'Histoire et d'Investigation sur un contrat, une lettre ou un acte. Argent de départ : 20 piastres." },
+      { name: "Lettré", text: "Tu sais lire, écrire et compter. Avantage aux tests d'Histoire et d'Investigation sur un contrat, une lettre ou un acte." },
       { name: "Parler aux officiers", text: "Tu connais les usages du royaume : avantage aux tests de Persuasion avec un officier, un fonctionnaire ou un notable français, qui te traite en égal." },
       { name: "Mal d'un pays qu'on ne connaît pas", text: "Tu n'as pas le pied marin ni le pied des bois : désavantage à ton premier test de mer ou de Survie de chaque séance, le temps de t'y faire." },
     ],
@@ -151,7 +151,7 @@ export const ORIGINES_ILES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "La langue de l'Empire", text: "Tu parles l'espagnol, le français et un peu de latin d'Église. Avantage aux tests de Persuasion et d'Intuition avec un Espagnol, un prêtre ou un marchand de l'Empire. Argent de départ : 15 piastres." },
+      { name: "La langue de l'Empire", text: "Tu parles l'espagnol, le français et un peu de latin d'Église. Avantage aux tests de Persuasion et d'Intuition avec un Espagnol, un prêtre ou un marchand de l'Empire." },
       { name: "Ports et chapelles", text: "Tu connais les ports espagnols, leurs prêtres et leurs usages. Une fois par semaine de jeu, un sacristain, un douanier ou un marchand te donne une information ou une introduction." },
       { name: "Loyauté à prouver", text: "Chez les flibustiers, on te surveille : désavantage à ton premier test de Persuasion avec chaque équipage de la Côte, tant que tu n'as pas fait tes preuves à bord." },
     ],
@@ -185,7 +185,7 @@ export const ORIGINES_ILES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Une langue de plus", text: "Tu parles le français, l'anglais ou le hollandais au choix, et une langue de plus que le MJ t'accorde selon ton passé. Argent de départ : 15 piastres." },
+      { name: "Une langue de plus", text: "Tu parles le français, l'anglais ou le hollandais au choix, et une langue de plus que le MJ t'accorde selon ton passé." },
       { name: "Un port étranger", text: "Tu connais quelqu'un dans un port étranger (le MJ dit lequel avec toi) : un hôte, un mouilleur, un tavernier. Une fois par semaine de jeu, il te dit ce qui se murmure là-bas." },
       { name: "Un passé que personne ne vérifie", text: "Quand tu racontes qui tu étais, on te croit : avantage à ton premier test de Tromperie par séance. Mais ce passé a un trou, et le MJ le connaît." },
     ],
@@ -205,7 +205,7 @@ export const ORIGINES_ILES: Origin[] = [
         blurb: "Africain libre, affranchi ou Caraïbe des îles : tu as gagné ou gardé ta liberté, et tu connais chaque crique de ton île, chaque courant, chaque maître de port.",
         bonus: { 2: 1, 5: 1 },
         traits: [
-          { name: "Chaque crique", text: "Maîtrise de Perception et d'Intuition. Tu repères un mouillage ou une patrouille avant qu'elle ne te voie, et tu lis un maître de port à ses mains. Tu es libre, et ça se voit : on te traite avec un respect prudent." },
+          { name: "Chaque crique", text: "Maîtrise de Perception et d'Intuition. Tu repères un mouillage ou une patrouille avant qu'elle ne te voie, et tu lis un maître de port à ses mains. Dans un port de la Côte, on te traite en égal ; ailleurs, tu es surveillé." },
         ],
       },
     ],
