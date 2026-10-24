@@ -30,7 +30,8 @@ test("bestiaire : ids uniques et nombre de créatures", () => {
   assert.equal(new Set(ids).size, ids.length, "id en double");
   assert.ok(BESTIARY.length >= 45 && BESTIARY.length <= 60, `${BESTIARY.length} créatures`);
   assert.equal(creaturesFor("fantasy").length, BESTIARY.length);
-  assert.equal(creaturesFor("pirates").length, 0);
+  // Les Îles du Vent ont leur bestiaire (iles-bestiaire.ts) et leurs tests (iles-bestiaire.test.ts).
+  assert.ok(creaturesFor("pirates").length >= 22);
 });
 
 test("bestiaire : FP de 0 à 20, un tiers de morts, des légendaires", () => {

@@ -43,6 +43,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   "Gens de la loi": "stormy slate sky over the prairie with a shaft of pale sun, deep blue shadows and tan leather tones",
   "Hors-la-loi": "glowing embers of a campfire at dusk under a deep blue sky, warm amber and soot tones",
   "Gens du rail": "warm oil lamp glow of a saloon through coal smoke and locomotive steam, amber and soot black tones",
+  // Les Îles du Vent (marine à l'huile du XVIIIe siècle)
+  "Bêtes de mer et de côte": "turquoise shallow water light rippling over white sand, sun shafts through the surface, teal and pale coral tones",
+  "Gens de mer": "low golden sun over a heaving sea, salt haze and warm rim light on tarred rope and weathered timber, ochre and brass tones",
+  "Soldats et chasseurs": "hard white tropical noon sun with deep green jungle shadows, whitewashed stone and buff leather tones",
+  "Figures et navires": "storm light breaking through slate clouds over dark water, one pale shaft of sun, indigo and tarnished brass tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */
