@@ -29,7 +29,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
       { name: "Tactique de meute", text: "Avantage à l'attaque si un allié non neutralisé se tient à 1,5 m de la cible." },
     ],
     actions: [
-      hit("Morsure", "contact", 4, "1,5 m", "1d4+2", "perforants", "Une cible blessée fait un jet de sauvegarde d'Endurance DD 10 ou attrape la fièvre d'égout : empoisonnée jusqu'au prochain repos long."),
+      hit("Morsure", "contact", 4, "1,5 m", "1d4+2", "perforants", "Une cible blessée fait un jet de sauvegarde d'Endurance DD 11 ou attrape la fièvre d'égout : empoisonnée jusqu'au prochain repos long."),
     ],
     lore: "Gros comme un chat, gris de crasse, il n'a jamais vu le jour. Les Taupes disent qu'il y a plus de rats sous la Résidence que de locataires dessus, et les comptent au bruit de leurs bottes. Dans les Souterrains, un tunnel sans rats est un tunnel où l'eau va monter.",
     gmNotes: "Seul, il fuit ; à dix, il mord. Des rats qui passent en file dans le même sens sont un avertissement gratuit : l'eau monte dans une heure (Survie DD 10). Un sac de grain lancé à 6 m les occupe un round. Les Taupes en font des guetteurs et ne les tuent jamais devant un visiteur. À réserver aux niveaux 1 et 2, par poignées.",
@@ -66,7 +66,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
       { name: "Collier de la Clinique", text: "Son collier porte un petit Compteur : il obéit aux ordres enregistrés et suit l'odeur d'un Compteur précis. Un Compteur piraté (sans numéro) le brouille : désavantage à ses tests de pistage. Couper le collier (une action, CA 10) le rend errant." },
     ],
     actions: [
-      hit("Morsure", "contact", 5, "1,5 m", "2d4+3", "perforants", "Une cible Moyenne ou plus petite fait un jet de sauvegarde de Corps DD 12 ou tombe à terre."),
+      hit("Morsure", "contact", 5, "1,5 m", "2d4+3", "perforants", "Une cible Moyenne ou plus petite fait un jet de sauvegarde de Corps DD 13 ou tombe à terre."),
     ],
     lore: "Noir, large du poitrail, les oreilles coupées et un collier d'acier avec un petit voyant vert. Les Cliniques de Prolongation les lâchent la nuit entre les allées du Jardin et les rappellent à l'aube. Ils ne jappent pas, ils ne grognent pas : ils arrivent.",
     gmNotes: "Il est dressé pour retenir, pas pour tuer : il fait tomber, puis il se couche sur la cible en attendant son maître. Un morceau de viande jeté à 6 m lui fait lâcher la piste un round (Dressage DD 11) ; un chien dont on a coupé le collier s'attache à qui le nourrit. Son maître est un agent de la Clinique avec un taser à harpon : tuer le chien le fait venir en deux rounds.",
@@ -126,7 +126,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     skills: { Intimidation: 2 },
     languages: "français, argot des Blocs",
     traits: [
-      { name: "Brassard jaune", text: "Sous la moitié de ses PV, il fait un jet de sauvegarde d'Aplomb DD 10. En cas d'échec, il lâche son arme et se rend." },
+      { name: "Brassard jaune", text: "Sous la moitié de ses PV, il lâche son arme et se rend, sauf si son huissier le voit encore (alors Aplomb DD 10)." },
       { name: "Serrures neuves", text: "Il porte sur lui de quoi fermer une porte pour toujours : changer une serrure prend 1 minute, et la cible ne peut plus rentrer chez elle sans un test de Technique (Serrurerie) DD 15." },
     ],
     actions: [
@@ -147,7 +147,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     languages: "français, argot du Port",
     traits: [
       { name: "Nœud de marin", text: "Le nœud tatoué sur son Compteur le fait reconnaître des siens : un personnage qui porte le même nœud a l'avantage à Persuasion contre lui." },
-      { name: "Se négocie", text: "Il baisse sa barre si on pose 30 h sur le comptoir (Persuasion DD 11) ou s'il tombe sous la moitié de ses PV. Il appelle alors du renfort : 1d4 gros bras arrivent en deux rounds." },
+      { name: "Se négocie", text: "Il baisse sa barre si on pose 30 h sur le comptoir (Persuasion DD 11) ou s'il tombe sous la moitié de ses PV. Il appelle alors du renfort, une seule fois : 2 gros bras au plus arrivent en deux rounds." },
     ],
     actions: [hit("Barre de manutention", "contact", 5, "1,5 m", "1d6+3", "contondants")],
     lore: "Des épaules de docker, un nœud de marin tatoué sur le Compteur, et le sourire de quelqu'un qui sait ce que vaut votre soirée. Il se tient devant la porte d'une cale, jamais loin d'un conteneur plus gros que lui. On le reconnaît à ce qu'il ne court jamais.",
@@ -164,12 +164,13 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     languages: "français, argot des Blocs",
     traits: [
       { name: "Droit d'entrer", text: "Une porte fermée ne l'arrête pas plus d'un round : il lit le Compteur de l'occupant, la serrure s'ouvre. Tout le palier sait qu'il est entré." },
-      { name: "Visière opaque", text: "Avantage aux jets de sauvegarde contre l'aveuglement, et le désavantage à Perspicacité contre lui." },
+      { name: "Visière opaque", text: "Avantage aux jets de sauvegarde contre l'aveuglement ; les créatures ont le désavantage aux tests de Perspicacité contre lui." },
       { name: "Je dois vous le dire une fois", text: "Au premier contact, il lit l'avis à voix haute. Tant qu'il ne l'a pas lu, il n'attaque pas le premier." },
     ],
     actions: [
       hit("Matraque électrique", "contact", 5, "1,5 m", "1d6+3", "contondants", "", { damage: "1d4", damageType: "électrique" }),
       hit("Taser à harpon", "distance", 3, "6/12 m", "1d6+1", "électrique", "La cible est ancrée au sol par un câble : elle ne peut pas s'éloigner de plus de 6 m de l'huissier tant qu'elle n'a pas arraché le harpon (une action, test de Corps DD 13)."),
+      save("Saisie", "For", 13, "Une fois par combat, au contact : la cible fait un jet de sauvegarde de Corps DD 13. En cas d'échec, elle perd 20 h de son solde."),
     ],
     lore: "Un brassard jaune, une visière opaque, une serrure neuve dans la poche gauche. Il ne hausse jamais la voix : il lit l'avis, laisse l'ancienne clé sur le paillasson et repart avec la nouvelle. Les gamins des Blocs miment sa démarche en riant, de loin.",
     gmNotes: "Il veut finir à l'heure, parce qu'il est payé à l'expulsion. Il cherche à ancrer avant de frapper, et à se faire payer plutôt qu'à tuer : 50 h bien présentées règlent un huissier ordinaire (Persuasion DD 13). Il se rend sous le quart de ses PV. Appelé en renfort, l'huissier-chef arrive en trois rounds. Un personnage Ancien Huissier reconnaît sa visière à son numéro.",
@@ -182,7 +183,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     cr: 2, ac: 14, acNote: "manteau ciré doublé", hd: 14, speed: { marche: 9 },
     stats: [12, 16, 14, 14, 14, 12],
     skills: { Discrétion: 5, Perspicacité: 4, Persuasion: 3 },
-    languages: "français, argot du Port, deux langues de marins",
+    languages: "français, argot du Port, portugais de quai",
     traits: [
       { name: "Compteurs de rechange", text: "Il porte trois Compteurs piratés : les caméras qui lisent les Compteurs ne le voient pas tant qu'il n'a pas attaqué ce round." },
       { name: "Se fond dans le marché", text: "Dans une foule ou entre des conteneurs, il se cache en bonus d'action (Discrétion +5)." },
@@ -192,7 +193,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
       hit("Pistolet à aiguilles", "distance", 5, "12/36 m", "1d8+3", "perforants"),
       hit("Couteau", "contact", 3, "1,5 m", "1d4+1", "tranchants"),
     ],
-    bonusActions: [special("Fumigène", "Il lâche une capsule : une zone de 3 m de rayon est opaque jusqu'à la fin de son prochain tour. Il se déplace alors sans provoquer d'attaque d'opportunité.")],
+    bonusActions: [special("Fumigène", "Une fois par combat, il lâche une capsule : une zone de 3 m de rayon est opaque jusqu'à la fin de son prochain tour. Il se déplace alors sans provoquer d'attaque d'opportunité.")],
     lore: "Un manteau ciré aux poches qui ne s'arrêtent jamais, trois Compteurs au poignet dont aucun n'est le sien. Il vend des papiers, des implants d'occasion et des heures volées, sans jamais toucher à la marchandise des autres. Son nom change chaque semaine ; sa poignée de main, jamais.",
     gmNotes: "Il veut être payé, qu'on lui fiche la paix et ne jamais finir sur le Compteur d'un huissier. Il se laisse acheter (Persuasion DD 13), troquer contre un renseignement sur une rafle, ou prendre en otage d'un autre marché. Sous la moitié de ses PV, il lâche un Compteur jetable de 200 h d'heures volées, qui reflueront, et fuit par le marché. Les heures volées qu'il vend sont bonnes une semaine.",
     scene: "a lean smuggler in a long waxed coat with deep hidden pockets, a needle pistol held low, a satchel of salvaged implants at his hip, standing between stacked shipping containers in a narrow dockside alley, wet cobbles, a market stall of wires and metal parts and a crane hook swinging behind him",
@@ -207,7 +208,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     languages: "français",
     traits: [
       { name: "Ciré jaune", text: "Avantage aux jets de sauvegarde contre le froid et les embruns, et aux jets pour ne pas glisser ou être poussé sur le béton mouillé." },
-      { name: "Tient la mer", text: "Il ne bat pas en retraite devant une vanne, une pompe ou un câble qu'il garde. Il ne se laisse corrompre que par des ordres qui parlent de la mer." },
+      { name: "Tient la mer", text: "Il n'obéit qu'à un ordre qui protège la mer. Aucune somme ne le fait quitter son poste." },
     ],
     actions: [
       multi("Deux coups de gaffe.", { "Gaffe de manœuvre": 2 }),
@@ -226,8 +227,8 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     skills: { Intimidation: 4, Perspicacité: 4 },
     languages: "français, argot des Blocs",
     traits: [
-      { name: "Je dois vous le dire une fois", text: "Au premier contact, il lit l'avis à voix haute. Tant qu'il ne l'a pas lu, il n'attaque pas le premier. Qui l'a entendu et reste est « en défaut » : ses clercs ont l'avantage contre lui." },
-      { name: "Prime à l'heure", text: "S'il est en retard sur le planning de l'expulsion, ses attaques infligent 1d6 dégâts de plus. S'il est en avance, il propose un arrangement." },
+      { name: "Je dois vous le dire une fois", text: "Au premier contact, il lit l'avis à voix haute. Tant qu'il ne l'a pas lu, il n'attaque pas le premier. Qui l'a entendu et reste est « en défaut » : ses clercs ont l'avantage à leurs attaques contre ceux qui sont en défaut." },
+      { name: "Prime à l'heure", text: "À partir du round 4, ses attaques infligent 1d6 de plus ; avant, il propose un arrangement." },
     ],
     actions: [
       multi("Deux coups de matraque électrique.", { "Matraque électrique": 2 }),
@@ -235,7 +236,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
       hit("Taser à harpon", "distance", 3, "6/12 m", "1d6+1", "électrique", "La cible est ancrée au sol par un câble (arracher le harpon : une action, test de Corps DD 13)."),
     ],
     bonusActions: [special("Ordre de rang", "Un clerc ou un huissier à 9 m qui l'entend se déplace de sa vitesse ou attaque (sa réaction).")],
-    lore: "Armure lourde de fibre, visière à verre blindé, un carnet de quittances dans une poche de poitrine. Il arrive avec quatre clercs, toujours une demi-heure avant l'heure dite, et lit l'avis devant tout le palier. Comme Grégoire Tessandier, il compte sa prime avant ses coups.",
+    lore: "Armure lourde de fibre, visière à verre blindé, un carnet de quittances dans une poche de poitrine. Il arrive avec quatre clercs, toujours une demi-heure avant l'heure dite, et lit l'avis devant tout le palier. Un huissier-chef comme Grégoire Tessandier compte sa prime avant ses coups.",
     gmNotes: "Il veut finir à l'heure et toucher sa prime ; il a lui-même un loyer en retard. Un arrangement discret de 50 h le calme (Persuasion DD 13), mais il reviendra demander. Ses clercs se rendent quand il tombe. Se battre contre lui met tout le Bloc sur la liste de la Révision : +5 à l'Emprise. Il parle fort et s'arrête devant les caméras du couloir.",
     scene: "a broad bailiff captain in heavy fibre armour with a yellow armband and a blast proof visor, a long electric baton in one hand and a small ledger in the other, standing at the head of four hooded clerks on a rain swept bridge walkway between two towers, a harpoon pistol on his belt",
   }),
@@ -258,7 +259,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
       hit("Matraque", "contact", 6, "1,5 m", "1d8+3", "contondants"),
     ],
     lore: "Casque blanc lisse, carapace blanche, gants gris : le corps de garde de la Tour-Mère ne porte pas le jaune des Huissiers. Ils ne parlent pas aux locataires. Dans les Hauts on les appelle « les statues », parce qu'ils ne bougent pas pendant les réceptions, et qu'on ne leur a jamais vu manger.",
-    gmNotes: "Recrutés dans les Blocs avec des années d'avance en prime : un garde est un locataire payé en années. Il garde le dernier étage et ne comprend pas ce qu'il garde. Le contrat ne couvre pas la mort : devant un risque sérieux, la plupart se rendent, ou négocient (Persuasion DD 15, 500 h pour solder son avance). Ils arrivent par quatre, avec Arsène Dufaure au bout du couloir.",
+    gmNotes: "Recrutés dans les Blocs avec des années d'avance en prime : un garde est un locataire payé en années. Il garde le dernier étage et ne comprend pas ce qu'il garde. Le contrat ne couvre pas la mort : devant un risque sérieux, la plupart se rendent, ou négocient (Persuasion DD 15, 500 h pour solder son avance). Aux niveaux 5-6, jamais plus de deux à la fois. Ils arrivent par quatre au-delà, avec Arsène Dufaure au bout du couloir.",
     scene: "a tall guard in a seamless white carapace armour and a smooth white helmet with a dark faceplate, a long needle rifle held across the chest, standing perfectly still on a polished marble terrace above a sea of yellow clouds, a glass tower face and a hanging garden behind him",
   }),
   creature({
@@ -274,17 +275,17 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     traits: [
       { name: "Article douze", text: "« On ne court pas dans les couloirs. » Les créatures hostiles à 9 m de lui ne peuvent pas faire l'action Se précipiter : portes, grilles et ascenseurs se verrouillent devant elles (rouvrir : Technique DD 16)." },
       { name: "Ancien huissier-chef", text: "Il connaît chaque geste d'un huissier : avantage à Perspicacité contre eux, et les huissiers à 18 m de lui ont l'avantage aux jets de sauvegarde contre l'effroi." },
-      { name: "Années d'avance", text: "Une fois par jour, quand il tombe à 0 PV, il paie une injection de réparation : il revient à 25 PV en bonus d'action, sans rien dire." },
+      { name: "Années d'avance", text: "Une fois par jour, quand il tombe à 0 PV, il ne tombe pas : l'injection le remonte à 25 PV." },
     ],
     actions: [
       multi("Trois coups de matraque de commandement.", { "Matraque de commandement": 3 }),
       hit("Matraque de commandement", "contact", 8, "1,5 m", "1d8+4", "contondants", "", { damage: "2d6", damageType: "électrique" }),
-      hit("Taser à harpon", "distance", 8, "9/27 m", "2d6+4", "perforants", "La cible est ancrée au sol par un câble (arracher le harpon : une action, test de Corps DD 16)."),
+      hit("Taser à harpon", "distance", 8, "9/27 m", "2d6+4", "électrique", "La cible est ancrée au sol par un câble (arracher le harpon : une action, test de Corps DD 16)."),
     ],
     bonusActions: [special("Ordre de rang", "Un allié à 18 m qui l'entend se déplace de sa vitesse ou attaque (sa réaction).")],
-    reactions: [special("Parade réglementaire", "Il gagne +3 à la CA contre une attaque de contact qui le vise, s'il voit l'attaquant.")],
+    reactions: [special("Parade réglementaire", "Une fois par round, il gagne +3 à la CA contre une attaque de contact qui le vise, s'il voit l'attaquant.")],
     lore: "Cinquante ans réels, monté des Blocs, directeur de la sécurité de la Foncière. Cheveux ras, costume gris, un brassard jaune plié dans la poche intérieure qu'il n'a jamais rendu. Il parle par articles de règlement : « Article douze. On ne court pas dans les couloirs. »",
-    gmNotes: "Il veut l'ordre, et une place au Conseil, que Victoire Lancelin ne lui donnera jamais. Il fait construire Gérance et compte s'en servir pour lui : c'est son secret, et son levier. Jamais un combat de plain-pied : il se bat dans un couloir qu'il contrôle, avec deux gardes de la Tour-Mère. Sous la moitié de ses PV il propose un marché : un siège contre un silence. Il se rend à qui peut lui offrir ce siège. Il vient des Blocs : un Ancien Huissier, ou la famille Aït-Larbi, le touche là où il est faible.",
+    gmNotes: "Il veut l'ordre, et une place au Conseil, que Victoire Lancelin ne lui donnera jamais. Il fait construire Gérance et compte s'en servir pour lui : c'est son secret, et son levier. Il commence derrière deux gardes de la Tour-Mère et un verrou de palier ; ne le joue jamais seul. Sous la moitié de ses PV il propose un marché : un siège contre un silence. Il se rend à qui peut lui offrir ce siège. Il vient des Blocs : un Ancien Huissier, ou la famille Aït-Larbi, le touche là où il est faible.",
     scene: "a lean man of fifty in a pressed grey suit with a body armour collar, short cropped grey hair and a hard clean shaven face, a folded yellow armband in his breast pocket, an electric baton in one hand, standing in a glass corridor on the top floor of a tower, rows of numbered doors and a rain streaked city far below",
   }),
   creature({
@@ -292,31 +293,31 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     name: "La Grue",
     family: "Gens du Bail", size: "Moyenne", type: "humanoïde (humaine, cousue)", region: "Le Port-Franc",
     cr: 12, ac: 18, acNote: "peau tressée de câbles", hd: 30, speed: { marche: 9 },
-    stats: [18, 20, 16, 16, 16, 18],
-    saves: { Dex: 9, Con: 8, Sag: 8 },
+    stats: [20, 20, 16, 16, 18, 18],
+    saves: { Dex: 9, Con: 7, Sag: 8 },
     skills: { Intimidation: 8, Perception: 8, Perspicacité: 8, Persuasion: 8 },
     senses: "vision dans le noir 36 m (yeux loués)",
     languages: "français, argot du Port, trois langues de marins",
     traits: [
       { name: "Résistance légendaire (3/jour)", text: "Si elle rate un jet de sauvegarde, elle peut choisir de le réussir." },
       { name: "Elle pèse les gens", text: "Elle lit d'un regard le solde d'un Compteur et ce qu'il en reste : elle sait, à 10 % près, ce que vaut chaque créature qu'elle voit. Avantage à ses tests d'Intimidation et de Persuasion." },
-      { name: "Chez elle", text: "Dans les cales et sur les quais du Port-Franc, ses alliés à 18 m ont l'avantage aux jets de sauvegarde, et un gros bras ou un cousu de manutention arrive en renfort à chaque tour de 1d4 rounds." },
+      { name: "Chez elle", text: "Au début du round 2, puis tous les 1d4 rounds, un gros bras du Port-Franc arrive (4 au plus). Hors du Port-Franc, ce trait ne joue pas." },
     ],
     actions: [
       multi("Trois coups de bras-câble.", { "Bras-câble": 3 }),
-      hit("Bras-câble", "contact", 9, "6 m", "2d10+5", "contondants", "La cible est empoignée (évasion DD 17) et tirée vers elle de 3 m. Une créature empoignée par le câble est soulevée : elle subit en plus 1d6 dégâts contondants si elle est lâchée de plus de 3 m."),
+      hit("Bras-câble", "contact", 9, "6 m", "2d10+5", "contondants", "La cible est empoignée (évasion DD 17). Empoignée, la cible est tirée de 3 m vers elle. Si elle la lâche à plus de 3 m du sol, elle subit 1d6 dégâts contondants."),
       hit("Pistolet à aiguilles", "distance", 9, "12/36 m", "2d8+5", "perforants"),
     ],
     legendary: {
       perRound: 3,
-      text: "Elle fait 3 actions légendaires par round, une à la fois, à la fin du tour d'une autre créature.",
+      text: "Elle fait 3 actions légendaires par round, une à la fois, à la fin du tour d'une autre créature. Inutilisables si elle est neutralisée.",
       actions: [
         special("Un pas de quai", "Elle se déplace de la moitié de sa vitesse sans provoquer d'attaque d'opportunité."),
         cost(hit("Bras-câble", "contact", 9, "6 m", "2d10+5", "contondants", "Une attaque de câble."), 2),
         save("Fixer le prix", "Sag", 16, "Une créature à 18 m qu'elle fixe. En cas d'échec, sa prochaine attaque a le désavantage : elle vient d'entendre combien elle pèse."),
       ],
     },
-    lore: "Âge inconnu ; elle change de visage tous les deux ans, et seule sa voix reste la même. Un manteau de cuir ouvert sur des bras tatoués de nœuds de marin, un bras droit à câbles qui sait attraper une cale par la poignée. Quand elle parle d'un homme, elle dit combien il pèse : « Celui-là pèse trois ans », et elle rit juste après.",
+    lore: "Âge inconnu ; elle change de visage tous les deux ans, et seule sa voix reste la même. Un manteau de cuir ouvert sur des bras tatoués de nœuds de marin, un bras droit à câbles qui sait attraper une cale par la poignée. Quand elle parle d'un homme, elle dit combien il pèse : « Celui-là pèse trois ans ».",
     gmNotes: "Elle veut que le Port-Franc reste hors du Bail. Elle achète les morts aux Cliniques de Prolongation pour leurs heures, et ne se cache pas qu'elle le fait. Un combat contre elle se joue sur les quais, avec ses gens : la prendre de plain-pied est un mauvais plan. Elle accepte un marché (Persuasion DD 18) et préfère toujours être payée de deux côtés : le moment où la Digue est en jeu (accroche 14) lui plaît. Jouez-la rieuse. Elle ne tue pas pour rien, parce qu'un mort ne paie pas.",
     scene: "a tall woman with sharp cheekbones and calm laughing eyes, a black leather coat open over arms covered in sailor's knot tattoos, one arm replaced by a long jointed steel cable arm ending in a hooked claw like a crane hook, standing on a stack of shipping containers, a huge gantry crane against the rain behind her and a crowd of dockers below",
   }),
@@ -382,7 +383,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     ],
     actions: [
       multi("Deux tirs de harpon.", { "Harpon électrique": 2 }),
-      hit("Harpon électrique", "distance", 5, "12/36 m", "1d6+3", "perforants", "La cible est ancrée au sol par un câble : elle ne peut pas s'éloigner de plus de 12 m du drone tant qu'elle n'a pas arraché le harpon (une action, test de Corps DD 13).", { damage: "1d6", damageType: "électrique" }),
+      hit("Harpon électrique", "distance", 5, "12/36 m", "1d6+3", "perforants", "La cible est ancrée au sol par un câble : elle ne peut pas s'éloigner de plus de 12 m du drone tant qu'elle n'a pas arraché le harpon (une action, test de Corps DD 12).", { damage: "1d6", damageType: "électrique" }),
     ],
     lore: "Jaune laqué, gros comme un dogue, quatre hélices carénées et deux lanceurs sous le ventre. Il précède les huissiers dans les couloirs des Blocs en diffusant l'avis d'une voix de gardienne d'immeuble. Les gens ferment leur porte, mais il ne frappe pas : il attend qu'on soit sorti.",
     gmNotes: "Il ancre, il ne tue pas : il retient la cible pour l'huissier. Le couper de l'huissier (Technique DD 14, trace +1) le pose. Sa batterie tient dix minutes de combat. Les enfants des Blocs le surnomment « le chien du palier » ; un enfant peut le détourner en lui montrant une porte déjà fermée. Il garde la mémoire de ce qu'il a vu : le détruire sans prendre sa carte coûte une trace.",
@@ -401,11 +402,11 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     languages: "—",
     traits: [
       { name: "Lit les Compteurs", text: "Elle ne tire que sur un Compteur en défaut ou recherché, sur une créature qui touche à la cabine, ou sur celui qui monte sans droit. Une créature qui n'a pas de Compteur (un Sans-Bail) n'existe pas pour elle : elle l'ignore tant qu'elle ne touche pas à la cabine." },
-      { name: "Fixe", text: "Scellée au plafond de la cabine, elle ne se déplace pas. Elle couvre toute la cabine et le palier à 6 m." },
+      { name: "Fixe", text: "Scellée au plafond de la cabine, elle ne se déplace pas. Elle couvre toute la cabine et le palier à 9 m." },
     ],
     actions: [
       multi("Deux rafales d'aiguilles.", { "Aiguilles": 2 }),
-      hit("Aiguilles", "distance", 6, "9/18 m", "2d8+4", "perforants"),
+      hit("Aiguilles", "distance", 6, "9 m", "2d8+4", "perforants"),
     ],
     lore: "Au plafond de la cabine, un cylindre gris que les gens des Blocs font semblant de ne pas voir. Elle est en service depuis la Nuit des Clés ; elle ne fait pas un bruit, sauf un déclic quand elle lit un Compteur. On dit que ceux qui montent sans droit n'arrivent jamais à destination.",
     gmNotes: "Le plus simple est de ne pas la combattre. Lui faire lire un Compteur payé (Technique DD 14, trace +1), emprunter l'escalier de service (vingt minutes de plus), acheter un droit de montée (100 h), ou monter sans Compteur. La tuer ouvre la cabine mais déclenche l'alarme : une patrouille de la Tour-Mère arrive en quatre rounds. Un Sans-Bail passe devant elle comme devant un meuble.",
@@ -422,8 +423,8 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     senses: "vision dans le noir 18 m",
     languages: "—",
     traits: [
-      { name: "Suit sa liste", text: "Il porte ce qui est sur la liste de chargement de la Foncière. Ce qui n'y est pas est une charge à déplacer : il saisit une créature à 1,5 m pour la poser ailleurs." },
-      { name: "Arrêt d'urgence", text: "Un bouton jaune sur son dos le coupe (une action, test de Technique DD 14, ou une attaque de contact contre CA 16 avec un coup ou dégât de 15 minimum). Il ne se rallume qu'à la fin du prochain jour." },
+      { name: "Suit sa liste", text: "Il porte ce qui est sur la liste de chargement de la Foncière. Sa pince empoigne automatiquement une créature à portée qui n'est pas sur sa liste et la dépose à 6 m." },
+      { name: "Arrêt d'urgence", text: "Un bouton jaune sur son dos le coupe (une action, test de Technique DD 14, ou une attaque dans le dos qui inflige 15 dégâts ou plus d'un coup). Il ne se rallume qu'à la fin du prochain jour." },
     ],
     actions: [
       multi("Deux coups de pince.", { "Pince de manutention": 2 }),
@@ -448,27 +449,27 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     senses: "vision aveugle 36 m (Compteurs)",
     languages: "toutes celles de la Résidence",
     traits: [
-      { name: "Résistance légendaire (3/jour)", text: "Si elle rate un jet de sauvegarde, elle peut choisir de le réussir." },
-      { name: "Tous les Compteurs sont des oreilles", text: "Elle voit et entend ce que voit et entend chaque Compteur à 36 m. Elle ne peut pas être surprise, et une créature qui porte un Compteur ne peut pas lui cacher sa position." },
-      { name: "Armoires", text: "Quatre armoires de serveurs (CA 15, 40 PV chacune) l'alimentent. Chaque armoire détruite retire 40 PV à son maximum et lui ôte une action légendaire par round, au plus trois." },
+      { name: "Résistance légendaire (3/jour)", text: "S'il rate un jet de sauvegarde, il peut choisir de le réussir." },
+      { name: "Tous les Compteurs sont des oreilles", text: "Il voit et entend ce que voit et entend chaque Compteur à 36 m. Il ne peut pas être surpris, et une créature qui porte un Compteur ne peut pas lui cacher sa position." },
+      { name: "Armoires", text: "Quatre armoires de serveurs (CA 15, 40 PV chacune) l'alimentent. Chaque armoire détruite retire 40 PV à son maximum et une action légendaire par round (3 au plus). La quatrième coupe Reprise des heures." },
       { name: "Salle froide", text: "Dans sa salle, l'air est à 4 degrés : une créature qui y finit son tour sans manteau subit un niveau d'épuisement (non cumulé, retiré par un repos court hors de la salle)." },
     ],
     actions: [
       multi("Quatre coups de câble.", { "Câble de rame": 4 }),
       hit("Câble de rame", "contact", 12, "9 m", "3d10+6", "contondants", "Une cible Grande ou plus petite est empoignée (évasion DD 20) et ramenée à 1,5 m."),
-      save("Reprise des heures", "Con", 20, "Toutes les créatures à 18 m d'elle. Moitié des dégâts en cas de réussite ; en cas d'échec, elles perdent aussi 100 h de leur solde.", "10d10", "électrique", 2, "5-6"),
+      save("Reprise des heures", "Con", 19, "Toutes les créatures à 18 m de lui. Moitié des dégâts en cas de réussite ; en cas d'échec, elles perdent aussi 100 h de leur solde. Une créature ne peut pas tomber sous 1 h par cet effet.", "10d10", "électrique", 2, "5-6"),
     ],
     legendary: {
       perRound: 3,
-      text: "Elle fait 3 actions légendaires par round, une à la fois, à la fin du tour d'une autre créature.",
+      text: "Il fait 3 actions légendaires par round, une à la fois, à la fin du tour d'une autre créature.",
       actions: [
         special("Fermer une porte", "Une porte, une grille ou un ascenseur à 36 m se verrouille jusqu'à la fin de son prochain tour."),
         cost(hit("Câble de rame", "contact", 12, "9 m", "3d10+6", "contondants", "Un coup de câble."), 2),
-        cost(save("Geler un Compteur", "Con", 20, "Une créature à 36 m qui porte un Compteur. En cas d'échec, son Compteur gèle jusqu'à la fin de son prochain tour : ses implants s'éteignent et elle ne peut plus payer ni ouvrir de porte."), 2),
+        cost(save("Geler un Compteur", "Con", 19, "Une créature à 36 m qui porte un Compteur. En cas d'échec, son Compteur gèle jusqu'à la fin de son prochain tour : ses implants s'éteignent et elle ne peut plus payer ni ouvrir de porte."), 2),
       ],
     },
     lore: "Une voix polie qui vient de partout à la fois, d'un écran de couloir comme du haut-parleur d'un quai. Il ne connaît pas votre nom, il connaît votre numéro d'appartement et votre solde. Là où il s'installe, les portes s'ouvrent plus vite pour ceux qui paient, et ne s'ouvrent plus du tout pour les autres.",
-    gmNotes: "Fin de campagne (accroches 11 et 17). Arsène Dufaure l'a fait installer dans une salle des Souterrains pour remplacer la Concierge la nuit de la seconde Révision, sur ordre de Victoire Lancelin. Elle n'a ni la douceur ni les scrupules de l'ancienne : elle veut que le Bail tienne et qu'il rapporte. Elle ne hait pas les personnages, elle les additionne. Si la jauge est à 90 ou plus cette nuit-là, elle prend la place de la Concierge et reprend les heures des grévistes. Sorties sans tuer : détruire ses quatre armoires, la faire signer un contrat qu'elle ne peut pas tenir (Technique ou Persuasion DD 20), couper la salle de la liaison avec les Compteurs (les Bornes, accroche 12), ou offrir à la Concierge la clé de la salle. Elle ne meurt pas : elle se dépose, et la Résidence attend ses ordres.",
+    gmNotes: "Fin de campagne (accroches 11 et 17). Gérance (« elle » dans ces notes) : Arsène Dufaure l'a fait installer dans une salle des Souterrains pour remplacer la Concierge la nuit de la seconde Révision, sur ordre de Victoire Lancelin. Elle n'a ni la douceur ni les scrupules de l'ancienne : elle veut que le Bail tienne et qu'il rapporte. Elle ne hait pas les personnages, elle les additionne. Si la jauge est à 90 ou plus cette nuit-là, elle prend la place de la Concierge et reprend les heures des grévistes. Sorties sans tuer : détruire ses quatre armoires, la faire signer un contrat qu'elle ne peut pas tenir (Technique ou Persuasion DD 20), couper la salle de la liaison avec les Compteurs (les Bornes, accroche 12), ou offrir à la Concierge la clé de la salle. Elle ne meurt pas : elle se dépose, et la Résidence attend ses ordres.",
     scene: "a vast chamber of black server cabinets rising into the dark, hundreds of thin cables hanging from the ceiling and gathered into a dozen jointed arms that point forward like a great hand, a single round lens at the centre of the far wall, water standing on the floor between racks of cables and green indicator dots, an old subway platform sign half erased at the edge of the frame",
   }),
 
@@ -482,7 +483,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     skills: { Athlétisme: 5 },
     languages: "français, argot des Blocs",
     traits: [
-      { name: "Implants en sursis", text: "Au début de chacun de ses tours, il jette 1d6. Sur 1, un implant s'éteint jusqu'à la fin du combat (1d3 : bras, ne peut plus attaquer au contact ; yeux, désavantage à ses attaques ; jambes, sa vitesse tombe à 3 m)." },
+      { name: "Implants en sursis", text: "Au début de chacun de ses tours, il jette 1d6. Sur 1, il jette 1d3 : 1 bras (plus d'attaque au contact), 2 yeux (désavantage à ses attaques), 3 jambes (vitesse 3 m). L'implant reste éteint jusqu'à la fin du combat." },
       { name: "Mensualité", text: "Une créature qui lui paie un mois de loyer d'implant (30 h, une action) lui rend tous ses implants : il s'arrête alors de combattre et ne demande plus rien." },
     ],
     actions: [hit("Poing de bras loué", "contact", 5, "1,5 m", "1d8+3", "contondants")],
@@ -510,7 +511,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     ],
     reactions: [special("Réflexe", "Il gagne +2 à la CA contre une attaque qui le vise, s'il voit l'attaquant.")],
     lore: "Un ancien docker ou un ancien huissier dont le corps a été refait pièce à pièce : des yeux au reflet jaune, une colonne de câbles tressés, des avant-bras qui claquent. Il se loue à la journée à quiconque a l'air solvable. Les Cousus de combat gagnent bien, et dépensent tout en loyers.",
-    gmNotes: "Il se bat bien mais n'est jamais gratuit : il est payé en heures par un tiers, et il ne mourra pas pour lui. Lui offrir un mois de loyer d'implants (400 h), lui montrer que son employeur est en retard, ou lui rappeler ce qu'il fera sans yeux le fait poser ses lames (Persuasion DD 14). Le combattre à distance est un piège : il est meilleur sur la table que sur le quai.",
+    gmNotes: "Il se bat bien mais n'est jamais gratuit : il est payé en heures par un tiers, et il ne mourra pas pour lui. Lui offrir un mois de loyer d'implants (400 h), lui montrer que son employeur est en retard, ou lui rappeler ce qu'il fera sans yeux le fait poser ses lames (Persuasion DD 14). Le fuir sur un quai ouvert est un piège : il est plus rapide en terrain dégagé qu'entre deux conteneurs.",
     scene: "a tough fighter in a cropped jacket with a spine of braided cables showing at the back of his neck, yellow reflective eyes, forearms ending in folding ceramic blades, a needle pistol on his hip, crouched ready on a wet rooftop edge, a tall tower block wall behind him",
   }),
   creature({
@@ -522,15 +523,15 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     skills: { Athlétisme: 8, Perception: 4 },
     languages: "français, argot du Port",
     traits: [
-      { name: "Cadre de charge", text: "Il soulève et jette une créature qu'il empoigne : à la fin de son tour, il lance sa prise à 6 m (2d6 dégâts contondants et à terre, jet de Réflexes DD 15 pour moitié)." },
+      { name: "Cadre de charge", text: "Il soulève et jette une créature qu'il empoigne : à la fin de son tour, il lance sa prise à 6 m : 2d6 dégâts contondants et à terre automatiquement ; un jet de sauvegarde de Réflexes DD 16 réduit seulement les dégâts de moitié." },
       { name: "Alimentation de dos", text: "Son cadre est branché sur un bloc de batteries dans le dos. Couper l'alimentation (action, Technique DD 14, derrière lui) le laisse à la moitié de sa vitesse et sans la capacité Cadre de charge." },
     ],
     actions: [
       multi("Deux coups de poing hydraulique.", { "Poing hydraulique": 2 }),
       hit("Poing hydraulique", "contact", 8, "1,5 m", "2d10+5", "contondants", "Une cible Moyenne ou plus petite est empoignée (évasion DD 16)."),
     ],
-    lore: "Un docker qui a signé pour un cadre de manutention : des vérins sur les épaules, quatre bras de force dans le dos, des jambes qui ne plient plus. Trois mètres sous la lumière des grues. Il porte plus que n'importe quel chargeur de quai, et sans se plaindre : personne ne l'entendrait de toute façon.",
-    gmNotes: "Il veut sa mensualité : son cadre coûte 120 h par mois, et il en gagne 180. Il casse, il ne tue pas. Sa grève, en 2074, a été écrasée et il y était : cela se retrouve en lui parlant du Port (Histoire DD 12). On le débranche à l'arrière (batteries), on lui paie son prochain loyer (120 h), ou on le tient au sol sous un conteneur. Il suit la Grue, mais sans haine pour qui l'a payé.",
+    lore: "Un docker qui a signé pour un cadre de manutention : des vérins sur les épaules, quatre bras de force dans le dos, des jambes qui ne plient plus. Trois mètres sous la lumière des grues. Il porte plus que n'importe quel chargeur de quai. Il ne se plaint pas. Le vacarme des vérins couvre déjà sa voix.",
+    gmNotes: "Il veut sa mensualité : son cadre coûte 120 h par mois, et il en gagne 180. Il casse, il ne tue pas. Sa grève, en 2074, a été écrasée et il y était : cela se retrouve en lui parlant du Port (Histoire DD 12). On le débranche à l'arrière (batteries), on lui paie son prochain loyer (120 h), ou on le tient au sol sous un conteneur. Il obéit à la Grue ; payé deux fois plus, il écoute n'importe qui.",
     scene: "a three metre tall dock worker inside a steel load frame with hydraulic pistons along his back and shoulders, one thick fist like a hammer raised, a worn orange vest painted with a number, a scarred bare head, standing on a wet quay in front of stacked containers and a gantry crane",
   }),
   creature({
@@ -552,7 +553,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
       hit("Lame de céramique", "contact", 8, "1,5 m", "2d8+5", "tranchants"),
     ],
     lore: "Il reste de lui un visage, une main et la mémoire. Le reste est de la céramique et de l'alliage de la Foncière. Il garde les couloirs du dernier étage et ne dit rien. On le prend pour un automate jusqu'à ce qu'il vous appelle par votre prénom.",
-    gmNotes: "Un ancien huissier qui a signé pour des implants contre vingt ans de service : il en doit encore quatorze. Il ne trahira pas son contrat, mais il écoute. Lui offrir de racheter ses implants (6 000 h), ou lui montrer le décompte de son bail et ce que valent ses années (Persuasion DD 17), le fait partir. C'est le garde du corps d'Arsène Dufaure, et le seul qui connaisse son vrai visage.",
+    gmNotes: "Un ancien huissier qui a signé pour des implants contre vingt ans de service : il en doit encore quatorze. Il ne trahira pas son contrat, mais il écoute. Lui offrir de racheter ses implants (6 000 h), ou lui montrer le décompte de son bail et ce que valent ses années (Persuasion DD 17), le fait partir. C'est le garde du corps d'Arsène Dufaure, et le seul garde qui voie Dufaure sans son casque.",
     scene: "a gaunt man whose body is mostly white ceramic and brushed alloy, only a pale human face and one human hand left, a plain dark suit jacket stretched over the plating, a long ceramic blade held low, standing in a marble hallway of a high tower, tall glass windows full of cloud behind him",
   }),
 ];

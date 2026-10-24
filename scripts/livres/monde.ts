@@ -4,6 +4,7 @@ import type { Family } from "../../shared/bestiary";
 import type { GenreId } from "../../shared/types";
 import { ARCHIPEL_LIVRES } from "./monde-archipel";
 import { AUBRETERRE_LIVRES } from "./monde-aubreterre";
+import { RESIDENCE_LIVRES } from "./monde-residence";
 import { TERNELANDE_LIVRES } from "./monde-ternelande";
 
 export interface FamilleDuLivre {
@@ -59,7 +60,7 @@ export interface Monde {
   };
 }
 
-const MONDES: Record<string, Monde> = { aubreterre: AUBRETERRE_LIVRES, archipel: ARCHIPEL_LIVRES, ternelande: TERNELANDE_LIVRES };
+const MONDES: Record<string, Monde> = { aubreterre: AUBRETERRE_LIVRES, archipel: ARCHIPEL_LIVRES, ternelande: TERNELANDE_LIVRES, residence: RESIDENCE_LIVRES };
 const choix = process.argv.find((a) => a.startsWith("--monde="))?.slice("--monde=".length) ?? "aubreterre";
 if (!MONDES[choix]) throw new Error(`Monde inconnu : ${choix} (${Object.keys(MONDES).join(", ")})`);
 
