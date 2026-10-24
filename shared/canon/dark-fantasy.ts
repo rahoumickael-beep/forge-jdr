@@ -164,6 +164,35 @@ export const TERNELANDE: Canon = {
     { texte: "Un village refuse de donner le deuxième souvenir demandé cette année ; les Dîmiers arrivent dans trois jours.", factions: ["dimiers"] },
   ],
 
+  cartes: {
+    evenements: [
+      { titre: "Les Dîmiers arrivent", texte: "Trois cavaliers en manteau gris et masque d'étain entrent au pas dans le village. Personne ne sort sur les seuils.", effet: "La nuit de la Dîme est dans trois jours ; chaque foyer compte ses morts, et certains cherchent à acheter." },
+      { titre: "On frappe sous la glace", texte: "Toute la nuit, des coups sourds montent du lac gelé, réguliers, comme quelqu'un qui demande à entrer.", effet: "À l'aube, un trou dans la glace, et des traces de pas mouillés jusqu'à une porte." },
+      { titre: "La chaise en trop", texte: "À table, une famille regarde une chaise vide que personne n'a mise là. Personne ne sait pour qui elle est.", effet: "Quelqu'un dans cette maison a été donné à la Dîme ; ses affaires sont encore là, et une lettre." },
+      { titre: "La compagnie franche", texte: "Une cinquantaine de mercenaires étrangers campent à la sortie du village, et demandent du pain, du vin et des filles.", effet: "Le village paiera, ou se battra, ou fera payer la Dîme à la compagnie. Le Dîmier ne fait pas de différence." },
+      { titre: "Un mort à gage", texte: "Un notaire en manteau fourré propose dix livres à une veuve pour qu'elle pose son front sur la pierre à sa place.", effet: "Si elle accepte, elle oublie son mari ; sinon, ses enfants ont faim cet hiver." },
+      { titre: "Les loups d'hiver", texte: "Les loups descendent jusqu'aux maisons, maigres, silencieux, en plein jour.", effet: "Une meute affamée attaque le bétail cette nuit ; l'hiver sera long." },
+      { titre: "La peste revient", texte: "Un colporteur tousse au fond de l'auberge, et il a des taches noires au cou.", effet: "Le village ferme ses portes ; ceux qui sont dedans y restent jusqu'à la fin de la semaine." },
+      { titre: "Le Registre brûle", texte: "De la fumée monte de la sacristie : quelqu'un a mis le feu au registre de la paroisse.", effet: "Les noms de trois générations de morts sont perdus, à moins qu'on ne sauve le livre à temps." },
+      { titre: "La Vieille Grise", texte: "Une mendiante au teint de cendre s'assoit sur la margelle du puits et regarde les enfants jouer. Elle rit d'une chose arrivée hier.", effet: "Les enfants la suivent ; les adultes la chassent. Elle sait quelque chose qu'elle ne sait plus." },
+      { titre: "Un Effacé à la porte", texte: "Un homme des Landes demande à dormir dans la grange. Il ne sait pas son nom. Il sourit tout le temps.", effet: "Il connaît le chemin de quelque chose, mais pas pourquoi. Le prêcheur des Sans-Nom le cherche." },
+      { titre: "La pierre est chaude", texte: "À l'aube, la pierre de dîme fume dans le froid, tiède au toucher, comme une bête endormie.", effet: "Ceux qui la touchent entendent un instant une voix qu'ils ont donnée. Le Dîmier interdit d'approcher." },
+      { titre: "La banquise prend", texte: "La mer gèle en une nuit jusqu'à la sortie de la baie. Un navire étranger reste pris dans la glace.", effet: "L'équipage étranger devra passer la nuit de la Dîme à terre, et il ne sait pas ce que c'est." },
+    ],
+    objets: [
+      { titre: "Couteau de fer froid", texte: "Une lame battue sans feu à la forge du nord, froide même dans la main.", effet: "Une attaque contre un Reflet fait +1d6 dégâts." },
+      { titre: "Dé à coudre de Gardienne", texte: "Un dé d'étain cabossé, avec quelque chose de tiède dedans.", effet: "À la Dîme, un personnage garde un souvenir qu'il aurait dû rayer." },
+      { titre: "Fiole de lait d'oubli", texte: "Une fiole de sève claire des Blancs-Bois, scellée à la cire.", effet: "Un souvenir flou redevient intact, ou une image qui n'est pas à soi." },
+      { titre: "Sel de veillée", texte: "Une poignée de gros sel gris dans un mouchoir.", effet: "Jeté sur un seuil, il empêche un Reflet d'entrer jusqu'à l'aube." },
+      { titre: "Registre de paroisse", texte: "Un cahier relié de cuir gris, plein de noms de morts.", effet: "Une question sur un mort de la paroisse reçoit une réponse vraie." },
+      { titre: "Masque d'étain", texte: "Un masque de Dîmier lisse, avec deux fentes pour les yeux.", effet: "Pendant une scène, on prend le porteur pour un Dîmier." },
+      { titre: "Lanterne sourde", texte: "Une lanterne de fer à volet.", effet: "Avantage à la Discrétion la nuit, ou pour pister dans la neige." },
+      { titre: "Peau de loup d'hiver", texte: "Une peau grise et blanche, épaisse.", effet: "Une nuit dehors sans épuisement dû au froid." },
+      { titre: "Sauf-conduit du Régent", texte: "Un parchemin au sceau de Vauclair.", effet: "Un barrage ou une ville fermée laisse passer, une fois." },
+      { titre: "Mèche tressée", texte: "Une mèche de cheveux tressée avec un fil, nouée trois fois.", effet: "Rend un souvenir perdu, un seul, nommé quand on a fait la tresse." },
+    ],
+  },
+
   campagne: {
     jauge: {
       nom: "la Mémoire du pays",
