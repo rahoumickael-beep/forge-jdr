@@ -423,7 +423,7 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 >
 > Perception passive 13. Initiative +2. Points de vie 8 (d8 + Endurance 0). Outils de bureau et d'enquête. Langue : le français. Marée 0.
 >
-> Argent : 3 040 F, plus 400 F de frais de la Havraise.
+> Argent : 1 240 F, plus 400 F de frais de la Havraise.
 
 > **Les trois autres fiches.**
 >

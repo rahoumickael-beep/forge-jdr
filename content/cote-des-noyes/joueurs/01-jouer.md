@@ -364,8 +364,8 @@ Ton argent dépend de ton origine. Inscris-le sur ta fiche, avec ton équipement
 | Origine | Argent de départ |
 |---|---|
 | Gens de la côte | 300 F |
-| Revenus de la guerre | 200 F et une petite pension (le MJ la fixe) |
-| Bourgeois de la ville | 3 000 F |
+| Revenus de la guerre | 200 F et une pension de 80 F par mois |
+| Bourgeois de la ville | 1 200 F |
 | Étrangers | 500 F |
 | Enfants du siècle | 400 F |
 | Sensibles | 250 F |
@@ -375,7 +375,7 @@ Les francs que ton historique met dans ton équipement (de 20 à 40 F) s'ajouten
 Quelques mots sur chaque cas.
 
 - **Gens de la côte.** Trois cents francs, c'est un trimestre de pêche. Tu n'as pas besoin de t'en servir pour dormir : tu as une famille, une cousine, une grange.
-- **Revenus de la guerre.** Deux cents francs et une pension que l'État verse quand il y pense. Tu dépenses peu, parce que tu as appris à ne pas compter sur grand-chose.
+- **Revenus de la guerre.** Deux cents francs et une pension de 80 F par mois que l'État verse quand il y pense. Tu dépenses peu, parce que tu as appris à ne pas compter sur grand-chose.
 - **Bourgeois de la ville.** Trois mille francs, c'est une somme que la côte n'a jamais vue d'un seul tenant. Le sortir en public est une erreur : sur la côte, un homme qui paie en billets est un homme qu'on regarde.
 - **Étrangers.** Cinq cents francs, dans une poche cousue à l'intérieur de la veste. Tu les gardes pour partir.
 - **Enfants du siècle.** Quatre cents francs : une bicyclette neuve, un appareil, une robe, une chambre à l'auberge un mois. Tu choisis.
@@ -393,9 +393,9 @@ Tu as ton argent. Tu as quatre ou cinq choses à en faire, avant la première s�
 
 > **Exemple.**
 >
-> Émile démarre avec 3 000 F (origine) et 40 F (historique) : 3 040 F à lui, plus 400 F de frais de la Havraise. Il garde 3 000 F à la banque de Cherbourg, parce qu'on ne se promène pas avec ça dans la baie, et 40 F dans son portefeuille. Les frais sont dans son gilet, et il tient un carnet de dépenses, parce que Brévin les lira.
+> Émile démarre avec 1 200 F (origine) et 40 F (historique) : 1 240 F à lui, plus 400 F de frais de la Havraise. Il garde 1 200 F à la banque de Cherbourg, parce qu'on ne se promène pas avec ça dans la baie, et 40 F dans son portefeuille. Les frais sont dans son gilet, et il tient un carnet de dépenses, parce que Brévin les lira.
 >
-> Armand a 200 F et 30 F de son historique : 230 F, plus sa pension. Le MJ lui a promis ce qu'on paie à un pêcheur, 400 F par mois, jusqu'à la fin de l'enquête. Il ne dépensera rien avant le premier du mois, sauf en tabac.
+> Armand a 200 F et 30 F de son historique : 230 F, plus sa pension de 80 F par mois. Le MJ lui a promis ce qu'on paie à un pêcheur, 400 F par mois, jusqu'à la fin de l'enquête. Il ne dépensera rien avant le premier du mois, sauf en tabac.
 >
 > Odette a 400 F et 30 F de son historique : 430 F. Elle achète douze plaques de verre pour la morgue (25 F) et garde le reste pour la trousse du docteur.
 >
