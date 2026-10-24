@@ -32,18 +32,19 @@ Lis `docs/journal-de-production.md` en début de session (court : choix de Micka
 - Seule la charte fantasy est validée ; les 9 autres sont provisoires jusqu'au choix de Mickael.
 
 ## Économie de tokens (abonnement Pro : Mickael a vu la moitié de sa limite partir en une nuit)
-- Modèle du projet : Sonnet (`.claude/settings.json`). Opus seulement sur demande (`/model opus`) pour le code difficile ; revenir ensuite à Sonnet.
-- Pas de Workflow ni de lot de plus de 3 sous-agents sans l’accord de Mickael, avec une estimation du coût. Sous-agents : Haiku pour vérifier, Sonnet pour écrire ; jamais Opus.
-- Lire des morceaux de fichiers (`grep -n`, `sed -n`), pas des fichiers entiers ; ne jamais relire un fichier déjà lu ou qu’on vient de modifier.
+- Opus est le cerveau : il conçoit, découpe, écrit les consignes, délègue et contrôle. Il ne fait lui-même que l'architecture, les arbitrages et le code difficile.
+- Le travail délégué part d'abord vers l'IA gratuite : `node scripts/deleguer.mjs [--modele flash|argon|sonnet|opus] [--ecrire] [--sortie f] consigne.md` (Antigravity, quota Google, pas l'abonnement Claude). Flash : vérifications, tâches mécaniques ; Argon : écriture, relecture, code courant ; `sonnet`/`opus` d'Antigravity si Gemini ne suffit pas. Consigne précise et autonome (fichiers à lire, résultat attendu, critères), écrite dans le scratchpad. Contrôle obligatoire : `git diff --stat` puis lecture des passages clés, tests ; corriger ou relancer avec une consigne plus nette.
+- Sous-agents Claude (`.claude/agents/`) seulement si Antigravity échoue (quota, panne) ou pour un outil qu'il n'a pas ; jamais Opus. LM Studio (`lms server start`, gemma-4-31b, qwen3-coder-30b) en dernier recours hors ligne.
+- Pas de Workflow ni de lot de plus de 3 sous-agents Claude sans l'accord de Mickael, avec une estimation du coût.
+- Lire des morceaux de fichiers (`grep -n`, `sed -n`), pas des fichiers entiers ; ne jamais relire un fichier déjà lu ou qu'on vient de modifier.
 - Sorties des commandes filtrées : `npm test 2>&1 | tail -20`, build et playtest avec `| tail`. Le hook de fin lance déjà les tests : ne pas les relancer à la main juste avant.
-- Une relecture par contenu (pas trois en parallèle) sauf livre destiné à l’impression.
-- Mickael absent (nuit) : finir l’étape en cours, committer, s’arrêter. Pas de travail « en attendant » qui dépend de ses choix.
+- Mickael absent (nuit) : finir l'étape en cours, committer, s'arrêter, sauf s'il a confié une liste de tâches ; dans ce cas, déléguer au maximum à Antigravity.
 
 ## Outillage Claude Code
 - Sous-agents (`.claude/agents/`) :
   - `model: haiku` : `verif-prompts`, `verif-canon`, `relecteur-ortho`, `resume-tests` ;
   - `model: sonnet` : `fiches-creatures`, `relecteur-lore`, `relecteur-regles` ;
-  - session principale : architecture, conception des mondes, arbitrages. Toujours vérifier le travail d'un sous-agent avant de l'intégrer.
+  - session principale (Opus) : architecture, conception des mondes, arbitrages, contrôle. Toujours vérifier le travail délégué avant de l'intégrer.
 - Skills (`.claude/skills/`) : `batir-un-monde`, `verifier-coherence`, `peindre-avec-flux`, `concevoir-rencontre`, `fabriquer-livres`, `ecran-immersif`, `ecrire-scenario`, `style-visuel`, `ajouter-genre`, `tester-partie`.
 - Hooks en Node (`.claude/hooks/`, marchent sous Windows) :
   - installation des dépendances au démarrage ;

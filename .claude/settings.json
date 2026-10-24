@@ -1,5 +1,4 @@
 {
-  "model": "sonnet",
   "permissions": {
     "allow": [
       "Bash(npm install)",
@@ -8,7 +7,8 @@
       "Bash(npm test)",
       "Bash(npm run playtest)",
       "Bash(npm run livres)",
-      "Bash(npx tsc --noEmit*)"
+      "Bash(npx tsc --noEmit*)",
+      "Bash(node scripts/deleguer.mjs*)"
     ]
   },
   "hooks": {
