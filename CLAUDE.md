@@ -6,7 +6,7 @@ Ambition : qualité d'un jeu vendu en boutique (livres A4 illustrés, mondes pro
 
 Mickael écrit en français : interface, textes de jeu, commentaires et messages de commit en français.
 Pour tout choix de goût ou de direction, propose-lui 3 options A/B/C avec ta recommandation.
-Lis `docs/journal-de-production.md` en début de session : plan, décisions et choix de Mickael. Tiens-le à jour.
+Lis `docs/journal-de-production.md` en début de session (court : choix de Mickael, état, points ouverts). Tiens-le court : le détail d’une étape finie va dans `docs/journal-archives-2026-10.md`, à ne lire qu’en cas de doute.
 
 ## Organisation
 - `shared/` : code commun client/serveur. Types (`types.ts`), genres (`genres.ts`), charte graphique par genre (`charte.ts`), règles (`rules.ts`, `origins.ts`), bestiaire (`bestiary.ts`), bibliothèque de scénarios (`library.ts`), combat (`combat.ts`), ligne de vue (`vision.ts`), générateurs à graine (`generators.ts`, `maps.ts`), dés (`dice.ts`), IA (`ai.ts`), mémoire de campagne et préparation des séances (`campagne.ts`). Canon de chaque monde : `shared/canon/` (`fantasy.ts` pour Aubreterre ; `index.ts` vérifie noms, dates et anachronismes ; `shared/canon.test.ts` l'applique à tout le contenu).
@@ -30,6 +30,14 @@ Lis `docs/journal-de-production.md` en début de session : plan, décisions et c
 - Prompts : jamais de négation (Flux dessine ce qu'on nie), la lumière en premier, le style vient de `charte.ts`. Une lumière par famille de créatures. Règles dans `comfyui/regles-flux.json`, appliquées par les tests, le hook `prompts-flux` et le serveur MCP.
 - Fantasy : peinture à l'huile, monde préindustriel, aucun objet moderne.
 - Seule la charte fantasy est validée ; les 9 autres sont provisoires jusqu'au choix de Mickael.
+
+## Économie de tokens (abonnement Pro : Mickael a vu la moitié de sa limite partir en une nuit)
+- Modèle du projet : Sonnet (`.claude/settings.json`). Opus seulement sur demande (`/model opus`) pour le code difficile ; revenir ensuite à Sonnet.
+- Pas de Workflow ni de lot de plus de 3 sous-agents sans l’accord de Mickael, avec une estimation du coût. Sous-agents : Haiku pour vérifier, Sonnet pour écrire ; jamais Opus.
+- Lire des morceaux de fichiers (`grep -n`, `sed -n`), pas des fichiers entiers ; ne jamais relire un fichier déjà lu ou qu’on vient de modifier.
+- Sorties des commandes filtrées : `npm test 2>&1 | tail -20`, build et playtest avec `| tail`. Le hook de fin lance déjà les tests : ne pas les relancer à la main juste avant.
+- Une relecture par contenu (pas trois en parallèle) sauf livre destiné à l’impression.
+- Mickael absent (nuit) : finir l’étape en cours, committer, s’arrêter. Pas de travail « en attendant » qui dépend de ses choix.
 
 ## Outillage Claude Code
 - Sous-agents (`.claude/agents/`) :
