@@ -20,6 +20,7 @@ function etat(tokens: Token[]): RoomState {
     campagne: nouvelleCampagne("fantasy"),
     carte: null,
     collections: {},
+    vaisseaux: [],
   };
 }
 

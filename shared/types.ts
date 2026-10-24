@@ -1,5 +1,6 @@
 // Types partagés entre le serveur et le client.
 import type { Combat } from "./combat";
+import type { Vaisseau } from "./vaisseaux";
 
 export type GenreId =
   | "fantasy"
@@ -15,7 +16,7 @@ export type GenreId =
 
 export type Ton = "epique" | "sombre" | "humoristique" | "mysterieux";
 
-export type MapKind = "donjon" | "caverne" | "nature" | "village";
+export type MapKind = "donjon" | "caverne" | "nature" | "village" | "espace";
 
 /** Un type de case de carte. Le rendu dépend du thème visuel du genre. */
 export type Tile = 0 | 1 | 2 | 3 | 4 | 5 | 6;
@@ -136,6 +137,8 @@ export interface Token {
   init?: number;
   /** Déplacement en cases par tour (6 par défaut, soit 9 m). */
   speed?: number;
+  /** Vaisseau (shared/vaisseaux.ts) que ce pion représente sur la carte d'espace. */
+  vaisseauId?: string;
 }
 
 export interface ChatEntry {
@@ -268,6 +271,8 @@ export interface RoomState {
   carte: (Carte & { at: number }) | null;
   /** Cartes à collectionner de chaque joueur (id du joueur → collection). Rien de secret : tout le monde voit les collections. */
   collections: Record<string, Collection>;
+  /** Vaisseaux : celui du groupe et ceux que le MJ prépare. Les vaisseaux cachés et les notes restent chez le MJ. */
+  vaisseaux: Vaisseau[];
 }
 
 /** Vue envoyée à un client : la version joueur retire les secrets. */

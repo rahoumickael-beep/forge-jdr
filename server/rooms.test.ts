@@ -148,3 +148,18 @@ test("code du MJ : servi seulement avec la bonne clé de partie", () => {
   assert.ok(FICHIER_MJ.test("/assets/mj-CGpE8zGg.js"));
   assert.ok(!FICHIER_MJ.test("/assets/index-CBY_I5uX.js"));
 });
+
+test("vue joueur : ni vaisseau caché ni note du MJ sur un vaisseau ; l'import des vaisseaux est nettoyé", async () => {
+  const { nouveauVaisseau } = await import("../shared/vaisseaux");
+  const { stored, lea } = partie();
+  const nous = { ...nouveauVaisseau("cargo-leger", "Pie-Grièche", "groupe"), notes: "SECRET-VAISSEAU : traceur dans la soute" };
+  const eux = nouveauVaisseau("fregate", "SECRET-FREGATE", "autre");
+  stored.state.vaisseaux.push(nous, eux);
+  const vue = JSON.stringify(hideUnseen(viewFor(stored, lea)));
+  assert.ok(vue.includes("Pie-Grièche"));
+  assert.ok(!vue.includes("SECRET-VAISSEAU") && !vue.includes("SECRET-FREGATE"));
+  const importee = sanitizeImport({ tokens: [], vaisseaux: [{ ...nous, coque: -40, inconnu: "x" }, 42] }, stored.state);
+  assert.equal(importee.vaisseaux.length, 1);
+  assert.equal(importee.vaisseaux[0].coque, 0);
+  assert.equal("inconnu" in importee.vaisseaux[0], false);
+});

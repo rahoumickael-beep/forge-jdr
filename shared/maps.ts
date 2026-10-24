@@ -1,5 +1,6 @@
 // Générateurs de cartes procédurales en grille.
-// donjon : salles + couloirs ; caverne : automate cellulaire ; nature : bruit de valeur ; village : rues + maisons.
+// donjon : salles + couloirs ; caverne : automate cellulaire ; nature : bruit de valeur ; village : rues + maisons ;
+// espace : vide praticable, champs d'astéroïdes (bloquent), nébuleuses et débris (se traversent), un Phare, une station.
 import { Rng } from "./random";
 import { T, type GameMap, type MapKind, type Tile } from "./types";
 
@@ -16,6 +17,7 @@ const KIND_NAMES: Record<MapKind, string> = {
   caverne: "Cavernes",
   nature: "Contrée sauvage",
   village: "Village",
+  espace: "Secteur",
 };
 
 export function generateMap(opts: MapOptions): GameMap {
@@ -30,6 +32,8 @@ export function generateMap(opts: MapOptions): GameMap {
       return { ...base, ...wilderness(width, height, rng) };
     case "village":
       return { ...base, ...village(width, height, rng) };
+    case "espace":
+      return { ...base, ...espace(width, height, rng) };
     default:
       return { ...base, ...dungeon(width, height, rng) };
   }
@@ -304,6 +308,37 @@ function wilderness(w: number, h: number, rng: Rng) {
     const yy = rng.int(2, h - 6);
     rooms.push({ x, y: yy, w: 3, h: 3, label: rng.pick(["Campement", "Ruine", "Grotte", "Clairière", "Tour de guet", "Pont"]) });
   }
+  return { tiles, rooms };
+}
+
+/**
+ * Carte d'espace pour le combat de vaisseaux : le vide (sol) se traverse partout ; les astéroïdes (murs) bloquent
+ * le passage et la vue ; les nébuleuses (eau) et les débris (végétation) se traversent. Un Phare et une station
+ * sont posés loin l'un de l'autre, entourés de vide.
+ */
+function espace(w: number, h: number, rng: Rng) {
+  const roche = noiseField(w, h, 6, rng);
+  const grain = noiseField(w, h, 2, rng);
+  const gaz = noiseField(w, h, 10, rng);
+  const tiles: Tile[] = roche.map((v, i) => {
+    if (v * 0.7 + grain[i] * 0.3 > 0.74) return T.mur;
+    if (gaz[i] > 0.66) return T.eau;
+    if (v > 0.6 && grain[i] > 0.55) return T.vegetation;
+    return T.sol;
+  });
+  const rooms: Room[] = [];
+  const degager = (cx: number, cy: number, r: number) => {
+    for (let y = cy - r; y <= cy + r; y++) for (let x = cx - r; x <= cx + r; x++) if (x >= 0 && y >= 0 && x < w && y < h) tiles[y * w + x] = T.sol;
+  };
+  const phare = { x: rng.int(4, Math.floor(w / 3)), y: rng.int(4, h - 6) };
+  degager(phare.x + 1, phare.y + 1, 3);
+  rooms.push({ x: phare.x, y: phare.y, w: 3, h: 3, label: "Phare" });
+  const station = { x: rng.int(Math.floor((2 * w) / 3), w - 6), y: rng.int(3, h - 6) };
+  degager(station.x + 1, station.y + 1, 2);
+  rooms.push({ x: station.x, y: station.y, w: 3, h: 2, label: rng.pick(["Station de péage", "Relais de ravitaillement", "Épave", "Balise de la Ligue"]) });
+  // Les bords restent dégagés pour entrer et sortir du secteur.
+  for (let x = 0; x < w; x++) for (const y of [0, h - 1]) if (tiles[y * w + x] === T.mur) tiles[y * w + x] = T.sol;
+  for (let y = 0; y < h; y++) for (const x of [0, w - 1]) if (tiles[y * w + x] === T.mur) tiles[y * w + x] = T.sol;
   return { tiles, rooms };
 }
 

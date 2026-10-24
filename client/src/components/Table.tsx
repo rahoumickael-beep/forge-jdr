@@ -9,6 +9,7 @@ import { CollectionPanel } from "./Collection";
 import { DesSurLaTable } from "./DesSurLaTable";
 import { InitiativeFrieze } from "./InitiativeFrieze";
 import { ChroniquePanel } from "./Chronique";
+import { VaisseauPanel } from "./Vaisseau";
 import { MapCanvas, type MapTool } from "./MapCanvas";
 import { HandoutsPanel, MyCharacterPanel, PartyPanel } from "./PlayerPanels";
 import { INITIAL_NAV, Rulebook, RulebookOverlay, type BookNav } from "./Rulebook";
@@ -36,7 +37,11 @@ export function Table({ room }: { room: RoomView }) {
   const { connected } = useStore();
   const isGM = room.you.isGM;
   codeDeLaPartie = room.code;
-  const tabs: readonly string[] = isGM ? GM_TABS : PLAYER_TABS;
+  // Les vaisseaux n'ont d'onglet que dans un monde qui en a (la SF) ou dès qu'une partie en compte un.
+  const avecVaisseaux = room.genre === "science-fiction" || room.vaisseaux.length > 0;
+  const tabs: readonly string[] = isGM
+    ? avecVaisseaux ? [...GM_TABS.slice(0, -2), "Vaisseaux", ...GM_TABS.slice(-2)] : GM_TABS
+    : avecVaisseaux ? [...PLAYER_TABS.slice(0, 2), "Vaisseau", ...PLAYER_TABS.slice(2)] : PLAYER_TABS;
   const [tab, setTab] = useState<string>(isGM ? (room.map ? "Générer" : "Carte") : "Mon perso");
   const [tool, setTool] = useState<MapTool>("deplacer");
   const [brush, setBrush] = useState(3);
@@ -118,6 +123,7 @@ export function Table({ room }: { room: RoomView }) {
             {tab === "Cartes" && <CollectionPanel room={room} />}
             {tab === "Mon perso" && <MyCharacterPanel room={room} />}
             {tab === "Groupe" && <PartyPanel room={room} />}
+            {tab === "Vaisseau" && <VaisseauPanel room={room} />}
             {tab === "Documents" && <HandoutsPanel room={room} />}
             {tab === "Règles" && <Rulebook room={room} nav={bookNav} onNav={setBookNav} onOpenWide={() => setBookOpen(true)} />}
           </div>

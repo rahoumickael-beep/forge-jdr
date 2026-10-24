@@ -191,6 +191,7 @@ const MAP_KINDS: { id: MapKind; label: string }[] = [
   { id: "caverne", label: "Cavernes" },
   { id: "nature", label: "Extérieur" },
   { id: "village", label: "Village" },
+  { id: "espace", label: "Espace (vaisseaux)" },
 ];
 
 export function MapPanel({ room }: { room: RoomView }) {

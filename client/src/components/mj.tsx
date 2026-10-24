@@ -5,6 +5,7 @@
 import type { RoomView } from "../../../shared/types";
 import { CampagnePanel } from "./CampagnePanel";
 import { BestiaryPanel, CombatPanel, GeneratePanel, MapPanel, NotesPanel, ScenariosPanel, SettingsPanel, TokensPanel } from "./GmPanels";
+import { VaisseauxMJ } from "./Vaisseau";
 
 export { PiocheMJ } from "./PiocheMJ";
 
@@ -19,6 +20,7 @@ export function PanneauMJ({ room, tab, selectedId, onSelect }: { room: RoomView;
       {tab === "Scénarios" && <ScenariosPanel room={room} />}
       {tab === "Narration" && <NotesPanel room={room} />}
       {tab === "Campagne" && <CampagnePanel room={room} />}
+      {tab === "Vaisseaux" && <VaisseauxMJ room={room} />}
       {tab === "Réglages" && <SettingsPanel room={room} />}
     </>
   );

@@ -4,7 +4,7 @@ import { extractJson, toScenario } from "./ai";
 import { rollDice } from "./dice";
 import { GENRES } from "./genres";
 import { generateCharacter, generateEncounter, generateScenario, modifier } from "./generators";
-import { generateMap, walkable } from "./maps";
+import { generateMap, reachable, walkable } from "./maps";
 import { T, type MapKind } from "./types";
 
 test("modificateurs façon D&D", () => {
@@ -45,7 +45,7 @@ test("chaque genre produit personnages, rencontres et scénarios complets", () =
 });
 
 test("cartes : dimensions et cases praticables", () => {
-  for (const kind of ["donjon", "caverne", "nature", "village"] as MapKind[]) {
+  for (const kind of ["donjon", "caverne", "nature", "village", "espace"] as MapKind[]) {
     for (const seed of [1, 7, 99]) {
       const m = generateMap({ kind, width: 40, height: 30, seed });
       assert.equal(m.tiles.length, 40 * 30, kind);
@@ -266,4 +266,15 @@ test("village : aucun quart de carte vide, des ruelles entre les maisons", () =>
     }
   }
   assert.ok(withAlley >= 50, `trop peu de ruelles entre deux maisons (${withAlley} villages sur 60)`);
+});
+
+test("espace : un Phare et un lieu, le Phare relié à la station par le vide", () => {
+  for (let seed = 1; seed <= 40; seed++) {
+    const m = generateMap({ kind: "espace", width: 46, height: 36, seed });
+    const phare = m.rooms.find((r) => r.label === "Phare")!;
+    const autre = m.rooms.find((r) => r.label !== "Phare")!;
+    assert.ok(phare && autre, `graine ${seed} : lieux`);
+    const atteint = reachable(m, { x: phare.x + 1, y: phare.y + 1 }, 500);
+    assert.ok(atteint.has((autre.y + 1) * m.width + autre.x + 1), `graine ${seed} : la station est coupée du Phare`);
+  }
 });

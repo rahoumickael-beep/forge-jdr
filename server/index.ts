@@ -12,8 +12,9 @@ import { join } from "node:path";
 import express from "express";
 import { Server, type Socket } from "socket.io";
 import { rollDice } from "../shared/dice";
+import { ACTIONS, jouerAction, nettoyerVaisseaux, nouveauRound, nouveauVaisseau, POSTES, synchroniserPions, type Poste, type Vaisseau } from "../shared/vaisseaux";
 import { uid } from "../shared/random";
-import type { Character, GameMap, InitiativeEntry, Player, RoomState, Scenario, Token } from "../shared/types";
+import { T, type Character, type GameMap, type InitiativeEntry, type Player, type RoomState, type Scenario, type Token } from "../shared/types";
 import { COOKIE_MJ, cookieMJ, estMJ, FICHIER_MJ } from "./acces-mj";
 import { claudeAvailable, generateWithClaude } from "./claude";
 import { addPlayer, characterOwner, createRoom, getRoom, hideUnseen, isGenre, isTon, loadRooms, log, MAX_PLAYERS, sanitizeImport, saveSoon, updateExplored, viewFor, type StoredRoom } from "./rooms";
@@ -91,6 +92,24 @@ function announce(room: StoredRoom, combat: Combat) {
   log(room, { from: "MJ", text: combat.cause === "auto" ? `Combat ! ${names.join(", ")} surgit devant le groupe.` : "Le combat commence.", kind: "narration" });
   noterFait(st.campagne, `Combat contre ${names.join(", ") || "des adversaires"}.`);
   log(room, { from: "Système", text: `Initiative : ${st.initiative.entries.map((e) => `${e.name} (${e.value})`).join(", ")}.`, kind: "systeme", secret: true });
+}
+
+/** La case praticable libre la plus proche du centre de la carte. */
+function caseLibre(st: RoomState): { x: number; y: number } {
+  const map = st.map!;
+  const prises = new Set(st.tokens.map((t) => Math.round(t.y) * map.width + Math.round(t.x)));
+  const cx = Math.floor(map.width / 2);
+  const cy = Math.floor(map.height / 2);
+  let meilleur = { x: cx, y: cy, d: Infinity };
+  for (let y = 0; y < map.height; y++)
+    for (let x = 0; x < map.width; x++) {
+      const i = y * map.width + x;
+      const tuile = map.tiles[i];
+      if (prises.has(i) || tuile === T.mur || tuile === T.vide) continue;
+      const d = (x - cx) ** 2 + (y - cy) ** 2;
+      if (d < meilleur.d) meilleur = { x, y, d };
+    }
+  return { x: meilleur.x, y: meilleur.y };
 }
 
 function attach(socket: Socket, room: StoredRoom, player: Player) {
@@ -442,6 +461,108 @@ io.on("connection", (socket) => {
   });
   gm<void>("carte:ranger", (st) => (st.carte = null));
   gm<unknown>("room:import", (st, data) => Object.assign(st, sanitizeImport(data, st)));
+
+  // --- Vaisseaux (shared/vaisseaux.ts) : le MJ les crée et les pose, chaque joueur tient un poste ---
+  gm<{ modele: string; nom: string; equipage: Vaisseau["equipage"] }>("vaisseau:creer", (st, p) => {
+    if (st.vaisseaux.length >= 30) throw new Error("Trente vaisseaux au plus.");
+    st.vaisseaux.push(nouveauVaisseau(String(p?.modele ?? ""), String(p?.nom ?? ""), p?.equipage === "groupe" ? "groupe" : "autre"));
+  });
+  /** Le MJ corrige une fiche : nom, coque, boucliers, caché ou non, notes, améliorations. */
+  gm<Partial<Vaisseau> & { id: string }>("vaisseau:modifier", (st, p) => {
+    const v = st.vaisseaux.find((x) => x.id === p?.id);
+    if (!v) throw new Error("Vaisseau introuvable.");
+    const [propre] = nettoyerVaisseaux([{ ...v, ...p, id: v.id, postes: v.postes, tokenId: v.tokenId }]);
+    Object.assign(v, propre, { effets: v.effets });
+    synchroniserPions(st, v);
+  });
+  gm<string>("vaisseau:supprimer", (st, id) => {
+    const v = st.vaisseaux.find((x) => x.id === id);
+    if (!v) throw new Error("Vaisseau introuvable.");
+    st.tokens = st.tokens.filter((t) => t.id !== v.tokenId);
+    st.vaisseaux = st.vaisseaux.filter((x) => x !== v);
+  });
+  /** Pose le vaisseau sur la carte : pion « joueur » pour celui du groupe (il voit, le pilote le déplace), « monstre » sinon. */
+  gm<string>("vaisseau:poser", (st, id) => {
+    const v = st.vaisseaux.find((x) => x.id === id);
+    if (!v) throw new Error("Vaisseau introuvable.");
+    if (!st.map) throw new Error("Pose d'abord une carte.");
+    st.tokens = st.tokens.filter((t) => t.id !== v.tokenId);
+    const pos = caseLibre(st);
+    const token: Token = {
+      id: uid("t_"),
+      name: v.nom,
+      x: pos.x,
+      y: pos.y,
+      color: v.equipage === "groupe" ? "#c8a24a" : "#7a3d22",
+      kind: v.equipage === "groupe" ? "joueur" : "monstre",
+      hidden: !!v.cache,
+      size: v.taille,
+      speed: v.vitesse,
+      vaisseauId: v.id,
+      vision: v.equipage === "groupe" ? 20 : undefined,
+    };
+    st.tokens.push(token);
+    v.tokenId = token.id;
+    synchroniserPions(st, v);
+  });
+  gm<void>("vaisseau:round", (st, _p, room) => {
+    for (const v of st.vaisseaux) nouveauRound(v);
+    log(room, { from: "MJ", text: "Nouveau round : esquives, ordres et cibles désignées retombent.", kind: "systeme" });
+  });
+
+  /** Un joueur met son personnage à un poste du vaisseau du groupe (ou l'en retire) ; le MJ place qui il veut. */
+  socket.on("vaisseau:poste", (p: { id: string; poste: Poste; characterId?: string | null }, ack?: Ack) => {
+    const s = session();
+    if (!s) return;
+    const st = s.room.state;
+    const v = st.vaisseaux.find((x) => x.id === p?.id);
+    if (!v || !POSTES.some((x) => x.id === p.poste)) return ack?.({ ok: false, error: "Poste introuvable." });
+    const perso = p.characterId ? st.characters.find((c) => c.id === p.characterId) : undefined;
+    if (p.characterId && !perso) return ack?.({ ok: false, error: "Fiche introuvable." });
+    if (!s.player.isGM) {
+      if (v.equipage !== "groupe") return ack?.({ ok: false, error: "Ce vaisseau n'est pas le vôtre." });
+      const actuel = v.postes[p.poste] ? st.characters.find((c) => c.id === v.postes[p.poste]) : undefined;
+      if (perso && characterOwner(st, perso) !== s.player.id) return ack?.({ ok: false, error: "Cette fiche n'est pas à toi." });
+      if (!perso && actuel && characterOwner(st, actuel) !== s.player.id) return ack?.({ ok: false, error: "Ce poste est tenu par quelqu'un d'autre." });
+    }
+    // Un personnage ne tient qu'un poste à la fois.
+    if (perso) for (const x of POSTES) if (v.postes[x.id] === perso.id) delete v.postes[x.id];
+    if (perso) v.postes[p.poste] = perso.id;
+    else delete v.postes[p.poste];
+    synchroniserPions(st, v);
+    ack?.({ ok: true });
+    void broadcast(s.room);
+  });
+
+  /** Action de poste : seul le joueur dont le personnage tient le poste (ou le MJ) la joue ; le serveur lance les dés. */
+  socket.on("vaisseau:action", (p: { id: string; action: string; cibleId?: string; arme?: number }, ack?: Ack) => {
+    const s = session();
+    if (!s) return;
+    const st = s.room.state;
+    const v = st.vaisseaux.find((x) => x.id === p?.id);
+    const action = ACTIONS.find((a) => a.id === p?.action);
+    if (!v || !action) return ack?.({ ok: false, error: "Action introuvable." });
+    const perso = v.postes[action.poste] ? st.characters.find((c) => c.id === v.postes[action.poste]) : undefined;
+    if (!s.player.isGM && (!perso || characterOwner(st, perso) !== s.player.id)) return ack?.({ ok: false, error: "Ton personnage ne tient pas ce poste." });
+    const cible = p.cibleId ? st.vaisseaux.find((x) => x.id === p.cibleId && (s.player.isGM || !x.cache)) : undefined;
+    try {
+      const r = jouerAction(st.genre, v, action.id, perso, { cible, arme: Number.isInteger(p.arme) ? p.arme : 0 });
+      const premier = r.jets[0];
+      log(s.room, {
+        from: s.player.isGM ? "MJ" : s.player.name,
+        fromId: s.player.id,
+        text: r.texte,
+        kind: "des",
+        roll: premier ? { sides: premier.sides, rolls: premier.rolls.slice(0, 20), kept: premier.kept.slice(0, 20), modifier: premier.modifier, total: premier.total } : undefined,
+      });
+      synchroniserPions(st, v);
+      if (cible) synchroniserPions(st, cible);
+      ack?.({ ok: true });
+      void broadcast(s.room);
+    } catch (err) {
+      ack?.({ ok: false, error: err instanceof Error ? err.message : String(err) });
+    }
+  });
 });
 
 loadRooms();
