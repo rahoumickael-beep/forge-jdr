@@ -191,7 +191,14 @@ const MAP_KINDS: { id: MapKind; label: string }[] = [
   { id: "caverne", label: "Cavernes" },
   { id: "nature", label: "Extérieur" },
   { id: "village", label: "Village" },
+  { id: "espace", label: "Espace (vaisseaux)" },
+  { id: "mer", label: "Pleine mer (navires)" },
+  { id: "pont", label: "Ponts d'abordage" },
 ];
+
+/** Les cartes de combat de vaisseaux n'ont leur place que dans un monde qui s'en sert : l'espace en SF, la mer et les ponts aux Îles du Vent. */
+const cartesDuGenre = (genre: GenreId) =>
+  MAP_KINDS.filter((k) => (k.id === "espace" ? genre !== "pirates" : k.id === "mer" || k.id === "pont" ? genre === "pirates" : true));
 
 export function MapPanel({ room }: { room: RoomView }) {
   const [kind, setKind] = useState<MapKind>("donjon");
@@ -216,7 +223,7 @@ export function MapPanel({ room }: { room: RoomView }) {
         <label className="field">
           <span>Type</span>
           <select id="map-kind" className="input" value={kind} onChange={(e) => setKind(e.target.value as MapKind)}>
-            {MAP_KINDS.map((k) => <option key={k.id} value={k.id}>{k.label}</option>)}
+            {cartesDuGenre(room.genre).map((k) => <option key={k.id} value={k.id}>{k.label}</option>)}
           </select>
         </label>
         <label className="field">
@@ -439,7 +446,8 @@ export function CombatPanel({ room }: { room: RoomView }) {
   );
 }
 
-const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous"];
+/** Ordre d'affichage des familles ; le panneau ne montre que celles du genre de la partie. */
+const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous", "Faune des mondes", "Équipages", "Machines", "Choses des Routes", "Bêtes d'hiver", "Gens de la Dîme", "Choses de la terre", "Reflets"];
 
 /** Bestiaire du genre : le MJ pose une créature (ou un groupe) sur la carte en un clic. */
 export function BestiaryPanel({ room }: { room: RoomView }) {
@@ -490,7 +498,7 @@ export function BestiaryPanel({ room }: { room: RoomView }) {
         <input className="input" placeholder="Chercher une créature" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Chercher une créature" />
         <select className="input" value={family} onChange={(e) => setFamily(e.target.value as Family | "")} aria-label="Famille">
           <option value="">Toutes les familles</option>
-          {FAMILIES.map((f) => <option key={f} value={f}>{f}</option>)}
+          {FAMILIES.filter((f) => all.some((c) => c.family === f)).map((f) => <option key={f} value={f}>{f}</option>)}
         </select>
         <label className="small" style={{ display: "flex", gap: 4, alignItems: "center" }}>
           Nombre
@@ -521,7 +529,7 @@ export function BestiaryPanel({ room }: { room: RoomView }) {
   );
 }
 
-const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236" };
+const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236", "Faune des mondes": "#5e6b2a", Équipages: "#7a3d22", Machines: "#3a4a5c", "Choses des Routes": "#4a3a6b", "Bêtes d'hiver": "#5a6470", "Gens de la Dîme": "#6b2a20", "Choses de la terre": "#4e4a38", Reflets: "#3c5a66", "Bêtes de la ville": "#7a4a1a", "Gens du Bail": "#8a2a66", "Drones et automates": "#2f5560", Cousus: "#4a6a44", "Bêtes de la côte": "#5a5a48", "Gens de 1923": "#6a4a2e", "Ce que rend la mer": "#3e5256", "La Fosse": "#1f3a3a", "Bêtes du Sec": "#8a6a2a", "Gens de la Route": "#a0522d", "Gens des citadelles": "#5f6f8a", "Machines d'avant": "#6a5a4a", "Bêtes de la prairie": "#7a6a2e", "Gens de la loi": "#4a5a7a", "Hors-la-loi": "#7a3a2a", "Gens du rail": "#4a4a4a", "Bêtes de mer et de côte": "#2f6f73", "Gens de mer": "#8a6a2e", "Soldats et chasseurs": "#6a5a3a", "Figures et navires": "#2f3f5c", "Automates et machines de la foire": "#7a5a2a", "Gens de la foire et de la pègre": "#6a3a3a", "Gardes, Sûreté et Commissariat": "#3a4a5a", "Figures et grandes machines": "#5a3a22", "La rue et les témoins": "#6a5a3a", "Forces de l'ordre": "#2f4a6a", "Les privés": "#3a3a3e", "Figures et scènes": "#7a2a22" };
 
 export function ScenariosPanel({ room }: { room: RoomView }) {
   const place = (e: Encounter) => {

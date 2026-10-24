@@ -2,6 +2,7 @@
 
 export interface DiceResult {
   expression: string;
+  sides: number;
   rolls: number[];
   kept: number[];
   modifier: number;
@@ -39,5 +40,5 @@ export function rollDice(expr: string, random: () => number = Math.random): Dice
   const total = kept.reduce((a, b) => a + b, 0) + modifier;
   const mod = modifier ? (modifier > 0 ? ` + ${modifier}` : ` - ${-modifier}`) : "";
   const detail = `[${rolls.join(", ")}]${kept !== rolls ? ` garde ${kept.join(", ")}` : ""}${mod}`;
-  return { expression: expr.trim(), rolls, kept, modifier, total, detail };
+  return { expression: expr.trim(), sides, rolls, kept, modifier, total, detail };
 }

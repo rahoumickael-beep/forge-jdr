@@ -3,7 +3,11 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { uid } from "../shared/random";
 import { visibleCells } from "../shared/vision";
+import { nomVuParLesJoueurs, pionDeCreature } from "../shared/bestiary";
+import { campagnePourJoueur, nettoyerCampagne, nouvelleCampagne } from "../shared/campagne";
+import { nettoyerCollections } from "../shared/collection";
 import { GENRES, TONS } from "../shared/genres";
+import { nettoyerVaisseaux, vaisseauxPourJoueur } from "../shared/vaisseaux";
 import type { Character, ChatEntry, GameMap, GenreId, Player, RoomState, RoomView, Token, Ton } from "../shared/types";
 
 const DATA_DIR = process.env.DATA_DIR || join(process.cwd(), "data");
@@ -34,6 +38,10 @@ export function loadRooms() {
       stored.state.autoCombat ??= true;
       stored.state.sharedVision ??= true;
       stored.state.mapKnown ??= false;
+      stored.state.campagne = nettoyerCampagne(stored.state.campagne, stored.state.genre);
+      stored.state.carte ??= null;
+      stored.state.vaisseaux = nettoyerVaisseaux(stored.state.vaisseaux ?? [], stored.state.genre);
+      stored.state.collections = nettoyerCollections(stored.state.collections, stored.state.genre, stored.state.players.map((p) => p.id));
       rooms.set(stored.state.code, stored);
     } catch (err) {
       console.warn(`Partie illisible ignorée : ${file}`, err);
@@ -93,6 +101,10 @@ export function createRoom(opts: { name: string; genre: GenreId; ton: Ton; level
     gmNotes: "",
     movementLocked: false,
     scene: "",
+    campagne: nouvelleCampagne(isGenre(opts.genre) ? opts.genre : "fantasy"),
+    carte: null,
+    collections: {},
+    vaisseaux: [],
   };
   const stored = { state, gmKey: uid("gm_") + uid() };
   rooms.set(code, stored);
@@ -130,9 +142,16 @@ export function characterOwner(s: RoomState, c: Character): string | undefined {
 }
 
 /** Ce qu'un joueur a le droit de voir. Le MJ voit tout. */
+/** La figurine peinte part avec le pion : le client n'a pas le bestiaire pour la retrouver. */
+function avecPion(t: Token): Token {
+  const { pion: _p, ...reste } = t;
+  const pion = pionDeCreature(t.creatureId);
+  return pion ? { ...reste, pion } : reste;
+}
+
 export function viewFor(room: StoredRoom, player: Player): RoomView {
   const s = room.state;
-  if (player.isGM) return { ...s, you: player };
+  if (player.isGM) return { ...s, you: player, tokens: s.tokens.map(avecPion) };
   const { gmNotes: _hidden, ...rest } = s;
   const base = {
     ...rest,
@@ -142,6 +161,8 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
     scenarios: [], // les scénarios sont la préparation du MJ
     characters: s.characters.filter((c) => characterOwner(s, c)), // les fiches de PNJ restent chez le MJ
     handouts: s.handouts.filter((h) => !h.to?.length || h.to.includes(player.id)),
+    campagne: campagnePourJoueur(s.campagne, s.genre),
+    vaisseaux: vaisseauxPourJoueur(s.vaisseaux),
   };
   const map = s.map;
   if (!map || !s.fogEnabled) return { ...base, tokens: s.tokens.filter((t) => t.ownerId === player.id || !t.hidden) };
@@ -163,9 +184,18 @@ export function viewFor(room: StoredRoom, player: Player): RoomView {
 export function hideUnseen(view: RoomView): RoomView {
   if (view.you.isGM) return view;
   const seen = new Set(view.tokens.map((t) => t.id));
+  // Le vrai nom de certaines créatures trahit un secret du canon : les joueurs voient leur nom public.
+  const creatureOf = new Map(view.tokens.map((t) => [t.id, t.creatureId]));
   return {
     ...view,
-    initiative: { ...view.initiative, entries: view.initiative.entries.map((e) => (e.tokenId && !seen.has(e.tokenId) ? { value: e.value, name: "Quelque chose" } : e)) },
+    // Ni l'id de la créature (certains trahissent un secret) : la figurine est déjà calculée, sous un nom de fichier public.
+    tokens: view.tokens.map(({ creatureId, ...t }) => (creatureId ? { ...avecPion({ ...t, creatureId }), creatureId: undefined, name: nomVuParLesJoueurs(t.name, creatureId) } : t)),
+    initiative: {
+      ...view.initiative,
+      entries: view.initiative.entries.map((e) =>
+        e.tokenId && !seen.has(e.tokenId) ? { value: e.value, name: "Quelque chose" } : e.tokenId ? { ...e, name: nomVuParLesJoueurs(e.name, creatureOf.get(e.tokenId)) } : e,
+      ),
+    },
     combat: view.combat ? { ...view.combat, monsterIds: view.combat.monsterIds.filter((id) => seen.has(id)) } : null,
   };
 }
@@ -182,7 +212,7 @@ function cleanMap(v: unknown): GameMap | null {
   if (!isObj(v) || !isInt(v.width, 4, 200) || !isInt(v.height, 4, 200)) return null;
   const { width, height } = v;
   if (!Array.isArray(v.tiles) || v.tiles.length !== width * height || !v.tiles.every((t) => isInt(t, 0, 6))) return null;
-  const kinds = ["donjon", "caverne", "nature", "village"];
+  const kinds = ["donjon", "caverne", "nature", "village", "espace", "mer", "pont"];
   return {
     name: String(v.name ?? "Carte").slice(0, 80),
     kind: (kinds.includes(v.kind as string) ? v.kind : "donjon") as GameMap["kind"],
@@ -240,5 +270,9 @@ export function sanitizeImport(data: unknown, current: RoomState): RoomState {
     scenarios: withIds<RoomState["scenarios"][number]>(data.scenarios),
     gmNotes: str("gmNotes", 50000, ""),
     scene: str("scene", 2000, ""),
+    campagne: nettoyerCampagne(data.campagne, isGenre(data.genre) ? data.genre : current.genre),
+    carte: null,
+    collections: nettoyerCollections(data.collections, isGenre(data.genre) ? data.genre : current.genre, current.players.map((p) => p.id)),
+    vaisseaux: nettoyerVaisseaux(data.vaisseaux, isGenre(data.genre) ? data.genre : current.genre),
   };
 }

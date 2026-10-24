@@ -1,9 +1,13 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
+import { readdirSync, readFileSync } from "node:fs";
 import { FIN_DE_STYLE } from "./charte";
+import { AUBRETERRE } from "./canon/fantasy";
 import {
   averageDice,
-  BESTIARY,
+  BESTIARY as TOUT_LE_BESTIAIRE,
+  fichierCreature,
+  pionDeCreature,
   CR_STEPS,
   creaturesFor,
   estimateCr,
@@ -17,6 +21,8 @@ import {
 } from "./bestiary";
 import REGLES_FLUX from "../comfyui/regles-flux.json";
 
+/** Les tests de ce fichier portent sur Aubreterre ; l'Archipel a les siens (archipel-bestiaire.test.ts). */
+const BESTIARY = TOUT_LE_BESTIAIRE.filter((c) => c.genre === "fantasy");
 const step = (cr: number) => CR_STEPS.indexOf(cr);
 
 test("bestiaire : ids uniques et nombre de créatures", () => {
@@ -24,7 +30,8 @@ test("bestiaire : ids uniques et nombre de créatures", () => {
   assert.equal(new Set(ids).size, ids.length, "id en double");
   assert.ok(BESTIARY.length >= 45 && BESTIARY.length <= 60, `${BESTIARY.length} créatures`);
   assert.equal(creaturesFor("fantasy").length, BESTIARY.length);
-  assert.equal(creaturesFor("cyberpunk").length, 0);
+  // Les Îles du Vent ont leur bestiaire (iles-bestiaire.ts) et leurs tests (iles-bestiaire.test.ts).
+  assert.ok(creaturesFor("pirates").length >= 22);
 });
 
 test("bestiaire : FP de 0 à 20, un tiers de morts, des légendaires", () => {
@@ -136,4 +143,15 @@ test("bestiaire : aucune planche fantasy ne décrit d'objet moderne", () => {
     assert.ok(!negation.test(c.illustration), `${c.id} : négation dans le prompt`);
     assert.ok(c.illustration.startsWith(LUMIERE_FAMILLE[c.family]), `${c.id} : la lumière de la famille doit ouvrir le prompt`);
   }
+});
+
+test("figurines et cartes : aucun nom de fichier public ne trahit un secret", () => {
+  const script = readFileSync("scripts/vignettes-figurines.mjs", "utf8");
+  for (const c of BESTIARY.filter((x) => x.publicName && x.genre === "fantasy")) {
+    assert.ok(script.includes(`"${c.id}": "${fichierCreature(c)}"`), `alias de ${c.id} dans vignettes-figurines.mjs`);
+    assert.equal(pionDeCreature(c.id), `/pions/${fichierCreature(c)}.webp`);
+  }
+  const mots = AUBRETERRE.secrets.map((s) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ /g, "-"));
+  for (const dossier of ["client/public/pions", "client/public/cartes"])
+    for (const f of readdirSync(dossier)) for (const m of [...mots, "gorvan"]) assert.ok(!f.includes(m), `${dossier}/${f} trahit « ${m} »`);
 });

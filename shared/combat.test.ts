@@ -1,3 +1,4 @@
+import { nouvelleCampagne } from "./campagne";
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { autoCombat, endCombat, focusOf, monstersSeen, reachable, startCombat } from "./combat";
@@ -16,6 +17,10 @@ function etat(tokens: Token[]): RoomState {
     visionMode: "dynamique", sharedVision: true, mapKnown: false, abilityMethod: "points", deathRule: "heroique",
     tokens, players: [], chat: [], initiative: { entries: [], turn: 0, round: 1 }, combat: null, autoCombat: true,
     handouts: [], characters: [], scenarios: [], gmNotes: "", movementLocked: false, scene: "",
+    campagne: nouvelleCampagne("fantasy"),
+    carte: null,
+    collections: {},
+    vaisseaux: [],
   };
 }
 

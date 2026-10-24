@@ -1,5 +1,15 @@
 // Création de personnage façon Baldur's Gate 3 : origines, historiques, personnalité.
-// Contenu du monde fantasy d'Aubreterre (voir la bible du monde dans les fichiers du projet).
+// Contenu du monde fantasy d'Aubreterre (voir la bible du monde dans les fichiers du projet) ;
+// celui de l'Archipel (SF) est dans archipel-origines.ts.
+import { HISTORIQUES_ARCHIPEL, ORIGINES_ARCHIPEL, PERSONNALITE_ARCHIPEL } from "./archipel-origines";
+import { HISTORIQUES_TERNELANDE, ORIGINES_TERNELANDE, PERSONNALITE_TERNELANDE } from "./ternelande-origines";
+import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
+import { HISTORIQUES_NOYES, ORIGINES_NOYES, PERSONNALITE_NOYES } from "./noyes-origines";
+import { HISTORIQUES_SEC, ORIGINES_SEC, PERSONNALITE_SEC } from "./sec-origines";
+import { HISTORIQUES_ASILE, ORIGINES_ASILE, PERSONNALITE_ASILE } from "./asile-origines";
+import { HISTORIQUES_ILES, ORIGINES_ILES, PERSONNALITE_ILES } from "./iles-origines";
+import { HISTORIQUES_EXPO, ORIGINES_EXPO, PERSONNALITE_EXPO } from "./expo-origines";
+import { HISTORIQUES_HERMES, ORIGINES_HERMES, PERSONNALITE_HERMES } from "./hermes-origines";
 import type { GenreId } from "./types";
 
 /** Index des caractéristiques : 0 For, 1 Dex, 2 Con, 3 Int, 4 Sag, 5 Cha (noms adaptés au genre). */
@@ -105,7 +115,7 @@ export const ORIGINS: Origin[] = [
         traits: [
           { name: "Tour appris", text: "Un tour de magie de magicienne au choix." },
           { name: "Souvenir d'avant", text: "Une fois par repos long, avantage à un jet d'Histoire ou d'Arcanes." },
-          { name: "Oreille fine", text: "Entend les murmures de Gorvan dirigés vers un allié à 6 cases. Le MJ le prévient." },
+          { name: "Oreille fine", text: "Entend les Murmures qu'une voix adresse à un allié à 6 cases. Le MJ le prévient." },
         ],
       },
     ],
@@ -291,6 +301,15 @@ export const ORIGINS: Origin[] = [
       },
     ],
   },
+  ...ORIGINES_ARCHIPEL,
+  ...ORIGINES_TERNELANDE,
+  ...ORIGINES_RESIDENCE,
+  ...ORIGINES_NOYES,
+  ...ORIGINES_SEC,
+  ...ORIGINES_ASILE,
+  ...ORIGINES_ILES,
+  ...ORIGINES_EXPO,
+  ...ORIGINES_HERMES,
 ];
 
 export const BACKGROUNDS: Background[] = [
@@ -374,6 +393,15 @@ export const BACKGROUNDS: Background[] = [
     gear: ["Bâton de marche", "Besace de cierges", "Insigne de plomb de la Rotonde", "6 po"],
     feature: { name: "La route des pèlerins", text: "Tu sais où trouver un abri gratuit, de l'eau potable et des nouvelles fraîches à chaque étape. Les gens de la route te protègent." },
   },
+  ...HISTORIQUES_ARCHIPEL,
+  ...HISTORIQUES_TERNELANDE,
+  ...HISTORIQUES_RESIDENCE,
+  ...HISTORIQUES_NOYES,
+  ...HISTORIQUES_SEC,
+  ...HISTORIQUES_ASILE,
+  ...HISTORIQUES_ILES,
+  ...HISTORIQUES_EXPO,
+  ...HISTORIQUES_HERMES,
 ];
 
 /** Suggestions de personnalité. Le joueur peut toujours écrire la sienne. */
@@ -411,6 +439,9 @@ export const PERSONALITY: Record<"trait" | "ideal" | "bond" | "flaw", string[]> 
     "J'ai peur du noir depuis le Glas, et je préfère mourir que l'avouer.",
   ],
 };
+
+/** Suggestions de personnalité du monde de la partie. */
+export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : genre === "dark-fantasy" ? PERSONNALITE_TERNELANDE : genre === "cyberpunk" ? PERSONNALITE_RESIDENCE : genre === "horreur" ? PERSONNALITE_NOYES : genre === "post-apo" ? PERSONNALITE_SEC : genre === "western" ? PERSONNALITE_ASILE : genre === "pirates" ? PERSONNALITE_ILES : genre === "steampunk" ? PERSONNALITE_EXPO : genre === "contemporain" ? PERSONNALITE_HERMES : PERSONALITY);
 
 /** Achat par points (27 points, valeurs de 8 à 15). */
 export const POINT_BUY_BUDGET = 27;

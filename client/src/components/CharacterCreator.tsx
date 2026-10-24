@@ -1,12 +1,13 @@
 // Créateur de personnage pas à pas, façon Baldur's Gate 3.
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { formatMod, modifier, proficiency } from "../../../shared/generators";
+import { formatMod, modifier, proficiency } from "../../../shared/personnages";
 import { getGenre } from "../../../shared/genres";
 import { uid } from "../../../shared/random";
 import {
   backgroundsFor,
   originsFor,
   PERSONALITY,
+  personnaliteDe,
   POINT_BUY_BUDGET,
   POINT_BUY_COST,
   STANDARD_ARRAY,
@@ -15,6 +16,7 @@ import {
   type StatBonus,
   type SubOrigin,
 } from "../../../shared/origins";
+import { argentDOrigine, classeArmureDepart, equipementDeDepart, PLUS_HAUTE_SOMME } from "../../../shared/armures";
 import { classesFor, type CharacterClass, type Power, type Subclass } from "../../../shared/rules";
 import type { Character, RoomView } from "../../../shared/types";
 import { send, toast } from "../store";
@@ -27,21 +29,6 @@ function mergeBonus(...list: (StatBonus | undefined)[]): number[] {
   const out = [0, 0, 0, 0, 0, 0];
   for (const b of list) if (b) for (const [k, v] of Object.entries(b)) out[Number(k)] += v ?? 0;
   return out;
-}
-
-function armorClass(cls: CharacterClass, sub: SubOrigin | undefined, subclass: Subclass | undefined, mods: number[]): number {
-  const [, dex, con, , wis] = mods;
-  const armor = cls.armor.toLowerCase();
-  const gear = cls.startingGear.join(" ").toLowerCase();
-  let ac = 10 + dex;
-  if (cls.id.endsWith("moine")) ac = 10 + dex + wis;
-  else if (cls.id.endsWith("barbare")) ac = 10 + dex + con;
-  else if (/toutes les armures|lourde/.test(armor)) ac = 16;
-  else if (/intermédiaire/.test(armor)) ac = 14 + Math.min(dex, 2);
-  else if (/légère/.test(armor)) ac = 11 + dex;
-  if (sub?.id === "os-sec" || subclass?.id === "ensorceleuse-draconique") ac = Math.max(ac, 13 + dex);
-  if (/bouclier/.test(armor) && /bouclier/.test(gear)) ac += 2;
-  return ac;
 }
 
 function hitPoints(cls: CharacterClass, sub: SubOrigin | undefined, subclass: Subclass | undefined, level: number, con: number): number {
@@ -126,10 +113,12 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
   const skillCount = cls?.skills.choose ?? 0;
 
   const hp = cls ? hitPoints(cls, sub, subclass, level, mods[2]) : 0;
-  const ac = cls ? armorClass(cls, sub, subclass, mods) : 10;
   const speed = sub?.speed ?? origin?.speed ?? 6;
   const powers = useMemo(() => (cls?.powers ?? []).filter((p) => p.level <= level), [cls, level]);
   const subPowers = useMemo(() => (subclass?.powers ?? []).filter((p) => p.level <= level), [subclass, level]);
+  const traitsDOrigine = [...(origin?.traits ?? []), ...(sub?.traits ?? [])];
+  const pouvoirsDeDefense = [...powers, ...subPowers].map((p) => p.effect).concat(traitsDOrigine.map((x) => x.text));
+  const ac = cls ? classeArmureDepart(cls.armor, cls.startingGear, pouvoirsDeDefense, statNames, mods) : 10;
 
   const canNext = [
     !!origin && !!sub,
@@ -181,7 +170,11 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
       ac,
       speed,
       skills: [...fixedSkills, ...skills],
-      equipment: [...cls!.startingGear, ...(bg?.gear ?? [])],
+      equipment: equipementDeDepart(
+        cls!.startingGear,
+        [...traitsDOrigine.flatMap((x) => argentDOrigine(x.text) ?? []), ...(bg?.gear ?? [])],
+        PLUS_HAUTE_SOMME.has(room.genre),
+      ),
       abilities: [
         ...powers.map((p) => p.name),
         ...subPowers.map((p) => p.name),
@@ -425,7 +418,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
                       <textarea className="input" rows={2} value={traits[k]} maxLength={300} onChange={(e) => setTraits({ ...traits, [k]: e.target.value })} />
                     </label>
                     <div className="cc-chips">
-                      {PERSONALITY[k].map((p) => (
+                      {personnaliteDe(room.genre)[k].map((p) => (
                         <button key={p} type="button" className="cc-chip small" aria-pressed={traits[k] === p} onClick={() => setTraits({ ...traits, [k]: p })}>{p}</button>
                       ))}
                     </div>

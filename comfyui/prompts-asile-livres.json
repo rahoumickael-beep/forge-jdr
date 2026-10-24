@@ -1,0 +1,247 @@
+[
+  {
+    "id": "region-bonne-esperance",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a small town of sun-dried brick and bleached wood on a bend of a river, a square plaza with a wooden church steeple casting its long shadow across the horse market, a faded blue white and red cloth hanging from an upstairs window, tobacco leaves drying on a balcony",
+    "width": 1344,
+    "height": 768,
+    "seed": 1711703691
+  },
+  {
+    "id": "origine-ws-asiliens",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, an old-family Asilien rancher in a black coat standing on the gallery of a stone ranch house, a cavalry sabre on the wall behind him, prairie beyond the rail",
+    "width": 896,
+    "height": 1152,
+    "seed": 1002889394
+  },
+  {
+    "id": "origine-ws-creoles",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a Creole woman in a bright calico dress and a straw hat stepping off a river steamer onto a landing with a carpet bag, a warm smile and sharp eyes",
+    "width": 896,
+    "height": 1152,
+    "seed": 4177839133
+  },
+  {
+    "id": "origine-ws-vaqueros",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a young vaquero in a wide hat and a short embroidered jacket mounted bareback, patting the neck of a spotted horse in a corral at dawn",
+    "width": 896,
+    "height": 1152,
+    "seed": 4045693592
+  },
+  {
+    "id": "origine-ws-comancheria",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a Comanche horseman in a leather shirt and leggings with a long braid, sitting calmly on a painted horse on a red canyon rim at dusk, a rolled trade blanket across his lap, dignified and unhurried",
+    "width": 896,
+    "height": 1152,
+    "seed": 1087708590
+  },
+  {
+    "id": "origine-ws-est",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a young man from the East in a bowler hat and a travelling suit, a carpet bag in each hand, stepping off a train at a raw timber station, looking up at the huge sky",
+    "width": 896,
+    "height": 1152,
+    "seed": 1874540626
+  },
+  {
+    "id": "origine-ws-revenants",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a tired veteran in a faded blue army coat with the insignia cut off, sitting alone on a porch step at night with a tin cup, a lamp on the rail, eyes on the dark",
+    "width": 896,
+    "height": 1152,
+    "seed": 2044105706
+  },
+  {
+    "id": "classe-pistolero",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a lean gunfighter in a long duster standing alone in the dust of a quiet street at noon, one hand hanging near the holster of a revolver, hat brim low, a stillness before the draw",
+    "width": 896,
+    "height": 1152,
+    "seed": 3494072830
+  },
+  {
+    "id": "classe-vaquero",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a vaquero on a sorrel horse in a flat-brimmed hat and leather chaps, swinging a rope in a wide loop across a green valley, longhorn cattle below",
+    "width": 896,
+    "height": 1152,
+    "seed": 400679154
+  },
+  {
+    "id": "classe-sherif",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a sheriff in a dark vest with a star on his chest, standing on the plank porch of a jailhouse with a shotgun in the crook of his arm, watching the street with tired patience",
+    "width": 896,
+    "height": 1152,
+    "seed": 1199315414
+  },
+  {
+    "id": "classe-joueur",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a gambler in a black frock coat and a brocade vest sitting at a saloon table, a fan of cards in one hand and a gold coin turning between the fingers of the other, an oil lamp on the table",
+    "width": 896,
+    "height": 1152,
+    "seed": 1868960775
+  },
+  {
+    "id": "classe-eclaireur",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a scout on a lean horse on a ridge at sunrise, a carbine across the saddle, studying a long line of dust on the plain far below",
+    "width": 896,
+    "height": 1152,
+    "seed": 2822706999
+  },
+  {
+    "id": "classe-chasseur-de-primes",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a bounty hunter in a wide hat and a worn coat leading a prisoner on a rope behind his horse across a dry creek bed, a folded poster in his breast pocket",
+    "width": 896,
+    "height": 1152,
+    "seed": 606131346
+  },
+  {
+    "id": "classe-medecin",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a country doctor with a leather bag kneeling by a lamp beside a wounded man on a kitchen table, needle and thread in hand, his sleeves rolled",
+    "width": 896,
+    "height": 1152,
+    "seed": 151091138
+  },
+  {
+    "id": "classe-predicateur",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a preacher in a black coat holding an open black book and a lever-action rifle slung across his back, standing in a wagon bed before a small crowd under a cottonwood tree",
+    "width": 896,
+    "height": 1152,
+    "seed": 434532381
+  },
+  {
+    "id": "classe-hors-la-loi",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, an outlaw on a horse at the mouth of a rocky canyon at dusk, a bandana pulled over her face, her revolver holstered, a wanted poster nailed to a tree behind her",
+    "width": 896,
+    "height": 1152,
+    "seed": 323264700
+  },
+  {
+    "id": "classe-arpenteur",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier character portrait, ochre and sage palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a surveyor in a waistcoat and a straw hat setting up a brass sighting instrument on a tripod in tall grass, a chain on the ground and a stake in his other hand",
+    "width": 896,
+    "height": 1152,
+    "seed": 3093698353
+  },
+  {
+    "id": "couverture-joueurs",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier cover art, ochre and sage palette, monumental composition, empty space at the top for the title, clean unmarked image, a stagecoach drawn by six horses galloping along a dusty trail across open prairie toward a distant brick and whitewashed wood town with a wooden church steeple, a driver in a wide hat leaning forward, three travellers and a guard on the roof, a steam locomotive trailing white smoke far behind on the horizon",
+    "width": 1024,
+    "height": 1448,
+    "seed": 3025381207
+  },
+  {
+    "id": "region-croix-de-pierre",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a stone cross six feet high at the edge of a plateau, a trading post of low timber and stone behind it, two riders stopped ten paces apart on either side, one a Mexican vaquero in a flat-brimmed hat and one a Comanche rider in a leather shirt, each with a long gun across the saddle, their horses quiet",
+    "width": 1344,
+    "height": 768,
+    "seed": 291687777
+  },
+  {
+    "id": "figure-saint-gilles",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a seventy-year-old man with white hair and a stiff back in a black frock coat, a silver-topped cane in one hand, standing on the steps of a columned assembly hall in a small frontier town, a proud and tired expression",
+    "width": 1344,
+    "height": 768,
+    "seed": 1274234312
+  },
+  {
+    "id": "figure-burke",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a fifty-year-old Texas Ranger with a grey moustache and a weathered face, a silver star cut from a coin pinned to his vest, a lever-action carbine resting on his shoulder, standing beside his horse at a river crossing",
+    "width": 1344,
+    "height": 768,
+    "seed": 4246474837
+  },
+  {
+    "id": "region-frontiere-du-sud",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a river ford under a full moon, a herd of horses crossing the shallow water in silence with their manes silvered, a lone rider in a grey sombrero on the dark hill above lighting a cigarette, mesquite scrub and a low adobe village in the distance",
+    "width": 1344,
+    "height": 768,
+    "seed": 2822606289
+  },
+  {
+    "id": "region-ranchos",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a stone ranch house with a long covered gallery at sunset, an old rancher in a black coat sitting with a cavalry sabre across his knees, looking out over a corral of horses and longhorn cattle, and far off a file of surveyors carrying sighting rods and wooden stakes across the grass",
+    "width": 1344,
+    "height": 768,
+    "seed": 3332699540
+  },
+  {
+    "id": "region-fort-rail",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a steam locomotive standing still at the end of the rails at dusk, white steam rising into an orange sky, a raw timber station, canvas tents and saloons behind it, and ten paces ahead of the engine on the open prairie a small stone boundary marker carved with an eagle and a bee",
+    "width": 1344,
+    "height": 768,
+    "seed": 3562488932
+  },
+  {
+    "id": "figure-chef-comanche",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a dignified seventy-five-year-old Comanche elder with long grey braids and a deeply lined face, wrapped in a trade blanket, seated before his tipi at the edge of a red canyon, calm eyes that look at the viewer as at an equal, a good horse standing behind him",
+    "width": 1344,
+    "height": 768,
+    "seed": 1742177831
+  },
+  {
+    "id": "figure-ortiz",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a fifty-five-year-old trader with a broad dark face and a short grey beard, a wide-brimmed hat and a leather vest, leaning on the counter of a plank-walled trading post stacked with hides, flour sacks and rifles, a hand open in greeting",
+    "width": 1344,
+    "height": 768,
+    "seed": 1584734024
+  },
+  {
+    "id": "region-comancheria",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a red canyon at dusk with a river running through it, forty tipis of painted hide along the bank, smoke rising from cooking fires, children watering horses at the river, and sacks of flour sewn end to end hanging at a tipi door with the name of the town printed upside down on the cotton",
+    "width": 1344,
+    "height": 768,
+    "seed": 39603276
+  },
+  {
+    "id": "figure-la-veuve",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a thirty-five-year-old Creole woman in a black mourning veil and a long duster, black braided hair, a revolver on each hip, standing beside her horse on a ridge above a railway line at dusk, calm and watchful",
+    "width": 1344,
+    "height": 768,
+    "seed": 2066261931
+  },
+  {
+    "id": "scenario-bib-ws-diligence",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a stagecoach stopped on a dusty trail at a river ford, a felled tree lying across the road, six riders on horseback fanning out from the willows, a woman in a black mourning veil at their head raising one gloved hand, the driver and a guard on the box with their hands open",
+    "width": 1344,
+    "height": 768,
+    "seed": 1487889991
+  },
+  {
+    "id": "couverture-mj",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier cover art, ochre and sage palette, monumental composition, empty space at the top for the title, clean unmarked image, a tall stone cross six feet high standing on the edge of a red plateau at dusk, two riders on horseback facing each other ten paces apart on either side of it, one in a wide hat with a carbine across his saddle, the other bare-headed with a long braid and a blanket over his shoulder, vast empty prairie behind them",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2332077311
+  },
+  {
+    "id": "famille-betes-de-la-prairie",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a pack of coyotes watching a covered wagon camp from the edge of a moonlit prairie, a rattlesnake coiled on a warm rock in the foreground, a lone bison on the far ridge",
+    "width": 1344,
+    "height": 768,
+    "seed": 4082872370
+  },
+  {
+    "id": "famille-gens-de-la-loi",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, a Texas Ranger with a silver star and a mounted Mexican rural in a grey sombrero facing each other across a river ford at dawn, their horses breathing steam, a militiaman watching from the bank",
+    "width": 1344,
+    "height": 768,
+    "seed": 3130575310
+  },
+  {
+    "id": "famille-hors-la-loi",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, outlaw riders in dusters and bandanas on a ridge above a railway line at dusk, a steam train approaching in the valley below, one rider raising a hand to the others",
+    "width": 1344,
+    "height": 768,
+    "seed": 1694550459
+  },
+  {
+    "id": "famille-gens-du-rail",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier illustration, ochre and sage palette, wide establishing scene, clean unmarked image, railway workers laying rails across the open prairie at sunset, a foreman on a handcar with a ledger, a locomotive waiting behind, two armed company guards on horseback watching the horizon",
+    "width": 1344,
+    "height": 768,
+    "seed": 2021197080
+  },
+  {
+    "id": "couverture-bestiaire",
+    "prompt": "golden late afternoon sun low over the prairie, ochre dust, oil painting in the style of 19th century American western art, frontier cover art, ochre and sage palette, monumental composition, empty space at the top for the title, clean unmarked image, outlaw riders in dusters galloping across a river ford at dusk behind a pack of stolen horses, spray flying, a masked woman in a black mourning veil leading them, a stand of mesquite on the far bank and a steam train on a distant ridge",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2003006638
+  }
+]

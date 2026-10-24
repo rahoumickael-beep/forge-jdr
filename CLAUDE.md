@@ -6,12 +6,13 @@ Ambition : qualité d'un jeu vendu en boutique (livres A4 illustrés, mondes pro
 
 Mickael écrit en français : interface, textes de jeu, commentaires et messages de commit en français.
 Pour tout choix de goût ou de direction, propose-lui 3 options A/B/C avec ta recommandation.
-Lis `docs/journal-de-production.md` en début de session : plan, décisions et choix de Mickael. Tiens-le à jour.
+Lis `docs/journal-de-production.md` en début de session (court : choix de Mickael, état, points ouverts). Tiens-le court : le détail d’une étape finie va dans `docs/journal-archives-2026-10.md`, à ne lire qu’en cas de doute.
 
 ## Organisation
-- `shared/` : code commun client/serveur. Types (`types.ts`), genres (`genres.ts`), charte graphique par genre (`charte.ts`), règles (`rules.ts`, `origins.ts`), bestiaire (`bestiary.ts`), bibliothèque de scénarios (`library.ts`), combat (`combat.ts`), ligne de vue (`vision.ts`), générateurs à graine (`generators.ts`, `maps.ts`), dés (`dice.ts`), IA (`ai.ts`). Canon de chaque monde : `shared/canon/` (à créer, étape 4 du plan).
+- `shared/` : code commun client/serveur. Types (`types.ts`), genres (`genres.ts`), charte graphique par genre (`charte.ts`), règles (`rules.ts`, `origins.ts`), bestiaire (`bestiary.ts`), bibliothèque de scénarios (`library.ts`), combat (`combat.ts`), ligne de vue (`vision.ts`), générateurs à graine (`generators.ts`, `maps.ts`), dés (`dice.ts`), IA (`ai.ts`), mémoire de campagne et préparation des séances (`campagne.ts`). Canon de chaque monde : `shared/canon/` (`fantasy.ts` pour Aubreterre ; `index.ts` vérifie noms, dates et anachronismes ; `shared/canon.test.ts` l'applique à tout le contenu).
 - `server/` : Express + Socket.IO. `rooms.ts` garde les parties en mémoire, les sauve dans `data/<CODE>.json`, filtre ce que chaque joueur voit (`viewFor`) et contrôle les imports (`sanitizeImport`). `index.ts` contient toutes les actions temps réel. `rooms.test.ts` prouve qu'aucun secret ne part chez un joueur.
-- `client/` : React + Vite. `store.ts`, `components/MapCanvas.tsx` (carte, rendu à deux vitesses), rendu par type dans `mapDungeon.ts`, `mapCave.ts`, `mapNature.ts`, `mapVillage.ts` (outils communs `mapCommon.ts`, `mapInk.ts`, pions et brouillard `mapTokens.ts`), `GmPanels.tsx`, `PlayerPanels.tsx`, `CharacterCreator.tsx`, `CombatIntro.tsx`, `InitiativeFrieze.tsx`, `Rulebook.tsx`, `Sheets.tsx`. Thèmes : `themes.css` (doit concorder avec `charte.ts`, un test le vérifie).
+- Frontière MJ / joueurs : le code des joueurs n'importe jamais `bestiary`, `library`, `canon`, `generators`, `idees`, `campagne` ou `cartes` (valeurs). Le code du MJ passe par `client/src/components/mj.tsx`, chargé à part et servi seulement avec la clé du MJ (`server/acces-mj.ts`). `npm run build && npm run verifier-secrets` le contrôle.
+- `client/` : React + Vite. `store.ts`, `components/MapCanvas.tsx` (carte, rendu à deux vitesses), rendu par type dans `mapDungeon.ts`, `mapCave.ts`, `mapNature.ts`, `mapVillage.ts` (outils communs `mapCommon.ts`, `mapInk.ts`, pions-figurines et brouillard `mapTokens.ts` ; vignettes peintes dans `client/public/pions/`, refaites par `node scripts/vignettes-figurines.mjs --refaire`), `GmPanels.tsx`, `PlayerPanels.tsx`, `CharacterCreator.tsx`, `CombatIntro.tsx`, `CampagnePanel.tsx` (onglets Campagne du MJ et Chronique des joueurs), `InitiativeFrieze.tsx`, `Rulebook.tsx`, `Sheets.tsx`. Thèmes : `themes.css` (doit concorder avec `charte.ts`, un test le vérifie).
 - `content/<monde>/` : lore, chapitres des livres en Markdown, illustrations. Aubreterre (fantasy) est la référence de qualité.
 - `scripts/livres/` : fabrication des trois livres PDF. `comfyui/` : lots d'illustrations Flux, règles des prompts (`regles-flux.json`), serveur MCP (`mcp-comfyui.mjs`), agrandissement.
 
@@ -30,11 +31,20 @@ Lis `docs/journal-de-production.md` en début de session : plan, décisions et c
 - Fantasy : peinture à l'huile, monde préindustriel, aucun objet moderne.
 - Seule la charte fantasy est validée ; les 9 autres sont provisoires jusqu'au choix de Mickael.
 
+## Économie de tokens (abonnement Pro : Mickael a vu la moitié de sa limite partir en une nuit)
+- Opus est le cerveau : il conçoit, découpe, écrit les consignes, délègue et contrôle. Il ne fait lui-même que l'architecture, les arbitrages et le code difficile.
+- Le travail délégué part d'abord vers l'IA gratuite : `node scripts/deleguer.mjs [--modele flash|argon|sonnet|opus] [--ecrire] [--sortie f] consigne.md` (Antigravity, quota Google, pas l'abonnement Claude). Flash : vérifications, tâches mécaniques ; Argon : écriture, relecture, code courant ; `sonnet`/`opus` d'Antigravity si Gemini ne suffit pas. Consigne précise et autonome (fichiers à lire, résultat attendu, critères), écrite dans le scratchpad. Contrôle obligatoire : `git diff --stat` puis lecture des passages clés, tests ; corriger ou relancer avec une consigne plus nette.
+- Sous-agents Claude (`.claude/agents/`) seulement si Antigravity échoue (quota, panne) ou pour un outil qu'il n'a pas ; jamais Opus. LM Studio (`lms server start`, gemma-4-31b, qwen3-coder-30b) en dernier recours hors ligne.
+- Pas de Workflow ni de lot de plus de 3 sous-agents Claude sans l'accord de Mickael, avec une estimation du coût.
+- Lire des morceaux de fichiers (`grep -n`, `sed -n`), pas des fichiers entiers ; ne jamais relire un fichier déjà lu ou qu'on vient de modifier.
+- Sorties des commandes filtrées : `npm test 2>&1 | tail -20`, build et playtest avec `| tail`. Le hook de fin lance déjà les tests : ne pas les relancer à la main juste avant.
+- Mickael absent (nuit) : finir l'étape en cours, committer, s'arrêter, sauf s'il a confié une liste de tâches ; dans ce cas, déléguer au maximum à Antigravity.
+
 ## Outillage Claude Code
 - Sous-agents (`.claude/agents/`) :
   - `model: haiku` : `verif-prompts`, `verif-canon`, `relecteur-ortho`, `resume-tests` ;
   - `model: sonnet` : `fiches-creatures`, `relecteur-lore`, `relecteur-regles` ;
-  - session principale : architecture, conception des mondes, arbitrages. Toujours vérifier le travail d'un sous-agent avant de l'intégrer.
+  - session principale (Opus) : architecture, conception des mondes, arbitrages, contrôle. Toujours vérifier le travail délégué avant de l'intégrer.
 - Skills (`.claude/skills/`) : `batir-un-monde`, `verifier-coherence`, `peindre-avec-flux`, `concevoir-rencontre`, `fabriquer-livres`, `ecran-immersif`, `ecrire-scenario`, `style-visuel`, `ajouter-genre`, `tester-partie`.
 - Hooks en Node (`.claude/hooks/`, marchent sous Windows) :
   - installation des dépendances au démarrage ;

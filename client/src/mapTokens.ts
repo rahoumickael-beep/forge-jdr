@@ -18,7 +18,7 @@ const HAND = `italic 600 1em "Cormorant Garamond", "EB Garamond", Georgia, serif
 const handFont = (px: number) => HAND.replace("1em", `${px}px`);
 /** Taille minimale d'une case pour dessiner un pion : au zoom le plus loin, le médaillon garde ~30 px de diamètre à l'écran. */
 const MIN_TOKEN = 30;
-/** Sous cette taille de case (px écran), version simplifiée : cerclage, couleur du joueur au centre, liseré épais, une seule marque d'état ; ni portrait, ni grain, ni griffes longues. */
+/** Sous cette taille de case (px écran), version simplifiée : cerclage, liseré épais, une seule marque d'état ; ni grain, ni griffes longues. Le portrait reste. */
 const SMALL = 36;
 
 /** Graine stable tirée d'un texte (id de pion, nom). */
@@ -179,6 +179,10 @@ export interface TokenLook {
   /** Classe ou métier du personnage (« Paladin », « Canonnier ») : choisit la coiffe du buste quand il n'y a pas de portrait. */
   role?: string;
   dpr?: number;
+  /** Figurine saisie par la main : elle quitte le sol, son ombre s'élargit et reste en bas. */
+  lifted?: boolean;
+  /** Le pion est un navire à voile (Îles du Vent) : le médaillon montre un bateau, pas un vaisseau spatial. */
+  voile?: boolean;
 }
 
 const sprites = new Map<string, HTMLCanvasElement>();
@@ -199,8 +203,9 @@ export function drawToken(g: CanvasRenderingContext2D, t: Token, cx: number, cy:
   const raw = eff * dpr;
   const step = Math.max(1, Math.round(raw / 24));
   const px = Math.max(4, Math.round(raw / step) * step);
-  const portrait = eff >= 40 ? o.portrait : null;
-  const key = [t.id, t.name, t.color, t.kind, t.size ?? 1, t.hidden ? 1 : 0, ratio === null ? "-" : Math.round(ratio * 40), (t.conditions ?? []).join(","), o.mine ? 1 : 0, portrait ? imageId(portrait) : 0, o.role ?? "", px].join("|");
+  // Une figurine garde son visage à toute taille : c'est lui qui la distingue sur le plateau.
+  const portrait = o.portrait;
+  const key = [t.id, t.name, t.color, t.kind, t.size ?? 1, t.hidden ? 1 : 0, ratio === null ? "-" : Math.round(ratio * 40), (t.conditions ?? []).join(","), o.mine ? 1 : 0, portrait ? imageId(portrait) : 0, o.role ?? "", o.voile ? 1 : 0, px].join("|");
   let sp = sprites.get(key);
   if (!sp) {
     if (sprites.size > 400) sprites.clear();
@@ -213,7 +218,21 @@ export function drawToken(g: CanvasRenderingContext2D, t: Token, cx: number, cy:
     sprites.set(key, sp);
   }
   const d = sp.width * (eff / px);
-  g.drawImage(sp, cx - d / 2, cy - d / 2, d, d);
+  if (!o.lifted) {
+    g.drawImage(sp, cx - d / 2, cy - d / 2, d, d);
+    return;
+  }
+  // Soulevée : ombre floue restée au sol, décalée vers le bas à droite, et figurine 12 % plus grande, montée d'un cinquième de case.
+  const r = eff * 0.45;
+  g.save();
+  g.filter = `blur(${Math.max(2, eff * 0.08)}px)`;
+  g.fillStyle = "rgba(6,3,1,.5)";
+  g.beginPath();
+  g.ellipse(cx + eff * 0.12, cy + eff * 0.18, r * 1.1, r * 0.95, 0, 0, Math.PI * 2);
+  g.fill();
+  g.restore();
+  const k = 1.12;
+  g.drawImage(sp, cx - (d * k) / 2, cy - eff * 0.22 - (d * k) / 2, d * k, d * k);
 }
 
 /** Ce qui menace dans un monstre, lu dans son nom : bête (griffes), démon (cornes), mort-vivant (côtes). */
@@ -835,6 +854,31 @@ function paintMedallion(c: CanvasRenderingContext2D, t: Token, cx: number, cy: n
   const metal: Metal = monster ? "fer" : objet || pnj ? "etain" : "laiton";
   const k = c.getTransform().a; // px du calque par px écran
 
+  // Socle de figurine : on voit sa tranche sous le médaillon, peinte à la couleur du pion comme le bord d'un socle de figurine,
+  // éclairée du haut à gauche. Un mort est couché : pas de socle visible.
+  if (!down && !objet) {
+    const h = r * (small ? 0.14 : 0.24);
+    const rs = r * (monster ? 1.0 : 1.03) + (monster ? 0 : 1.6);
+    c.save();
+    c.shadowColor = "rgba(6,3,1,.6)";
+    c.shadowBlur = 5 * k;
+    c.shadowOffsetX = 2 * k;
+    c.shadowOffsetY = 3 * k;
+    c.fillStyle = mixColor(color, "#120c07", 0.3);
+    c.fill(circlePath(cx, cy + h, rs));
+    c.restore();
+    // Le bas de la tranche est dans l'ombre, le haut gauche prend la lumière.
+    const side = c.createLinearGradient(cx - rs, cy, cx + rs, cy + h + rs);
+    side.addColorStop(0, "rgba(255,240,210,.32)");
+    side.addColorStop(0.5, "rgba(255,240,210,0)");
+    side.addColorStop(1, "rgba(8,4,2,.55)");
+    c.fillStyle = side;
+    c.fill(circlePath(cx, cy + h, rs));
+    c.strokeStyle = "rgba(10,6,3,.85)";
+    c.lineWidth = Math.max(1, lw * 0.6);
+    c.stroke(circlePath(cx, cy + h, rs));
+  }
+
   // Ombre portée : décalée de (2, 3) px et floutée de 4, lumière du haut à gauche. Un mort est à plat : ombre écrasée, courte.
   c.save();
   c.shadowColor = down ? "rgba(6,3,1,.45)" : "rgba(6,3,1,.62)";
@@ -873,8 +917,9 @@ function paintMedallion(c: CanvasRenderingContext2D, t: Token, cx: number, cy: n
 
   // Trois anneaux : cerclage de métal (r0 → r), gorge (ri → r0), disque central (ri). Monstre : la gorge est un émail de sang épais ;
   // héros et PNJ : le métal domine, la gorge est un nielle sombre où la vie perdue s'inscrit en rouge.
-  const r0 = monster ? r * (small ? 0.81 : 0.79) : r * (small ? 0.8 : 0.79);
-  const ri = monster ? r * (small ? 0.63 : 0.6) : r * (small ? 0.68 : 0.71);
+  const peint = !!o.portrait;
+  const r0 = monster ? r * (small ? 0.81 : peint ? 0.85 : 0.79) : r * (small ? 0.8 : 0.79);
+  const ri = monster ? r * (small ? 0.63 : peint ? 0.74 : 0.6) : r * (small ? 0.68 : 0.71);
   c.fillStyle = INK;
   c.fill(circlePath(cx, cy, r));
   metalRing(c, cx, cy, r0, r, metal, rr, fine);
@@ -971,6 +1016,7 @@ function paintMedallion(c: CanvasRenderingContext2D, t: Token, cx: number, cy: n
   // Le personnage est plus grand que le disque : les épaules passent sous le métal. Sous 40 px, la silhouette se simplifie.
   const simple = size < 40 * (t.size ?? 1);
   if (o.portrait) paintPortrait(c, o.portrait, cx, cy, ri);
+  else if (t.vaisseauId) (o.voile ? navireIcon : shipIcon)(c, cx, cy, ri * 0.82, monster);
   else if (objet && CHEST.test(t.name)) chestIcon(c, cx, cy + ri * 0.04, ri * 0.62, lw * 0.9, rr);
   else if (objet) lettre = true;
   else if (boss) silhouette(c, menace, cx, cy + ri * 0.04, ri * 0.82, rng(seed, 15));
@@ -987,8 +1033,8 @@ function paintMedallion(c: CanvasRenderingContext2D, t: Token, cx: number, cy: n
     c.fillStyle = vg;
     c.fillRect(cx - ri, cy - ri, ri * 2, ri * 2);
   }
-  // Monstres : modelé du disque, croissant d'ombre hachuré côté bas droit.
-  if (monster) {
+  // Monstres : modelé du disque, croissant d'ombre hachuré côté bas droit (un portrait peint a déjà son modelé).
+  if (monster && !o.portrait) {
     const cut = new Path2D();
     cut.rect(cx - r * 2, cy - r * 2, r * 4, r * 4);
     cut.arc(cx - ri * 0.26, cy - ri * 0.32, ri * 1.04, 0, Math.PI * 2);
@@ -1422,36 +1468,14 @@ function glyph(c: CanvasRenderingContext2D, kind: Glyph, x: number, y: number, s
 
 /** Portrait découpé en cercle, viré au sépia et posterisé (5 tons) : il rejoint l'encre et le papier de la carte. */
 function paintPortrait(c: CanvasRenderingContext2D, im: HTMLImageElement, cx: number, cy: number, ri: number) {
+  // Portrait peint, en couleurs : la vignette est déjà cadrée sur le buste, on la centre un peu haut.
   const k = Math.max((ri * 2) / im.naturalWidth, (ri * 2) / im.naturalHeight);
-  c.drawImage(im, cx - (im.naturalWidth * k) / 2, cy - (im.naturalHeight * k) / 2.6, im.naturalWidth * k, im.naturalHeight * k);
-  const m = c.getTransform();
-  const x0 = Math.floor(m.a * (cx - ri) + m.e);
-  const y0 = Math.floor(m.d * (cy - ri) + m.f);
-  const n = Math.ceil(m.a * ri * 2) + 1;
-  try {
-    const img = c.getImageData(x0, y0, n, n);
-    const d = img.data;
-    const ink = rgbOf("#2a1a0e");
-    const pap = rgbOf(PAPER);
-    for (let i = 0; i < d.length; i += 4) {
-      const l = (d[i] * 0.3 + d[i + 1] * 0.59 + d[i + 2] * 0.11) / 255;
-      const q = Math.round(Math.min(1, l * 1.1) * 4) / 4;
-      for (let ch = 0; ch < 3; ch++) d[i + ch] = ink[ch] + (pap[ch] - ink[ch]) * q;
-    }
-    // On réécrit seulement dans le disque : putImageData ignore le clip, on passe par un canvas.
-    const tmp = canvas(n, n);
-    tmp.getContext("2d")!.putImageData(img, 0, 0);
-    c.save();
-    c.setTransform(1, 0, 0, 1, 0, 0);
-    c.drawImage(tmp, x0, y0);
-    c.restore();
-  } catch {
-    // Image d'une autre origine : simple virage sépia.
-    c.globalCompositeOperation = "multiply";
-    c.fillStyle = "rgba(196,160,112,.45)";
-    c.fillRect(cx - ri, cy - ri, ri * 2, ri * 2);
-    c.globalCompositeOperation = "source-over";
-  }
+  c.drawImage(im, cx - (im.naturalWidth * k) / 2, cy - (im.naturalHeight * k) / 2.2, im.naturalWidth * k, im.naturalHeight * k);
+  // Vernis : un voile chaud qui accorde les illustrations entre elles et avec le laiton du cerclage.
+  c.globalCompositeOperation = "soft-light";
+  c.fillStyle = "rgba(214,170,100,.35)";
+  c.fillRect(cx - ri, cy - ri, ri * 2, ri * 2);
+  c.globalCompositeOperation = "source-over";
 }
 
 // ——— Sélection, tour de combat, portée ———
@@ -3114,4 +3138,130 @@ export function exploredRooms(map: GameMap, fog: boolean[] | null, fogEnabled: b
     if (seen * 2 > r.w * r.h) out.add(i);
   });
   return out;
+}
+
+/** Navire à voile vu de dessus dans le médaillon : coque de chêne en pointe, pont, deux mâts, voiles gonflées, beaupré. Voiles sombres et liseré rouille pour l'ennemi. */
+function navireIcon(c: CanvasRenderingContext2D, cx: number, cy: number, r: number, ennemi: boolean) {
+  const voile = ennemi ? "#cdb892" : "#f1e8d0";
+  const voileOmbre = ennemi ? "#7a5c3c" : "#b9ab88";
+  c.save();
+  // Sillage : deux traits d'écume sous la poupe.
+  c.strokeStyle = "rgba(240,250,255,.55)";
+  c.lineWidth = Math.max(1, r * 0.05);
+  for (const dx of [-0.2, 0.2]) {
+    c.beginPath();
+    c.moveTo(cx + dx * r, cy + r * 0.8);
+    c.quadraticCurveTo(cx + dx * r * 1.6, cy + r * 0.95, cx + dx * r * 2.1, cy + r * 1.05);
+    c.stroke();
+  }
+  // Beaupré
+  c.strokeStyle = "rgba(20,12,4,.85)";
+  c.lineWidth = Math.max(1, r * 0.06);
+  c.beginPath();
+  c.moveTo(cx, cy - r * 0.78);
+  c.lineTo(cx, cy - r * 1.02);
+  c.stroke();
+  // Coque
+  const g = c.createLinearGradient(cx - r * 0.36, cy, cx + r * 0.36, cy);
+  g.addColorStop(0, ennemi ? "#2e1a0e" : "#47301a");
+  g.addColorStop(0.5, ennemi ? "#6a4228" : "#8a6439");
+  g.addColorStop(1, ennemi ? "#2e1a0e" : "#47301a");
+  c.fillStyle = g;
+  c.beginPath();
+  c.moveTo(cx, cy - r * 0.82);
+  c.quadraticCurveTo(cx + r * 0.46, cy - r * 0.35, cx + r * 0.36, cy + r * 0.55);
+  c.lineTo(cx + r * 0.26, cy + r * 0.78);
+  c.lineTo(cx - r * 0.26, cy + r * 0.78);
+  c.lineTo(cx - r * 0.36, cy + r * 0.55);
+  c.quadraticCurveTo(cx - r * 0.46, cy - r * 0.35, cx, cy - r * 0.82);
+  c.closePath();
+  c.fill();
+  c.strokeStyle = "rgba(10,6,3,.85)";
+  c.lineWidth = Math.max(1, r * 0.05);
+  c.stroke();
+  // Pont : une ligne de lattes au milieu.
+  c.strokeStyle = "rgba(235,210,150,.35)";
+  c.lineWidth = Math.max(0.8, r * 0.025);
+  for (const dy of [-0.4, -0.1, 0.2, 0.5]) {
+    c.beginPath();
+    c.moveTo(cx - r * 0.2, cy + dy * r);
+    c.lineTo(cx + r * 0.2, cy + dy * r);
+    c.stroke();
+  }
+  // Voiles : deux, gonflées, vues par le travers.
+  for (const [dy, w, h] of [[-0.3, 0.74, 0.22], [0.22, 0.86, 0.24]] as const) {
+    const y = cy + dy * r;
+    c.fillStyle = voile;
+    c.strokeStyle = "rgba(10,6,3,.8)";
+    c.lineWidth = Math.max(1, r * 0.04);
+    c.beginPath();
+    c.moveTo(cx - w * r * 0.5, y - h * r * 0.1);
+    c.quadraticCurveTo(cx, y + h * r * 0.7, cx + w * r * 0.5, y - h * r * 0.1);
+    c.lineTo(cx + w * r * 0.5, y + h * r * 0.1);
+    c.quadraticCurveTo(cx, y + h * r * 0.9, cx - w * r * 0.5, y + h * r * 0.1);
+    c.closePath();
+    c.fill();
+    c.stroke();
+    c.fillStyle = voileOmbre;
+    c.fillRect(cx - w * r * 0.5, y - h * r * 0.1, w * r, Math.max(1, r * 0.03));
+    // Le mât
+    c.fillStyle = "#2a1a0c";
+    c.beginPath();
+    c.arc(cx, y, Math.max(1.2, r * 0.06), 0, Math.PI * 2);
+    c.fill();
+  }
+  c.restore();
+}
+
+/** Vaisseau vu de dessus dans le médaillon : coque en pointe, ailes, deux tuyères allumées. Rouille pour l'ennemi. */
+function shipIcon(c: CanvasRenderingContext2D, cx: number, cy: number, r: number, ennemi: boolean) {
+  const coque = ennemi ? "#c98a5a" : "#e6dcc4";
+  const ombre = ennemi ? "#6b3a20" : "#7d7462";
+  c.save();
+  // Tuyères : lueur sous la poupe.
+  for (const dx of [-0.22, 0.22]) {
+    const halo = c.createRadialGradient(cx + dx * r, cy + r * 0.78, 0, cx + dx * r, cy + r * 0.78, r * 0.35);
+    halo.addColorStop(0, ennemi ? "rgba(255,120,60,.95)" : "rgba(120,200,255,.95)");
+    halo.addColorStop(1, "rgba(0,0,0,0)");
+    c.fillStyle = halo;
+    c.beginPath();
+    c.arc(cx + dx * r, cy + r * 0.78, r * 0.35, 0, Math.PI * 2);
+    c.fill();
+  }
+  // Ailes
+  c.fillStyle = ombre;
+  c.beginPath();
+  c.moveTo(cx - r * 0.16, cy - r * 0.1);
+  c.lineTo(cx - r * 0.86, cy + r * 0.5);
+  c.lineTo(cx - r * 0.74, cy + r * 0.66);
+  c.lineTo(cx - r * 0.14, cy + r * 0.42);
+  c.closePath();
+  c.moveTo(cx + r * 0.16, cy - r * 0.1);
+  c.lineTo(cx + r * 0.86, cy + r * 0.5);
+  c.lineTo(cx + r * 0.74, cy + r * 0.66);
+  c.lineTo(cx + r * 0.14, cy + r * 0.42);
+  c.closePath();
+  c.fill();
+  // Coque
+  const g = c.createLinearGradient(cx - r * 0.3, cy, cx + r * 0.3, cy);
+  g.addColorStop(0, ombre);
+  g.addColorStop(0.45, coque);
+  g.addColorStop(1, ombre);
+  c.fillStyle = g;
+  c.beginPath();
+  c.moveTo(cx, cy - r * 0.92);
+  c.quadraticCurveTo(cx + r * 0.32, cy - r * 0.3, cx + r * 0.3, cy + r * 0.72);
+  c.lineTo(cx - r * 0.3, cy + r * 0.72);
+  c.quadraticCurveTo(cx - r * 0.32, cy - r * 0.3, cx, cy - r * 0.92);
+  c.closePath();
+  c.fill();
+  c.strokeStyle = "rgba(10,6,3,.8)";
+  c.lineWidth = Math.max(1, r * 0.05);
+  c.stroke();
+  // Verrière
+  c.fillStyle = ennemi ? "rgba(255,190,120,.85)" : "rgba(150,210,255,.85)";
+  c.beginPath();
+  c.ellipse(cx, cy - r * 0.42, r * 0.09, r * 0.17, 0, 0, Math.PI * 2);
+  c.fill();
+  c.restore();
 }

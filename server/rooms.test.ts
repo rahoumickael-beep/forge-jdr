@@ -4,10 +4,12 @@ import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
+import { BESTIARY } from "../shared/bestiary";
 import type { Character } from "../shared/types";
 
 process.env.DATA_DIR = mkdtempSync(join(tmpdir(), "forge-test-"));
-const { addPlayer, createRoom, sanitizeImport, viewFor } = await import("./rooms");
+const { addPlayer, createRoom, hideUnseen, sanitizeImport, viewFor } = await import("./rooms");
+const { cookieMJ, estMJ, FICHIER_MJ } = await import("./acces-mj");
 
 const fiche = (id: string, name: string, extra: Partial<Character> = {}): Character => ({
   id, name, genre: "fantasy", level: 1, archetype: "Guerrier", origin: "Humain", description: "", backstory: "", personality: "",
@@ -57,6 +59,41 @@ test("documents : un document remis à un joueur n'arrive que chez lui", () => {
   assert.deepEqual(viewFor(stored, tom).handouts.map((h) => h.id), ["h_tous"]);
 });
 
+test("vue joueur : une créature au nom secret n'apparaît que sous son nom public, pion et initiative", () => {
+  const { stored, gm, lea } = partie();
+  const bouche = BESTIARY.find((c) => c.name === "Bouche de Gorvan")!;
+  stored.state.tokens.push({ id: "t_bouche", name: "Bouche de Gorvan 2", x: 3, y: 3, color: "#000", kind: "monstre", creatureId: bouche.id });
+  stored.state.initiative.entries.push({ tokenId: "t_bouche", name: "Bouche de Gorvan 2", value: 12 });
+  const vue = hideUnseen(viewFor(stored, lea));
+  const json = JSON.stringify(vue);
+  assert.ok(!/gorvan/i.test(json), "ni le nom ni l'id ni le fichier de la figurine");
+  assert.ok(json.includes("Bouche du Dessous 2"));
+  assert.equal(vue.tokens.find((t) => t.id === "t_bouche")?.pion, "/pions/bouche-du-dessous.webp");
+  assert.ok(JSON.stringify(hideUnseen(viewFor(stored, gm))).includes("Bouche de Gorvan 2"));
+});
+
+test("vue joueur : la campagne sans fil secret, sans note de PNJ, sans Murmures, sans préparation, Sceau caché", () => {
+  const { stored, gm, lea } = partie();
+  const c = stored.state.campagne;
+  c.fils.push({ id: "f", texte: "CACHE-FIL", ouvert: true, secret: true, seance: 1 });
+  c.pnj.push({ id: "n", nom: "Gaudru", attitude: -1, public: "Le vicaire.", secret: "CACHE-VICAIRE" });
+  c.reserve = 5;
+  c.preparation = "CACHE-PREPARATION";
+  const vue = viewFor(stored, lea);
+  assert.ok(!JSON.stringify(vue).includes("CACHE-"));
+  assert.equal(vue.campagne.jauge, null);
+  assert.equal(vue.campagne.reserve, 0);
+  assert.equal(viewFor(stored, gm).campagne.reserve, 5);
+});
+
+test("import : la campagne importée est nettoyée", () => {
+  const { stored } = partie();
+  const st = sanitizeImport({ tokens: [], campagne: { jauge: -40, reserve: 99, fils: "x" } }, stored.state);
+  assert.equal(st.campagne.jauge, 0);
+  assert.equal(st.campagne.reserve, 6);
+  assert.deepEqual(st.campagne.fils, []);
+});
+
 test("vue du MJ : il voit tout", () => {
   const { stored, gm } = partie();
   const v = viewFor(stored, gm);
@@ -96,4 +133,58 @@ test("import : une carte valide passe, avec son brouillard recalculé si besoin"
   assert.equal(out.map?.width, 4);
   assert.equal(out.fog?.length, 16);
   assert.equal(out.map?.rooms[0].label, "Autel");
+});
+
+test("code du MJ : servi seulement avec la bonne clé de partie", () => {
+  const { stored } = partie();
+  const code = stored.state.code;
+  assert.equal(cookieMJ(code, "mauvaise"), undefined);
+  assert.equal(cookieMJ("ZZZZZZ", stored.gmKey), undefined);
+  const bon = cookieMJ(code, stored.gmKey)!;
+  assert.ok(estMJ(`theme=sombre; forge_mj=${bon}`));
+  assert.ok(!estMJ(undefined));
+  assert.ok(!estMJ(`forge_mj=${encodeURIComponent(`${code}:faux`)}`));
+  assert.ok(!estMJ("forge_mj=%E0%A4%A"));
+  assert.ok(FICHIER_MJ.test("/assets/mj-CGpE8zGg.js"));
+  assert.ok(!FICHIER_MJ.test("/assets/index-CBY_I5uX.js"));
+});
+
+test("vue joueur : ni vaisseau caché ni note du MJ sur un vaisseau ; l'import des vaisseaux est nettoyé", async () => {
+  const { nouveauVaisseau } = await import("../shared/vaisseaux");
+  const { stored, lea } = partie();
+  const nous = { ...nouveauVaisseau("cargo-leger", "Pie-Grièche", "groupe"), notes: "SECRET-VAISSEAU : traceur dans la soute" };
+  const eux = nouveauVaisseau("fregate", "SECRET-FREGATE", "autre");
+  stored.state.vaisseaux.push(nous, eux);
+  const vue = JSON.stringify(hideUnseen(viewFor(stored, lea)));
+  assert.ok(vue.includes("Pie-Grièche"));
+  assert.ok(!vue.includes("SECRET-VAISSEAU") && !vue.includes("SECRET-FREGATE"));
+  const importee = sanitizeImport({ tokens: [], vaisseaux: [{ ...nous, coque: -40, inconnu: "x" }, 42] }, stored.state);
+  assert.equal(importee.vaisseaux.length, 1);
+  assert.equal(importee.vaisseaux[0].coque, 0);
+  assert.equal("inconnu" in importee.vaisseaux[0], false);
+});
+
+test("vue joueur, navires des Îles du Vent : ni navire caché, ni note, ni Moral ni équipage d'un autre navire ; le MJ voit tout", async () => {
+  const { nouveauVaisseau } = await import("../shared/vaisseaux");
+  const { stored, gm, lea } = (() => {
+    const { stored: s, gm: g } = createRoom({ name: "Essai", genre: "pirates", ton: "sombre", level: 3, gmName: "MJ" });
+    return { stored: s, gm: g, lea: addPlayer(s, "Léa") };
+  })();
+  const nous = { ...nouveauVaisseau("sloop", "Pie-Noire", "groupe", "pirates"), notes: "SECRET-NAVIRE : Le Goff doit de l'argent" };
+  const garde = { ...nouveauVaisseau("galion-garde-cote", "Garde-côte", "autre", "pirates"), cache: false, moral: 2, hommes: 77, perdus: 3, fuite: { reussites: 1, touches: 1 } };
+  const cache = nouveauVaisseau("fregate", "SECRET-FREGATE", "autre", "pirates");
+  stored.state.vaisseaux.push(nous, garde, cache);
+  const vue = hideUnseen(viewFor(stored, lea));
+  assert.equal(JSON.stringify(vue).includes("SECRET-"), false);
+  const [a, b] = vue.vaisseaux;
+  assert.equal(vue.vaisseaux.length, 2);
+  assert.deepEqual([a.moral, a.hommes], [6, 40], "le groupe voit le Moral et l'équipage de son navire");
+  assert.deepEqual([b.moral, b.hommes, b.hommesMax, b.perdus, b.fuite], [undefined, undefined, undefined, undefined, undefined]);
+  assert.equal(b.coque, b.coqueMax, "la coque d'un navire en vue reste visible");
+  const mj = viewFor(stored, gm);
+  assert.equal(mj.vaisseaux.length, 3);
+  assert.equal(mj.vaisseaux[1].moral, 2);
+  const importee = sanitizeImport({ tokens: [], vaisseaux: [{ ...garde, moral: 99, hommes: 5000 }] }, stored.state);
+  assert.equal(importee.vaisseaux[0].moral, 10);
+  assert.equal(importee.vaisseaux[0].hommes, importee.vaisseaux[0].hommesMax);
 });

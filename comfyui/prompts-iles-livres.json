@@ -1,0 +1,247 @@
+[
+  {
+    "id": "region-anse-aux-lames",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a deep blue bay between two rocky capes at sunset, twenty ships at anchor, a brigantine coming in under every sail and firing a cannon shot to announce her prize, a crowd running along a stone quay, timber houses on stilts, a church with a palm-thatched roof and a hilltop battery of eight cannon",
+    "width": 1344,
+    "height": 768,
+    "seed": 1044029699
+  },
+  {
+    "id": "origine-pi-flibustiers",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a buccaneer-born young sailor with sun-browned skin and a red sash, standing barefoot on the deck of a sloop with one hand on a rope, the bay of a small port glittering behind her, at ease on a moving deck",
+    "width": 896,
+    "height": 1152,
+    "seed": 259232141
+  },
+  {
+    "id": "origine-pi-boucaniers",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a hunter of the forests of the island in a leather hat and an old shirt dark with smoke, crouching by a fire of drying meat with a long musket across his knees and a dog lying beside him",
+    "width": 896,
+    "height": 1152,
+    "seed": 428893968
+  },
+  {
+    "id": "origine-pi-marrons",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a free woman of the mountain villages standing upright on a rock above a forested ravine, a conch shell at her belt and a cloth wrapped around her head, her steady gaze on the valley below",
+    "width": 896,
+    "height": 1152,
+    "seed": 3631378923
+  },
+  {
+    "id": "origine-pi-france",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a young Frenchman from a Breton port in a worn dark coat and a knitted cap, a sea bag over his shoulder, looking up the gangway of a ship at a harbour crowded with masts, curious and a little afraid",
+    "width": 896,
+    "height": 1152,
+    "seed": 3522029214
+  },
+  {
+    "id": "origine-pi-espagne",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a Creole woman from Havana in a wide-sleeved dress of dark silk and a lace shawl, a small gold cross at her throat, standing on a balcony of white stone above a harbour, composed and observant",
+    "width": 896,
+    "height": 1152,
+    "seed": 3283115234
+  },
+  {
+    "id": "origine-pi-toutes-mers",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a weathered freed Black seaman who has sailed under many flags, with a red scarf and a patched jacket, sitting on a barrel on a crowded quay with a pipe in his mouth and a coil of rope on his knee, listening to five languages at once",
+    "width": 896,
+    "height": 1152,
+    "seed": 1497872813
+  },
+  {
+    "id": "classe-capitaine",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a ship's captain in a tricorn hat and a long blue coat standing on a quarterdeck at dawn, one hand on the rail, speaking to a crew gathered below on the main deck, their faces turned up to listen",
+    "width": 896,
+    "height": 1152,
+    "seed": 2989095029
+  },
+  {
+    "id": "classe-canonnier",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a gunner in a stained canvas shirt kneeling behind an iron cannon on a gun deck, a lit slow match in one hand, squinting along the barrel at an enemy ship through the open port, sunlight cutting through powder smoke",
+    "width": 896,
+    "height": 1152,
+    "seed": 20417750
+  },
+  {
+    "id": "classe-boucanier",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a buccaneer hunter in a leather cap and a bloodied bull-hide apron standing at the edge of a green forest clearing, a long musket on his shoulder and two hunting dogs at his heels, smoke rising from a drying rack behind him",
+    "width": 896,
+    "height": 1152,
+    "seed": 1007441531
+  },
+  {
+    "id": "classe-chirurgien",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a ship's surgeon in shirtsleeves bent over a wounded sailor on a sea chest by lantern light in the cockpit of a ship, a needle and thread in hand, an open case of brass instruments beside him, a steady and tired expression",
+    "width": 896,
+    "height": 1152,
+    "seed": 1034554657
+  },
+  {
+    "id": "classe-gabier",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a topman in a striped shirt and a knotted headscarf standing barefoot on a yard high above the deck, one arm around the mast, hauling in canvas against a bright wind with the sea shining far below",
+    "width": 896,
+    "height": 1152,
+    "seed": 3058057639
+  },
+  {
+    "id": "classe-bretteur",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a duellist in a shirt with rolled sleeves and a fine waistcoat holding a thin sword low in one hand and a dagger in the other on a sunlit quay, his weight forward, a half smile on his face",
+    "width": 896,
+    "height": 1152,
+    "seed": 2276096728
+  },
+  {
+    "id": "classe-maitre-de-manoeuvre",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a boatswain with a silver whistle on a chain around his neck and a rope coil on his shoulder, standing on a heaving deck at the foot of the mainmast with the crew hauling on ropes behind him in rhythm",
+    "width": 896,
+    "height": 1152,
+    "seed": 605934130
+  },
+  {
+    "id": "classe-contrebandier",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a smuggler in a dark coat and a wide hat slipping along a moonlit quay between stacked barrels, a lantern hooded in one hand, a small rowing boat waiting at the stone steps below",
+    "width": 896,
+    "height": 1152,
+    "seed": 3494821585
+  },
+  {
+    "id": "classe-aumonier",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a ship's chaplain in a plain black cassock with a small wooden cross, standing on a deck in the golden light of late afternoon and reading from an open book to a circle of sailors with bowed heads, the sea calm behind him",
+    "width": 896,
+    "height": 1152,
+    "seed": 3684394541
+  },
+  {
+    "id": "classe-plongeur",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy character portrait, teal and brass palette, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a pearl-fisher diver in a short canvas tunic standing at the edge of a rowing boat on clear turquoise water, a rope looped at her waist and a heavy stone in her hands, taking a deep breath before the dive, her gaze straight down into the blue",
+    "width": 896,
+    "height": 1152,
+    "seed": 1045664823
+  },
+  {
+    "id": "couverture-joueurs",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy cover art, teal and brass palette, monumental composition, empty space at the top for the title, clean unmarked image, a sloop under full sail entering a deep bay between two rocky capes at sunset, a black cloth pennant at her masthead, a cannon shot puffing white smoke from her bow, twenty ships at anchor ahead and a crowd running along a stone quay toward a small town of timber houses on stilts",
+    "width": 1024,
+    "height": 1448,
+    "seed": 3025381207
+  },
+  {
+    "id": "region-bancs-de-floride",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a low coast of sand and mangroves on clear turquoise water six fathoms deep, a rowing boat floating above the wreck of a great ship whose masts stand out of the sea, a diver breaking the surface with a rope at his waist and a heavy silver bar blackened and crusted with shells in his arms, and a hundred paces away on the beach a Spanish soldier counting bars in a ledger",
+    "width": 1344,
+    "height": 768,
+    "seed": 4125981929
+  },
+  {
+    "id": "figure-arriaga",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a fifty-five-year-old Spanish governor, small and dry, dressed in black with a white collar, a rosary between his fingers, standing at a palace window with his back half turned to a harbour, a grave and courteous expression",
+    "width": 1344,
+    "height": 768,
+    "seed": 719704041
+  },
+  {
+    "id": "region-fosse-de-bahama",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a strait where the sea turns almost black, a fast current streaming north in long dark ribbons, a torn cork buoy swept along on its broken line, and very far at the horizon a single pale shape on the water that is neither a squall nor a sail",
+    "width": 1344,
+    "height": 768,
+    "seed": 2320582335
+  },
+  {
+    "id": "region-mornes",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a narrow ridge path through steep wet forest in the mountains, a lookout standing upright on a rock above the drop with a conch shell at her belt and her gaze on the valley, and far below in the plain a thin column of smoke from a distant sugar plantation",
+    "width": 1344,
+    "height": 768,
+    "seed": 600547348
+  },
+  {
+    "id": "region-nassau",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, tents made of stolen sails and huts of planks torn from wrecks on a white beach at evening, barrels marked with the brands of ten ports, a quartermaster standing on a wreck crate reading a long paper aloud to three hundred men who raise their fists at each article, a ruined fort and a natural harbour crowded with sloops behind them",
+    "width": 1344,
+    "height": 768,
+    "seed": 2756371325
+  },
+  {
+    "id": "region-la-havane",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, the harbour of Havana at morning, a great chain being hauled across the water to close the port, the stone fortress of the Morro on its headland, galleons and church towers beyond, and on a palace balcony a small thin man in black with his back to the bay, a rosary in his hand, reading his prayers in a low voice",
+    "width": 1344,
+    "height": 768,
+    "seed": 433660601
+  },
+  {
+    "id": "figure-faucheux",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a forty-year-old sea captain with a square jaw and a weathered face, a tricorn hat and a heavy buff coat, an iron cuff riveted over the wrist stump of his left arm resting on a table beside a brass compass, standing on the quarterdeck of a brigantine, a hard and watchful expression",
+    "width": 1344,
+    "height": 768,
+    "seed": 2168626495
+  },
+  {
+    "id": "figure-mere-abla",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a dignified sixty-year-old African woman with deep lines at her eyes and a head wrap of indigo cloth, a shawl over her shoulders, seated upright on a stool in front of a thatched house in a mountain village, a conch shell in her lap, her calm direct gaze meeting the viewer as an equal",
+    "width": 1344,
+    "height": 768,
+    "seed": 3235372606
+  },
+  {
+    "id": "region-saint-pierre",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, the quay of a French colonial port under a green volcano whose peak wears a cloud that never moves, hundreds of sugar barrels stacked in rows, warehouses with tiled roofs, merchants in long coats checking ledgers, and laden ships at anchor in a calm blue bay",
+    "width": 1344,
+    "height": 768,
+    "seed": 3790820349
+  },
+  {
+    "id": "figure-vaucelles",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a forty-five-year-old French colonial officer in a powdered wig and a blue coat with gold lace, a linen handkerchief held to his nose, seated at a desk with a quill and a sealed letter beside a window open on a harbour, a smooth polite smile",
+    "width": 1344,
+    "height": 768,
+    "seed": 1131263808
+  },
+  {
+    "id": "scenario-bib-pi-barre-noire",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, warm lantern light at midnight in a crowded harbour tavern of palm thatch and ship timber, a dark silver ingot set on a barrel head in the middle of the room, a captain with an iron cuff riveted over his left wrist, a merchant in a grey coat and a young woman diver watching it, sailors packed shoulder to shoulder along the walls",
+    "width": 1344,
+    "height": 768,
+    "seed": 824445362
+  },
+  {
+    "id": "couverture-mj",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy cover art, teal and brass palette, monumental composition, empty space at the top for the title, clean unmarked image, a tall frigate with a bone-white hull lying still on a calm dark sea at first light, her sails furled and her masthead bare, a thin bank of mist around her, and far in the foreground a small boat of fishermen rowing hard away with their backs turned",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2332077311
+  },
+  {
+    "id": "famille-betes-de-mer-et-de-cote",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, three sharks circling in clear turquoise water over the masts of a sunken ship, a shoal of barracuda glinting above them and a mangrove shore in the distance, the sun in shafts through the surface",
+    "width": 1344,
+    "height": 768,
+    "seed": 3938127464
+  },
+  {
+    "id": "famille-gens-de-mer",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a pirate crew boarding a merchant ship in thick powder smoke at midday, men swinging across on ropes with cutlasses and boarding axes, a quartermaster shouting orders from the rail, sunlight low through the smoke",
+    "width": 1344,
+    "height": 768,
+    "seed": 3220032236
+  },
+  {
+    "id": "famille-soldats-et-chasseurs",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a Spanish soldier in a breastplate and a plumed hat facing a mountain lookout on a narrow ridge path at dawn, a conch shell at the lookout's belt, a hunting dog straining on a leash between them, mist rising from the forest below",
+    "width": 1344,
+    "height": 768,
+    "seed": 550384066
+  },
+  {
+    "id": "famille-figures-et-navires",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy illustration, teal and brass palette, wide establishing scene, clean unmarked image, a sloop, a brigantine and a great galleon sailing in line under a high summer sky, white cloud over a deep blue sea, a distant storm front on the horizon, a pale-hulled frigate small and still on the far edge of the sea",
+    "width": 1344,
+    "height": 768,
+    "seed": 2624905162
+  },
+  {
+    "id": "couverture-bestiaire",
+    "prompt": "stormy sea light, 18th century maritime oil painting, pirate golden age of piracy cover art, teal and brass palette, monumental composition, empty space at the top for the title, clean unmarked image, a small sloop heeled hard in a heavy sea under a towering storm cloud, her crew hauling on the ropes, three sharks circling in the green wave beside her hull, and on the horizon a brigantine with patched dark sails closing in",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2003006638
+  }
+]

@@ -1,7 +1,7 @@
 // Aperçu des pions, de la lumière et du brouillard : apercu.html?kind=donjon&seed=391&pions=1 (vue d'un joueur)
 // ou pions=mj (vue du MJ). Quelques pions d'exemple posés autour du centre de la carte, dans le même ordre
 // de dessin que la table (MapCanvas), à 48 px par case.
-import { reachable } from "../../shared/combat";
+import { reachable } from "../../shared/maps";
 import { T, type GameMap, type Token } from "../../shared/types";
 import { visibleCells, visibleFrom } from "../../shared/vision";
 import { BASE } from "./mapUtil";

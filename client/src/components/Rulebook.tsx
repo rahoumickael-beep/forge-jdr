@@ -6,6 +6,7 @@ import {
   CLASS_NAMES_BY_GENRE,
   CONDITIONS,
   CORE_RULES,
+  REGLES_DU_MONDE,
   DEATH_RULES,
   SKILLS,
   XP_BY_LEVEL,
@@ -212,11 +213,18 @@ function ClassSheet({ c }: { c: CharacterClass }) {
 
 // --- Chapitres ---
 
-function RulesChapter() {
+function RulesChapter({ room }: { room: RoomView }) {
+  const propres = REGLES_DU_MONDE[room.genre] ?? [];
   return (
     <>
       <ChapterTitle>Les règles</ChapterTitle>
       {BASE_RULES.map((s) => <RuleBlock key={s.id} section={s} />)}
+      {propres.length > 0 && (
+        <>
+          <ChapterTitle sub={getGenre(room.genre).label}>Les règles du monde</ChapterTitle>
+          {propres.map((s) => <RuleBlock key={s.id} section={s} />)}
+        </>
+      )}
     </>
   );
 }
@@ -352,7 +360,7 @@ function ProgressionChapter() {
 
 function SearchResults({ room, query, onNav, nav }: { room: RoomView; query: string; nav: BookNav; onNav: (n: BookNav) => void }) {
   const q = fold(query.trim());
-  const rules = CORE_RULES.map((s) => ({ s, lines: matches(q, s.title) ? s.body : s.body.filter((l) => matches(q, l)) })).filter((r) => r.lines.length);
+  const rules = [...CORE_RULES, ...(REGLES_DU_MONDE[room.genre] ?? [])].map((s) => ({ s, lines: matches(q, s.title) ? s.body : s.body.filter((l) => matches(q, l)) })).filter((r) => r.lines.length);
   const classes = classesFor(room.genre);
   const powers = classes.flatMap((c) => [
     ...c.powers.filter((p) => matches(q, p.name, p.effect)).map((p) => ({ key: c.id + p.name, label: c.name, p })),
@@ -456,7 +464,7 @@ export function Rulebook({ room, nav, onNav, wide = false, onOpenWide }: {
           <SearchResults room={room} query={nav.query} nav={nav} onNav={onNav} />
         ) : (
           <>
-            {nav.chapter === "regles" && <RulesChapter />}
+            {nav.chapter === "regles" && <RulesChapter room={room} />}
             {nav.chapter === "classes" && <ClassesChapter room={room} nav={nav} onNav={onNav} />}
             {nav.chapter === "competences" && <SkillsChapter room={room} />}
             {nav.chapter === "etats" && <ConditionsChapter />}

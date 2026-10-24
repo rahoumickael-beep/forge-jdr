@@ -4,7 +4,7 @@ import { extractJson, toScenario } from "./ai";
 import { rollDice } from "./dice";
 import { GENRES } from "./genres";
 import { generateCharacter, generateEncounter, generateScenario, modifier } from "./generators";
-import { generateMap, walkable } from "./maps";
+import { generateMap, reachable, walkable } from "./maps";
 import { T, type MapKind } from "./types";
 
 test("modificateurs façon D&D", () => {
@@ -17,6 +17,7 @@ test("modificateurs façon D&D", () => {
 test("dés : formules et bornes", () => {
   const r = rollDice("3d6+2", () => 0.999);
   assert.equal(r.total, 20);
+  assert.equal(r.sides, 6);
   assert.equal(rollDice("1d20adv", () => 0).kept.length, 1);
   assert.equal(rollDice("4d6kh3", () => 0.5).kept.length, 3);
   assert.throws(() => rollDice("bonjour"));
@@ -44,7 +45,7 @@ test("chaque genre produit personnages, rencontres et scénarios complets", () =
 });
 
 test("cartes : dimensions et cases praticables", () => {
-  for (const kind of ["donjon", "caverne", "nature", "village"] as MapKind[]) {
+  for (const kind of ["donjon", "caverne", "nature", "village", "espace"] as MapKind[]) {
     for (const seed of [1, 7, 99]) {
       const m = generateMap({ kind, width: 40, height: 30, seed });
       assert.equal(m.tiles.length, 40 * 30, kind);
@@ -265,4 +266,49 @@ test("village : aucun quart de carte vide, des ruelles entre les maisons", () =>
     }
   }
   assert.ok(withAlley >= 50, `trop peu de ruelles entre deux maisons (${withAlley} villages sur 60)`);
+});
+
+test("espace : un Phare et un lieu, le Phare relié à la station par le vide", () => {
+  for (let seed = 1; seed <= 40; seed++) {
+    const m = generateMap({ kind: "espace", width: 46, height: 36, seed });
+    const phare = m.rooms.find((r) => r.label === "Phare")!;
+    const autre = m.rooms.find((r) => r.label !== "Phare")!;
+    assert.ok(phare && autre, `graine ${seed} : lieux`);
+    const atteint = reachable(m, { x: phare.x + 1, y: phare.y + 1 }, 500);
+    assert.ok(atteint.has((autre.y + 1) * m.width + autre.x + 1), `graine ${seed} : la station est coupée du Phare`);
+  }
+});
+
+test("mer : un îlot et un second lieu, reliés par la mer libre", () => {
+  for (let seed = 1; seed <= 40; seed++) {
+    const m = generateMap({ kind: "mer", width: 46, height: 36, seed });
+    assert.equal(m.kind, "mer");
+    const ilot = m.rooms.find((r) => r.label === "Îlot")!;
+    const autre = m.rooms.find((r) => r.label !== "Îlot")!;
+    assert.ok(ilot && autre, `graine ${seed} : lieux`);
+    const atteint = reachable(m, { x: autre.x + 1, y: autre.y }, 500);
+    assert.ok(atteint.has(ilot.y * m.width + ilot.x), `graine ${seed} : l'îlot est coupé de la mer`);
+  }
+});
+
+test("pont : deux ponts bord à bord, le premier porte les personnages, trois planches les relient", () => {
+  for (const [w, h] of [[40, 16], [12, 12], [80, 20]] as const) {
+    const m = generateMap({ kind: "pont", width: w, height: h, seed: 7 });
+    assert.equal(m.kind, "pont");
+    assert.equal(m.rooms.length, 2);
+    const [nous, eux] = m.rooms;
+    assert.ok(nous.y < eux.y);
+    // L'intérieur des ponts est praticable, sauf les deux mâts de chacun ; la lisse et la mer ne le sont pas.
+    for (const r of m.rooms) {
+      let murs = 0;
+      for (let y = r.y; y < r.y + r.h; y++) for (let x = r.x; x < r.x + r.w; x++) if (!walkable(m.tiles[y * m.width + x])) murs++;
+      assert.equal(murs, 2, `${w}x${h} : deux mâts par pont`);
+    }
+    assert.equal(m.tiles[(nous.y - 1) * m.width + nous.x], T.mur, "la lisse haute du premier pont");
+    // On passe d'un pont à l'autre par les planches : le second pont est atteignable depuis le premier.
+    const atteint = reachable(m, { x: nous.x, y: nous.y }, 500);
+    assert.ok(atteint.has((eux.y + 1) * m.width + eux.x + 1), `${w}x${h} : les ponts sont coupés l'un de l'autre`);
+    // Une écoutille et deux mâts par pont.
+    assert.equal(m.tiles.filter((t) => t === T.porte).length, 2);
+  }
 });

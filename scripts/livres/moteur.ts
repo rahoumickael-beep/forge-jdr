@@ -8,6 +8,8 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { PDFDocument } from "pdf-lib";
 import { chromium, type Page } from "playwright";
+import { CHARTES } from "../../shared/charte";
+import { MONDE } from "./monde";
 import { CSS, POLICES } from "./style";
 import { esc, HD, md } from "./texte";
 
@@ -41,18 +43,28 @@ export interface Livre {
 }
 
 const doc = (body: string, parchemin = true) =>
-  `<!doctype html><html lang="fr"><head><meta charset="utf-8"><link rel="stylesheet" href="${POLICES}"><style>${CSS}</style></head><body>${parchemin ? '<div class="parchemin"></div>' : ""}${body}</body></html>`;
+  `<!doctype html><html lang="fr"><head><meta charset="utf-8"><link rel="stylesheet" href="${POLICES}">${MONDE.polices ? `<link rel="stylesheet" href="${MONDE.polices}">` : ""}<style>${CSS}${MONDE.css ?? ""}</style></head><body>${parchemin ? '<div class="parchemin"></div>' : ""}${body}</body></html>`;
 
 async function imprimer(page: Page, html: string, fond = true): Promise<Uint8Array> {
   await page.setContent(html, { waitUntil: "networkidle" });
   await page.evaluate(() => document.fonts.ready);
+  // Contrôle sans tokens : une planche dont le cadre cache plus d'un quart de la peinture est signalée.
+  const coupees = await page.evaluate(() =>
+    [...document.querySelectorAll<HTMLImageElement>(".illu img")].flatMap((img) => {
+      const { naturalWidth: nw, naturalHeight: nh, clientWidth: cw, clientHeight: ch } = img;
+      if (!nw || !nh || !cw || !ch) return [];
+      const visible = Math.min(nw / nh, cw / ch) / Math.max(nw / nh, cw / ch);
+      return visible < 0.75 ? [`${img.dataset.id} (${Math.round(visible * 100)} % visible)`] : [];
+    }),
+  );
+  if (coupees.length) console.warn(`Planches trop coupées : ${[...new Set(coupees)].join(", ")}`);
   return page.pdf({ format: "A4", printBackground: fond, preferCSSPageSize: true });
 }
 
 const pagesDe = async (pdf: Uint8Array) => (await PDFDocument.load(pdf)).getPageCount();
 
 /** Ouverture de chapitre : numéro, titre, ornement, chapeau. */
-export function ouverture(num: string, titre: string, chapeau = "", orn = "✠") {
+export function ouverture(num: string, titre: string, chapeau = "", orn = CHARTES[MONDE.genre].ornements.chapitre) {
   return `<div class="ouverture"><div class="num">${esc(num)}</div><h2>${esc(titre)}</h2><div class="orn">${orn}</div>${chapeau ? `<p class="chapeau">${md(chapeau)}</p>` : ""}</div>`;
 }
 
@@ -68,7 +80,7 @@ function sommaire(livre: Livre, debuts: number[]) {
 export async function fabriquer(livre: Livre, out: string) {
   mkdirSync(out, { recursive: true });
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
-  const page = await browser.newPage();
+  const page = await browser.newPage({ viewport: { width: 794, height: 1123 } }); // largeur A4 : cadres mesurés comme à l’impression
 
   // Le parchemin, peint une fois en JPEG.
   const page2 = await browser.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: HD ? 3 : 2 }); // ×3 : parchemin à près de 300 dpi pour l'impression
@@ -119,7 +131,8 @@ export async function fabriquer(livre: Livre, out: string) {
   final.setTitle(livre.titre);
   final.setAuthor("Mickael et sa table");
   final.setLanguage("fr-FR");
-  const fond = await final.embedJpg(texture);
+  // Copie : un petit JPEG (papier presque uni) vit dans un tampon partagé de Node, que pdf-lib lit depuis son début.
+  const fond = await final.embedJpg(new Uint8Array(texture));
   const morceaux = [
     { pdf: couverture, parchemin: false },
     { pdf: credits, parchemin: true },

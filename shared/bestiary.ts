@@ -1,17 +1,51 @@
-// Bestiaire d'Aubreterre (campagne « Le Trône du Dieu Mort »).
+// Bestiaire d'Aubreterre (campagne « Le Trône du Dieu Mort »), et BESTIARY qui réunit tous les mondes
+// (celui de l'Archipel est dans archipel-bestiaire.ts, les outils de fiche dans fiches.ts).
 // Fiches façon D&D 5e : FP 0 à 20, distances en mètres (1 case = 1,5 m).
 // Tout est original ou tiré du folklore : aucune créature protégée hors SRD 5.1.
+import { BESTIAIRE_ARCHIPEL } from "./archipel-bestiaire";
+import { BESTIAIRE_TERNELANDE } from "./ternelande-bestiaire";
+import { BESTIAIRE_RESIDENCE } from "./residence-bestiaire";
+import { BESTIAIRE_NOYES } from "./noyes-bestiaire";
+import { BESTIAIRE_SEC } from "./sec-bestiaire";
+import { BESTIAIRE_ASILE } from "./asile-bestiaire";
+import { BESTIAIRE_ILES } from "./iles-bestiaire";
+import { BESTIAIRE_EXPO } from "./expo-bestiaire";
+import { BESTIAIRE_HERMES } from "./hermes-bestiaire";
 import { stylePeinture } from "./charte";
+import { cost, fabriquerCreature, hit, modOf, multi, recharge, save, special, type CreatureInput } from "./fiches";
 import type { Encounter, GenreId } from "./types";
+
+export { illustrationStyle, LUMIERE_FAMILLE, modOf, xpForCr } from "./fiches";
 
 export type Stat = "For" | "Dex" | "Con" | "Int" | "Sag" | "Cha";
 export const STAT_ORDER: Stat[] = ["For", "Dex", "Con", "Int", "Sag", "Cha"];
 
 export type Size = "Très petite" | "Petite" | "Moyenne" | "Grande" | "Très grande" | "Gigantesque";
 
-export type Family = "Morts" | "Bêtes" | "Humanoïdes" | "Monstruosités" | "Créatures du Dessous";
+/** Familles d'Aubreterre */
+export type FamilleAubreterre = "Morts" | "Bêtes" | "Humanoïdes" | "Monstruosités" | "Créatures du Dessous";
+/** Familles de l'Archipel */
+export type FamilleArchipel = "Faune des mondes" | "Équipages" | "Machines" | "Choses des Routes";
+/** Familles de la Ternelande */
+export type FamilleTernelande = "Bêtes d'hiver" | "Gens de la Dîme" | "Choses de la terre" | "Reflets";
+/** Familles de la Résidence */
+export type FamilleResidence = "Bêtes de la ville" | "Gens du Bail" | "Drones et automates" | "Cousus";
+/** Familles de la Côte des Noyés */
+export type FamilleNoyes = "Bêtes de la côte" | "Gens de 1923" | "Ce que rend la mer" | "La Fosse";
+/** Familles du Grand Sec */
+export type FamilleSec = "Bêtes du Sec" | "Gens de la Route" | "Gens des citadelles" | "Machines d'avant";
+/** Familles du Champ-d'Asile */
+export type FamilleAsile = "Bêtes de la prairie" | "Gens de la loi" | "Hors-la-loi" | "Gens du rail";
+/** Familles des Îles du Vent */
+export type FamilleIles = "Bêtes de mer et de côte" | "Gens de mer" | "Soldats et chasseurs" | "Figures et navires";
+/** Familles de l'Exposition éternelle */
+export type FamilleExpo = "Automates et machines de la foire" | "Gens de la foire et de la pègre" | "Gardes, Sûreté et Commissariat" | "Figures et grandes machines";
+/** Familles de la Cellule Hermès */
+export type FamilleHermes = "La rue et les témoins" | "Forces de l'ordre" | "Les privés" | "Figures et scènes";
+export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande | FamilleResidence | FamilleNoyes | FamilleSec | FamilleAsile | FamilleIles | FamilleExpo | FamilleHermes;
 
 export type Region =
+  // Aubreterre
   | "Le Couronnement"
   | "Les Marches de Fer"
   | "Le Val Cierge"
@@ -21,6 +55,82 @@ export type Region =
   | "La Brune"
   | "Le Verre-Rouge"
   | "Le Dessous"
+  // L'Archipel
+  | "Solenne"
+  | "Valcourt"
+  | "Ancre"
+  | "Ilvaë"
+  | "Karrag"
+  | "La Frange"
+  | "Les Brisants"
+  | "Les Mondes Éteints"
+  | "le Grand Large"
+  // La Ternelande
+  | "Haute-Cendre"
+  | "Les Neiges Hautes"
+  | "Vaugelée"
+  | "La Forêt des Blancs-Bois"
+  | "Les Comtés Rouges"
+  | "Saint-Mémoire"
+  | "Les Landes Effacées"
+  | "Brise-Glace"
+  // La Résidence
+  | "Les Hauts"
+  | "Les Blocs"
+  | "Le Port-Franc"
+  | "La Friche"
+  | "Le Jardin"
+  | "Les Souterrains"
+  | "La Digue"
+  // La Côte des Noyés
+  | "Saint-Clair-sur-Mer"
+  | "La Morgue de l'Abri-du-Marin"
+  | "Le Rocher-Gris"
+  | "La Hague"
+  | "Cherbourg"
+  | "Le Havre"
+  | "La Fosse"
+  // Le Grand Sec
+  | "La Route du Rhône"
+  | "Avignon-la-Sèche"
+  | "Les Salins"
+  | "Les Cévennes"
+  | "Le Mont Chauve et Montclair"
+  | "Le Mur de Valence"
+  | "La Camargue de sel"
+  // Le Champ-d'Asile
+  | "Bonne-Espérance"
+  | "Fort-Rail"
+  | "Les Ranchos du Brazos"
+  | "La Croix-de-Pierre"
+  | "La Comanchería"
+  | "La Frontière du sud"
+  // Les Îles du Vent
+  | "L'Anse-aux-Lames"
+  | "Les bancs de Floride"
+  | "La Havane"
+  | "Nassau"
+  | "Saint-Pierre de la Martinique"
+  | "Les mornes de Saint-Domingue"
+  | "La fosse de Bahama"
+  | "la mer des Antilles"
+  // L'Exposition éternelle
+  | "La Galerie des Machines"
+  | "La Tour"
+  | "Le Trocadéro"
+  | "Le Palais de l'Électricité"
+  | "Les Villages"
+  | "Grenelle et Javel"
+  | "Les Carrières"
+  | "La Butte"
+  // La Cellule Hermès
+  | "Paris"
+  | "Bruxelles"
+  | "Luxembourg"
+  | "Genève"
+  | "Trieste"
+  | "Rotterdam"
+  | "Marseille"
   | "Partout";
 
 export interface Speed {
@@ -74,6 +184,8 @@ export interface Trait {
 export interface Creature {
   id: string;
   name: string;
+  /** Nom affiché aux joueurs quand le vrai nom trahit un secret du canon. */
+  publicName?: string;
   genre: GenreId;
   family: Family;
   size: Size;
@@ -109,43 +221,12 @@ export interface Creature {
   illustration: string; // prompt Flux Schnell, commence par ILLUSTRATION_STYLE
 }
 
-/** Chaque famille a sa lumière : on reconnaît la famille d'une créature au premier coup d'œil. */
-export const LUMIERE_FAMILLE: Record<Family, string> = {
-  Bêtes: "late afternoon natural light, ochre and moss green tones",
-  Morts: "cold silver-grey light, grey-green tones, low ground mist",
-  Humanoïdes: "torchlight and candlelight, warm browns and dried blood red",
-  Monstruosités: "stormy sky, hard contrast, slate and rust tones",
-  "Créatures du Dessous": "near darkness, a single pale cold light rising from below",
-};
-
-/** Préfixe des prompts d'illustration d'une famille, tiré de la charte fantasy (shared/charte.ts). */
-export const illustrationStyle = (family: Family) => stylePeinture("fantasy", "creature", LUMIERE_FAMILLE[family]);
-/** Style commun à toutes les planches, sans la lumière (qui ouvre le prompt). */
+/** Style commun à toutes les planches d'Aubreterre, sans la lumière (qui ouvre le prompt). */
 export const ILLUSTRATION_STYLE = stylePeinture("fantasy", "creature", "");
-
-/** Retire d'une scène les morceaux qui imposent leur propre lumière (la famille décide). */
-const sansLumiere = (scene: string) =>
-  scene
-    .split(", ")
-    .filter((part, i) => i === 0 || !/\b(light|lit|backlight|backlit|overcast|moonlight|sunlight|glow)\b/i.test(part))
-    .join(", ")
-    .replace(/ (at|in the|under the) (dawn|dusk|sunset|sunrise|noon|midday|night)\b/gi, "");
 
 // --- Repères de la 5e (Guide du maître, création de monstres) ---
 
 export const CR_STEPS = [0, 0.125, 0.25, 0.5, ...Array.from({ length: 30 }, (_, i) => i + 1)];
-
-const XP_BY_CR: Record<string, number> = {
-  "0": 10, "0.125": 25, "0.25": 50, "0.5": 100, "1": 200, "2": 450, "3": 700, "4": 1100, "5": 1800,
-  "6": 2300, "7": 2900, "8": 3900, "9": 5000, "10": 5900, "11": 7200, "12": 8400, "13": 10000,
-  "14": 11500, "15": 13000, "16": 15000, "17": 18000, "18": 20000, "19": 22000, "20": 25000,
-  "21": 33000, "22": 41000, "23": 50000, "24": 62000, "25": 75000, "26": 90000, "27": 105000,
-  "28": 120000, "29": 135000, "30": 155000,
-};
-
-export function xpForCr(cr: number): number {
-  return XP_BY_CR[String(cr)] ?? 0;
-}
 
 export function crLabel(cr: number): string {
   return cr === 0.125 ? "1/8" : cr === 0.25 ? "1/4" : cr === 0.5 ? "1/2" : String(cr);
@@ -155,7 +236,6 @@ export function proficiencyForCr(cr: number): number {
   return cr < 5 ? 2 : Math.min(9, Math.floor((cr - 1) / 4) + 2);
 }
 
-export const modOf = (v: number) => Math.floor((v - 10) / 2);
 
 /** PV maximum attendus pour chaque FP (index de CR_STEPS). */
 function hpCeiling(i: number): number {
@@ -264,52 +344,9 @@ export function estimateCr(c: Creature): { defensive: number; offensive: number;
   return { defensive: CR_STEPS[def], offensive: CR_STEPS[off], estimate, dpr };
 }
 
-// --- Fabrication des fiches ---
+// --- Fabrication des fiches (outils communs dans fiches.ts) ---
 
-const HIT_DIE: Record<Size, number> = { "Très petite": 4, Petite: 6, Moyenne: 8, Grande: 10, "Très grande": 12, Gigantesque: 20 };
-
-type CreatureInput = Omit<Creature, "genre" | "xp" | "hp" | "hpDice" | "illustration" | "senses"> & {
-  /** Nombre de dés de vie ; le dé dépend de la taille, le bonus de la Constitution. */
-  hd: number;
-  /** Sens sans la Perception passive, ajoutée automatiquement. */
-  senses?: string;
-  /** Description de la planche, en anglais, sans le préfixe de style. */
-  scene: string;
-};
-
-function creature(input: CreatureInput): Creature {
-  const { hd, scene, senses, ...rest } = input;
-  const die = HIT_DIE[input.size];
-  const bonus = hd * modOf(input.stats[2]);
-  const hp = Math.floor((hd * (die + 1)) / 2) + bonus;
-  const passive = 10 + (input.skills?.Perception ?? modOf(input.stats[4]));
-  return {
-    ...rest,
-    genre: "fantasy",
-    xp: xpForCr(input.cr),
-    hp,
-    hpDice: `${hd}d${die}${bonus > 0 ? `+${bonus}` : bonus < 0 ? bonus : ""}`,
-    senses: `${senses ? `${senses}, ` : ""}Perception passive ${passive}`,
-    illustration: `${illustrationStyle(input.family)}, ${sansLumiere(scene)}`,
-  };
-}
-
-// Raccourcis d'écriture
-const hit = (name: string, kind: Attack["kind"], toHit: number, reach: string, damage: string, damageType: string, text = "", extra?: Attack["extra"]): CreatureAction => ({
-  name,
-  text,
-  attack: { kind, toHit, reach, damage, damageType, ...(extra ? { extra } : {}) },
-});
-const save = (name: string, stat: Stat, dc: number, text: string, damage?: string, damageType?: string, targets = 1, recharge?: string): CreatureAction => ({
-  name,
-  text,
-  save: { stat, dc, ...(damage ? { damage, damageType, targets } : {}) },
-  ...(recharge ? { recharge } : {}),
-});
-const multi = (text: string, multiattack: Record<string, number>): CreatureAction => ({ name: "Attaques multiples", text, multiattack });
-const special = (name: string, text: string, recharge?: string): CreatureAction => ({ name, text, ...(recharge ? { recharge } : {}) });
-const recharge = (a: CreatureAction, r: string): CreatureAction => ({ ...a, recharge: r });
-const cost = (a: CreatureAction, n: number): CreatureAction => ({ ...a, cost: n });
+const creature = (input: CreatureInput): Creature => fabriquerCreature("fantasy", input);
 
 // Immunités récurrentes des morts
 const MORT_IMMUN = ["poison"];
@@ -329,7 +366,7 @@ const CLOUER: Trait = {
 
 // --- Les fiches, par FP croissant ---
 
-export const BESTIARY: Creature[] = [
+const CREATURES_AUBRETERRE: Creature[] = [
   // ===== FP 0 à 1/2 =====
   creature({
     id: "corneille-des-pieux",
@@ -1349,6 +1386,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "bouche-de-gorvan",
     name: "Bouche de Gorvan",
+    publicName: "Bouche du Dessous",
     family: "Morts", size: "Moyenne", type: "mort-vivant", region: "Partout",
     cr: 10, ac: 16, acNote: "armure naturelle", hd: 17, speed: { marche: 9 },
     stats: [18, 16, 18, 16, 16, 20],
@@ -1405,6 +1443,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "dent-du-mangeur",
     name: "Dent du Mangeur",
+    publicName: "Dent du Dessous",
     family: "Créatures du Dessous", size: "Grande", type: "aberration", region: "Le Dessous",
     cr: 12, ac: 16, acNote: "chair compactée", hd: 22, speed: { marche: 12, escalade: 9 },
     stats: [22, 10, 20, 3, 10, 8],
@@ -1465,6 +1504,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "langue-de-gorvan",
     name: "Langue de Gorvan",
+    publicName: "Langue du Dessous",
     family: "Créatures du Dessous", size: "Très grande", type: "aberration", region: "Le Dessous",
     cr: 14, ac: 17, acNote: "armure naturelle", hd: 22, speed: { marche: 6, escalade: 6 },
     stats: [24, 10, 20, 14, 16, 22],
@@ -1582,6 +1622,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "main-de-gorvan",
     name: "Main de Gorvan",
+    publicName: "Main du Dessous",
     family: "Créatures du Dessous", size: "Gigantesque", type: "aberration (fragment de dieu)", region: "Le Couronnement",
     cr: 18, ac: 19, acNote: "armure naturelle", hd: 18, speed: { marche: 0 },
     stats: [28, 10, 24, 8, 14, 22],
@@ -1608,6 +1649,7 @@ export const BESTIARY: Creature[] = [
   creature({
     id: "gorvan-fragment",
     name: "Gorvan, le Frère du Dessous (fragment)",
+    publicName: "Ce qui attend en bas",
     family: "Créatures du Dessous", size: "Grande", type: "fiélon (fragment de dieu)", region: "Le Dessous",
     cr: 20, ac: 20, acNote: "armure naturelle", hd: 25, speed: { marche: 12, vol: 12, stationnaire: true },
     stats: [22, 16, 24, 22, 20, 28],
@@ -1680,6 +1722,9 @@ export const BESTIARY: Creature[] = [
   }),
 ];
 
+/** Toutes les créatures de tous les mondes ; creaturesFor(genre) pour un seul. */
+export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE, ...BESTIAIRE_RESIDENCE, ...BESTIAIRE_NOYES, ...BESTIAIRE_SEC, ...BESTIAIRE_ASILE, ...BESTIAIRE_ILES, ...BESTIAIRE_EXPO, ...BESTIAIRE_HERMES];
+
 /** Créatures d'un genre (pour l'instant, seul le monde fantasy d'Aubreterre en a). */
 export function creaturesFor(genre: GenreId): Creature[] {
   return BESTIARY.filter((c) => c.genre === genre);
@@ -1712,6 +1757,28 @@ export function attackSummary(c: Creature): string {
  * Ligne d'ennemi au format de `Encounter["enemies"]`.
  * Le danger dépend du FP, rapporté au niveau du groupe s'il est donné.
  */
+/** Nom d'un pion tel que le voit un joueur : le nom public remplace le vrai nom de la créature. */
+/** Nom de fichier des illustrations d'une créature (pion, carte) : le nom public quand le vrai nom trahit un secret,
+ * puisque l'adresse de l'image arrive chez les joueurs. scripts/vignettes-figurines.mjs nomme les fichiers pareil. */
+export function fichierCreature(c: Creature): string {
+  if (!c.publicName) return c.id;
+  return c.publicName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/** Mondes dont les créatures ont leurs peintures (vignettes et cartes, faites par scripts/vignettes-figurines.mjs). */
+export const MONDES_PEINTS = new Set<GenreId>(["fantasy", "science-fiction"]);
+
+/** Figurine peinte d'une créature, ou rien. */
+export function pionDeCreature(creatureId?: string): string | undefined {
+  const c = creatureId ? BESTIARY.find((x) => x.id === creatureId) : undefined;
+  return c && MONDES_PEINTS.has(c.genre) ? `/pions/${fichierCreature(c)}.webp` : undefined;
+}
+
+export function nomVuParLesJoueurs(nom: string, creatureId?: string): string {
+  const c = creatureId ? BESTIARY.find((x) => x.id === creatureId) : undefined;
+  return c?.publicName ? nom.split(c.name).join(c.publicName) : nom;
+}
+
 export function toEncounterEnemy(c: Creature, count: number, partyLevel?: number): Encounter["enemies"][number] {
   const ratio = partyLevel ? c.cr / partyLevel : undefined;
   const danger =

@@ -1,5 +1,7 @@
 // Types partagés entre le serveur et le client.
 import type { Combat } from "./combat";
+import type { Souvenir } from "./souvenirs";
+import type { Vaisseau } from "./vaisseaux";
 
 export type GenreId =
   | "fantasy"
@@ -15,7 +17,7 @@ export type GenreId =
 
 export type Ton = "epique" | "sombre" | "humoristique" | "mysterieux";
 
-export type MapKind = "donjon" | "caverne" | "nature" | "village";
+export type MapKind = "donjon" | "caverne" | "nature" | "village" | "espace" | "mer" | "pont";
 
 /** Un type de case de carte. Le rendu dépend du thème visuel du genre. */
 export type Tile = 0 | 1 | 2 | 3 | 4 | 5 | 6;
@@ -76,6 +78,8 @@ export interface Character {
   portrait?: string;
   /** Joueur à qui appartient la fiche (posé par le serveur). Sans propriétaire, c'est un PNJ du MJ. */
   ownerId?: string;
+  /** Souvenirs du personnage, dans les mondes qui en ont (shared/souvenirs.ts). */
+  souvenirs?: Souvenir[];
 }
 
 export interface Encounter {
@@ -130,10 +134,14 @@ export interface Token {
   size?: number; // 1 = une case
   /** Créature du bestiaire (shared/bestiary.ts) dont ce pion est issu. */
   creatureId?: string;
+  /** Figurine peinte, calculée par le serveur à l'envoi (viewFor) : le client des joueurs n'a pas le bestiaire. */
+  pion?: string;
   /** Bonus d'initiative noté à la main (sinon tiré de la fiche ou du bestiaire). */
   init?: number;
   /** Déplacement en cases par tour (6 par défaut, soit 9 m). */
   speed?: number;
+  /** Vaisseau (shared/vaisseaux.ts) que ce pion représente sur la carte d'espace. */
+  vaisseauId?: string;
 }
 
 export interface ChatEntry {
@@ -144,6 +152,8 @@ export interface ChatEntry {
   text: string;
   kind: "chat" | "des" | "systeme" | "narration";
   secret?: boolean; // visible du MJ seulement
+  /** Lancer de dés : de quoi le rejouer sur la table chez chacun (le résultat vient du serveur). */
+  roll?: { sides: number; rolls: number[]; kept: number[]; modifier: number; total: number };
 }
 
 export interface InitiativeEntry {
@@ -167,6 +177,61 @@ export interface Handout {
   at: number;
   /** Joueurs qui reçoivent le document ; absent ou vide : toute la table. */
   to?: string[];
+}
+
+import type { Carte } from "./cartes";
+import type { Collection } from "./collection";
+
+/** Une séance de jeu : ce qui s'est passé, pour la raconter la fois suivante. */
+export interface Seance {
+  numero: number;
+  debut: number;
+  fin?: number;
+  /** « Précédemment » : écrit par le MJ à la clôture, lu aux joueurs à l'ouverture suivante. */
+  resume: string;
+  /** Notés tout seuls pendant la séance (combats, documents, cartes) : rien de secret. */
+  faits: string[];
+}
+
+/** Une piste laissée en suspens. Un fil secret reste chez le MJ. */
+export interface FilOuvert {
+  id: string;
+  texte: string;
+  ouvert: boolean;
+  secret: boolean;
+  /** Séance où le fil est apparu. */
+  seance: number;
+}
+
+/** Un PNJ que le groupe a croisé. */
+export interface PnjConnu {
+  id: string;
+  nom: string;
+  /** De -2 (hostile) à +2 (allié). */
+  attitude: number;
+  /** Ce que les joueurs savent de lui. */
+  public: string;
+  /** Ce que le MJ garde pour lui. */
+  secret: string;
+}
+
+/** Mémoire de la campagne, d'une séance à l'autre. */
+export interface Campagne {
+  seances: Seance[];
+  fils: FilOuvert[];
+  pnj: PnjConnu[];
+  /** Réputation du groupe auprès de chaque faction du canon (id → 0 à 3). */
+  reputations: Record<string, number>;
+  /** Jauge du monde (le Sceau en fantasy), de 0 à 100 ; null si le monde n'en a pas. */
+  jauge: number | null;
+  /** Les joueurs voient-ils la jauge ? */
+  jaugeVisible: boolean;
+  /** Réserve du MJ (les Murmures en fantasy). */
+  reserve: number;
+  /** Notes du MJ pour la séance suivante. */
+  preparation: string;
+  /** Vue joueur seulement : nom de la jauge et des factions amies, tirés du canon par le serveur. */
+  noms?: { jauge?: string; factions: { id: string; nom: string }[] };
 }
 
 /** État complet d'une partie, tel que le serveur le garde. */
@@ -204,6 +269,13 @@ export interface RoomState {
   gmNotes: string; // jamais envoyé aux joueurs
   movementLocked: boolean;
   scene: string; // texte d'ambiance affiché à tous
+  campagne: Campagne;
+  /** Carte que le MJ a retournée devant la table (publique), avec l'heure du retournement. */
+  carte: (Carte & { at: number }) | null;
+  /** Cartes à collectionner de chaque joueur (id du joueur → collection). Rien de secret : tout le monde voit les collections. */
+  collections: Record<string, Collection>;
+  /** Vaisseaux : celui du groupe et ceux que le MJ prépare. Les vaisseaux cachés et les notes restent chez le MJ. */
+  vaisseaux: Vaisseau[];
 }
 
 /** Vue envoyée à un client : la version joueur retire les secrets. */

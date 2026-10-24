@@ -1,9 +1,11 @@
 // Mode combat : déclenchement (un joueur voit un monstre, ou le MJ le décide), initiative automatique,
 // zone que la caméra cadre, et cases qu'un pion peut atteindre pendant son tour.
-import { BESTIARY } from "./bestiary";
-import { walkable } from "./maps";
+import { BESTIARY, crLabel } from "./bestiary";
 import type { GameMap, InitiativeEntry, RoomState, Token } from "./types";
 import { visibleCells } from "./vision";
+
+// Le déplacement vit dans maps.ts : la table des joueurs le charge sans le bestiaire.
+export { reachable } from "./maps";
 
 export interface Combat {
   id: string;
@@ -14,9 +16,16 @@ export interface Combat {
   focus: { x: number; y: number; w: number; h: number };
   /** « auto » : un joueur a vu le monstre ; « mj » : le MJ a lancé le combat. */
   cause: "auto" | "mj";
+  /** Sous le nom, dans l'animation : type et puissance de la créature (calculé ici, le client des joueurs n'a pas le bestiaire). */
+  sousTitre?: string;
 }
 
 const modOf = (v: number) => Math.floor((v - 10) / 2);
+
+function sousTitreDe(t: Token | undefined): string | undefined {
+  const c = t?.creatureId ? BESTIARY.find((x) => x.id === t.creatureId) : undefined;
+  return c ? `${c.type.charAt(0).toUpperCase()}${c.type.slice(1)} · Puissance ${crLabel(c.cr)}` : undefined;
+}
 const center = (t: Token) => ({ x: t.x + (t.size ?? 1) / 2, y: t.y + (t.size ?? 1) / 2 });
 
 /** Monstres visibles d'au moins un pion joueur (les monstres cachés par le MJ ne comptent pas). */
@@ -76,6 +85,7 @@ export function startCombat(st: RoomState, triggers: Token[], cause: Combat["cau
     monsterIds: triggers.map((t) => t.id),
     focus: focusOf(st.map, fighters),
     cause,
+    ...(sousTitreDe(triggers[0]) ? { sousTitre: sousTitreDe(triggers[0]) } : {}),
   };
   return st.combat;
 }
@@ -97,32 +107,3 @@ export function autoCombat(st: RoomState): Combat | null {
   return fresh.length ? startCombat(st, fresh, "auto") : null;
 }
 
-/** Cases atteignables en `speed` cases de déplacement (diagonales comptées comme une case, façon 5e). */
-export function reachable(map: GameMap, from: { x: number; y: number }, speed: number, blocked: Set<number> = new Set()): Set<number> {
-  const out = new Set<number>();
-  const start = Math.round(from.y) * map.width + Math.round(from.x);
-  const dist = new Map<number, number>([[start, 0]]);
-  const queue = [start];
-  while (queue.length) {
-    const i = queue.shift()!;
-    const d = dist.get(i)!;
-    out.add(i);
-    if (d >= speed) continue;
-    const x = i % map.width;
-    const y = Math.floor(i / map.width);
-    for (let dy = -1; dy <= 1; dy++)
-      for (let dx = -1; dx <= 1; dx++) {
-        if (!dx && !dy) continue;
-        const nx = x + dx;
-        const ny = y + dy;
-        if (nx < 0 || ny < 0 || nx >= map.width || ny >= map.height) continue;
-        const j = ny * map.width + nx;
-        if (dist.has(j) || blocked.has(j) || !walkable(map.tiles[j])) continue;
-        // Pas de diagonale à travers un coin de mur.
-        if (dx && dy && (!walkable(map.tiles[y * map.width + nx]) || !walkable(map.tiles[ny * map.width + x]))) continue;
-        dist.set(j, d + 1);
-        queue.push(j);
-      }
-  }
-  return out;
-}

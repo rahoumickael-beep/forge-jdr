@@ -1,5 +1,23 @@
 // Livre des règles de Forge JdR : règles de base inspirées de D&D 5e, classes et pouvoirs.
-// Brouillon v0.2 : les 14 classes fantasy sont complètes, les autres genres viendront après validation de Mickael.
+// Brouillon v0.2 : les 14 classes fantasy sont complètes ; les 10 classes de l'Archipel (SF) sont dans archipel-classes.ts.
+import { CLASSES_ARCHIPEL } from "./archipel-classes";
+import { CLASSES_TERNELANDE } from "./ternelande-classes";
+import { CLASSES_RESIDENCE } from "./residence-classes";
+import { CLASSES_NOYES } from "./noyes-classes";
+import { CLASSES_SEC } from "./sec-classes";
+import { CLASSES_ASILE } from "./asile-classes";
+import { CLASSES_ILES } from "./iles-classes";
+import { REGLES_ILES } from "./iles-regles";
+import { CLASSES_EXPO } from "./expo-classes";
+import { REGLES_EXPO } from "./expo-regles";
+import { CLASSES_HERMES } from "./hermes-classes";
+import { REGLES_HERMES } from "./hermes-regles";
+import { REGLES_ASILE } from "./asile-regles";
+import { REGLES_ARCHIPEL } from "./archipel-regles";
+import { REGLES_TERNELANDE } from "./ternelande-regles";
+import { REGLES_RESIDENCE } from "./residence-regles";
+import { REGLES_NOYES } from "./noyes-regles";
+import { REGLES_SEC } from "./sec-regles";
 import type { GenreId } from "./types";
 
 export type Recharge = "à volonté" | "repos court" | "repos long" | "passif";
@@ -210,7 +228,7 @@ const BASE_CLASSES: BaseClass[] = [
     id: "fantasy-guerrier",
     genre: "fantasy",
     name: "Guerrier",
-    role: "Tank, dégâts au contact",
+    role: "Encaisser, dégâts au contact",
     pitch: "Celui qui tient la ligne quand tout s'effondre.",
     hitDie: 10,
     mainStats: ["Force", "Constitution"],
@@ -355,7 +373,7 @@ const BASE_CLASSES: BaseClass[] = [
     id: "fantasy-paladin",
     genre: "fantasy",
     name: "Paladin",
-    role: "Tank, dégâts sacrés, aura",
+    role: "Encaisser, dégâts sacrés, aura",
     pitch: "Il a juré. Il tiendra parole, même contre son propre camp.",
     hitDie: 10,
     mainStats: ["Force", "Charisme"],
@@ -403,7 +421,7 @@ const BASE_CLASSES: BaseClass[] = [
     id: "fantasy-barbare",
     genre: "fantasy",
     name: "Barbare",
-    role: "Tank, dégâts au contact",
+    role: "Encaisser, dégâts au contact",
     pitch: "Il ne sait pas parer. Il n'en a jamais eu besoin.",
     hitDie: 12,
     mainStats: ["Force", "Constitution"],
@@ -964,11 +982,22 @@ const SUBCLASSES: Record<string, { title: string; list: Subclass[] }> = {
   },
 };
 
-export const CLASSES: CharacterClass[] = BASE_CLASSES.map((c) => ({
-  ...c,
-  subclassTitle: SUBCLASSES[c.id]?.title ?? "Sous-classe",
-  subclasses: SUBCLASSES[c.id]?.list ?? [],
-}));
+export const CLASSES: CharacterClass[] = [
+  ...BASE_CLASSES.map((c) => ({
+    ...c,
+    subclassTitle: SUBCLASSES[c.id]?.title ?? "Sous-classe",
+    subclasses: SUBCLASSES[c.id]?.list ?? [],
+  })),
+  ...CLASSES_ARCHIPEL,
+  ...CLASSES_TERNELANDE,
+  ...CLASSES_RESIDENCE,
+  ...CLASSES_NOYES,
+  ...CLASSES_SEC,
+  ...CLASSES_ASILE,
+  ...CLASSES_ILES,
+  ...CLASSES_EXPO,
+  ...CLASSES_HERMES,
+];
 
 /** La sous-classe d'un personnage, s'il en a choisi une. */
 export function subclassOf(classId: string | undefined, subclassId: string | undefined): Subclass | undefined {
@@ -979,15 +1008,17 @@ export function subclassOf(classId: string | undefined, subclassId: string | und
 /** Noms provisoires des classes pour les autres genres, à remplir après validation des classes fantasy. */
 export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
   "dark-fantasy": ["Mercenaire", "Sorcière des ronces", "Coupe-jarret", "Inquisiteur", "Chasseur de sorcières", "Pèlerin maudit"],
-  "science-fiction": ["Soldat d'élite", "Psionique", "Contrebandière", "Médecin de bord", "Éclaireur", "Diplomate"],
-  cyberpunk: ["Solo", "Netrunner", "Fixer", "Médecin des rues", "Techie", "Nomade"],
-  horreur: ["Ancien soldat", "Occultiste", "Détective", "Médecin", "Journaliste", "Prêtre"],
-  "post-apo": ["Pillard", "Mutant", "Éclaireuse", "Docteur des ruines", "Mécano", "Chef de convoi"],
-  western: ["Pistolero", "Prédicateur", "Joueur de poker", "Médecin itinérant", "Éclaireur", "Shérif"],
-  pirates: ["Maître d'armes", "Sorcier vaudou", "Corsaire", "Chirurgien de bord", "Canonnier", "Capitaine"],
-  steampunk: ["Duelliste", "Inventeuse", "Espionne", "Automate", "Aéronaute", "Aristocrate"],
-  contemporain: ["Ancien militaire", "Hackeuse", "Voleur de luxe", "Médecin urgentiste", "Agent secret", "Avocate"],
+  cyberpunk: ["Fouineur", "Solo", "Médic de rue", "Huissier défroqué", "Coursier des passerelles", "Syndicaliste", "Fixeur", "Mécano", "Prêcheur des Sans-Bail", "Journaliste"],
+  horreur: ["Expert en sinistres", "Ancien poilu", "Médecin", "Abbé", "Journaliste", "Photographe", "Pêcheur", "Médium", "Gendarme", "Antiquaire"],
+  "post-apo": ["Batelier de sable", "Puisatier", "Pillard repenti", "Sourcière", "Mécano des ruines", "Gardian", "Pénitent", "Médecin des sables", "Fouilleur", "Chef de convoi"],
+  western: ["Pistolero", "Vaquero", "Shérif", "Joueur", "Éclaireur", "Chasseur de primes", "Médecin de campagne", "Prédicateur", "Hors-la-loi", "Arpenteur"],
+  pirates: ["Capitaine", "Canonnier", "Boucanier", "Chirurgien de bord", "Gabier", "Bretteur", "Maître de manœuvre", "Contrebandier", "Aumônier", "Plongeur"],
+  steampunk: ["Mécanicien", "Aéronaute", "Garde", "Reporter", "Médecin", "Chansonnier", "Réfractaire", "Ingénieur", "Interprète", "Escrimeur"],
+  contemporain: ["Chauffeur", "Filocheur", "Technicien", "Négociateur", "Infiltré", "Tireur", "Médecin", "Faussaire", "Analyste", "Garde du corps"],
 };
+
+/** Règles propres à un monde, à la suite des règles communes (livre en ligne, livre des joueurs). */
+export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE, horreur: REGLES_NOYES, "post-apo": REGLES_SEC, western: REGLES_ASILE, pirates: REGLES_ILES, steampunk: REGLES_EXPO, contemporain: REGLES_HERMES };
 
 export function classesFor(genre: GenreId): CharacterClass[] {
   return CLASSES.filter((c) => c.genre === genre);

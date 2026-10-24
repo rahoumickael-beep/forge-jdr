@@ -1,4 +1,5 @@
 import type { RoomView, Token } from "../../../shared/types";
+import { figurineDe } from "../figurines";
 import { send } from "../store";
 
 /** État de santé vague, comme les joueurs le perçoivent : on ne voit pas les PV d'un ennemi. */
@@ -16,7 +17,7 @@ const initiales = (n: string) =>
     .map((w) => w[0]!.toUpperCase())
     .join("");
 
-/** Frise d'initiative au-dessus de la carte pendant un combat. */
+/** Piste d'initiative pendant un combat : une réglette de bois au bord du plateau, un jeton par combattant, le jeton actif avancé. */
 export function InitiativeFrieze({ room }: { room: RoomView }) {
   const { entries, turn, round } = room.initiative;
   if (!room.combat || !entries.length) return null;
@@ -34,13 +35,13 @@ export function InitiativeFrieze({ room }: { room: RoomView }) {
       <ol className="frieze-list">
         {entries.map((e, i) => {
           const t = room.tokens.find((x) => x.id === e.tokenId);
-          const portrait = t?.characterId ? room.characters.find((c) => c.id === t.characterId)?.portrait : undefined;
+          const portrait = t ? figurineDe(t, t.characterId ? room.characters.find((c) => c.id === t.characterId) : undefined) : undefined;
           const ennemi = t?.kind === "monstre";
           const down = t?.hp !== undefined && t.hp <= 0;
           const hp = isGM || !ennemi ? (t?.hpMax ? `${t.hp ?? t.hpMax}/${t.hpMax} PV` : "") : etat(t);
           return (
             <li key={`${e.tokenId ?? e.name}-${i}`} className={`frieze-item${i === turn ? " current" : ""}${ennemi ? " foe" : ""}${down ? " down" : ""}`} title={`${e.name} · initiative ${e.value}${hp ? ` · ${hp}` : ""}`}>
-              <span className="frieze-medal" style={{ background: t?.color ?? "#555" }}>
+              <span className="frieze-medal" style={{ background: t?.color ?? "#555", ["--pion" as string]: t?.color ?? "#555" }}>
                 {portrait ? <img src={portrait} alt="" /> : <span>{initiales(e.name)}</span>}
               </span>
               <span className="frieze-name">{e.name}</span>

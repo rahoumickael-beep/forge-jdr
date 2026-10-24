@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { BESTIARY, crLabel } from "../../../shared/bestiary";
 import { charte } from "../../../shared/charte";
 import type { RoomView } from "../../../shared/types";
 
@@ -75,10 +74,9 @@ export function CombatIntro({ room }: { room: RoomView }) {
 
   if (!playing || !combat) return null;
   const first = room.tokens.find((t) => t.id === combat.monsterIds[0]);
-  const creature = first?.creatureId ? BESTIARY.find((c) => c.id === first.creatureId) : undefined;
   const others = combat.monsterIds.length - 1;
   const name = first?.name ?? "Quelque chose approche";
-  const sub = creature ? `${creature.type.charAt(0).toUpperCase()}${creature.type.slice(1)} · Puissance ${crLabel(creature.cr)}` : "";
+  const sub = combat.sousTitre ?? "";
   const c = charte(room.genre);
   const seed = parseInt(combat.id.slice(-5), 36);
 

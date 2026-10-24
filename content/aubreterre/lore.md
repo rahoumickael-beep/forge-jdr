@@ -26,7 +26,7 @@
 
 Le monde s'appelle **Aubreterre**. Son grand continent, le seul qu'on ait vraiment cartographié, c'est **Pallène**.
 
-Il y a six cent quatorze ans, un dieu a marché dans la plaine où se trouve aujourd'hui la capitale. Il avait la taille d'un homme, la peau couleur de pain cuit, et il ne dormait pas. Il s'est assis sur un bloc de basalte noir et il a dit : « Ici. » Les tribus qui se battaient pour la plaine ont posé les armes, non par miracle, mais parce que celles qui refusaient retrouvaient leurs chefs morts dans leur lit, le visage paisible. On l'a appelé **Ostral**, puis le Dieu-Empereur.
+Il y a six cent vingt et un ans, un dieu a marché dans la plaine où se trouve aujourd'hui la capitale. Il avait la taille d'un homme, la peau couleur de pain cuit, et il ne dormait pas. Il s'est assis sur un bloc de basalte noir et il a dit : « Ici. » Les tribus qui se battaient pour la plaine ont posé les armes, non par miracle, mais parce que celles qui refusaient retrouvaient leurs chefs morts dans leur lit, le visage paisible. On l'a appelé **Ostral**, puis le Dieu-Empereur.
 
 Il a régné six siècles sans quitter son trône plus de quelques jours d'affilée. Il a fait creuser les routes pavées qui relient encore les sept provinces, fixé les poids et les mesures, écrit le Code en neuf cents articles que les juges récitent par cœur. Il a pris des épouses mortelles, enterré la plupart de ses enfants, et gardé auprès de lui une Chancellerie de scribes qui notait chacune de ses paroles. Son règne n'était pas doux. Les révoltes finissaient en lignes de pieux le long des routes. Mais pendant six cents ans, personne en Pallène n'a connu la famine plus de deux hivers de suite, et les morts restaient où on les mettait.
 

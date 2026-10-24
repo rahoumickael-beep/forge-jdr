@@ -55,7 +55,7 @@ try {
   const tok = await pl.evaluate(() => window.__forge?.().tokens.find((t) => t.name === "Brunhild"));
   if (!tok) fail("le pion du joueur n'apparaît pas");
   else {
-    const box = await pl.locator("canvas").boundingBox();
+    const box = await pl.locator('canvas[aria-label="Carte de jeu"]').boundingBox();
     // Clique sur le pion : on retrouve sa position écran grâce au helper de debug.
     const pos = await pl.evaluate((id) => window.__forgeTokenScreen?.(id), tok.id);
     await pl.mouse.click(box.x + pos.x, box.y + pos.y);
@@ -164,6 +164,60 @@ try {
     await gm.waitForTimeout(600);
     if (await gm.evaluate(() => window.__forge?.().combat)) fail("le combat repart alors que le MJ l'a terminé");
     console.log(`Combat : lancé tout seul, ${items} combattants, tour suivant et fin du combat OK`);
+  }
+
+  // --- Combat de navires des Îles du Vent : la table passe en « pirates », le vocabulaire change, un canonnier tire, l'abordage change la carte ---
+  const envoyer = (page, evt, payload) => page.evaluate(([e, p]) => window.__forgeSend(e, p), [evt, payload]);
+  await envoyer(gm, "settings:set", { genre: "pirates" });
+  await gm.getByRole("tab", { name: "Carte" }).click();
+  await gm.locator("#map-kind").selectOption({ label: "Pleine mer (navires)" });
+  await gm.getByRole("button", { name: "Poser sur la table" }).click();
+  await gm.waitForTimeout(400);
+  await envoyer(gm, "vaisseau:creer", { modele: "sloop", nom: "Pie-Noire", equipage: "groupe" });
+  await envoyer(gm, "vaisseau:creer", { modele: "galion-garde-cote", nom: "Garde-côte", equipage: "autre" });
+  await gm.waitForTimeout(400);
+  const navires = await gm.evaluate(() => window.__forge?.().vaisseaux);
+  const nous = navires?.find((v) => v.nom === "Pie-Noire");
+  const eux = navires?.find((v) => v.nom === "Garde-côte");
+  if (!nous || !eux) fail("les navires ne sont pas créés");
+  else {
+    await envoyer(gm, "vaisseau:poser", nous.id);
+    await envoyer(gm, "vaisseau:poser", eux.id);
+    await envoyer(gm, "vaisseau:modifier", { id: eux.id, cache: false });
+    const brunhild = await gm.evaluate(() => window.__forge?.().characters.find((c) => c.name === "Brunhild"));
+    const poste = await envoyer(pl, "vaisseau:poste", { id: nous.id, poste: "artilleur", characterId: brunhild.id });
+    if (!poste.ok) fail(`le joueur ne peut pas prendre le poste de canonnier : ${poste.error}`);
+    await gm.getByRole("tab", { name: "Navires" }).click();
+    const panneauMJ = await gm.locator('[role="tabpanel"]').innerText();
+    if (!panneauMJ.includes("Mettre à l'eau") || /hangar|Vaisseau|Bouclier/i.test(panneauMJ)) fail(`le panneau du MJ parle encore de vaisseaux : ${panneauMJ.slice(0, 200)}`);
+    await pl.getByRole("tab", { name: "Navire", exact: true }).click();
+    const panneau = await pl.locator('[role="tabpanel"]').innerText();
+    if (!/Canonnier/.test(panneau) || !/Gréement/.test(panneau) || /Bouclier|Tourelle|Pilote|Artilleur|Vaisseau|Détecteur/i.test(panneau)) fail(`l'écran du navire garde des mots de SF : ${panneau.slice(0, 300)}`);
+    // Un poste qu'on ne tient pas ne se joue pas ; le sien, si.
+    const refus = await envoyer(pl, "vaisseau:action", { id: nous.id, action: "esquive" });
+    if (refus.ok) fail("un joueur a joué le poste de barreur sans le tenir");
+    await pl.locator('select[aria-label="Navire visé"]').first().selectOption({ label: "Garde-côte" });
+    await pl.getByRole("button", { name: "Tirer", exact: true }).click();
+    await pl.waitForTimeout(500);
+    const journal = await gm.locator(".log").textContent();
+    if (!journal.includes("tire une pièce de Canons de 8 sur Garde-côte")) fail("le tir du canonnier n'arrive pas au journal");
+    const apresTir = await gm.evaluate((id) => window.__forge?.().vaisseaux.find((v) => v.id === id).armes[0].chargees, nous.id);
+    if (apresTir !== 3) fail(`la pièce tirée n'est pas vide (${apresTir} chargées sur 4)`);
+    const vueJoueur = await pl.evaluate(() => JSON.stringify(window.__forge?.().vaisseaux.find((v) => v.equipage === "autre")));
+    if (/"(moral|hommes|hommesMax|perdus)":/.test(vueJoueur)) fail("le joueur voit le Moral ou l'équipage d'un autre navire");
+    await pl.screenshot({ path: "playtest-navire-joueur.png" });
+    // Abordage : les grappins tiennent (réglés par le MJ), le capitaine l'ordonne, la table passe aux deux ponts.
+    await envoyer(gm, "vaisseau:modifier", { id: nous.id, grappins: eux.id });
+    await envoyer(gm, "vaisseau:modifier", { id: eux.id, grappins: nous.id });
+    const ab = await envoyer(gm, "vaisseau:action", { id: nous.id, action: "aborder", cibleId: eux.id });
+    if (!ab.ok) fail(`l'abordage est refusé : ${ab.error}`);
+    await gm.waitForTimeout(500);
+    const apres = await gm.evaluate(() => window.__forge?.());
+    if (apres.map.kind !== "pont") fail(`la carte n'est pas passée aux ponts (${apres.map.kind})`);
+    else if (apres.tokens.some((t) => t.vaisseauId)) fail("les pions des navires sont restés sur la carte des ponts");
+    else if (apres.vaisseaux.find((v) => v.id === nous.id).moral !== 5) fail("l'abordage n'a pas coûté 1 de Moral");
+    else console.log("Navires : vocabulaire de mer, tir du canonnier, poste refusé, abordage aux deux ponts OK");
+    await gm.screenshot({ path: "playtest-navire-ponts.png" });
   }
 
   console.log(before ? "Captures : playtest-mj.png, playtest-joueur.png, playtest-joueur-vue.png" : "");
