@@ -272,7 +272,7 @@ Les heures que ton historique met dans ton équipement (de 20 à 40 h) s'ajouten
 Quelques mots sur chaque cas.
 
 - **Résident des Blocs.** Tu commences à 300 h, mais 100 h ne sont pas à toi : ton palier les réclame avant la fin de l'année. Il te reste 200 h de libre, soit un mois de loyer.
-- **Enfant des Hauts.** Quinze cents heures, c'est une fortune dans les Blocs. Toute dépense de 500 h ou plus d'un coup est signalée à ta famille, qui sait alors où tu es. Dépense tôt et peu, ou paie en petites sommes.
+- **Enfant des Hauts.** Quinze cents heures, c'est une fortune dans les Blocs. Toute dépense de 300 h ou plus d'un coup est signalée à ta famille, qui sait alors où tu es. Dépense tôt et peu, ou paie en petites sommes.
 - **Prolongé.** Six cents heures, et ta Clinique prélève une échéance chaque premier du mois. Si tu la manques, elle reprend des années.
 - **Cousu.** Cent cinquante heures, et deux implants dont le loyer total tombe aussi chaque premier du mois. Tu commences léger, avec un corps qui coûte.
 - **Locataire.** Tu ne paies pas en heures mais en mois de bail : six, au départ. Chaque premier du mois, 200 h sont retirées, soit un mois. À zéro, on vient retirer le corps.
