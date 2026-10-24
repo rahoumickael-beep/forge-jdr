@@ -1,5 +1,5 @@
-// Fabrique les livres d'Aubreterre en PDF.
-// npx tsx scripts/livres/index.ts [joueurs|mj|bestiaire|tout] [dossier de sortie]
+// Fabrique les livres d'un monde en PDF (Aubreterre par défaut).
+// npx tsx scripts/livres/index.ts [joueurs|mj|bestiaire|tout] [dossier de sortie] [--monde=archipel] [--hd]
 import { writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { BESTIARY, illustrationSeed } from "../../shared/bestiary";
@@ -7,6 +7,7 @@ import { bestiaire } from "./bestiaire";
 import { livreDesJoueurs } from "./joueurs";
 import { guideMj } from "./mj";
 import { fabriquer, type Livre } from "./moteur";
+import { MONDE } from "./monde";
 import { illustrationsDemandees } from "./texte";
 
 const quoi = process.argv[2] || "tout";
@@ -26,6 +27,8 @@ if (quoi === "tout") {
   // Les créatures ont leur propre lot (comfyui/prompts-bestiaire.json) ; ici, le reste des livres.
   const creatures = new Set(BESTIARY.map((c) => c.id));
   const livres = lot.filter((x) => !creatures.has(x.id));
-  writeFileSync(resolve("comfyui/prompts-livres.json"), JSON.stringify(livres, null, 2) + "\n");
-  console.log(`${livres.length} planches hors bestiaire → comfyui/prompts-livres.json`);
+  // Un lot par monde : comfyui/prompts-livres.json (Aubreterre), comfyui/prompts-<monde>-livres.json (les autres).
+  const lotLivres = MONDE.id === "aubreterre" ? "comfyui/prompts-livres.json" : `comfyui/prompts-${MONDE.id}-livres.json`;
+  writeFileSync(resolve(lotLivres), JSON.stringify(livres, null, 2) + "\n");
+  console.log(`${livres.length} planches hors bestiaire → ${lotLivres}`);
 }

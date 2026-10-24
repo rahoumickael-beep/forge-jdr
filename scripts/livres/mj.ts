@@ -23,7 +23,8 @@ function sections() {
       .split("\n")
       .filter((l) => !/^\*\*Options de nom/.test(l.trim()))
       .join("\n");
-    out.push({ titre: m[1].trim(), corps });
+    // Les niveaux de lecture de la bible ([Joueurs], [MJ], [Secret]) restent dans le texte, pas dans les titres.
+    out.push({ titre: m[1].replace(/\s*\[(Joueurs|MJ|Secret)\]/g, "").trim(), corps });
   }
   return out;
 }

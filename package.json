@@ -15,7 +15,8 @@
     "livre": "tsx scripts/livre.ts dist-livre",
     "apercu-cartes": "node scripts/apercu-cartes.mjs",
     "livres": "tsx scripts/livres/index.ts tout dist-livre",
-    "livres:impression": "tsx scripts/livres/index.ts tout dist-livre-impression --hd"
+    "livres:impression": "tsx scripts/livres/index.ts tout dist-livre-impression --hd",
+    "livres:archipel": "tsx scripts/livres/index.ts tout dist-livre --monde=archipel"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",

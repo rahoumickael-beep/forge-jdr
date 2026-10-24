@@ -79,3 +79,16 @@ test("bibliothèque : chaque figure d'un scénario renvoie à un scénario qui e
       assert.ok(s && s.genre === C.genre, `${f.nom} : scénario ${f.scenario}`);
     }
 });
+
+test("livres des joueurs : aucun secret du canon dans les chapitres écrits pour les joueurs", async () => {
+  const { existsSync, readdirSync, readFileSync } = await import("node:fs");
+  const dossiers: Record<string, string> = { fantasy: "content/aubreterre/joueurs", "science-fiction": "content/archipel/joueurs" };
+  for (const C of Object.values(CANONS) as Canon[]) {
+    const d = dossiers[C.genre];
+    if (!d || !existsSync(d)) continue;
+    for (const f of readdirSync(d)) {
+      const t = readFileSync(`${d}/${f}`, "utf8");
+      for (const s of C.secrets) assert.ok(!t.includes(s), `${d}/${f} : « ${s} »`);
+    }
+  }
+});

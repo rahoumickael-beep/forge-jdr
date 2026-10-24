@@ -8,6 +8,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { PDFDocument } from "pdf-lib";
 import { chromium, type Page } from "playwright";
+import { CHARTES } from "../../shared/charte";
 import { MONDE } from "./monde";
 import { CSS, POLICES } from "./style";
 import { esc, HD, md } from "./texte";
@@ -53,7 +54,7 @@ async function imprimer(page: Page, html: string, fond = true): Promise<Uint8Arr
 const pagesDe = async (pdf: Uint8Array) => (await PDFDocument.load(pdf)).getPageCount();
 
 /** Ouverture de chapitre : numéro, titre, ornement, chapeau. */
-export function ouverture(num: string, titre: string, chapeau = "", orn = "✠") {
+export function ouverture(num: string, titre: string, chapeau = "", orn = CHARTES[MONDE.genre].ornements.chapitre) {
   return `<div class="ouverture"><div class="num">${esc(num)}</div><h2>${esc(titre)}</h2><div class="orn">${orn}</div>${chapeau ? `<p class="chapeau">${md(chapeau)}</p>` : ""}</div>`;
 }
 

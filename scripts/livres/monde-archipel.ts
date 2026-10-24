@@ -88,7 +88,7 @@ export const ARCHIPEL_LIVRES: Monde = {
     introRencontres: "Un combat dans l'Archipel se prépare comme dans la cinquième édition : on additionne les PX des adversaires, on corrige selon leur nombre, et on compare au seuil du groupe. Le bestiaire donne la puissance et les PX de chaque créature. Un combat de vaisseaux se joue à part : voir le livre des joueurs.",
     encartRencontres: `<aside class="encart"><h4>Les dettes comptent aussi</h4><p>Dans l'Archipel, un combat gagné peut coûter plus cher qu'il ne rapporte : une coque à réparer à 50 lumens le point, une prime sur la tête, un Censeur qui se souvient. Laissez toujours une sortie, la fuite, la négociation ou la resquille, et faites payer le prix en lumens plutôt qu'en points de vie.</p></aside>`,
     chapeauRencontres: "Les chiffres de la cinquième édition, et ce que la dette y change.",
-    planchesScenarios: { "bib-sf-mensualite": sujet("region-frange") },
+    planchesScenarios: { "bib-sf-mensualite": "a long crate sealed with grey wax in the dark hold of a battered cargo ship, lit by a single hand lamp, a child's knitted wool cap left on its lid, two crew members watching from the shadows" },
     couverture: sujet("couverture-mj"),
     sousTitre: "Les secrets de l'Archipel · les Phares · les Orgues",
   },

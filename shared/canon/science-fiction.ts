@@ -170,7 +170,7 @@ export const ARCHIPEL: Canon = {
     "brûleur", "brûleurs", "resquille", "Échouée", "Échouées", "ferrailleur", "ferrailleurs", "chef de tas", "Cité Flottante",
     "Princesse-Héritière", "Garde Hégémonique", "Vieille Mère", "Pie-Grièche", "Vent-Debout", "Conseil",
     // La jauge
-    "les Phares allumés",
+    "les Phares allumés", "Berceau", "le Berceau", "Maisons", "grandes Maisons",
   ],
 
   secrets: ["Dormeur", "Dormeurs", "Celui-qui-s'est-levé", "ceux qui ont promis", "jusqu'à ce que les peuples sachent chanter"],
