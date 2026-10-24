@@ -1,4 +1,5 @@
 import { LIEUX_AUBRETERRE, NOMS_AUBRETERRE } from "./canon/fantasy-table";
+import { LIEUX_ARCHIPEL, NOMS_ARCHIPEL } from "./canon/science-fiction-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -72,17 +73,17 @@ export const GENRES: Genre[] = [
   {
     id: "science-fiction",
     label: "Science-fiction",
-    pitch: "Vaisseaux, planètes lointaines, aliens et empires galactiques.",
+    pitch: "L'Archipel : on saute d'étoile en étoile par les Phares, et les Phares s'éteignent un à un.",
     theme: { background: "#0b1220", floor: "#3a4a62", wall: "#1a2333", water: "#1f6f8b", vegetation: "#2e7a5f", road: "#55657d", door: "#e0a33a", grid: "rgba(120,180,255,.18)" },
-    stats: ["Physique", "Réflexes", "Technique", "Science", "Perception", "Influence"],
-    archetypes: ["Pilote", "Ingénieure", "Soldat d'élite", "Diplomate", "Xénobiologiste", "Contrebandier", "Médecin de bord", "Psionique"],
-    origins: ["Terrien", "Colon martien", "Androïde", "Né dans le vide", "Alien Vrask", "Clone"],
-    equipment: ["Pistolet laser", "Combinaison spatiale", "Scanner portable", "Drone de reconnaissance", "Kit de réparation", "Bouclier personnel", "Stimulants", "Carte d'accès volée"],
-    abilities: ["Pilotage acrobatique", "Piratage", "Tir de précision", "Premiers soins avancés", "Télékinésie", "Négociation interstellaire"],
-    nameStart: ["Ax", "Cy", "Dex", "Ka", "Lyr", "Nov", "Or", "Qu", "Rho", "Ve", "Zan"],
-    nameEnd: ["ion", "ara", "ex", "is", "on", "a-7", "ix", "us", "elle"],
-    places: ["la station orbitale Kepler-9", "un vaisseau fantôme à la dérive", "la colonie minière de Thalassa", "la capitale impériale", "une planète-jungle inexplorée"],
-    traits: ["curieux de tout", "ancien militaire discipliné", "blagueur sous pression", "obsédé par le profit"],
+    stats: ["Puissance", "Réflexes", "Endurance", "Technique", "Instinct", "Présence"],
+    archetypes: ["Chantre", "Pilote", "Mécanicienne", "Fusilier", "Contrebandière", "Chasseur de primes", "Médecin de bord", "Diplomate", "Ferrailleur", "Éclaireuse"],
+    origins: ["Humain ancrien", "Humain frangier", "Vaëlle", "Tarrak", "Ikki", "Ourdi", "Ouvré"],
+    equipment: ["Pistolet brûleur", "Fusil brûleur", "Lame vibrante", "Matraque électrique", "Combinaison de vide", "Trousse de mécanicien", "Trousse de médecin de bord", "Grappin magnétique", "Faux transpondeur", "Carte des Routes annotée", "Sauf-conduit hégémonique", "Éclat de pierre de Phare"],
+    abilities: ["Esquive en vrille", "Tir de couverture", "Réparation de fortune", "Pousser par le Chant", "Entendre la pierre", "Négocier une dette", "Pirater un transpondeur", "Saut en resquille", "Premiers soins de bord", "Fouiller une épave"],
+    nameStart: NOMS_ARCHIPEL.prenoms,
+    nameEnd: NOMS_ARCHIPEL.familles,
+    places: LIEUX_ARCHIPEL,
+    traits: ["compte ses dettes à voix haute", "touche la coque avant chaque saut", "n'a jamais vu un Phare de près", "garde un éclat de cristal dans sa botte", "parle aux moteurs", "refuse de payer le Péage par principe"],
   },
   {
     id: "cyberpunk",

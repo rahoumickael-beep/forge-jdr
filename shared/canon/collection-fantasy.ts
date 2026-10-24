@@ -78,7 +78,7 @@ export const COLLECTION_AUBRETERRE: CarteDeCollection[] = [
   { id: "mere-gisle", nom: "Mère Gisle", famille: "allie", rarete: "rare", recharge: "une-fois", image: "carte-mere-gisle",
     texte: "Une vieille de la Mère Tourbe, à Gué-Saulnier. Elle lit l'ancienne langue, apprise de sa grand-mère.",
     usage: "Elle traduit une inscription ou les paroles d'un Noyé dans l'ancienne langue." },
-  { id: "odile-varlet", nom: "Dame Odile Varlet", famille: "allie", rarete: "relique", recharge: "une-fois",
+  { id: "odile-varlet", nom: "Dame Odile Varlet", famille: "allie", rarete: "relique", recharge: "une-fois", image: "carte-odile-varlet",
     texte: "Une marchande morte noyée il y a cinq ans. La peau bleue, l'humour noir, et la parole des Rendus.",
     usage: "Le réseau des Rendus cache le groupe, ou trouve n'importe qui en trois jours." },
 

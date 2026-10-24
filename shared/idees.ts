@@ -2,6 +2,7 @@
 // Séparée de genres.ts parce que les joueurs chargent genres.ts : rien de ce qui suit ne doit arriver chez eux
 // (scripts/verifier-secrets-client.ts le contrôle sur le site fabriqué).
 import { AUBRETERRE } from "./canon/fantasy";
+import { ARCHIPEL } from "./canon/science-fiction";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -32,12 +33,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Une relique bénie", "Une bourse d'argent terni", "Le pardon d'un crime", "Une lame forgée en enfer"],
   },
   "science-fiction": {
-    hooks: ["Un signal de détresse vient d'un vaisseau disparu il y a 200 ans.", "L'IA de la station refuse d'ouvrir les sas.", "Une cargaison ultra-secrète doit traverser le blocus.", "Un artefact alien réagit à la présence d'un héros."],
-    villains: ["une IA devenue consciente", "une amirale rebelle", "une méga-corporation", "une reine alien"],
-    motivations: ["libérer les machines", "contrôler la seule source d'énergie", "sauver son espèce à tout prix"],
-    enemies: ["Drones de sécurité", "Pirates de l'espace", "Robots ouvriers déréglés", "Soldats impériaux", "Créatures xéno", "Mech de combat", "Assassin synthétique", "Reine xéno", "Croiseur ennemi"],
-    twists: ["Le commanditaire est un clone.", "La planète est un être vivant.", "L'équipage est déjà mort depuis longtemps."],
-    rewards: ["Un vaisseau d'occasion", "10 000 crédits", "Des coordonnées secrètes", "Une IA compagnon"],
+    hooks: ARCHIPEL.accroches.map((a) => a.texte),
+    villains: ["un Censeur qui entend la pierre et chasse ceux qui l'entendent", "une ingénieure de Valcourt qui pousse les Orgues au-delà des réglages", "un chasseur de primes payé par la Main Close", "un capitaine de la Ligue prêt à saborder n'importe quel Orgue", "un chef de tas des Brisants qui vend les épaves avec leurs morts"],
+    motivations: ["solder une dette avant l'extinction de son monde", "retrouver un proche pris dans le convoi perdu", "prouver que les Orgues sont sans danger", "racheter un système entier pour une poignée de lumens"],
+    enemies: ["Pillards des Routes", "Ouvrés de garde", "Ferrailleurs armés", "Douaniers de l'Hégémonie", "Chasseurs de primes", "Garde Hégémonique", "Échouées", "Censeurs", "Dissonant", "Orgue détraqué", "Cuirassé hégémonique"],
+    twists: ["Le commanditaire travaille pour la Main Close.", "La cargaison bourdonne quand on approche d'un Phare.", "Le Censeur qui les traque entend la pierre.", "Le Phare a clignoté à la seconde où l'Orgue a frappé.", "Le vaisseau qu'on poursuit est celui qui a disparu à Morne-Saline."],
+    rewards: ["Une mensualité effacée", "800 lumens", "Un faux transpondeur", "Un éclat de pierre de Phare", "Une Route sans Péage, connue de peu", "La reconnaissance du clan Deux-Enclumes"],
   },
   "cyberpunk": {
     hooks: ["Un employé corpo veut déserter avec des données explosives.", "Votre fixer a disparu, il vous doit de l'argent.", "Un virus efface les souvenirs des gens dans la rue.", "Une star de la musique est en réalité une IA."],

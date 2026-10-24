@@ -1,12 +1,13 @@
 // Canon de chaque monde, et l'outil qui vérifie qu'un texte n'invente pas de noms.
 import type { GenreId } from "../types";
 import { AUBRETERRE } from "./fantasy";
+import { ARCHIPEL } from "./science-fiction";
 import type { Canon } from "./types";
 
 export type { Canon } from "./types";
-export { AUBRETERRE };
+export { AUBRETERRE, ARCHIPEL };
 
-export const CANONS: Partial<Record<GenreId, Canon>> = { fantasy: AUBRETERRE };
+export const CANONS: Partial<Record<GenreId, Canon>> = { fantasy: AUBRETERRE, "science-fiction": ARCHIPEL };
 
 export const canonDe = (genre: GenreId): Canon | undefined => CANONS[genre];
 

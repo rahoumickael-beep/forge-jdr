@@ -75,8 +75,10 @@ export const CHARTES: Record<GenreId, Charte> = {
   "science-fiction": {
     genre: "science-fiction",
     nom: "Peinture de couverture des années 70",
-    provisoire: true,
-    peinture: "1970s science fiction paperback painting, {support}, airbrushed gouache, deep blues and warm highlights, grand scale, {cadrage}, clean unmarked image",
+    // Choisie par Mickael le 24/10/2026 parmi trois essais (huile usée, sérigraphie). Les combinaisons se couvraient
+    // de fausses étiquettes : « plain unmarked fabric » les garde nues.
+    peinture: "{lumiere}, 1970s science fiction paperback cover painting, {support}, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, {cadrage}, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image",
+    lumiere: "warm amber light from one side against a deep blue night",
     supports: supportsGeneriques("retro science fiction"),
     palette: { fond: "#060c18", papier: "#0f1d33", papier2: "#13284a", filet: "#2c5c9a", encre: "#d6ecff", encreDouce: "#7fa6cf", or: "#4cc3ff", sang: "#ff5c6c" },
     polices: { titre: "Exo 2", deco: "Exo 2", texte: "Exo 2", petitesCapitales: "Exo 2" },
