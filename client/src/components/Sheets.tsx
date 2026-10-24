@@ -3,6 +3,7 @@ import { useState } from "react";
 import { getGenre, TONS } from "../../../shared/genres";
 import { formatMod, modifier } from "../../../shared/personnages";
 import type { Character, Encounter, Scenario } from "../../../shared/types";
+import { estVide, MONDES_A_SOUVENIRS, raconter, SOUVENIRS_DE_DEPART, SOUVENIRS_MAX, user, type Souvenir } from "../../../shared/souvenirs";
 import { send } from "../store";
 
 export function CharacterSheet({ c, editable, onPlace, onRemove }: { c: Character; editable: boolean; onPlace?: () => void; onRemove?: () => void }) {
@@ -43,6 +44,7 @@ export function CharacterSheet({ c, editable, onPlace, onRemove }: { c: Characte
           </button>
         ))}
       </div>
+      {MONDES_A_SOUVENIRS.has(c.genre) && <Souvenirs c={c} editable={editable} />}
       <p className="small" style={{ margin: "4px 0" }}>{c.description}</p>
       {open && (
         <div className="prose small">
@@ -180,5 +182,41 @@ export function ScenarioSheet({ s, onPlaceEncounter, onReadAloud, actions }: { s
         {actions}
       </div>
     </article>
+  );
+}
+
+const ETIQUETTE = { intact: "intact", flou: "flou", perdu: "perdu" } as const;
+
+/** Les souvenirs du personnage (la Ternelande) : user un souvenir pour la magie ou la Dîme, raconter pour le retrouver. */
+function Souvenirs({ c, editable }: { c: Character; editable: boolean }) {
+  const [nouveau, setNouveau] = useState("");
+  const liste = c.souvenirs ?? [];
+  const enregistrer = (souvenirs: Souvenir[]) => send("character:upsert", { ...c, souvenirs });
+  const changer = (i: number, f: (s: Souvenir) => Souvenir) => enregistrer(liste.map((s, k) => (k === i ? f(s) : s)));
+  return (
+    <div className="stack" style={{ gap: 4, margin: "6px 0" }}>
+      <h5 style={{ margin: 0 }}>Souvenirs{estVide(liste) ? " · Vide" : ""}</h5>
+      {liste.length === 0 && <p className="small muted" style={{ margin: 0 }}>Écris {SOUVENIRS_DE_DEPART} souvenirs précis : un visage, un nom, une chanson, un chemin. Ils paient la magie et la Dîme.</p>}
+      <ul className="small" style={{ margin: 0, paddingLeft: 16 }}>
+        {liste.map((s, i) => (
+          <li key={i} style={{ opacity: s.etat === "perdu" ? 0.5 : 1 }}>
+            <span style={{ textDecoration: s.etat === "perdu" ? "line-through" : undefined, filter: s.etat === "flou" ? "blur(0.6px)" : undefined }}>{s.texte}</span>
+            <em className="muted"> · {ETIQUETTE[s.etat]}</em>
+            {editable && s.etat !== "perdu" && (
+              <>
+                {" "}<button className="btn small" title="Un grand sort ou la Dîme : intact devient flou, flou devient perdu" onClick={() => changer(i, (x) => ({ ...x, etat: user(x.etat) }))}>User</button>
+                {s.etat === "flou" && <> <button className="btn small" title="Pendant un repos long, raconté à un autre personnage" onClick={() => changer(i, (x) => ({ ...x, etat: raconter(x.etat) }))}>Raconter</button></>}
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
+      {editable && liste.length < SOUVENIRS_MAX && (
+        <form className="row" onSubmit={(e) => { e.preventDefault(); if (nouveau.trim()) { void enregistrer([...liste, { texte: nouveau.trim(), etat: "intact" }]); setNouveau(""); } }}>
+          <input className="input small" value={nouveau} onChange={(e) => setNouveau(e.target.value)} placeholder="Le visage de ma mère, la chanson du mariage…" aria-label="Nouveau souvenir" maxLength={160} />
+          <button className="btn small" type="submit">Ajouter</button>
+        </form>
+      )}
+    </div>
   );
 }

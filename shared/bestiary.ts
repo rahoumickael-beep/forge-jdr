@@ -18,7 +18,9 @@ export type Size = "Très petite" | "Petite" | "Moyenne" | "Grande" | "Très gra
 export type FamilleAubreterre = "Morts" | "Bêtes" | "Humanoïdes" | "Monstruosités" | "Créatures du Dessous";
 /** Familles de l'Archipel */
 export type FamilleArchipel = "Faune des mondes" | "Équipages" | "Machines" | "Choses des Routes";
-export type Family = FamilleAubreterre | FamilleArchipel;
+/** Familles de la Ternelande */
+export type FamilleTernelande = "Bêtes d'hiver" | "Gens de la Dîme" | "Choses de la terre" | "Reflets";
+export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande;
 
 export type Region =
   // Aubreterre
@@ -41,6 +43,15 @@ export type Region =
   | "Les Brisants"
   | "Les Mondes Éteints"
   | "le Grand Large"
+  // La Ternelande
+  | "Haute-Cendre"
+  | "Les Neiges Hautes"
+  | "Vaugelée"
+  | "La Forêt des Blancs-Bois"
+  | "Les Comtés Rouges"
+  | "Saint-Mémoire"
+  | "Les Landes Effacées"
+  | "Brise-Glace"
   | "Partout";
 
 export interface Speed {

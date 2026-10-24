@@ -12,6 +12,7 @@ import { join } from "node:path";
 import express from "express";
 import { Server, type Socket } from "socket.io";
 import { rollDice } from "../shared/dice";
+import { nettoyerSouvenirs, nouveauxPerdus } from "../shared/souvenirs";
 import { ACTIONS, jouerAction, nettoyerVaisseaux, nouveauRound, nouveauVaisseau, POSTES, synchroniserPions, type Poste, type Vaisseau } from "../shared/vaisseaux";
 import { uid } from "../shared/random";
 import { T, type Character, type GameMap, type InitiativeEntry, type Player, type RoomState, type Scenario, type Token } from "../shared/types";
@@ -258,7 +259,14 @@ io.on("connection", (socket) => {
       if (i >= 0 && owner !== s.player.id) return ack?.({ ok: false, error: "Ce personnage n'est pas à toi." });
       if (i < 0 && st.characters.filter((x) => characterOwner(st, x) === s.player.id).length >= 2) return ack?.({ ok: false, error: "Deux personnages maximum par joueur." });
     }
-    c = { ...c, name: String(c.name || "Sans nom").slice(0, 60), ownerId: s.player.isGM ? owner : s.player.id };
+    c = { ...c, name: String(c.name || "Sans nom").slice(0, 60), ownerId: s.player.isGM ? owner : s.player.id, souvenirs: nettoyerSouvenirs(c.souvenirs) };
+    // Un souvenir perdu pour de bon donne une Lacune au MJ (réserve de la campagne), et la table l'apprend.
+    const perdus = nouveauxPerdus(i >= 0 ? st.characters[i].souvenirs : undefined, c.souvenirs);
+    if (perdus && i >= 0) {
+      const canon = canonDe(st.genre);
+      reglerReserve(st.campagne, st.campagne.reserve + perdus, canon);
+      log(s.room, { from: "Système", text: `${c.name} perd ${perdus > 1 ? `${perdus} souvenirs` : "un souvenir"} pour de bon.`, kind: "narration" });
+    }
     if (c.portrait && c.portrait.length > 300_000) delete c.portrait;
     if (i >= 0) st.characters[i] = c;
     else st.characters.push(c);

@@ -18,6 +18,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   Équipages: "harsh white deck lights and orange warning lamps, steel blue and rust tones",
   Machines: "cold blue indicator lights and sparks, gunmetal and amber tones",
   "Choses des Routes": "pale shimmering light from nowhere, deep violet and silver tones",
+  // La Ternelande
+  "Bêtes d'hiver": "flat white winter daylight and snow glare, grey-blue tones",
+  "Gens de la Dîme": "torch and lantern light in falling snow, soot black and dried blood red",
+  "Choses de la terre": "dim grey light seeping up from the frozen ground, bone and lichen tones",
+  Reflets: "cold blue light filtered through thick ice, grey and drowned green tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */

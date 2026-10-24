@@ -1,5 +1,6 @@
 // Types partagés entre le serveur et le client.
 import type { Combat } from "./combat";
+import type { Souvenir } from "./souvenirs";
 import type { Vaisseau } from "./vaisseaux";
 
 export type GenreId =
@@ -77,6 +78,8 @@ export interface Character {
   portrait?: string;
   /** Joueur à qui appartient la fiche (posé par le serveur). Sans propriétaire, c'est un PNJ du MJ. */
   ownerId?: string;
+  /** Souvenirs du personnage, dans les mondes qui en ont (shared/souvenirs.ts). */
+  souvenirs?: Souvenir[];
 }
 
 export interface Encounter {

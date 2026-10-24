@@ -441,7 +441,7 @@ export function CombatPanel({ room }: { room: RoomView }) {
 }
 
 /** Ordre d'affichage des familles ; le panneau ne montre que celles du genre de la partie. */
-const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous", "Faune des mondes", "Équipages", "Machines", "Choses des Routes"];
+const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous", "Faune des mondes", "Équipages", "Machines", "Choses des Routes", "Bêtes d'hiver", "Gens de la Dîme", "Choses de la terre", "Reflets"];
 
 /** Bestiaire du genre : le MJ pose une créature (ou un groupe) sur la carte en un clic. */
 export function BestiaryPanel({ room }: { room: RoomView }) {
@@ -523,7 +523,7 @@ export function BestiaryPanel({ room }: { room: RoomView }) {
   );
 }
 
-const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236", "Faune des mondes": "#5e6b2a", Équipages: "#7a3d22", Machines: "#3a4a5c", "Choses des Routes": "#4a3a6b" };
+const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236", "Faune des mondes": "#5e6b2a", Équipages: "#7a3d22", Machines: "#3a4a5c", "Choses des Routes": "#4a3a6b", "Bêtes d'hiver": "#5a6470", "Gens de la Dîme": "#6b2a20", "Choses de la terre": "#4e4a38", Reflets: "#3c5a66" };
 
 export function ScenariosPanel({ room }: { room: RoomView }) {
   const place = (e: Encounter) => {
