@@ -7,6 +7,7 @@ import { TERNELANDE } from "./canon/dark-fantasy";
 import { RESIDENCE } from "./canon/cyberpunk";
 import { COTE_DES_NOYES } from "./canon/horreur";
 import { GRAND_SEC } from "./canon/post-apo";
+import { CHAMP_D_ASILE } from "./canon/western";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -69,12 +70,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Cent godets scellés", "Une carte des puits", "Un laissez-passer de Montclair", "Une cartouche de plus", "La confiance du Vieux Fabre", "Une place sur un char à voile pour le prochain convoi"],
   },
   "western": {
-    hooks: ["Le gang Dalton prend la ville en otage.", "Une mine d'or est hantée.", "Un train transporte un prisonnier très recherché.", "Le shérif a été assassiné en plein jour."],
-    villains: ["un baron du chemin de fer", "un hors-la-loi légendaire", "un shérif corrompu", "un marchand d'élixirs"],
-    motivations: ["posséder toute la vallée", "se venger de la ville", "trouver le filon perdu"],
-    enemies: ["Coyotes", "Voleurs de bétail", "Hommes de main", "Pistoleros", "Gang de hors-la-loi", "Chasseur de primes rival", "Le Baron et sa garde"],
-    twists: ["Le shérif est le chef du gang.", "L'or est maudit.", "Le prisonnier est innocent."],
-    rewards: ["Une prime de 1 000 $", "Un ranch", "Un étalon noir", "Une étoile de marshal"],
+    hooks: CHAMP_D_ASILE.accroches.map((a) => a.texte),
+    villains: ["un avocat du rail qui compte les piquets de ses géomètres comme d'autres les bouteilles", "un président d'Assemblée qui pense d'abord à ses fils", "un jeune guerrier qui veut la guerre avant la date", "un Ranger payé pour trouver des raisons d'entrer dans le Champ", "un chasseur de primes qui tirera quoi qu'il arrive"],
+    motivations: ["sauver le rancho de la famille", "toucher une prime avant la fin du mois", "faire passer un troupeau au Kansas", "gagner un nom qu'on cite dans les saloons"],
+    enemies: ["Coyotes", "Crotales", "Voleurs de chevaux", "Hommes du rail", "Rangers en civil", "Rurales du sud", "Chasseurs de bisons", "Hors-la-loi de la Bande des Lys", "Chasseur de primes rival", "Garde de la compagnie"],
+    twists: ["Le garde de la diligence renseigne la Bande.", "Le vendeur du rancho n'est pas celui qui signe.", "Le chasseur de primes a un mandat contre la mauvaise personne.", "Le vieux chef n'est pas venu pour la guerre, mais pour être entendu."],
+    rewards: ["Cent dollars sur parole", "Une boîte de cinquante cartouches", "La confiance du vieux Roux", "Un cheval du rancho Eylau", "Une piastre d'argent du Champ", "Un point de Nom devant témoins"],
   },
   "pirates": {
     hooks: ["Une carte mène au trésor du capitaine Flint.", "Le navire est encalminé près d'une île qui bouge.", "La Marine offre le pardon contre une mission suicide.", "Une sirène propose un marché."],

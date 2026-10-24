@@ -4,6 +4,7 @@ import { LIEUX_TERNELANDE, NOMS_TERNELANDE } from "./canon/dark-fantasy-table";
 import { LIEUX_RESIDENCE, NOMS_RESIDENCE } from "./canon/cyberpunk-table";
 import { LIEUX_COTE_DES_NOYES, NOMS_COTE_DES_NOYES } from "./canon/horreur-table";
 import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
+import { LIEUX_CHAMP_D_ASILE, NOMS_CHAMP_D_ASILE } from "./canon/western-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -137,17 +138,17 @@ export const GENRES: Genre[] = [
   {
     id: "western",
     label: "Western",
-    pitch: "Duels, chercheurs d'or, hors-la-loi et frontière sauvage.",
+    pitch: "Le Champ-d'Asile : un territoire libre de langue française au bord des Grandes Plaines, en 1878, entre le chemin de fer qui avance et un traité que tout le monde a oublié.",
     theme: { background: "#2a1d12", floor: "#d0a868", wall: "#6d4a2a", water: "#4e8aa3", vegetation: "#8a9a4a", road: "#b58a52", door: "#5a3218", grid: "rgba(60,30,10,.22)" },
-    stats: ["Poigne", "Vitesse", "Résistance", "Astuce", "Instinct", "Bagout"],
-    archetypes: ["Pistolero", "Shérif", "Chasseur de primes", "Joueur de poker", "Prospecteur", "Médecin itinérant", "Éclaireur", "Prédicateur"],
-    origins: ["Texan", "Immigré irlandais", "Ancien confédéré", "Fille de rancher", "Vagabond de l'Est"],
-    equipment: ["Colt Peacemaker", "Winchester", "Lasso", "Cheval fidèle", "Jeu de cartes truqué", "Dynamite", "Étoile de shérif", "Flasque de bourbon"],
-    abilities: ["Dégainer vite", "Pister", "Bluffer", "Monter à cheval", "Soigner", "Tir à la hanche"],
-    nameStart: ["Jed", "Wy", "Cal", "Doc", "Hank", "Ma", "Bil", "Jo", "Sam"],
-    nameEnd: ["att", "ly", "eb", "die", "sey", "ton", "ry"],
-    places: ["la ville de Dusty Creek", "le canyon du Diable", "la mine d'or abandonnée", "le train de Santa Fe", "le saloon du Dernier Verre"],
-    traits: ["taciturne", "beau parleur", "justicier", "joueur invétéré"],
+    stats: ["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"],
+    archetypes: ["Pistolero", "Vaquero", "Shérif", "Joueur", "Éclaireur", "Chasseur de primes", "Médecin de campagne", "Prédicateur", "Hors-la-loi", "Arpenteur"],
+    origins: ["Asiliens de souche", "Créoles de Louisiane", "Vaqueros", "Gens de la Comanchería", "Gens de l'Est", "Revenants de la guerre"],
+    equipment: ["Colt à six coups", "Winchester à levier", "Sabre d'aïeul", "Lasso de crin", "Mire d'arpenteur", "Jeu de cartes", "Boîte de cinquante cartouches", "Piastre d'argent du Champ"],
+    abilities: ["Dégainer vite", "Dresser un cheval", "Pister dans la prairie", "Bluffer à la table", "Soigner sous la tente", "Parler la langue de la traite", "Lire un tracé", "Tenir un gué"],
+    nameStart: NOMS_CHAMP_D_ASILE.prenoms,
+    nameEnd: NOMS_CHAMP_D_ASILE.familles,
+    places: LIEUX_CHAMP_D_ASILE,
+    traits: ["ne tourne jamais le dos à la porte", "parle à son cheval plus qu'aux gens", "garde un sabre au-dessus de la cheminée", "compte les cartouches chaque soir", "regarde toujours la voie du rail à l'horizon", "cite l'Empereur, souvent de travers"],
   },
   {
     id: "pirates",

@@ -9,6 +9,7 @@ import { LIEUX_TERNELANDE, NOMS_TERNELANDE } from "./canon/dark-fantasy-table";
 import { LIEUX_RESIDENCE, NOMS_RESIDENCE } from "./canon/cyberpunk-table";
 import { LIEUX_COTE_DES_NOYES, NOMS_COTE_DES_NOYES } from "./canon/horreur-table";
 import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
+import { LIEUX_CHAMP_D_ASILE, NOMS_CHAMP_D_ASILE } from "./canon/western-table";
 import type { Canon } from "./canon";
 
 /** Ce que la table des joueurs charge de chaque canon. */
@@ -19,6 +20,7 @@ const TABLES: Record<string, { lieux: string[]; noms: Canon["noms"] }> = {
   cyberpunk: { lieux: LIEUX_RESIDENCE, noms: NOMS_RESIDENCE },
   horreur: { lieux: LIEUX_COTE_DES_NOYES, noms: NOMS_COTE_DES_NOYES },
   "post-apo": { lieux: LIEUX_GRAND_SEC, noms: NOMS_GRAND_SEC },
+  western: { lieux: LIEUX_CHAMP_D_ASILE, noms: NOMS_CHAMP_D_ASILE },
 };
 
 for (const C of Object.values(CANONS) as Canon[]) {
@@ -90,7 +92,7 @@ test("bibliothèque : chaque figure d'un scénario renvoie à un scénario qui e
 
 test("livres des joueurs : aucun secret du canon dans les chapitres écrits pour les joueurs", async () => {
   const { existsSync, readdirSync, readFileSync } = await import("node:fs");
-  const dossiers: Record<string, string> = { fantasy: "content/aubreterre/joueurs", "science-fiction": "content/archipel/joueurs", "dark-fantasy": "content/ternelande/joueurs", cyberpunk: "content/residence/joueurs", horreur: "content/cote-des-noyes/joueurs", "post-apo": "content/grand-sec/joueurs" };
+  const dossiers: Record<string, string> = { fantasy: "content/aubreterre/joueurs", "science-fiction": "content/archipel/joueurs", "dark-fantasy": "content/ternelande/joueurs", cyberpunk: "content/residence/joueurs", horreur: "content/cote-des-noyes/joueurs", "post-apo": "content/grand-sec/joueurs", western: "content/champ-d-asile/joueurs" };
   for (const C of Object.values(CANONS) as Canon[]) {
     const d = dossiers[C.genre];
     if (!d || !existsSync(d)) continue;

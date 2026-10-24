@@ -7,7 +7,7 @@ test("campagne : une partie fantasy démarre avec le Sceau à 100 et une réputa
   const c = nouvelleCampagne("fantasy");
   assert.equal(c.jauge, 100);
   assert.deepEqual(Object.keys(c.reputations).sort(), AUBRETERRE.factions.map((f) => f.id).sort());
-  assert.equal(nouvelleCampagne("western").jauge, null);
+  assert.equal(nouvelleCampagne("pirates").jauge, null);
 });
 
 test("campagne : séances ouvertes et closes, « Précédemment » tiré du résumé", () => {

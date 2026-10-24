@@ -43,7 +43,7 @@ export const COLLECTION_NOYES: CarteDeCollection[] = [
     usage: "Au choix : engager la Havraise jusqu'à 5 000 francs (rachat de preuves, avocats, barque, bureaux) ou ouvrir n'importe quelle porte de la compagnie ou de ses courtiers. Brévin le reprochera au retour." },
   // ——— Alliés ———
   { id: "hr-le-vieux-marcel", nom: "Le vieux Marcel", famille: "allie", rarete: "commune", recharge: "par-seance",
-    texte: "Pêcheur de Saint-Clair, soixante ans de grèves, qui se signe quand la mer est trop calme. Il a tiré plus d'un corps du sable.",
+    texte: "Pêcheur de Saint-Clair, toute une vie de grèves, qui se signe quand la mer est trop calme. Il a tiré plus d'un corps du sable.",
     usage: "Avantage à un jet de Survie sur la grève ou en barque, et il sait où la mer sera à telle heure. Il ne montera pas dans une barque qui va à la Fosse." },
   { id: "hr-jules-du-phare", nom: "Jules, le gamin du phare", famille: "allie", rarete: "commune", recharge: "par-seance",
     texte: "Douze ans, des genoux écorchés et la chaussée de galets dans les jambes. Yves Le Bihan l'envoie avec ses messages.",
