@@ -16,7 +16,6 @@ export const NOMS_CHAMP_D_ASILE = {
   ],
   // Les noms de famille des figures (Saint-Gilles, Crane, Lacoste, Burke, Ortiz, Dutour, Duvernet, Hale, Arredondo, Sorbier, Moss, Roux, Bastide)
   // n'y sont pas : un PNJ tiré au hasard ne doit pas devenir l'une d'elles.
-  // Les noms comanches sont des traductions françaises inventées, comme les donneraient les Asiliens ; aucun n'est celui d'un chef réel.
   familles: [
     " Lemercier", " Vauquelin", " Delaunay", " Montauban", " Faucheux", " Beauchamp", " Chevalier", " Mercadier", " Larrieu", " Ducasse",
     " Boisvert", " Pelletier", " Lacombe", " Rochefort", " Tessier", " Marchand", " Cormier", " Dufresne",
@@ -24,8 +23,7 @@ export const NOMS_CHAMP_D_ASILE = {
     " Garza", " Villarreal", " Treviño", " Salinas", " Cantú", " Guerra", " Montemayor", " Olivares", " Zamora", " Benavides",
     " Schulz", " Hoffmann", " Brandt", " Vogel", " Kessler", " Reinhardt", " Lindner", " Roth",
     " O'Connor", " Doyle", " Gallagher", " Keegan", " Brennan", " Fitzgerald", " McCarthy", " Dunne",
-    " Harlan", " Whitaker", " Coleman", " Pruitt", " Garrett", " Tillman", " Stokes", " Mercer",
-    " Cheval-Gris", " Rivière-Haute", " Herbe-Longue", " Ciel-Clair", " Plume-de-Hibou", " Pas-Tranquille", " Eau-Claire", " Feu-du-Soir",
+    " Whitaker", " Coleman", " Pruitt", " Tillman", " Stokes", " Mercer",
   ],
 };
 

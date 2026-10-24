@@ -1,7 +1,7 @@
 // Cartes à collectionner du Champ-d'Asile : objets, alliés et faveurs, que les personnages jouent en partie.
 // Tout vient du canon public (content/champ-d-asile/lore.md, passages [Joueurs]) ; rien de secret, les joueurs les lisent.
 // Les effets respectent les règles du Nom et de la poudre : cartouches comptées, crédit sur parole de 25 dollars par palier de 3,
-// un point de Nom au plus par séance. Une carte ne fait jamais monter le Nom toute seule : elle aide à le gagner devant témoins.
+// jamais plus d'un point de Nom par séance, sauf la relique qui le dit. Une carte ne fait jamais monter le Nom toute seule : elle aide à le gagner devant témoins.
 // Les Numunuu sont un peuple réel : leurs cartes parlent de commerce, de parole donnée et de chevaux, jamais de folklore.
 import type { CarteDeCollection } from "../collection";
 
@@ -33,7 +33,7 @@ export const COLLECTION_ASILE: CarteDeCollection[] = [
     usage: "Avantage aux tests de Survie et d'Investigation pour lire un tracé, un bornage ou un plan de terrain. Le rail la reconnaît : s'en servir devant ses hommes se remarque." },
   { id: "ws-sabre-d-aieul", nom: "Sabre d'aïeul", famille: "objet", rarete: "peu-commune", recharge: "par-seance",
     texte: "Un sabre de cavalerie d'avant Waterloo, le fourreau cabossé, une abeille gravée près de la garde. Il a pendu toute une vie au-dessus d'une cheminée du Brazos.",
-    usage: "Arme de guerre, 1d8 tranchant. Un Asilien qui le voit tire de vous un geste de respect : avantage à votre prochain test de Persuasion auprès des vieilles familles du Champ." },
+    usage: "Maîtrisé comme un sabre de cavalerie, 1d8 tranchant. Un Asilien qui le voit tire de vous un geste de respect : avantage à votre prochain test de Persuasion auprès des vieilles familles du Champ." },
   { id: "ws-etoile-de-ranger", nom: "Étoile de Ranger", famille: "objet", rarete: "rare", recharge: "une-fois",
     texte: "Une étoile dans un cercle, découpée dans une pièce d'argent mexicaine, l'épingle tordue. On ne sait pas à qui elle a appartenu, ni comment elle est arrivée là.",
     usage: "Une fois : un shérif, un adjoint ou un Ranger vous écoute et répond à une question sans exiger de papier. Les rurales et la Bande des Lys reconnaissent aussi l'étoile, et pas de la même façon." },
@@ -49,7 +49,7 @@ export const COLLECTION_ASILE: CarteDeCollection[] = [
     usage: "Mène un troupeau ou une remonte avec le groupe pour une journée, et fournit une monture de rechange à chacun : avantage aux tests de Dressage et de Survie en selle. Il n'a pas à tirer sur des gens du Champ." },
   { id: "ws-diligence-et-bastide", nom: "Bastide et sa diligence", famille: "allie", rarete: "commune", recharge: "par-seance",
     texte: "Il parle à ses chevaux, Ney et Murat, plus qu'à ses passagers. Il n'a jamais perdu un voyageur sur la piste, et il tient à le dire.",
-    usage: "Conduit le groupe, de jour, entre Fort-Rail et Bonne-Espérance (cinq jours de cheval, trois en diligence). Pas de test de route sur la piste habituelle ; avantage pour repérer une embuscade au tournant." },
+    usage: "Conduit le groupe, de jour, entre Fort-Rail et Bonne-Espérance (deux jours et demi de cheval, deux en diligence). Pas de test de route sur la piste habituelle ; avantage pour repérer une embuscade au tournant." },
   { id: "ws-cheminot-irlandais", nom: "Un cheminot irlandais", famille: "allie", rarete: "peu-commune", recharge: "par-seance",
     texte: "Des mains fendues, la moitié de sa paie envoyée à Cork, et une chanson qui ne finit jamais. Il connaît chaque piquet du chantier.",
     usage: "À Fort-Rail ou sur le chantier de la voie : avantage aux tests d'Investigation et de Persuasion pour apprendre où va le rail, qui l'accompagne et quand arrive le prochain train. Il ne trahira pas ses camarades." },

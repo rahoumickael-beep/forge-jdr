@@ -60,11 +60,11 @@ Lance **4d6**, retire le plus faible, additionne les trois autres. Recommence si
 
 > **Conseil de MJ.**
 >
-> Si un joueur tire une série catastrophique (aucune valeur au-dessus de 13), proposez-lui de prendre les valeurs fixes à la place. Personne n'a envie de jouer toute une campagne un personnage qui ne tient pas debout face à un Ranger.
+> Si un joueur tire une série catastrophique (aucune valeur au-dessus de 13), propose-lui de prendre les valeurs fixes à la place. Personne n'a envie de jouer toute une campagne un personnage qui ne tient pas debout face à un Ranger.
 
 ### Les bonus d'origine
 
-Ton origine et ta variante ajoutent des bonus à certaines caractéristiques. Ils sont indiqués dans la description de l'origine (voir le tableau du chapitre 1), et l'écran de création les applique pour toi. Les Asiliens de souche ont de la résistance, les Créoles de Louisiane du charme, les Vaqueros de l'adresse, les Gens de la Comanchería de l'endurance, les Gens de l'Est de la tête, les Revenants de la guerre de la force ; chaque variante ajoute son propre bonus, souvent à deux autres caractéristiques.
+Ton origine et ta variante ajoutent des bonus à certaines caractéristiques. Ils sont indiqués dans la description de l'origine (voir le tableau du chapitre 1), et l'écran de création les applique pour toi. Les Asiliens de souche ont de la résistance, les Créoles de Louisiane du charme, les Vaqueros de l'adresse, les Gens de la Comanchería de la prairie : ils la lisent et y tiennent, les Gens de l'Est de la tête, les Revenants de la guerre de la force ; chaque variante ajoute son propre bonus, souvent à deux autres caractéristiques.
 
 Après les bonus, aucune valeur ne peut dépasser 20 au niveau 1.
 
@@ -75,7 +75,7 @@ Après les bonus, aucune valeur ne peut dépasser 20 au niveau 1.
 La puissance du corps : soulever, pousser, frapper, grimper, tenir sous un poids.
 
 - **Tests de Force** : forcer la porte d'une grange, hisser un baril sur un chariot, tordre une barre de fer, retenir un cheval qui tire sur sa longe.
-- **Attaques et dégâts** : avec une arme au contact, on ajoute la Force au jet d'attaque et aux dégâts (sauf arme à finesse, voir le chapitre 6). Les armes de jet, comme le couteau lancé, utilisent aussi la Force.
+- **Attaques et dégâts** : avec une arme au contact, on ajoute la Force au jet d'attaque et aux dégâts (sauf arme à finesse, voir le chapitre 6). Les armes de jet, comme le couteau lancé, se jouent avec la Force ou l'Adresse, au choix.
 - **Pouvoirs** : la Force n'est la caractéristique principale d'aucune classe du Champ, mais elle décide de qui tient un lasso, un marteau de voie ou un homme qu'on arrête.
 - **Sauvegarde de Force** : résister à ce qui veut te déplacer de force ou te plaquer. Une corde qui se tend, un cheval qui te tire, un garde qui te plaque contre le mur.
 
@@ -95,7 +95,7 @@ Un ravin du Concho fait rarement moins de quatre mètres de large. Ne compte pas
 Les réflexes, la précision, l'équilibre : viser, esquiver, se faufiler, ne pas tomber.
 
 - **Tests d'Adresse** : tenir debout sur le toit d'un wagon, crocheter une serrure, ramper sous une clôture, faire un nœud de lasso vite et bien.
-- **Attaques et dégâts** : avec une arme à distance ou une arme à finesse, on ajoute l'Adresse. Un Colt, un Winchester, un fusil de chasse, un couteau bien lancé : l'Adresse.
+- **Attaques et dégâts** : avec une arme à distance ou une arme à finesse, on ajoute l'Adresse. Un Colt, un Winchester, un fusil de chasse : l'Adresse. Un couteau lancé : Force ou Adresse, au choix.
 - **Classe d'armure** : la plupart des armures ajoutent tout ou partie du modificateur d'Adresse à la CA.
 - **Pouvoirs** : c'est la caractéristique du Pistolero, du Vaquero, du Chasseur de primes et du Hors-la-loi ; l'Éclaireur et le Joueur s'en servent aussi.
 - **Initiative** : en début de combat, chacun fait un test d'Adresse.
@@ -324,7 +324,7 @@ Un personnage qui ne maîtrise pas un outil peut parfois s'en servir quand même
 
 ### Les langues et la lecture
 
-Tous les personnages parlent le **français** du Champ. Les Créoles de Louisiane parlent aussi l'anglais et le créole, les Tejanos l'espagnol et l'anglais, les Gens de la Comanchería le français, la langue des Numunuu et la langue de la traite, mêlée d'espagnol, les Gens de l'Est l'anglais et un peu d'allemand ou de gaélique. L'écrit est répandu à Bonne-Espérance et à Fort-Rail, plus rare dans les ranchos et dans les campements. Le MJ décide selon ton historique.
+Tous les personnages parlent le **français** du Champ (les Gens de l'Est, mal). Les Créoles de Louisiane parlent aussi l'anglais et le créole, les Tejanos l'espagnol et l'anglais, les Gens de la Comanchería le français, la langue des Numunuu et la langue de la traite, mêlée d'espagnol, les Gens de l'Est l'anglais et un peu d'allemand ou de gaélique. L'écrit est répandu à Bonne-Espérance et à Fort-Rail, plus rare dans les ranchos et dans les campements. Le MJ décide selon ton historique.
 
 ## Les jets de sauvegarde
 

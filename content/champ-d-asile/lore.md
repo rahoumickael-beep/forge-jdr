@@ -168,8 +168,8 @@ On compte en jours de cheval. Il faut cinq jours pour traverser le Champ d'est e
 
 *Ce qu'on dit dans le Champ quand on vous parle franchement.*
 
-- **Saint-Gilles** : « J'ai soixante ans de poussière sur les mains. Si je vends, mes fils mangent. »
-- **Le rail** : un éleveur du Brazos reçoit 40 cents la livre de bœuf par le rail, 8 par la piste du Kansas. Les ouvriers du rail font vivre Fort-Rail.
+- **Saint-Gilles** : « Soldats, du haut de ce clocher, trois générations vous contemplent. » Il cite l'Empereur, souvent de travers.
+- **Le rail** : un éleveur du Brazos reçoit 8 cents la livre de bœuf par le rail, 3 par la piste du Kansas. Les ouvriers du rail font vivre Fort-Rail.
 - **Les Rangers** : Burke protège aussi des Asiliens que les hors-la-loi pillent.
 
 ---
@@ -180,7 +180,7 @@ On compte en jours de cheval. Il faut cinq jours pour traverser le Champ d'est e
 
 Dans le Champ, il n'y a pas de magie. Il y a des hommes et des femmes qui tirent plus vite, montent mieux, mentent mieux que les autres, et ça se sait. Chaque personnage a un **Nom**, de 0 à 10 : ce qu'on raconte de lui dans les saloons.
 
-- Le Nom monte quand le personnage fait un **coup d'éclat** devant témoins : un duel gagné, un train arrêté, une évasion, un pouvoir de classe marqué « Coup d'éclat ». Le MJ décide du coup d'éclat. +1 au plus par séance et par personnage ; un journal double ce gain une fois par scénario. Un exploit de groupe donne +1 à chacun.
+- Le Nom monte quand le personnage fait un **coup d'éclat** devant témoins : un duel gagné, un train arrêté, une évasion, un pouvoir de classe marqué « Coup d'éclat ». Le MJ décide du coup d'éclat. +1 au plus par séance et par personnage ; un journal imprimé qui raconte l'exploit peut valoir un second point dans la même séance, une fois par scénario. Un exploit de groupe donne +1 à chacun.
 - Il redescend d'un point après un scénario entier sans témoin ni combat. Passé 7, seul un grand éclat, annoncé par le MJ, fait encore monter le Nom (un par scénario au plus).
 - On peut aussi le faire baisser exprès : payer un faux témoin, se faire passer pour mort, obtenir une grâce (−2 à −5, au prix d'une aventure).
 
@@ -226,7 +226,7 @@ Venus par le Mississippi et la Rivière Rouge, francophones de La Nouvelle-Orlé
 
 ### Vaqueros
 
-Mexicains ou Tejanos, nés à cheval. En jeu : avantage à tout ce qui se fait en selle, et l'on connaît la frontière du sud comme sa poche.
+Mexicains ou Tejanos, élevés dans les ranchos du sud. En jeu : avantage à tout ce qui se fait en selle, et l'on connaît la frontière du sud comme sa poche.
 
 ### Gens de la Comanchería
 
@@ -238,7 +238,7 @@ Américains, Irlandais, Allemands, venus avec le rail ou contre lui. En jeu : on
 
 ### Revenants de la guerre
 
-D'anciens soldats de la guerre de Sécession, du côté de l'Union ou de la Confédération, venus chercher l'oubli. En jeu : endurcis au feu et au sang, mais un souvenir revient au pire moment.
+D'anciens soldats de la Sécession. Ceux de l'Union cherchent la paix ou une terre. Ceux de la Confédération ont perdu une guerre menée pour que d'autres restent enchaînés, et dans le Champ on le leur rappelle. En jeu : tous sont endurcis au feu et au sang, et un souvenir leur revient au pire moment.
 
 ---
 
@@ -325,7 +325,7 @@ Quarante ans, à l'église. **Ce qu'il veut** : que son église tienne. **Ce qu'
 - **Vaquero** : Dressage, Survie ; tu as mené des troupeaux du Brazos au Kansas.
 - **Ancien soldat** : Athlétisme, Intimidation ; tu as fait la guerre de Sécession.
 - **Joueur professionnel** : Escamotage, Tromperie ; tu vis des cartes et de ton sang-froid.
-- **Arpenteur** : Investigation, Nature ; tu as planté des piquets pour le rail, ou contre lui.
+- **Arpenteur** : Investigation, Survie ; tu as planté des piquets pour le rail, ou contre lui.
 - **Pasteur ou prêtre** : Histoire, Persuasion ; tu as porté une parole dans des endroits qui n'en voulaient pas.
 - **Ouvrier du rail** : Athlétisme, Perception ; tu as posé des traverses de Saint-Louis à Fort-Rail.
 - **Chasseur de bisons** : Survie, Perception ; tu as tué plus de bêtes que tu ne veux le dire.

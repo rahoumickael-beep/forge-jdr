@@ -33,7 +33,7 @@ Le maître du jeu tient plusieurs rôles à la fois.
 - **Il décrit.** Les lieux, la poussière, les visages, le bruit d'une diligence sur les planches d'un pont. Il le fait avec des détails concrets plutôt qu'avec des adjectifs.
 - **Il joue tout ce qui n'est pas un personnage joueur.** Le cocher qui parle à ses chevaux, le shérif de la compagnie qui compte tes mains, le traitant qui répond en trois langues dans la même phrase.
 - **Il arbitre.** Il fixe la difficulté des tests, applique les règles, et tranche quand elles ne disent rien. Ses décisions valent pour la séance ; on en discute à la pause si besoin, pas au milieu d'une scène.
-- **Il garde les secrets.** Le Champ en a. Le MJ en sait plus que toi sur ce que cherche le rail, sur ce que disent les anciens à huis clos et sur ce qu'un vieux chef a dans sa sacoche. C'est voulu. Les personnages cherchent, et les joueurs découvrent le pays en même temps qu'eux.
+- **Il garde les secrets.** Le MJ en sait plus que toi sur le pays. C'est voulu : les personnages cherchent, et les joueurs découvrent le Champ en même temps qu'eux.
 - **Il joue le monde.** L'heure, le temps, les rails qui avancent d'un tronçon par saison, les gens qui se souviennent de ce que tu as fait.
 - **Il choisit certains réglages de la campagne**, en particulier la règle de la mort d'un personnage (chapitre 4) et la façon de gagner des niveaux (chapitre 3). Il les annonce avant la première séance.
 
@@ -77,14 +77,14 @@ On joue à distance. Le silence d'un salon vocal n'est pas celui d'une galerie a
 - **Remplis ton verre avant de commencer.** Tu parleras plus que tu ne crois, et le bruit d'un verre posé sur le bois aide à se croire dans un saloon.
 - **Éteins ce qui bipe.** Notifications, téléphone, tout ce qui sonne dans la pièce d'à côté. Le journal de Forge JdR garde les jets : tu n'as pas besoin de regarder tes messages en même temps.
 - **Une lumière faible aide.** Une lampe de bureau, pas un plafonnier. Tu n'es pas obligé de te mettre dans le noir : ça ne sert à rien si tu dois chercher tes dés.
-- **Rire n'est pas tuer l'ambiance.** Quand la tension monte, on rit. Laisse passer, puis reprends.
+- **Rire ne tue pas l'ambiance.** Quand la tension monte, on rit. Laisse passer, puis reprends.
 - **Dis quand tu lances.** « Perception, avec avantage. » La table doit entendre le dé, comme autour d'un tapis.
 
 ### Lignes et voiles
 
-Le Champ parle de choses dures : des gens vendus et fouettés au Texas jusqu'en 1865, des campements brûlés par la cavalerie, un peuple que la faim et les fusils des chasseurs de bisons poussent vers l'ouest, des prisonniers abattus à la frontière « en tentant de s'évader », des fermes incendiées. Le livre ne les arrange pas. Avant la première séance, la table discute de ce qu'elle veut voir à l'écran et de ce qu'elle préfère laisser hors champ. Une ligne, c'est ce qui ne sera pas joué du tout. Un voile, c'est ce qui sera présent mais pas décrit : on sait que ça s'est passé, on ne regarde pas.
+Le Champ parle de choses dures : des gens vendus et fouettés au Texas jusqu'en 1865, des campements brûlés par la cavalerie, un peuple dont on tue les bisons pour l'affamer, des prisonniers abattus à la frontière « en tentant de s'évader », des fermes incendiées. Le livre ne les arrange pas. Avant la première séance, la table discute de ce qu'elle veut voir à l'écran et de ce qu'elle préfère laisser hors champ. Une ligne, c'est ce qui ne sera pas joué du tout. Un voile, c'est ce qui sera présent mais pas décrit : on sait que ça s'est passé, on ne regarde pas.
 
-Les Numunuu ne servent à aucune table de menace commode ni de décor. Quiconque joue un Numunuu joue un peuple avec une langue, des règles et des morts. Si la table n'est pas prête à les traiter comme des gens, elle choisit une autre histoire.
+Quiconque joue un Numunuu, ou en fait parler un, joue quelqu'un de précis : un cavalier qui a vu la cavalerie bleue brûler son campement et abattre ses chevaux. Si la table n'est pas prête à les traiter comme des gens, elle choisit une autre histoire.
 
 Un joueur peut demander de passer une scène. Personne n'a à s'expliquer. La scène tient en une phrase, la table passe à la suivante.
 
@@ -292,7 +292,7 @@ Deux choses distinguent le Champ d'un jeu de rôle ordinaire. Elles servent dans
 
 Ici, personne ne lance de sort. Ni magie ni miracle : un Colt, un cheval, une réputation. Chaque attaque avec une arme à feu coûte **une cartouche**, y compris celles que tes pouvoirs ajoutent. Un Colt tient six coups, un Winchester quinze, un fusil de chasse deux. Recharger prend du temps. Tu pilles 1d6 cartouches sur un ennemi tombé, et tu ne ramasses pas ses douilles.
 
-Une boîte de cinquante cartouches coûte 1 dollar à Fort-Rail, 2 à Bonne-Espérance, 5 à la Croix-de-Pierre. Compter les balles fait la tension d'un duel : ne cherche pas à y échapper.
+Une boîte de cinquante cartouches coûte 1 dollar à Fort-Rail, 2 à Bonne-Espérance, 5 à la Croix-de-Pierre.
 
 ### Le Nom
 
@@ -344,7 +344,7 @@ Chaque origine ajoute 1 à une caractéristique, et sa variante en ajoute d'autr
 | Asiliens de souche : Famille de rancho, Famille de Bonne-Espérance | Endurance +1, plus Adresse +1 et Instinct +1, ou Savoir +1 et Présence +1 | 35 dollars et un objet de famille |
 | Créoles de Louisiane : Fils du fleuve, Famille de négociants | Présence +1, plus Adresse +1 et Instinct +1, ou Savoir +1 et Présence +1 | 30 dollars |
 | Vaqueros : Vaquero de rancho, Tejano de la frontière | Adresse +1, plus Endurance +1 et Instinct +1, ou Savoir +1 et Adresse +1 | 25 dollars, une selle et des éperons |
-| Gens de la Comanchería : Numunuu des Quahadi, Enfant de la Croix-de-Pierre | Endurance +1, plus Adresse +1 et Endurance +1, ou Savoir +1 et Présence +1 | 20 dollars et un cheval de ton choix |
+| Gens de la Comanchería : Numunuu des Quahadi, Enfant de la Croix-de-Pierre | Endurance +1, plus Adresse +1 et Endurance +1 (Endurance +2 en tout), ou Savoir +1 et Présence +1 | 20 dollars et un cheval de ton choix |
 | Gens de l'Est : Ouvrier du rail, Clerc ou géomètre de l'Est | Savoir +1, plus Force +1 et Endurance +1, ou Savoir +1 et Instinct +1 | 40 dollars |
 | Revenants de la guerre : Soldat de l'Union, Soldat de la Confédération | Force +1, plus Endurance +1 et Présence +1, ou Adresse +1 et Instinct +1 | 25 dollars et une médaille ou un insigne de régiment |
 
@@ -369,8 +369,8 @@ Chaque historique donne deux compétences, un outil, quelques objets, des dollar
 >
 > Tu les retrouveras dans tous les chapitres.
 >
-> - **Héloïse Marchal**, pistolero, Asiliens de souche (Famille de Bonne-Espérance), historique Joueur professionnel. Fille d'un sellier de la place, elle a appris les cartes à l'auberge du Grognard pour payer ses dettes, et le Colt le jour où une partie a mal tourné. Elle ne dit pas ce qui s'est passé ce jour-là.
-> - **Tomás Garza**, vaquero, Vaqueros (Tejano de la frontière), historique Vaquero. Né dans un village de l'autre côté du Concho, il parle trois langues et connaît trois gués. Il a mené deux étés des bœufs du rancho Austerlitz jusqu'au Kansas, et il sait qui, parmi les rurales, ne demande rien avant de tirer.
+> - **Héloïse Marchal**, pistolero, Asiliens de souche (Famille de Bonne-Espérance), historique Joueur professionnel. Fille d'un sellier de la place, elle a appris les cartes à l'auberge du Grognard pour payer ses dettes, et elle a pris le Colt le jour où une partie a mal tourné. Elle ne dit pas ce qui s'est passé ce jour-là.
+> - **Tomás Garza**, vaquero, Vaqueros (Tejano de la frontière), historique Vaquero. Né dans un village tejano du Concho dont les titres espagnols n'ont pas tenu devant un tribunal américain, il parle trois langues et connaît trois gués. Il a mené deux étés des bœufs du rancho Austerlitz jusqu'au Kansas, et il sait qui, parmi les rurales, ne demande rien avant de tirer.
 > - **Octave Fontenot**, médecin de campagne, Créoles de Louisiane (Fils du fleuve), historique Pasteur ou prêtre. Né sur un quai de La Nouvelle-Orléans, il a veillé les mourants des bateaux à vapeur pendant la fièvre jaune de 1867. Il voyage à cheval, avec sa mallette, son chapelet et une lettre qu'il a juré de porter à San Antonio.
 > - **Nora Kavanagh**, arpenteur, Gens de l'Est (Clerc ou géomètre de l'Est), historique Ouvrier du rail. Fille d'un contremaître irlandais, elle a tenu la chaîne pour les géomètres de la compagnie avant d'obtenir un pupitre dans un bureau de Saint-Louis, puis elle a quitté le bureau pour voir comment la terre se pose sur le papier.
 >
@@ -409,7 +409,7 @@ Ces dollars sont dans ta poche : des billets froissés, des pièces, une piastre
 
 > **Exemple.**
 >
-> **Héloïse** prend la plus haute somme de 25 dollars (classe), 35 (origine) et 50 (historique) : 50 dollars. Elle part de Bonne-Espérance avec son Colt, ses trente cartouches, ses deux jeux de cartes (un loyal, un marqué), son derringer de manche, et le sabre d'un grand-père, l'objet de famille de son origine.
+> **Héloïse** prend la plus haute somme de 25 dollars (classe), 35 (origine) et 50 (historique) : 50 dollars. Elle part de Bonne-Espérance avec son Colt, ses trente cartouches, ses deux jeux de cartes (un loyal, un marqué), son derringer de manche, et son objet de famille, à choisir avec le MJ (le sabre de cavalerie de son grand-père).
 >
 > **Tomás** compare 30 (classe), 25 (origine) et 25 (historique) : 30 dollars. Il n'a qu'un lasso, qu'une selle, qu'un chapeau, qu'une gourde, et un cheval.
 >
@@ -425,7 +425,7 @@ Six choses que le MJ répète à chaque séance. Il est utile que les joueurs le
 
 ### La poudre se compte
 
-Chaque coup de feu est une cartouche, chaque cartouche un peu d'argent. Un personnage qui a compté ses balles avant de dégainer est un personnage du Champ. Un personnage qui ne l'a pas fait l'apprendra.
+Chaque coup de feu est une cartouche, chaque cartouche un peu d'argent. Qui compte ses balles avant de dégainer est du Champ ; les autres l'apprennent.
 
 ### Le Nom se mérite et se paie
 
@@ -433,15 +433,15 @@ Ce qu'on raconte de toi te précède. Une prime de 100 dollars arrive à Nom 3, 
 
 ### La parole tient ou casse
 
-Un Asilien préfère une piastre d'argent à un billet, et une promesse à une signature. Chez les Numunuu, une parole donnée engage le nom de celui qui la donne. Ce que tu promets à quelqu'un, le Champ s'en souvient.
+Un Asilien préfère une promesse à une signature. Chez les Numunuu, une parole donnée engage le nom de celui qui la donne. Ce que tu promets à quelqu'un, le Champ s'en souvient.
 
 ### Chacun sa voie
 
-Le rail, l'Assemblée, les Rangers, la Bande des Lys, les rurales, les Numunuu : tous ont de bonnes raisons. Quand une puissance te demande ton aide, demande-lui ce qu'elle t'offre et ce qu'elle t'oblige à devenir.
+Le rail, l'Assemblée, les Rangers, la Bande des Lys, les rurales, les Numunuu : chacun a ses raisons et ses morts. Quand une puissance te demande ton aide, demande-lui ce qu'elle t'offre et ce qu'elle te fera porter.
 
 ### Un groupe vaut ceux qui y restent
 
-On voyage à plusieurs parce que la piste est longue, et que quelqu'un doit veiller pendant que les autres dorment. Un personnage seul meurt, ou il devient un homme que personne ne regrette. La table est un groupe.
+On voyage à plusieurs parce que la piste est longue, et que quelqu'un doit veiller pendant que les autres dorment. Un personnage seul meurt, ou il devient un homme que personne ne regrette.
 
 ### Les règles sont des outils
 

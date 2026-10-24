@@ -78,12 +78,12 @@ export const ORIGINES_ASILE: Origin[] = [
     id: "ws-vaqueros",
     genre: "western",
     name: "Vaqueros",
-    blurb: "Mexicain ou Tejano, né à cheval. On connaît la frontière du sud comme sa poche et les chevaux comme sa famille.",
+    blurb: "Mexicain ou Tejano, élevé dans les ranchos du sud. On connaît la frontière du sud comme sa poche et les chevaux comme sa famille.",
     bonus: { 1: 1 },
     speed: 6,
     unique: true,
     traits: [
-      { name: "Né à cheval", text: "Avantage à tous les tests d'Athlétisme, d'Acrobaties et de Dressage faits en selle. Argent de départ : 25 dollars, une selle et une paire d'éperons." },
+      { name: "En selle depuis l'enfance", text: "Avantage à tous les tests d'Athlétisme, d'Acrobaties et de Dressage faits en selle. Argent de départ : 25 dollars, une selle et une paire d'éperons." },
       { name: "La frontière du sud", text: "Tu connais les gués du Concho, les villages, les routes et les mots de passe du sud. Avantage aux tests de Survie et de Perception le long de la frontière." },
       { name: "Mal vu des étoiles", text: "Désavantage à ton premier test de Persuasion avec chaque Ranger et chaque rural : ils ont appris à se méfier de ceux qui connaissent les gués." },
     ],
@@ -231,7 +231,7 @@ export const HISTORIQUES_ASILE: Background[] = [
     blurb: "Tu as fait la guerre de Sécession.",
     skills: ["Athlétisme", "Intimidation"],
     tool: "Matériel de campement",
-    gear: ["Capote usée ou veste de l'armée", "Gamelle et couverture", "Insigne de régiment", "Couteau", "20 dollars"],
+    gear: ["Veste usée de l'armée", "Gamelle et couverture", "Insigne de régiment", "Couteau", "20 dollars"],
     feature: { name: "Un ancien de ton régiment", text: "Un ancien de ton régiment, quelque part, te doit un service. Une fois par semaine de jeu, il te donne un abri, un renseignement ou une introduction." },
   },
   {

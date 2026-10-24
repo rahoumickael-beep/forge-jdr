@@ -6,7 +6,7 @@ Entre deux scènes tendues, les personnages chevauchent des jours entiers, campe
 
 ### La vitesse
 
-Chaque personnage a une **vitesse**, en mètres et en cases de 1,5 m. C'est la distance qu'il parcourt en un round de combat (six secondes) en marchant d'un bon pas, sans courir. Toutes les origines du Champ ont la même : **9 m (6 cases)**. Un cheval de selle va à 18 m.
+Chaque personnage a une **vitesse**, en mètres et en cases de 1,5 m. C'est la distance qu'il parcourt en un round de combat (six secondes) en marchant d'un bon pas, sans courir. Toutes les origines du Champ ont la même : **9 m (6 cases)**. Un cheval de selle va à 18 m au trot, 36 m au galop (chapitre 4).
 
 Sur la carte, on compte en cases. **Une case fait 1,5 m de côté.** Une diagonale compte pour une case.
 
@@ -28,13 +28,13 @@ Sur la carte, on compte en cases. **Une case fait 1,5 m de côté.** Une diagona
 
 ## Voyager dans le Champ
 
-On compte en jours de cheval. À cheval, on fait quarante à soixante kilomètres par jour, selon le terrain. Il faut cinq jours pour traverser le Champ d'est en ouest, de la gare de Fort-Rail à la Croix-de-Pierre.
+On compte en jours de cheval. À cheval, on fait quarante à soixante kilomètres par jour, selon le terrain.
 
 | Mode | Par jour de route |
 |---|---|
 | À pied | 30 km en huit heures de marche |
 | À cheval, au pas | 40 km |
-| À cheval, bon train | 60 km |
+| À cheval, bon train | 60 km en huit heures de selle |
 | À cheval, en forçant l'allure | 80 km |
 | Diligence | Fort-Rail à Bonne-Espérance, deux fois par semaine |
 | Train | Jusqu'à Fort-Rail, et pas plus loin |
@@ -59,9 +59,9 @@ Les nuits en plein air : un feu se voit à trois kilomètres, et réchauffe. Un 
 
 ### Dans la Comanchería
 
-Dans la Comanchería, on va à cheval, ou on n'y va pas. Passer la Croix-de-Pierre sans s'être présenté au poste de traite est une faute grave. On y vend la farine, le sucre, le café, et on y demande la permission. Une visite se prépare, un cadeau se choisit, et on ne tire pas sur le gibier d'un campement.
+Dans la Comanchería, les distances sont celles des chevaux, et un homme à pied n'y va nulle part. Passer la Croix-de-Pierre sans s'être présenté au poste de traite est une faute grave. On y vend la farine, le sucre, le café, et on y demande la permission. Une visite se prépare, un cadeau se choisit, et on ne tire pas sur le gibier d'un campement.
 
-Les Numunuu ne sont pas des figurants d'aventure. Un campement a ses règles d'accueil : qui offre le premier, qui s'assoit où, qui parle à qui, par qui. Un personnage qui les ignore perd la confiance qu'il aurait gagnée. Un Gens de la Comanchería ou un Enfant de la Croix-de-Pierre peut aider le groupe à les respecter, et ce qu'ils disent compte plus que ce qu'un étranger croit savoir.
+Un campement a ses règles d'accueil : qui offre le premier, qui s'assoit où, qui parle à qui, par qui. Un personnage qui les ignore perd la confiance qu'il aurait gagnée. Un Gens de la Comanchería ou un Enfant de la Croix-de-Pierre peut aider le groupe à les respecter, et ce qu'ils disent compte plus que ce qu'un étranger croit savoir.
 
 > **Exemple.**
 >
@@ -85,9 +85,9 @@ Une boîte de 50 cartouches coûte 1 dollar à Fort-Rail, 2 à Bonne-Espérance,
 | Derringer | 1d6 perforants | 4,5/9 m | 2 (léger) | 8 dollars |
 | Winchester | 1d10 perforants | 30/90 m | 15 | 30 dollars |
 | Fusil de chasse (double canon) | 2d6 perforants | 9/27 m | 2 | 12 dollars |
-| Sharps | 2d10 perforants | 45/135 m | chargement | 40 dollars |
+| Sharps | 1d12 perforants | 45/135 m | chargement | 40 dollars |
 
-Ce sont des armes courantes : toutes les classes savent s'en servir.
+Ce sont des armes courantes : toutes les classes savent s'en servir. Le Colt et le Winchester tirent la même cartouche (calibre 44). Le fusil de chasse et le Sharps ont chacun la leur.
 
 Un personnage qui n'a plus de cartouches se bat au couteau, au sabre ou à la crosse. Compter les balles fait la tension d'un duel : ne laisse pas le joueur y échapper.
 
@@ -99,7 +99,7 @@ Dans le Champ, personne ne jette de sort et personne ne guérit d'un geste. Il y
 
 - Il monte d'un point quand tu fais un **coup d'éclat** devant témoins : un duel gagné, un train arrêté, une évasion, une arrestation devant la ville, ou un pouvoir de classe marqué « Coup d'éclat ». Le MJ décide s'il y a coup d'éclat.
 - Des **témoins**, ce sont au moins deux personnes qui ne sont pas de ton groupe et qui parleront. Sans témoin, un exploit ne fait pas de Nom.
-- Au plus **un point par séance** et par personnage. Le journal ne double ce gain qu'une fois par scénario. Un exploit de groupe donne un point à chacun, dans la même limite.
+- Au plus **un point par séance** et par personnage. Un journal imprimé qui raconte ton exploit peut te valoir un second point dans la même séance, une fois par scénario. Un exploit de groupe donne un point à chacun, dans la même limite.
 - Passé 7, aucun point ne vient d'un coup d'éclat ordinaire : il faut un **grand éclat**, que le MJ annonce comme tel (un train arrêté devant la ville, un duel contre un Nom 7). Un grand éclat vaut un point, jamais plus d'un par scénario.
 
 ### Comment il baisse
@@ -110,7 +110,7 @@ Dans le Champ, personne ne jette de sort et personne ne guérit d'un geste. Il y
 
 ### Les classes et le Nom
 
-Le Pistolero, le Vaquero, le Shérif, le Joueur, le Chasseur de primes, le Prédicateur et le Hors-la-loi vivent de leur réputation. Le Médecin de campagne et l'Arpenteur la gagnent sans la chercher. Toutes ces classes ont le passif « Ce qu'on raconte » et des pouvoirs marqués « Coup d'éclat » qui font monter le Nom. Quand ton Nom atteint 3, 5 ou 7, tu choisis un détail de ce qu'on raconte sur toi (un surnom, une arme, une habitude) : il est vrai, et le MJ s'en sert, pour toi comme contre toi.
+Le Pistolero, le Vaquero, le Shérif, le Joueur, le Chasseur de primes, le Prédicateur et le Hors-la-loi vivent de leur réputation. Le Médecin de campagne et l'Arpenteur la gagnent sans la chercher. Toutes ces classes ont le passif « Ce qu'on raconte » et des pouvoirs marqués « Coup d'éclat » qui font monter le Nom. Quand ton Nom atteint 3, 5 ou 7, tu choisis un détail de ce qu'on raconte sur toi (un surnom, une arme, une habitude) : il est vrai, et le MJ s'en sert, pour toi comme contre toi. L'Éclaireur, qui n'a pas le passif, choisit son détail aux mêmes paliers.
 
 ### Ce que donne le Nom
 

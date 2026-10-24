@@ -23,7 +23,7 @@ const POUDRE_COMMUN =
   "Chaque attaque avec une arme à feu coûte une cartouche, y compris celles que tes pouvoirs ajoutent. Revolver : 6 coups. Recharger un coup est une interaction d'objet ; recharger les six prend une action bonus pour le Pistolero (voir Dégainer), une action pour les autres. Winchester : 15 coups. Sur un ennemi tombé, tu pilles 1d6 cartouches. Un pouvoir marqué « Poudre : N cartouches » dit combien il en fait partir en tout.";
 
 const NOM_COMMUN =
-  "Un pouvoir marqué « Coup d'éclat » qui réussit devant témoins (au moins deux personnes qui ne sont pas de ton groupe et qui parleront) fait monter ton Nom d'un point, dans les limites de la règle du Nom : au plus un point par séance et par personnage, et le journal ne double ce gain qu'une fois par scénario. Passé 7, il faut un grand éclat que le MJ annonce comme tel. Quand ton Nom atteint 3, 5 ou 7, tu choisis un détail de ce qu'on raconte sur toi (un surnom, une arme, une habitude) : il est vrai, et le MJ s'en sert, pour toi comme contre toi.";
+  "Un pouvoir marqué « Coup d'éclat » qui réussit devant témoins (au moins deux personnes qui ne sont pas de ton groupe et qui parleront) fait monter ton Nom d'un point, dans les limites de la règle du Nom : au plus un point par séance et par personnage. Un journal imprimé qui raconte ton exploit peut te valoir un second point dans la même séance, une fois par scénario. Passé 7, il faut un grand éclat que le MJ annonce comme tel. Quand ton Nom atteint 3, 5 ou 7, tu choisis un détail de ce qu'on raconte sur toi (un surnom, une arme, une habitude) : il est vrai, et le MJ s'en sert, pour toi comme contre toi.";
 
 const STYLE_TIR = "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main et rien dans l'autre), Tir (+2 aux attaques à distance) ou Deux armes (ajoute ton modificateur aux dégâts de la seconde arme).";
 const STYLE_CORPS = "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance).";
@@ -39,7 +39,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Adresse", "Instinct"],
     saves: ["Adresse", "Présence"],
     armor: "Armures légères",
-    weapons: "Armes courantes, revolvers, carabines, couteaux, sabres",
+    weapons: "Armes courantes, couteaux, sabres",
     skills: { choose: 3, from: ["Acrobaties", "Athlétisme", "Discrétion", "Intimidation", "Intuition", "Perception", "Escamotage", "Tromperie"] },
     startingGear: ["Colt à six coups et trente cartouches", "Ceinturon et étui de hanche", "Couteau de ceinture", "Manteau de cuir et chapeau", "Couverture et gourde", "25 dollars"],
     powers: [
@@ -90,7 +90,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Adresse", "Instinct"],
     saves: ["Adresse", "Endurance"],
     armor: "Armures légères et intermédiaires",
-    weapons: "Armes courantes, lassos, carabines, revolvers, sabres",
+    weapons: "Armes courantes, lassos, sabres",
     skills: { choose: 3, from: ["Dressage", "Survie", "Athlétisme", "Acrobaties", "Perception", "Intuition", "Intimidation", "Discrétion"] },
     startingGear: ["Cheval de selle, selle et bride", "Lasso de crin de douze mètres", "Colt à six coups et vingt cartouches", "Chapeau à larges bords et jambières de cuir", "Gourde et couverture", "30 dollars"],
     powers: [
@@ -98,7 +98,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
       P(1, "Ce qu'on raconte", "passif", "passif", NOM_COMMUN),
       P(1, "Cheval", "passif", "passif", "Un cheval de selle te suit (CA 11, 15 PV, vitesse 18 m) et porte 100 kg. S'il meurt, tu en retrouves un au bout d'une semaine de jeu, ou tu en paies un 60 dollars. Monté, tu combats sans désavantage et tu montes ou descends pour 1,5 m de déplacement."),
       P(1, "Né en selle", "passif", "passif", "Avantage aux tests d'Athlétisme, d'Acrobaties et de Dressage faits à cheval. Tu tires du revolver ou de la carabine à cheval sans désavantage."),
-      P(1, "Lasso", "action", "à volonté", "Attaque à distance (portée 9 m) : si elle touche, une créature de taille Grande ou moins est entravée (vitesse 0) jusqu'à ce qu'elle réussisse un test de Force ou d'Adresse contre 8 + ta maîtrise + ton Adresse. Tu peux aussi la tirer de 3 m ou la renverser."),
+      P(1, "Lasso", "action", "à volonté", "Attaque à distance (portée 9 m) : si elle touche, une créature de taille Grande ou moins est entravée (vitesse 0) jusqu'à ce qu'elle réussisse un test de Force ou d'Adresse contre 8 + ta maîtrise + ton Adresse. Tu peux aussi la tirer de 3 m ou la renverser. Une créature qui s'est libérée de ton lasso y échappe pendant une minute."),
       P(1, "Style de combat", "passif", "passif", STYLE_CORPS),
       P(2, "Charge", "action", "repos court", "Monté ou à pied, tu cours d'au moins 6 m en ligne droite puis tu frappes : +2d6 dégâts, et la cible fait une sauvegarde de Force ou tombe à terre." + DD("Adresse"), { uses: 2 }),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
@@ -142,7 +142,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Présence", "Endurance"],
     saves: ["Endurance", "Présence"],
     armor: "Armures légères et intermédiaires",
-    weapons: "Armes courantes, revolvers, carabines, fusils de chasse, matraques",
+    weapons: "Armes courantes, matraques",
     skills: { choose: 3, from: ["Intimidation", "Persuasion", "Intuition", "Perception", "Histoire", "Investigation", "Athlétisme", "Survie"] },
     startingGear: ["Étoile de shérif en argent", "Colt à six coups et trente cartouches", "Carabine de patrouille", "Menottes et corde", "Carnet de mandats", "Manteau long et chapeau", "40 dollars"],
     powers: [
@@ -194,7 +194,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Présence", "Adresse"],
     saves: ["Adresse", "Présence"],
     armor: "Armures légères",
-    weapons: "Armes courantes, revolvers, derringers, couteaux",
+    weapons: "Armes courantes, couteaux",
     skills: { choose: 4, from: ["Escamotage", "Tromperie", "Intuition", "Persuasion", "Perception", "Représentation", "Discrétion", "Investigation"] },
     startingGear: ["Deux jeux de cartes (un loyal, un marqué)", "Colt à six coups et vingt cartouches", "Derringer de manche", "Gilet brodé et chapeau de feutre", "Jetons d'ivoire", "50 dollars"],
     powers: [
@@ -202,7 +202,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
       P(1, "Ce qu'on raconte", "passif", "passif", NOM_COMMUN),
       P(1, "Tête froide", "passif", "passif", "Avantage aux tests d'Intuition pour démasquer un bluff ou un mensonge, et aux tests de Tromperie quand tu joues aux cartes ou que tu négocies."),
       P(1, "Mains de joueur", "passif", "passif", "Avantage aux tests d'Escamotage. Tu peux cacher une carte, une pièce ou un derringer sur toi sans test."),
-      P(1, "Atout dans la manche", "passif", "passif", "Une fois par tour, +1d6 dégâts à une attaque avec une arme légère ou à distance, si tu as l'avantage ou si un allié est à 1,5 m de la cible. 2d6 au niveau 5, 3d6 au 11, 4d6 au 17."),
+      P(1, "Atout dans la manche", "passif", "passif", "Une fois par tour, +1d6 dégâts à une attaque au revolver, au derringer ou avec une arme légère, si tu as l'avantage ou si un allié est à 1,5 m de la cible. 2d6 au niveau 5, 3d6 au 11, 4d6 au 17."),
       P(1, "Feinte de table", "action bonus", "repos court", "Une créature à 9 m : test de Tromperie contre son Intuition. Si tu réussis, ta prochaine attaque contre elle ce tour a l'avantage.", { uses: 3, range: "9 m" }),
       P(1, "Carte maîtresse", "réaction", "repos long", "Relance un d20 que tu viens de lancer ; le nouveau résultat compte. Une utilisation de plus aux niveaux 9 et 17.", { uses: 1 }),
       P(2, "Une soirée de cartes", "action", "à volonté", "Une soirée à une table, une fois par ville et par semaine de jeu : test d'Escamotage ou de Tromperie DD 15. Réussi, tu gagnes 2d6 dollars ; raté, tu en perds autant. Tu peux tricher (avantage au test) ; mais si un témoin réussit un test de Perception DD 12, on te prend la main dans le sac, tu perds 1 point de Nom, et la salle est contre toi."),
@@ -247,9 +247,9 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Instinct", "Adresse"],
     saves: ["Adresse", "Instinct"],
     armor: "Armures légères",
-    weapons: "Armes courantes, carabines, revolvers, couteaux de chasse",
+    weapons: "Armes courantes, couteaux de chasse",
     skills: { choose: 4, from: ["Survie", "Perception", "Discrétion", "Athlétisme", "Dressage", "Investigation", "Intuition", "Acrobaties"] },
-    startingGear: ["Winchester à levier et trente cartouches", "Colt à six coups et douze cartouches", "Longue-vue de laiton", "Couteau de chasse", "Couverture, tabac et poudrière", "20 dollars"],
+    startingGear: ["Winchester à levier et trente cartouches", "Colt à six coups et douze cartouches", "Longue-vue de laiton", "Veste de cuir", "Couteau de chasse", "Couverture, tabac et poudrière", "20 dollars"],
     powers: [
       P(1, "La poudre compte", "passif", "passif", POUDRE_COMMUN),
       P(1, "Piste", "passif", "passif", "Avantage aux tests de Survie et de Perception pour pister, retrouver un camp, une source ou un gué. Tu lis des traces vieilles de trois jours : nombre, allure, charge, direction."),
@@ -299,7 +299,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Adresse", "Instinct"],
     saves: ["Adresse", "Endurance"],
     armor: "Armures légères et intermédiaires",
-    weapons: "Armes courantes, revolvers, carabines, fusils de chasse, cordes",
+    weapons: "Armes courantes, cordes",
     skills: { choose: 3, from: ["Survie", "Perception", "Intuition", "Investigation", "Intimidation", "Athlétisme", "Discrétion", "Dressage"] },
     startingGear: ["Colt à six coups et trente cartouches", "Winchester à levier", "Corde, menottes et sac de toile", "Carnet d'avis de recherche pliés", "Manteau de cuir et chapeau", "30 dollars"],
     powers: [
@@ -338,7 +338,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
           P(3, "Prise de corps", "passif", "passif", "Tes attaques pour assommer n'ont pas de désavantage, et tu as l'avantage aux tests d'Athlétisme pour agripper la cible de ton mandat."),
           P(7, "Cogner pour ramener", "action bonus", "repos court", "Après une attaque au corps à corps qui touche, la cible fait une sauvegarde d'Endurance, ou perd sa réaction et tombe à terre." + DD("Adresse"), { uses: 2 }),
           P(11, "Le prisonnier parle", "passif", "passif", "Avantage aux tests d'Intimidation et de Persuasion pour interroger une créature capturée par toi. Elle ne peut pas te mentir sans réussir un test de Tromperie contre ton Intuition."),
-          P(15, "Livré vivant", "passif", "passif", "Quand tu livres un homme vivant à un shérif devant témoins, c'est un coup d'éclat que le MJ n'a pas à discuter, et un journal en parle presque toujours."),
+          P(15, "Livré vivant", "passif", "passif", "Quand tu livres un homme vivant à un shérif devant témoins, cela compte comme un coup d'éclat (règle du Nom)."),
         ]),
     ],
   },
@@ -352,13 +352,13 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Instinct", "Savoir"],
     saves: ["Savoir", "Endurance"],
     armor: "Armures légères",
-    weapons: "Armes courantes, scalpels, revolvers, fusils de chasse",
+    weapons: "Armes courantes, scalpels",
     skills: { choose: 3, from: ["Médecine", "Survie", "Investigation", "Perception", "Intuition", "Persuasion", "Histoire", "Dressage"] },
     startingGear: ["Mallette de médecin (scalpels, scie, aiguilles, fil)", "Bouteille d'alcool de grain et linges", "Flacon de laudanum", "Colt à six coups et douze cartouches", "Cheval de selle et sacoches", "Redingote noire et chapeau", "40 dollars"],
     powers: [
       P(1, "La poudre compte", "passif", "passif", POUDRE_COMMUN),
       P(1, "Ce qu'on raconte", "passif", "passif", NOM_COMMUN),
-      P(1, "Mallette", "action", "repos long", "Un allié à portée de main regagne 1d8 + Instinct PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Une utilisation de plus aux niveaux 5, 11 et 17. Une utilisation revient après un repos court.", { uses: 3 }),
+      P(1, "Mallette", "action", "repos court", "Un allié à portée de main regagne 1d8 + Instinct PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Une utilisation de plus aux niveaux 5, 11 et 17.", { uses: 2 }),
       P(1, "Diagnostic", "action", "à volonté", "Un patient ou un cadavre à portée de main : test de Médecine (DD 10 pour une blessure, 15 pour une fièvre ou une maladie, 20 pour un poison rare). Tu lis la cause. Sur un mort, tu sais depuis quand et de quoi."),
       P(1, "Alcool et linge", "passif", "passif", "Avec un feu, de l'alcool ou de l'acide phénique et un linge, dix minutes : tu nettoies une plaie. Les alliés que tu as soignés ont l'avantage aux sauvegardes d'Endurance contre l'infection et la fièvre."),
       P(1, "Mains calmes", "passif", "passif", "Avantage aux tests de Médecine, et aux sauvegardes contre la peur quand tu soignes quelqu'un."),
@@ -404,13 +404,13 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Présence", "Instinct"],
     saves: ["Instinct", "Présence"],
     armor: "Armures légères",
-    weapons: "Armes courantes, revolvers, fusils de chasse, bâtons",
+    weapons: "Armes courantes, bâtons",
     skills: { choose: 3, from: ["Histoire", "Persuasion", "Intuition", "Médecine", "Intimidation", "Représentation", "Perception", "Survie"] },
     startingGear: ["Livre noir usé (Bible ou psautier)", "Colt à six coups et douze cartouches", "Fusil de chasse et dix cartouches", "Habit noir, col et chapeau", "Gourde et couverture", "20 dollars"],
     powers: [
       P(1, "La poudre compte", "passif", "passif", POUDRE_COMMUN),
       P(1, "Ce qu'on raconte", "passif", "passif", NOM_COMMUN),
-      P(1, "Mot qui tient", "action bonus", "repos long", "Un allié à 18 m qui t'entend ajoute un dé de parole (d4) à une attaque, un test ou une sauvegarde dans la minute. Le dé passe à d6 au niveau 5, d8 au 10, d10 au 15. Autant d'utilisations que ta Présence (au moins une) ; elles reviennent après un repos court à partir du niveau 5.", { uses: 3, range: "18 m" }),
+      P(1, "Mot qui tient", "action bonus", "repos long", "Un allié à 18 m qui t'entend ajoute un dé de parole (d4) à une attaque, un test ou une sauvegarde dans la minute. Le dé passe à d6 au niveau 5, d8 au 10, d10 au 15. Trois utilisations par repos long ; elles reviennent aussi après un repos court à partir du niveau 5.", { uses: 3, range: "18 m" }),
       P(1, "Chaire de plein vent", "passif", "passif", "Avantage aux tests de Persuasion et de Représentation devant une foule. Ta voix s'entend à 90 m."),
       P(1, "Foi", "passif", "passif", "Avantage aux sauvegardes contre la peur. Un allié à 3 m de toi dans un combat qui est effrayé peut ignorer cet état jusqu'à la fin de son tour."),
       P(1, "Style de combat", "passif", "passif", STYLE_CORPS),
@@ -457,15 +457,15 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Adresse", "Présence"],
     saves: ["Adresse", "Instinct"],
     armor: "Armures légères",
-    weapons: "Armes courantes, revolvers, carabines, couteaux",
+    weapons: "Armes courantes, couteaux",
     skills: { choose: 4, from: ["Discrétion", "Acrobaties", "Intimidation", "Perception", "Survie", "Tromperie", "Escamotage", "Athlétisme", "Intuition"] },
     startingGear: ["Colt à six coups et trente cartouches", "Foulard noir pour le visage", "Couteau et corde", "Cheval maigre et sa selle", "Un bâton de dynamite (une seule fois : 2d6 dégâts contondants dans 3 m, sauvegarde d'Adresse pour moitié)", "20 dollars"],
     powers: [
       P(1, "La poudre compte", "passif", "passif", POUDRE_COMMUN),
       P(1, "Ce qu'on raconte", "passif", "passif", NOM_COMMUN),
-      P(1, "Coup de la bande", "passif", "passif", "Une fois par tour, +1d6 dégâts à une attaque avec une arme légère ou à distance, si tu as l'avantage ou si un allié est à 1,5 m de la cible. 2d6 au niveau 5, 3d6 au 11, 4d6 au 17."),
+      P(1, "Coup de la bande", "passif", "passif", "Une fois par tour, +1d6 dégâts à une attaque au revolver, au derringer ou avec une arme légère, si tu as l'avantage ou si un allié est à 1,5 m de la cible. 2d6 au niveau 5, 3d6 au 11, 4d6 au 17."),
       P(1, "Embuscade", "passif", "passif", "Au premier round d'un combat, tu as l'avantage à toutes tes attaques contre les créatures qui n'ont pas encore agi. Tu as l'avantage à l'initiative quand tu as préparé le piège."),
-      P(1, "Visage couvert", "passif", "passif", "Avantage aux tests de Tromperie et d'Intimidation tant que ton visage est couvert. Un coup d'éclat fait masqué ne fait pas monter ton Nom tout de suite : le MJ note la rumeur (« un homme au foulard noir »), qui s'attache à toi si un témoin te reconnaît plus tard."),
+      P(1, "Visage couvert", "passif", "passif", "Avantage aux tests de Tromperie et d'Intimidation tant que ton visage est couvert. Un coup d'éclat réussi masqué ne fait pas monter ton Nom tout de suite : le MJ note la rumeur (« un homme au foulard noir »), qui s'attache à toi si un témoin te reconnaît plus tard."),
       P(1, "Pied léger", "passif", "passif", "Tu gagnes 1,5 m de vitesse tant que tu ne portes pas d'armure intermédiaire ou lourde."),
       P(2, "Pas de course", "action bonus", "à volonté", "Foncer ou te désengager."),
       P(2, "Fuir au galop", "action bonus", "repos court", "Ta vitesse double jusqu'à la fin du tour, ou celle de ta monture, et tu ne provoques pas d'attaque d'opportunité.", { uses: 2 }),
@@ -510,7 +510,7 @@ export const CLASSES_ASILE: CharacterClass[] = [
     mainStats: ["Savoir", "Instinct"],
     saves: ["Savoir", "Instinct"],
     armor: "Armures légères",
-    weapons: "Armes courantes, revolvers, carabines, piquets d'arpenteur",
+    weapons: "Armes courantes, piquets d'arpenteur",
     skills: { choose: 4, from: ["Investigation", "Histoire", "Survie", "Perception", "Persuasion", "Intuition", "Dressage", "Escamotage", "Athlétisme"] },
     startingGear: ["Mire de laiton dans son étui", "Chaîne d'arpenteur et carnet de relevés", "Colt à six coups et douze cartouches", "Mule de bât", "Piquets, maillet et ficelle", "Redingote et chapeau", "40 dollars"],
     powers: [

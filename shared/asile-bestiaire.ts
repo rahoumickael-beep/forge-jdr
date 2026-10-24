@@ -6,7 +6,7 @@
 // rangé avec les gens de la loi de son propre peuple, et le MJ peut toujours lui parler.
 // Presque chaque fiche a une sortie autre que tuer : payer, se rendre, négocier, fuir, laisser passer.
 // Dans les textes, les caractéristiques portent les noms du monde : Force, Adresse, Endurance, Savoir, Instinct, Présence.
-// Armes de 1878 : Colt à six coups (1d8, 12/36 m), carabine Winchester à levier (1d10, quinze coups, 30/90 m), fusil Sharps (2d10, un seul tir par action, 45/135 m),
+// Armes de 1878 : Colt à six coups (1d8, 12/36 m), carabine Winchester à levier (1d10, quinze coups, 30/90 m), fusil Sharps (1d12, un seul tir par action, 45/135 m),
 // fusil de chasse double canon (2d6, 9/27 m, deux coups). Recharger un Colt ou un Sharps prend une action.
 // Les secrets du canon (la durée du Traité, la copie cherchée par Crane, Burke payé par le rail…) ne vivent que dans gmNotes.
 import type { Creature } from "./bestiary";
@@ -392,7 +392,7 @@ export const BESTIAIRE_ASILE: Creature[] = [
     ],
     actions: [
       multi("Un tir de Sharps et un coup de revolver.", { Sharps: 1, Revolver: 1 }),
-      hit("Sharps", "distance", 5, "45/135 m", "2d10+3", "perforants", "Un seul coup ; recharger prend une action."),
+      hit("Sharps", "distance", 5, "45/135 m", "1d12+3", "perforants", "Un seul coup ; recharger prend une action."),
       hit("Revolver", "distance", 5, "12/36 m", "1d8+3", "perforants", "Six coups ; recharger prend une action."),
     ],
     lore: "On ne le voit jamais ; on voit la poussière que soulève sa balle à vos pieds. Son Sharps, lourd comme une enclume, repose sur deux bâtons croisés. La Veuve le place sur la hauteur avant chaque attaque, pour que personne ne songe à tirer le premier.",
@@ -491,7 +491,7 @@ export const BESTIAIRE_ASILE: Creature[] = [
       { name: "Pas un tueur d'hommes", text: "Il tue des bêtes, pas des gens : il hésite à tirer sur un homme qui ne le menace pas. S'il y a eu mort d'homme, il est prêt à partir le soir même." },
     ],
     actions: [
-      hit("Sharps", "distance", 4, "45/135 m", "2d10+2", "perforants", "Un seul coup ; recharger prend une action."),
+      hit("Sharps", "distance", 4, "45/135 m", "1d12+2", "perforants", "Un seul coup ; recharger prend une action."),
       hit("Couteau à dépecer", "contact", 4, "1,5 m", "1d6+2", "tranchants"),
     ],
     lore: "Une barbe grise, un manteau de peau qui sent la bête, un Sharps long comme un homme et un chariot de peaux brutes qui suit à deux jours. Les chasseurs américains tuent mille bisons par saison pour le cuir, et laissent la viande au soleil. Ils passent la croix parce que de l'autre côté, il en reste, et les guerriers numunuu ont dit ce qu'ils pensaient de leur chasse.",

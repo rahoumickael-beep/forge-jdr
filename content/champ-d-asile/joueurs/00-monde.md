@@ -8,13 +8,13 @@ Le pays s'appelle **le Champ-d'Asile**. Tu as lu ça sur un panneau, au bout des
 
 ## L'Asile
 
-En 1815, à Waterloo, l'Empereur a perdu sa dernière bataille. Les officiers et les soldats qui l'avaient suivi n'avaient plus de pays. Quelques centaines d'entre eux ont traversé l'océan avec leurs femmes et leurs enfants, ont remonté le Brazos en 1818, et ont planté des tentes sur une terre qui n'appartenait à aucun des leurs. Ils l'ont appelée **l'Asile**. Les Américains leur donnaient un hiver. Les Mexicains aussi.
+En 1815, à Waterloo, l'Empereur a perdu sa dernière bataille. Les officiers et les soldats qui l'avaient suivi n'avaient plus de pays. Quelques centaines d'entre eux ont traversé l'océan avec leurs femmes et leurs enfants, ont remonté le Brazos en 1818, et ont planté des tentes sur une terre qui n'était à aucun d'eux, et que d'autres habitaient depuis longtemps. Ils l'ont appelée **l'Asile**. Les Américains leur donnaient un hiver. Les Espagnols aussi.
 
-Ils ont tenu, grâce à un homme : leur colonel, **Aimé Duvernet**, un vieux de Valmy qui n'avait peur de rien sauf des guerres inutiles. Il a fait ce que personne n'avait fait. Il est allé voir les Comanches, tout seul, avec un interprète et un cadeau, et il a demandé la permission. En 1820, il a signé avec eux **le Traité des Deux Rivières**.
+Ils ont tenu, grâce à un homme : leur colonel, **Aimé Duvernet**, un vieux de Valmy qui n'avait peur de rien sauf des guerres inutiles. Il a fait ce que personne n'avait fait. Il est allé voir les Comanches, sans escorte, avec un interprète et un cadeau, et il a demandé la permission. En 1820, il a signé avec eux **le Traité des Deux Rivières**.
 
-Voilà ce que tout le monde sait de ce Traité. Les Comanches laissaient les Français s'établir entre le Brazos et la Rivière Rouge. Les Français ne passeraient jamais à l'ouest de la Croix-de-Pierre, vendraient des fusils et des chevaux, et ne laisseraient entrer aucun autre colon. Chaque 14 juillet, le Champ fête l'anniversaire de la signature : la place de Bonne-Espérance se couvre de drapeaux, on tire un coup de canon à midi, on danse jusqu'au matin. Le colonel avait choisi cette date. Il disait que la liberté s'était prise un 14 juillet et qu'on pouvait bien en prendre une autre.
+Voici ce que dit le Traité. Les Comanches laissaient les Français s'établir entre le Brazos et la Rivière Rouge. Les Français ne passeraient jamais à l'ouest de la Croix-de-Pierre, vendraient des fusils et des chevaux, et ne laisseraient entrer aucun autre colon. Chaque 14 juillet, le Champ fête l'anniversaire de la signature : la place de Bonne-Espérance se couvre de drapeaux, on tire un coup de canon à midi, on danse jusqu'au matin. Le colonel avait choisi cette date. Il disait que la liberté s'était prise un 14 juillet et qu'on pouvait bien en prendre une autre.
 
-Les Comanches s'appellent eux-mêmes **les Numunuu**, « le Peuple ». Ceux qui vivent à l'ouest du Champ sont des **Quahadi**, et ils étaient là bien avant qu'un Français ait vu le Brazos. Pour l'Assemblée de Bonne-Espérance, le Traité est un titre. Pour les Numunuu, c'est une parole donnée à des gens précis, et ils regardent depuis 1820 si elle est tenue. Garde cette différence en tête avant de franchir la croix.
+Les Comanches s'appellent eux-mêmes **les Numunuu**, « le Peuple ». Ceux qui vivent à l'ouest du Champ sont des **Quahadi**, et ils étaient là bien avant le premier colonel de l'Empereur. Pour l'Assemblée de Bonne-Espérance, le Traité est un titre. Pour les Numunuu, c'est une parole donnée à des gens précis, et ils regardent depuis 1820 si elle est tenue. Garde cette différence en tête avant de franchir la croix.
 
 Aujourd'hui, le Champ est grand comme une douzaine de départements. Il n'est ni texan, ni américain, ni mexicain. Une **Assemblée** de propriétaires le gouverne depuis Bonne-Espérance. On y parle français, on y élève des chevaux et des bœufs, on prie à l'église et on tire aussi vite qu'ailleurs.
 
@@ -22,7 +22,7 @@ Aujourd'hui, le Champ est grand comme une douzaine de départements. Il n'est ni
 
 Le Texas est entré dans l'Union en 1845 et il nous entoure maintenant par l'est et par le sud. Le Champ a refusé d'y entrer. Washington a fait semblant de ne pas s'en soucier tant qu'il n'y avait rien à prendre.
 
-Puis la guerre de Sécession est passée. Elle nous a laissés neutres, ce qui veut dire qu'on a fermé la porte et regardé par la fenêtre. Au Texas, jusqu'en 1865, on a vendu des hommes et des femmes sur les marchés, on les a fouettés, on les a pourchassés avec des chiens. L'esclavage a pris fin, et les troupes fédérales ont gardé le Sud douze ans pour le faire respecter. Elles sont parties l'an dernier. Ceux qui avaient cru à la loi font aujourd'hui leurs comptes, et leurs anciens maîtres aussi. Certains sont venus ici. Parmi les vaqueros noirs de nos ranchos, tous ne sont pas nés libres, et chacun sait ce que vaut un papier de liberté qu'on peut vous reprendre.
+Puis la guerre de Sécession est passée. Le Champ s'est déclaré neutre, ce qui veut dire qu'on a fermé la porte et regardé par la fenêtre. De l'autre côté du Brazos, jusqu'en juin 1865, on a vendu des hommes et des femmes sur les marchés, on les a fouettés, on les a pourchassés avec des chiens, et le Champ a laissé passer les convois sans poser de question. L'esclavage est aboli. Les troupes fédérales ont tenu le Sud douze ans pour le faire respecter, et elles sont parties l'an dernier. Ceux qui avaient cru à la loi font aujourd'hui leurs comptes, et leurs anciens maîtres aussi. Certains sont venus ici. Parmi les vaqueros noirs de nos ranchos, plusieurs ont traversé le Brazos de nuit, et tous savent ce que vaut un papier d'affranchi dans un comté dont le shérif a perdu la guerre mais pas ses voisins.
 
 Les Comanches qui refusaient la réserve ont passé la Croix-de-Pierre en 1875, avec la cavalerie bleue sur leurs talons. Elle avait brûlé des campements entiers, tué des chevaux par milliers pour affamer ceux qui les montaient. À la croix, le colonel Hale a arrêté sa colonne sur ordre de Washington, qui ne voulait pas trancher sur la valeur du Traité. À l'ouest, la **Comanchería** s'étend toujours. Le bison s'y fait rare, parce que les chasseurs américains tirent par milliers pour vendre les peaux et laissent les carcasses pourrir dans l'herbe.
 
@@ -54,9 +54,9 @@ On compte en jours de cheval. Il faut cinq jours pour traverser le Champ d'est e
 
 ### Bonne-Espérance
 
-Une petite ville de briques crues et de bois blanchi, sur une boucle du haut Brazos. Une place carrée, l'église au clocher de bois, l'Assemblée à colonnes, l'auberge du Grognard, le marché aux chevaux. Six mille âmes : les descendants des grognards, des Créoles de Louisiane, des Allemands du Texas qui ont appris le français, des Mexicains, quelques Noirs libres arrivés de Louisiane en 1830.
+Une petite ville de briques crues et de bois blanchi, sur une boucle du haut Brazos, à deux jours et demi de cheval de Fort-Rail. Une place carrée, l'église au clocher de bois, l'Assemblée à colonnes, l'auberge du Grognard, le marché aux chevaux. Six mille âmes : les descendants des grognards, des Créoles de Louisiane, des Allemands du Texas qui ont appris le français, des Mexicains, quelques Noirs libres arrivés de Louisiane en 1830.
 
-On y vote à main levée, on y danse le samedi, on y règle les dettes le lundi. On y craint le rail, les incendies, et les étrangers qui posent trop de questions sur les vieux papiers.
+On y vote à main levée, on y règle les dettes le lundi. On y craint le rail, les incendies, et les étrangers qui posent trop de questions sur les vieux papiers.
 
 Image à retenir : un drapeau tricolore délavé à une fenêtre, du tabac qui sèche au balcon, et sur la place, à midi, l'ombre du clocher qui touche le marché.
 
@@ -64,7 +64,7 @@ Image à retenir : un drapeau tricolore délavé à une fenêtre, du tabac qui s
 
 La ville champignon du chemin de fer, à la frontière est. Une gare de bois neuf, des tentes, des saloons, des entrepôts, un hôtel à trois étages, et la ligne qui s'arrête net devant un panneau « Champ-d'Asile ». On y parle anglais. La loi, c'est le shérif de la compagnie.
 
-Deux hommes disent la ville. Le cheminot irlandais, les mains fendues, qui envoie la moitié de sa paie à Cork. L'agent de la compagnie, col empesé, qui compte les piquets des géomètres comme d'autres comptent les bouteilles. On n'y craint rien, sinon qu'on ne vous craigne pas assez.
+Deux hommes disent la ville. Le cheminot irlandais, les mains fendues, qui envoie la moitié de sa paie à Cork. L'agent de la compagnie, col empesé, qui compte les piquets des géomètres comme d'autres comptent les bouteilles. On n'y craint rien, sinon qu'on ne te craigne pas assez.
 
 Image à retenir : une locomotive à l'arrêt au bout des rails, la vapeur qui monte dans le soir, et à dix mètres devant elle, sur la prairie, une petite borne de pierre gravée d'un aigle, d'une abeille et du millésime « 1820 ».
 
@@ -88,13 +88,13 @@ Image à retenir : la croix au bord du plateau, et de chaque côté, à dix pas,
 
 Les Grandes Plaines à l'ouest de la croix : le Llano Estacado, les canyons rouges de la Rivière Rouge, des campements de tipis au bord des rivières. Quelques milliers de personnes y vivent, des Quahadi qui ont refusé la réserve, avec des milliers de chevaux. Ils chassent un bison qui disparaît, et ils commercent avec les Français.
 
-Ils ne sont pas un décor. Ce sont des gens avec une langue, des morts, des règles de politesse que tu n'as pas apprises et des raisons de se méfier de tout ce qui porte un uniforme ou un papier. Ils craignent que les Français oublient leur parole. Ils craignent que les cavaliers bleus trouvent un prétexte pour franchir la croix. Ils ont de bonnes raisons pour les deux.
+Ils ont une langue, des morts, des règles de politesse que tu n'as pas apprises, et des raisons de se méfier de tout ce qui porte un uniforme ou un papier. Ils craignent que les Français oublient leur parole, et que les cavaliers bleus trouvent un prétexte pour franchir la croix. Ils ont de bonnes raisons pour les deux.
 
 Image à retenir : un canyon rouge au crépuscule, un campement de quarante tipis au bord de l'eau. Aux portes pendent des sacs de farine de la Croix-de-Pierre, cousus bout à bout, « Bonne-Espérance » encore lisible à l'envers.
 
 ### La Frontière du sud
 
-Le long du Rio Concho : des collines de mesquite, des villages mexicains, des gués que tout le monde utilise et que personne ne garde. Des contrebandiers, des voleurs de chevaux, des bandes qui passent d'un pays à l'autre. Les rurales, en sombrero gris et veste courte, appliquent la *ley fuga* : le prisonnier est abattu « en tentant de s'évader ». Personne n'est dupe, et personne ne le dit.
+Le long du Rio Concho : des collines de mesquite, des villages mexicains, des gués que tout le monde utilise et que personne ne garde. Des contrebandiers, des voleurs de chevaux, des bandes qui passent d'un pays à l'autre. Les rurales, en sombrero gris et veste courte, appliquent la *ley fuga* : le prisonnier est abattu « en tentant de s'évader ».
 
 Image à retenir : un gué au clair de lune, un troupeau de chevaux volés qui passe l'eau en silence, et sur la colline, la silhouette d'un rural qui allume une cigarette.
 
@@ -111,11 +111,11 @@ Elles ne tirent pas dans le même sens. Tu en croiseras une avant la fin de la s
 - **Les rurales.** *But :* l'argent des ranchos du sud, et une frontière tranquille. *Méthode :* les primes, la *ley fuga*, les patrouilles. *Ennemis :* les voleurs de chevaux, les bandes. *Signe :* le sombrero gris. *Commandant :* le capitán Ramón Arredondo.
 - **La Bande des Lys.** *But :* l'argent, et le Champ libre. *Méthode :* le vol de bétail, l'attaque des trains, le sabotage des rails. *Ennemis :* le rail, les Rangers. *Signe :* une fleur de lys gravée sur la crosse, celle de la Louisiane créole. *Cheffe :* Marguerite Lacoste, dite la Veuve.
 
-Toutes ont leurs raisons. Un éleveur du Brazos reçoit 40 cents la livre de bœuf du rail, et 8 par la piste du Kansas. Les ouvriers du rail font vivre Fort-Rail. Burke protège aussi des Asiliens que les hors-la-loi pillent. Les Numunuu n'ont rien demandé à personne, sauf qu'on tienne parole. Quand on te dira qu'une de ces puissances est le mal, demande à qui elle fait du bien.
+Chacune a ses raisons et ses morts : les rurales abattent des prisonniers au gué, la compagnie brûle des fermes, les Rangers passent la frontière sans qu'on puisse lire leur mandat. Un éleveur du Brazos reçoit 8 cents la livre de bœuf par le rail, et 3 par la piste du Kansas. Les ouvriers du rail font vivre Fort-Rail. Burke protège aussi des Asiliens que les hors-la-loi pillent. Les Numunuu n'ont rien demandé à personne, sauf qu'on tienne parole. Quand on te dira qu'une de ces puissances est le mal, demande à qui elle fait du bien.
 
 ## Ceux dont on parle
 
-- **Hippolyte de Saint-Gilles**, président de l'Assemblée. Soixante-dix ans, à Bonne-Espérance. Arrivé enfant en 1818, fils d'un lieutenant-colonel de l'Empire, redingote noire, canne à pommeau d'argent. Il veut finir sa vie riche. Il cite l'Empereur, souvent de travers : « J'ai toute une vie de poussière sur les mains. Si je vends, mes fils mangent. »
+- **Hippolyte de Saint-Gilles**, président de l'Assemblée. Soixante-dix ans, à Bonne-Espérance. Arrivé enfant en 1818, fils d'un lieutenant-colonel de l'Empire, redingote noire, canne à pommeau d'argent. Il veut finir sa vie riche. Il cite l'Empereur, souvent de travers : « Soldats, du haut de ce clocher, trois générations vous contemplent. »
 - **Thaddeus Crane**, avocat de la Southwestern & Pacific. Quarante ans, à Fort-Rail. Grand, mince, costume gris, lunettes cerclées d'or. Il veut la terre au meilleur prix. Il parle poliment, en anglais, avec un français appris dans les livres, et il appelle tout le monde « mon ami ».
 - **Celui-qui-Compte-les-Chevaux**, chef des Quahadi. Soixante-quinze ans, dans la Comanchería. Il a vu signer le Traité à dix-sept ans. Il veut que les Français se souviennent de leur parole. Il parle lentement, par l'interprète, et ne répond jamais à la question posée : « Ma parole est entrée dans ce pays avec votre premier colonel. Je viens voir si elle y est encore. »
 - **Marguerite Lacoste**, dite la Veuve. Trente-cinq ans, Créole de Louisiane, partout et nulle part. Cheveux noirs tressés, deux revolvers, un voile de deuil qu'elle ne quitte jamais. Elle veut que le rail paie. Elle ne parle jamais plus fort qu'un murmure, et elle remercie toujours ceux qu'elle dévalise. Elle laisse un reçu signé « Les Lys », payable « à la fin du rail ».
@@ -131,10 +131,10 @@ Dans le Champ, on est d'abord de la maison où l'on a mangé son premier repas. 
 
 - **Les Asiliens de souche.** Les descendants des grognards et des familles de 1818. Ils ont un nom de famille connu, des cousins partout et un sabre au-dessus de la cheminée. On leur doit le respect, ou des comptes.
 - **Les Créoles de Louisiane.** Venus par le Mississippi et la Rivière Rouge, francophones de La Nouvelle-Orléans, blancs, noirs ou métis. Ils parlent le français, l'anglais et le créole. Ils connaissent les gens du fleuve et ce que coûte une promesse quand on est né sans papiers.
-- **Les Vaqueros.** Mexicains ou Tejanos, nés à cheval. Ils connaissent la frontière du sud comme leur poche, et les Rangers et les rurales les connaissent aussi.
+- **Les Vaqueros.** Mexicains ou Tejanos, élevés dans les ranchos du sud. Ils connaissent la frontière du sud comme leur poche, et les Rangers et les rurales les connaissent aussi.
 - **Les Gens de la Comanchería.** Des Numunuu, ou des enfants de deux mondes nés au poste de la Croix-de-Pierre. Ils parlent la langue de la traite et connaissent les usages des deux camps. Ils sont chez eux à l'ouest de la croix, et à Fort-Rail on les regarde avant de les écouter.
 - **Les Gens de l'Est.** Américains, Irlandais, Allemands, venus avec le rail ou contre lui. Ils connaissent les villes, la loi américaine, l'argent. Ils ne parlent le français qu'à moitié.
-- **Les Revenants de la guerre.** D'anciens soldats de la Sécession, de l'Union ou de la Confédération, venus chercher l'oubli. Ils sont endurcis au feu et au sang, et un souvenir leur revient au pire moment.
+- **Les Revenants de la guerre.** D'anciens soldats de la Sécession. Ceux de l'Union cherchent la paix ou une terre. Ceux de la Confédération ont perdu une guerre menée pour que d'autres restent enchaînés, et dans le Champ on le leur rappelle. Tous sont endurcis au feu et au sang, et un souvenir leur revient au pire moment.
 
 > **Ne pas confondre.** Le **Nom**, avec une majuscule, est ta réputation, de 0 à 10 : ce qu'on raconte de toi dans les saloons. Ton nom de famille est autre chose. **Joueur** est une classe, un métier de cartes et de sang-froid, qu'on peut exercer sans avoir jamais touché un jeton. Le joueur, sans majuscule, est la personne qui tient la fiche. Dans ce livre, la majuscule dit de quoi on parle.
 
@@ -150,26 +150,7 @@ Le revolver Colt, le Winchester à levier, le fusil Sharps des chasseurs de biso
 
 ### L'argent
 
-Le dollar américain et la piastre d'argent du Champ valent la même chose. Cent cents font un dollar. Dans le Champ, un Asilien préfère une piastre d'argent à un billet.
-
-| Quoi | Prix |
-|---|---|
-| Un repas | 25 cents |
-| Une nuit dans une grange | 25 cents |
-| Une nuit à l'auberge | 1 dollar |
-| Une place de diligence | 5 dollars |
-| Une selle | 10 dollars |
-| Un derringer | 8 dollars |
-| Un Colt | 17 dollars |
-| Un fusil de chasse | 12 dollars |
-| Un Winchester | 30 dollars |
-| Un fusil Sharps | 40 dollars |
-| Une boîte de 50 cartouches | 1 dollar à Fort-Rail, 2 à Bonne-Espérance, 5 à la Croix-de-Pierre |
-| Un bon cheval | 60 dollars |
-| Le salaire d'un vaquero | 30 dollars par mois |
-| Le salaire d'un shérif | 75 dollars par mois |
-
-Un vaquero met moins d'un mois à s'acheter un Colt et sa selle. Une boîte de cartouches coûte de 1 à 5 dollars : on fait vite le compte de ce que coûte un duel.
+Le dollar américain et la piastre d'argent du Champ valent la même chose. Cent cents font un dollar. Le tableau des prix est au chapitre 6.
 
 On ne paie pas toujours en argent. Une dette d'honneur, un service rendu, une parole donnée valent parfois plus qu'un billet.
 
