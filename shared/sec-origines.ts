@@ -49,7 +49,7 @@ export const ORIGINES_SEC: Origin[] = [
     unique: true,
     traits: [
       { name: "Lire le vent", text: "Avantage aux tests de Survie pour prévoir le temps, et aux tests de pilotage d'un char à voile. Argent de départ : 30 godets." },
-      { name: "Voyageur sec", text: "Quand tu voyages (char, convoi, marche de plus de quatre heures), ta ration passe à 4 godets (6 en été), au lieu de 6 (8 en été). Hors voyage, rien ne change." },
+      { name: "Voyageur sec", text: "Quand tu voyages (char, convoi, marche de plus de quatre heures), ta ration passe à 5 godets (7 en été), au lieu de 6 (8 en été). Ne se cumule pas avec une autre réduction de ration." },
       { name: "Mal de terre ferme", text: "Après trois nuits passées au même endroit, tu as le désavantage à ton initiative et à tes tests de Perception le lendemain, jusqu'à ce que tu aies bougé." },
     ],
     subs: [
@@ -82,7 +82,7 @@ export const ORIGINES_SEC: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Eau de mer", text: "Avec un alambic de camp, un fagot de bois et une journée de feu, tu tires 1d6 + 4 godets d'eau douce de l'eau de mer ou saumâtre. Tu comptes sur un autre feu pour chauffer. Argent de départ : 25 godets et un sac de sel (4 godets)." },
+      { name: "Eau de mer", text: "Il te faut un alambic de camp, un fagot et une journée de feu : tu tires 1d6 + 4 godets d'eau douce de l'eau de mer ou saumâtre. Argent de départ : 25 godets et un sac de sel (4 godets)." },
       { name: "Peau de sel", text: "Avantage à tes sauvegardes d'Endurance contre le coup de chaleur et la brûlure du soleil." },
       { name: "Mal de suie", text: "Désavantage à tes sauvegardes d'Endurance contre la fumée, les poussières et les gaz." },
     ],
@@ -94,7 +94,7 @@ export const ORIGINES_SEC: Origin[] = [
         bonus: { 2: 1, 0: 1 },
         hpPerLevel: 1,
         traits: [
-          { name: "Mains de bouilleur", text: "Maîtrise d'Athlétisme et d'outils d'alambic. Tu as 1 PV de plus par niveau, et ton alambic donne 1d6 godets de plus." },
+          { name: "Mains de bouilleur", text: "Maîtrise d'Athlétisme et d'outils d'alambic. Tu as 1 PV de plus par niveau, et ton alambic donne 2 godets de plus." },
         ],
       },
       {
@@ -136,7 +136,7 @@ export const ORIGINES_SEC: Origin[] = [
         id: "pa-porte-tole",
         name: "Rat de tôles",
         blurb: "Tu t'es faufilé dans les cabanes, sous les toiles, entre les rouleaux de barbelés. Tu connais chaque trou.",
-        bonus: { 1: 2 },
+        bonus: { 1: 1, 4: 1 },
         traits: [
           { name: "Trous et passages", text: "Maîtrise de Discrétion et d'Escamotage. Tu passes par un trou de la taille de ta tête, et tu ne fais jamais de bruit sur de la tôle." },
         ],
@@ -173,7 +173,7 @@ export const ORIGINES_SEC: Origin[] = [
         bonus: { 0: 1, 2: 1 },
         hpPerLevel: 1,
         traits: [
-          { name: "Mains de pierre", text: "Maîtrise d'Athlétisme et de l'outillage de maçon. Tu as 1 PV de plus par niveau, et tu creuses ou bâtis deux fois plus vite." },
+          { name: "Mains de pierre", text: "Maîtrise d'Athlétisme et de l'outillage de maçon. Tu as 1 PV de plus par niveau, et tu creuses ou bâtis deux fois plus vite (ne se cumule pas avec le pouvoir Creuser)." },
         ],
       },
     ],
@@ -188,7 +188,7 @@ export const ORIGINES_SEC: Origin[] = [
     unique: true,
     traits: [
       { name: "Mains de jardin", text: "Avantage aux tests de Médecine et de Survie pour soigner et cultiver. Tu sais lire, écrire et compter, et tu as une maîtrise d'Histoire. Argent de départ : 15 godets et un sachet de graines." },
-      { name: "Soif de la pluie", text: "Ton corps a perdu l'habitude du manque : jusqu'à ce qu'une année de jeu se soit écoulée depuis que tu as quitté Montclair, ta ration est de 2 godets de plus par jour." },
+      { name: "Soif de la pluie", text: "Ton corps a perdu l'habitude du manque : jusqu'à la fin de la première saison de jeu, ta ration est de 1 godet de plus par jour." },
       { name: "Mal vu du bas", text: "Désavantage à ton premier test de Persuasion avec chaque habitant du Bas-Pays qui sait d'où tu viens." },
     ],
     subs: [
