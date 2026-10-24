@@ -41,9 +41,9 @@ Hors combat, on ne compte pas en cases mais en minutes, en heures et en jours. L
 
 | Rythme | Par minute | Par heure | Par jour (8 h) | Effet |
 |---|---|---|---|---|
-| Rapide | 120 m | 6 km | 45 km | −5 à la Perception passive |
-| Normal | 90 m | 4,5 km | 36 km | — |
-| Lent | 60 m | 3 km | 27 km | Le groupe peut avancer discrètement |
+| Rapide | 120 m | 7,2 km | 58 km | −5 à la Perception passive |
+| Normal | 90 m | 5,4 km | 43 km | — |
+| Lent | 60 m | 3,6 km | 29 km | Le groupe peut avancer discrètement |
 
 Le rythme compte pour tout le groupe : on avance à la vitesse du plus lent. Un groupe qui compte un Tarrak n'est pas plus lent pour autant sur de longues distances : la vitesse de combat n'entre pas en compte pour le voyage, seul le rythme choisi.
 
@@ -191,6 +191,7 @@ Un personnage **Ouvré** n'a besoin ni de manger, ni de boire, ni de respirer, n
 ### Les Vaëlles
 
 Un Vaëlle qui reste une journée sans eau pour se mouiller la peau gagne un niveau d'épuisement (*Peau qui sèche*).
+
 ## Les chutes
 
 Une créature qui tombe subit **1d6 dégâts contondants par tranche de 3 m** de chute, jusqu'à un maximum de **20d6**. Elle atterrit **à terre**, sauf si elle évite les dégâts d'une façon ou d'une autre.
@@ -284,6 +285,7 @@ Restrictions :
 Un équipage qui se pose sans protection doit monter la garde à tour de rôle : des pillards, la Garde Hégémonique, un chasseur de primes avec une prime sur l'un de vous. Un personnage qui monte la garde deux heures peut quand même faire un repos long complet, puisque deux heures d'activité calme sont permises.
 
 Un dôme de Gué-d'Ambre loué à la nuit, la cabine fermée de la *Pie-Grièche* (quatre couchettes), un hall de clan de Karrag ou la cave d'un fidèle d'Ancre offrent un abri où l'on dort sans garde. Les dortoirs de dock, ça dépend du prix.
+
 ## Le passage de niveau
 
 Les personnages commencent au niveau 1 et peuvent monter jusqu'au niveau 20. Le MJ choisit, avant la campagne, comment on progresse.
@@ -374,7 +376,7 @@ Voici ce qu'un personnage peut faire de ses journées. Chaque activité demande 
 
 **Se former.** Apprendre une nouvelle langue ou la maîtrise d'un nouvel outil prend **250 jours** et coûte **20 lumens par jour** (le maître, les livres, le matériel). Le temps n'a pas besoin d'être continu. Le MJ peut réduire la durée si le personnage a un très bon maître, ou s'il vit sur place (apprendre le sifflé des Ikki en passant un mois à bord d'un vaisseau ikki).
 
-**Payer sa dette.** L'équipage doit 2 000 lumens par mensualité à la Main Close. Un personnage qui consacre ses journées à une tâche rentable (convoyage, réparations, petits contrats) peut en rapporter une partie. Payer en retard a un prix ; ne pas payer du tout en a un autre, et il vient avec deux Tarrak.
+**Payer sa dette.** L'équipage doit 2 000 lumens par mois de jeu à la Main Close. Un personnage qui consacre ses journées à une tâche rentable (convoyage, réparations, petits contrats) peut en rapporter une partie. Payer en retard a un prix ; ne pas payer du tout en a un autre, et il vient avec deux Tarrak.
 
 **Travailler pour une faction.** La Ligue des Franges recrute des pilotes et des mécaniciens. Le clan Deux-Enclumes loue ses guerriers. Le Collège des Marées cherche toujours des bras pour ses archives. Le MJ transforme ces journées en petites scènes, ou en argent et en réputation.
 

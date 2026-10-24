@@ -137,6 +137,6 @@ Les armes de tous les jours tirent des traits de plasma : on les appelle des **b
 
 ### Votre vaisseau
 
-Vous commencez avec un **cargo léger** de quarante ans, acheté à crédit à la Main Close : 40 000 lumens, à rembourser par mensualités de 2 000. Le vaisseau a sa propre fiche : coque, boucliers, moteurs, armes, soute, et ses défauts (chaque vieux cargo en a trois). On l'améliore avec l'argent des contrats.
+Vous commencez avec un **cargo léger** de quarante ans, acheté à crédit à la Main Close : 40 000 lumens, à rembourser par mensualités de 2 000, une par mois de jeu. Le vaisseau a sa propre fiche : coque, boucliers, moteurs, armes, soute, et ses défauts (chaque vieux cargo en a trois). On l'améliore avec l'argent des contrats.
 
 Au combat, chaque joueur tient un **poste** : **capitaine** (ordres et moral), **pilote** (manœuvre et esquive), **artilleur** (tourelles), **mécanicien** (boucliers, réparations, puissance), et **Chantre** si l'équipage en a un (il sent les coups venir). Le combat spatial se joue sur une carte d'étoiles avec les mêmes dés que le reste.

@@ -8,9 +8,12 @@ Chaque personnage commence avec l'équipement de sa **classe** et celui de son *
 
 | Classe | Argent de départ, à la place de l'équipement |
 |---|---|
-| Chantre, Ferrailleur | 3d4 × 50 lm |
-| Pilote, Mécanicienne, Contrebandière, Médecin de bord | 4d4 × 50 lm |
-| Fusilier, Chasseur de primes, Capitaine, Diplomate | 5d4 × 50 lm |
+| Chantre | 3d4 × 50 lm |
+| Ferrailleur, Pilote, Mécanicienne, Contrebandière | 4d4 × 50 lm |
+| Capitaine, Diplomate | 5d4 × 50 lm |
+| Médecin de bord | 7d4 × 50 lm |
+| Chasseur de primes | 4d4 × 100 lm |
+| Fusilier | 7d4 × 100 lm |
 
 Le vaisseau, lui, est déjà là. L'équipage l'a acheté à crédit.
 
@@ -29,9 +32,9 @@ L'Archipel n'a qu'une monnaie qui passe les Phares : **le lumen** (abréviation 
 | Un plein de carburant | 300 lm |
 | Un faux transpondeur | 1 500 lm |
 
-Les gens du commun ne voient jamais les grosses sommes. Un docker met six semaines à gagner de quoi s'acheter un fusil. Un équipage qui rentre d'un contrat à 5 000 lm tient dans les mains ce qu'un docker gagne en un an.
+Les gens du commun ne voient jamais les grosses sommes. Un fusil à 600 lm, pour un docker à 15 lm la journée, ce sont quarante jours de travail : huit semaines. Un équipage qui rentre d'un contrat à 5 000 lm tient dans les mains ce qu'un docker gagne en un an.
 
-> **La dette.** Les joueurs commencent avec un cargo de quarante ans acheté à crédit à la Main Close : **40 000 lm**, par mensualités de **2 000 lm**, une par séance ou presque. Payer en retard a un prix. Ne pas payer du tout en a un autre. Quand tu lis les prix de ce chapitre, garde ce chiffre en tête : l'équipage doit chaque mois l'équivalent de trois fusils.
+> **La dette.** Les joueurs commencent avec un cargo de quarante ans acheté à crédit à la Main Close : **40 000 lm**, par mensualités de **2 000 lm**, une par mois de jeu. Payer en retard a un prix. Ne pas payer du tout en a un autre. Quand tu lis les prix de ce chapitre, garde ce chiffre en tête : l'équipage doit chaque mois l'équivalent de trois fusils.
 
 > **Les autres monnaies.** Dans les mondes de la Maison Valcourt, les ouvriers sont payés en jetons de la Maison, frappés du tuyau d'orgue. Ils ne valent rien ailleurs, mais dans une ville de Valcourt, ils ouvrent des portes qu'aucun lumen n'ouvre. Chez les Tarrak, la dette d'honneur compte plus que le lumen : un service rendu lie deux clans pour trois générations.
 
@@ -80,9 +83,9 @@ Les armes de tous les jours tirent des traits de plasma : on les appelle des **b
 | Arme | Prix | Dégâts | Poids | Propriétés |
 |---|---|---|---|---|
 | Pistolet brûleur de poche | 120 lm | 1d6 feu | 0,5 kg | Cellule (12/36 m), finesse, légère |
-| Pistolet brûleur | 250 lm | 1d8 feu | 1 kg | Cellule (18/54 m) |
+| Pistolet brûleur | 250 lm | 1d8 feu | 1 kg | Cellule (18/54 m), légère |
 | Vieux pistolet à balles | 80 lm | 1d6 perforant | 1 kg | Munitions (12/36 m), chargement |
-| Fusil à balles de prospecteur | 120 lm | 1d10 perforant | 4 kg | Munitions (36/108 m), chargement, deux mains |
+| Fusil à balles de prospecteur | 120 lm | 1d8 perforant | 4 kg | Munitions (36/108 m), chargement, deux mains |
 
 ### Armes de guerre au contact
 
@@ -100,9 +103,9 @@ Les armes de tous les jours tirent des traits de plasma : on les appelle des **b
 
 | Arme | Prix | Dégâts | Poids | Propriétés |
 |---|---|---|---|---|
-| Brûleur lourd | 2 500 lm | 2d8 feu | 12 kg | Cellule double (45/135 m), deux mains, lourde |
-| Fusil brûleur | 600 lm | 1d10 feu | 4 kg | Cellule (36/108 m), deux mains |
-| Fusil de précision | 1 200 lm | 1d12 feu | 5 kg | Cellule (90/270 m), deux mains, lourde |
+| Brûleur lourd | 2 500 lm | 2d6 feu | 12 kg | Cellule double (45/135 m), deux mains, lourde |
+| Fusil brûleur | 600 lm | 1d10 feu | 4 kg | Cellule (36/108 m), deux mains, rechargement |
+| Fusil de précision | 1 200 lm | 1d10 feu | 5 kg | Cellule (90/270 m), deux mains, lourde |
 | Lanceur de filet | 60 lm | — | 2 kg | Filet (4,5/9 m), chargement, spéciale |
 
 ### Les armes explosives
@@ -142,7 +145,9 @@ Les armes de tous les jours tirent des traits de plasma : on les appelle des **b
 
 **Portée.** Les deux nombres entre parenthèses (18/54 m) sont la portée normale et la portée longue. Entre la portée normale et la longue, désavantage ; impossible plus loin.
 
-**Vibrante.** Une lame vibrante marche avec une **cellule de lame**, qui tient une semaine d'usage normal. Sans cellule, c'est un morceau de métal : 1d4 contondant. Une lame vibrante s'entend : elle bourdonne, et un garde qui a de l'oreille sait que tu es armé.
+**Rechargement.** Pour changer de cellule, un fusil brûleur demande une action bonus, là où les autres brûleurs se contentent d'une interaction simple.
+
+**Vibrante.** Une lame vibrante marche avec une **cellule de lame**, qui tient une semaine d'usage normal. Sans cellule, c'est un morceau de métal : 1d4 contondant. Une lame vibrante **ignore 1 point de CA d'armure** (2 pour une grande lame). Elle s'entend : elle bourdonne, et un garde qui a de l'oreille sait que tu es armé.
 
 ### Les munitions et les cellules
 
@@ -192,6 +197,7 @@ Sans armure, la CA d'un personnage vaut **10 + son modificateur de Réflexes**. 
 | **Armures légères** | | | | | |
 | Manteau renforcé | 60 lm | 11 + Réf | — | — | 2 kg |
 | Combinaison de vol | 120 lm | 11 + Réf | — | — | 3 kg |
+| Combinaison de vide légère | 350 lm | 11 + Réf | — | — | 5 kg |
 | Gilet de cuir renforcé | 200 lm | 12 + Réf | — | — | 4 kg |
 | **Armures intermédiaires** | | | | | |
 | Combinaison de vide rapiécée | 300 lm | 12 + Réf (max 2) | — | — | 9 kg |
@@ -208,7 +214,10 @@ Sans armure, la CA d'un personnage vaut **10 + son modificateur de Réflexes**. 
 
 - **Puissance** : une armure lourde qui indique une valeur de Puissance réduit la vitesse de **3 m** si le porteur n'atteint pas cette valeur. Un Tarrak (trait *Né sous le poids*) n'est pas ralenti.
 - **Discrétion** : désavantage aux tests de Réflexes (Discrétion) tant qu'on porte l'armure.
-- **Combinaison de vide.** Toute combinaison de vide (rapiécée, standard ou blindée) est étanche et porte une **réserve d'air de quatre heures**. Une recharge d'air coûte 20 lm au dock. La rapiécée **fuit** : sur un coup critique reçu, elle perd une heure d'air, et les ferrailleurs recollent leurs joints en un tour de main. Passé la réserve, on suit les règles du souffle (chapitre 3).
+- **Combinaison de vide.** Toute combinaison de vide (légère, rapiécée, standard ou blindée) est étanche. La légère porte **2 h d'air** ; les autres, **quatre heures**. Une recharge d'air coûte 20 lm au dock. Un **coup critique** reçu déchire la combinaison : l'air s'échappe en **1d4 rounds**, et on la recolle en **une action** avec des outils. Sans combinaison, ou une fois l'air épuisé, on retient son souffle (chapitre 3) ; passé ce délai, le vide inflige **2d6 dégâts de froid par round**.
+- **Enfilade d'urgence.** Enfiler une combinaison de vide en catastrophe prend **une action**, mais sans bonus de CA : la CA d'armure ne vaut qu'une fois la combinaison ajustée (délais ci-dessous).
+- **Combinaison rapiécée.** Une combinaison rapiécée ne compte pas comme armure pour *Peau de coque*.
+- **Armures de kit.** Blouse renforcée, manteau renforcé, veste à doubles poches : comptent comme un Manteau renforcé (CA 11 + Réflexes, 60 lm).
 - **Armure blanche de la Garde.** Plaques blanches frappées de la tour couronnée. L'Hégémonie ne les vend pas : on les trouve sur les déserteurs, sur le marché noir, et, pour qui les porte sans en avoir le droit, au fond d'une cellule. Un déserteur qui en porte une est reconnu de loin.
 - **Plastron composite, Armure composite** : des plaques de composite sous un tissu épais. C'est l'armure standard de la flotte et des fusiliers : elle ne chauffe pas au contact d'un trait de brûleur.
 
@@ -238,7 +247,7 @@ Avec de l'aide, le temps pour mettre une armure lourde est divisé par deux. Un 
 | Chaîne (3 m) | 15 lm | 5 kg |
 | Corde de soie dure (15 m) | 60 lm | 1,5 kg |
 | Couverture thermique | 15 lm | 0,5 kg |
-| Dose de stimulant | 60 lm | — |
+| Dose de stimulant | 150 lm | — |
 | Émetteur de casque (portée 5 km) | 30 lm | 0,25 kg |
 | Faux papiers (un jeu) | 300 lm | — |
 | Faux transpondeur | 1 500 lm | 1 kg |
@@ -268,7 +277,7 @@ Avec de l'aide, le temps pour mettre une armure lourde est divisé par deux. Un 
 
 **Carte des Routes.** Une carte imprimée d'une région donne les Routes, les Phares et les postes de Péage. La version **annotée**, couverte de notes au crayon sur les postes qui ferment tôt et les douaniers qui boivent, est plus rare : elle donne l'avantage à un jet de pilotage ou de resquille qui s'appuie sur elle.
 
-**Dose de stimulant.** Une action pour l'injecter à toi ou à un autre : récupère 2d4 + 2 PV. Un personnage à 0 PV reprend conscience. C'est la version à la portée de tous du pouvoir *Trousse* du Médecin de bord, qui en tire beaucoup plus. Les équipages en gardent dans la poche de poitrine.
+**Dose de stimulant.** Une action pour l'injecter à toi ou à un autre : récupère 2d4 + 2 PV. Un personnage à 0 PV reprend conscience. C'est la version à la portée de tous du pouvoir *Trousse* du Médecin de bord, qui en tire beaucoup plus. Les équipages en gardent dans la poche de poitrine. Le Médecin de bord commence avec ses six doses, quel que soit leur prix.
 
 **Faux transpondeur.** Une boîte de cuivre qui sait mentir à un poste de Péage. Une seule fois : un contrôle de douane passe sous un autre nom, sans test. La seconde fois, la boîte grille. Les douaniers le savent, et ils ont des détecteurs.
 
@@ -276,7 +285,7 @@ Avec de l'aide, le temps pour mettre une armure lourde est divisé par deux. Un 
 
 **Menottes.** Pour une créature Petite ou Moyenne. S'en libérer : Réflexes DD 20. Les briser : Puissance DD 20. Les menottes magnétiques se fixent à toute paroi de métal : une créature menottée à la paroi ne peut pas bouger.
 
-**Câble de vol.** A 2 PV et se rompt avec un test de Puissance DD 17.
+**Câble de vol.** Il a 2 PV et se rompt avec un test de Puissance DD 17.
 
 **Lampe de ferrailleur.** Une lampe de casque à verre jaune, cabossée, qui sent la graisse. Les ferrailleurs des Brisants ne sortent pas sans. Ils ne disent pas pourquoi.
 
@@ -291,7 +300,7 @@ Les classes donnent souvent un sac tout fait. On peut aussi l'acheter.
 | Sac d'équipage | 150 lm | Sac à dos, sac de couchage, gourde, lampe frontale, 10 jours de rations, trousse de soins, 15 m de câble de vol |
 | Sac de ferrailleur | 220 lm | Sac à dos, lampe de ferrailleur, pied-de-biche, 15 m de câble, grappin magnétique, 5 jours de rations, recharge d'air |
 | Sac de contrebandier | 380 lm | Sac à dos, faux papiers, bâtons lumineux, serrure de coffre, 5 jours de rations, double fond de sac, menottes |
-| Sac de médecin | 340 lm | Sac à dos, trousse de soins, 4 doses de stimulant, antidote, couverture thermique |
+| Sac de médecin | 700 lm | Sac à dos, trousse de soins, 4 doses de stimulant, antidote, couverture thermique |
 | Sac de diplomate | 400 lm | Sac à dos, tenue de cour, traducteur de poche, lettres de recommandation, plaque d'identité |
 
 ### La charge
@@ -393,9 +402,9 @@ Un glisseur se conduit avec des tests de Réflexes. La capsule de sauvetage est 
 | Faux papiers | 300 lm |
 | Pot-de-vin pour un douanier | 100 à 500 lm |
 
-> **Le Péage.** Un vaisseau paie chaque saut. Un petit cargo comme la *Pie-Grièche* en a pour 200 à 400 lm, ce qui fait que deux sauts mangent une mensualité de la dette. Les contrebandiers évitent les postes : ils sautent « en resquille », dans le sillage d'un gros vaisseau en règle (test de pilotage DD 13, 2d10 points de coque en cas d'échec). Le Péage triple quand les files d'attente s'affolent.
+> **Le Péage.** Un vaisseau paie chaque saut. Un petit cargo comme la *Pie-Grièche* en a pour 200 à 400 lm, ce qui fait que cinq à dix sauts mangent une mensualité de la dette. Les contrebandiers évitent les postes : ils sautent « en resquille », dans le sillage d'un gros vaisseau en règle (test de pilotage DD 13, 2d10 points de coque en cas d'échec). Le Péage triple quand les files d'attente s'affolent.
 
-> **Les primes.** Un Chantre vivant vaut 20 000 lm à qui le livre aux Censeurs. Une lame-diapason intacte en vaut 50 000. Sirrik, l'as de la Ligue, en vaut 15 000. Une prime est un contrat, et un chasseur qui le prend ne vous en veut pas : vous valez douze mille lumens, c'est tout.
+> **Les primes.** Un Chantre vivant vaut 20 000 lm à qui le livre aux Censeurs. Une lame-diapason intacte en vaut 50 000. Sirrik, l'as de la Ligue, en vaut 15 000. Une prime est un contrat, et un chasseur qui le prend ne vous en veut pas : un fugitif ordinaire en vaut douze mille, c'est tout.
 
 ## Les améliorations de vaisseau
 
@@ -428,9 +437,9 @@ Un vieux cargo a trois défauts. On les efface en payant des réparations.
 | Soute étendue | 800 lm | Soute +2 conteneurs |
 | Soute à double fond | 400 lm | Une cachette pour un conteneur ; une fouille de douane doit réussir un test d'Investigation DD 15 pour la trouver |
 | Viseur assisté | 2 500 lm | +1 aux tirs de toutes les armes |
-| Tourelle ventrale | 3 500 lm | Nouvelle arme : bonus +4, dégâts 2d8, portée 12 cases |
-| Canon de proue | 8 000 lm | Nouvelle arme : bonus +5, dégâts 3d8, portée 14 cases |
+| Tourelle ventrale | 1 500 lm | Arme de rechange : bonus +4, dégâts 2d8, portée 12 cases |
+| Canon de proue | 5 000 lm | Nouvelle arme : bonus +5, dégâts 3d8, portée 14 cases |
 
-La *Pie-Grièche* a une tourelle dorsale (+4, 2d8, 12 cases), 60 de coque, 20 de boucliers, une CA de 13 et une vitesse de 8. Chaque pièce qu'on ajoute change la fiche du vaisseau, dans l'onglet *Vaisseau*. L'équipage choisit ce qu'il paie en premier, et ce qu'il laisse tousser.
+La *Pie-Grièche* a une tourelle dorsale (+4, 2d8, 12 cases), 60 de coque, 20 de boucliers, une CA de 13 et une vitesse de 8. Une seule arme tire par action « Tirer » : une arme de plus sert de rechange, ou d'arme mieux adaptée à la cible. Chaque pièce qu'on ajoute change la fiche du vaisseau, dans l'onglet *Vaisseau*. L'équipage choisit ce qu'il paie en premier, et ce qu'il laisse tousser.
 
 > **Ce qu'on ne peut pas acheter.** Le diapason gravé sous une table, la plaque blanche d'un sauf-conduit, l'insigne d'un officier de la flotte, l'étoile rouge de la Ligue : ce sont des signes de reconnaissance, pas des marchandises. On peut en voler un, ou en faire graver un faux. Le jour où quelqu'un pose la bonne question, ça se voit.

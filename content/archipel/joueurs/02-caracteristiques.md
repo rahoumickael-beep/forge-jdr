@@ -46,7 +46,7 @@ Tu as **27 points**. Chaque caractéristique commence à 8. Tu dépenses des poi
 | 10 | 2 | | 14 | 7 |
 | 11 | 3 | | 15 | 9 |
 
-Exemple de répartition : 15, 15, 15, 8, 8, 8 (27 points). Ou 15, 14, 13, 12, 10, 8 (27 points aussi : c'est la série fixe). Ou 14, 14, 14, 12, 10, 10.
+Exemple de répartition : 15, 15, 15, 8, 8, 8 (27 points). Ou 15, 14, 13, 12, 10, 8 (27 points aussi : c'est la série fixe). Ou 14, 14, 14, 12, 10, 8.
 
 ### Lancer les dés
 

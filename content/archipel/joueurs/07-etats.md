@@ -181,7 +181,7 @@ Un Chantre est **troublé** quand son **Écho dépasse son niveau + 2** :
 - il a le **désavantage** à ses **sauvegardes de concentration** ;
 - le MJ peut lui **décrire ce qu'il entend** : un chant qui n'est pas de ce monde, un nombre murmuré, le bruit d'une porte qui ne s'ouvre pas.
 
-Les tests d'Instinct comprennent la Perception, la Perspicacité, la Médecine, la Survie et le test du poste de vigie (chapitre 4) : un Chantre troublé désigne mal ses cibles. Les sauvegardes d'Instinct, elles, restent normales.
+Les tests d'Instinct comprennent la Perception, l'Intuition, la Médecine, la Survie et le test du poste de vigie (chapitre 4) : le MJ peut imposer le désavantage au test de vigie, et un Chantre troublé désigne mal ses cibles. Les sauvegardes d'Instinct, elles, restent normales.
 
 L'état **prend fin** dès que l'Écho redescend à son niveau + 2 ou moins : un repos court retire 1d4 Écho, un repos long le retire tout, et *Silence intérieur* (niveau 15) retire autant d'Écho que ton niveau à chaque repos court. Un Chantre troublé qui se tait et se repose reprend vite pied. Celui qui chante quand même court un risque : si son Écho dépasse le **maximum**, il perd connaissance une minute.
 
@@ -210,7 +210,7 @@ Un personnage au niveau 3 d'épuisement subit donc le désavantage à ses tests,
 - Une **forte gravité** pour qui n'y est pas habitué : un Ikki ou un Frangier sur Karrag.
 - Le **manque d'air**, quand une combinaison de vide fuit trop longtemps.
 - Le **sec**, pour un Vaëlle : une journée sans eau pour se mouiller la peau coûte un niveau (trait *Peau qui sèche*).
-- Certains **pouvoirs** et **créatures** : la *Rage de ferraille* du Ferrailleur, par exemple, donne un désavantage proche quand elle s'arrête.
+- Certains **pouvoirs** et **créatures** : leur description le dit quand ils imposent de l'épuisement. La *Rage de ferraille* du Ferrailleur n'en laisse aucun quand elle s'arrête.
 
 Un effet qui donne de l'épuisement en donne **un niveau** à la fois, sauf mention contraire. Une créature qui a déjà un niveau d'épuisement et qui en reçoit un autre passe au niveau suivant.
 
@@ -317,6 +317,6 @@ Ce qui suit tient sur une page. Imprime-la, pose-la à côté de ta fiche.
 ### L'Archipel
 
 - **Un saut** : le Péage au poste de l'Orgue, la file d'attente, puis de dix minutes à six heures de saut. Petit cargo : 200 à 400 lm. Gros vaisseau : jusqu'à 2 000 lm.
-- **La dette** : 40 000 lm à la Main Close, par mensualités de 2 000.
+- **La dette** : 40 000 lm à la Main Close, par mensualités de 2 000, une par mois de jeu.
 - **Le lumen** : un repas de dock coûte 2 lm, un pistolet brûleur 250 lm, un fusil brûleur 600 lm.
 - **Chanter est un crime.** Prime pour un Chantre vivant : 20 000 lm.

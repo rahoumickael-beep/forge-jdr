@@ -229,10 +229,13 @@ En jeu, c'est un compteur sur la fiche du Chantre.
 | Pousser | 1 | +1 |
 | Pressentir | 1 | +1 |
 | Apaiser | 2 | +1 |
+| Chant doux (Voie de la Berceuse) | 3 | deux pouvoirs à +1 gratuits par repos court |
 | Lame-diapason | 3 | +1 par trait dévié |
 | Retenir | 5 | +2 |
 | Entendre ce qu'on tait | 7 | +1 |
-| Vague | 9 | +2 |
+| Vague | 9 | +3 |
+| Bercer (Voie de la Berceuse) | 10 | +2 |
+| Briser (Voie Dissonante) | 10 | +4 |
 | Ouvrir un Phare | 11 | +3 |
 | Mur de note | 13 | +3 |
 | Le Grand Chant | 17 | +4 |
@@ -331,7 +334,7 @@ Le MJ garde le dernier mot : un effet qui change la nature du monde (ramener un 
 
 ## Le prix du Chant
 
-Dans l'Archipel, le Chant n'est pas gratuit, et le prix n'est pas seulement l'Écho.
+Chaque chant se paie en Écho, et les gros chants se paient aussi ailleurs.
 
 Les petits pouvoirs ne coûtent presque rien : un point d'Écho, un bourdonnement dans les oreilles. **Les grands chants ont un prix que le MJ connaît.** Ce qu'un joueur a besoin de savoir :
 
@@ -341,4 +344,4 @@ Les petits pouvoirs ne coûtent presque rien : un point d'Écho, un bourdonnemen
 - **Les Ouvrés ne chantent pas.** Ils n'entendent pas la pierre (voir leur origine).
 - **Les Censeurs savent le reconnaître.** Une pierre pâle au bout d'une perche, des enfants qui posent la main, un homme en long manteau noir qui regarde les mains : ils savent à quoi ressemble un Chantre qui se cache. Un Chantre le sait aussi.
 
-> **Pour la table.** Le prix du Chant n'est pas une punition. C'est une tension. Un Chantre qui garde son dernier point d'Écho pour le moment où il en a vraiment besoin, un équipage qui hésite avant de demander à son Chantre de chanter, une Voix qui se retient devant un Phare qui tremble : c'est ce que le jeu cherche. Le MJ ne s'en sert pas pour annuler ce que ton personnage fait de mieux.
+> **Pour la table.** Le prix du Chant n'est pas une punition. C'est une tension. Un Chantre qui garde son dernier point d'Écho pour le moment où il en a vraiment besoin, un équipage qui hésite avant de demander à son Chantre de chanter, une Voix qui se retient devant un Phare qui tremble : c'est ce que le jeu cherche. Le MJ ne t'oblige pas à te taire, il te laisse choisir quand ça vaut le coup.

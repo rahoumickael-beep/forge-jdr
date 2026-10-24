@@ -260,15 +260,15 @@ Tu fais un **test de Puissance (Athlétisme)**, opposé à un test de Puissance 
 - la cible tombe **à terre** ;
 - ou elle est **repoussée de 1,5 m**.
 
-> **Exemple.** Un pilleur fonce vers Esmée, qui soigne Garance touchée au bras. Yann prend l'action Attaquer et remplace son attaque par une bousculade. Puissance (Athlétisme) +5 : il fait 16. Le pilleur, qui n'a pas de compétence, fait 8 avec sa Puissance. Yann le met à terre. Garance, qui joue juste après, tire avec l'avantage ? Non : le pilleur est à terre et elle est à 12 m. Les attaques à distance contre une créature à terre ont le désavantage. Elle range son pistolet, sort sa lame courte et va au contact.
+> **Exemple.** Un pilleur fonce vers Isaure, qui soigne Garance touchée au bras. Yann prend l'action Attaquer et remplace son attaque par une bousculade. Puissance (Athlétisme) +5 : il fait 16. Le pilleur, qui n'a pas de compétence, fait 8 avec sa Puissance. Yann le met à terre. Garance, qui joue après lui, est à 12 m. Contre une cible à terre, le tir à distance a le désavantage : elle range son pistolet et va au contact.
 
 ## Le combat en gravité nulle et dans le vide
 
 Une soute dont la gravité a lâché, une sortie dans l'espace pour décoller un grappin, une épave des Brisants dont les coursives flottent : on se bat parfois sans plancher.
 
-- **Se déplacer.** Sans appui, on avance en poussant sur les parois : tant que tu es à portée d'une paroi, d'une rambarde ou d'un câble, tu te déplaces à ta vitesse. Au milieu d'une pièce vide, tu continues dans la direction de ta dernière poussée, et tu ne peux pas t'arrêter ni changer de direction avant d'avoir touché quelque chose. Un grappin magnétique règle le problème.
-- **Les coups.** Frapper ou tirer sans appui fait reculer l'attaquant d'1,5 m dans la direction opposée s'il porte une arme lourde ou à deux mains, sauf s'il est accroché. Un Ikki de flotte ou un Plongeur d'épaves ne subit pas ce recul.
-- **Le vide.** Sans combinaison de vide, on retient son souffle : on suit les règles du souffle (chapitre 3). Une combinaison déchirée perd son air en quelques rounds ; la réserve d'une combinaison tient quatre heures (chapitre 6).
+- **Se déplacer.** Sans appui, on avance en poussant sur les parois : tant que tu es à portée d'une paroi, d'une rambarde ou d'un câble, tu te déplaces à ta vitesse. Au milieu d'une pièce vide, tu continues dans la direction de ta dernière poussée. Pour t'arrêter ou changer de direction sans appui : test de Réflexes (Acrobaties) DD 12. Un grappin magnétique règle le problème. Un Ikki de flotte se déplace sans test. Un Plongeur d'épaves (niveau 6) se déplace à pleine vitesse et a l'avantage aux attaques en gravité nulle.
+- **Les coups.** Frapper ou tirer sans appui fait reculer l'attaquant d'1,5 m dans la direction opposée s'il utilise une arme « lourde », sauf s'il est accroché.
+- **Le vide.** Sans combinaison de vide, on retient son souffle : on suit les règles du souffle (chapitre 3). Un coup critique déchire une combinaison : l'air s'échappe en 1d4 rounds, et on la recolle en une action avec des outils. Une fois le souffle retenu épuisé, le vide inflige 2d6 dégâts de froid par round. La réserve d'air d'une combinaison dépend de son modèle (chapitre 6).
 - **Le feu et le son.** Le feu ne s'étend pas sans air, et le son ne porte pas. Les ordres se donnent par radio de casque, et un Chantre se fait comprendre de la pierre sans respirer.
 
 > **Les Échouées.** Les ferrailleurs des Brisants le disent : les formes pâles qu'on voit dériver entre deux épaves n'ont pas besoin de combinaison. Se battre contre elles à découvert, c'est leur laisser le terrain. On les tient à distance avec une lampe de ferrailleur, et on ne sort jamais seul.
@@ -336,7 +336,7 @@ On applique d'abord tous les autres modificateurs (bonus, réductions comme l'*E
 
 ## Les soins
 
-Un personnage récupère des PV par le repos (chapitre 3), par les pouvoirs de soin (*Trousse* du Médecin de bord, *Rallier* du Capitaine, *Réparation de fortune* de la Mécanicienne) et par les injecteurs de soins.
+Un personnage récupère des PV par le repos (chapitre 3), par les pouvoirs de soin (*Trousse* du Médecin de bord, *Second souffle* du Fusilier, *Ramener*), les doses de stimulant et les injecteurs. *Réparation de fortune* remet en marche un Ouvré, un appareil ou un vaisseau, pas un corps de chair. *Rallier*, lui, donne des PV temporaires, pas des soins.
 
 On ajoute les PV rendus au total actuel, sans jamais dépasser le maximum. Un mort ne peut pas récupérer de PV par ces moyens.
 
@@ -448,29 +448,29 @@ Enfoncer une porte, plutôt que la frapper, se fait par un test de Puissance (At
 
 Pour finir cette première partie, voici un combat à pied, du début à la fin.
 
-**La situation.** Garance (pilote), Yann (fusilier) et Esmée (médecin de bord) reviennent à la *Pie-Grièche*, posée dans la poussière orange des docks de Gué-d'Ambre. La rampe de soute est baissée, alors qu'ils l'ont remontée en partant. Au fond, trois pilleurs de dock soulèvent un conteneur à l'aide d'un chariot : un avec un pistolet brûleur, deux avec des matraques. Ils tournent le dos à la rampe. Le MJ a décidé qu'ils étaient surpris.
+**La situation.** Esmée (pilote), Yann (fusilier) et Isaure (médecin de bord) reviennent à la *Pie-Grièche*, posée dans la poussière orange des docks de Gué-d'Ambre. La rampe de soute est baissée, alors qu'ils l'ont remontée en partant. Au fond, trois pilleurs de dock soulèvent un conteneur à l'aide d'un chariot : un avec un pistolet brûleur, deux avec des matraques. Ils tournent le dos à la rampe. Le MJ a décidé qu'ils étaient surpris.
 
-**Initiative.** Garance 18, pilleurs 12, Yann 10, Esmée 5.
+**Initiative.** Esmée 18, pilleurs 12, Yann 10, Isaure 5.
 
 **Round 1.**
-- *Garance* s'accroupit derrière un conteneur à 12 m et tire au pistolet brûleur sur le pilleur le plus proche (dans la portée normale de 18 m). Elle a l'avantage : il ne la voit pas. Elle fait 8 et 15, garde 15, ajoute +5 : 20 contre CA 11. Touché : 1d8 + 3 = 7 dégâts de feu. Le pilleur chancelle (il en avait 11).
+- *Esmée* s'accroupit derrière un conteneur à 12 m et tire au pistolet brûleur sur le pilleur le plus proche (dans la portée normale de 18 m). Elle a l'avantage : il ne la voit pas. Elle fait 8 et 15, garde 15, ajoute +5 : 20 contre CA 11. Touché : 1d8 + 3 = 7 dégâts de feu. Le pilleur chancelle (il en avait 11).
 - *Les pilleurs* sont surpris : ils ne font rien ce round.
 - *Yann* avance de 6 m jusqu'à un demi-abri et tire au fusil brûleur sur le même pilleur : 1d10 + 2 = 8. Le pilleur tombe.
-- *Esmée* se glisse derrière le conteneur, à côté de Garance, et passe en demi-abri (+2 CA).
+- *Isaure* se glisse derrière le conteneur, à côté d'Esmée, et passe en demi-abri (+2 CA).
 
 **Round 2.**
-- *Garance* vise le pilleur au brûleur, à 12 m. Elle fait 9 avec ses modificateurs : raté.
-- *Les pilleurs* se retournent. Celui au brûleur tire sur Garance : 11 contre CA 15, raté. L'autre fonce sur Yann, lui met un coup de matraque : 5 dégâts contondants, plus une décharge (sauvegarde d'Endurance DD 12, que Yann rate) qui l'empêche de réagir jusqu'à la fin de son prochain tour.
+- *Esmée* vise le pilleur au brûleur, à 12 m. Elle fait 9 avec ses modificateurs : raté.
+- *Les pilleurs* se retournent. Celui au brûleur tire sur Esmée : 11 contre CA 15, raté. L'autre fonce sur Yann, lui met un coup de matraque : 5 dégâts contondants, plus une décharge (sauvegarde d'Endurance DD 12, que Yann rate) qui l'empêche de réagir jusqu'à la fin de son prochain tour.
 - *Yann* est au contact : tirer maintenant serait un tir à distance avec un ennemi à 1,5 m, donc désavantage. Il remplace une attaque par une bousculade : Puissance (Athlétisme) 15 contre 8. Le pilleur tombe à terre.
-- *Esmée* tire depuis son abri sur le pilleur au brûleur : 5 dégâts. Il lui en reste 6.
+- *Isaure* tire depuis son abri sur le pilleur au brûleur : 5 dégâts. Il lui en reste 6.
 
 **Round 3.**
-- *Garance* tire sur le pilleur au brûleur : 20 naturel. Coup critique, 2d8 + 3 : 14. Il tombe.
+- *Esmée* tire sur le pilleur au brûleur : 20 naturel. Coup critique, 2d8 + 3 : 14. Il tombe.
 - *Le dernier pilleur*, à terre, se relève (il dépense la moitié de sa vitesse) et regarde son camarade, puis Yann. Il jette sa matraque.
 - *Yann* rengaine son fusil.
-- *Esmée* sort sa trousse et s'occupe du bras de Yann, qui le tient mal.
+- *Isaure* sort sa trousse et s'occupe du bras de Yann, qui le tient mal.
 
-**Après le combat.** Garance fouille le pilleur qui s'est rendu. Dans sa poche, quelqu'un lui a donné vingt lumens d'avance pour vider la soute avant la nuit, et il ne sait pas qui. Le conteneur qu'ils emportaient était le numéro quatre. Il est vide.
+**Après le combat.** Esmée fouille le pilleur qui s'est rendu. Dans sa poche, quelqu'un lui a donné vingt lumens d'avance pour vider la soute avant la nuit, et il ne sait pas qui. Le conteneur qu'ils emportaient était le numéro quatre. Il est vide.
 
 ## Le combat spatial
 
@@ -526,7 +526,7 @@ Chaque personnage tient **un poste** à la fois, qu'il choisit dans l'onglet *Va
 | **Mécanicien** | Technique | Réparer la coque (1d8 + Technique) ou relancer les boucliers (2d6 + Technique) |
 | **Vigie** | Instinct | Désigner une cible (DD 12) : le prochain tir a l'avantage |
 
-Tu ajoutes ton **bonus de maîtrise** aux tests de poste : donner l'ordre, esquiver, désigner une cible. Les tirs et les réparations n'ajoutent que ce que dit le tableau. Tes pouvoirs de classe améliorent ton poste : *Mains sur le manche* du Pilote, *Commandement de bord* du Capitaine, *Artilleur* du Fusilier, *Redistribuer la puissance* de la Mécanicienne. Un Chantre à la vigie sent les coups venir.
+Le serveur ajoute ta maîtrise aux tests de capitaine, de pilote et de vigie ; un tir ajoute le bonus de l'arme à tes Réflexes. Les bonus de classe (*Mains sur le manche* du Pilote, *Commandement de bord* du Capitaine, *Artilleur* du Fusilier, *Redistribuer la puissance* de la Mécanicienne…) se comptent à la main : annonce-les au MJ. Un Chantre à la vigie sent les coups venir.
 
 ### Les actions de poste
 
@@ -536,7 +536,7 @@ Tu ajoutes ton **bonus de maîtrise** aux tests de poste : donner l'ordre, esqui
 
 **Désigner une cible** (Vigie). Test d'Instinct, bonus de maîtrise compris, DD 12. Réussi : le prochain tir du vaisseau a l'**avantage**. Cet avantage ne sert qu'une fois.
 
-**Tirer** (Artilleur). Tu choisis une arme et un autre vaisseau à portée. Tu lances un d20 et tu ajoutes tes Réflexes, le bonus de l'arme, et +2 si le capitaine a donné l'ordre. Si le résultat égale ou dépasse la CA de la cible (augmentée de son esquive), le tir touche : tu lances les dégâts de l'arme.
+**Tirer** (Artilleur). Une seule arme par action : tu choisis l'arme et un autre vaisseau à portée. Tu lances un d20 et tu ajoutes tes Réflexes, le bonus de l'arme, et +2 si le capitaine a donné l'ordre. Si le résultat égale ou dépasse la CA de la cible (augmentée de son esquive), le tir touche : tu lances les dégâts de l'arme.
 
 **Réparer la coque** (Mécanicien). La coque regagne **1d8 + Technique** points, sans dépasser son maximum.
 
@@ -557,26 +557,24 @@ Les dégâts d'un tir touchent d'abord les **boucliers**. Quand ils sont à 0, l
 
 ### Désemparé
 
-Un vaisseau à **0 point de coque** est **désemparé** : plus de moteurs ni d'armes jusqu'à une réparation. L'équipage ne meurt pas pour autant. Il peut encore **se battre à bord** (abordage, couloirs, sas), **fuir en capsule** ou **se rendre**. Un cargo désemparé qu'on arraisonne rend souvent des gens vivants, et c'est toute la valeur d'une reddition.
+Un vaisseau à **0 point de coque** est **désemparé** : plus de moteurs ni d'armes, jusqu'à ce qu'une réparation remonte la coque à 1 ou plus. L'équipage ne meurt pas pour autant. Il peut encore **se battre à bord** (abordage, couloirs, sas), **fuir en capsule** ou **se rendre**. Un cargo désemparé qu'on arraisonne rend souvent des gens vivants, et c'est toute la valeur d'une reddition.
 
 ### Fuir
 
-Un vaisseau qui veut quitter la carte, ou semer son poursuivant, doit **fuir**. Le **pilote** gagne **trois manches de Réflexes** avant que le vaisseau ne prenne **trois tirs à la coque**. Le MJ fixe le DD selon le poursuivant : un chasseur de la Ligue, rapide, est plus dur à semer qu'un cargo de ferrailleurs.
-
-Pour chaque manche, le pilote fait un test de Réflexes. Réussi : une manche gagnée. Raté : le poursuivant tire, et chaque tir qui touche compte. Le premier côté à trois l'emporte.
+Un vaisseau qui veut quitter la carte, ou semer son poursuivant, doit **fuir**. Fuir remplace l'action du pilote. Le pilote doit réussir **deux tests de Réflexes** (DD fixé par le MJ selon le poursuivant) avant que le vaisseau n'ait été touché **trois fois**. À chaque test raté, le poursuivant tire une fois : d20 + bonus de l'arme contre la CA. Un chasseur de la Ligue, rapide, est plus dur à semer qu'un cargo de ferrailleurs.
 
 > **Resquille et saut raté.** Une resquille ratée (test de pilotage DD 13 dans le sillage d'un autre vaisseau) coûte **2d10** points de coque. Sortir d'un saut raté, c'est parfois ne pas sortir seul.
 
 ### Un combat spatial
 
-**La situation.** La *Pie-Grièche* vient de sortir d'un saut de resquille dans les Brisants. Elle n'est pas seule : une corvette de douane blanche, frappée de la tour couronnée, sort du gaz rouge à quinze cases. Zéphyr est capitaine, Garance pilote, Yann artilleur, Octavie mécanicienne, Soline à la vigie. Tous sont au niveau 2 (maîtrise +2).
+**La situation.** La *Pie-Grièche* vient de sortir d'un saut de resquille dans les Brisants. Elle n'est pas seule : une corvette de douane blanche, frappée de la tour couronnée, sort du gaz rouge à quinze cases. Zéphyr est capitaine, Esmée pilote, Yann artilleur, Octavie mécanicienne, Soline à la vigie. Tous sont au niveau 2 (maîtrise +2).
 
 La corvette : coque 80, boucliers 30, CA 14, vitesse 10, une tourelle de proue (+5, 2d10, portée 14 cases). La *Pie-Grièche* : coque 60, boucliers 20, CA 13.
 
-**Initiative.** Garance 19, corvette 15, Zéphyr 12, Soline 11, Yann 9, Octavie 6.
+**Initiative.** Esmée 19, corvette 15, Zéphyr 12, Soline 11, Yann 9, Octavie 6.
 
 **Round 1.**
-- *Garance* lance le cargo en esquive. Réflexes +4, maîtrise +2 : elle fait 13 + 6 = 19. Sur 18 ou plus, +4 CA : la *Pie-Grièche* passe à CA 17.
+- *Esmée* lance le cargo en esquive. Réflexes +4, maîtrise +2 : elle fait 13 + 6 = 19. Sur 18 ou plus, +4 CA : la *Pie-Grièche* passe à CA 17.
 - *La corvette* tire avec sa tourelle de proue : 8 + 7 = 15 contre CA 17. Manqué.
 - *Zéphyr* donne l'ordre. Présence +3, maîtrise +2 : 9 + 5 = 14, DD 12. Réussi : tous les tirs de la *Pie-Grièche* ont +2.
 - *Soline*, à la vigie, désigne la corvette. Instinct +3, maîtrise +2 : 10 + 5 = 15. La cible est désignée : le prochain tir a l'avantage.
@@ -584,7 +582,7 @@ La corvette : coque 80, boucliers 30, CA 14, vitesse 10, une tourelle de proue (
 - *Octavie*, mécanicienne, n'a rien à réparer : les boucliers et la coque sont pleins. Elle surveille le compensateur.
 
 **Round 2.** Le MJ ouvre un nouveau round : l'esquive, l'ordre et la cible désignée retombent.
-- *Garance* esquive : 5 + 6 = 11. Sous 12, la manœuvre ne donne rien. CA 13.
+- *Esmée* esquive : 5 + 6 = 11. Sous 12, la manœuvre ne donne rien. CA 13.
 - *La corvette* tire : 14 + 7 = 21 contre CA 13. Touché : 2d10 = 14. Les boucliers de la *Pie-Grièche* passent de 20 à 6.
 - *Zéphyr* donne l'ordre : 12 + 5 = 17. Réussi.
 - *Soline* désigne la cible : 4 + 5 = 9. Raté, trop de bruit sur les écrans. Pas d'avantage.
@@ -592,10 +590,21 @@ La corvette : coque 80, boucliers 30, CA 14, vitesse 10, une tourelle de proue (
 - *Octavie* relance les boucliers : 2d6 = 8, plus Technique +4, soit 12. Les boucliers de la *Pie-Grièche* remontent de 6 à 18.
 
 **Round 3.**
-- *Garance* esquive : 17 + 6 = 23. +4 CA : la *Pie-Grièche* repasse à CA 17.
+- *Esmée* esquive : 17 + 6 = 23. +4 CA : la *Pie-Grièche* repasse à CA 17.
 - *La corvette* tire : **1 naturel**. Un 1 manque toujours, quelle que soit la CA.
 - *Zéphyr* regarde l'écran : la corvette est sans boucliers, mais sa coque est à 77. Une corvette de l'Hégémonie ne s'achève pas à coups de tourelle dorsale. « On file. »
-- *Garance* tente de fuir. Le MJ fixe le DD à 14 : la corvette est plus rapide que le cargo. Manche 1 : 19, gagnée. Manche 2 : 12, perdue : la corvette tire, et touche (premier tir). Manche 3 : 17, gagnée. Manche 4 : 15, gagnée. Trois manches gagnées contre un tir : la *Pie-Grièche* plonge dans une épave et disparaît des détecteurs.
-- *Soline*, à la vigie, regarde le point blanc rester seul sur l'écran. « Ils reviendront », dit-elle.
+- *Soline*, à la vigie, regarde le point blanc rester seul sur l'écran. « Ils ne nous lâcheront pas », dit-elle.
 
-> **Pour la table.** Un combat spatial est un combat d'équipe. Le pilote tient le vaisseau en vie, l'artilleur fait mal, le mécanicien prolonge tout. Mais c'est le capitaine et la vigie qui décident si les trois autres jouent bien ou mal. Dis ce que tu fais à voix haute : tes camarades attendent ton ordre.
+**Round 4.** Esmée fuit : c'est son action, elle n'esquive pas. CA 13. Le MJ fixe le DD à 14 : la corvette est plus rapide que le cargo.
+- *Esmée* : 13 + 6 = 19. Premier test réussi.
+- *La corvette* colle au sillage. Pas de test raté, pas de tir.
+
+**Round 5.**
+- *Esmée* : 6 + 6 = 12. Raté.
+- *La corvette* tire : 11 + 7 = 18 contre CA 13. Touché : 2d10 = 9. Les boucliers de la *Pie-Grièche* passent de 18 à 9. Premier tir encaissé.
+
+**Round 6.**
+- *Esmée* : 11 + 6 = 17. Deuxième test réussi, avant le troisième tir. La *Pie-Grièche* plonge dans une épave et disparaît des détecteurs.
+- *Soline* regarde le point blanc s'éloigner. « Ils reviendront », dit-elle.
+
+> **Pour la table.** Le pilote tient le vaisseau en vie, l'artilleur fait mal, le mécanicien prolonge tout. Mais c'est le capitaine et la vigie qui décident si les trois autres jouent bien ou mal. Dis ce que tu fais à voix haute : tes camarades attendent ton ordre.
