@@ -8,6 +8,7 @@ import { HISTORIQUES_NOYES, ORIGINES_NOYES, PERSONNALITE_NOYES } from "./noyes-o
 import { HISTORIQUES_SEC, ORIGINES_SEC, PERSONNALITE_SEC } from "./sec-origines";
 import { HISTORIQUES_ASILE, ORIGINES_ASILE, PERSONNALITE_ASILE } from "./asile-origines";
 import { HISTORIQUES_ILES, ORIGINES_ILES, PERSONNALITE_ILES } from "./iles-origines";
+import { HISTORIQUES_EXPO, ORIGINES_EXPO, PERSONNALITE_EXPO } from "./expo-origines";
 import type { GenreId } from "./types";
 
 /** Index des caractéristiques : 0 For, 1 Dex, 2 Con, 3 Int, 4 Sag, 5 Cha (noms adaptés au genre). */
@@ -306,6 +307,7 @@ export const ORIGINS: Origin[] = [
   ...ORIGINES_SEC,
   ...ORIGINES_ASILE,
   ...ORIGINES_ILES,
+  ...ORIGINES_EXPO,
 ];
 
 export const BACKGROUNDS: Background[] = [
@@ -396,6 +398,7 @@ export const BACKGROUNDS: Background[] = [
   ...HISTORIQUES_SEC,
   ...HISTORIQUES_ASILE,
   ...HISTORIQUES_ILES,
+  ...HISTORIQUES_EXPO,
 ];
 
 /** Suggestions de personnalité. Le joueur peut toujours écrire la sienne. */
@@ -435,7 +438,7 @@ export const PERSONALITY: Record<"trait" | "ideal" | "bond" | "flaw", string[]> 
 };
 
 /** Suggestions de personnalité du monde de la partie. */
-export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : genre === "dark-fantasy" ? PERSONNALITE_TERNELANDE : genre === "cyberpunk" ? PERSONNALITE_RESIDENCE : genre === "horreur" ? PERSONNALITE_NOYES : genre === "post-apo" ? PERSONNALITE_SEC : genre === "western" ? PERSONNALITE_ASILE : genre === "pirates" ? PERSONNALITE_ILES : PERSONALITY);
+export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : genre === "dark-fantasy" ? PERSONNALITE_TERNELANDE : genre === "cyberpunk" ? PERSONNALITE_RESIDENCE : genre === "horreur" ? PERSONNALITE_NOYES : genre === "post-apo" ? PERSONNALITE_SEC : genre === "western" ? PERSONNALITE_ASILE : genre === "pirates" ? PERSONNALITE_ILES : genre === "steampunk" ? PERSONNALITE_EXPO : PERSONALITY);
 
 /** Achat par points (27 points, valeurs de 8 à 15). */
 export const POINT_BUY_BUDGET = 27;

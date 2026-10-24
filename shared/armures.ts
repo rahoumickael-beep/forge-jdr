@@ -26,6 +26,8 @@ const TABLE: [RegExp, Armure][] = [
   // Légères
   [/justaucorps de buffle|veste de buffle|\bbuffle\b/, { base: 12 }],
   [/cuir renforcé|cuir clouté|pourpoint clouté|pare-éclats|armure légère d'huissier/, { base: 12 }],
+  // Vêtements de 1899 doublés ou matelassés (Exposition éternelle)
+  [/redingote (doublée|renforcée)|pèlerine doublée|jaquette doublée|veston renforcé|gilet matelassé/, { base: 11 }],
   [
     /matelassée|gambison|cuir bouilli|armure de cuir|pourpoint de cuir|veste de cuir|manteau de cuir|caban|tablier de cuir|toile huileuse|(manteau|manteau long|blouse) renforcée?|veste à doubles poches|combinaison de vol|combinaison de vide légère|blouson de fibre|blouse de fibre|combinaison de fibre|gilet de fibre/,
     { base: 11 },
@@ -91,7 +93,7 @@ export function argentDOrigine(texte: string): string | undefined {
  * Les sommes de même monnaie s'additionnent, sauf dans les mondes où l'on garde la plus haute.
  */
 /** Mondes dont le livre dit : l'argent de départ est la plus haute des sommes, pas leur total. */
-export const PLUS_HAUTE_SOMME = new Set(["post-apo", "western", "pirates"]);
+export const PLUS_HAUTE_SOMME = new Set(["post-apo", "western", "pirates", "steampunk"]);
 
 export function equipementDeDepart(classe: readonly string[], historique: readonly string[], plusHauteSomme = false): string[] {
   const objets: string[] = [];

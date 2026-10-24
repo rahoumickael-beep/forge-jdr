@@ -11,6 +11,7 @@ import { LIEUX_COTE_DES_NOYES, NOMS_COTE_DES_NOYES } from "./canon/horreur-table
 import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
 import { LIEUX_CHAMP_D_ASILE, NOMS_CHAMP_D_ASILE } from "./canon/western-table";
 import { LIEUX_ILES_DU_VENT, NOMS_ILES_DU_VENT } from "./canon/pirates-table";
+import { LIEUX_EXPOSITION, NOMS_EXPOSITION } from "./canon/steampunk-table";
 import type { Canon } from "./canon";
 
 /** Ce que la table des joueurs charge de chaque canon. */
@@ -23,6 +24,7 @@ const TABLES: Record<string, { lieux: string[]; noms: Canon["noms"] }> = {
   "post-apo": { lieux: LIEUX_GRAND_SEC, noms: NOMS_GRAND_SEC },
   western: { lieux: LIEUX_CHAMP_D_ASILE, noms: NOMS_CHAMP_D_ASILE },
   pirates: { lieux: LIEUX_ILES_DU_VENT, noms: NOMS_ILES_DU_VENT },
+  steampunk: { lieux: LIEUX_EXPOSITION, noms: NOMS_EXPOSITION },
 };
 
 for (const C of Object.values(CANONS) as Canon[]) {
@@ -94,7 +96,7 @@ test("bibliothèque : chaque figure d'un scénario renvoie à un scénario qui e
 
 test("livres des joueurs : aucun secret du canon dans les chapitres écrits pour les joueurs", async () => {
   const { existsSync, readdirSync, readFileSync } = await import("node:fs");
-  const dossiers: Record<string, string> = { fantasy: "content/aubreterre/joueurs", "science-fiction": "content/archipel/joueurs", "dark-fantasy": "content/ternelande/joueurs", cyberpunk: "content/residence/joueurs", horreur: "content/cote-des-noyes/joueurs", "post-apo": "content/grand-sec/joueurs", western: "content/champ-d-asile/joueurs", pirates: "content/iles-du-vent/joueurs" };
+  const dossiers: Record<string, string> = { fantasy: "content/aubreterre/joueurs", "science-fiction": "content/archipel/joueurs", "dark-fantasy": "content/ternelande/joueurs", cyberpunk: "content/residence/joueurs", horreur: "content/cote-des-noyes/joueurs", "post-apo": "content/grand-sec/joueurs", western: "content/champ-d-asile/joueurs", pirates: "content/iles-du-vent/joueurs", steampunk: "content/exposition-eternelle/joueurs" };
   for (const C of Object.values(CANONS) as Canon[]) {
     const d = dossiers[C.genre];
     if (!d || !existsSync(d)) continue;

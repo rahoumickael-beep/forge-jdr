@@ -124,6 +124,11 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 ## Monde pirate : les Îles du Vent, 1715, 25/10/2026
 - Bible `content/iles-du-vent/lore.md` : la Flotte d’Argent naufragée en Floride (juillet 1715) ; secret : le gouverneur de La Havane (Arriaga, inventé) l’a fait jeter à la côte pour noyer une fraude de fausse monnaie couverte par Madrid. Jauge « la Paix des Îles », Moral du navire, Chance et réserve du MJ (les Grains). Relue et corrigée : esclavage traité sans complaisance (une cargaison de captifs n’est pas une prise), noms réels écartés (Champvallon → Vaucelles, Pellew → Truscott, Ruiz de Alarcón → Larrañaga), mots d’époque (tafia, mal de Siam). Canon, règles du navire (Moral, Chance, Grains, chasse-partie, armes à un coup, artillerie), 10 classes sans surnaturel et 6 origines : écrits, relus (24 points) et corrigés. Bestiaire en cours, puis cartes, scénario, livres.
 
+## Monde steampunk : l'Exposition éternelle, Paris 1899, 25/10/2026
+- Canon (`shared/canon/steampunk.ts`, table publique `steampunk-table.ts`), règles (`shared/expo-regles.ts` : la Pression, les appareils brevetés, francs de 1899, armes, armures, déplacements, portes de la foire), 10 classes sans magie (`expo-classes.ts` : Mécanicien, Aéronaute, Garde, Reporter, Médecin, Chansonnier, Réfractaire, Ingénieur, Interprète, Escrimeur), 6 origines et 8 historiques (`expo-origines.ts`). Jauge « le Pouls » (100, seuils 75/50/25/0) et réserve du MJ (les Pannes) hors des règles des joueurs.
+- Décision de Claude à confirmer : pas de classe « Veilleur » (les Veilleurs sont un secret ; la liste de la bible est remplacée par Escrimeur). Secrets « Fosse » et « Veilleur » seuls impossibles (employés par d'autres mondes dans des textes de joueurs) : formes longues dans `secrets`.
+- Règles ajoutées sans source dans la bible : voir le compte rendu de la session (avances de licence pour Parisiens, Visiteurs, Butte ; catalogue d'appareils ; table d'armes ; dangers d'atelier).
+
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
 - Planche du demi-orc à repeindre.

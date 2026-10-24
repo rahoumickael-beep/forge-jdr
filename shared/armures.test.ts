@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { argentDOrigine, armurePortee, classeArmureDepart, equipementDeDepart } from "./armures";
+import { argentDOrigine, armurePortee, classeArmureDepart, equipementDeDepart, PLUS_HAUTE_SOMME } from "./armures";
 import { originsFor } from "./origins";
 import { GENRES } from "./genres";
 import { classesFor } from "./rules";
@@ -27,6 +27,26 @@ test("calcule les cas des livres", () => {
   assert.equal(classeArmureDepart("Armures légères", ["Justaucorps de buffle", "Sabre d'abordage"], [], stats, [0, 2, 0, 0, 0, 0]), 14, "buffle = 12 + Adresse");
   assert.equal(classeArmureDepart("Armures légères", ["Veste de cuir"], [], stats, [0, 2, 0, 0, 0, 0]), 13, "veste de cuir = 11 + Adresse");
   assert.equal(classeArmureDepart("Armures légères", ["Chemise de toile"], [], stats, [0, 2, 0, 0, 0, 0]), 12, "sans armure = 10 + Adresse");
+});
+
+test("lit les vêtements de 1899 de l'Exposition éternelle", () => {
+  const stats = ["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"];
+  const mods = [0, 2, 0, 0, 0, 0];
+  const ca = (objet: string, maitrise = "Armures légères") => classeArmureDepart(maitrise, [objet], [], stats, mods);
+  assert.equal(ca("Redingote doublée de cuir"), 13, "redingote doublée = 11 + Adresse");
+  assert.equal(ca("Pèlerine doublée de cuir"), 13);
+  assert.equal(ca("Gilet matelassé"), 13);
+  assert.equal(ca("Vareuse d'aéronaute en toile huileuse"), 13);
+  assert.equal(ca("Blouse renforcée de cuir"), 13);
+  assert.equal(ca("Tablier de cuir d'infirmerie"), 13);
+  assert.equal(ca("Capote de garde doublée", "Armures légères et intermédiaires"), 14, "capote = 12 + Adresse (au plus 2)");
+  assert.equal(ca("Redingote de ville et chapeau"), 12, "une redingote ordinaire ne protège pas");
+});
+
+test("l'argent de départ de l'Exposition éternelle est la plus haute somme, en francs", () => {
+  assert.ok(PLUS_HAUTE_SOMME.has("steampunk"));
+  assert.deepEqual(equipementDeDepart(["Clef anglaise", "30 francs"], ["Clef anglaise", "Pain et gourde", "25 francs"], true), ["Clef anglaise", "Pain et gourde", "30 francs"]);
+  assert.equal(argentDOrigine("Argent de départ : 60 francs."), "60 francs");
 });
 
 test("fusionne l'équipement de départ", () => {

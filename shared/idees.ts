@@ -9,6 +9,7 @@ import { COTE_DES_NOYES } from "./canon/horreur";
 import { GRAND_SEC } from "./canon/post-apo";
 import { CHAMP_D_ASILE } from "./canon/western";
 import { ILES_DU_VENT } from "./canon/pirates";
+import { EXPOSITION } from "./canon/steampunk";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -87,12 +88,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Cent piastres, comptées devant tout l'équipage", "Une chasse-partie signée à ton nom", "La confiance d'un village des mornes", "Un jeton de Chance de plus", "Une grâce du lieutenant du roi", "Un sloop d'occasion"],
   },
   "steampunk": {
-    hooks: ["Une invention capable d'arrêter le temps a été volée.", "Les automates de la ville se mettent à grève.", "Un dirigeable royal a disparu dans un orage.", "Un savant fou défie la reine."],
-    villains: ["un savant fou", "une guilde secrète", "un automate qui se rêve empereur", "un baron de l'industrie"],
-    motivations: ["remplacer les humains par des machines", "réécrire l'histoire", "prouver son génie"],
-    enemies: ["Voyous des docks", "Automates de garde", "Agents de la guilde", "Araignée mécanique", "Tank à vapeur", "Colosse d'airain"],
-    twists: ["La reine est un automate.", "Le savant voulait sauver la ville.", "L'invention vient du futur."],
-    rewards: ["Un brevet lucratif", "Un dirigeable", "Une invention unique", "Une médaille royale"],
+    hooks: EXPOSITION.accroches.map((a) => a.texte),
+    villains: ["un Signataire qui fait breveter ce qu'il ne comprend pas", "un contrôleur qui vit des amendes et des appareils saisis", "un impresario qui retient la paie de ses engagés", "un chef de la Sûreté qui protège ceux qu'il surveille", "un Réfractaire prêt à faire sauter une halle pleine d'ouvriers"],
+    motivations: ["rembourser une licence de 200 francs avant la saisie de l'appareil", "obtenir un permis de sortie pour toute une famille", "prouver qu'un accident de la Galerie n'était pas la faute de l'ouvrier", "que la lumière cesse de baisser à Grenelle", "garder son nom sur une plaque de cuivre"],
+    enemies: ["Rats des carrières", "Chiens de garde", "Gamins voleurs", "Contrôleurs", "Gardes du Commissariat", "Gendarmes", "Agents de la Sûreté", "Mécaniciens en grève", "Automates à cames", "Automate de guichet détraqué", "Dirigeable en perdition"],
+    twists: ["Le commanditaire est celui qu'on devait voler.", "L'appareil que tu portes a un numéro de brevet qui n'est pas le tien.", "La lumière baisse à l'heure exacte où le Commissariat dit n'avoir rien fait.", "Le témoin qu'on cherche travaille déjà pour la Sûreté."],
+    rewards: ["Cent francs, comptés devant témoin", "Une licence de brevet payée", "La confiance d'un atelier de Javel", "Une carte de Permanent", "Un permis de sortie pour une famille", "Une place sur un dirigeable de ligne"],
   },
   "contemporain": {
     hooks: ["Un témoin clé doit survivre jusqu'au procès.", "Une clé USB contient la liste des agents infiltrés.", "Un milliardaire a disparu de son yacht.", "Un virus informatique bloque la ville."],

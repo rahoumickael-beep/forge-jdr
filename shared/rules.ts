@@ -8,6 +8,8 @@ import { CLASSES_SEC } from "./sec-classes";
 import { CLASSES_ASILE } from "./asile-classes";
 import { CLASSES_ILES } from "./iles-classes";
 import { REGLES_ILES } from "./iles-regles";
+import { CLASSES_EXPO } from "./expo-classes";
+import { REGLES_EXPO } from "./expo-regles";
 import { REGLES_ASILE } from "./asile-regles";
 import { REGLES_ARCHIPEL } from "./archipel-regles";
 import { REGLES_TERNELANDE } from "./ternelande-regles";
@@ -991,6 +993,7 @@ export const CLASSES: CharacterClass[] = [
   ...CLASSES_SEC,
   ...CLASSES_ASILE,
   ...CLASSES_ILES,
+  ...CLASSES_EXPO,
 ];
 
 /** La sous-classe d'un personnage, s'il en a choisi une. */
@@ -1007,12 +1010,12 @@ export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
   "post-apo": ["Batelier de sable", "Puisatier", "Pillard repenti", "Sourcière", "Mécano des ruines", "Gardian", "Pénitent", "Médecin des sables", "Fouilleur", "Chef de convoi"],
   western: ["Pistolero", "Vaquero", "Shérif", "Joueur", "Éclaireur", "Chasseur de primes", "Médecin de campagne", "Prédicateur", "Hors-la-loi", "Arpenteur"],
   pirates: ["Capitaine", "Canonnier", "Boucanier", "Chirurgien de bord", "Gabier", "Bretteur", "Maître de manœuvre", "Contrebandier", "Aumônier", "Plongeur"],
-  steampunk: ["Duelliste", "Inventeuse", "Espionne", "Automate", "Aéronaute", "Aristocrate"],
+  steampunk: ["Mécanicien", "Aéronaute", "Garde", "Reporter", "Médecin", "Chansonnier", "Réfractaire", "Ingénieur", "Interprète", "Escrimeur"],
   contemporain: ["Ancien militaire", "Hackeuse", "Voleur de luxe", "Médecin urgentiste", "Agent secret", "Avocate"],
 };
 
 /** Règles propres à un monde, à la suite des règles communes (livre en ligne, livre des joueurs). */
-export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE, horreur: REGLES_NOYES, "post-apo": REGLES_SEC, western: REGLES_ASILE, pirates: REGLES_ILES };
+export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE, horreur: REGLES_NOYES, "post-apo": REGLES_SEC, western: REGLES_ASILE, pirates: REGLES_ILES, steampunk: REGLES_EXPO };
 
 export function classesFor(genre: GenreId): CharacterClass[] {
   return CLASSES.filter((c) => c.genre === genre);

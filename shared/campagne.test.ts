@@ -7,7 +7,8 @@ test("campagne : une partie fantasy démarre avec le Sceau à 100 et une réputa
   const c = nouvelleCampagne("fantasy");
   assert.equal(c.jauge, 100);
   assert.deepEqual(Object.keys(c.reputations).sort(), AUBRETERRE.factions.map((f) => f.id).sort());
-  assert.equal(nouvelleCampagne("steampunk").jauge, null);
+  assert.equal(nouvelleCampagne("contemporain").jauge, null, "un monde sans canon n'a pas de jauge");
+  assert.equal(nouvelleCampagne("steampunk").jauge, 100, "le Pouls part à 100");
 });
 
 test("campagne : séances ouvertes et closes, « Précédemment » tiré du résumé", () => {

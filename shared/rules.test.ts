@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL, CHAMP_D_ASILE, COTE_DES_NOYES, GRAND_SEC, ILES_DU_VENT, RESIDENCE, TERNELANDE } from "./canon";
+import { ARCHIPEL, CHAMP_D_ASILE, COTE_DES_NOYES, EXPOSITION, GRAND_SEC, ILES_DU_VENT, RESIDENCE, TERNELANDE } from "./canon";
 import { classesFor, CLASSES, CLASS_NAMES_BY_GENRE, REGLES_DU_MONDE, SKILLS } from "./rules";
 import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import { REGLES_RESIDENCE } from "./residence-regles";
@@ -13,6 +13,8 @@ import { HISTORIQUES_ASILE, ORIGINES_ASILE, PERSONNALITE_ASILE } from "./asile-o
 import { REGLES_ASILE } from "./asile-regles";
 import { HISTORIQUES_ILES, ORIGINES_ILES, PERSONNALITE_ILES } from "./iles-origines";
 import { GRAINS_MAX, REGLES_ILES, REGLE_DES_GRAINS } from "./iles-regles";
+import { HISTORIQUES_EXPO, ORIGINES_EXPO, PERSONNALITE_EXPO } from "./expo-origines";
+import { PANNES_MAX, REGLES_EXPO, REGLE_DES_PANNES } from "./expo-regles";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
@@ -22,7 +24,8 @@ const noyes = classesFor("horreur");
 const sec = classesFor("post-apo");
 const asile = classesFor("western");
 const iles = classesFor("pirates");
-const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec, ...asile, ...iles];
+const expo = classesFor("steampunk");
+const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec, ...asile, ...iles, ...expo];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
@@ -33,6 +36,7 @@ test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(sec.length, 10);
   assert.equal(asile.length, 10);
   assert.equal(iles.length, 10);
+  assert.equal(expo.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -359,4 +363,88 @@ test("classes des Îles du Vent : un coup, puis recharger ; le coup de main coû
 test("Îles du Vent : aucun captif parmi les prises, aucun butin humain dans le texte joueur", () => {
   const texte = JSON.stringify([iles, ORIGINES_ILES, HISTORIQUES_ILES, REGLES_ILES, PERSONNALITE_ILES, ILES_DU_VENT.cartes]).toLowerCase();
   for (const mot of ["cargaison d'esclaves", "esclaves à vendre", "prix d'un esclave", "vendre les captifs", "piastres par tête", "ou six esclaves"]) assert.ok(!texte.includes(mot), mot);
+});
+
+test("classes de l'Exposition éternelle : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify([expo, ORIGINES_EXPO, HISTORIQUES_EXPO, REGLES_EXPO, PERSONNALITE_EXPO, EXPOSITION.cartes]);
+  for (const secret of EXPOSITION.secrets) assert.ok(!text.includes(secret), secret);
+  for (const mot of ["Dormeuse", "pièce mère", "pièces mères", "Veilleur", "Delestrade", "dernier plan", "Fosse", "Sujet", "trust", "Pannes", "Pouls"]) {
+    assert.ok(!text.toLowerCase().includes(mot.toLowerCase()), `texte joueur de l'Exposition éternelle : « ${mot} »`);
+  }
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes de l'Exposition éternelle : « ${word} »`);
+  }
+  for (const mot of EXPOSITION.anachronismes) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${mot.toLowerCase()}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `anachronisme dans l'Exposition éternelle : « ${mot} »`);
+  }
+  // Les gens des Villages, les ouvrières et les anarchistes ne sont ni des spectacles ni des caricatures.
+  for (const mot of ["sauvage", "indigène", "primitif", "exotique", "pittoresque", "bicot", "nègre"]) assert.ok(!text.toLowerCase().includes(mot), `texte joueur de l'Exposition éternelle : « ${mot} »`);
+});
+
+test("classes de l'Exposition éternelle : compétences connues, caractéristiques du genre, ids préfixés", () => {
+  const noms = new Set(SKILLS.map((s) => s.name));
+  const stats = new Set(["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"]);
+  for (const c of expo) {
+    assert.ok(c.id.startsWith("ex-"), c.id);
+    for (const s of c.skills.from) assert.ok(noms.has(s), `${c.name} : compétence « ${s} » inconnue`);
+    for (const s of [...c.mainStats, ...c.saves]) assert.ok(stats.has(s), `${c.name} : caractéristique « ${s} » inconnue`);
+    assert.equal(c.subclasses[0].powers[0].level, 3, `${c.name} : premier pouvoir de sous-classe au niveau 3`);
+    assert.ok(!/Dextérité|Agilité|Sagesse|Charisme|Intelligence|Constitution/.test(JSON.stringify(c)), `${c.name} : nom de caractéristique d'un autre genre`);
+    assert.ok(c.powers.some((p) => p.level === 20), `${c.name} : pas de pouvoir de niveau 20`);
+    assert.ok(c.powers.some((p) => p.level === 9) && c.powers.some((p) => p.level === 15), `${c.name} : un pouvoir propre aux niveaux 9 et 15`);
+  }
+  for (const h of HISTORIQUES_EXPO) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
+  assert.equal(ORIGINES_EXPO.length, 6);
+  assert.equal(HISTORIQUES_EXPO.length, 8);
+  for (const o of ORIGINES_EXPO) assert.equal(o.subs.length, 2, `${o.name} : deux variantes`);
+  assert.equal(CLASS_NAMES_BY_GENRE.steampunk?.length, 10);
+  for (const c of expo) assert.ok(CLASS_NAMES_BY_GENRE.steampunk?.includes(c.name), `${c.name} absent de la liste de noms`);
+  assert.ok(REGLES_DU_MONDE.steampunk === REGLES_EXPO);
+});
+
+test("classes de l'Exposition éternelle : les pouvoirs des niveaux 9 et 15 ne se copient pas d'une classe à l'autre", () => {
+  for (const niveau of [9, 15]) {
+    const pouvoirs = expo.flatMap((c) => c.powers.filter((p) => p.level === niveau));
+    assert.equal(new Set(pouvoirs.map((p) => p.name)).size, pouvoirs.length, `niveau ${niveau} : noms en double`);
+    assert.equal(new Set(pouvoirs.map((p) => p.effect)).size, pouvoirs.length, `niveau ${niveau} : textes en double`);
+  }
+});
+
+test("classes de l'Exposition éternelle : la Chaudière fait monter la Pression, et les classes qui en ont savent le dire", () => {
+  for (const c of expo) {
+    const tous = [...c.powers, ...c.subclasses.flatMap((s) => s.powers)];
+    const chaudiere = tous.filter((p) => /Chaudière :/.test(p.effect));
+    assert.equal(c.powers.some((p) => p.name === "Sous pression"), chaudiere.length > 0, `${c.name} : pouvoir « Chaudière » et passif « Sous pression » vont ensemble`);
+    for (const p of chaudiere) {
+      assert.ok(p.action !== "passif" && p.recharge !== "passif", `${c.name} : ${p.name} (Chaudière) n'est pas un passif`);
+      assert.ok(/Pression monte de 1/.test(p.effect), `${c.name} : ${p.name} dit de combien monte la Pression`);
+    }
+  }
+  assert.ok(expo.filter((c) => c.powers.some((p) => p.name === "Sous pression")).length >= 3, "au moins trois métiers vivent de la Pression");
+  const texte = JSON.stringify(REGLES_EXPO);
+  for (const mot of ["Elle part à 0", "de 0 à 10", "la chaudière chauffe", "surcharge", "fuite", "éclatement", "2d6 + ton niveau", "retombe à 4", "deux brevets", "200 francs", "5 francs par semaine", "retenue de 1 franc", "Gens des Villages"]) {
+    if (mot === "de 0 à 10") continue;
+    assert.ok(texte.includes(mot), `règles de la Pression : « ${mot} »`);
+  }
+  assert.ok(texte.includes("de 0 à 10"), "la Pression va de 0 à 10");
+  assert.ok(!/Pannes/.test(texte), "les Pannes sont dans le guide du MJ, pas dans les règles des joueurs");
+  assert.equal(PANNES_MAX, 4);
+  assert.equal(EXPOSITION.campagne?.reserve?.max, 4);
+  assert.equal(EXPOSITION.campagne?.reserve?.regle, REGLE_DES_PANNES);
+});
+
+test("Exposition éternelle : le Pouls, les prix de 1899 et les armes de la bible", () => {
+  const jauge = EXPOSITION.campagne?.jauge;
+  assert.equal(jauge?.nom, "le Pouls");
+  assert.equal(jauge?.depart, 100);
+  assert.deepEqual(jauge?.seuils.map((s) => s.valeur), [75, 50, 25, 0]);
+  const texte = JSON.stringify(REGLES_EXPO);
+  for (const mot of ["Un revolver d'ordonnance | 25 francs", "Une canne-épée | 20 francs", "Un fusil de chasse | 90 francs", "Une lampe à arc de poche | 40 francs", "Une licence de brevet | 200 francs", "Fusil Lebel", "Matraque à tension", "80 francs", "15 francs par mois", "5 francs par mois", "35 centimes", "15 centimes", "1 franc 50", "5 francs", "20 francs", "3 000 francs"]) {
+    assert.ok(texte.includes(mot), `prix de 1899 : « ${mot} »`);
+  }
+  for (const c of expo) assert.ok(c.startingGear.some((g) => /^\d+ francs$/.test(g)), `${c.name} : une somme en francs au départ`);
+  for (const h of HISTORIQUES_EXPO) assert.ok(h.gear.some((g) => /^\d+ francs$/.test(g)), `${h.name} : une somme en francs au départ`);
+  for (const o of ORIGINES_EXPO) assert.ok(o.traits.some((t) => /licence/.test(t.text)), `${o.name} : dit qui avance la licence`);
 });

@@ -6,6 +6,7 @@ import { LIEUX_COTE_DES_NOYES, NOMS_COTE_DES_NOYES } from "./canon/horreur-table
 import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
 import { LIEUX_CHAMP_D_ASILE, NOMS_CHAMP_D_ASILE } from "./canon/western-table";
 import { LIEUX_ILES_DU_VENT, NOMS_ILES_DU_VENT } from "./canon/pirates-table";
+import { LIEUX_EXPOSITION, NOMS_EXPOSITION } from "./canon/steampunk-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -169,17 +170,17 @@ export const GENRES: Genre[] = [
   {
     id: "steampunk",
     label: "Steampunk",
-    pitch: "Vapeur, engrenages, dirigeables et inventions folles.",
+    pitch: "L'Exposition éternelle : à Paris, en 1899, l'Exposition de 1889 n'a jamais fermé, et chaque trimestre une machine que le monde n'avait jamais vue fait applaudir le public.",
     theme: { background: "#1d1712", floor: "#a88d6a", wall: "#4a3726", water: "#3d6b70", vegetation: "#58703e", road: "#8a7050", door: "#b07a2a", grid: "rgba(50,30,10,.25)" },
-    stats: ["Muscle", "Adresse", "Endurance", "Génie", "Sang-froid", "Prestance"],
-    archetypes: ["Inventeuse", "Aéronaute", "Détective", "Duelliste", "Automate", "Aristocrate", "Mécanicien", "Espionne"],
-    origins: ["Londonien", "Parisienne des toits", "Automate conscient", "Ouvrier des forges", "Exploratrice coloniale"],
-    equipment: ["Pistolet à vapeur", "Lunettes de laiton", "Canne-épée", "Bras mécanique", "Jet-pack expérimental", "Clé à molette", "Montre à gousset", "Plans secrets"],
-    abilities: ["Invention improvisée", "Pilotage de dirigeable", "Déduction", "Escrime", "Réparation", "Mondanités"],
-    nameStart: ["Ada", "Ver", "Bar", "Cor", "Edm", "Pen", "Thad", "Wil"],
-    nameEnd: ["lovelace", "ne", "naby", "delia", "und", "elope", "deus", "helmina"],
-    places: ["les docks de Londres", "le dirigeable Impératrice", "l'usine du Docteur Gearhart", "l'Exposition universelle", "les catacombes à vapeur"],
-    traits: ["excentrique", "snob", "génial mais distrait", "intrépide"],
+    stats: ["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"],
+    archetypes: ["Mécanicien", "Aéronaute", "Garde", "Reporter", "Médecin", "Chansonnier", "Réfractaire", "Ingénieur", "Interprète", "Escrimeur"],
+    origins: ["Parisiens de l'Éternelle", "Gens des ateliers", "Gens des Villages", "Employés et Signataires", "Visiteurs restés", "Gens de la Butte"],
+    equipment: ["Revolver d'ordonnance", "Canne-épée", "Clef anglaise", "Lampe à arc de poche", "Gant à ressort", "Calepin à ressort", "Carte de Permanent", "Vareuse d'aéronaute en toile huileuse", "Appareil photographique à soufflet", "Licence de brevet"],
+    abilities: ["Purger un appareil", "Forcer la machine", "Lire un contrat", "Piloter un dirigeable", "Tromper un contrôleur", "Soigner un brûlé", "Fouiller à la porte", "Coller une affiche"],
+    nameStart: NOMS_EXPOSITION.prenoms,
+    nameEnd: NOMS_EXPOSITION.familles,
+    places: LIEUX_EXPOSITION,
+    traits: ["pose la main à plat sur tout ce qui tourne", "tape deux fois sur sa poche pour sentir la clef anglaise", "compte les lampes à arc de la rue", "salue chaque dirigeable comme un voisin", "ne s'assoit jamais le dos à une grille", "garde son numéro de brevet dans la doublure"],
   },
   {
     id: "contemporain",
