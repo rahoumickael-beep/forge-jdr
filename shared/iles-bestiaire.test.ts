@@ -92,6 +92,18 @@ test("îles du vent : les armes reprennent la table de 1715 (dés, portée)", ()
   assert.ok(vues >= 20, `${vues} attaques à la table`);
 });
 
+test("îles du vent : armes à un coup, jamais de mousquet ni de fusil boucanier dans une attaque multiple", () => {
+  for (const c of IV) {
+    for (const a of c.actions.filter((x) => x.multiattack)) {
+      for (const n of Object.keys(a.multiattack!)) assert.ok(!/^(Mousquet|Fusil boucanier)$/.test(n), `${c.id} : ${n} dans une attaque multiple`);
+    }
+    if (/^navire|^tempête/.test(c.type)) continue;
+    if (actionsDe(c).some((a) => a.attack && ["Pistolet à silex", "Mousquet", "Fusil boucanier"].includes(a.name))) {
+      assert.ok(c.traits.some((t) => ["Armes chargées", "Quatre pistolets", "Deux pistolets"].includes(t.name)), `${c.id} : trait sur les armes chargées`);
+    }
+  }
+});
+
 test("îles du vent : créatures dans les régions du canon", () => {
   const regions = new Set([...ILES_DU_VENT.regions.map((r) => r.nom), ...ILES_DU_VENT.autresLieux]);
   for (const c of IV) assert.ok(regions.has(c.region), `${c.id} : région ${c.region}`);
@@ -107,6 +119,13 @@ test("îles du vent : aucun secret dans ce que lisent les joueurs, un nom public
     assert.equal(trahit(c.id), undefined, `${c.id} : secret dans l'identifiant`);
     for (const t of c.traits) assert.equal(trahit(t.text), undefined, `${c.id} : secret dans le trait ${t.name}`);
     for (const a of actionsDe(c)) assert.equal(trahit(a.text), undefined, `${c.id} : secret dans l'action ${a.name}`);
+  }
+  // Ce qui s'affiche avec le nom public (type, langues, prompt) ne livre ni secret ni nationalité.
+  for (const c of IV.filter((x) => x.publicName)) {
+    for (const t of [c.type, c.languages, c.illustration]) {
+      assert.equal(trahit(t), undefined, `${c.id} : secret dans le type, les langues ou le prompt`);
+      assert.ok(!/espagn|spanish|spain|castill|havan/i.test(t), `${c.id} : nationalité dans « ${t.slice(0, 40)} »`);
+    }
   }
   // Le Navire blanc et son capitaine ne se nomment que par leur rumeur.
   for (const id of ["navire-blanc", "capitaine-du-navire-blanc"]) {
