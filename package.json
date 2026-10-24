@@ -21,7 +21,8 @@
     "livres:residence": "tsx scripts/livres/index.ts tout dist-livre --monde=residence",
     "livres:noyes": "tsx scripts/livres/index.ts tout dist-livre --monde=noyes",
     "livres:sec": "tsx scripts/livres/index.ts tout dist-livre --monde=sec",
-    "livres:asile": "tsx scripts/livres/index.ts tout dist-livre --monde=asile"
+    "livres:asile": "tsx scripts/livres/index.ts tout dist-livre --monde=asile",
+    "livres:iles": "tsx scripts/livres/index.ts tout dist-livre --monde=iles"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",
