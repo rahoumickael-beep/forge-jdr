@@ -288,7 +288,7 @@ L'Empreinte est le moteur des complications. Chaque seuil franchi donne une **É
 
 Soldats de métier, gendarmes, démineurs. En jeu : on sait se déplacer, tenir un lieu, lire un terrain, et on supporte l'attente.
 
-- **Ancien parachutiste** : dix ans de régiment, départ après une blessure au genou. Vous connaissez un ancien camarade qui vous trouve un pistolet une fois par mission, sans le prix du marché noir.
+- **Ancien parachutiste** : dix ans de régiment, départ après une blessure au genou. Vous connaissez un ancien camarade qui vous trouve un pistolet une fois par mois de jeu, sans le prix du marché noir.
 - **Logisticien militaire** : camions, convois, ravitaillement. Une fois par mission, un ancien collègue vous prête un véhicule lourd ou un entrepôt ; vous savez compter les litres.
 
 ### Gens de l'enquête
@@ -310,7 +310,7 @@ Informaticiens, techniciens, radios. En jeu : les serrures numériques, les rés
 Comptables, banquiers, courtiers. En jeu : les flux, les montages, les gens qui paient.
 
 - **Expert-comptable judiciaire** : mandats de tribunaux, audits de faillite. Une fois par mission, votre carte d'expert ouvre une porte administrative (greffe, registre, tribunal de commerce).
-- **Banquier privé** : clients riches, discrétion. Un compte de 3 000 € de réserve, et on vous prend pour un client dans n'importe quelle banque.
+- **Banquier privé** : clients riches, discrétion. Un compte de 1 000 € de réserve, et on vous prend pour un client dans n'importe quelle banque.
 
 ### Gens du monde
 
