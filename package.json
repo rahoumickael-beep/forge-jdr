@@ -19,7 +19,8 @@
     "livres:archipel": "tsx scripts/livres/index.ts tout dist-livre --monde=archipel",
     "livres:ternelande": "tsx scripts/livres/index.ts tout dist-livre --monde=ternelande",
     "livres:residence": "tsx scripts/livres/index.ts tout dist-livre --monde=residence",
-    "livres:noyes": "tsx scripts/livres/index.ts tout dist-livre --monde=noyes"
+    "livres:noyes": "tsx scripts/livres/index.ts tout dist-livre --monde=noyes",
+    "livres:sec": "tsx scripts/livres/index.ts tout dist-livre --monde=sec"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",
