@@ -9,6 +9,7 @@ import { BESTIAIRE_NOYES } from "./noyes-bestiaire";
 import { BESTIAIRE_SEC } from "./sec-bestiaire";
 import { BESTIAIRE_ASILE } from "./asile-bestiaire";
 import { BESTIAIRE_ILES } from "./iles-bestiaire";
+import { BESTIAIRE_EXPO } from "./expo-bestiaire";
 import { stylePeinture } from "./charte";
 import { cost, fabriquerCreature, hit, modOf, multi, recharge, save, special, type CreatureInput } from "./fiches";
 import type { Encounter, GenreId } from "./types";
@@ -36,7 +37,9 @@ export type FamilleSec = "Bêtes du Sec" | "Gens de la Route" | "Gens des citade
 export type FamilleAsile = "Bêtes de la prairie" | "Gens de la loi" | "Hors-la-loi" | "Gens du rail";
 /** Familles des Îles du Vent */
 export type FamilleIles = "Bêtes de mer et de côte" | "Gens de mer" | "Soldats et chasseurs" | "Figures et navires";
-export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande | FamilleResidence | FamilleNoyes | FamilleSec | FamilleAsile | FamilleIles;
+/** Familles de l'Exposition éternelle */
+export type FamilleExpo = "Automates et machines de la foire" | "Gens de la foire et de la pègre" | "Gardes, Sûreté et Commissariat" | "Figures et grandes machines";
+export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande | FamilleResidence | FamilleNoyes | FamilleSec | FamilleAsile | FamilleIles | FamilleExpo;
 
 export type Region =
   // Aubreterre
@@ -108,6 +111,15 @@ export type Region =
   | "Les mornes de Saint-Domingue"
   | "La fosse de Bahama"
   | "la mer des Antilles"
+  // L'Exposition éternelle
+  | "La Galerie des Machines"
+  | "La Tour"
+  | "Le Trocadéro"
+  | "Le Palais de l'Électricité"
+  | "Les Villages"
+  | "Grenelle et Javel"
+  | "Les Carrières"
+  | "La Butte"
   | "Partout";
 
 export interface Speed {
@@ -1700,7 +1712,7 @@ const CREATURES_AUBRETERRE: Creature[] = [
 ];
 
 /** Toutes les créatures de tous les mondes ; creaturesFor(genre) pour un seul. */
-export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE, ...BESTIAIRE_RESIDENCE, ...BESTIAIRE_NOYES, ...BESTIAIRE_SEC, ...BESTIAIRE_ASILE, ...BESTIAIRE_ILES];
+export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE, ...BESTIAIRE_RESIDENCE, ...BESTIAIRE_NOYES, ...BESTIAIRE_SEC, ...BESTIAIRE_ASILE, ...BESTIAIRE_ILES, ...BESTIAIRE_EXPO];
 
 /** Créatures d'un genre (pour l'instant, seul le monde fantasy d'Aubreterre en a). */
 export function creaturesFor(genre: GenreId): Creature[] {

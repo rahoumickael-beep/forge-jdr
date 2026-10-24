@@ -48,6 +48,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   "Gens de mer": "low golden sun over a heaving sea, salt haze and warm rim light on tarred rope and weathered timber, ochre and brass tones",
   "Soldats et chasseurs": "hard white tropical noon sun with deep green jungle shadows, whitewashed stone and buff leather tones",
   "Figures et navires": "storm light breaking through slate clouds over dark water, one pale shaft of sun, indigo and tarnished brass tones",
+  // L'Exposition éternelle (gravure victorienne rehaussée)
+  "Automates et machines de la foire": "cold white arc-lamp glare through drifting steam, gunmetal and brass tones",
+  "Gens de la foire et de la pègre": "warm gaslight haze on a crowded evening street, soot black and tarnished gold tones",
+  "Gardes, Sûreté et Commissariat": "blue-grey dusk over wet cobblestones with a polished brass gleam, steel blue and pewter tones",
+  "Figures et grandes machines": "red furnace glow under a vaulted glass roof, one pale shaft of daylight through iron girders, copper and soot tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */

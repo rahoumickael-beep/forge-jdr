@@ -100,12 +100,13 @@ export function noterFait(c: Campagne, texte: string) {
 /** Plafond de la jauge d'un monde : 100, ou plus si elle part plus haut (131 Phares dans l'Archipel). */
 export const jaugeMax = (canon: Canon | undefined) => canon?.campagne?.jauge?.max ?? Math.max(100, canon?.campagne?.jauge?.depart ?? 100);
 
-/** Règle la jauge ; rend les seuils franchis vers le bas, à annoncer au MJ. */
+/** Règle la jauge ; rend les seuils franchis (vers le bas, ou vers le haut si la jauge monte), à annoncer au MJ. */
 export function reglerJauge(c: Campagne, valeur: number, canon: Canon | undefined): { valeur: number; effet: string }[] {
   if (c.jauge === null) return [];
   const avant = c.jauge;
   c.jauge = borne(valeur, 0, jaugeMax(canon));
-  return (canon?.campagne?.jauge?.seuils ?? []).filter((s) => avant > s.valeur && c.jauge! <= s.valeur);
+  const monte = canon?.campagne?.jauge?.monte === true;
+  return (canon?.campagne?.jauge?.seuils ?? []).filter((s) => (monte ? avant < s.valeur && c.jauge! >= s.valeur : avant > s.valeur && c.jauge! <= s.valeur));
 }
 
 export function reglerReserve(c: Campagne, n: number, canon: Canon | undefined) {
@@ -159,12 +160,13 @@ export function preparerSeance(st: Pick<RoomState, "genre" | "level" | "campagne
     }));
   const j = canon?.campagne?.jauge;
   const seuils = j?.seuils ?? [];
+  const monte = j?.monte === true;
   const jauge = j && c.jauge !== null
     ? {
         nom: j.nom,
         valeur: c.jauge,
-        effet: seuils.filter((s) => c.jauge! <= s.valeur).map((s) => s.effet).join(" ") || "Rien n'a encore changé dans le monde.",
-        prochain: seuils.find((s) => c.jauge! > s.valeur),
+        effet: seuils.filter((s) => (monte ? c.jauge! >= s.valeur : c.jauge! <= s.valeur)).map((s) => s.effet).join(" ") || "Rien n'a encore changé dans le monde.",
+        prochain: seuils.find((s) => (monte ? c.jauge! < s.valeur : c.jauge! > s.valeur)),
       }
     : undefined;
   // Accroches du palier, en commençant par celles dont les factions comptent le plus pour le groupe.

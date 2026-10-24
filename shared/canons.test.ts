@@ -12,6 +12,7 @@ import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
 import { LIEUX_CHAMP_D_ASILE, NOMS_CHAMP_D_ASILE } from "./canon/western-table";
 import { LIEUX_ILES_DU_VENT, NOMS_ILES_DU_VENT } from "./canon/pirates-table";
 import { LIEUX_EXPOSITION, NOMS_EXPOSITION } from "./canon/steampunk-table";
+import { LIEUX_HERMES, NOMS_HERMES } from "./canon/contemporain-table";
 import type { Canon } from "./canon";
 
 /** Ce que la table des joueurs charge de chaque canon. */
@@ -25,6 +26,7 @@ const TABLES: Record<string, { lieux: string[]; noms: Canon["noms"] }> = {
   western: { lieux: LIEUX_CHAMP_D_ASILE, noms: NOMS_CHAMP_D_ASILE },
   pirates: { lieux: LIEUX_ILES_DU_VENT, noms: NOMS_ILES_DU_VENT },
   steampunk: { lieux: LIEUX_EXPOSITION, noms: NOMS_EXPOSITION },
+  contemporain: { lieux: LIEUX_HERMES, noms: NOMS_HERMES },
 };
 
 for (const C of Object.values(CANONS) as Canon[]) {
@@ -53,7 +55,8 @@ for (const C of Object.values(CANONS) as Canon[]) {
       assert.ok(a.factions.length > 0 && a.factions.every((id) => factions.has(id)), JSON.stringify(a));
     }
     const seuils = C.campagne?.jauge?.seuils.map((s) => s.valeur) ?? [];
-    assert.deepEqual(seuils, [...seuils].sort((a, b) => b - a), "seuils du plus haut au plus bas");
+    const monte = C.campagne?.jauge?.monte === true;
+    assert.deepEqual(seuils, [...seuils].sort((a, b) => (monte ? a - b : b - a)), monte ? "seuils du plus bas au plus haut" : "seuils du plus haut au plus bas");
   });
 
   test(`canon ${g} : un nom tiré au hasard ne redonne jamais une figure`, () => {
@@ -96,7 +99,7 @@ test("bibliothèque : chaque figure d'un scénario renvoie à un scénario qui e
 
 test("livres des joueurs : aucun secret du canon dans les chapitres écrits pour les joueurs", async () => {
   const { existsSync, readdirSync, readFileSync } = await import("node:fs");
-  const dossiers: Record<string, string> = { fantasy: "content/aubreterre/joueurs", "science-fiction": "content/archipel/joueurs", "dark-fantasy": "content/ternelande/joueurs", cyberpunk: "content/residence/joueurs", horreur: "content/cote-des-noyes/joueurs", "post-apo": "content/grand-sec/joueurs", western: "content/champ-d-asile/joueurs", pirates: "content/iles-du-vent/joueurs", steampunk: "content/exposition-eternelle/joueurs" };
+  const dossiers: Record<string, string> = { fantasy: "content/aubreterre/joueurs", "science-fiction": "content/archipel/joueurs", "dark-fantasy": "content/ternelande/joueurs", cyberpunk: "content/residence/joueurs", horreur: "content/cote-des-noyes/joueurs", "post-apo": "content/grand-sec/joueurs", western: "content/champ-d-asile/joueurs", pirates: "content/iles-du-vent/joueurs", steampunk: "content/exposition-eternelle/joueurs", contemporain: "content/cellule-hermes/joueurs" };
   for (const C of Object.values(CANONS) as Canon[]) {
     const d = dossiers[C.genre];
     if (!d || !existsSync(d)) continue;

@@ -17,12 +17,13 @@ const noyes = /^shared\/(canon\/)?noyes-[^/]+\.ts$/.test(file) || /^scripts\/liv
 const sec = /^shared\/(canon\/)?sec-[^/]+\.ts$/.test(file) || /^scripts\/livres\/monde-sec\.ts$/.test(file);
 const asile = /^shared\/(canon\/)?asile-[^/]+\.ts$/.test(file) || /^scripts\/livres\/monde-asile\.ts$/.test(file);
 const iles = /^shared\/(canon\/)?iles-[^/]+\.ts$/.test(file) || /^scripts\/livres\/monde-iles\.ts$/.test(file);
-const tsPrompts = file === "shared/bestiary.ts" || /^scripts\/livres\/[^/]+\.ts$/.test(file) || archipel || ternelande || residence || noyes || sec || asile || iles;
+const expo = /^shared\/(canon\/)?expo-[^/]+\.ts$/.test(file) || /^scripts\/livres\/monde-expo\.ts$/.test(file);
+const tsPrompts = file === "shared/bestiary.ts" || /^scripts\/livres\/[^/]+\.ts$/.test(file) || archipel || ternelande || residence || noyes || sec || asile || iles || expo;
 if (!jsonPrompts && !tsPrompts) process.exit(0);
 
 const regles = JSON.parse(readFileSync(join(root, "comfyui", "regles-flux.json"), "utf8"));
 const negation = new RegExp(regles.negation, "i");
-const anachronisme = new RegExp(regles.anachronismes[archipel ? "science-fiction" : residence ? "cyberpunk" : noyes ? "horreur" : sec ? "post-apo" : asile ? "western" : iles ? "pirates" : ternelande ? "dark-fantasy" : "fantasy"], "i");
+const anachronisme = new RegExp(regles.anachronismes[archipel ? "science-fiction" : residence ? "cyberpunk" : noyes ? "horreur" : sec ? "post-apo" : asile ? "western" : iles ? "pirates" : expo ? "steampunk" : ternelande ? "dark-fantasy" : "fantasy"], "i");
 
 /** Prompts trouvés dans un morceau de fichier. */
 function prompts(text) {
@@ -42,7 +43,7 @@ for (const p of prompts(written)) {
   const n = p.match(negation);
   const a = p.match(anachronisme);
   if (n) fautes.push(`négation « ${n[0].trim()} » : Flux dessinera ce qui est nié. Décris ce qu'on voit à la place.`);
-  if (a) fautes.push(archipel || residence || noyes || sec || asile || iles ? `« ${a[0]} » : copie d'une licence connue, objet d'après 1923 ou monde réel, hors du monde.` : `« ${a[0]} » : objet anachronique ou qui appelle des poteaux et des câbles dans un monde préindustriel.`);
+  if (a) fautes.push(archipel || residence || noyes || sec || asile || iles || expo ? `« ${a[0]} » : copie d'une licence connue, objet d'après 1923 ou monde réel, hors du monde.` : `« ${a[0]} » : objet anachronique ou qui appelle des poteaux et des câbles dans un monde préindustriel.`);
   if (n || a) fautes.push(`   … ${p.slice(0, 120)}…`);
 }
 if (fautes.length) {

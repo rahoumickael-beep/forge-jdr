@@ -7,6 +7,7 @@ import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
 import { LIEUX_CHAMP_D_ASILE, NOMS_CHAMP_D_ASILE } from "./canon/western-table";
 import { LIEUX_ILES_DU_VENT, NOMS_ILES_DU_VENT } from "./canon/pirates-table";
 import { LIEUX_EXPOSITION, NOMS_EXPOSITION } from "./canon/steampunk-table";
+import { LIEUX_HERMES, NOMS_HERMES } from "./canon/contemporain-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -185,17 +186,17 @@ export const GENRES: Genre[] = [
   {
     id: "contemporain",
     label: "Contemporain / Thriller",
-    pitch: "Monde actuel, espions, complots et enquêtes.",
+    pitch: "La Cellule Hermès : en novembre 2026, quatre coursiers que le Service dit ne pas connaître reçoivent chaque semaine, sur un papier à en-tête gris, l'ordre d'entrer quelque part sans mandat et d'en ressortir avant qu'on se pose la question.",
     theme: { background: "#16191d", floor: "#9aa1a6", wall: "#3b4148", water: "#3b7ca8", vegetation: "#4f8a4a", road: "#5d646b", door: "#c4752a", grid: "rgba(0,0,0,.2)" },
-    stats: ["Physique", "Agilité", "Résistance", "Intellect", "Vigilance", "Charme"],
-    archetypes: ["Agent secret", "Hackeuse", "Policier", "Journaliste", "Médecin urgentiste", "Ancien militaire", "Voleur de luxe", "Avocate"],
-    origins: ["Parisien", "Marseillaise", "New-Yorkais", "Ex-agent de l'Est", "Fille de diplomate"],
-    equipment: ["Pistolet compact", "Smartphone crypté", "Faux passeport", "Kit de crochetage", "Gilet pare-balles", "Voiture rapide", "Ordinateur portable", "Oreillette"],
-    abilities: ["Infiltration", "Piratage", "Conduite", "Interrogatoire", "Combat rapproché", "Déguisement"],
-    nameStart: ["Alex", "Sam", "Léa", "Max", "Nina", "Hugo", "Inès", "Karim", "Zoé"],
-    nameEnd: [" Moreau", " Laurent", " Petit", " Garcia", " Roux", " Benali", " Martin"],
-    places: ["un gala à Monaco", "le métro parisien", "un laboratoire secret en Suisse", "un yacht au large", "un entrepôt sur les docks du Havre"],
-    traits: ["calme", "impulsif", "idéaliste", "pragmatique"],
+    stats: ["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"],
+    archetypes: ["Chauffeur", "Filocheur", "Technicien", "Négociateur", "Infiltré", "Tireur", "Médecin", "Faussaire", "Analyste", "Garde du corps"],
+    origins: ["Gens d'armes", "Gens de l'enquête", "Gens du chiffre", "Gens de l'argent", "Gens du monde", "Gens de passage"],
+    equipment: ["Téléphone jetable", "Carte SIM étrangère", "Couverture et faux papiers", "Kit de crochetage", "Gilet pare-balles souple sous le manteau", "Voiture de location", "Ordinateur propre", "Balise de suivi", "Enregistreur discret", "Gilet de chantier et casquette"],
+    abilities: ["Filer sans être vu", "Changer de visage", "Poser un micro", "Conduire de nuit", "Négocier un pot-de-vin", "Nettoyer une trace", "Lire un relevé bancaire", "Stabiliser un blessé"],
+    nameStart: NOMS_HERMES.prenoms,
+    nameEnd: NOMS_HERMES.familles,
+    places: LIEUX_HERMES,
+    traits: ["s'assoit toujours face à la porte", "note les plaques sans le vouloir", "compte les sorties avant d'entrer", "ne dit jamais son prénom en entier", "laisse son téléphone dans un sac dans un sac", "répond à chaque question par une question"],
   },
 ];
 

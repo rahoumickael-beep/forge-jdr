@@ -396,7 +396,7 @@ io.on("connection", (socket) => {
     const c = st.campagne;
     const canon = canonDe(st.genre);
     if (typeof p.jauge === "number") {
-      for (const s of reglerJauge(c, p.jauge, canon)) log(room, { from: "Système", text: `${canon?.campagne?.jauge?.nom ?? "La jauge"} passe sous ${s.valeur} : ${s.effet}`, kind: "systeme", secret: true });
+      for (const s of reglerJauge(c, p.jauge, canon)) log(room, { from: "Système", text: `${canon?.campagne?.jauge?.nom ?? "La jauge"} ${canon?.campagne?.jauge?.monte ? "atteint" : "passe sous"} ${s.valeur} : ${s.effet}`, kind: "systeme", secret: true });
     }
     if (typeof p.jaugeVisible === "boolean") c.jaugeVisible = p.jaugeVisible;
     if (typeof p.reserve === "number") reglerReserve(c, p.reserve, canon);

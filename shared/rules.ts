@@ -10,6 +10,8 @@ import { CLASSES_ILES } from "./iles-classes";
 import { REGLES_ILES } from "./iles-regles";
 import { CLASSES_EXPO } from "./expo-classes";
 import { REGLES_EXPO } from "./expo-regles";
+import { CLASSES_HERMES } from "./hermes-classes";
+import { REGLES_HERMES } from "./hermes-regles";
 import { REGLES_ASILE } from "./asile-regles";
 import { REGLES_ARCHIPEL } from "./archipel-regles";
 import { REGLES_TERNELANDE } from "./ternelande-regles";
@@ -994,6 +996,7 @@ export const CLASSES: CharacterClass[] = [
   ...CLASSES_ASILE,
   ...CLASSES_ILES,
   ...CLASSES_EXPO,
+  ...CLASSES_HERMES,
 ];
 
 /** La sous-classe d'un personnage, s'il en a choisi une. */
@@ -1011,11 +1014,11 @@ export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
   western: ["Pistolero", "Vaquero", "Shérif", "Joueur", "Éclaireur", "Chasseur de primes", "Médecin de campagne", "Prédicateur", "Hors-la-loi", "Arpenteur"],
   pirates: ["Capitaine", "Canonnier", "Boucanier", "Chirurgien de bord", "Gabier", "Bretteur", "Maître de manœuvre", "Contrebandier", "Aumônier", "Plongeur"],
   steampunk: ["Mécanicien", "Aéronaute", "Garde", "Reporter", "Médecin", "Chansonnier", "Réfractaire", "Ingénieur", "Interprète", "Escrimeur"],
-  contemporain: ["Ancien militaire", "Hackeuse", "Voleur de luxe", "Médecin urgentiste", "Agent secret", "Avocate"],
+  contemporain: ["Chauffeur", "Filocheur", "Technicien", "Négociateur", "Infiltré", "Tireur", "Médecin", "Faussaire", "Analyste", "Garde du corps"],
 };
 
 /** Règles propres à un monde, à la suite des règles communes (livre en ligne, livre des joueurs). */
-export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE, horreur: REGLES_NOYES, "post-apo": REGLES_SEC, western: REGLES_ASILE, pirates: REGLES_ILES, steampunk: REGLES_EXPO };
+export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE, horreur: REGLES_NOYES, "post-apo": REGLES_SEC, western: REGLES_ASILE, pirates: REGLES_ILES, steampunk: REGLES_EXPO, contemporain: REGLES_HERMES };
 
 export function classesFor(genre: GenreId): CharacterClass[] {
   return CLASSES.filter((c) => c.genre === genre);

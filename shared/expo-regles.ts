@@ -1,12 +1,7 @@
 // Règles propres à l'Exposition éternelle (steampunk, Paris, octobre 1899), lues par les joueurs dans le livre en ligne.
 // Rien de secret. La Pression et les appareils brevetés tiennent la place du surnaturel ; l'argent se compte en francs de 1899.
-// La réserve du MJ (les Pannes) est exportée à part : elle appartient au guide du MJ, pas aux règles que lisent les joueurs.
+// La réserve du MJ vit dans shared/canon/steampunk.ts : elle appartient au guide du MJ, pas aux règles que lisent les joueurs.
 import type { RuleSection } from "./rules";
-
-/** Les Pannes : la réserve du MJ. Utilisée par le canon (shared/canon/steampunk.ts), jamais par le code des joueurs. */
-export const PANNES_MAX = 4;
-export const REGLE_DES_PANNES =
-  "Chaque fois qu'un personnage franchit un seuil de Pression (3, 5, 7 ou 10), le MJ gagne une Panne (quatre au plus). Il en dépense une pour faire défaillir un appareil au pire moment : un feu de signalisation qui s'éteint, un guichet automate qui verrouille la porte, un dirigeable qui ne repart pas. Une Panne par seuil et par personnage, une fois par séance. Le joueur peut l'annuler en prenant 1 de Pression.";
 
 export const REGLES_EXPO: RuleSection[] = [
   {
@@ -18,20 +13,20 @@ export const REGLES_EXPO: RuleSection[] = [
       "- De 1 à chaque fois qu'un pouvoir ou un objet porte la mention « Chaudière » : un appareil qu'on emploie à plein régime.",
       "- De 1 quand tu forces un appareil plus loin que sa conception : avantage au jet, ou +1d6 aux dégâts, une fois par scène.",
       "Comment elle baisse :",
-      "- De 2 quand tu fais purger l'appareil chez un mécanicien (5 francs, une heure, une fois par jour).",
-      "- De 1 après un repos long dans le Champ.",
-      "- De 3 après un repos long hors de l'enceinte de l'Exposition. Les gens des Villages, faute de permis de sortie, ne baissent que de 1 après un repos long, où qu'ils le prennent.",
-      "La Pression ne passe jamais sous 0, et elle s'arrête à 10 : à 10, l'appareil éclate (voir plus bas). Ce système remplace les emplacements de sorts : personne n'en a, parce que personne ne lance de sort.",
+      "- De 2 quand tu fais purger l'appareil chez un mécanicien (5 francs, une heure, une fois par jour). Le mécanicien de ton groupe purge gratuitement, comme pour la réparation.",
+      "- De 2 après un repos long dans le Champ.",
+      "- De 4 après un repos long hors de l'enceinte de l'Exposition. Un engagé sans permis du jour ne baisse que de 1 après un repos long. Avec un permis, comme un autre.",
+      "La Pression ne passe jamais sous 0, et elle s'arrête à 10 : à 10, l'appareil éclate (voir plus bas).",
     ],
   },
   {
     id: "ex-pression-donne",
     title: "Ce que fait la Pression",
     body: [
-      "- 3 : la chaudière chauffe. Les contrôleurs peuvent te demander ta carte et ton numéro de brevet, une fois par séance.",
+      "- 3 : la chaudière chauffe. Les contrôleurs te demandent systématiquement ta carte et ton numéro de brevet.",
       "- 5 : surcharge. Quand un 1 naturel sort sur un jet d'attaque ou de test fait avec un appareil, c'est celui-là qui s'enraye : il est inutilisable jusqu'à réparation (une heure, 10 francs).",
       "- 7 : fuite. Quand tu forces un appareil, il te brûle les mains : 1d6 dégâts de feu ou de vapeur (2d6 dès le niveau 11). Les gardes te remarquent à distance.",
-      "- 10 : éclatement. L'appareil que tu viens d'employer explose : 2d6 + ton niveau en dégâts de vapeur dans un rayon de 3 m, sauvegarde d'Endurance pour moitié (DD 8 + ta maîtrise + ton modificateur d'Endurance). Il est détruit, et ta Pression retombe à 4. Une licence neuve coûte 200 francs.",
+      "- 10 : éclatement. L'appareil que tu viens d'employer explose, après l'effet du pouvoir : 2d6 de vapeur, plus 1d6 par tranche de 4 niveaux, dans un rayon de 3 m, sauvegarde d'Endurance pour moitié (DD 8 + ta maîtrise + ton modificateur d'Endurance). Il est détruit, et ta Pression retombe à 4. Une licence neuve coûte 200 francs. Si la Pression monte par le pouvoir d'un autre, c'est l'appareil de celui qui la subit qui explose.",
       "Les effets se cumulent : à 7, tu subis aussi ceux de 3 et de 5.",
     ],
   },
@@ -48,7 +43,7 @@ export const REGLES_EXPO: RuleSection[] = [
       "| Employés et Signataires | ton patron | rien tant que tu le sers ; il reprend l'appareil si tu le quittes",
       "| Visiteurs restés | ta légation (étranger) ou un notaire de ta ville (provincial) | 5 francs par semaine",
       "| Gens de la Butte | personne : ton appareil est acheté sous le manteau | rien, mais il n'a pas de numéro",
-      "À la création, tu pars avec un brevet : l'appareil de ton choix dans le catalogue, d'un prix de 100 francs au plus, dont la licence est avancée. Une semaine de jeu = une séance, ou sept jours de récit si la séance en couvre plusieurs. Quatre semaines de jeu sans payer, et le Bureau reprend l'appareil.",
+      "À la création, tu pars avec un brevet : l'appareil de ton choix dans le catalogue, d'un prix de 120 francs au plus, dont la licence est avancée. Une semaine de jeu = une séance, ou sept jours de récit si la séance en couvre plusieurs. Quatre semaines de jeu sans payer, et le Bureau reprend l'appareil.",
       "Un appareil sans numéro (acheté sous le manteau, ou monté à la main par un ingénieur) marche comme un autre. Mais un contrôleur qui le voit le saisit et inflige 50 francs d'amende, ou t'emmène au dépôt de l'enceinte si tu ne les as pas.",
       "Un appareil enrayé se répare en une heure et 10 francs chez un mécanicien. Un mécanicien de ton groupe le fait sans frais.",
     ],
@@ -89,15 +84,15 @@ export const REGLES_EXPO: RuleSection[] = [
       "| Une purge d'appareil chez un mécanicien | 5 francs",
       "| Une réparation d'appareil | 10 francs",
       "Ce que l'on gagne, par jour : un mécanicien, 5 francs ; un garde, 4 francs ; une ouvrière des ateliers de bobinage, 2 francs 50 ; un engagé des Villages, 1 franc. Un Signataire touche 3 000 francs par mois.",
-      "Au départ, tu prends la plus haute des sommes de ta classe, de ton historique et de ton origine, pas leur total.",
-      "Une dette de loge, un service rendu ou une parole donnée valent parfois plus qu'une pièce. Et ici, 200 francs de licence sont plus de quarante jours de paie pour une ouvrière.",
+      "Au départ, tu prends la plus haute des sommes de ta classe, de ton historique et de ton origine, pas leur total. Les classes et les historiques ne donnent que 15 francs au plus : c'est l'origine qui fait la différence. Villages et Butte, 12 francs ; ateliers, 20 ; Parisiens et Visiteurs, 25 ; Employés, 30 ; fils de Signataire, 40. Une ouvrière des ateliers mécanicienne part ainsi avec 20 francs, et un Parisien reporter avec 25. Le fils de Signataire a de plus un compte de 20 francs par mois chez son père, et son crédit chez les fournisseurs est de 10 francs par semaine, avec 60 francs de dettes ouvertes au plus.",
+      "Une dette de loge, un service rendu ou une parole donnée valent parfois plus qu'une pièce. Un contremaître qui te doit un service te laisse passer devant la file, et ça ne se paie pas en francs. Et ici, 200 francs de licence sont quatre-vingts jours de paie pour une ouvrière.",
     ],
   },
   {
     id: "ex-armes",
     title: "Les armes de 1899",
     body: [
-      "Toutes les armes de cette table sont des armes courantes pour toutes les classes. Les règles de cette fiche valent pour toutes les classes.",
+      "Chaque classe sait se servir de ces armes.",
       "| Arme | Dégâts | Portée | Propriétés | Prix",
       "| Revolver d'ordonnance (8 mm) | 1d8 perforants | 12/36 m | six coups, recharger (action) | 25 francs",
       "| Pistolet à répétition | 1d8 perforants | 12/36 m | huit coups, recharger (action) | 45 francs",
@@ -106,15 +101,15 @@ export const REGLES_EXPO: RuleSection[] = [
       "| Canne-épée | 1d6 perforants | contact | finesse ; on ne la voit pas avant de la tirer | 20 francs",
       "| Épée de salle d'armes | 1d8 perforants | contact | finesse | 35 francs",
       "| Sabre-baïonnette | 1d8 tranchants | contact | polyvalente (1d10) ; arme des gardes | 30 francs",
-      "| Matraque à tension | 1d6 contondants plus 1d6 de foudre | contact | six décharges, voir plus bas ; arme des gardes | 80 francs au marché noir",
+      "| Matraque à tension | 1d6 contondants (+1d6 foudre sur la décharge) | contact | quatre décharges, voir plus bas ; arme des gardes | 80 francs au marché noir",
       "| Couteau | 1d4 tranchants | contact, 6/18 m | léger, finesse, lancer | 2 francs",
       "| Clef anglaise | 1d6 contondants | contact | polyvalente (1d8) | 3 francs",
       "| Canne plombée | 1d6 contondants | contact | finesse | 6 francs",
-      "| Bâton de dynamite | 3d6 contondants, rayon 3 m | 9 m | un usage, mèche | 6 francs au marché noir",
+      "| Bâton de dynamite | 2d6 contondants, rayon 3 m | 9 m | un usage, mèche | 6 francs au marché noir",
       "Les armes à feu et le rechargement. Une arme à feu tire autant de coups que son chargeur en a, puis se recharge en une action entière : on vide les douilles, on glisse les cartouches neuves. Douze cartouches pèsent 300 grammes et coûtent un franc. Sur un 1 naturel au d20, l'arme s'enraye : une action pour la dégager. Une arme à feu mouillée ne tire pas avant d'avoir été essuyée.",
       "Dans l'enceinte de l'Exposition, les armes à feu sont interdites et l'on fouille aux portes (voir « La foire, ses portes et ses contrôleurs »). À Paris, elles sont libres.",
-      "La matraque à tension. Une tige de cuivre gainée de cuir qui envoie une décharge d'accumulateur. Chaque coup qui touche consomme une décharge ; la cible fait une sauvegarde d'Endurance DD 12, ou elle a le désavantage à ses attaques et à ses tests jusqu'à la fin de son prochain tour. L'accumulateur tient six décharges, et se recharge en une heure au Palais de l'Électricité ou à n'importe quel poste de garde. Elle est réservée aux gardes : l'acheter, c'est déjà un délit.",
-      "La dynamite. Allumer la mèche et lancer le bâton prend une action. Toute créature dans le rayon fait une sauvegarde d'Adresse DD 13 ; elle subit la moitié des dégâts si elle réussit. Une cloison de bois, une porte, un mur de brique mince ne résistent pas. Un personnage ne porte que quatre bâtons à la fois, et les vendeurs ne se vantent pas.",
+      "La matraque à tension. Une tige de cuivre gainée de cuir qui envoie une décharge d'accumulateur. Un seul coup par tour peut porter une décharge. Il consomme une des quatre décharges de l'accumulateur, et la foudre n'ajoute son 1d6 que sur ce coup. La cible fait une sauvegarde d'Endurance DD 12, ou elle a le désavantage à ses attaques jusqu'au début de ton prochain tour. Accumulateur vide, la matraque fait 1d6 contondants. Elle se recharge en une heure au Palais de l'Électricité ou à n'importe quel poste de garde. Elle est réservée aux gardes : l'acheter, c'est déjà un délit.",
+      "La dynamite. Allumer la mèche et lancer le bâton prend une action. Toute créature dans le rayon fait une sauvegarde d'Adresse DD 12 ; elle subit la moitié des dégâts si elle réussit. Une cloison de bois, une porte, un mur de brique mince ne résistent pas. Un personnage ne porte que trois bâtons à la fois, et les vendeurs ne se vantent pas.",
     ],
   },
   {
@@ -123,13 +118,14 @@ export const REGLES_EXPO: RuleSection[] = [
     body: [
       "En 1899, presque personne ne porte d'armure. Ce qui protège, c'est le cuir, la toile huilée, la doublure des redingotes et les capotes des gardes.",
       "| Tenue | CA | Prix",
-      "| Vêtements de ville, blouse de toile | 10 + Adresse | rien de plus",
+      "| Vêtements de ville, blouse de toile, veston de cycliste | 10 + Adresse | rien de plus",
       "| Tablier de cuir, veste de cuir, vareuse d'aéronaute en toile huileuse | 11 + Adresse | 8 à 25 francs",
       "| Redingote doublée de cuir, pèlerine doublée, gilet matelassé | 11 + Adresse | 20 francs",
-      "| Capote de garde doublée, pelisse | 12 + Adresse (au plus 2) | 30 francs",
+      "| Capote de garde doublée | 13 + Adresse (au plus 2) | 45 francs",
+      "| Pelisse | 12 + Adresse (au plus 2) | 30 francs",
       "| Cuirasse | 14 + Adresse (au plus 2), désavantage en Discrétion | 150 francs",
       "| Cuirasse à vapeur | voir le catalogue des appareils | 300 francs, plus la licence",
-      "Une cuirasse demande la maîtrise des armures intermédiaires, que les classes Garde et Mécanicien ont. Il n'y a pas de bouclier dans les ruelles et les ateliers.",
+      "La cuirasse, la capote de garde et la pelisse demandent la maîtrise des armures intermédiaires, que les classes Garde et Mécanicien ont. Il n'y a pas de bouclier dans les ruelles et les ateliers.",
       "Qui tombe dans la Seine en cuirasse coule. Il faut une action et un test de Force DD 15 pour la défaire.",
     ],
   },
@@ -146,7 +142,7 @@ export const REGLES_EXPO: RuleSection[] = [
       "| Un dirigeable du Commissariat | 5 francs | le Trocadéro, la Tour et les Invalides, en quelques minutes",
       "| Un dirigeable pour Versailles | 20 francs | une heure",
       "Hors de la foire : l'omnibus à chevaux, le tramway, le fiacre. Le télégraphe est partout ; le téléphone, dans les bureaux et les grands hôtels ; à Paris, un pneumatique traverse la ville en deux heures dans ses tuyaux.",
-      "Un dirigeable ne part pas sans billet, et le contrôleur compte les passagers sur une ardoise. Par grand vent, la passerelle d'embarquement demande un test d'Acrobaties ou d'Athlétisme DD 12 : un échec fait tomber d'un mètre (1d6 dégâts).",
+      "Un dirigeable ne part pas sans billet, et le contrôleur compte les passagers sur une ardoise. Par grand vent, la passerelle d'embarquement demande un test d'Acrobaties ou d'Athlétisme DD 12 : un échec fait faire une chute de trois mètres (1d6 dégâts).",
     ],
   },
   {
@@ -154,9 +150,9 @@ export const REGLES_EXPO: RuleSection[] = [
     title: "La foire, ses portes et ses contrôleurs",
     body: [
       "L'Exposition occupe le Champ-de-Mars, l'esplanade des Invalides, le Trocadéro et les deux berges de la Seine jusqu'à Grenelle. Elle ne ferme ni la nuit ni le dimanche. On y entre avec un billet à un franc, ou avec une carte de Permanent (5 francs par mois).",
-      "Les portes. Les gardes fouillent à chaque porte. Une arme à feu se laisse en consigne (50 centimes, contre un jeton de laiton) ou se cache : un test d'Escamotage ou de Discrétion contre la Perception du garde, DD 12 pour un couteau, 14 pour un revolver, 16 pour un fusil de chasse démonté. Un garde qui la trouve la saisit, et le Commissariat rend rarement ce qu'il saisit.",
-      "Les contrôleurs. Ils demandent la carte, puis le numéro de brevet. Qui n'a ni l'une ni l'autre peut s'en tirer par un test de Tromperie ou de Persuasion DD 13. Un contrôle qui tourne mal finit au dépôt de l'enceinte, où le règlement autorise à retenir un mois.",
-      "Les Villages. Les gens engagés sous contrat à l'esplanade des Invalides ont leur livret d'engagé et leur laissez-passer gardés au Trocadéro, et il leur faut un permis pour sortir de l'enceinte. On le refuse souvent. Pour un personnage engagé des Villages, obtenir un permis est un test de Persuasion DD 15 devant l'employé du Trocadéro, ou un service que le Conseil des Villages accepte de rendre. Un engagé arrêté hors de l'enceinte sans permis est renvoyé à son impresario, avec une amende retenue sur sa paie. Derrière la corde, ce sont des gens qui regardent aussi, et qui comptent.",
+      "Les portes. Les gardes fouillent à chaque porte. Une arme à feu se laisse en consigne (50 centimes, contre un jeton de laiton) ou se cache : un test d'Escamotage ou de Discrétion contre la Perception du garde, DD 12 (couteau), 14 (revolver) ou 16 (fusil démonté), +2 si le garde fouille à fond. Un garde qui la trouve la saisit, et le Commissariat rend rarement ce qu'il saisit.",
+      "Les contrôleurs. Ils demandent la carte, puis le numéro de brevet. Qui n'a ni l'une ni l'autre peut s'en tirer par un test de Tromperie ou de Persuasion DD 13. Un contrôle qui tourne mal finit au dépôt de l'enceinte, où le règlement autorise à retenir un mois. Le dépôt se joue en scène : caution de 50 francs, évasion ou service dû. Le MJ ne retire pas un joueur de la table.",
+      "Les Villages. Les gens engagés sous contrat à l'esplanade des Invalides ont leur livret d'engagé et leur laissez-passer gardés au Trocadéro, et il leur faut un permis pour sortir de l'enceinte. On le refuse souvent. Pour un personnage engagé des Villages, obtenir un permis est un test de Persuasion DD 15 devant l'employé du Trocadéro, ou un service que le Conseil des Villages accepte de rendre. Un second essai est possible après un service rendu au Conseil. Avantage si le personnage présente un employeur ou un médecin qui le réclame. Un engagé arrêté hors de l'enceinte sans permis est renvoyé à son impresario, avec une amende retenue sur sa paie.",
       "Les grilles. Les grilles des Villages se ferment à six heures du soir. Qui reste dehors passe la nuit dehors.",
     ],
   },
@@ -167,7 +163,7 @@ export const REGLES_EXPO: RuleSection[] = [
       "Une foire de machines blesse plus de monde qu'une taverne. Ces dangers sont ordinaires dans les ateliers et dans la Galerie ; le MJ en juge la gravité selon le lieu.",
       "- Une fuite de vapeur : sauvegarde d'Adresse DD 12 ou 2d6 dégâts de feu. Une conduite maîtresse : DD 15 et 4d6.",
       "- Une courroie qui happe une manche : sauvegarde d'Adresse DD 13, ou 2d10 dégâts contondants et la victime est entravée jusqu'à ce qu'on arrête la machine (un test de Force DD 15 pour se dégager sans aide).",
-      "- Un courant d'atelier : sauvegarde d'Endurance DD 12, ou 2d10 dégâts de foudre. Un câble du Palais de l'Électricité : DD 15 et 6d10.",
+      "- Un courant d'atelier : sauvegarde d'Endurance DD 12, ou 2d10 dégâts de foudre. Un câble du Palais de l'Électricité : DD 15 et 4d10 (10d10 à partir du niveau 11).",
       "- Un chaudron qui éclate : 3d6 dégâts de feu dans un rayon de 3 m, sauvegarde d'Adresse pour moitié.",
       "Les poitrinaires des Villages et les brûlés de la Galerie ont les mêmes soins : un test de Médecine DD 12 pour panser, DD 15 pour une brûlure grave. Sans soins, une brûlure grave donne un niveau d'épuisement à la fin du jour.",
     ],

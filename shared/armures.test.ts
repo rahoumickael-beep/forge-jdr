@@ -39,7 +39,7 @@ test("lit les vêtements de 1899 de l'Exposition éternelle", () => {
   assert.equal(ca("Vareuse d'aéronaute en toile huileuse"), 13);
   assert.equal(ca("Blouse renforcée de cuir"), 13);
   assert.equal(ca("Tablier de cuir d'infirmerie"), 13);
-  assert.equal(ca("Capote de garde doublée", "Armures légères et intermédiaires"), 14, "capote = 12 + Adresse (au plus 2)");
+  assert.equal(ca("Capote de garde doublée", "Armures légères et intermédiaires"), 15, "capote de garde doublée = 13 + Adresse (au plus 2)");
   assert.equal(ca("Redingote de ville et chapeau"), 12, "une redingote ordinaire ne protège pas");
 });
 

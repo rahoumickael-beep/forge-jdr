@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL, CHAMP_D_ASILE, COTE_DES_NOYES, EXPOSITION, GRAND_SEC, ILES_DU_VENT, RESIDENCE, TERNELANDE } from "./canon";
+import { ARCHIPEL, CELLULE_HERMES, CHAMP_D_ASILE, COTE_DES_NOYES, EXPOSITION, GRAND_SEC, ILES_DU_VENT, RESIDENCE, TERNELANDE } from "./canon";
 import { classesFor, CLASSES, CLASS_NAMES_BY_GENRE, REGLES_DU_MONDE, SKILLS } from "./rules";
 import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import { REGLES_RESIDENCE } from "./residence-regles";
@@ -14,7 +14,8 @@ import { REGLES_ASILE } from "./asile-regles";
 import { HISTORIQUES_ILES, ORIGINES_ILES, PERSONNALITE_ILES } from "./iles-origines";
 import { GRAINS_MAX, REGLES_ILES, REGLE_DES_GRAINS } from "./iles-regles";
 import { HISTORIQUES_EXPO, ORIGINES_EXPO, PERSONNALITE_EXPO } from "./expo-origines";
-import { PANNES_MAX, REGLES_EXPO, REGLE_DES_PANNES } from "./expo-regles";
+import { REGLES_EXPO } from "./expo-regles";
+import { PANNES_MAX, REGLE_DES_PANNES } from "./canon/steampunk";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
@@ -25,7 +26,8 @@ const sec = classesFor("post-apo");
 const asile = classesFor("western");
 const iles = classesFor("pirates");
 const expo = classesFor("steampunk");
-const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec, ...asile, ...iles, ...expo];
+const hermes = classesFor("contemporain");
+const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec, ...asile, ...iles, ...expo, ...hermes];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
@@ -37,6 +39,7 @@ test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(asile.length, 10);
   assert.equal(iles.length, 10);
   assert.equal(expo.length, 10);
+  assert.equal(hermes.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -424,7 +427,7 @@ test("classes de l'Exposition éternelle : la Chaudière fait monter la Pression
   }
   assert.ok(expo.filter((c) => c.powers.some((p) => p.name === "Sous pression")).length >= 3, "au moins trois métiers vivent de la Pression");
   const texte = JSON.stringify(REGLES_EXPO);
-  for (const mot of ["Elle part à 0", "de 0 à 10", "la chaudière chauffe", "surcharge", "fuite", "éclatement", "2d6 + ton niveau", "retombe à 4", "deux brevets", "200 francs", "5 francs par semaine", "retenue de 1 franc", "Gens des Villages"]) {
+  for (const mot of ["Elle part à 0", "de 0 à 10", "la chaudière chauffe", "surcharge", "fuite", "éclatement", "plus 1d6 par tranche de 4 niveaux", "retombe à 4", "deux brevets", "200 francs", "5 francs par semaine", "retenue de 1 franc", "Gens des Villages"]) {
     if (mot === "de 0 à 10") continue;
     assert.ok(texte.includes(mot), `règles de la Pression : « ${mot} »`);
   }

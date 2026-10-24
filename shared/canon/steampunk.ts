@@ -4,9 +4,13 @@
 // Ce que la machine sous le sol est, ce que le Commissariat en tire et ce que prépare la Nuit du Siècle sont dans les secrets, pas dans la chronologie :
 // la chronologie ne dit que ce que tout le monde sait.
 // Tous les personnages sont inventés. L'Exposition de 1889 a bien eu lieu au Champ-de-Mars ; ses créateurs, comme les personnes réelles de l'époque, n'ont aucune place ici.
-import { PANNES_MAX, REGLE_DES_PANNES } from "../expo-regles";
 import { NOMS_EXPOSITION } from "./steampunk-table";
 import type { Canon } from "./types";
+
+/** Les Pannes : la réserve du MJ. Code du MJ seulement : jamais importé par le code des joueurs. */
+export const PANNES_MAX = 4;
+export const REGLE_DES_PANNES =
+  "Chaque fois qu'un personnage franchit un seuil de Pression (3, 5, 7 ou 10), le MJ gagne une Panne (quatre au plus). Il en dépense une pour faire défaillir un appareil au pire moment : un feu de signalisation qui s'éteint, un guichet automate qui verrouille la porte, un dirigeable qui ne repart pas. Un même personnage ne rapporte qu'une Panne par seuil, une seule fois par séance. Le joueur peut l'annuler en prenant 1 de Pression. Annuler une Panne en prenant 1 de Pression ne donne pas de nouvelle Panne si ce point franchit un seuil.";
 
 export const EXPOSITION: Canon = {
   genre: "steampunk",

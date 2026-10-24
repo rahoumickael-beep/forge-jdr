@@ -97,7 +97,7 @@ export function CampagnePanel({ room }: { room: RoomView }) {
             {[-3, -1, 1, 2, 5].map((d) => <button key={d} className="btn small" onClick={() => send("campagne:set", { jauge: c.jauge! + d })}>{d > 0 ? `+${d}` : d}</button>)}
           </div>
           <label className="small"><input type="checkbox" checked={c.jaugeVisible} onChange={(e) => send("campagne:set", { jaugeVisible: e.target.checked })} /> Les joueurs voient la jauge</label>
-          {prep.jauge?.prochain && <p className="small muted">Sous {prep.jauge.prochain.valeur} : {prep.jauge.prochain.effet}</p>}
+          {prep.jauge?.prochain && <p className="small muted">{jauge.monte ? "À" : "Sous"} {prep.jauge.prochain.valeur} :{prep.jauge.prochain.effet}</p>}
         </div>
       )}
 

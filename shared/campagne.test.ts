@@ -2,12 +2,14 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { campagnePourJoueur, cloreSeance, nettoyerCampagne, noterFait, nouvelleCampagne, ouvrirSeance, preparerSeance, reglerJauge, reglerReserve, texteDePreparation } from "./campagne";
 import { AUBRETERRE, nomsDuCanon } from "./canon";
+import type { GenreId } from "./types";
 
 test("campagne : une partie fantasy démarre avec le Sceau à 100 et une réputation par faction du canon", () => {
   const c = nouvelleCampagne("fantasy");
   assert.equal(c.jauge, 100);
   assert.deepEqual(Object.keys(c.reputations).sort(), AUBRETERRE.factions.map((f) => f.id).sort());
-  assert.equal(nouvelleCampagne("contemporain").jauge, null, "un monde sans canon n'a pas de jauge");
+  assert.equal(nouvelleCampagne("contemporain").jauge, 12, "la Collection part à 12");
+  assert.equal(nouvelleCampagne("inconnu" as GenreId).jauge, null, "un genre sans canon n'a pas de jauge");
   assert.equal(nouvelleCampagne("steampunk").jauge, 100, "le Pouls part à 100");
 });
 

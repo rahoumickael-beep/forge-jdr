@@ -10,6 +10,7 @@ import { GRAND_SEC } from "./canon/post-apo";
 import { CHAMP_D_ASILE } from "./canon/western";
 import { ILES_DU_VENT } from "./canon/pirates";
 import { EXPOSITION } from "./canon/steampunk";
+import { CELLULE_HERMES } from "./canon/contemporain";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -96,12 +97,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Cent francs, comptés devant témoin", "Une licence de brevet payée", "La confiance d'un atelier de Javel", "Une carte de Permanent", "Un permis de sortie pour une famille", "Une place sur un dirigeable de ligne"],
   },
   "contemporain": {
-    hooks: ["Un témoin clé doit survivre jusqu'au procès.", "Une clé USB contient la liste des agents infiltrés.", "Un milliardaire a disparu de son yacht.", "Un virus informatique bloque la ville."],
-    villains: ["un trafiquant international", "une taupe dans les services", "un milliardaire mégalomane", "une hackeuse anarchiste"],
-    motivations: ["faire tomber le gouvernement", "s'enrichir", "venger sa famille"],
-    enemies: ["Voyous", "Gardes du corps", "Mercenaires", "Policiers corrompus", "Tueur à gages", "Commando", "Le cerveau de l'opération"],
-    twists: ["Votre contact est la taupe.", "La victime a organisé sa disparition.", "Le gouvernement est derrière tout ça."],
-    rewards: ["Une prime", "Une nouvelle identité", "Un dossier compromettant", "Un contact haut placé"],
+    hooks: CELLULE_HERMES.accroches.map((a) => a.texte),
+    villains: ["un associé du Cabinet qui n'a jamais tué personne de ses mains", "un patron de groupe de sécurité qui vend ou achète n'importe quel renseignement", "un officier de liaison qui ouvre un canal sans l'accord de ses chefs", "un gestionnaire de banque qui ne touche pas à la chemise avant d'avoir regardé les mains", "un porte-parole qui publie avant de vérifier"],
+    motivations: ["obtenir sa retraite sans être inquiété", "que l'alliance tienne et qu'on lui dise la vérité", "publier avant que la source ne disparaisse", "garder la Cellule en vie jusqu'à sa pension", "un contrat de long terme, quel que soit le client"],
+    enemies: ["Caméras", "Voisins qui notent", "Vigiles", "Douaniers", "Policiers en civil", "Agents de sécurité privés", "Hommes de main d'Ostrevent", "Filateurs de la Section", "Chiens de garde", "Techniciens de la Boîte"],
+    twists: ["Le client qui paie le pli est celui qu'on doit filer.", "Le pli arrive deux minutes après le message qui le demandait.", "Le contact que la Traitante a donné est déjà filé par la Section.", "La valise est vide, et c'est ce qui est précieux."],
+    rewards: ["Une prime de 1 500 € sur la carte", "Une couverture neuve, livrée en cinq jours", "Un contact qui répond à la première sonnerie", "Un dossier qui nomme quelqu'un", "Une semaine sans pli"],
   },
 };
 

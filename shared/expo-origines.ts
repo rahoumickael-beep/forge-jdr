@@ -70,7 +70,7 @@ export const ORIGINES_EXPO: Origin[] = [
         blurb: "On te paie la moitié, et on parle devant toi comme devant un mur. Mariée, ta paie passe parfois par la poche de ton mari ; tu le sais, et tu comptes les francs à ta façon.",
         bonus: { 4: 1, 5: 1 },
         traits: [
-          { name: "Comme devant un mur", text: "Maîtrise de Perception et d'Intuition. Avantage aux tests de Perception sur les gens qui te croient sans importance. Une fois par semaine de jeu, une ouvrière, une blanchisseuse ou une couturière te dit ce qui se dit dans son atelier." },
+          { name: "Comme devant un mur", text: "Maîtrise d'Investigation et d'Intuition. Avantage aux tests de bobinage, de câblage et de réparation fine. Une fois par semaine de jeu, une ouvrière, une blanchisseuse ou une couturière te dit ce qui se dit dans son atelier." },
         ],
       },
     ],
@@ -79,33 +79,32 @@ export const ORIGINES_EXPO: Origin[] = [
     id: "ex-villages",
     genre: "steampunk",
     name: "Gens des Villages",
-    blurb: "Engagés sous contrat de l'Exposition, avec leurs savoir-faire, leurs langues et leurs familles. Des Sénégalais, des Annamites (le Vietnam d'aujourd'hui), mais aussi des Kanaks et des Kabyles : prends la variante qui s'en rapproche, et dis le reste. Derrière la corde, on est regardé, et on regarde.",
+    blurb: "Engagés sous contrat de l'Exposition, avec leurs savoir-faire, leurs langues et leurs familles. Des Sénégalais, des Annamites (le Vietnam d'aujourd'hui), mais aussi des Kanaks et des Kabyles : prends la variante qui s'en rapproche, et dis le reste. Les variantes ne lient personne à un métier : chacune donne le choix libre de deux maîtrises. Derrière la corde, on est regardé, et on regarde.",
     bonus: { 2: 1 },
     speed: 6,
     unique: true,
     traits: [
       { name: "Un savoir-faire que la foire expose", text: "Tu maîtrises un artisanat de ton peuple (tissage, ferronnerie, vannerie, laque, couture ou herboristerie) : avantage aux tests qui s'y rapportent, et tu fabriques ce que tu vends." },
-      { name: "Plusieurs langues", text: "Tu parles ta langue, le français et celle d'un autre Village. Avantage aux tests d'Histoire et de Persuasion pour parler à ceux d'un autre Village." },
-      { name: "Le livret au Trocadéro", text: "Ton livret d'engagé et ton laissez-passer sont gardés au Trocadéro, et il te faut un permis pour sortir de l'enceinte (voir « La foire, ses portes et ses contrôleurs »). Ton impresario t'avance la licence de ton premier brevet, avec une retenue de 1 franc par semaine. Hors de l'enceinte sans permis, tu es un engagé en fuite. Argent de départ : 8 francs." },
-      { name: "Ce qu'on dit devant toi", text: "On parle devant toi comme devant un meuble, et tu entends tout. Avantage aux tests de Perception pour écouter une conversation où l'on te croit sourd ou ignorant." },
+      { name: "Plusieurs langues", text: "Tu parles ta langue, le français et celle d'un autre Village. Avantage aux tests d'Histoire et de Persuasion avec ceux d'un autre Village, et aux tests de Perception pour écouter une conversation où l'on te croit sourd ou ignorant." },
+      { name: "Le livret au Trocadéro", text: "Ton livret d'engagé et ton laissez-passer sont gardés au Trocadéro, et il te faut un permis pour sortir de l'enceinte (voir « La foire, ses portes et ses contrôleurs »). Ton impresario t'avance la licence de ton premier brevet, avec une retenue de 1 franc par semaine. Un engagé sans permis du jour ne baisse que de 1 de Pression après un repos long ; avec un permis, comme un autre. Hors de l'enceinte sans permis, tu es un engagé en fuite. Argent de départ : 12 francs." },
     ],
     subs: [
       {
         id: "ex-villages-senegalais",
         name: "Sénégalais du Village",
-        blurb: "Wolof, sérère ou bambara, ancien tirailleur ou fils d'artisan. Tu tiens des comptes, des noms et des promesses, et tu en as sur chacun.",
+        blurb: "Wolof, sérère ou bambara. Tu as vu ce que valent les promesses de l'impresario, et tu comptes sur ceux de ton Village.",
         bonus: { 2: 1, 5: 1 },
         traits: [
-          { name: "Forge, métal et parole", text: "Maîtrise de Persuasion et d'Intuition. Avantage aux tests de forge et de métal, et dans les négociations avec les autres Villages." },
+          { name: "Forge, métal et parole", text: "Maîtrise de deux compétences au choix parmi Persuasion, Intuition, Médecine, Perception, Athlétisme et Histoire. Avantage aux tests de forge et de métal, et dans les négociations avec les autres Villages." },
         ],
       },
       {
         id: "ex-villages-annamite",
         name: "Annamite du Village",
-        blurb: "Couturier, herboriste, laqueur. Tu as appris à soigner par les plantes et à coudre la soie fine, et personne n'a encore su te dire le prix de ce que tu sais.",
+        blurb: "Couturier, herboriste, laqueur : la variante convient aussi à un Kanak ou à un Kabyle. Tu as appris à soigner par les plantes et à coudre la soie fine, et personne n'a encore su te dire le prix de ce que tu sais.",
         bonus: { 1: 1, 4: 1 },
         traits: [
-          { name: "Plantes et mains fines", text: "Maîtrise de Médecine et de Perception. Avantage aux tests de Médecine par les plantes et à l'artisanat fin." },
+          { name: "Plantes et mains fines", text: "Maîtrise de deux compétences au choix parmi Persuasion, Intuition, Médecine, Perception, Athlétisme et Histoire. Avantage aux tests de Médecine par les plantes et à l'artisanat fin." },
         ],
       },
     ],
@@ -119,8 +118,8 @@ export const ORIGINES_EXPO: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Un patron", text: "Ton patron (un père, un chef de bureau) t'avance la licence de ton premier brevet, sans rien te demander tant que tu le sers. Il la reprend, avec l'appareil, si tu le quittes. Argent de départ : 40 francs." },
-      { name: "Du crédit chez les fournisseurs", text: "Chez un tailleur, un armurier, un libraire de la foire, tu obtiens une fois par semaine de jeu un article de 20 francs au plus à crédit, à payer le mois suivant." },
+      { name: "Un patron", text: "Ton patron (un père, un chef de bureau) t'avance la licence de ton premier brevet, sans rien te demander tant que tu le sers. Il la reprend, avec l'appareil, si tu le quittes. Argent de départ : 30 francs." },
+      { name: "Du crédit chez les fournisseurs", text: "Chez un tailleur, un armurier, un libraire de la foire, tu obtiens jusqu'à 10 francs de crédit par semaine de jeu, à payer le mois suivant, avec 60 francs de dettes ouvertes au plus." },
       { name: "Surveillé", text: "Tu dépends d'un patron, et on te surveille : désavantage à ton premier test de Discrétion de chaque séance dans un bâtiment du Commissariat." },
     ],
     subs: [
@@ -130,7 +129,7 @@ export const ORIGINES_EXPO: Origin[] = [
         blurb: "Ton père a gravé son nom sur une plaque de cuivre. Il en est fier, et il ferme à clef la porte de son atelier.",
         bonus: { 3: 1, 5: 1 },
         traits: [
-          { name: "Le nom sur la plaque", text: "Maîtrise de Persuasion et d'Histoire. Avantage aux tests de Persuasion auprès des gens du monde. Tu as un compte de 50 francs par mois chez ton père. Argent de départ : 60 francs." },
+          { name: "Le nom sur la plaque", text: "Maîtrise de Persuasion et d'Histoire. Avantage aux tests de Persuasion auprès des gens du monde. Tu as un compte de 20 francs par mois chez ton père. Argent de départ : 40 francs." },
         ],
       },
       {
@@ -222,7 +221,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     blurb: "Tu as monté des machines à la Galerie, tu sais où chaque vis a été serrée.",
     skills: ["Investigation", "Escamotage"],
     tool: "Outils d'ajusteur (clefs, jauge, burette)",
-    gear: ["Clef anglaise", "Blouse bleue et gants épais", "Carte syndicale", "Pain et gourde", "25 francs"],
+    gear: ["Clef anglaise", "Blouse bleue et gants épais", "Carte syndicale", "Pain et gourde", "15 francs"],
     feature: { name: "Une clef dans chaque atelier", text: "Dans un atelier de mécanique de la foire ou de Javel, on te prête un établi et on te dit sur quoi tout le monde travaille." },
   },
   {
@@ -232,7 +231,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     blurb: "Tu as porté le képi gris-bleu et la matraque, et tu sais comment on fouille.",
     skills: ["Intimidation", "Perception"],
     tool: "Menottes et sifflet",
-    gear: ["Képi gris-bleu défraîchi", "Sifflet de cuivre", "Menottes", "Carnet de ronde", "20 francs"],
+    gear: ["Képi gris-bleu défraîchi", "Sifflet de cuivre", "Menottes", "Carnet de ronde", "15 francs"],
     feature: { name: "Un képi qui ouvre", text: "À un poste ou à une porte de l'enceinte, un garde que tu as connu te laisse passer ou te dit ce qui s'est passé de nuit. Les gardes en service te reconnaissent comme l'un des leurs, pour le meilleur et pour le pire." },
   },
   {
@@ -242,7 +241,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     blurb: "Tu as couru la foire un calepin à la main.",
     skills: ["Intuition", "Persuasion"],
     tool: "Calepin et crayons",
-    gear: ["Calepin à ressort", "Crayons et plumes", "Carte de presse", "Veston de cycliste", "20 francs"],
+    gear: ["Calepin à ressort", "Crayons et plumes", "Carte de presse", "Veston de cycliste", "15 francs"],
     feature: { name: "Un nom dans le journal", text: "Les camelots, les typographes et les cochers te connaissent : une fois par semaine de jeu, l'un d'eux te raconte ce qu'il a vu avant d'aller le dire à la Sûreté." },
   },
   {
@@ -252,7 +251,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     blurb: "Tu parles trois langues et tu as traduit les contrats que personne ne lisait.",
     skills: ["Persuasion", "Histoire"],
     tool: "Dictionnaires de poche",
-    gear: ["Dictionnaires de poche", "Plume et encre", "Cachet d'interprète", "Redingote râpée", "30 francs"],
+    gear: ["Dictionnaires de poche", "Plume et encre", "Cachet d'interprète", "Redingote râpée", "15 francs"],
     feature: { name: "Trois langues, un contrat", text: "Dans un bureau, une légation ou un comptoir de la foire, on te donne du temps et un siège, et on te laisse relire avant de signer." },
   },
   {
@@ -262,7 +261,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     blurb: "Tu as piloté ou chargé les dirigeables du Commissariat, et tu connais le poids exact d'un ballast.",
     skills: ["Acrobaties", "Perception"],
     tool: "Instruments de pilote (baromètre, boussole)",
-    gear: ["Lunettes à verres jaunes", "Corde et mousqueton", "Baromètre de poche", "Casquette de cuir", "25 francs"],
+    gear: ["Lunettes à verres jaunes", "Corde et mousqueton", "Baromètre de poche", "Casquette de cuir", "15 francs"],
     feature: { name: "Le poids exact d'un ballast", text: "Les équipes d'amarrage te saluent, et un contrôleur des lignes te dit où va tel appareil et quand." },
   },
   {
@@ -292,7 +291,7 @@ export const HISTORIQUES_EXPO: Background[] = [
     blurb: "Tu as quitté les cours pour la voir de près, et tu comptes toi-même les boulons.",
     skills: ["Investigation", "Histoire"],
     tool: "Règle à calcul et compas",
-    gear: ["Règle à calcul et compas", "Cahiers de cours et croquis", "Loupe d'horloger", "Veston râpé", "35 francs"],
+    gear: ["Règle à calcul et compas", "Cahiers de cours et croquis", "Loupe d'horloger", "Veston râpé", "15 francs"],
     feature: { name: "Une table et des notes", text: "Un professeur, un camarade ou un répétiteur te prête sa table et ses notes. Tu reconnais à l'œil un appareil qui a été démonté, puis remonté." },
   },
 ];

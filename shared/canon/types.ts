@@ -70,7 +70,9 @@ export interface JaugeDuMonde {
   /** Au plus (par défaut, le départ ou 100). */
   max?: number;
   depart: number;
-  /** Du plus haut au plus bas. */
+  /** La jauge grandit au lieu de s'épuiser (la Collection de la Cellule Hermès) : les seuils se franchissent vers le haut. */
+  monte?: boolean;
+  /** Du plus haut au plus bas ; du plus bas au plus haut si la jauge monte. */
   seuils: { valeur: number; effet: string }[];
   /** Ce qui la fait remonter. */
   remontees: { action: string; gain: number }[];
