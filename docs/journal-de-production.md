@@ -3,6 +3,7 @@
 Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce qui reste.
 
 ## Choix de Mickael
+- 24/10/2026 : tokens : **Opus reste le cerveau** (délègue et contrôle) ; travail délégué vers Antigravity gratuit (`scripts/deleguer.mjs`). OmniRoute : **A, pas maintenant**, seulement si Antigravity sature souvent.
 - 24/10/2026 : style de la SF (Les Phares) : **A, couverture de poche des années 70** (gouache à l’aérographe, bleus outremer et ambre), contre l’huile usée et la sérigraphie. Charte SF validée. Odile Varlet repeinte et posée (pas encore bleutée, mais mouillée et pâle).
 - 24/10/2026 : chaque monde est **un jeu à part entière** (classes, origines, bestiaire, scénarios, cartes à jouer, thème d’interface, trois livres PDF), au niveau d’Aubreterre. Les huit autres prémisses A collent à la vision de Mickael.
 - 24/10/2026 : la SF est du **space opera à la Star Wars** (on va de planète en planète) : la Flotte Lente est abandonnée pour **Les Phares** (voir `docs/mondes-propositions.md`). Plusieurs espèces jouables ; un ordre mystique (équivalent de la Force, pouvoir qui coûte) ; blasters et lames ; combats de vaisseaux à postes (pilote, artilleur, mécanicien, capitaine) ; l’équipage part avec un vieux cargo endetté. Monde complet et jouable avant de passer au suivant ; illustrations seulement après le choix du style. Claude pousse sur GitHub après chaque étape qui passe les tests.
