@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { armurePortee, classeArmureDepart, equipementDeDepart } from "./armures";
+import { argentDOrigine, armurePortee, classeArmureDepart, equipementDeDepart } from "./armures";
+import { originsFor } from "./origins";
 import { GENRES } from "./genres";
 import { classesFor } from "./rules";
 
@@ -33,4 +34,14 @@ test("fusionne l'équipement de départ", () => {
   assert.deepEqual(equipementDeDepart(["Sac", "10 po"], ["Sac", "5 po"]), ["Sac", "15 po"]);
   assert.deepEqual(equipementDeDepart(["Pistolet à silex", "20 piastres"], ["Gourde", "10 piastres"], true), ["Pistolet à silex", "Gourde", "20 piastres"]);
   assert.deepEqual(equipementDeDepart(["Lasso de crin de douze mètres", "Chapeau à larges bords et jambières de cuir"], ["Lasso de crin", "Chapeau à larges bords"]), ["Lasso de crin de douze mètres", "Chapeau à larges bords et jambières de cuir"]);
+});
+
+test("l'argent de départ de chaque origine est lu par le créateur", () => {
+  for (const g of GENRES) {
+    for (const o of originsFor(g.id)) {
+      for (const t of [...o.traits, ...o.subs.flatMap((s) => s.traits)]) {
+        if (/Argent de départ :/.test(t.text)) assert.ok(argentDOrigine(t.text), `${g.id} ${o.name} : ${t.text}`);
+      }
+    }
+  }
 });

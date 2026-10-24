@@ -79,6 +79,12 @@ export function classeArmureDepart(maitrise: string, equipement: readonly string
 
 const SOMME = /^(\d[\d  ]*) (godets|francs|dollars|piastres|lumens|lm|h|po|pa|livres?|sous)$/;
 
+/** « Argent de départ : 30 dollars, une selle… » dans un trait d'origine → « 30 dollars ». */
+export function argentDOrigine(texte: string): string | undefined {
+  const m = /Argent de départ : (\d(?:[\d  ]*\d)?) ([a-zàâéèêôû]+)/i.exec(texte);
+  return m && SOMME.test(`${m[1]} ${m[2]}`) ? `${m[1]} ${m[2]}` : undefined;
+}
+
 /**
  * Équipement de départ : classe puis historique, sans doublon ni seconde gourde.
  * Un objet déjà cité au début d'un autre (« Lasso de crin » et « Lasso de crin de douze mètres ») ne compte qu'une fois.

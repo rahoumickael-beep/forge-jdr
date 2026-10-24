@@ -16,7 +16,7 @@ import {
   type StatBonus,
   type SubOrigin,
 } from "../../../shared/origins";
-import { classeArmureDepart, equipementDeDepart, PLUS_HAUTE_SOMME } from "../../../shared/armures";
+import { argentDOrigine, classeArmureDepart, equipementDeDepart, PLUS_HAUTE_SOMME } from "../../../shared/armures";
 import { classesFor, type CharacterClass, type Power, type Subclass } from "../../../shared/rules";
 import type { Character, RoomView } from "../../../shared/types";
 import { send, toast } from "../store";
@@ -172,7 +172,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
       skills: [...fixedSkills, ...skills],
       equipment: equipementDeDepart(
         cls!.startingGear,
-        [...traitsDOrigine.flatMap((x) => /Argent de départ : (\d+ \S+)/.exec(x.text)?.[1] ?? []), ...(bg?.gear ?? [])],
+        [...traitsDOrigine.flatMap((x) => argentDOrigine(x.text) ?? []), ...(bg?.gear ?? [])],
         PLUS_HAUTE_SOMME.has(room.genre),
       ),
       abilities: [
