@@ -23,10 +23,14 @@ test("calcule les cas des livres", () => {
   assert.equal(classeArmureDepart("Armures légères et intermédiaires, boucliers", ["Cotte d'écailles", "Bouclier et symbole sacré"], [], stats, [0, 3, 0, 0, 0, 0]), 18);
   assert.equal(classeArmureDepart("Aucune", ["Bâton"], ["Sans armure ni bouclier, ta CA vaut 10 + Dextérité + Sagesse."], stats, [0, 3, 0, 0, 2, 0]), 15);
   assert.equal(classeArmureDepart("Armures légères", ["Tablier de cuir et gants épais"], [], stats, [0, 2, 0, 0, 0, 0]), 13);
+  assert.equal(classeArmureDepart("Armures légères", ["Justaucorps de buffle", "Sabre d'abordage"], [], stats, [0, 2, 0, 0, 0, 0]), 14, "buffle = 12 + Adresse");
+  assert.equal(classeArmureDepart("Armures légères", ["Veste de cuir"], [], stats, [0, 2, 0, 0, 0, 0]), 13, "veste de cuir = 11 + Adresse");
+  assert.equal(classeArmureDepart("Armures légères", ["Chemise de toile"], [], stats, [0, 2, 0, 0, 0, 0]), 12, "sans armure = 10 + Adresse");
 });
 
 test("fusionne l'équipement de départ", () => {
   assert.deepEqual(equipementDeDepart(["Gourde de douze godets", "30 godets"], ["Gourde", "40 godets", "Corde"], true), ["Gourde de douze godets", "Corde", "40 godets"]);
   assert.deepEqual(equipementDeDepart(["Sac", "10 po"], ["Sac", "5 po"]), ["Sac", "15 po"]);
+  assert.deepEqual(equipementDeDepart(["Pistolet à silex", "20 piastres"], ["Gourde", "10 piastres"], true), ["Pistolet à silex", "Gourde", "20 piastres"]);
   assert.deepEqual(equipementDeDepart(["Lasso de crin de douze mètres", "Chapeau à larges bords et jambières de cuir"], ["Lasso de crin", "Chapeau à larges bords"]), ["Lasso de crin de douze mètres", "Chapeau à larges bords et jambières de cuir"]);
 });

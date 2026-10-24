@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL, CHAMP_D_ASILE, COTE_DES_NOYES, GRAND_SEC, RESIDENCE, TERNELANDE } from "./canon";
+import { ARCHIPEL, CHAMP_D_ASILE, COTE_DES_NOYES, GRAND_SEC, ILES_DU_VENT, RESIDENCE, TERNELANDE } from "./canon";
 import { classesFor, CLASSES, CLASS_NAMES_BY_GENRE, REGLES_DU_MONDE, SKILLS } from "./rules";
 import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import { REGLES_RESIDENCE } from "./residence-regles";
@@ -11,6 +11,8 @@ import { HISTORIQUES_SEC, ORIGINES_SEC, PERSONNALITE_SEC } from "./sec-origines"
 import { REGLES_SEC } from "./sec-regles";
 import { HISTORIQUES_ASILE, ORIGINES_ASILE, PERSONNALITE_ASILE } from "./asile-origines";
 import { REGLES_ASILE } from "./asile-regles";
+import { HISTORIQUES_ILES, ORIGINES_ILES, PERSONNALITE_ILES } from "./iles-origines";
+import { GRAINS_MAX, REGLES_ILES, REGLE_DES_GRAINS } from "./iles-regles";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
@@ -19,7 +21,8 @@ const residence = classesFor("cyberpunk");
 const noyes = classesFor("horreur");
 const sec = classesFor("post-apo");
 const asile = classesFor("western");
-const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec, ...asile];
+const iles = classesFor("pirates");
+const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec, ...asile, ...iles];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
@@ -29,6 +32,7 @@ test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(noyes.length, 10);
   assert.equal(sec.length, 10);
   assert.equal(asile.length, 10);
+  assert.equal(iles.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -288,4 +292,71 @@ test("classes du Champ-d'Asile : la poudre est comptée, le Nom monte par coup d
   }
   const texte = JSON.stringify(REGLES_ASILE);
   for (const mot of ["100 dollars", "500 dollars", "Colt | 17 dollars", "Winchester | 30 dollars", "25 dollars sur parole", "Au plus un point par séance", "1,5 kg"]) assert.ok(texte.includes(mot), `règles du Nom et de la poudre : « ${mot} »`);
+});
+
+test("classes des Îles du Vent : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify([iles, ORIGINES_ILES, HISTORIQUES_ILES, REGLES_ILES, PERSONNALITE_ILES]);
+  for (const secret of ILES_DU_VENT.secrets) assert.ok(!text.includes(secret), secret);
+  for (const mot of ["Santa Clara", "Larrañaga", "croix rouge", "Matanzas", "registre", "pièce fausse"]) {
+    assert.ok(!text.toLowerCase().includes(mot.toLowerCase()), `texte joueur des Îles du Vent : « ${mot} »`);
+  }
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes des Îles du Vent : « ${word} »`);
+  }
+  for (const mot of ILES_DU_VENT.anachronismes) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${mot.toLowerCase()}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `anachronisme dans les Îles du Vent : « ${mot} »`);
+  }
+});
+
+test("classes des Îles du Vent : compétences connues, caractéristiques du genre, ids préfixés", () => {
+  const noms = new Set(SKILLS.map((s) => s.name));
+  const stats = new Set(["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"]);
+  for (const c of iles) {
+    assert.ok(c.id.startsWith("pi-"), c.id);
+    for (const s of c.skills.from) assert.ok(noms.has(s), `${c.name} : compétence « ${s} » inconnue`);
+    for (const s of [...c.mainStats, ...c.saves]) assert.ok(stats.has(s), `${c.name} : caractéristique « ${s} » inconnue`);
+    assert.equal(c.subclasses[0].powers[0].level, 3, `${c.name} : premier pouvoir de sous-classe au niveau 3`);
+    assert.ok(!/Dextérité|Agilité|Sagesse|Charisme|Intelligence|Constitution/.test(JSON.stringify(c)), `${c.name} : nom de caractéristique d'un autre genre`);
+    assert.ok(c.powers.some((p) => p.level === 20), `${c.name} : pas de pouvoir de niveau 20`);
+  }
+  for (const h of HISTORIQUES_ILES) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
+  assert.equal(ORIGINES_ILES.length, 6);
+  assert.equal(HISTORIQUES_ILES.length, 8);
+  for (const o of ORIGINES_ILES) assert.equal(o.subs.length, 2, `${o.name} : deux variantes`);
+  assert.equal(CLASS_NAMES_BY_GENRE.pirates?.length, 10);
+  for (const c of iles) assert.ok(CLASS_NAMES_BY_GENRE.pirates?.includes(c.name), `${c.name} absent de la liste de noms`);
+  assert.ok(REGLES_DU_MONDE.pirates === REGLES_ILES);
+});
+
+test("classes des Îles du Vent : un coup, puis recharger ; le coup de main coûte du Moral", () => {
+  for (const c of iles) {
+    const tous = [...c.powers, ...c.subclasses.flatMap((s) => s.powers)];
+    assert.ok(c.powers.some((p) => p.name === "Un coup, puis recharger"), `${c.name} : passif « Un coup, puis recharger » manquant`);
+    const coup = tous.filter((p) => /Coup de main :/.test(p.effect));
+    assert.equal(c.powers.some((p) => p.name === "Le navire compte"), coup.length > 0, `${c.name} : coup de main et passif « Le navire compte » vont ensemble`);
+    assert.ok(coup.length >= 2, `${c.name} : un coup de main aux niveaux 11 et 17`);
+    for (const p of coup) assert.ok(p.recharge === "repos long" && p.uses === 1, `${c.name} : ${p.name} (coup de main) une fois par repos long`);
+    assert.ok(coup.every((p) => p.level >= 11), `${c.name} : coup de main avant le niveau 11`);
+  }
+  const texte = JSON.stringify(REGLES_ILES);
+  for (const mot of ["Le Moral part à 6", "1 point de Moral", "Un seul coup de main par scène", "Une cargaison de captifs n'est pas une prise", "Tout le monde commence à 1", "De 0 à 3", "un coup, rechargement long", "mal de Siam", "tafia", "4 réaux"]) {
+    if (mot === "Le Moral part à 6" || mot === "Tout le monde commence à 1" || mot === "De 0 à 3") continue;
+    assert.ok(texte.includes(mot), `règles des Îles du Vent : « ${mot} »`);
+  }
+  assert.ok(texte.includes("Le Moral part à 6"), "le Moral part à 6");
+  assert.ok(texte.includes("de 0 à 3"), "la Chance va de 0 à 3");
+  assert.ok(texte.includes("Tout le monde commence à 1"), "la Chance part à 1");
+  assert.ok(!/Grains/.test(texte), "les Grains sont dans le guide du MJ, pas dans les règles des joueurs");
+  assert.equal(GRAINS_MAX, 4);
+  assert.equal(ILES_DU_VENT.campagne?.reserve?.max, 4);
+  assert.equal(ILES_DU_VENT.campagne?.reserve?.regle, REGLE_DES_GRAINS);
+  assert.equal(ILES_DU_VENT.campagne?.jauge?.depart, 100);
+  assert.equal(ILES_DU_VENT.campagne?.jauge?.nom, "la Paix des Îles");
+});
+
+test("Îles du Vent : aucun captif parmi les prises, aucun butin humain dans le texte joueur", () => {
+  const texte = JSON.stringify([iles, ORIGINES_ILES, HISTORIQUES_ILES, REGLES_ILES, PERSONNALITE_ILES, ILES_DU_VENT.cartes]).toLowerCase();
+  for (const mot of ["cargaison d'esclaves", "esclaves à vendre", "prix d'un esclave", "vendre les captifs", "piastres par tête", "ou six esclaves"]) assert.ok(!texte.includes(mot), mot);
 });

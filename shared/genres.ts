@@ -5,6 +5,7 @@ import { LIEUX_RESIDENCE, NOMS_RESIDENCE } from "./canon/cyberpunk-table";
 import { LIEUX_COTE_DES_NOYES, NOMS_COTE_DES_NOYES } from "./canon/horreur-table";
 import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
 import { LIEUX_CHAMP_D_ASILE, NOMS_CHAMP_D_ASILE } from "./canon/western-table";
+import { LIEUX_ILES_DU_VENT, NOMS_ILES_DU_VENT } from "./canon/pirates-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -153,17 +154,17 @@ export const GENRES: Genre[] = [
   {
     id: "pirates",
     label: "Pirates",
-    pitch: "Haute mer, abordages, trésors et îles maudites.",
+    pitch: "Les Îles du Vent : en 1716, l'argent d'une flotte espagnole gît au fond de la mer de Floride, tout ce qui flotte dans les Antilles y court, et des marins jurent avoir vu un navire blanc comme un os.",
     theme: { background: "#0f2533", floor: "#d8c08a", wall: "#6a4b2c", water: "#2a6f9b", vegetation: "#3f8a4a", road: "#b39463", door: "#7a3e1c", grid: "rgba(0,30,50,.2)" },
-    stats: ["Force", "Agilité", "Robustesse", "Ruse", "Navigation", "Panache"],
-    archetypes: ["Capitaine", "Canonnier", "Navigatrice", "Cuisinier de bord", "Corsaire", "Sorcier vaudou", "Mousse", "Maître d'armes"],
-    origins: ["Port-Royal", "Tortuga", "Marine royale déserteuse", "Esclave libéré", "Fils de marchand"],
-    equipment: ["Sabre d'abordage", "Pistolet à silex", "Longue-vue", "Boussole étrange", "Rhum", "Grappin", "Carte au trésor", "Perroquet bavard"],
-    abilities: ["Abordage", "Navigation aux étoiles", "Duel", "Tirer au canon", "Vaudou", "Intimidation"],
-    nameStart: ["Bart", "Cal", "Jack", "Anne", "Mor", "Red", "Fla", "Sil"],
-    nameEnd: ["holomew", "ico", " le Noir", "gan", "beard", "nt", "ver"],
-    places: ["l'île de la Tortue", "le Triangle des Brumes", "le fort espagnol", "la crique du Squelette", "l'épave du Hollandais"],
-    traits: ["fanfaron", "superstitieux", "loyal à l'équipage", "cupide"],
+    stats: ["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"],
+    archetypes: ["Capitaine", "Canonnier", "Boucanier", "Chirurgien de bord", "Gabier", "Bretteur", "Maître de manœuvre", "Contrebandier", "Aumônier", "Plongeur"],
+    origins: ["Flibustiers de la Côte", "Boucaniers", "Marrons", "Gens de France", "Espagnols et Créoles de Cuba", "Gens de toutes les mers"],
+    equipment: ["Pistolet à silex", "Sabre d'abordage", "Longue-vue de laiton", "Grappin", "Coutelas", "Justaucorps de buffle", "Chasse-partie signée", "Baril de tafia"],
+    abilities: ["Aborder", "Naviguer au soleil", "Duel au sabre", "Pointer un canon", "Panser une plaie", "Fouiller une épave", "Pister en forêt", "Lire la chasse-partie"],
+    nameStart: NOMS_ILES_DU_VENT.prenoms,
+    nameEnd: NOMS_ILES_DU_VENT.familles,
+    places: LIEUX_ILES_DU_VENT,
+    traits: ["touche le mât avant de monter à bord", "compte les voiles à l'horizon", "verse sa ration de tafia à la mer", "ne siffle jamais à bord", "tient ses comptes à voix haute", "garde sa poudre au sec sous son bonnet"],
   },
   {
     id: "steampunk",

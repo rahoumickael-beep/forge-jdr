@@ -266,7 +266,7 @@ On compte les années comme partout. Les flibustiers comptent aussi **depuis la 
 | 1701-1713 | La guerre de Succession d'Espagne, douze ans de guerre ; les flibustiers servent comme corsaires. |
 | 1713 | La paix d'Utrecht ; plus de lettres de course : les corsaires deviennent pirates. |
 | 1715 | 24 juillet : la Flotte d'Argent appareille ; dans la nuit du 30 au 31, elle sombre sur les bancs de Floride (an 0 de la Flotte). Septembre : mort de Louis XIV, régence du duc d'Orléans. Décembre : première attaque pirate du camp de plongée. |
-| 1716 | **Année de jeu.** Hiver : seconde attaque du camp. Printemps : Nassau devient leur repaire. La *Santa Clara* croise depuis l'automne. |
+| 1716 | **Année de jeu.** Hiver : seconde attaque du camp. Printemps : Nassau devient leur repaire. Un navire blanc croise depuis l'automne. |
 
 **[Secret]** Juin 1715 : Madrid avertit Arriaga. 24 juillet : la Flotte appareille.
 
@@ -351,7 +351,7 @@ Chaque jeton dépensé donne un Grain au MJ (quatre au plus). Il en dépense un 
 
 ### Les trois paliers de preuve [MJ]
 
-Une pièce prouve une fraude, pas son auteur. Le registre d'Larrañaga prouve la complicité d'Arriaga. La lettre de Madrid prouve la Couronne. Chaque palier ouvre une porte différente : un banquier, un tribunal, une cour.
+Une pièce prouve une fraude, pas son auteur. Le registre de Larrañaga prouve la complicité d'Arriaga. La lettre de Madrid prouve la Couronne. Chaque palier ouvre une porte différente : un banquier, un tribunal, une cour.
 
 ### Accroches de campagne (20) [MJ]
 

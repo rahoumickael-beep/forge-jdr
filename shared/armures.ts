@@ -24,6 +24,7 @@ const TABLE: [RegExp, Armure][] = [
   [/plastron composite|combinaison de vide(?! légère)|chemise de mailles|brigandine|armure de fibre/, { base: 13, max: 2 }],
   [/pelisse|\bpeaux\b|capote/, { base: 12, max: 2 }],
   // Légères
+  [/justaucorps de buffle|veste de buffle|\bbuffle\b/, { base: 12 }],
   [/cuir renforcé|cuir clouté|pourpoint clouté|pare-éclats|armure légère d'huissier/, { base: 12 }],
   [
     /matelassée|gambison|cuir bouilli|armure de cuir|pourpoint de cuir|veste de cuir|manteau de cuir|caban|tablier de cuir|toile huileuse|(manteau|manteau long|blouse) renforcée?|veste à doubles poches|combinaison de vol|combinaison de vide légère|blouson de fibre|blouse de fibre|combinaison de fibre|gilet de fibre/,
@@ -76,7 +77,7 @@ export function classeArmureDepart(maitrise: string, equipement: readonly string
   return ca + (bouclier ? 2 : 0);
 }
 
-const SOMME = /^(\d[\d  ]*) (godets|francs|dollars|lumens|lm|h|po|pa|livres?|sous)$/;
+const SOMME = /^(\d[\d  ]*) (godets|francs|dollars|piastres|lumens|lm|h|po|pa|livres?|sous)$/;
 
 /**
  * Équipement de départ : classe puis historique, sans doublon ni seconde gourde.
@@ -84,7 +85,7 @@ const SOMME = /^(\d[\d  ]*) (godets|francs|dollars|lumens|lm|h|po|pa|livres?|sou
  * Les sommes de même monnaie s'additionnent, sauf dans les mondes où l'on garde la plus haute.
  */
 /** Mondes dont le livre dit : l'argent de départ est la plus haute des sommes, pas leur total. */
-export const PLUS_HAUTE_SOMME = new Set(["post-apo", "western"]);
+export const PLUS_HAUTE_SOMME = new Set(["post-apo", "western", "pirates"]);
 
 export function equipementDeDepart(classe: readonly string[], historique: readonly string[], plusHauteSomme = false): string[] {
   const objets: string[] = [];

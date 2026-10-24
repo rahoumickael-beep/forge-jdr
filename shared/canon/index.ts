@@ -7,12 +7,13 @@ import { RESIDENCE } from "./cyberpunk";
 import { COTE_DES_NOYES } from "./horreur";
 import { GRAND_SEC } from "./post-apo";
 import { CHAMP_D_ASILE } from "./western";
+import { ILES_DU_VENT } from "./pirates";
 import type { Canon } from "./types";
 
 export type { Canon } from "./types";
-export { AUBRETERRE, ARCHIPEL, TERNELANDE, RESIDENCE, COTE_DES_NOYES, GRAND_SEC, CHAMP_D_ASILE };
+export { AUBRETERRE, ARCHIPEL, TERNELANDE, RESIDENCE, COTE_DES_NOYES, GRAND_SEC, CHAMP_D_ASILE, ILES_DU_VENT };
 
-export const CANONS: Partial<Record<GenreId, Canon>> = { fantasy: AUBRETERRE, "science-fiction": ARCHIPEL, "dark-fantasy": TERNELANDE, cyberpunk: RESIDENCE, horreur: COTE_DES_NOYES, "post-apo": GRAND_SEC, western: CHAMP_D_ASILE };
+export const CANONS: Partial<Record<GenreId, Canon>> = { fantasy: AUBRETERRE, "science-fiction": ARCHIPEL, "dark-fantasy": TERNELANDE, cyberpunk: RESIDENCE, horreur: COTE_DES_NOYES, "post-apo": GRAND_SEC, western: CHAMP_D_ASILE, pirates: ILES_DU_VENT };
 
 export const canonDe = (genre: GenreId): Canon | undefined => CANONS[genre];
 

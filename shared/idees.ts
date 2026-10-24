@@ -8,6 +8,7 @@ import { RESIDENCE } from "./canon/cyberpunk";
 import { COTE_DES_NOYES } from "./canon/horreur";
 import { GRAND_SEC } from "./canon/post-apo";
 import { CHAMP_D_ASILE } from "./canon/western";
+import { ILES_DU_VENT } from "./canon/pirates";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -78,12 +79,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Cent dollars sur parole", "Une boîte de cinquante cartouches", "La confiance du vieux Roux", "Un cheval du rancho Eylau", "Une piastre d'argent du Champ", "Un point de Nom devant témoins"],
   },
   "pirates": {
-    hooks: ["Une carte mène au trésor du capitaine Flint.", "Le navire est encalminé près d'une île qui bouge.", "La Marine offre le pardon contre une mission suicide.", "Une sirène propose un marché."],
-    villains: ["un capitaine maudit", "un gouverneur cruel", "une sorcière des mers", "le Kraken"],
-    motivations: ["briser sa malédiction", "régner sur les mers", "récupérer son cœur volé"],
-    enemies: ["Crabes géants", "Marins ivres", "Soldats de la Marine", "Pirates rivaux", "Équipage fantôme", "Sirènes", "Capitaine maudit", "Kraken"],
-    twists: ["Le trésor est une personne.", "La carte est fausse mais le vrai trésor est à bord.", "Le capitaine a vendu l'équipage."],
-    rewards: ["Un coffre de doublons", "Un navire", "Une lettre de marque", "Une boussole magique"],
+    hooks: ILES_DU_VENT.accroches.map((a) => a.texte),
+    villains: ["un capitaine de la Côte qui vend ses prises au même port que les négriers", "un gouverneur qui pend un pirate par semaine pour plaire à Madrid", "un agent de Kingston qui paie des capitaines pour attaquer à sa place", "un chasseur de marrons qui travaille à la prime", "un quartier-maître qui compte autrement que la chasse-partie"],
+    motivations: ["toucher sa part avant la saison des ouragans", "libérer un frère ou une sœur plongeur dans un camp espagnol", "rembourser une dette avant qu'on ne vienne la réclamer", "gagner un pavillon qu'on respecte", "obtenir une grâce du lieutenant du roi"],
+    enemies: ["Requins", "Barracudas", "Crocodiles des marais", "Chiens de chasse", "Matelots de la Marine", "Soldats espagnols", "Chasseurs de marrons", "Corsaires anglais", "Garde-côtes du roi", "Pirates rivaux", "L'ouragan"],
+    twists: ["Le patron qui paie la course doit de l'argent à celui qu'on doit voler.", "La prise est chargée de personnes, pas de marchandise, et l'équipage doit décider ce qu'elle devient.", "Le plongeur que tu sauves connaît le chemin d'un village de marrons.", "Le capitaine qui t'a engagé n'a jamais lu la chasse-partie qu'il fait signer."],
+    rewards: ["Cent piastres, comptées devant tout l'équipage", "Une chasse-partie signée à ton nom", "La confiance d'un village des mornes", "Un jeton de Chance de plus", "Une grâce du lieutenant du roi", "Un sloop d'occasion"],
   },
   "steampunk": {
     hooks: ["Une invention capable d'arrêter le temps a été volée.", "Les automates de la ville se mettent à grève.", "Un dirigeable royal a disparu dans un orage.", "Un savant fou défie la reine."],
