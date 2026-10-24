@@ -34,6 +34,10 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 
 - Navires (Îles du Vent) faits le 24/10, détail dans les archives. Reste : équipage adverse à poser à la main après l'abordage, ponts toujours de même forme, hauts-fonds sans effet, ni vent ni courants.
 
+## Peintures des mondes, un à la fois (choix de Mickael, 24/10/2026)
+- Méthode : `npx tsx scripts/lot-monde.ts <genre> <monde>` (créatures + planches des livres) puis `node comfyui/generer.mjs comfyui/lot-<monde>.json http://127.0.0.1:8188 <monde>`. Tri des 4 variantes délégué (Gemini par `scripts/deleguer.mjs` ou qwen3-vl local), Opus contrôle par sondage. Un monde fini avant le suivant.
+- Ternelande : 24 créatures + 32 planches en file le 24/10.
+
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
 - Planche du demi-orc à repeindre.
