@@ -16,6 +16,7 @@ export const ORIGINES_NOYES: Origin[] = [
     traits: [
       { name: "Les marées et les gens", text: "Tu sais toujours l'heure de la prochaine marée, et tu connais les coutumes : on ne siffle pas face à la mer, on laisse une assiette à la fenêtre les nuits de tempête. Les gens de la côte te parlent : avantage aux tests de Persuasion auprès d'eux. Argent de départ : 300 francs." },
       { name: "Fils de la baie", text: "Avantage à tes sauvegardes d'Endurance contre le froid, y compris celui de l'eau. Langues : le français, le parler normand de la côte." },
+      { name: "Superstitieux", text: "Désavantage à tes sauvegardes de Sang-froid contre la peur née d'un présage (la cloche en mer, le couvert de trop)." },
     ],
     subs: [
       {
@@ -44,11 +45,11 @@ export const ORIGINES_NOYES: Origin[] = [
     genre: "horreur",
     name: "Revenus de la guerre",
     blurb: "Un ancien combattant, un poilu, ou une infirmière du front. Il a vu Verdun ou la Somme. Il est rentré, et il dort mal.",
-    bonus: { 2: 1, 4: 1 },
+    bonus: { 2: 1 },
     speed: 6,
     unique: true,
     traits: [
-      { name: "Endurci", text: "Avantage à tes sauvegardes de Sang-froid contre le Choc d'un cadavre ou d'un massacre. Argent de départ : 200 francs et une petite pension." },
+      { name: "Endurci", text: "Avantage à tes sauvegardes de Sang-froid contre le Choc d'un cadavre ou d'un massacre. Argent de départ : 200 francs. La pension d'invalidité est de 80 francs par mois." },
       { name: "Mauvaises nuits", text: "Après chaque repos long, tu as le désavantage à la première sauvegarde de Sang-froid de la journée, sauf si quelqu'un veille avec toi ou si la lampe est restée allumée toute la nuit." },
     ],
     subs: [
@@ -82,7 +83,7 @@ export const ORIGINES_NOYES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "De l'argent et des lettres", text: "Argent de départ : 3 000 francs. Une fois par semaine de jeu, une lettre de recommandation t'ouvre une porte : un notaire, un directeur, un préfet te reçoit dans la journée." },
+      { name: "De l'argent et des lettres", text: "Argent de départ : 1 200 francs. Une fois par mois de jeu, une lettre de recommandation t'ouvre une porte : un notaire, un directeur, un préfet te reçoit dans la journée." },
       { name: "Une politesse due", text: "Quelque part, des gens te doivent une politesse. Une fois par repos long, tu demandes à l'un d'eux un petit service qui ne lui coûte pas cher : un renseignement, un lit, une introduction." },
       { name: "Mal vu de la côte", text: "Les gens de la côte te regardent de travers : désavantage à ton premier test de Persuasion avec chacun d'eux, tant que tu ne lui as pas rendu un service." },
     ],
@@ -126,7 +127,7 @@ export const ORIGINES_NOYES: Origin[] = [
         blurb: "Tu viens de Southampton ou de New York. Tu as un passeport, un compte, et un accent qu'on remarque.",
         bonus: { 3: 1, 5: 1 },
         traits: [
-          { name: "Lettre de crédit", text: "Maîtrise de Persuasion. Une fois par semaine de jeu, tu retires 300 francs à une banque d'une grande ville, sans te justifier." },
+          { name: "Lettre de crédit", text: "Maîtrise de Persuasion. Une fois par mois de jeu, tu retires 300 francs à une banque d'une grande ville, sans te justifier." },
         ],
       },
       {
@@ -151,7 +152,7 @@ export const ORIGINES_NOYES: Origin[] = [
     traits: [
       { name: "Moderne", text: "Tu conduis une automobile, tu roules à bicyclette, tu sais te servir d'un appareil photographique et d'un poste de T.S.F. Argent de départ : 400 francs." },
       { name: "Ne croit pas aux signes", text: "Avantage à tes sauvegardes de Sang-froid contre la peur née d'une superstition, d'une coutume ou d'un présage (la cloche en mer, le couvert de trop)." },
-      { name: "N'écoute pas les vieux", text: "La première fois que tu vois la mer faire ce qu'elle fait, ta sauvegarde de Sang-froid se fait avec le désavantage." },
+      { name: "N'écoute pas les vieux", text: "Tant que tu n'as pas suivi un conseil de la côte, désavantage à ta première sauvegarde de Sang-froid contre la mer à chaque séance." },
     ],
     subs: [
       {
@@ -193,7 +194,7 @@ export const ORIGINES_NOYES: Origin[] = [
         blurb: "Tu as toujours su qui était mort dans une maison avant d'y entrer. Tu as appris à ne pas le dire.",
         bonus: { 4: 1, 5: 1 },
         traits: [
-          { name: "Sentir la mort", text: "Maîtrise d'Intuition et de Perception. Tu sens un cadavre ou un lieu où quelqu'un est mort de mort violente à moins de 9 m, sans le voir. Tu ne sais rien de plus." },
+          { name: "Sentir la mort", text: "Maîtrise d'Intuition et de Perception. Tu sens un cadavre ou un lieu où quelqu'un est mort de mort violente à moins de 4,5 m, sans le voir. Tu ne sais rien de plus." },
         ],
       },
       {
@@ -202,7 +203,7 @@ export const ORIGINES_NOYES: Origin[] = [
         blurb: "Tes rêves se réalisent, un peu en retard. Tu les écris sur un carnet, la nuit, avant d'oublier.",
         bonus: { 3: 1, 4: 1 },
         traits: [
-          { name: "Carnet de rêves", text: "Maîtrise d'Histoire et d'Investigation. Après chaque repos long, le MJ te dit en une phrase ce que tu as rêvé, et la chose se révèle vraie ou fausse dans la semaine." },
+          { name: "Carnet de rêves", text: "Maîtrise d'Histoire et d'Investigation. Une fois par semaine de jeu, après un repos long, le MJ te dit en une phrase ce que tu as rêvé ; elle se révèle vraie ou fausse avant la fin de la semaine." },
         ],
       },
     ],
@@ -218,7 +219,7 @@ export const HISTORIQUES_NOYES: Background[] = [
     skills: ["Investigation", "Intuition"],
     tool: "Outils de bureau et d'enquête",
     gear: ["Lettre de mission de la Havraise", "Calepin et crayons", "Mètre à ruban", "Police d'assurance annotée", "40 francs"],
-    feature: { name: "Prévoir", text: "Tu as une lettre de mission : les bureaux, les gares et les banques te reçoivent, et un clerc de la Havraise te répond dans la journée. Les gendarmes, eux, la regardent de travers." },
+    feature: { name: "Lettre de mission", text: "Tu as une lettre de mission : les bureaux, les gares et les banques te reçoivent, et un clerc de la Havraise te répond dans la journée. Les gendarmes, eux, la regardent de travers." },
   },
   {
     id: "hr-h-poilu",
@@ -284,11 +285,41 @@ export const HISTORIQUES_NOYES: Background[] = [
     id: "hr-h-etudiant-medecine",
     genre: "horreur",
     name: "Étudiant en médecine",
-    blurb: "Tu as ouvert des corps à l'école de médecine de Caen.",
+    blurb: "Tu as ouvert des corps à l'école préparatoire de médecine de Caen.",
     skills: ["Médecine", "Investigation"],
     tool: "Trousse de dissection",
     gear: ["Blouse tachée", "Scalpels et pinces", "Manuel d'anatomie", "Carnet d'amphithéâtre", "30 francs"],
     feature: { name: "L'amphithéâtre", text: "Un médecin ou un interne te laisse examiner un cadavre en son absence. Tu reconnais à vue une blessure, une cause de mort ou un poison courant." },
+  },
+  {
+    id: "hr-h-gendarme",
+    genre: "horreur",
+    name: "Gendarme",
+    blurb: "Tu as porté le bicorne dix ans, dans une brigade de campagne.",
+    skills: ["Intimidation", "Perception"],
+    tool: "Menottes et carnet de procès-verbaux",
+    gear: ["Capote et képi", "Menottes et sifflet", "Carnet de procès-verbaux", "Un règlement annoté", "30 francs"],
+    feature: { name: "Entre collègues", text: "Dans chaque brigade, un gendarme te doit un service : un renseignement sur un dossier, un lit au poste, un mot au maréchal des logis." },
+  },
+  {
+    id: "hr-h-photographe",
+    genre: "horreur",
+    name: "Photographe",
+    blurb: "Tu as tiré le portrait des mariés et des morts, et tu sais regarder.",
+    skills: ["Perception", "Investigation"],
+    tool: "Matériel de photographe",
+    gear: ["Appareil à soufflet", "Six plaques de verre", "Tente noire", "Cuvettes de révélateur", "30 francs"],
+    feature: { name: "Un atelier", text: "Dans une ville, un confrère te prête sa chambre noire et te montre ses plaques. Un journal local t'achète une photographie d'actualité 50 francs." },
+  },
+  {
+    id: "hr-h-antiquaire",
+    genre: "horreur",
+    name: "Antiquaire",
+    blurb: "Tu as vendu des cadres, des cloches et des lettres anciennes, et tu sais ce qui vaut quelque chose.",
+    skills: ["Histoire", "Arcanes / Savoir"],
+    tool: "Loupe et balance d'orfèvre",
+    gear: ["Loupe de joaillier", "Gants de coton blancs", "Catalogue annoté", "Dictionnaire de poche", "30 francs"],
+    feature: { name: "Le milieu", text: "Dans les villes où tu as vendu, un marchand ou un notaire te reçoit, te dit qui a acheté quoi et à quel prix, et te laisse voir ses archives." },
   },
 ];
 

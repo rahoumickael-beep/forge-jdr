@@ -17,7 +17,7 @@ export const REGLES_NOYES: RuleSection[] = [
       "| Marée | Ce qui change",
       "| 3 | Le personnage rêve de noyade chaque nuit. Un repos long lui rend au plus un dé de vie, et aucun niveau d'épuisement.",
       "| 5 | Il entend la mer à l'intérieur des maisons. Désavantage aux tests de Perception qui reposent sur l'ouïe.",
-      "| 7 | Il se souvient de choses qui ne sont pas encore arrivées, et n'arrive plus à les distinguer du reste. Une fois par séance, le MJ peut lui faire dire à voix haute une chose qui arrivera.",
+      "| 7 | Il entend des choses qui n'ont pas eu lieu, sans savoir si c'est un souvenir ou un rêve. Une fois par séance, le MJ peut lui faire dire à voix haute une chose qui arrivera.",
       "| 10 | La mer l'appelle. À la prochaine marée haute de nuit, il marche vers l'eau.",
       "À 10, pour retenir un personnage, il faut trois réussites avant deux échecs (Persuasion ou Intuition DD 15, ou Athlétisme pour le maintenir). Lui-même peut tenter une sauvegarde de Sang-froid DD 15 par heure. S'il entre dans l'eau, il devient un personnage du MJ.",
       "La Marée redescend quand on s'éloigne de la côte : une semaine loin de la mer, −1 ; une semaine à Paris ou dans les terres, −2. Le personnage garde ses Présages. Mais une semaine loin de la côte est une semaine perdue pour l'enquête.",
@@ -29,6 +29,7 @@ export const REGLES_NOYES: RuleSection[] = [
     body: [
       "Chaque fois que sa Marée monte, le personnage gagne un Présage : un fragment de ce qui va arriver. Il en garde trois au plus.",
       "Un Présage se dépense, une fois, pour relancer un dé (le sien ou celui d'un autre), ou pour demander au MJ une seule chose vraie sur ce qui va se passer dans la scène. Le point de Marée gagné en dépensant un Présage ne donne pas de nouveau Présage.",
+      "Dépenser un Présage ordinaire ne compte pas comme un pouvoir à prix. Ce que la mer annonce arrive : si les joueurs changent la scène, cela arrive sous une autre forme.",
       "Les pouvoirs de classe et la Marée :",
       "- Un pouvoir qui touche à la mer, aux morts ou à ce qui va arriver porte la mention « Prix : Marée +N ». Quand tu l'utilises, ta Marée monte de N points, et chaque point te donne un Présage comme d'habitude.",
       "- Un pouvoir qui fait passer ce qui va arriver porte la mention « Prix : un Présage ». Quand tu l'utilises, tu en dépenses un, ce qui coûte 1 point de Marée sans te donner de Présage.",

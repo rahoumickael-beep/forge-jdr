@@ -166,7 +166,7 @@ test("classes de la Côte des Noyés : compétences connues, caractéristiques d
   }
   for (const h of HISTORIQUES_NOYES) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
   assert.equal(ORIGINES_NOYES.length, 6);
-  assert.equal(HISTORIQUES_NOYES.length, 8);
+  assert.equal(HISTORIQUES_NOYES.length, 11);
 });
 
 test("classes de la Côte des Noyés : le prix des pouvoirs est dit, la Marée ne dépasse pas 9", () => {
