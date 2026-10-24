@@ -3,6 +3,7 @@ import { LIEUX_ARCHIPEL, NOMS_ARCHIPEL } from "./canon/science-fiction-table";
 import { LIEUX_TERNELANDE, NOMS_TERNELANDE } from "./canon/dark-fantasy-table";
 import { LIEUX_RESIDENCE, NOMS_RESIDENCE } from "./canon/cyberpunk-table";
 import { LIEUX_COTE_DES_NOYES, NOMS_COTE_DES_NOYES } from "./canon/horreur-table";
+import { LIEUX_GRAND_SEC, NOMS_GRAND_SEC } from "./canon/post-apo-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -121,17 +122,17 @@ export const GENRES: Genre[] = [
   {
     id: "post-apo",
     label: "Post-apocalyptique",
-    pitch: "Ruines, mutants, pénurie et clans rivaux.",
+    pitch: "Le Grand Sec : le sud de la France sans pluie depuis quarante ans, le Rhône changé en route de sable, et des clans qui pèsent chaque seau.",
     theme: { background: "#1f1a12", floor: "#a38b5e", wall: "#4b3f2c", water: "#5d7d4a", vegetation: "#6b7a3a", road: "#7c6a4a", door: "#b5532a", grid: "rgba(40,30,10,.25)" },
-    stats: ["Force", "Perception", "Endurance", "Charisme", "Intelligence", "Chance"],
-    archetypes: ["Pillard", "Mécano", "Éclaireuse", "Docteur des ruines", "Chef de convoi", "Mutant", "Ancien de l'abri", "Chasseur de primes"],
-    origins: ["Né dans un abri", "Enfant des sables", "Mutant des terres irradiées", "Ex-soldat", "Membre d'une secte"],
-    equipment: ["Fusil à pompe bricolé", "Masque à gaz", "Compteur Geiger", "Batte cloutée", "Rations", "Eau purifiée", "Pièces détachées", "Buggy rouillé"],
-    abilities: ["Fouille de ruines", "Résistance aux radiations", "Bricolage", "Marchandage", "Conduite folle", "Survie"],
-    nameStart: ["Ash", "Dust", "Rust", "Max", "Fury", "Sca", "Bolt", "Jin", "Kat"],
-    nameEnd: ["", "y", "er", "ie", "o", "ka"],
-    places: ["la ville morte de Néo-Paris", "le marché du Cratère", "le barrage fortifié", "l'abri 77", "l'autoroute des carcasses"],
-    traits: ["débrouillard", "méfiant", "garde l'espoir", "un peu fou"],
+    stats: ["Force", "Agilité", "Endurance", "Savoir", "Instinct", "Présence"],
+    archetypes: ["Batelier", "Puisatier", "Pillard", "Sourcière", "Mécano des ruines", "Gardian", "Pénitent", "Médecin des sables", "Fouilleur", "Chef de convoi"],
+    origins: ["Gens des puits", "Enfants de la Route", "Saliniers", "Gens de la Porte-d'Attente", "Montagnards", "Descendus de Montclair"],
+    equipment: ["Gourde de douze godets", "Arbalète lourde", "Machette de bouilleur", "Harpon de batelier", "Voile de batelier", "Lunettes de soudeur", "Carte des puits", "Laissez-passer de Montclair"],
+    abilities: ["Lire le vent", "Trouver une citerne", "Marchander au godet près", "Piloter un char à voile", "Fouiller une ville morte", "Pister dans la montagne", "Faire de l'eau avec le feu", "Tenir sous le soleil", "Se glisser sous le Mur"],
+    nameStart: NOMS_GRAND_SEC.prenoms,
+    nameEnd: NOMS_GRAND_SEC.familles,
+    places: LIEUX_GRAND_SEC,
+    traits: ["compte ses godets chaque soir", "ne gaspille jamais une goutte", "lit le ciel avant de parler", "garde une capsule vide en souvenir", "dort le jour et marche la nuit", "regarde toujours le sommet du Mont Chauve"],
   },
   {
     id: "western",

@@ -6,6 +6,7 @@ import { ARCHIPEL } from "./canon/science-fiction";
 import { TERNELANDE } from "./canon/dark-fantasy";
 import { RESIDENCE } from "./canon/cyberpunk";
 import { COTE_DES_NOYES } from "./canon/horreur";
+import { GRAND_SEC } from "./canon/post-apo";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -60,12 +61,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Une lettre de recommandation d'un ministre", "Quatre cents francs de frais", "La confiance de la mère Hamel", "Un Présage de plus", "Une copie des lettres originales", "L'amitié d'un armateur"],
   },
   "post-apo": {
-    hooks: ["La dernière source d'eau pure est menacée.", "Un abri scellé vient de s'ouvrir.", "Une caravane promet un passage vers une terre verte.", "Un enfant ne craint pas les radiations."],
-    villains: ["un seigneur de guerre", "une IA militaire d'avant-guerre", "un prophète mutant", "une compagnie de l'eau"],
-    motivations: ["contrôler l'eau", "relancer les missiles", "créer une nouvelle humanité"],
-    enemies: ["Rats radioactifs", "Pillards", "Chiens mutants", "Goules irradiées", "Raiders motorisés", "Mutant géant", "Robot de guerre", "Béhémoth"],
-    twists: ["La terre verte est un piège.", "Le seigneur de guerre protège un secret vital.", "L'abri cache l'origine de l'apocalypse."],
-    rewards: ["Un véhicule blindé", "Un stock de munitions", "Un accès à l'eau", "Une carte d'avant-guerre"],
+    hooks: GRAND_SEC.accroches.map((a) => a.texte),
+    villains: ["un Maître-Puisatier qui ferme le puits pour garder son prix", "une Prévôte qui paie en secret ceux qui entretiennent les Mâts", "une cheffe de Horde qui détourne l'eau vers le camp du Mur", "un prédicateur qui veut tout abattre sans savoir ce que ça coûte", "un patron de convoi qui écoule de l'eau coupée de sel"],
+    motivations: ["remplir sa gourde avant la fin de la semaine", "payer le droit de passage d'un convoi", "retrouver la source d'un puits qui s'est tu", "passer le Mur avant l'hiver"],
+    enemies: ["Chiens sauvages", "Vautours", "Pillards de la Horde", "Arbalétriers puisatiers", "Scorpions géants de la chaleur", "Taureaux de Vaccarès", "Chars à voile armés", "Gardes de Montclair", "Gardes-Mâts", "Tempête de sable", "Le Mât qui se défend"],
+    twists: ["Le godet n'est pas de l'eau propre, mais de l'eau coupée de sel.", "Le guide connaît la Horde, et elle le connaît.", "La citerne n'était vide que pour ceux qui ne connaissaient pas le puits d'à côté.", "Le gamin qui montre le chemin est payé par les deux camps."],
+    rewards: ["Cent godets scellés", "Une carte des puits", "Un laissez-passer de Montclair", "Une cartouche de plus", "La confiance du Vieux Fabre", "Une place sur un char à voile pour le prochain convoi"],
   },
   "western": {
     hooks: ["Le gang Dalton prend la ville en otage.", "Une mine d'or est hantée.", "Un train transporte un prisonnier très recherché.", "Le shérif a été assassiné en plein jour."],
