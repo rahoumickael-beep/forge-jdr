@@ -2,6 +2,7 @@
 // Brouillon v0.2 : les 14 classes fantasy sont complètes ; les 10 classes de l'Archipel (SF) sont dans archipel-classes.ts.
 import { CLASSES_ARCHIPEL } from "./archipel-classes";
 import { REGLES_ARCHIPEL } from "./archipel-regles";
+import { REGLES_TERNELANDE } from "./ternelande-regles";
 import type { GenreId } from "./types";
 
 export type Recharge = "à volonté" | "repos court" | "repos long" | "passif";
@@ -994,7 +995,7 @@ export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
 };
 
 /** Règles propres à un monde, à la suite des règles communes (livre en ligne, livre des joueurs). */
-export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL };
+export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE };
 
 export function classesFor(genre: GenreId): CharacterClass[] {
   return CLASSES.filter((c) => c.genre === genre);
