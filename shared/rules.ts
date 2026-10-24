@@ -1,6 +1,7 @@
 // Livre des règles de Forge JdR : règles de base inspirées de D&D 5e, classes et pouvoirs.
 // Brouillon v0.2 : les 14 classes fantasy sont complètes ; les 10 classes de l'Archipel (SF) sont dans archipel-classes.ts.
 import { CLASSES_ARCHIPEL } from "./archipel-classes";
+import { REGLES_ARCHIPEL } from "./archipel-regles";
 import type { GenreId } from "./types";
 
 export type Recharge = "à volonté" | "repos court" | "repos long" | "passif";
@@ -991,6 +992,9 @@ export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
   steampunk: ["Duelliste", "Inventeuse", "Espionne", "Automate", "Aéronaute", "Aristocrate"],
   contemporain: ["Ancien militaire", "Hackeuse", "Voleur de luxe", "Médecin urgentiste", "Agent secret", "Avocate"],
 };
+
+/** Règles propres à un monde, à la suite des règles communes (livre en ligne, livre des joueurs). */
+export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL };
 
 export function classesFor(genre: GenreId): CharacterClass[] {
   return CLASSES.filter((c) => c.genre === genre);
