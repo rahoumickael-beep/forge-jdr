@@ -260,8 +260,8 @@ On compte les années **du Sec**, depuis la dernière pluie (4 octobre 2031, an 
 |---|---|---|
 | −2 | 2029 | Construction d'un domaine de luxe au sommet du Ventoux. |
 | 0 | 2031 | La dernière pluie sur Avignon. |
-| 3 | 2034 | Le Rhône cesse de couler au sud de Valence. |
 | 3 | 2034 | La République ferme ses barrages au nord. |
+| 3 | 2034 | Le Rhône cesse de couler au sud de Valence. |
 | 7 | 2038 | La République du Nord construit le Mur de Valence. |
 | 9 | 2040 | Le consortium disparaît ; les Fontainiers prennent le domaine du Mont Chauve et fondent Montclair. |
 | 10 | 2041 | Les premiers réfugiés campent au pied du Mur : la Porte-d'Attente. |
