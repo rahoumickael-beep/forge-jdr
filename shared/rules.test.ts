@@ -1,22 +1,26 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL, RESIDENCE, TERNELANDE } from "./canon";
+import { ARCHIPEL, COTE_DES_NOYES, RESIDENCE, TERNELANDE } from "./canon";
 import { classesFor, CLASSES, SKILLS } from "./rules";
 import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import { REGLES_RESIDENCE } from "./residence-regles";
+import { HISTORIQUES_NOYES, ORIGINES_NOYES, PERSONNALITE_NOYES } from "./noyes-origines";
+import { REGLES_NOYES } from "./noyes-regles";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
 const ternelande = classesFor("dark-fantasy");
 const residence = classesFor("cyberpunk");
-const jouables = [...fantasy, ...archipel, ...ternelande, ...residence];
+const noyes = classesFor("horreur");
+const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
   assert.equal(archipel.length, 10);
   assert.equal(ternelande.length, 10);
   assert.equal(residence.length, 10);
+  assert.equal(noyes.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -134,4 +138,46 @@ test("classes de la Résidence : compétences connues, caractéristiques du genr
   for (const h of HISTORIQUES_RESIDENCE) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
   assert.equal(ORIGINES_RESIDENCE.length, 6);
   assert.equal(HISTORIQUES_RESIDENCE.length, 8);
+});
+
+test("classes de la Côte des Noyés : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify([noyes, ORIGINES_NOYES, HISTORIQUES_NOYES, REGLES_NOYES, PERSONNALITE_NOYES]);
+  for (const secret of COTE_DES_NOYES.secrets) assert.ok(!text.includes(secret), secret);
+  for (const mot of ["Lame de fond", "Lames de fond", "dix lettres", "Louise Marchal", "naufrage"]) {
+    assert.ok(!text.toLowerCase().includes(mot.toLowerCase()), `texte joueur de la Côte des Noyés : « ${mot} »`);
+  }
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes de la Côte des Noyés : « ${word} »`);
+  }
+  for (const mot of COTE_DES_NOYES.anachronismes) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${mot.toLowerCase()}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `anachronisme dans la Côte des Noyés : « ${mot} »`);
+  }
+});
+
+test("classes de la Côte des Noyés : compétences connues, caractéristiques du genre, ids préfixés", () => {
+  const noms = new Set(SKILLS.map((s) => s.name));
+  const stats = new Set(["Force", "Adresse", "Endurance", "Savoir", "Sang-froid", "Présence"]);
+  for (const c of noyes) {
+    assert.ok(c.id.startsWith("hr-"), c.id);
+    for (const s of c.skills.from) assert.ok(noms.has(s), `${c.name} : compétence « ${s} » inconnue`);
+    for (const s of [...c.mainStats, ...c.saves]) assert.ok(stats.has(s), `${c.name} : caractéristique « ${s} » inconnue`);
+  }
+  for (const h of HISTORIQUES_NOYES) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
+  assert.equal(ORIGINES_NOYES.length, 6);
+  assert.equal(HISTORIQUES_NOYES.length, 8);
+});
+
+test("classes de la Côte des Noyés : le prix des pouvoirs est dit, la Marée ne dépasse pas 9", () => {
+  for (const c of noyes) {
+    const aPrix = [...c.powers, ...c.subclasses.flatMap((s) => s.powers)].some((p) => /Prix : (Marée \+\d|un Présage)/.test(p.effect));
+    if (aPrix && c.id !== "hr-expert") {
+      assert.ok(c.powers.some((p) => p.name === "Ce que coûte la vérité"), `${c.name} : pouvoir à prix sans le passif « Ce que coûte la vérité »`);
+    }
+    for (const p of [...c.powers, ...c.subclasses.flatMap((s) => s.powers)]) {
+      const m = p.effect.match(/Prix : Marée \+(\d)/);
+      if (m) assert.ok(Number(m[1]) <= 2, `${c.name} : ${p.name} coûte trop de Marée`);
+    }
+  }
 });

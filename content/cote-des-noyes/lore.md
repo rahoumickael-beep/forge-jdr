@@ -182,7 +182,7 @@ Ici, personne ne lance de sort. Ce qu'on paie, c'est de savoir. Chaque personnag
 - voir la mer faire ce qu'elle fait (la Fosse, la file sous l'eau, les lumières au large) : +3, ou +1 sur une sauvegarde de Sang-froid DD 13 réussie ;
 - se servir d'un **Présage** (voir plus bas) : +1.
 
-On compte environ une montée de Marée par séance.
+On compte environ une montée de Marée par séance. Personne ne gagne plus de 3 de Marée dans une même scène, toutes sources confondues.
 
 ### Ce que donne la Marée [Joueurs]
 

@@ -3,9 +3,11 @@
 import { CLASSES_ARCHIPEL } from "./archipel-classes";
 import { CLASSES_TERNELANDE } from "./ternelande-classes";
 import { CLASSES_RESIDENCE } from "./residence-classes";
+import { CLASSES_NOYES } from "./noyes-classes";
 import { REGLES_ARCHIPEL } from "./archipel-regles";
 import { REGLES_TERNELANDE } from "./ternelande-regles";
 import { REGLES_RESIDENCE } from "./residence-regles";
+import { REGLES_NOYES } from "./noyes-regles";
 import type { GenreId } from "./types";
 
 export type Recharge = "à volonté" | "repos court" | "repos long" | "passif";
@@ -979,6 +981,7 @@ export const CLASSES: CharacterClass[] = [
   ...CLASSES_ARCHIPEL,
   ...CLASSES_TERNELANDE,
   ...CLASSES_RESIDENCE,
+  ...CLASSES_NOYES,
 ];
 
 /** La sous-classe d'un personnage, s'il en a choisi une. */
@@ -991,7 +994,7 @@ export function subclassOf(classId: string | undefined, subclassId: string | und
 export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
   "dark-fantasy": ["Mercenaire", "Sorcière des ronces", "Coupe-jarret", "Inquisiteur", "Chasseur de sorcières", "Pèlerin maudit"],
   cyberpunk: ["Fouineur", "Solo", "Médic de rue", "Huissier défroqué", "Coursier des passerelles", "Syndicaliste", "Fixeur", "Mécano", "Prêcheur des Sans-Bail", "Journaliste"],
-  horreur: ["Ancien soldat", "Occultiste", "Détective", "Médecin", "Journaliste", "Prêtre"],
+  horreur: ["Expert en sinistres", "Ancien poilu", "Médecin", "Abbé", "Journaliste", "Photographe", "Pêcheur", "Médium", "Gendarme", "Antiquaire"],
   "post-apo": ["Pillard", "Mutant", "Éclaireuse", "Docteur des ruines", "Mécano", "Chef de convoi"],
   western: ["Pistolero", "Prédicateur", "Joueur de poker", "Médecin itinérant", "Éclaireur", "Shérif"],
   pirates: ["Maître d'armes", "Sorcier vaudou", "Corsaire", "Chirurgien de bord", "Canonnier", "Capitaine"],
@@ -1000,7 +1003,7 @@ export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
 };
 
 /** Règles propres à un monde, à la suite des règles communes (livre en ligne, livre des joueurs). */
-export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE };
+export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE, horreur: REGLES_NOYES };
 
 export function classesFor(genre: GenreId): CharacterClass[] {
   return CLASSES.filter((c) => c.genre === genre);
