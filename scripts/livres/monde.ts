@@ -6,6 +6,7 @@ import { ARCHIPEL_LIVRES } from "./monde-archipel";
 import { ASILE_LIVRES } from "./monde-asile";
 import { AUBRETERRE_LIVRES } from "./monde-aubreterre";
 import { EXPO_LIVRES } from "./monde-expo";
+import { HERMES_LIVRES } from "./monde-hermes";
 import { ILES_LIVRES } from "./monde-iles";
 import { NOYES_LIVRES } from "./monde-noyes";
 import { RESIDENCE_LIVRES } from "./monde-residence";
@@ -65,7 +66,7 @@ export interface Monde {
   };
 }
 
-const MONDES: Record<string, Monde> = { aubreterre: AUBRETERRE_LIVRES, archipel: ARCHIPEL_LIVRES, ternelande: TERNELANDE_LIVRES, residence: RESIDENCE_LIVRES, noyes: NOYES_LIVRES, sec: SEC_LIVRES, asile: ASILE_LIVRES, iles: ILES_LIVRES, expo: EXPO_LIVRES };
+const MONDES: Record<string, Monde> = { aubreterre: AUBRETERRE_LIVRES, archipel: ARCHIPEL_LIVRES, ternelande: TERNELANDE_LIVRES, residence: RESIDENCE_LIVRES, noyes: NOYES_LIVRES, sec: SEC_LIVRES, asile: ASILE_LIVRES, iles: ILES_LIVRES, expo: EXPO_LIVRES, hermes: HERMES_LIVRES };
 const choix = process.argv.find((a) => a.startsWith("--monde="))?.slice("--monde=".length) ?? "aubreterre";
 if (!MONDES[choix]) throw new Error(`Monde inconnu : ${choix} (${Object.keys(MONDES).join(", ")})`);
 

@@ -23,7 +23,8 @@
     "livres:sec": "tsx scripts/livres/index.ts tout dist-livre --monde=sec",
     "livres:asile": "tsx scripts/livres/index.ts tout dist-livre --monde=asile",
     "livres:iles": "tsx scripts/livres/index.ts tout dist-livre --monde=iles",
-    "livres:expo": "tsx scripts/livres/index.ts tout dist-livre --monde=expo"
+    "livres:expo": "tsx scripts/livres/index.ts tout dist-livre --monde=expo",
+    "livres:hermes": "tsx scripts/livres/index.ts tout dist-livre --monde=hermes"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",
