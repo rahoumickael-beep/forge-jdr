@@ -1,0 +1,210 @@
+// Canon de la Ternelande (dark fantasy, « La Dîme »), tiré de la bible du monde (content/ternelande/lore.md).
+// Ajouter un nom ici est une décision : on la note dans docs/journal-de-production.md.
+import { NOMS_TERNELANDE } from "./dark-fantasy-table";
+import type { Canon } from "./types";
+
+export const TERNELANDE: Canon = {
+  genre: "dark-fantasy",
+  monde: "la Ternelande",
+  continent: "les Neuf Comtés",
+  capitale: "Haute-Cendre",
+  calendrier: { long: "de la Dîme", court: "de la Régence", debutCourt: 508, anDeJeu: 512, saison: "hiver" },
+
+  chronologie: [
+    { an: -11, quoi: "Début du Long Hiver." },
+    { an: 0, quoi: "La Cour Grise descend des neiges ; premier pacte, première Dîme. Le printemps revient. An 0 de la Dîme." },
+    { an: 3, quoi: "Fondation de l'abbaye de Saint-Mémoire et des premiers Registres." },
+    { an: 60, quoi: "La Cour choisit ses premiers Dîmiers parmi les humains." },
+    { an: 201, quoi: "Les Houilleurs refusent la Dîme ; la Cour les laisse en paix dans leurs montagnes." },
+    { an: 377, quoi: "Fondation de Haute-Cendre autour de la grande pierre de dîme." },
+    { an: 412, quoi: "La Cour Grise meurt au Palais Sans Ombre ; les Grands Dîmiers gardent le secret." },
+    { an: 432, quoi: "Naissance de Brunissende, future doyenne des Gardiennes." },
+    { an: 442, quoi: "Naissance d'Ysaure, future évêque de Saint-Mémoire." },
+    { an: 452, quoi: "Naissance d'Aldebert de Vauclair." },
+    { an: 462, quoi: "Naissance de Corentin Malhaume, futur Grand Dîmier." },
+    { an: 472, quoi: "Naissance d'Ermengarde de Vair." },
+    { an: 482, quoi: "Morte-Fontaine refuse la Dîme ; l'hiver suivant, les Landes oublient tout." },
+    { an: 504, quoi: "Naissance de la princesse Ide, dernière enfant du roi Gautier." },
+    { an: 506, quoi: "Mort de la princesse Ide." },
+    { an: 508, quoi: "La grande peste ; mort du roi Gautier sans héritier vivant ; Aldebert de Vauclair devient Comte-Régent. An 0 de la Régence." },
+    { an: 509, quoi: "Début de la guerre des Comtés Rouges." },
+    { an: 512, quoi: "Année de jeu : les Dîmiers demandent deux souvenirs par foyer." },
+  ],
+
+  regions: [
+    {
+      nom: "Haute-Cendre",
+      situation: "la capitale, sur sa colline",
+      paysage: "pierre noire, deux enceintes, toits d'ardoise ; la Tour des Dîmiers et la grande pierre de dîme",
+      gens: ["notaires", "Dîmiers", "courtisans"],
+      peur: "les Dîmiers qui entrent partout, et le silence de la Tour",
+      lieuDeRencontre: "les ruelles gelées de Haute-Cendre",
+      lieux: ["la Tour des Dîmiers", "la grande pierre de dîme", "la grand-place"],
+    },
+    {
+      nom: "Les Neiges Hautes",
+      situation: "le nord, au-delà des dernières fermes",
+      paysage: "montagnes blanches, plateau de glace, vent sans fin",
+      gens: ["chasseurs de phoques", "bergers de rennes", "gens des Neiges"],
+      peur: "de monter trop haut et d'oublier son nom",
+      lieuDeRencontre: "le bord des Neiges Hautes",
+      lieux: ["le Palais Sans Ombre", "le Cairn des Pâles"],
+    },
+    {
+      nom: "Vaugelée",
+      situation: "les lacs du centre",
+      paysage: "lacs innombrables, rivières lentes, villages de pêcheurs sur des îles",
+      gens: ["pêcheurs sous la glace", "passeurs", "chasseurs de canards"],
+      peur: "les Oubliés du lac, qui frappent sous la glace",
+      lieuDeRencontre: "un lac gelé de Vaugelée",
+      lieux: [],
+    },
+    {
+      nom: "La Forêt des Blancs-Bois",
+      situation: "l'est",
+      paysage: "bouleaux blancs qui semblent éclairés la nuit ; au fond, des troncs larges comme des tours",
+      gens: ["Sylvains", "sorcières"],
+      peur: "de boire la sève sans savoir",
+      lieuDeRencontre: "une clairière des Blancs-Bois",
+      lieux: ["les Blancs-Bois"],
+    },
+    {
+      nom: "Les Comtés Rouges",
+      situation: "le sud",
+      paysage: "vignes, blé, châteaux sur chaque hauteur, villages fortifiés ; la guerre",
+      gens: ["paysans", "compagnies franches", "gens des Comtés"],
+      peur: "les compagnies, la peste, et les villages où personne n'est resté pour payer",
+      lieuDeRencontre: "un village brûlé des Comtés Rouges",
+      lieux: [],
+    },
+    {
+      nom: "Saint-Mémoire",
+      situation: "la ville-abbaye, sur une boucle de rivière",
+      paysage: "une abbaye immense, des bibliothèques, des scriptoriums où brûlent des chandelles",
+      gens: ["moines", "frères scribes", "lecteurs"],
+      peur: "l'incendie, et les Dîmiers qui trouvent les Registres dangereux",
+      lieuDeRencontre: "les faubourgs de Saint-Mémoire",
+      lieux: ["l'abbaye de Saint-Mémoire", "les Registres"],
+    },
+    {
+      nom: "Les Landes Effacées",
+      situation: "l'ouest",
+      paysage: "bruyère grise, villages abandonnés, routes qui s'arrêtent au milieu des champs",
+      gens: ["Effacés"],
+      peur: "d'y entrer et d'en revenir sans souvenir",
+      lieuDeRencontre: "une ferme abandonnée des Landes Effacées",
+      lieux: ["Morte-Fontaine"],
+    },
+    {
+      nom: "Brise-Glace",
+      situation: "le port du nord-ouest",
+      paysage: "falaises noires, maisons de planches goudronnées, carcasses de baleines sur les grèves",
+      gens: ["baleiniers", "étrangers", "marchands"],
+      peur: "la banquise, et les étrangers qui ne partent pas",
+      lieuDeRencontre: "les quais de Brise-Glace",
+      lieux: [],
+    },
+  ],
+  autresLieux: ["Partout", "les montagnes de l'est"],
+
+  factions: [
+    { id: "dimiers", nom: "Les Dîmiers", alias: ["Dîmier", "Grand Dîmier", "Grands Dîmiers", "Écuyer"], but: "que la Dîme soit payée, chaque hiver, partout", signe: "un masque d'étain lisse et un manteau gris", penche: "la Cour", membres: ["Écuyer", "Dîmier", "Grand Dîmier"] },
+    { id: "eglise", nom: "L'Église du Souvenir", alias: ["Église", "Frère scribe", "Lecteur", "Évêque"], but: "que chaque mort ait un nom quelque part", signe: "une plume blanche sur fond noir", penche: "les morts", membres: ["Frère scribe", "Lecteur", "Évêque"] },
+    { id: "comtes", nom: "Les Comtes", alias: ["Comte", "Comtesse", "Comte-Régent", "compagnies franches", "compagnie franche"], but: "le trône vide", signe: "le loup de Vair, le cerf roux de Thibault, la plume de Saint-Mémoire", penche: "eux-mêmes" },
+    { id: "effaces", nom: "Les Effacés", alias: ["Effacé", "Effacée"], but: "survivre, ou que tout le monde oublie", signe: "un cercle vide tracé à la cendre sur le front", penche: "personne" },
+    { id: "gardiennes", nom: "Les Gardiennes", alias: ["Gardienne", "reliquaire", "reliquaires"], but: "sauver des souvenirs avant la Dîme", signe: "un fil rouge noué au poignet", penche: "les familles" },
+    { id: "houilleurs", nom: "Les Houilleurs", alias: ["Houilleur"], but: "qu'on les laisse dans leurs montagnes", signe: "une lampe de mine éteinte au cou", penche: "personne" },
+    { id: "sylvains", nom: "Les Sylvains", alias: ["Sylvain", "Sylvaine"], but: "garder les Blancs-Bois", signe: "la peau pâle comme l'écorce", penche: "les arbres" },
+  ],
+
+  figures: [
+    { nom: "Aldebert de Vauclair", alias: ["le Comte-Régent", "Aldebert"], titre: "Comte-Régent de la Ternelande", ou: "Haute-Cendre", faction: "comtes", age: 60, etat: "vivant" },
+    { nom: "Corentin Malhaume", alias: ["le Grand Dîmier", "Malhaume"], titre: "Grand Dîmier", ou: "la Tour des Dîmiers", faction: "dimiers", age: 50, etat: "vivant" },
+    { nom: "Ysaure", alias: ["Mère Ysaure"], titre: "évêque de Saint-Mémoire", ou: "Saint-Mémoire", faction: "eglise", age: 70, etat: "vivant" },
+    { nom: "Ermengarde de Vair", alias: ["la Comtesse", "Ermengarde"], titre: "Comtesse de Vair, prétendante au trône", ou: "Les Comtés Rouges", faction: "comtes", age: 40, etat: "vivant" },
+    { nom: "Thibault le Roux", alias: ["le Comte Thibault", "Thibault"], titre: "comte, prétendant au trône", ou: "Les Comtés Rouges", faction: "comtes", etat: "vivant" },
+    { nom: "Personne", alias: ["le prêcheur des Effacés"], titre: "prêcheur des Effacés", ou: "Les Landes Effacées", faction: "effaces", etat: "vivant" },
+    { nom: "Brunissende", alias: ["la Mère Brunissende"], titre: "doyenne des Gardiennes", ou: "Vaugelée", faction: "gardiennes", age: 80, etat: "vivant" },
+    { nom: "Gautier", alias: ["le roi Gautier"], titre: "dernier roi de Ternelande", ou: "Haute-Cendre", etat: "mort" },
+    { nom: "Ide", alias: ["la princesse Ide"], titre: "dernière enfant du roi Gautier", ou: "Haute-Cendre", etat: "mort" },
+    { nom: "Dame Aube-de-Cendre", alias: ["Aube-de-Cendre", "la Vieille Grise"], titre: "dernière de la Cour Grise", ou: "Les Comtés Rouges", etat: "vivant" },
+  ],
+
+  divinites: [
+    { nom: "La Cour Grise", alias: ["Cour Grise", "la Cour"], domaines: ["Hiver", "Ordre"], symbole: "une pierre grise sous la neige" },
+    { nom: "Le Souvenir", domaines: ["Savoir", "Vie"], symbole: "une plume blanche" },
+  ],
+
+  peuples: ["Humains", "Ternois", "gens des Comtés", "Gris-de-Sang", "Effacés", "Sylvains", "Houilleurs"],
+
+  vocabulaire: [
+    "la Dîme", "Dîme", "Long Hiver", "pierre de dîme", "payer son mort", "mort à gage", "lait d'oubli", "sève", "Registres", "Registre",
+    "Oubliés", "Oublié", "Vide", "souvenir", "souvenirs", "fer froid", "denier", "deniers", "sou", "livre", "livres",
+    "Grande Oubliance", "la Mémoire du pays", "Oublis", "Neuf Comtés",
+  ],
+
+  secrets: ["La Cour Grise est morte", "la Cour est morte", "changée en cendre", "c'était la terre", "la terre a faim", "la terre se servira", "Aube-de-Cendre"],
+
+  anachronismes: ["fusil", "pistolet", "poudre à canon", "électricité", "téléphone", "machine à vapeur", "usine", "plastique", "béton", "OK", "stress"],
+
+  noms: NOMS_TERNELANDE,
+
+  accroches: [
+    { texte: "Un riche marchand de Haute-Cendre paie pour qu'on lui trouve un mort à donner à sa place.", factions: ["dimiers"] },
+    { texte: "Une Gardienne a caché le souvenir d'un enfant mort dans un dé à coudre ; un Dîmier le cherche.", factions: ["gardiennes", "dimiers"] },
+    { texte: "À Vaugelée, des formes pâles frappent sous la glace, et l'Église veut leurs noms.", factions: ["eglise"] },
+    { texte: "Une compagnie franche occupe un village et refuse de partir avant la nuit de la Dîme.", factions: ["comtes"] },
+    { texte: "Un village refuse de donner le deuxième souvenir demandé cette année ; les Dîmiers arrivent dans trois jours.", factions: ["dimiers"] },
+  ],
+
+  campagne: {
+    jauge: {
+      nom: "la Mémoire du pays",
+      depart: 100,
+      seuils: [
+        { valeur: 75, effet: "Les gens oublient des choses entre les Dîmes : des noms de rue, des recettes." },
+        { valeur: 50, effet: "Un deuxième village s'efface, dans les Comtés Rouges, en pleine guerre." },
+        { valeur: 25, effet: "À la Dîme, on oublie aussi des enfants vivants." },
+        { valeur: 0, effet: "La Grande Oubliance. Fin de campagne, sauf si quelqu'un a trouvé comment rassasier ou déshabituer la terre." },
+      ],
+      remontees: [
+        { action: "Rendre un souvenir à quelqu'un", gain: 1 },
+        { action: "Sauver un Registre", gain: 2 },
+        { action: "Un village trouve une autre façon de nourrir la terre", gain: 5 },
+      ],
+      descentes: [
+        { action: "Un village ne paie pas la Dîme", perte: 3 },
+        { action: "Un sort de niveau 6 à 8", perte: 1 },
+        { action: "Un sort de niveau 9", perte: 3 },
+        { action: "Des Registres brûlés", perte: 5 },
+      ],
+    },
+    reserve: {
+      nom: "Oublis",
+      max: 6,
+      regle: "Un Oubli chaque fois qu'un personnage perd un souvenir pour de bon. À dépenser pour faire oublier une chose à un PNJ au mauvais moment, faire surgir un Oublié, ou rendre un chemin introuvable.",
+    },
+    accroches: [
+      { titre: "Le mort à gage", niveaux: [1, 4], factions: ["dimiers", "gardiennes"], texte: "Un riche marchand de Haute-Cendre paie pour qu'on lui trouve un mort à donner à sa place ; la famille qu'on lui propose n'est pas d'accord." },
+      { titre: "Le reliquaire", niveaux: [1, 4], factions: ["gardiennes", "dimiers"], texte: "Une Gardienne a caché le souvenir d'un enfant mort dans un dé à coudre ; un Dîmier le cherche." },
+      { titre: "Les visages sous la glace", niveaux: [1, 4], factions: ["eglise"], texte: "À Vaugelée, les Oubliés frappent sous la glace ; l'Église veut leurs noms." },
+      { titre: "La compagnie", niveaux: [1, 4], factions: ["comtes"], texte: "Une compagnie franche occupe un village et refuse de partir avant la nuit de la Dîme ; le village sera puni pour elle." },
+      { titre: "Deux souvenirs", niveaux: [1, 4], factions: ["dimiers"], texte: "Un village refuse le deuxième souvenir ; les Dîmiers arrivent dans trois jours." },
+      { titre: "Le poids des dîmes", niveaux: [5, 10], factions: ["eglise"], texte: "Mère Ysaure fait chercher un moine qui a volé le Registre de l'an 412." },
+      { titre: "Le lait d'oubli", niveaux: [5, 10], factions: ["gardiennes"], texte: "Apporter de la sève à la Mère Brunissende pour rendre un mort au Comte-Régent." },
+      { titre: "Morte-Fontaine", niveaux: [5, 10], factions: ["effaces"], texte: "Entrer dans les Landes, parler à Personne, et ne pas en revenir effacé." },
+      { titre: "Au-delà de la mer", niveaux: [5, 10], factions: ["comtes"], texte: "La Comtesse de Vair veut faire venir un navire étranger à Brise-Glace avant la Dîme." },
+      { titre: "Le Cairn des Pâles", niveaux: [5, 10], factions: ["dimiers"], texte: "Suivre les gens des Neiges jusqu'au Cairn, et voir que ce n'est qu'une pierre." },
+      { titre: "Le Palais Sans Ombre", niveaux: [11, 16], factions: ["dimiers"], texte: "Vingt jours de traîneau jusqu'au Palais, et ce qui attend à sa table." },
+      { titre: "Le Grand Dîmier", niveaux: [11, 16], factions: ["dimiers", "comtes"], texte: "Malhaume propose un marché : se taire, ou voir leur village dîmé deux fois." },
+      { titre: "La Vieille Grise", niveaux: [11, 16], factions: ["gardiennes"], texte: "Une mendiante au teint de cendre se souvient, dans son sommeil, d'une salle de glace." },
+      { titre: "La sève de la Dame", niveaux: [11, 16], factions: ["gardiennes", "eglise"], texte: "Retrouver dans les Blancs-Bois l'arbre qui a bu les souvenirs de la mendiante." },
+      { titre: "L'évêque-comte", niveaux: [11, 16], factions: ["eglise", "comtes"], texte: "La guerre arrive à Saint-Mémoire ; il faut sauver les Registres, ou une partie." },
+      { titre: "Ce que dit la Dame", niveaux: [17, 20], factions: ["gardiennes"], texte: "Rendue à elle-même, Aube-de-Cendre explique comment la Cour a habitué la terre." },
+      { titre: "La Grande Oubliance", niveaux: [17, 20], factions: ["effaces"], texte: "Personne veut faire refuser la Dîme à tout le royaume." },
+      { titre: "Le roi élu", niveaux: [17, 20], factions: ["comtes"], texte: "L'élection du roi à Haute-Cendre, la nuit de la Dîme." },
+      { titre: "Le dernier repas", niveaux: [17, 20], factions: ["dimiers"], texte: "Malhaume propose de donner à la terre le souvenir de toute une ville." },
+      { titre: "Ce qu'on donnera", niveaux: [17, 20], factions: ["dimiers", "eglise", "gardiennes", "effaces"], texte: "Continuer la Dîme, déshabituer la terre, ou lui donner les souvenirs de la Cour elle-même." },
+    ],
+  },
+};

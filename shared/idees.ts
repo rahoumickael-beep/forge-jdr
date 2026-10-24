@@ -3,6 +3,7 @@
 // (scripts/verifier-secrets-client.ts le contrôle sur le site fabriqué).
 import { AUBRETERRE } from "./canon/fantasy";
 import { ARCHIPEL } from "./canon/science-fiction";
+import { TERNELANDE } from "./canon/dark-fantasy";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -25,12 +26,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Un marteau en fer froid forgé à la main", "50 pièces d'or et un clou à l'oreille", "Un laissez-passer de la Chancellerie", "Une part dans une saline", "La reconnaissance des Veilleuses", "Une carte des lignes de la Marche"],
   },
   "dark-fantasy": {
-    hooks: ["Les morts reviennent chaque nuit sans lune.", "Une enfant prophétesse est réclamée par trois factions.", "Le seigneur local paie en or pour chaque tête de sorcière.", "La pluie est devenue rouge."],
-    villains: ["un inquisiteur fanatique", "une sorcière vieille de trois siècles", "un dieu oublié qui se réveille", "un seigneur vampire"],
-    motivations: ["purifier le monde par le feu", "échapper à sa propre damnation", "nourrir une faim sans fin"],
-    enemies: ["Rats géants", "Pillards", "Chiens de guerre", "Goules", "Possédés", "Chevaliers morts", "Abomination", "Vampire", "Horreur des fosses", "Archidémon"],
-    twists: ["Les héros sont porteurs de la malédiction.", "L'Église a créé le monstre.", "Le seul remède exige un sacrifice."],
-    rewards: ["Une relique bénie", "Une bourse d'argent terni", "Le pardon d'un crime", "Une lame forgée en enfer"],
+    hooks: TERNELANDE.accroches.map((a) => a.texte),
+    villains: ["un Dîmier qui prend deux souvenirs là où il en faut un", "un capitaine de compagnie franche qui vend les villages aux trois comtes", "un prêcheur effacé qui veut que tout le monde oublie", "un notaire de Haute-Cendre qui achète des morts à gage", "une sorcière qui a bu trop de sève et ne sait plus qui elle est"],
+    motivations: ["retrouver le visage d'un enfant donné à la Dîme", "garder le pouvoir que donne la peur de la Dîme", "prouver que l'hiver finit seul au-delà de la mer", "que la Ternelande oublie tout et recommence"],
+    enemies: ["Loups d'hiver", "Corbeaux de dîme", "Brigands effacés", "Soldats de compagnie", "Écuyers dîmiers", "Oubliés", "Dîmiers", "Racines-qui-boivent", "Chevalier de compagnie", "Sylve blanche", "Grand Dîmier", "La Faim de la terre"],
+    twists: ["Le mort qu'on a donné à la Dîme était encore vivant.", "La famille qui paie pour un mort à gage a vendu son propre enfant.", "Le Dîmier sous le masque est un voisin.", "Les Registres ont été recopiés, et la copie dit autre chose.", "La pierre de dîme est chaude au toucher, comme si quelque chose buvait."],
+    rewards: ["Un reliquaire qui rend un souvenir", "Dix livres d'argent", "Un couteau de fer froid", "Une fiole de lait d'oubli", "Un nom retrouvé dans les Registres", "Une nuit de la Dîme sans payer"],
   },
   "science-fiction": {
     hooks: ARCHIPEL.accroches.map((a) => a.texte),

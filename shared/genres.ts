@@ -1,5 +1,6 @@
 import { LIEUX_AUBRETERRE, NOMS_AUBRETERRE } from "./canon/fantasy-table";
 import { LIEUX_ARCHIPEL, NOMS_ARCHIPEL } from "./canon/science-fiction-table";
+import { LIEUX_TERNELANDE, NOMS_TERNELANDE } from "./canon/dark-fantasy-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -58,17 +59,17 @@ export const GENRES: Genre[] = [
   {
     id: "dark-fantasy",
     label: "Dark fantasy",
-    pitch: "Monde cruel, magie corrompue, survie et choix moraux.",
+    pitch: "La Ternelande : chaque hiver, on donne un souvenir pour que le printemps revienne. La magie se paie de la même monnaie.",
     theme: { background: "#141212", floor: "#5d5650", wall: "#2a2422", water: "#2b3f45", vegetation: "#3b4a2c", road: "#4e4238", door: "#6b2a20", grid: "rgba(0,0,0,.35)" },
     stats: ["Vigueur", "Agilité", "Endurance", "Savoir", "Volonté", "Présence"],
-    archetypes: ["Chasseur de sorcières", "Mercenaire", "Hérétique", "Chirurgien-barbier", "Pèlerin maudit", "Chevalier déchu", "Sorcière des ronces", "Fossoyeur"],
-    origins: ["Paysan des marches", "Noble ruiné", "Enfant de la peste", "Moine renégat", "Survivant d'un massacre"],
-    equipment: ["Arbalète lourde", "Hachette rouillée", "Pieu en frêne", "Huile sainte", "Scie d'amputation", "Relique douteuse", "Masque à bec", "Chapelet d'ossements"],
-    abilities: ["Rituel de sang", "Résister à la folie", "Traque nocturne", "Exorcisme", "Coup de grâce", "Pacte interdit"],
-    nameStart: ["Aldr", "Bael", "Corv", "Grim", "Hesk", "Mord", "Ulr", "Wex", "Sev", "Rav"],
-    nameEnd: ["ric", "mund", "gar", "wald", "a", "ine", "ok", "ard"],
-    places: ["la cathédrale effondrée", "le village pestiféré de Hollowmere", "la forêt des pendus", "le champ de bataille éternel", "l'abbaye des sœurs muettes"],
-    traits: ["hanté par son passé", "cynique", "dévot jusqu'à l'aveuglement", "survivant à tout prix"],
+    archetypes: ["Chasseur de sorcières", "Mercenaire", "Chirurgien-barbier", "Pèlerin", "Sorcière des ronces", "Mémorialiste", "Fossoyeur", "Coupe-jarret", "Dîmier renégat", "Complainteur"],
+    origins: ["Humain ternois", "Humain des Comtés", "Gris-de-Sang", "Effacé", "Sylvain", "Houilleur"],
+    equipment: ["Épée bâtarde", "Arbalète de chasse", "Faux de guerre", "Couteau de fer froid", "Brigandine", "Lanterne sourde", "Trousse de chirurgien-barbier", "Fiole de lait d'oubli", "Reliquaire de fil rouge", "Registre de paroisse", "Masque d'étain volé", "Peau de loup d'hiver"],
+    abilities: ["Attaque sournoise", "Brûler un souvenir", "Chant de complainte", "Amputer", "Flairer le sorcier", "Coup de faux", "Pister sur la neige", "Rendre un nom", "Tenir la veillée", "Mentir au Dîmier"],
+    nameStart: NOMS_TERNELANDE.prenoms,
+    nameEnd: NOMS_TERNELANDE.familles,
+    places: LIEUX_TERNELANDE,
+    traits: ["ne sait plus le nom de sa mère", "compte les hivers sur ses doigts", "porte le manteau d'un mort qu'il a oublié", "refuse de toucher une pierre de dîme", "se signe devant chaque Registre", "chante à voix basse pour ne pas oublier"],
   },
   {
     id: "science-fiction",

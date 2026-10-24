@@ -29,7 +29,7 @@ export const CLASSES_ARCHIPEL: CharacterClass[] = [
       P(3, "Lame-diapason", "réaction", "à volonté", "Si tu portes une lame-diapason : elle frappe à 1d8 tranchant + Instinct. En réaction à un trait de brûleur qui te touche, tu réduis les dégâts de 1d10 + Instinct + niveau. +1 Écho par trait dévié."),
       P(5, "Retenir", "action", "à volonté", "Une créature de taille Grande ou moins à 18 m : sauvegarde de Puissance ou entravée une minute (sauvegarde à chaque fin de tour). Concentration. +2 Écho.", { range: "18 m" }),
       P(7, "Entendre ce qu'on tait", "action", "à volonté", "Une minute durant, tu entends les pensées de surface d'une créature à 9 m. Sauvegarde d'Instinct pour s'en défaire. +1 Écho.", { range: "9 m" }),
-      P(9, "Vague", "action", "à volonté", "Cône de 9 m : 5d8 dégâts de force et renversé ; moitié et debout si sauvegarde de Puissance (6d8 au niveau 13, 7d8 au 17). +2 Écho."),
+      P(9, "Vague", "action", "à volonté", "Cône de 9 m : 5d8 dégâts de force et renversé ; moitié et debout si sauvegarde de Puissance (6d8 au niveau 13, 7d8 au 17). +3 Écho."),
       P(11, "Ouvrir un Phare", "action", "repos long", "Dix minutes de chant devant un Phare : il s'ouvre pour toi sans Orgue, et sans Péage. Tout Censeur à un saut à la ronde l'entend. +3 Écho.", { uses: 1 }),
       P(13, "Mur de note", "action", "à volonté", "Un mur invisible de 9 m de long sur 3 m de haut, pendant une minute : ni trait ni créature ne le traversent. Concentration. +3 Écho.", { range: "18 m" }),
       P(15, "Silence intérieur", "passif", "passif", "Un repos court retire autant d'Écho que ton niveau. Tu ne peux plus être charmé."),
@@ -50,7 +50,7 @@ export const CLASSES_ARCHIPEL: CharacterClass[] = [
         [
           P(3, "Forcer le Chant", "passif", "à volonté", "Une fois par tour, tu peux doubler les dégâts ou la durée d'un pouvoir du Chant. Il coûte alors le double d'Écho, et le MJ gagne un point de Dissonance (sa réserve : un Phare qui tremble, un Censeur qui arrive, un saut qui tourne mal)."),
           P(6, "Note qui blesse", "passif", "passif", "Pousser et Vague ajoutent la moitié de ton niveau en dégâts psychiques."),
-          P(10, "Briser", "action", "à volonté", "Une créature à 18 m : 6d10 dégâts psychiques, moitié si sauvegarde d'Instinct (8d10 au niveau 14). +3 Écho.", { range: "18 m" }),
+          P(10, "Briser", "action", "à volonté", "Une créature à 18 m : 6d10 dégâts psychiques, moitié si sauvegarde d'Instinct (8d10 au niveau 14). +4 Écho.", { range: "18 m" }),
           P(14, "Personne ne m'entend", "passif", "passif", "Aucun autre Chantre ne perçoit tes chants, et Apaiser ne fonctionne pas contre toi."),
         ]),
     ],
