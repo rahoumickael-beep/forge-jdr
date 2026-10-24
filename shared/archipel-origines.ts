@@ -72,7 +72,7 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
     id: "sf-tarrak",
     genre: "science-fiction",
     name: "Tarrak",
-    blurb: "Massifs, quatre bras, la peau de cuir gris marbrée de plaques. Un Tarrak qui a juré grave son serment au couteau sur la plaque de son avant-bras.",
+    blurb: "Massifs, quatre bras, la peau de cuir gris marbrée de plaques. Quand un Tarrak a juré, son serment est gravé au couteau sur la plaque de son avant-bras.",
     bonus: { 0: 2, 2: 1 },
     speed: 5,
     unique: true,

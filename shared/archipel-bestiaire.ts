@@ -340,7 +340,7 @@ export const BESTIAIRE_ARCHIPEL: Creature[] = [
     reactions: [
       special("Dévier", "Le cristal chante plus vite que le plasma : il gagne +3 à la CA contre une attaque à distance au brûleur, ce qui peut la faire rater."),
     ],
-    lore: "Un Censeur de plus, en apparence : manteau noir, bouche cousue brodée sur le col. Mais celui-ci tire de sous son manteau une lame de cristal noircie, et la lame chante. On l'entend avant qu'il frappe.",
+    lore: "Un Censeur de plus, en apparence : manteau noir, bouche cousue brodée sur la poitrine. Mais celui-ci tire de sous son manteau une lame de cristal noircie, et la lame chante. On l'entend avant qu'il frappe.",
     gmNotes: "Les Dissonants sont les élèves de Malachie Orsat : des Censeurs qui chantent à rebours, en forçant le Chant. Personne hors du cercle ne le sait, et la scène où les joueurs le comprennent est l'accroche 10. Chaque Cri brisé près d'un Phare secoue le Dormeur : les joueurs qui voient le Phare trembler comprennent que ce n'est pas un hasard. Un Chantre qui chante doucement dans leur dos les trouble : la lame dérape.",
     scene: "a lean human duelist in a black coat with torn hems, a blackened crystal blade held low in one hand, visible ripples in the air around the blade, head tilted, eyes shut, mouth open on a silent note, standing in the middle of a ruined colonnade of pale stone, cracks running along the floor",
   }),

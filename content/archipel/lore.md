@@ -139,7 +139,7 @@ L'Archipel n'a pas de bords nets : c'est un réseau. Au centre, Solenne et les s
 
 ### Les Brisants
 
-**Paysage.** Une nébuleuse rouge et violette, à mi-chemin entre Solenne et la Frange, où la Route passe trop près d'une étoile morte. Les sauts y échouent parfois : les vaisseaux en sortent brisés, ou n'en sortent pas. Six siècles d'épaves flottent dans le gaz, des milliers, certaines grandes comme des villes.
+**Paysage.** Une nébuleuse rouge et violette, à mi-chemin entre Solenne et la Frange, où la Route passe trop près d'une étoile morte. Les sauts y échouent parfois : les vaisseaux en sortent brisés, ou n'en sortent pas. Six siècles d'épaves flottent dans le gaz, des milliers, certaines grandes comme des villes. Le Phare des Brisants, terne, à demi noyé dans le gaz rouge, est le seul repère fixe : les ferrailleurs comptent leurs distances depuis lui.
 
 **Culture.** Les **ferrailleurs** des Brisants vivent dans les épaves, découpent, revendent, se battent pour les meilleures carcasses. Ils ont leurs lois, leurs chefs de tas, leurs superstitions. On y trouve des vaisseaux d'avant le Concordat, et parfois des choses plus vieilles.
 
@@ -257,7 +257,7 @@ Grands (deux mètres), minces, la peau bleu-vert et lisse, des ouïes au cou qu'
 
 ### Tarrak
 
-Massifs, quatre bras, une peau de cuir gris marbrée de plaques, nés sur un monde à gravité écrasante. Mécaniciens hors pair, forts comme trois hommes, lents à la course. La dette d'honneur est leur loi : un Tarrak qui a juré grave son serment au couteau sur la plaque de son avant-bras, et en jeu, un Tarrak qui a juré gagne un avantage pour tenir sa parole, et souffre d'un désavantage s'il la trahit. Les deux bras inférieurs ne manient pas d'arme, mais tiennent un outil, un bouclier ou un camarade.
+Massifs, quatre bras, une peau de cuir gris marbrée de plaques, nés sur un monde à gravité écrasante. Mécaniciens hors pair, forts comme trois hommes, lents à la course. La dette d'honneur est leur loi : quand un Tarrak a juré, son serment est gravé au couteau sur la plaque de son avant-bras, et en jeu, un Tarrak qui a juré gagne un avantage pour tenir sa parole, et souffre d'un désavantage s'il la trahit. Les deux bras inférieurs ne manient pas d'arme, mais tiennent un outil, un bouclier ou un camarade.
 
 ### Ikki
 
@@ -413,7 +413,7 @@ Le MJ gagne un point de Dissonance chaque fois qu'un Chantre perd connaissance o
 ### Accroches de campagne (20) [MJ]
 
 **Niveaux 1 à 4 : on paie ses dettes.**
-1. **La première mensualité** (Main Close) : la Vieille Mère Quassi propose d'effacer la mensualité contre une livraison sans questions à un monastère d'Ancre. La caisse contient une lame-diapason brisée.
+1. **La première mensualité** (Main Close, Chantres) : Barnabé Coquerel, pour la Vieille Mère, efface la mensualité contre une caisse à livrer sans questions dans les Brisants, à l'épave de la Sainte-Patience. La caisse contient une lame-diapason intacte, et Coquerel a vendu le renseignement à une Censeure. Scénario écrit : « La première mensualité » (bibliothèque).
 2. **Le passager** (Chantres, Censeurs) : un vieil homme paie cher pour aller à Ancre avec sa petite-fille. L'enfant pâlit quand le vaisseau saute. Un Censeur attend au poste de Péage.
 3. **La resquille** (Ligue) : la Ligue paie le double pour un saut en resquille dans le sillage d'un convoi hégémonique. Le convoi transporte un Orgue neuf.
 4. **L'épave** (Brisants) : une épave d'avant le Concordat vient d'apparaître dans les Brisants. Tout le monde y court. Dedans, une salle entière en pierre de Phare.

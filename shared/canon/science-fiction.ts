@@ -94,7 +94,7 @@ export const ARCHIPEL: Canon = {
       gens: ["Frangiers", "contrebandiers", "prospecteurs", "Ikki"],
       peur: "d'être les suivants, et la Main Close",
       lieuDeRencontre: "les docks de Gué-d'Ambre",
-      lieux: ["Gué-d'Ambre", "Ikkara", "Morne-Saline"],
+      lieux: ["Gué-d'Ambre", "le Phare de Gué-d'Ambre", "Ikkara", "Morne-Saline"],
     },
     {
       nom: "Les Brisants",
@@ -180,7 +180,7 @@ export const ARCHIPEL: Canon = {
   noms: NOMS_ARCHIPEL,
 
   accroches: [
-    { texte: "La Main Close efface une mensualité contre une caisse à livrer sans questions à un monastère d'Ancre.", factions: ["main-close", "chantres"] },
+    { texte: "La Main Close efface une mensualité contre une caisse à livrer sans questions dans les Brisants.", factions: ["main-close", "chantres"] },
     { texte: "Un vieil homme paie cher pour emmener sa petite-fille à Ancre ; l'enfant pâlit à chaque saut.", factions: ["chantres", "censeurs"] },
     { texte: "La Ligue paie le double pour un saut en resquille dans le sillage d'un convoi qui transporte un Orgue neuf.", factions: ["ligue", "hegemonie"] },
     { texte: "Une épave d'avant le Concordat vient d'apparaître dans les Brisants, et tout le monde y court.", factions: ["main-close"] },
@@ -244,7 +244,7 @@ export const ARCHIPEL: Canon = {
       regle: "Un point chaque fois qu'un Chantre perd connaissance ou force le Chant. À dépenser pour faire trembler un Phare au mauvais moment, faire surgir un Dissonant, ou rendre un saut dangereux.",
     },
     accroches: [
-      { titre: "La première mensualité", niveaux: [1, 4], factions: ["main-close", "chantres"], texte: "La Vieille Mère Quassi efface la mensualité contre une livraison à un monastère d'Ancre. La caisse contient une lame-diapason brisée." },
+      { titre: "La première mensualité", niveaux: [1, 4], factions: ["main-close", "chantres"], texte: "Coquerel, pour la Vieille Mère, efface la mensualité contre une caisse à livrer à la Sainte-Patience, dans les Brisants. Elle contient une lame-diapason intacte, et Coquerel a vendu le renseignement à une Censeure (scénario « La première mensualité »)." },
       { titre: "Le passager", niveaux: [1, 4], factions: ["chantres", "censeurs"], texte: "Un vieil homme et sa petite-fille pour Ancre. L'enfant pâlit quand le vaisseau saute ; un Censeur attend au poste de Péage." },
       { titre: "La resquille", niveaux: [1, 4], factions: ["ligue", "hegemonie"], texte: "Un saut en resquille pour la Ligue, dans le sillage d'un convoi hégémonique qui transporte un Orgue neuf." },
       { titre: "L'épave", niveaux: [1, 4], factions: ["main-close"], texte: "Une épave d'avant le Concordat dans les Brisants. Dedans, une salle entière en pierre de Phare." },

@@ -5,7 +5,8 @@
 import { existsSync, mkdirSync, readdirSync } from "node:fs";
 import sharp from "sharp";
 
-const SOURCE = "content/aubreterre/illustrations";
+// Une source par monde ; les ids des créatures ne se recoupent pas d'un monde à l'autre (testé).
+const SOURCES = ["content/aubreterre/illustrations", "content/archipel/illustrations"].filter((d) => existsSync(d));
 // Créatures dont le vrai nom trahit un secret : le fichier public prend le nom public (fichierCreature dans shared/bestiary.ts,
 // shared/bestiary.test.ts vérifie la concordance). L'adresse d'une image arrive chez les joueurs.
 const ALIAS = {
@@ -14,13 +15,14 @@ const ALIAS = {
   "langue-de-gorvan": "langue-du-dessous",
   "main-de-gorvan": "main-du-dessous",
   "gorvan-fragment": "ce-qui-attend-en-bas",
+  "celui-qui-s-est-leve": "la-silhouette-de-cendrine",
 };
 const nomPublic = (f) => (ALIAS[f.replace(/\.jpg$/, "")] ?? f.replace(/\.jpg$/, "")) + ".webp";
 const SORTIE = "client/public/pions";
 mkdirSync(SORTIE, { recursive: true });
-const garder = (f) => !/^(couverture|joueurs|mj|famille|scenario|origine)-/.test(f);
+const garder = (f) => !/^(couverture|joueurs|mj|famille|scenario|origine|region|figure)-/.test(f);
 let n = 0;
-for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f) && !f.startsWith("carte-"))) {
+for (const SOURCE of SOURCES) for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f) && !f.startsWith("carte-"))) {
   const dest = `${SORTIE}/${nomPublic(f)}`;
   if (existsSync(dest) && !process.argv.includes("--refaire")) continue;
   const carre = await sharp(`${SOURCE}/${f}`).resize(512, 512, { fit: "cover", position: sharp.strategy.attention }).toBuffer();
@@ -33,7 +35,7 @@ console.log(`${n} vignette(s) écrite(s) dans ${SORTIE}.`);
 const CARTES = "client/public/cartes";
 mkdirSync(CARTES, { recursive: true });
 let k = 0;
-for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f))) {
+for (const SOURCE of SOURCES) for (const f of readdirSync(SOURCE).filter((f) => f.endsWith(".jpg") && garder(f))) {
   const dest = `${CARTES}/${nomPublic(f)}`;
   if (existsSync(dest) && !process.argv.includes("--refaire")) continue;
   await sharp(`${SOURCE}/${f}`).resize(600, 760, { fit: "cover", position: sharp.strategy.attention }).webp({ quality: 78 }).toFile(dest);
