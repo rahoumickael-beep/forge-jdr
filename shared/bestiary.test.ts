@@ -5,7 +5,7 @@ import { FIN_DE_STYLE } from "./charte";
 import { AUBRETERRE } from "./canon/fantasy";
 import {
   averageDice,
-  BESTIARY,
+  BESTIARY as TOUT_LE_BESTIAIRE,
   fichierCreature,
   pionDeCreature,
   CR_STEPS,
@@ -21,6 +21,8 @@ import {
 } from "./bestiary";
 import REGLES_FLUX from "../comfyui/regles-flux.json";
 
+/** Les tests de ce fichier portent sur Aubreterre ; l'Archipel a les siens (archipel-bestiaire.test.ts). */
+const BESTIARY = TOUT_LE_BESTIAIRE.filter((c) => c.genre === "fantasy");
 const step = (cr: number) => CR_STEPS.indexOf(cr);
 
 test("bestiaire : ids uniques et nombre de créatures", () => {

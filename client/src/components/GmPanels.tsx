@@ -439,7 +439,8 @@ export function CombatPanel({ room }: { room: RoomView }) {
   );
 }
 
-const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous"];
+/** Ordre d'affichage des familles ; le panneau ne montre que celles du genre de la partie. */
+const FAMILIES: Family[] = ["Morts", "Bêtes", "Humanoïdes", "Monstruosités", "Créatures du Dessous", "Faune des mondes", "Équipages", "Machines", "Choses des Routes"];
 
 /** Bestiaire du genre : le MJ pose une créature (ou un groupe) sur la carte en un clic. */
 export function BestiaryPanel({ room }: { room: RoomView }) {
@@ -490,7 +491,7 @@ export function BestiaryPanel({ room }: { room: RoomView }) {
         <input className="input" placeholder="Chercher une créature" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Chercher une créature" />
         <select className="input" value={family} onChange={(e) => setFamily(e.target.value as Family | "")} aria-label="Famille">
           <option value="">Toutes les familles</option>
-          {FAMILIES.map((f) => <option key={f} value={f}>{f}</option>)}
+          {FAMILIES.filter((f) => all.some((c) => c.family === f)).map((f) => <option key={f} value={f}>{f}</option>)}
         </select>
         <label className="small" style={{ display: "flex", gap: 4, alignItems: "center" }}>
           Nombre
@@ -521,7 +522,7 @@ export function BestiaryPanel({ room }: { room: RoomView }) {
   );
 }
 
-const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236" };
+const FAMILY_COLORS: Record<Family, string> = { Morts: "#4f5a4c", Bêtes: "#6b4a1f", Humanoïdes: "#7a2a22", Monstruosités: "#3c4560", "Créatures du Dessous": "#2b2236", "Faune des mondes": "#5e6b2a", Équipages: "#7a3d22", Machines: "#3a4a5c", "Choses des Routes": "#4a3a6b" };
 
 export function ScenariosPanel({ room }: { room: RoomView }) {
   const place = (e: Encounter) => {

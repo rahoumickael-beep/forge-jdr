@@ -1,17 +1,27 @@
-// Bestiaire d'Aubreterre (campagne « Le Trône du Dieu Mort »).
+// Bestiaire d'Aubreterre (campagne « Le Trône du Dieu Mort »), et BESTIARY qui réunit tous les mondes
+// (celui de l'Archipel est dans archipel-bestiaire.ts, les outils de fiche dans fiches.ts).
 // Fiches façon D&D 5e : FP 0 à 20, distances en mètres (1 case = 1,5 m).
 // Tout est original ou tiré du folklore : aucune créature protégée hors SRD 5.1.
+import { BESTIAIRE_ARCHIPEL } from "./archipel-bestiaire";
 import { stylePeinture } from "./charte";
+import { cost, fabriquerCreature, hit, modOf, multi, recharge, save, special, type CreatureInput } from "./fiches";
 import type { Encounter, GenreId } from "./types";
+
+export { illustrationStyle, LUMIERE_FAMILLE, modOf, xpForCr } from "./fiches";
 
 export type Stat = "For" | "Dex" | "Con" | "Int" | "Sag" | "Cha";
 export const STAT_ORDER: Stat[] = ["For", "Dex", "Con", "Int", "Sag", "Cha"];
 
 export type Size = "Très petite" | "Petite" | "Moyenne" | "Grande" | "Très grande" | "Gigantesque";
 
-export type Family = "Morts" | "Bêtes" | "Humanoïdes" | "Monstruosités" | "Créatures du Dessous";
+/** Familles d'Aubreterre */
+export type FamilleAubreterre = "Morts" | "Bêtes" | "Humanoïdes" | "Monstruosités" | "Créatures du Dessous";
+/** Familles de l'Archipel */
+export type FamilleArchipel = "Faune des mondes" | "Équipages" | "Machines" | "Choses des Routes";
+export type Family = FamilleAubreterre | FamilleArchipel;
 
 export type Region =
+  // Aubreterre
   | "Le Couronnement"
   | "Les Marches de Fer"
   | "Le Val Cierge"
@@ -21,6 +31,16 @@ export type Region =
   | "La Brune"
   | "Le Verre-Rouge"
   | "Le Dessous"
+  // L'Archipel
+  | "Solenne"
+  | "Valcourt"
+  | "Ancre"
+  | "Ilvaë"
+  | "Karrag"
+  | "La Frange"
+  | "Les Brisants"
+  | "Les Mondes Éteints"
+  | "le Grand Large"
   | "Partout";
 
 export interface Speed {
@@ -111,43 +131,12 @@ export interface Creature {
   illustration: string; // prompt Flux Schnell, commence par ILLUSTRATION_STYLE
 }
 
-/** Chaque famille a sa lumière : on reconnaît la famille d'une créature au premier coup d'œil. */
-export const LUMIERE_FAMILLE: Record<Family, string> = {
-  Bêtes: "late afternoon natural light, ochre and moss green tones",
-  Morts: "cold silver-grey light, grey-green tones, low ground mist",
-  Humanoïdes: "torchlight and candlelight, warm browns and dried blood red",
-  Monstruosités: "stormy sky, hard contrast, slate and rust tones",
-  "Créatures du Dessous": "near darkness, a single pale cold light rising from below",
-};
-
-/** Préfixe des prompts d'illustration d'une famille, tiré de la charte fantasy (shared/charte.ts). */
-export const illustrationStyle = (family: Family) => stylePeinture("fantasy", "creature", LUMIERE_FAMILLE[family]);
-/** Style commun à toutes les planches, sans la lumière (qui ouvre le prompt). */
+/** Style commun à toutes les planches d'Aubreterre, sans la lumière (qui ouvre le prompt). */
 export const ILLUSTRATION_STYLE = stylePeinture("fantasy", "creature", "");
-
-/** Retire d'une scène les morceaux qui imposent leur propre lumière (la famille décide). */
-const sansLumiere = (scene: string) =>
-  scene
-    .split(", ")
-    .filter((part, i) => i === 0 || !/\b(light|lit|backlight|backlit|overcast|moonlight|sunlight|glow)\b/i.test(part))
-    .join(", ")
-    .replace(/ (at|in the|under the) (dawn|dusk|sunset|sunrise|noon|midday|night)\b/gi, "");
 
 // --- Repères de la 5e (Guide du maître, création de monstres) ---
 
 export const CR_STEPS = [0, 0.125, 0.25, 0.5, ...Array.from({ length: 30 }, (_, i) => i + 1)];
-
-const XP_BY_CR: Record<string, number> = {
-  "0": 10, "0.125": 25, "0.25": 50, "0.5": 100, "1": 200, "2": 450, "3": 700, "4": 1100, "5": 1800,
-  "6": 2300, "7": 2900, "8": 3900, "9": 5000, "10": 5900, "11": 7200, "12": 8400, "13": 10000,
-  "14": 11500, "15": 13000, "16": 15000, "17": 18000, "18": 20000, "19": 22000, "20": 25000,
-  "21": 33000, "22": 41000, "23": 50000, "24": 62000, "25": 75000, "26": 90000, "27": 105000,
-  "28": 120000, "29": 135000, "30": 155000,
-};
-
-export function xpForCr(cr: number): number {
-  return XP_BY_CR[String(cr)] ?? 0;
-}
 
 export function crLabel(cr: number): string {
   return cr === 0.125 ? "1/8" : cr === 0.25 ? "1/4" : cr === 0.5 ? "1/2" : String(cr);
@@ -157,7 +146,6 @@ export function proficiencyForCr(cr: number): number {
   return cr < 5 ? 2 : Math.min(9, Math.floor((cr - 1) / 4) + 2);
 }
 
-export const modOf = (v: number) => Math.floor((v - 10) / 2);
 
 /** PV maximum attendus pour chaque FP (index de CR_STEPS). */
 function hpCeiling(i: number): number {
@@ -266,52 +254,9 @@ export function estimateCr(c: Creature): { defensive: number; offensive: number;
   return { defensive: CR_STEPS[def], offensive: CR_STEPS[off], estimate, dpr };
 }
 
-// --- Fabrication des fiches ---
+// --- Fabrication des fiches (outils communs dans fiches.ts) ---
 
-const HIT_DIE: Record<Size, number> = { "Très petite": 4, Petite: 6, Moyenne: 8, Grande: 10, "Très grande": 12, Gigantesque: 20 };
-
-type CreatureInput = Omit<Creature, "genre" | "xp" | "hp" | "hpDice" | "illustration" | "senses"> & {
-  /** Nombre de dés de vie ; le dé dépend de la taille, le bonus de la Constitution. */
-  hd: number;
-  /** Sens sans la Perception passive, ajoutée automatiquement. */
-  senses?: string;
-  /** Description de la planche, en anglais, sans le préfixe de style. */
-  scene: string;
-};
-
-function creature(input: CreatureInput): Creature {
-  const { hd, scene, senses, ...rest } = input;
-  const die = HIT_DIE[input.size];
-  const bonus = hd * modOf(input.stats[2]);
-  const hp = Math.floor((hd * (die + 1)) / 2) + bonus;
-  const passive = 10 + (input.skills?.Perception ?? modOf(input.stats[4]));
-  return {
-    ...rest,
-    genre: "fantasy",
-    xp: xpForCr(input.cr),
-    hp,
-    hpDice: `${hd}d${die}${bonus > 0 ? `+${bonus}` : bonus < 0 ? bonus : ""}`,
-    senses: `${senses ? `${senses}, ` : ""}Perception passive ${passive}`,
-    illustration: `${illustrationStyle(input.family)}, ${sansLumiere(scene)}`,
-  };
-}
-
-// Raccourcis d'écriture
-const hit = (name: string, kind: Attack["kind"], toHit: number, reach: string, damage: string, damageType: string, text = "", extra?: Attack["extra"]): CreatureAction => ({
-  name,
-  text,
-  attack: { kind, toHit, reach, damage, damageType, ...(extra ? { extra } : {}) },
-});
-const save = (name: string, stat: Stat, dc: number, text: string, damage?: string, damageType?: string, targets = 1, recharge?: string): CreatureAction => ({
-  name,
-  text,
-  save: { stat, dc, ...(damage ? { damage, damageType, targets } : {}) },
-  ...(recharge ? { recharge } : {}),
-});
-const multi = (text: string, multiattack: Record<string, number>): CreatureAction => ({ name: "Attaques multiples", text, multiattack });
-const special = (name: string, text: string, recharge?: string): CreatureAction => ({ name, text, ...(recharge ? { recharge } : {}) });
-const recharge = (a: CreatureAction, r: string): CreatureAction => ({ ...a, recharge: r });
-const cost = (a: CreatureAction, n: number): CreatureAction => ({ ...a, cost: n });
+const creature = (input: CreatureInput): Creature => fabriquerCreature("fantasy", input);
 
 // Immunités récurrentes des morts
 const MORT_IMMUN = ["poison"];
@@ -331,7 +276,7 @@ const CLOUER: Trait = {
 
 // --- Les fiches, par FP croissant ---
 
-export const BESTIARY: Creature[] = [
+const CREATURES_AUBRETERRE: Creature[] = [
   // ===== FP 0 à 1/2 =====
   creature({
     id: "corneille-des-pieux",
@@ -1686,6 +1631,9 @@ export const BESTIARY: Creature[] = [
     scene: "an embalmed emperor preserved like a funeral effigy, beardless, smooth whole flesh the golden-brown of baked bread crust, face slack and expressionless as a waxwork mannequin, eyes wide open, dull and glassy like a doll's eyes, unblinking fixed stare, a plain band of black iron as a crown slipped sideways over one temple, a faded umber robe stiff with drips of wax, his body leaning forward as he pushes himself up from a heavy throne cut from rough grey granite blocks, his knees and shins sealed inside a great hill of melted white candle wax, centuries of layered drips and frozen runs like pale stalactites, the hill studded with stubby half-burnt candle stumps with short charred black wicks, long jagged cracks splitting the wax around his knees, flakes of wax falling, a vast circular hall of dark stone columns fading into deep shadow, a soft slanting dusty ray falling from high above out of frame across his face and shoulders",
   }),
 ];
+
+/** Toutes les créatures de tous les mondes ; creaturesFor(genre) pour un seul. */
+export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL];
 
 /** Créatures d'un genre (pour l'instant, seul le monde fantasy d'Aubreterre en a). */
 export function creaturesFor(genre: GenreId): Creature[] {

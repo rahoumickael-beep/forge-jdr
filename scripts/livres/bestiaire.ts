@@ -1,8 +1,11 @@
 // Bestiaire d'Aubreterre : une fiche par créature, regroupées par famille et classées par puissance.
-import { BESTIARY, crLabel, modOf, STAT_ORDER, type Creature, type CreatureAction, type Family } from "../../shared/bestiary";
+import { BESTIARY as TOUT_LE_BESTIAIRE, crLabel, modOf, STAT_ORDER, type Creature, type CreatureAction, type Family } from "../../shared/bestiary";
 import { ouverture, type Livre, type Unite } from "./moteur";
 import { CREDITS_SRD } from "./communs";
 import { averageDiceLabel, esc, illustration, md } from "./texte";
+
+/** Le livre du bestiaire est celui d'Aubreterre. */
+const BESTIARY = TOUT_LE_BESTIAIRE.filter((c) => c.genre === "fantasy");
 
 const sign = (n: number) => (n >= 0 ? `+${n}` : `−${-n}`);
 const STAT_COURT: Record<string, string> = { For: "FOR", Dex: "DEX", Con: "CON", Int: "INT", Sag: "SAG", Cha: "CHA" };

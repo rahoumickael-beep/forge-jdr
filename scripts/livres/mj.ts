@@ -101,7 +101,7 @@ function rencontres(): string {
       ["Niveaux 11 à 16", 9, 15],
       ["Niveaux 17 à 20", 16, 30],
     ]
-      .map(([t, a, b]) => `<h4>${t}</h4><p>${BESTIARY.filter((c) => c.cr >= (a as number) && c.cr <= (b as number)).sort((x, y) => x.cr - y.cr).map((c) => `${esc(c.name)} (${crLabel(c.cr)})`).join(", ")}.</p>`)
+      .map(([t, a, b]) => `<h4>${t}</h4><p>${BESTIARY.filter((c) => c.genre === "fantasy" && c.cr >= (a as number) && c.cr <= (b as number)).sort((x, y) => x.cr - y.cr).map((c) => `${esc(c.name)} (${crLabel(c.cr)})`).join(", ")}.</p>`)
       .join("")}
   </div>`;
 }
