@@ -78,7 +78,13 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Bestiaire (`shared/archipel-bestiaire.ts`, écrit par l’agent des fiches, relu et testé) : 25 créatures, 4 familles, FP 1/8 à 20 ; boss « Celui-qui-s’est-levé », vu des joueurs comme « La Silhouette de Cendrine ». Outils de fiche communs à tous les mondes dans `shared/fiches.ts` ; `BESTIARY` réunit les mondes, `creaturesFor(genre)` les sépare.
 - Vaisseaux (`shared/vaisseaux.ts`) : sept modèles, fiche, postes (capitaine, pilote, artilleur, mécanicien, vigie), actions jouées par le serveur. Le vaisseau du groupe est un pion « joueur » (il voit, le pilote le déplace) ; les autres, des pions « monstre ». Carte « Espace » (`mapSpace.ts`). Onglet Vaisseau des joueurs, panneau Vaisseaux du MJ. Partie automatique : `node scripts/apercu-vaisseaux.mjs`.
 - Corrigé en passant : la jauge de campagne était plafonnée à 100 (les 131 Phares seraient retombés à 100).
-- Reste : scénario de départ, pioches et cartes à collectionner de l’Archipel, illustrations (style A), règles dans le livre en ligne, trois livres PDF.
+- Scénario d’ouverture « La première mensualité » (`shared/library-archipel.ts`), relu trois fois (canon, cohérence, orthographe) et repris : rencontres à l’échelle du niveau 1, branche du refus, choix à chaque acte. 30 cartes à collectionner, pioches de 12 événements et 10 objets.
+- Règles du monde dans le livre en ligne (`shared/archipel-regles.ts`) : Chant et Écho, sauts et Péage, postes, combat spatial, dette.
+- Peintures (style A) : 23 créatures + 2 repeintes (Garde Hégémonique trop proche d’une licence connue, Rakka trop frêle), 17 planches clés (couvertures, régions, figures) ; 21 planches de livre en file (espèces, classes, familles, scénario). Outil `comfyui/recuperer-lot.mjs`.
+- Livres : la fabrique est devenue indépendante du monde (`scripts/livres/monde.ts`, `--monde=archipel`) ; Aubreterre sort à l’identique. `npm run livres:archipel` : livre des joueurs (107 p., huit chapitres adaptés par deux agents puis vérifiés), guide du MJ (30 p.), bestiaire (40 p.).
+- Partie automatique SF (`node scripts/apercu-vaisseaux.mjs`) : créateur pas à pas, poste, tir, refus d’un poste non tenu.
+- Essais de style des 8 autres mondes en file (ids dans `comfyui/sorties/ids-essais-mondes.txt`) : à montrer à Mickael.
+- Reste pour l’Archipel : poser les 21 planches de livre, les relectures des chapitres 04 à 07 (règles, orthographe), la carte des Routes (illustration), la repeinture de Solenne.
 
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
