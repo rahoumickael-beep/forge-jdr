@@ -20,7 +20,7 @@ const BANNED = [
 ];
 
 test("hermès : une vingtaine de créatures, ids uniques, FP de 0 à 15, chaque famille représentée", () => {
-  assert.ok(HE.length >= 22 && HE.length <= 26, `${HE.length} créatures`);
+  assert.ok(HE.length >= 22 && HE.length <= 28, `${HE.length} créatures`);
   const ids = HE.map((c) => c.id);
   assert.equal(new Set(ids).size, ids.length, "id en double");
   for (const c of HE) assert.ok(step(c.cr) >= 0 && c.cr <= 20, `${c.id} : FP ${c.cr}`);

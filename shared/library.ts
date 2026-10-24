@@ -7,6 +7,7 @@ import { PONT_D_ARAMON } from "./library-sec";
 import { DILIGENCE_DE_FORT_RAIL } from "./library-asile";
 import { LA_BARRE_NOIRE } from "./library-iles";
 import { LA_SOIREE_DU_COCHER } from "./library-expo";
+import { LE_COFFRET_D_IXELLES } from "./library-hermes";
 import { DEUX_SOUVENIRS } from "./library-ternelande";
 import type { Scenario } from "./types";
 
@@ -262,4 +263,4 @@ Expérience : environ 150 XP par personnage si tous les combats ont lieu. Fais p
   },
 };
 
-export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE, DEUX_SOUVENIRS, AVIS_DE_SIX_HEURES, NUMERO_ONZE, PONT_D_ARAMON, DILIGENCE_DE_FORT_RAIL, LA_BARRE_NOIRE, LA_SOIREE_DU_COCHER];
+export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE, DEUX_SOUVENIRS, AVIS_DE_SIX_HEURES, NUMERO_ONZE, PONT_D_ARAMON, DILIGENCE_DE_FORT_RAIL, LA_BARRE_NOIRE, LA_SOIREE_DU_COCHER, LE_COFFRET_D_IXELLES];

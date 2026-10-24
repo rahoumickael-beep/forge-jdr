@@ -523,7 +523,7 @@ Une pièce prouve une pièce, pas un système. **Le pli** : les métadonnées d'
 
 ### Le pli n° 4271
 
-La séance commence le **jeudi 5 novembre 2026**, à la Mercerie, à 6 h 45. **Suzanne Mercadier** pose sur la table de coupe un pli en papier gris : « Pli n° 4271. Objet : récupérer un coffret au bureau Aldenhove & Fils, rue de la Brasserie, Ixelles. Aucune violence. Remise à la Mercerie avant vendredi 6 h. Budget : 1 500 €. » Elle ajoute, sans lever les yeux : « Il a appelé la ligne du fond. On ne décroche jamais la ligne du fond. » Suzanne dit que la préparation tient en une heure, parce que la source a peur.
+La séance commence le **jeudi 5 novembre 2026**, à la Mercerie, à 6 h 05. **Suzanne Mercadier** pose sur la table de coupe un pli en papier gris : « Pli n° 4271. Objet : récupérer un coffret au bureau Aldenhove & Fils, rue de la Brasserie, Ixelles. Aucune violence. Remise à la Mercerie avant vendredi 6 h. Budget : 1 500 €. » Elle ajoute, sans lever les yeux : « Il a appelé la ligne du fond. On ne décroche jamais la ligne du fond. » Suzanne dit que la préparation tient en une heure, parce que la source a peur.
 
 **[MJ] Raison du pli.** Le Cabinet fait nettoyer ce qu'Aldenhove a gardé avant le Rachat. Il ignore que la lettre de 2019 existe encore, et veut le coffret détruit à la Mercerie.
 
@@ -536,10 +536,10 @@ Les coursiers prennent le train de 7 h 12 à Paris-Nord. À 8 h 30, Bruxelles-Mi
 - **Le coffret** contient 300 pages de photocopies de courriers adressés à l'agence depuis 1998, sans lien apparent, et une clé de coffre bancaire sans nom de banque, marquée d'un numéro.
 - **La lettre** reste dans le double fond du tiroir. Aldenhove ne la sort que si un coursier gagne sa confiance (Intuition DD 13, ou lui garantir qu'il ne sera pas inquiété). Lue, elle dit seulement : « Nous mettons fin au contrat de prestation de l'agence à compter du 28 mars 2019 », sans le mot dissolution. **[Secret]** C'est un premier indice, rien de plus.
 - **10 h 15** : une camionnette grise se gare à cinquante mètres. **Dorian Meyssonnier**, d'Ostrevent, observe avec une lunette. Il veut le coffret ; il cache qu'il a la consigne de ne pas tuer ; il parle peu et avec des « OK » courts.
-- **10 h 40** : une berline noire se gare derrière. **Judith Aldebert** attend que les coursiers sortent pour les aborder, les photographier et leur proposer un rendez-vous ; elle menace d'appeler la police belge si on refuse. Elle veut un coursier vivant et parlant ; elle cache qu'elle n'a ni mandat ni renfort ; elle parle en listes.
+- **10 h 40** : une berline noire se gare derrière. **Judith Aldebert** attend que les coursiers sortent pour les aborder, les photographier et leur proposer un rendez-vous ; elle ne peut rien exiger, et si on lui ferme la porte elle signale à 12 h 45, sans se nommer, un attroupement. Elle veut un coursier vivant et parlant ; elle cache qu'elle n'a aucun pouvoir de police et personne avec elle ; elle parle en listes.
 - **11 h 05** : la concierge frappe : un voisin se plaint d'une voiture mal garée. Le temps compte.
 - **11 h 30** : les hommes d'Ostrevent montent. Cinq minutes pour sortir : par l'escalier (Discrétion DD 12), par la cour de service (Athlétisme DD 13) ou par la cave, qui donne rue d'à côté, sans caméra.
-- **13 h** : la police belge arrive, appelée par le voisin. Si les coursiers sont encore dans la rue, ils sont fouillés.
+- **13 h** : la police belge arrive, appelée par le voisin. Tout coursier encore dans la rue est contrôlé ; une arme trouvée sur lui, c'est une arrestation de 24 heures.
 
 L'Empreinte passe de 2 à 3 dès le premier acte risqué.
 

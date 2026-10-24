@@ -157,7 +157,7 @@ export const CELLULE_HERMES: Canon = {
   vocabulaire: [
     "Cellule Hermès", "la Cellule", "Cellule", "coursier", "coursiers", "coursière", "coursières", "Traitante", "pli", "plis", "Boîte", "Caisse", "couverture", "couvertures", "Empreinte",
     "Service", "DVL", "Direction de la Veille et des Liaisons", "Section de contrôle des services", "Section", "Partenaires", "Partenaire", "Ostrevent", "groupe Ostrevent", "Collectif Palimpseste", "Palimpseste",
-    "Mercerie", "agence Aldenhove", "Aldenhove", "Café de la Tourette", "magasin 31", "Maasvlakte", "Joliette", "Ixelles", "bora", "euro", "euros", "centime", "centimes",
+    "Mercerie", "agence Aldenhove", "Aldenhove & Fils", "Aldenhove", "Café de la Tourette", "magasin 31", "Maasvlakte", "Joliette", "Ixelles", "bora", "euro", "euros", "centime", "centimes",
     "Noté", "Fiché", "Identifié", "Grillé", "se faire oublier", "brûler une couverture", "nettoyer une trace", "nettoyer", "brûler",
     "filature", "filatures", "filocheur", "planque", "repérage", "retrait", "opération", "préparation", "ordre", "délai", "interdiction", "budget",
     "pistolet semi-automatique", "pistolet à impulsion électrique", "matraque télescopique", "couteau de poche", "fusil de chasse", "cartouche", "cartouches", "chargeur", "marché noir",
