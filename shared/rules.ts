@@ -2,8 +2,10 @@
 // Brouillon v0.2 : les 14 classes fantasy sont complètes ; les 10 classes de l'Archipel (SF) sont dans archipel-classes.ts.
 import { CLASSES_ARCHIPEL } from "./archipel-classes";
 import { CLASSES_TERNELANDE } from "./ternelande-classes";
+import { CLASSES_RESIDENCE } from "./residence-classes";
 import { REGLES_ARCHIPEL } from "./archipel-regles";
 import { REGLES_TERNELANDE } from "./ternelande-regles";
+import { REGLES_RESIDENCE } from "./residence-regles";
 import type { GenreId } from "./types";
 
 export type Recharge = "à volonté" | "repos court" | "repos long" | "passif";
@@ -976,6 +978,7 @@ export const CLASSES: CharacterClass[] = [
   })),
   ...CLASSES_ARCHIPEL,
   ...CLASSES_TERNELANDE,
+  ...CLASSES_RESIDENCE,
 ];
 
 /** La sous-classe d'un personnage, s'il en a choisi une. */
@@ -987,7 +990,7 @@ export function subclassOf(classId: string | undefined, subclassId: string | und
 /** Noms provisoires des classes pour les autres genres, à remplir après validation des classes fantasy. */
 export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
   "dark-fantasy": ["Mercenaire", "Sorcière des ronces", "Coupe-jarret", "Inquisiteur", "Chasseur de sorcières", "Pèlerin maudit"],
-  cyberpunk: ["Solo", "Netrunner", "Fixer", "Médecin des rues", "Techie", "Nomade"],
+  cyberpunk: ["Fouineur", "Solo", "Médic de rue", "Huissier défroqué", "Coursier des passerelles", "Syndicaliste", "Fixeur", "Mécano", "Prêcheur des Sans-Bail", "Journaliste"],
   horreur: ["Ancien soldat", "Occultiste", "Détective", "Médecin", "Journaliste", "Prêtre"],
   "post-apo": ["Pillard", "Mutant", "Éclaireuse", "Docteur des ruines", "Mécano", "Chef de convoi"],
   western: ["Pistolero", "Prédicateur", "Joueur de poker", "Médecin itinérant", "Éclaireur", "Shérif"],
@@ -997,7 +1000,7 @@ export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
 };
 
 /** Règles propres à un monde, à la suite des règles communes (livre en ligne, livre des joueurs). */
-export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE };
+export const REGLES_DU_MONDE: Partial<Record<GenreId, RuleSection[]>> = { "science-fiction": REGLES_ARCHIPEL, "dark-fantasy": REGLES_TERNELANDE, cyberpunk: REGLES_RESIDENCE };
 
 export function classesFor(genre: GenreId): CharacterClass[] {
   return CLASSES.filter((c) => c.genre === genre);

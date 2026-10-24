@@ -3,6 +3,7 @@
 // celui de l'Archipel (SF) est dans archipel-origines.ts.
 import { HISTORIQUES_ARCHIPEL, ORIGINES_ARCHIPEL, PERSONNALITE_ARCHIPEL } from "./archipel-origines";
 import { HISTORIQUES_TERNELANDE, ORIGINES_TERNELANDE, PERSONNALITE_TERNELANDE } from "./ternelande-origines";
+import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import type { GenreId } from "./types";
 
 /** Index des caractéristiques : 0 For, 1 Dex, 2 Con, 3 Int, 4 Sag, 5 Cha (noms adaptés au genre). */
@@ -296,6 +297,7 @@ export const ORIGINS: Origin[] = [
   },
   ...ORIGINES_ARCHIPEL,
   ...ORIGINES_TERNELANDE,
+  ...ORIGINES_RESIDENCE,
 ];
 
 export const BACKGROUNDS: Background[] = [
@@ -381,6 +383,7 @@ export const BACKGROUNDS: Background[] = [
   },
   ...HISTORIQUES_ARCHIPEL,
   ...HISTORIQUES_TERNELANDE,
+  ...HISTORIQUES_RESIDENCE,
 ];
 
 /** Suggestions de personnalité. Le joueur peut toujours écrire la sienne. */
@@ -420,7 +423,7 @@ export const PERSONALITY: Record<"trait" | "ideal" | "bond" | "flaw", string[]> 
 };
 
 /** Suggestions de personnalité du monde de la partie. */
-export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : genre === "dark-fantasy" ? PERSONNALITE_TERNELANDE : PERSONALITY);
+export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : genre === "dark-fantasy" ? PERSONNALITE_TERNELANDE : genre === "cyberpunk" ? PERSONNALITE_RESIDENCE : PERSONALITY);
 
 /** Achat par points (27 points, valeurs de 8 à 15). */
 export const POINT_BUY_BUDGET = 27;

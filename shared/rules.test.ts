@@ -1,18 +1,22 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL, TERNELANDE } from "./canon";
-import { classesFor, CLASSES } from "./rules";
+import { ARCHIPEL, RESIDENCE, TERNELANDE } from "./canon";
+import { classesFor, CLASSES, SKILLS } from "./rules";
+import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
+import { REGLES_RESIDENCE } from "./residence-regles";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
 const ternelande = classesFor("dark-fantasy");
-const jouables = [...fantasy, ...archipel, ...ternelande];
+const residence = classesFor("cyberpunk");
+const jouables = [...fantasy, ...archipel, ...ternelande, ...residence];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
   assert.equal(archipel.length, 10);
   assert.equal(ternelande.length, 10);
+  assert.equal(residence.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -101,4 +105,33 @@ test("classes de la Ternelande : aucun secret du canon dans ce que lisent les jo
     const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
     assert.ok(!re.test(text.toLowerCase()), `classes de la Ternelande : « ${word} »`);
   }
+});
+
+test("classes de la Résidence : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify([residence, ORIGINES_RESIDENCE, HISTORIQUES_RESIDENCE, REGLES_RESIDENCE, PERSONNALITE_RESIDENCE]);
+  for (const secret of RESIDENCE.secrets) assert.ok(!text.includes(secret), secret);
+  for (const mot of ["Concierge", "Gérance", "Hector est mort", "mort d'Hector", "transfert d'heures", "Compteurs de morts"]) {
+    assert.ok(!text.toLowerCase().includes(mot.toLowerCase()), `texte joueur de la Résidence : « ${mot} »`);
+  }
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes de la Résidence : « ${word} »`);
+  }
+  for (const mot of RESIDENCE.anachronismes) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${mot.toLowerCase()}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `anachronisme dans la Résidence : « ${mot} »`);
+  }
+});
+
+test("classes de la Résidence : compétences connues, caractéristiques du genre, ids préfixés", () => {
+  const noms = new Set(SKILLS.map((s) => s.name));
+  const stats = new Set(["Corps", "Réflexes", "Endurance", "Technique", "Instinct", "Aplomb"]);
+  for (const c of residence) {
+    assert.ok(c.id.startsWith("cp-"), c.id);
+    for (const s of c.skills.from) assert.ok(noms.has(s), `${c.name} : compétence « ${s} » inconnue`);
+    for (const s of [...c.mainStats, ...c.saves]) assert.ok(stats.has(s), `${c.name} : caractéristique « ${s} » inconnue`);
+  }
+  for (const h of HISTORIQUES_RESIDENCE) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
+  assert.equal(ORIGINES_RESIDENCE.length, 6);
+  assert.equal(HISTORIQUES_RESIDENCE.length, 8);
 });
