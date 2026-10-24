@@ -18,8 +18,9 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
         name: "Ancrien",
         blurb: "Du Berceau et des mondes du centre. On y baisse encore la voix pour dire « Chantre ».",
         bonus: { 3: 2, 5: 1 },
+        hpPerLevel: 1,
         traits: [
-          { name: "Instruit", text: "Avantage aux tests d'Histoire sur l'Hégémonie, les Maisons et les Chantres." },
+          { name: "Instruit", text: "Maîtrise d'Histoire, et 1 PV de plus par niveau (les Humains tiennent)." },
           { name: "Une cave à Ancre", text: "Tu connais une famille d'Ancre qui cache des choses, et qui cacherait aussi des gens." },
         ],
       },
@@ -28,8 +29,9 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
         name: "Frangier",
         blurb: "Des mondes du bout des Routes. On n'y dit « monsieur » qu'à ses créanciers.",
         bonus: { 2: 2, 1: 1 },
+        hpPerLevel: 1,
         traits: [
-          { name: "Dur au mal", text: "Avantage aux sauvegardes contre la soif, la faim, le froid et la chaleur." },
+          { name: "Dur au mal", text: "Avantage aux sauvegardes contre la soif, la faim, le froid et la chaleur, et 1 PV de plus par niveau." },
           { name: "Débrouille", text: "Maîtrise des outils de mécanicien ou des faux papiers." },
         ],
       },
@@ -55,7 +57,7 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
         name: "Récitant",
         blurb: "Formé par le Collège des Marées à garder les vieux chants.",
         bonus: { 3: 1 },
-        traits: [{ name: "Archive vivante", text: "Maîtrise d'Histoire, et double maîtrise sur les mondes et les espèces de l'Archipel." }],
+        traits: [{ name: "Archive vivante", text: "Maîtrise d'Histoire, avec double maîtrise." }],
       },
       {
         id: "sf-vaelle-plongeur",
@@ -75,9 +77,9 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
     speed: 5,
     unique: true,
     traits: [
-      { name: "Quatre bras", text: "Tes bras inférieurs ne manient pas d'arme, mais tiennent un outil, un bouclier ou une prise : tu peux saisir une créature et attaquer dans le même tour." },
+      { name: "Quatre bras", text: "Tes bras inférieurs ne manient pas d'arme, mais tiennent un outil, un bouclier ou une prise : saisir une créature remplace une de tes attaques, et tu gardes tes armes en main." },
       { name: "Né sous le poids", text: "Tu comptes comme une taille au-dessus pour porter, pousser et tirer. Aucun malus en forte gravité." },
-      { name: "Dette d'honneur", text: "Pour tenir une parole donnée, avantage au jet. Pour la trahir, désavantage à tous tes jets jusqu'à la fin de la journée." },
+      { name: "Dette d'honneur", text: "Pour tenir une parole donnée, avantage au jet. Si tu la trahis, désavantage à tous tes jets de Présence jusqu'à ta prochaine nuit." },
     ],
     subs: [
       {
@@ -106,7 +108,7 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
     unique: true,
     traits: [
       { name: "Petit", text: "Tu es de taille Petite. Tu peux traverser l'espace d'une créature plus grande que toi." },
-      { name: "Œil de pilote", text: "Avantage aux tests de Perception qui reposent sur la vue, et aux jets de pilotage." },
+      { name: "Œil de pilote", text: "Maîtrise de Perception ; avantage pour repérer un vaisseau ou un danger en vol, et aux jets de pilotage." },
       { name: "Os creux", text: "Tes PV au niveau 1 sont réduits de 2. En forte gravité, ta vitesse est réduite de 3 m." },
     ],
     subs: [
@@ -137,7 +139,7 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
     traits: [
       { name: "Soie dure", text: "En une minute, tu tisses une corde de 15 m, un pansement (1d4 PV) ou un abri contre le vent." },
       { name: "Sens des vibrations", text: "Tu perçois les créatures qui touchent le même sol, la même paroi ou la même coque que toi, à 9 m." },
-      { name: "Seul", text: "Si tu passes une journée sans compagnon à 9 m, désavantage aux sauvegardes d'Instinct jusqu'à ce que tu en retrouves un." },
+      { name: "Seul", text: "Au début de ton tour, si aucun allié n'est à 9 m de toi, tu as le désavantage aux sauvegardes d'Instinct jusqu'à ton tour suivant." },
     ],
     subs: [
       {
@@ -145,13 +147,13 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
         name: "Tisserand",
         blurb: "Dans la ruche, il tissait les murs.",
         bonus: { 1: 1 },
-        traits: [{ name: "Toile", text: "Une fois par repos court, une toile de 3 m à 9 m : sauvegarde de Réflexes ou entravé." }],
+        traits: [{ name: "Toile", text: "Une fois par repos court, une toile sur une créature à 9 m : sauvegarde de Réflexes (DD 8 + maîtrise + Technique) ou entravée ; test de Puissance DD 12 pour se libérer." }],
       },
       {
         id: "sf-ourdi-sentinelle",
         name: "Sentinelle",
         blurb: "Dans la ruche, il gardait les portes.",
-        bonus: { 0: 1 },
+        bonus: {},
         traits: [{ name: "Carapace", text: "+1 CA quand tu ne portes pas d'armure lourde." }],
       },
     ],
@@ -165,8 +167,8 @@ export const ORIGINES_ARCHIPEL: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Machine", text: "Tu ne respires pas, ne manges pas et ne dors pas ; quatre heures de veille valent un repos long. Immunité au poison." },
-      { name: "Pièces", text: "Les soins ne te font que la moitié de l'effet, mais une réparation de mécanicien te soigne entièrement." },
+      { name: "Machine", text: "Tu ne respires pas, ne manges pas et ne dors pas ; quatre heures de veille valent un repos long. Résistance au poison." },
+      { name: "Pièces", text: "Les soins, les dés de vie et les remèdes ne te rendent que la moitié des PV ; Réparation de fortune et les réparations au repos te rendent le double." },
       { name: "Sourd à la pierre", text: "Tu ne peux pas apprendre le Chant, et les pouvoirs du Chant qui lisent ou apaisent l'esprit n'ont aucun effet sur toi." },
     ],
     subs: [
@@ -196,7 +198,7 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     blurb: "Tu as passé plus de caisses en resquille que de Péages payés.",
     skills: ["Tromperie", "Discrétion"],
     tool: "Faux papiers",
-    gear: ["Veste à doubles poches", "Faux transpondeur usé", "60 lumens"],
+    gear: ["Veste à doubles poches", "Faux transpondeur usé", "40 lumens"],
     feature: { name: "Un contact à Gué-d'Ambre", text: "Quelqu'un aux docks achète sans poser de questions, et te prévient quand on te cherche." },
   },
   {
@@ -207,7 +209,7 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     skills: ["Athlétisme", "Intimidation"],
     tool: "Jeu de cartes",
     gear: ["Uniforme dont on a arraché les galons", "Plaque d'identité", "40 lumens"],
-    feature: { name: "Anciens camarades", text: "Dans un port militaire, quelqu'un te reconnaît. Il t'aide, ou il te dénonce, et tu ne sais pas lequel avant." },
+    feature: { name: "Anciens camarades", text: "Dans un port militaire, quelqu'un te reconnaît. Un test de Persuasion DD 12 te fait trouver celui qui t'aidera ; un échec, celui qui te dénoncera." },
   },
   {
     id: "sf-ferrailleur",
@@ -216,7 +218,7 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     blurb: "Tu as grandi dans une épave, et tu sais où dorment les autres.",
     skills: ["Investigation", "Survie"],
     tool: "Outils de mécanicien",
-    gear: ["Pied-de-biche", "Lampe frontale", "Sac de pièces", "30 lumens"],
+    gear: ["Pied-de-biche", "Lampe frontale", "Sac de pièces", "35 lumens"],
     feature: { name: "Carte des tas", text: "Tu sais quelles épaves des Brisants ont déjà été vidées, et à quel chef de tas appartiennent les autres." },
   },
   {
@@ -226,7 +228,7 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     blurb: "On t'a pris enfant, on t'a fait poser la main sur une pierre, et on t'a gardé. Pourquoi ?",
     skills: ["Discrétion", "Perspicacité"],
     tool: "Une langue au choix",
-    gear: ["Blouse grise numérotée", "Une photo de quelqu'un que tu ne reconnais pas", "20 lumens"],
+    gear: ["Blouse grise numérotée", "Une photo de quelqu'un que tu ne reconnais pas", "30 lumens"],
     feature: { name: "Numéro de dossier", text: "Ton dossier existe quelque part à Solenne. Les orphelins d'État te reconnaissent à ta façon de te tenir, et s'entraident." },
   },
   {
@@ -235,8 +237,8 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     name: "Ouvrier de Valcourt",
     blurb: "Né dans un dortoir de la Maison, payé en jetons de la Maison.",
     skills: ["Athlétisme", "Perception"],
-    tool: "Outils de mécanicien",
-    gear: ["Casque cabossé", "Bleu de travail", "Une poignée de jetons de la Maison", "15 lumens"],
+    tool: "Outils de soudeur",
+    gear: ["Casque cabossé", "Bleu de travail", "Une poignée de jetons de la Maison", "30 lumens"],
     feature: { name: "Les passerelles", text: "Dans toute usine de Valcourt, les ouvriers te laissent passer et te disent ce que les contremaîtres taisent." },
   },
   {
@@ -256,7 +258,7 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     blurb: "Tu étais invité au Palais des Péages. Tu ne l'es plus.",
     skills: ["Persuasion", "Tromperie"],
     tool: "Nécessaire de déguisement",
-    gear: ["Tenue de cour un peu passée", "Bague aux armes d'une Maison", "80 lumens"],
+    gear: ["Tenue de cour un peu passée", "Bague aux armes d'une Maison", "50 lumens"],
     feature: { name: "Un nom qui compte encore", text: "Ton nom ouvre quelques portes à Solenne, et en ferme d'autres. Tu sais lesquelles." },
   },
   {
@@ -266,7 +268,7 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     blurb: "Ta famille garde la mémoire de Sainte Iselle, et d'autres choses dans la cave.",
     skills: ["Religion", "Perspicacité"],
     tool: "Outils de calligraphe",
-    gear: ["Diapason de bois", "Manteau de pluie", "Une prière recopiée de ta main", "25 lumens"],
+    gear: ["Diapason de bois", "Manteau de pluie", "Une prière recopiée de ta main", "30 lumens"],
     feature: { name: "Le diapason sous la table", text: "Les fidèles reconnaissent le signe du diapason et te cachent pour une nuit." },
   },
 ];

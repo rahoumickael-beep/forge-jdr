@@ -2,6 +2,7 @@
   "_lisezmoi": "Règles des prompts Flux, lues par les tests (shared/bestiary.test.ts), le hook .claude/hooks/prompts-flux.mjs et le serveur MCP comfyui/mcp-comfyui.mjs. Flux dessine ce qu'on nomme : une négation fait apparaître l'objet nié.",
   "negation": "\\b(no|without|sans)\\s",
   "anachronismes": {
-    "fantasy": "\\b(electric|electricity|telephone|power lines?|pylons?|asphalt|cars?|trucks?|plastic|concrete|neon|guns?|rifles?|pistols?|roads?|stakes?|poles?|light ?bulbs?|lamp ?posts?|street ?lights?|cables?|wires?|zippers?|sunglasses|wristwatch|helicopter|aircraft)\\b"
+    "fantasy": "\\b(electric|electricity|telephone|power lines?|pylons?|asphalt|cars?|trucks?|plastic|concrete|neon|guns?|rifles?|pistols?|roads?|stakes?|poles?|light ?bulbs?|lamp ?posts?|street ?lights?|cables?|wires?|zippers?|sunglasses|wristwatch|helicopter|aircraft)\\b",
+    "science-fiction": "\\b(lightsabers?|light ?swords?|jedi|sith|stormtroopers?|droids?|darth|x-wings?|tie fighters?|millennium falcon|death star|nasa|american flag|planet earth|earth)\\b"
   }
 }

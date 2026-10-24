@@ -227,10 +227,10 @@ Chaque chant laisse un **Écho**. Un peu, c'est un bourdonnement dans les oreill
 
 ### En jeu [Joueurs]
 
-- Le Chantre a une réserve d'**Écho** (de 0 au double de son niveau, plus 2). Les petits pouvoirs en ajoutent 1, les grands 2 ou 3. Un repos long en retire la moitié.
+- Le Chantre a une réserve d'**Écho** (de 0 au double de son niveau, plus 4). Les petits pouvoirs en ajoutent 1, les grands 2 ou 3. Un repos court en retire 1d4, un repos long le vide.
 - Un Chantre joueur est un **autodidacte** (il entend la pierre et a appris seul, par bribes) ou un **novice caché** (formé en secret par un survivant). Depuis onze ans, plus personne n'a reçu la formation complète.
-- Quand son Écho dépasse son niveau, le Chantre est **troublé** : désavantage aux tests d'Instinct, et le MJ peut lui décrire ce qu'il entend.
-- À la valeur maximale, il doit réussir un jet de sauvegarde d'Instinct (DD 10 + ce qui dépasse son niveau) ou perdre connaissance une minute, et le MJ gagne un point de sa réserve.
+- Quand son Écho dépasse son niveau + 2, le Chantre est **troublé** : désavantage aux tests d'Instinct et aux sauvegardes de concentration, et le MJ peut lui décrire ce qu'il entend.
+- Un pouvoir qui le ferait dépasser le maximum demande une sauvegarde d'Instinct (DD 10 + l'excédent, 20 au plus) : en cas d'échec, il perd connaissance une minute et le MJ gagne un point de sa réserve.
 - **Le Chant brisé** : un Chantre peut forcer un pouvoir pour doubler son effet. Il prend alors le double d'Écho, et le Phare le plus proche le sent. C'est la voie des Dissonants. Elle marche très bien.
 
 ### Ce que sait le MJ [Secret]

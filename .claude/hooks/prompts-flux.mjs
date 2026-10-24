@@ -8,14 +8,15 @@ const input = JSON.parse(readFileSync(0, "utf8") || "{}");
 const ti = input.tool_input ?? {};
 const file = relative(root, String(ti.file_path ?? "")).replaceAll("\\", "/");
 
-// Fichiers qui contiennent des prompts d'Aubreterre (fantasy).
+// Fichiers qui contiennent des prompts : Aubreterre (fantasy) ou l'Archipel (science-fiction, fichiers archipel-*).
 const jsonPrompts = /^comfyui\/prompts-[^/]+\.json$/.test(file);
-const tsPrompts = file === "shared/bestiary.ts" || /^scripts\/livres\/[^/]+\.ts$/.test(file);
+const archipel = /^shared\/archipel-[^/]+\.ts$/.test(file) || /^comfyui\/prompts-archipel[^/]*\.json$/.test(file);
+const tsPrompts = file === "shared/bestiary.ts" || /^scripts\/livres\/[^/]+\.ts$/.test(file) || archipel;
 if (!jsonPrompts && !tsPrompts) process.exit(0);
 
 const regles = JSON.parse(readFileSync(join(root, "comfyui", "regles-flux.json"), "utf8"));
 const negation = new RegExp(regles.negation, "i");
-const anachronisme = new RegExp(regles.anachronismes.fantasy, "i");
+const anachronisme = new RegExp(regles.anachronismes[archipel ? "science-fiction" : "fantasy"], "i");
 
 /** Prompts trouvés dans un morceau de fichier. */
 function prompts(text) {
@@ -35,7 +36,7 @@ for (const p of prompts(written)) {
   const n = p.match(negation);
   const a = p.match(anachronisme);
   if (n) fautes.push(`négation « ${n[0].trim()} » : Flux dessinera ce qui est nié. Décris ce qu'on voit à la place.`);
-  if (a) fautes.push(`« ${a[0]} » : objet anachronique ou qui appelle des poteaux et des câbles dans un monde préindustriel.`);
+  if (a) fautes.push(archipel ? `« ${a[0]} » : copie d'une licence connue ou monde réel, hors de l'Archipel.` : `« ${a[0]} » : objet anachronique ou qui appelle des poteaux et des câbles dans un monde préindustriel.`);
   if (n || a) fautes.push(`   … ${p.slice(0, 120)}…`);
 }
 if (fautes.length) {
