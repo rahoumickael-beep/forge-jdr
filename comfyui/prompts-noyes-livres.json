@@ -1,0 +1,226 @@
+[
+  {
+    "id": "region-saint-clair",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, a grey granite fishing town at the end of a bay, a square church tower, boats resting on the mud of a tidal harbour, a closed seaside hotel with shuttered windows, a small railway station",
+    "width": 1344,
+    "height": 768,
+    "seed": 1067760285
+  },
+  {
+    "id": "origine-hr-gens-cote",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, two people of the Cotentin coast, a fisherman in a smock and beret and a seaweed gatherer in a white coif, standing on a granite quay",
+    "width": 896,
+    "height": 1152,
+    "seed": 26893585
+  },
+  {
+    "id": "origine-hr-revenus-guerre",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a war veteran and a former front-line nurse sitting on a bench in a small seaside town, both looking at the sea, a medal on his coat",
+    "width": 896,
+    "height": 1152,
+    "seed": 2814817013
+  },
+  {
+    "id": "origine-hr-bourgeois-ville",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a well-dressed couple from Paris stepping off a train at a small seaside station, a porter carrying their trunk",
+    "width": 896,
+    "height": 1152,
+    "seed": 2383795022
+  },
+  {
+    "id": "origine-hr-etrangers",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, an English traveller in a tweed cap and a Russian emigre in an old officer's coat sharing a table in a harbour tavern",
+    "width": 896,
+    "height": 1152,
+    "seed": 3772623471
+  },
+  {
+    "id": "origine-hr-enfants-siecle",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, two young people of the twenties, a girl with bobbed hair and a cloche hat and a boy with a gramophone, laughing on a windy beach",
+    "width": 896,
+    "height": 1152,
+    "seed": 4153352805
+  },
+  {
+    "id": "origine-hr-sensibles",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a pale young woman standing alone at the edge of the sea at dusk, her head tilted as if listening to something under the water",
+    "width": 896,
+    "height": 1152,
+    "seed": 1699319666
+  },
+  {
+    "id": "classe-expert",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, an insurance claims investigator in a tweed coat and hat crouching on a beach, examining a wet leather wallet with a magnifying glass, a notebook under his arm",
+    "width": 896,
+    "height": 1152,
+    "seed": 2024219917
+  },
+  {
+    "id": "classe-poilu",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a war veteran of thirty in a patched horizon-blue greatcoat and a beret, a Lebel rifle on his shoulder, walking along a dyke in the wind",
+    "width": 896,
+    "height": 1152,
+    "seed": 1694305300
+  },
+  {
+    "id": "classe-medecin",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a country doctor with a leather bag kneeling beside a drowned man on wet sand at dawn, checking his pulse",
+    "width": 896,
+    "height": 1152,
+    "seed": 151091138
+  },
+  {
+    "id": "classe-abbe",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a young country priest in a black cassock blessing a coffin of rough planks in a small granite church, fishermen's wives in black around him",
+    "width": 896,
+    "height": 1152,
+    "seed": 1387268355
+  },
+  {
+    "id": "classe-journaliste",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a reporter in a crumpled suit with a notebook and a pencil behind his ear, questioning a fisherman on a harbour quay",
+    "width": 896,
+    "height": 1152,
+    "seed": 2349614039
+  },
+  {
+    "id": "classe-photographe",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a photographer under the black cloth of a wooden plate camera on a tripod, pointed at a sheet-covered body on a beach",
+    "width": 896,
+    "height": 1152,
+    "seed": 2761012960
+  },
+  {
+    "id": "classe-pecheur",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a broad fisherman in an oilskin hauling a net into a small boat in a grey choppy sea, a lighthouse behind him",
+    "width": 896,
+    "height": 1152,
+    "seed": 2874957235
+  },
+  {
+    "id": "classe-medium",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a medium with closed eyes and hands flat on a round table in a shuttered parlour, three guests watching her in candlelight",
+    "width": 896,
+    "height": 1152,
+    "seed": 1906714274
+  },
+  {
+    "id": "classe-gendarme",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, a gendarme in a buttoned tunic and kepi standing beside his bicycle on a coast road, writing in a notebook",
+    "width": 896,
+    "height": 1152,
+    "seed": 1162011542
+  },
+  {
+    "id": "classe-antiquaire",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror character portrait, sepia and grey, vignetting, scratches and dust, half-length portrait, three-quarter view, plain backdrop, clean unmarked image, an antiquarian in a cluttered shop full of ship models and old charts, reading a water-stained letter through a loupe",
+    "width": 896,
+    "height": 1152,
+    "seed": 1771747916
+  },
+  {
+    "id": "couverture-joueurs",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror cover art, sepia and grey, vignetting, scratches and dust, monumental composition, empty space at the top for the title, clean unmarked image, a circle of fishermen in smocks holding their berets, standing on a vast flat beach at low tide around a man in a grey city suit lying on his back as if asleep, four investigators in coats and hats walking toward them from the harbour",
+    "width": 1024,
+    "height": 1448,
+    "seed": 3025381207
+  },
+  {
+    "id": "region-morgue",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, ten stone tables in a row in an old fish ice house, ten bodies under white sheets, a cardboard label hanging from each, a country doctor in a waistcoat writing in a notebook",
+    "width": 1344,
+    "height": 768,
+    "seed": 3843938749
+  },
+  {
+    "id": "region-rocher-gris",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, a narrow causeway of wet shingle running out to a lighthouse on a granite islet, the sea coming back on both sides in foaming lines, a lone figure with a lantern hurrying along it",
+    "width": 1344,
+    "height": 768,
+    "seed": 1042150959
+  },
+  {
+    "id": "region-le-havre",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, an insurance director's oak office, a map of the English Channel pinned to the wall with ten red pins in the same small bay, filing cabinets to the ceiling, a cigar smoking in an ashtray",
+    "width": 1344,
+    "height": 768,
+    "seed": 2809020460
+  },
+  {
+    "id": "region-fosse",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, a small fishing boat motionless on a sea like oil, a fisherman kneeling at the bow hauling up a net, in its meshes a dripping leather suitcase with a faded hotel label",
+    "width": 1344,
+    "height": 768,
+    "seed": 3248710168
+  },
+  {
+    "id": "region-cherbourg",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, a grand ocean liner with three red and black funnels at anchor in a vast harbour behind a long sea wall, a small steam launch carrying men in hats toward it through the rain",
+    "width": 1344,
+    "height": 768,
+    "seed": 1576660733
+  },
+  {
+    "id": "figure-le-bihan",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, a weathered Breton lighthouse keeper of fifty in an oilskin coat at the top of his lighthouse, holding a small notebook full of pencil tally marks",
+    "width": 1344,
+    "height": 768,
+    "seed": 1561470630
+  },
+  {
+    "id": "region-hague",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, an old woman in a white Norman coif standing at the edge of a hundred-meter cliff among heather and dry-stone walls, a lantern in her hand, looking out over a dark churning sea with a row of distant lights on the horizon",
+    "width": 1344,
+    "height": 768,
+    "seed": 3922442610
+  },
+  {
+    "id": "scenario-bib-hr-numero-onze",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, a folded letter in a waxed envelope inside an old fisherman's beret on a wet beach at dawn, a new coin beside it, the sea far away in the mist",
+    "width": 1344,
+    "height": 768,
+    "seed": 209503954
+  },
+  {
+    "id": "couverture-mj",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror cover art, sepia and grey, vignetting, scratches and dust, monumental composition, empty space at the top for the title, clean unmarked image, a granite lighthouse on a small islet at night, its beam sweeping over a calm sea where a long row of dark heads stands in the water facing the coast, a causeway of shingle leading back to the shore",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2332077311
+  },
+  {
+    "id": "famille-betes-de-la-cote",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, a pack of lean stray dogs running across heather on a clifftop in the wind, gulls wheeling over the cliff edge, a frightened farm horse in the distance",
+    "width": 1344,
+    "height": 768,
+    "seed": 1998850559
+  },
+  {
+    "id": "famille-gens-de-1923",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, smugglers unloading wooden crates from a rowing boat on a beach at night, a gendarme with a bicycle watching from the dunes",
+    "width": 1344,
+    "height": 768,
+    "seed": 954446277
+  },
+  {
+    "id": "famille-ce-que-rend-la-mer",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, pale drowned figures in city clothes rising from a wet beach at dawn, a lantern dropped on the sand, the sea very far away",
+    "width": 1344,
+    "height": 768,
+    "seed": 2744117729
+  },
+  {
+    "id": "famille-la-fosse",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror illustration, sepia and grey, vignetting, scratches and dust, wide establishing scene, clean unmarked image, the edge of a dark underwater trench, a helmeted diver's lamp lighting crabs, eels and lost objects drifting down into the black",
+    "width": 1344,
+    "height": 768,
+    "seed": 1027639522
+  },
+  {
+    "id": "couverture-bestiaire",
+    "prompt": "grey dawn mist over the shore, soft diffuse overcast, 1920s silver gelatin photograph, archival horror archival horror cover art, sepia and grey, vignetting, scratches and dust, monumental composition, empty space at the top for the title, clean unmarked image, a diver in an old copper helmet standing on the dark sea floor at the edge of a deep trench, a lost leather suitcase and a child's shoe at his feet, pale drifting shapes far below",
+    "width": 1024,
+    "height": 1448,
+    "seed": 2003006638
+  }
+]

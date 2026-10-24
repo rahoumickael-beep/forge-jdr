@@ -42,7 +42,7 @@ Tu es l'un d'eux, ou l'un de ceux qu'ils ont recrutés sur place : un pêcheur q
 
 **Nous sommes en septembre 1923.**
 
-Les veuves portent le noir, les hommes se taisent, et la baie a ses morts. À Cherbourg, la Compagnie des Paquebots de la Manche vient de lancer le plus beau navire qu'on ait vu de ce côté de l'Atlantique : **la Reine-Hortense**, trois cheminées rouge et noir, que les affiches promettent pour l'hiver. Elle fait ses essais en rade. Les journaux en parlent chaque semaine, à côté des noyés, sans jamais mettre les deux dans le même article.
+Les veuves portent le noir, les hommes se taisent, et la baie a ses morts. À Cherbourg, la Compagnie des Paquebots de la Manche vient d'achever à Saint-Nazaire le plus beau navire qu'on ait vu de ce côté de l'Atlantique : **la Reine-Hortense**, trois cheminées rouges et noires, que les affiches promettent pour l'hiver. Elle fait ses essais en rade. Les journaux en parlent chaque semaine, à côté des noyés, sans jamais mettre les deux dans le même article.
 
 Sur la côte, on se signe quand la mer est trop calme.
 
@@ -130,7 +130,7 @@ Elles ne sont pas du même bord, mais personne ne vit sur la côte sans en crois
 - **Les gens de la côte.** *But :* que la mer les laisse vivre. *Méthode :* les vieilles coutumes, le silence, la prière. *Ennemis :* la mer, et ceux qui la provoquent. *Signe :* une croix de bois flotté au-dessus des portes. Les anciens écoutent la mère Anne Hamel, qui ramasse le varech depuis soixante ans.
 - **Le Cercle Thalassa.** *But :* parler aux morts. *Méthode :* les séances, les médiums, l'écriture automatique, les souscriptions. *Ennemis :* les sceptiques, l'Église. *Signe :* une vague stylisée sur une broche d'argent. *Fondatrice :* Madame Irène Vauquelin, médium parisienne, arrivée à l'hôtel des Bains en juillet.
 
-Chacune a une bonne raison. La Havraise a raison de vouloir des preuves avant de payer. La gendarmerie a raison de ne pas affoler un pays déjà fragile. Les anciens ont raison de ne pas provoquer ce qu'ils ne comprennent pas. Le Cercle a raison de dire qu'aucun autre ne console les familles. La Compagnie a raison de dire qu'un navire neuf n'a rien à voir avec tout cela.
+Chacune a une bonne raison. La Havraise a raison de vouloir des preuves avant de payer. La gendarmerie n'a pas tort de ne pas affoler un pays déjà fragile. Les anciens font bien de ne pas provoquer ce qu'ils ne comprennent pas. Le Cercle dit vrai quand il dit qu'aucun autre ne console les familles. La Compagnie a raison de dire qu'un navire neuf n'a rien à voir avec tout cela.
 
 ## Ceux dont on parle
 
@@ -148,11 +148,11 @@ Chacune a une bonne raison. La Havraise a raison de vouloir des preuves avant de
 
 En 1923, on est surtout d'où l'on vient. Six sortes de gens vivent ici, et tu peux jouer chacune. Les pages des origines donnent leurs traits de jeu ; voici qui ils sont.
 
-- **Les gens de la côte.** Nés à Saint-Clair, à la Hague ou dans un port du Cotentin. Pêcheurs, filles de pêcheurs, douaniers. Ils connaissent les marées, les coutumes et les gens. La mer, on la connaît ; on ne la raconte pas.
+- **Les Gens de la côte.** Nés à Saint-Clair, à la Hague ou dans un port du Cotentin. Pêcheurs, filles de pêcheurs, douaniers. Ils connaissent les marées, les coutumes et les gens. La mer, on la connaît ; on ne la raconte pas.
 - **Les Revenus de la guerre.** Des anciens combattants, poilus ou infirmières du front. Ils ont vu Verdun ou la Somme. Ils sont rentrés, et ils dorment mal.
-- **Les bourgeois de la ville.** De Paris, de Rouen, du Havre : un milieu aisé, des études, des relations. On leur a appris à ne pas se salir les mains.
-- **Les étrangers.** Des Anglais, des Américains, des Bretons ou des Auvergnats montés à Paris, des Russes blancs en exil. Quelqu'un qui n'est pas d'ici, avec une langue de plus, un passé que personne ne peut vérifier, et la méfiance de la côte.
-- **Les enfants du siècle.** Jeunes, nés après 1900. Ils ont grandi pendant la guerre sans y aller : étudiants, garçonnes, jazz et cinéma. Ils ne croient à rien de vieux, ce qui les protège et les expose.
+- **Les Bourgeois de la ville.** De Paris, de Rouen, du Havre : un milieu aisé, des études, des relations. On leur a appris à ne pas se salir les mains.
+- **Les Étrangers.** Des Anglais, des Américains, des Russes blancs en exil, d'autres venus d'ailleurs, même de France. Quelqu'un qui n'est pas d'ici, avec une langue de plus, un passé que personne ne peut vérifier, et la méfiance de la côte.
+- **Les Enfants du siècle.** Jeunes, nés après 1900. Ils ont grandi pendant la guerre sans y aller : étudiants, garçonnes, jazz et cinéma. Ils ne croient à rien de vieux, ce qui les protège et les expose.
 - **Les Sensibles.** Ceux qui ont toujours entendu des choses : des enfants qui voyaient des morts, des rêves qui se réalisaient. On les trouve étranges, et ils ont l'habitude.
 
 > **Ne pas confondre.** Les **Revenus** sont les noyés que la mer rend. Les **Revenus de la guerre** sont les hommes et les femmes qui sont rentrés du front. Les premiers sont sur la grève. Les seconds sont à la table du café, et n'aiment pas qu'on fasse le rapprochement.
@@ -182,7 +182,7 @@ On paie en francs.
 | Le salaire d'un pêcheur | 400 F par mois |
 | Le salaire d'un expert de la Havraise | 1 200 F par mois, plus ses frais |
 
-Le franc s'écrit **F** dans ce livre : 150 F, c'est cent cinquante francs. Un pêcheur gagne en un mois de quoi payer vingt-sept nuits d'auberge, ou deux revolvers et un peu de cartouches. Un expert de la Havraise gagne trois fois le salaire d'un pêcheur. C'est pour ça que la côte le regarde comme elle le regarde.
+Le franc s'écrit **F** dans ce livre : 150 F, c'est cent cinquante francs. Un pêcheur gagne en un mois de quoi payer vingt-six nuits d'auberge, ou deux revolvers et un peu de cartouches. Un expert de la Havraise gagne trois fois le salaire d'un pêcheur. C'est pour ça que la côte le regarde comme elle le regarde.
 
 ### Les coutumes
 

@@ -13,7 +13,7 @@ export const COLLECTION_NOYES: CarteDeCollection[] = [
     usage: "Lumière vive sur 9 m et faible sur 9 m de plus, que le vent ne souffle pas. Avantage aux tests de Perception sur la grève ou la chaussée de nuit. Elle attire aussi les contrebandiers qui n'aiment pas les lanternes." },
   { id: "hr-flacon-de-calvados", nom: "Flacon de calvados", famille: "objet", rarete: "commune", recharge: "une-fois",
     texte: "Un flacon plat de dix ans d'âge, qui sent la pomme et le goudron. Au bord de la grève, on le passe sans rien dire.",
-    usage: "Une gorgée : 1d8 PV temporaires et avantage à la prochaine sauvegarde de Sang-froid contre le Choc. Désavantage aux tests d'Investigation et de Perspicacité jusqu'à la fin de la scène." },
+    usage: "Une gorgée : 1d8 PV temporaires et avantage à la prochaine sauvegarde de Sang-froid contre le Choc. Désavantage aux tests d'Investigation et d'Intuition jusqu'à la fin de la scène." },
   { id: "hr-horaire-des-marees", nom: "Horaire des marées", famille: "objet", rarete: "commune", recharge: "par-seance",
     texte: "Une feuille pliée en huit, imprimée à Cherbourg, annotée au crayon par un homme qui a vu la chaussée se refermer.",
     usage: "Le MJ donne l'heure exacte des marées de la journée et dit combien de temps la chaussée du Rocher-Gris reste découverte. Le groupe n'est jamais pris par la mer qui monte par surprise, et un personnage a l'avantage au test d'Athlétisme (DD 12) pour garder pied dans l'eau qui monte." },
@@ -44,7 +44,7 @@ export const COLLECTION_NOYES: CarteDeCollection[] = [
   // ——— Alliés ———
   { id: "hr-le-vieux-marcel", nom: "Le vieux Marcel", famille: "allie", rarete: "commune", recharge: "par-seance",
     texte: "Pêcheur de Saint-Clair, soixante ans de grèves, qui se signe quand la mer est trop calme. Il a tiré plus d'un corps du sable.",
-    usage: "Avantage à un jet de Survie ou de Nature sur la grève ou en barque, et il sait où la mer sera à telle heure. Il ne montera pas dans une barque qui va à la Fosse." },
+    usage: "Avantage à un jet de Survie sur la grève ou en barque, et il sait où la mer sera à telle heure. Il ne montera pas dans une barque qui va à la Fosse." },
   { id: "hr-jules-du-phare", nom: "Jules, le gamin du phare", famille: "allie", rarete: "commune", recharge: "par-seance",
     texte: "Douze ans, des genoux écorchés et la chaussée de galets dans les jambes. Yves Le Bihan l'envoie avec ses messages.",
     usage: "Porte un mot ou un petit objet n'importe où sur la côte avant la prochaine marée, et peut traverser la chaussée du Rocher-Gris à l'heure où elle découvre, sans test. Les gendarmes ne se méfient pas de lui." },

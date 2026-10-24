@@ -70,7 +70,7 @@ Quelque chose ou quelqu'un tient la créature.
 - L'état prend fin si l'empoigneur est neutralisé, ou si un effet éloigne la créature de lui.
 - La créature peut se libérer en utilisant son action pour un test de Force (Athlétisme) ou d'Adresse (Acrobaties) contre celui de l'empoigneur (chapitre 4).
 
-Un gendarme qui plaque un homme au mur, une pince de crabe, une main de noyé, un Revenu qui vous prend par le col : même état.
+Un gendarme qui plaque un homme au mur, une pince de crabe, une main de noyé, un Revenu qui te prend par le col : même état.
 
 ### Empoisonné
 
@@ -86,7 +86,7 @@ La créature est attachée ou prise.
 - Les attaques contre elle ont l'**avantage**.
 - Ses propres attaques ont le **désavantage**, et elle a le désavantage à ses sauvegardes d'Adresse.
 
-Des menottes, un filet, une corde, la vase molle des marais (chapitre 4), un harpon planté dans la jambe. Se libérer demande une action et un test de Force (Athlétisme) ou d'Adresse (Acrobaties) : DD 12 pour une corde ou une vase, DD 15 pour des menottes, DD 8 + la maîtrise + la Force du pêcheur pour un harpon ancré (*Harponner*, qui l'impose). Une tierce personne qui aide donne l'avantage.
+Des menottes, un filet, une corde, la vase molle des marais (chapitre 4), un harpon planté dans la jambe. Se libérer demande une action et un test de Force (Athlétisme) ou d'Adresse (Acrobaties) : DD 12 pour une corde, DD 15 pour des menottes, DD 12 pour la vase (Force (Athlétisme) seulement, avec avantage si un allié aide avec une corde ou une gaffe), DD 8 + la maîtrise + la Force du pêcheur pour un harpon ancré (*Harponner*, qui l'impose). Une tierce personne qui aide donne l'avantage.
 
 ### Étourdi
 
@@ -116,7 +116,7 @@ Rare. La créature est neutralisée, ne peut ni bouger ni parler, rate ses sauve
 
 ## L'épuisement
 
-L'épuisement se compte en **six niveaux**. Les effets se cumulent : un personnage au niveau 3 subit aussi ceux des niveaux 1 et 2.
+L'épuisement se compte en **six niveaux**. Les effets se cumulent : une créature à l'épuisement de niveau 3 subit aussi ceux des niveaux 1 et 2.
 
 | Niveau | Effet |
 |---|---|
@@ -144,12 +144,12 @@ Sur la côte, c'est presque toujours le corps, pas la tête.
 ### Récupérer
 
 - Un **repos long** retire **un niveau**, si le personnage a mangé, bu et dormi à l'abri (chapitre 3) : au sec, réchauffé.
-- La Marée à **3 ou plus** annule ce bénéfice, et limite aussi les dés de vie récupérés. L'*abbé* (avec *Nuit tranquille*), la *ramasseuse de varech* de la collection et la *Veillée de garde* du médecin y changent quelque chose.
-- Un personnage au niveau 6 est mort, et rien de ce chapitre ne l'en tire.
+- La Marée à **3 ou plus** annule ce bénéfice, et limite aussi les dés de vie récupérés. L'Abbé (avec *Nuit tranquille*), la carte *Ramasseuse de varech* de la collection et la *Veillée de garde* du médecin y changent quelque chose.
+- Un personnage à l'épuisement de niveau 6 est mort, et rien de ce chapitre ne l'en tire.
 
 > **Un exemple de glissade.**
 >
-> Armand a passé une nuit sous la pluie, sans abri. Sauvegarde d'Endurance DD 10 : 8, raté. Niveau 1 : désavantage à ses tests. Le lendemain, il marche neuf heures pour atteindre le hameau de la Hague. DD 11 : 12, réussi. À la tombée de la nuit, il dort dans une grange, au sec, après avoir mangé : il perd un niveau. Il est à 0. Sa nuit dehors lui a coûté une journée de désavantage.
+> Émile a passé une nuit sous la pluie, sans abri. Sauvegarde d'Endurance DD 10 : 8, raté. Niveau 1 : désavantage à ses tests. Le lendemain, il marche neuf heures pour atteindre le hameau de la Hague. DD 11 : 12, réussi. À la tombée de la nuit, il dort dans une grange, au sec, après avoir mangé : il perd un niveau. Il est à 0. Sa nuit dehors lui a coûté une journée de désavantage.
 
 ## Le froid et l'eau froide
 
@@ -160,7 +160,7 @@ De septembre à février, l'eau de la baie est glaciale. Une chute en mer est le
 - Chaque **dix minutes** passées dans l'eau, sauvegarde d'Endurance **DD 10**, **+2 à chaque tranche suivante**, ou un niveau d'épuisement.
 - **Nager habillé** (manteau de laine, souliers de ville) demande un test d'Athlétisme **DD 12** à chaque tour. Un échec : le personnage coule d'un mètre ; il ne remonte que s'il réussit au tour suivant. Un **gilet de liège** supprime ce test (chapitre 6). Retirer son ciré ou ses bottes est une action.
 - Au bout d'**une heure** de froid, un personnage n'a plus la force de grimper : il lui faut de l'aide.
-- Les **gens de la côte** et les **pêcheurs** ont l'**avantage** à ces sauvegardes et savent quand sortir. Une famille de pêcheurs nage tout habillée sans test.
+- Les **gens de la côte** (*Fils de la baie*) ont l'**avantage** à ces sauvegardes ; le **pêcheur** l'a dès le niveau 5 (*Dans l'eau jusqu'au cou*). Ils savent quand sortir. Une famille de pêcheurs nage tout habillée sans test.
 
 ### Reconnaître et soigner
 
@@ -186,7 +186,7 @@ Une créature retient son souffle **1 + son modificateur d'Endurance minutes** (
 
 Quand elle n'a plus d'air, elle survit **un nombre de rounds égal à son modificateur d'Endurance** (au minimum 1). Au début de son tour suivant, elle tombe à **0 PV** et ne peut ni récupérer de PV ni se stabiliser tant qu'elle ne respire pas.
 
-Un adversaire qui vous **tient sous l'eau** vous agrippe et vous entraîne : le texte de la créature dit si vous commencez à vous noyer, et à quel moment le compte commence.
+Un adversaire qui te **tient sous l'eau** t'agrippe et t'entraîne : le texte de la créature dit si tu commences à te noyer, et à quel moment le compte commence.
 
 ### Tomber à 0 PV dans l'eau
 
@@ -194,7 +194,7 @@ Un personnage qui tombe à 0 PV en pleine eau coule. Il est **inconscient**, et 
 
 ### Réanimer un noyé
 
-Un personnage sorti de l'eau à 0 PV, qui ne respire pas : une action et un test de Sang-froid (Médecine) **DD 12**. Réussi, il crache de l'eau, se stabilise, et récupère 1 PV. Un échec peut être retenté chaque round pendant une minute ; au bout d'une minute d'échecs, c'est fini. Une trousse donne l'avantage.
+Un personnage à 0 PV qui ne respire pas continue ses jets contre la mort et ne peut pas se stabiliser tant qu'il n'a pas craché son eau. Une action, un test de Sang-froid (Médecine) DD 12, avantage avec une trousse. Réussi, il crache, se stabilise et récupère 1 PV. Un échec se retente à chaque round, tant qu'il n'est pas mort.
 
 > **Exemple.**
 >
@@ -202,7 +202,7 @@ Un personnage sorti de l'eau à 0 PV, qui ne respire pas : une action et un test
 
 ## Le Choc
 
-Le **Choc** est la peur de ce qu'on voit : un noyé, un blessé grave, un massacre, une chose qui n'a rien à faire ici. Il se joue comme à la cinquième édition (chapitre 1) et passe avec une bonne nuit.
+Le **Choc** est la peur de ce qu'on voit : un noyé, un blessé grave, un massacre, une chose qui n'a rien à faire ici. Il se joue comme dans la cinquième édition (chapitre 1) et passe avec une bonne nuit.
 
 | Ce qu'on voit | Sauvegarde de Sang-froid |
 |---|---|
@@ -218,13 +218,13 @@ Le **Choc** est la peur de ce qu'on voit : un noyé, un blessé grave, un massac
 
 ## La Marée
 
-Deux mots pour résumer ce que le chapitre 1 explique en détail.
+En bref, ce que le chapitre 1 explique en détail.
 
 | Marée | Ce qui change |
 |---|---|
 | **3** | Rêves de noyade chaque nuit. Un repos long rend au plus un dé de vie, aucun niveau d'épuisement |
 | **5** | La mer s'entend à l'intérieur des maisons. Désavantage aux tests de Perception qui reposent sur l'ouïe |
-| **7** | On se souvient de ce qui n'est pas arrivé. Une fois par séance, le MJ peut te faire dire à voix haute une chose qui arrivera |
+| **7** | On entend des choses qui n'ont pas eu lieu, sans savoir si c'est un souvenir ou un rêve. Une fois par séance, le MJ peut te faire dire à voix haute une chose qui arrivera |
 | **10** | La mer appelle. À la prochaine marée haute de nuit, le personnage marche vers l'eau |
 
 **Ce qui la fait monter.**
@@ -232,17 +232,18 @@ Deux mots pour résumer ce que le chapitre 1 explique en détail.
 - Lire une lettre de Revenu en entier : +1, sauf sauvegarde de Sang-froid DD 12 (la première moitié se lit sans risque).
 - Toucher un Revenu à mains nues, ou passer une nuit seul avec lui : +1.
 - Voir la mer faire ce qu'elle fait (la Fosse, la file sous l'eau, les lumières au large) : +3, ou +1 sur une sauvegarde de Sang-froid DD 13 réussie.
+- Voir un Revenu ou une créature de la mer pour la première fois de la séance : sauvegarde de Sang-froid au DD de sa fiche ; en cas d'échec, +1 de Marée et effrayé jusqu'à la fin de son prochain tour (certains, comme le Revenu qui se lève, ne font qu'effrayer).
 - Se servir d'un Présage : +1.
 - Un pouvoir à prix (chapitre 5) : le N de la fiche.
 
 **Les bornes.**
 
 - **3 points de Marée au plus par scène**, toutes sources confondues.
-- **Un seul pouvoir à prix** par scène. Jamais au-dessus de 9.
+- **Un seul pouvoir à prix** par scène. Jamais au-dessus de 9 : on ne dépense pas de Présage à 9 de Marée.
 - **Trois Présages en réserve**, au plus (quatre aux niveaux élevés).
 - Un Présage dépensé coûte 1 point de Marée, sans Présage en retour.
 
-**Ce qui la fait descendre.** Une semaine loin de la mer : −1. Une semaine à Paris ou dans les terres : −2. La *Veillée* d'un abbé, une soirée avec la mère Hamel : voir leurs textes. Les Présages restent.
+**Ce qui la fait descendre.** Une semaine loin de la mer : −1. Une semaine à Paris ou dans les terres : −2. La *Veillée* de l'Abbé, une soirée avec la mère Hamel : voir leurs textes. Les Présages restent.
 
 **À 10, le personnage marche vers l'eau.** Pour le retenir, il faut **trois réussites avant deux échecs** (Persuasion ou Intuition DD 15, ou Athlétisme pour le maintenir). Lui-même peut tenter une sauvegarde de Sang-froid DD 15 par heure. S'il entre dans l'eau, il devient un personnage du MJ.
 
@@ -291,7 +292,7 @@ Court : une heure, des dés de vie. Long : huit heures dont six de sommeil, tous
 
 ### L'argent
 
-En francs. Repas 5 F, chambre 15 F, train 30 F ou 60 F, revolver 150 F, pêcheur 400 F par mois, expert 1 200 F par mois.
+En francs. Repas 5 F, chambre 15 F, journal 0,25 F, train 30 F ou 60 F, revolver 150 F, pêcheur 400 F par mois, expert 1 200 F par mois.
 
 ### La côte
 

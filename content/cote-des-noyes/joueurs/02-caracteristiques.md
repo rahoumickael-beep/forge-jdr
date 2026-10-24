@@ -64,7 +64,7 @@ Lance **4d6**, retire le plus faible, additionne les trois autres. Recommence si
 
 ### Les bonus d'origine
 
-Ton origine et ta variante ajoutent des bonus à certaines caractéristiques. Ils sont indiqués dans la description de l'origine, et l'écran de création les applique pour toi. Les gens de la côte ont de la santé, les Revenus de la guerre du souffle et du sang-froid, les bourgeois de la ville de la tête, les étrangers de la présence, les enfants du siècle de l'adresse, les Sensibles du sang-froid ; chaque variante (famille de pêcheurs, douanier, ancien poilu, infirmière du front, études de droit ou de lettres, fortune du Havre, outre-Manche ou outre-Atlantique, exilé, étudiant, noctambule, l'enfant qui voyait les morts, le rêveur) y ajoute son propre bonus.
+Ton origine et ta variante ajoutent des bonus à certaines caractéristiques. Ils sont indiqués dans la description de l'origine, et l'écran de création les applique pour toi. Les gens de la côte ont de la santé, les Revenus de la guerre du souffle, les bourgeois de la ville de la tête, les étrangers de la présence, les enfants du siècle de l'adresse, les Sensibles du sang-froid ; chaque variante (famille de pêcheurs, douanier, ancien poilu, infirmière du front, études de droit ou de lettres, fortune du Havre, outre-Manche ou outre-Atlantique, exilé, étudiant, noctambule, l'enfant qui voyait les morts, le rêveur) y ajoute son propre bonus.
 
 Après les bonus, aucune valeur ne peut dépasser 20 au niveau 1.
 
@@ -108,7 +108,7 @@ La santé, la résistance à la douleur, au froid et à la maladie. Sur la côte
 - **Pouvoirs** : c'est la caractéristique de l'Ancien poilu et du Pêcheur.
 - **Sauvegarde d'Endurance** : poisons, maladies, **le froid de l'eau, l'épuisement** (voir le chapitre 3 pour la baie de Saint-Clair), fièvres. C'est aussi la sauvegarde que le Photographe impose avec son éclair.
 
-Il n'y a aucune compétence associée à l'Endurance. Elle travaille en silence.
+Il n'y a aucune compétence associée à l'Endurance.
 
 ### Savoir
 
@@ -177,7 +177,7 @@ Passer sans être vu ni entendu. Se cacher, avancer dans l'ombre, suivre quelqu'
 
 > Odette descend à pas de loup l'escalier de service de l'auberge, avant l'aube, pour entrer dans la chambre d'un voyageur qui n'a pas payé. Elle fait un test d'Adresse (Discrétion) ; le MJ le compare à la Perception passive du valet qui dort sur le palier.
 
-Une armure lourde ou certaines armures intermédiaires donnent le désavantage à ces tests (chapitre 6). Dans une rue de bourg à minuit, les pas sur les pavés comptent.
+Une capote ou une armure intermédiaire donne le désavantage à ces tests (chapitre 6). Dans une rue de bourg à minuit, les pas sur les pavés comptent.
 
 ### Escamotage (Adresse)
 
@@ -217,7 +217,7 @@ Calmer une bête, la mener, deviner ses intentions. Convaincre un chien de ferme
 
 Lire les gens. Sentir le mensonge, deviner une intention, comprendre ce que quelqu'un ne dit pas. S'oppose à la Tromperie.
 
-> Fernand, douanier, jure qu'il n'a vu aucune barque entrer dans l'anse cette nuit. Berthe l'écoute parler. Sang-froid (Intuition) contre la Présence (Tromperie) de Fernand. Réussite : il ment, et il a peur de quelqu'un qui n'est pas vous.
+> Fernand, douanier, jure qu'il n'a vu aucune barque entrer dans l'anse cette nuit. Berthe l'écoute parler. Sang-froid (Intuition) contre la Présence (Tromperie) de Fernand. Réussite : il ment, et il a peur de quelqu'un qui n'est pas Berthe.
 
 ### Médecine (Sang-froid)
 
@@ -379,7 +379,7 @@ On peut calculer de la même façon une **Intuition passive** ou une **Investiga
 
 > **Exemple.**
 >
-> Berthe a Sang-froid 14 (+2) et maîtrise la Perception. Sa Perception passive vaut 14. La nuit, sur la grève, sans lune, elle n'a pas de vision dans le noir : hors du cercle de sa lampe, sa Perception passive de vue passe à 9, et ne sert plus qu'aux bruits et aux odeurs.
+> Berthe a Sang-froid 14 (+2) et maîtrise la Perception. Sa Perception passive vaut 14. La nuit, sur la grève, sans lune, elle n'a pas de vision dans le noir : dans la lumière faible au bord de sa lampe, sa Perception passive de vue passe à 9 ; au-delà, dans l'obscurité, elle ne voit rien (chapitre 4) et ne sert plus qu'aux bruits et aux odeurs.
 
 ## L'initiative
 
@@ -429,8 +429,8 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 >
 > Pour les prochains chapitres, voici ce que valent les trois autres personnages d'exemple, tous de niveau 1, tous avec les valeurs fixes.
 >
-> **Armand Gosselin**, ancien poilu, Revenus de la guerre (ancien poilu). Force 16 (+3), Adresse 13 (+1), Endurance 16 (+3), Savoir 10 (+0), Sang-froid 13 (+1), Présence 8 (−1). Sauvegardes : Force +5, Endurance +5. Compétences : Athlétisme +5 et Survie +3 (historique de poilu), Perception +3 et Discrétion +3 (classe), Médecine +3 (la Survie de son origine, déjà prise, est remplacée). Perception passive 13. Initiative +1. Points de vie 14 (d10 + Endurance 3, plus 1 PV de son origine). Outil : pelle-bêche. Argent : 230 F, plus la pension.
+> **Armand Gosselin**, ancien poilu, Revenus de la guerre (ancien poilu). Force 16 (+3), Adresse 13 (+1), Endurance 16 (+3), Savoir 10 (+0), Sang-froid 12 (+1), Présence 8 (−1). Sauvegardes : Force +5, Endurance +5. Compétences : Athlétisme +5 et Survie +3 (historique), Perception +3 et Discrétion +3 (classe), Médecine +3 (origine : la Survie, déjà prise par l'historique, est remplacée). Perception passive 13. Initiative +1. Points de vie 14 (d10 + Endurance 3, plus 1 PV de son origine). Outil : pelle-bêche. Argent : 230 F, plus la pension.
 >
-> **Odette Rouxel**, médecin, Enfants du siècle (étudiante). Force 8 (−1), Adresse 13 (+1), Endurance 14 (+2), Savoir 15 (+2), Sang-froid 15 (+2), Présence 10 (+0). Sauvegardes : Savoir +4, Endurance +4. Compétences : Médecine +4 et Investigation +4 (historique d'étudiant en médecine), Perception +4 (origine), Intuition +4, Persuasion +2, Histoire +4 (classe), Arcanes / Savoir +4 (l'Investigation de son origine, déjà prise, est remplacée). Perception passive 14. Initiative +1. Points de vie 10 (d8 + Endurance 2). Outil : trousse de dissection. Argent : 430 F.
+> **Odette Rouxel**, médecin, Enfants du siècle (étudiante). Force 8 (−1), Adresse 13 (+1), Endurance 14 (+2), Savoir 15 (+2), Sang-froid 15 (+2), Présence 10 (+0). Sauvegardes : Savoir +4, Endurance +4. Compétences : Médecine +4 et Investigation +4 (historique), Intuition +4, Persuasion +2 et Histoire +4 (classe), Perception +4 et Arcanes / Savoir +4 (origine : l'Investigation, déjà prise par l'historique, est remplacée). Perception passive 14. Initiative +1. Points de vie 10 (d8 + Endurance 2). Outil : trousse de dissection. Argent : 430 F.
 >
-> **Berthe Tanguy**, pêcheuse, Gens de la côte (famille de pêcheurs). Force 14 (+2), Adresse 12 (+1), Endurance 17 (+3), Savoir 10 (+0), Sang-froid 14 (+2), Présence 8 (−1). Sauvegardes : Force +4, Endurance +5. Compétences : Athlétisme +4 et Survie +4 (historique de pêcheur), Perception +4, Intuition +4 et Acrobaties +3 (classe), Discrétion +3 (l'Athlétisme de son origine, déjà pris, est remplacé). Perception passive 14. Initiative +1. Points de vie 14 (d10 + Endurance 3, plus 1 PV de son origine). Outils de pêcheur. Langues : le français et le parler normand de la côte. Argent : 320 F.
+> **Berthe Tanguy**, pêcheuse, Gens de la côte (famille de pêcheurs). Force 14 (+2), Adresse 12 (+1), Endurance 17 (+3), Savoir 10 (+0), Sang-froid 14 (+2), Présence 8 (−1). Sauvegardes : Force +4, Endurance +5. Compétences : Athlétisme +4 et Survie +4 (historique), Perception +4, Intuition +4 et Acrobaties +3 (classe), Discrétion +3 (origine : l'Athlétisme, déjà pris par l'historique, est remplacé). Perception passive 14. Initiative +1. Points de vie 14 (d10 + Endurance 3, plus 1 PV de son origine). Outils de pêcheur. Langues : le français et le parler normand de la côte. Argent : 320 F.

@@ -127,7 +127,7 @@ export const ORIGINES_NOYES: Origin[] = [
         blurb: "Tu viens de Southampton ou de New York. Tu as un passeport, un compte, et un accent qu'on remarque.",
         bonus: { 3: 1, 5: 1 },
         traits: [
-          { name: "Lettre de crédit", text: "Maîtrise de Persuasion. Une fois par mois de jeu, tu retires 300 francs à une banque d'une grande ville, sans te justifier." },
+          { name: "Lettre de crédit", text: "Maîtrise de Persuasion. Une fois par mois de jeu, tu retires 150 francs à une banque d'une grande ville, sans te justifier." },
         ],
       },
       {
@@ -308,7 +308,7 @@ export const HISTORIQUES_NOYES: Background[] = [
     blurb: "Tu as tiré le portrait des mariés et des morts, et tu sais regarder.",
     skills: ["Perception", "Investigation"],
     tool: "Matériel de photographe",
-    gear: ["Appareil à soufflet", "Six plaques de verre", "Tente noire", "Cuvettes de révélateur", "30 francs"],
+    gear: ["Appareil à soufflet", "Douze plaques de verre", "Tente noire", "Cuvettes de révélateur", "30 francs"],
     feature: { name: "Un atelier", text: "Dans une ville, un confrère te prête sa chambre noire et te montre ses plaques. Un journal local t'achète une photographie d'actualité 50 francs." },
   },
   {

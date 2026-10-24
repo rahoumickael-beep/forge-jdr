@@ -192,7 +192,7 @@ Chaque fois que sa Marée monte, le personnage gagne un **Présage** : un fragme
 
 - **3** : le personnage rêve de noyade chaque nuit ; un repos long lui rend au plus un dé de vie, et aucun niveau d'épuisement.
 - **5** : il entend la mer à l'intérieur des maisons. Désavantage aux tests de Perception qui reposent sur l'ouïe.
-- **7** : il se souvient de choses qui ne sont pas encore arrivées, et n'arrive plus à les distinguer du reste. Une fois par séance, le MJ peut lui faire dire à voix haute une chose qui arrivera.
+- **7** : il entend des choses qui n'ont pas eu lieu, sans savoir si c'est un souvenir ou un rêve. Une fois par séance, le MJ peut lui faire dire à voix haute une chose qui arrivera.
 - **10** : la mer l'appelle. À la prochaine marée haute de nuit, il marche vers l'eau. Pour le retenir, il faut trois réussites avant deux échecs (Persuasion ou Perspicacité DD 15, ou Athlétisme pour le maintenir). Lui-même peut tenter une sauvegarde de Sang-froid DD 15 par heure. S'il entre dans l'eau, il devient un personnage du MJ.
 
 On fait redescendre la Marée en s'éloignant de la côte : une semaine loin de la mer, −1 ; une semaine à Paris ou dans les terres, −2. Le personnage garde ses Présages. Mais une semaine loin de la côte est une semaine perdue pour l'enquête.

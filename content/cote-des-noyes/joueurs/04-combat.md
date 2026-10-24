@@ -1,8 +1,8 @@
 # Chapitre 4 — Le combat
 
-Un coup de revolver s'entend de tout le port. Sur la grève, à marée basse, il fait lever tous les goélands de Saint-Clair jusqu'à la jetée, et dix minutes plus tard quelqu'un frappe à la porte de la gendarmerie. Voilà la première chose à savoir d'un combat sur la côte : il ne reste pas entre vous et celui que vous visez.
+Un coup de revolver s'entend de tout le port. Sur la grève, à marée basse, il fait lever tous les goélands de Saint-Clair jusqu'à la jetée, et dix minutes plus tard quelqu'un frappe à la porte de la gendarmerie. Voilà la première chose à savoir d'un combat sur la côte : il ne reste pas entre toi et celui que tu vises.
 
-Ce chapitre donne les règles pour le jouer, du premier regard à la dernière sauvegarde contre la mort : les armes à feu et les gaffes, la grève, les marais, la chaussée que la mer reprend, le pont d'un bateau, le noir. Il dit aussi quoi faire quand on ne se bat pas : fuir, se rendre, attendre la marée. Et ce qu'on fait devant ce que rend la mer, qu'on ne tue pas comme un contrebandier.
+Ce chapitre donne les règles pour le jouer, du premier regard au dernier jet contre la mort : les armes à feu et les gaffes, la grève, les marais, la chaussée que la mer reprend, le pont d'un bateau, le noir. Il dit aussi quoi faire quand on ne se bat pas : fuir, se rendre, attendre la marée. Et ce qu'on fait devant ce que rend la mer, qu'on ne tue pas comme un contrebandier.
 
 > **Si tu viens d'un autre jeu.**
 >
@@ -35,7 +35,7 @@ Un homme qui débarque un fût sur la grève la nuit n'entend pas arriver quatre
 
 ## L'initiative
 
-Au début du combat, chacun fait un **test d'Adresse** : c'est son initiative (chapitre 2). Le MJ lance en général un seul jet pour un groupe de créatures identiques. En cas d'égalité entre joueurs, ils décident entre eux ; entre un joueur et un adversaire, le MJ fait relancer, ou donne l'avantage à la meilleure Adresse.
+Au début du combat, chacun fait un **test d'Adresse** : c'est son initiative (chapitre 2). Le MJ lance en général un seul jet pour un groupe de créatures identiques. En cas d'égalité entre joueurs, ils décident entre eux ; entre un joueur et un adversaire, le MJ fait lancer un d20 de plus, ou laisse passer celui qui a la meilleure Adresse.
 
 Forge JdR range les pions dans l'ordre d'initiative. L'ordre ne change plus, sauf si quelqu'un se fait surprendre, s'évanouit ou quitte la carte.
 
@@ -129,7 +129,7 @@ Un jet d'attaque est un **d20 + modificateur + maîtrise** si tu maîtrises l'ar
 
 ### Les attaques à distance
 
-Une arme à distance a deux portées, séparées par une barre : **12/36 m**. Dans la première, tu tires normalement. Dans la seconde, avec le **désavantage**. Plus loin, tu ne tires pas. Deux restrictions :
+Une arme à distance a deux portées, séparées par une barre, données par chaque arme (revolver d'ordonnance 12/36 m, fusil de chasse 9/27 m, Lebel 30/90 m : chapitre 6). Dans la première, tu tires normalement. Dans la seconde, avec le **désavantage**. Plus loin, tu ne tires pas. Deux restrictions :
 
 - Tirer quand une créature hostile capable d'agir se tient à **1,5 m** de toi a le désavantage.
 - Tirer sur une cible que tu ne vois pas a le désavantage (voir « Dans le noir »).
@@ -144,7 +144,7 @@ Quand une créature hostile que tu vois **quitte ta portée** sans se désengage
 
 ### Le combat à deux armes
 
-Si tu tiens une arme **légère** dans chaque main et que tu attaques avec l'une, tu peux utiliser ton action bonus pour attaquer avec l'autre. Tu n'ajoutes pas ton modificateur aux dégâts de cette deuxième attaque, sauf s'il est négatif. Un couteau à poisson dans la main gauche, une gaffe courte dans la droite : ça se fait, au port.
+Si tu tiens une arme **légère** dans chaque main et que tu attaques avec l'une, tu peux utiliser ton action bonus pour attaquer avec l'autre. Tu n'ajoutes pas ton modificateur aux dégâts de cette deuxième attaque, sauf s'il est négatif. Un couteau à poisson dans chaque main : ça se fait, au port.
 
 ### Les armes à feu
 
@@ -153,7 +153,7 @@ Les armes à feu se jouent comme des armes à distance, avec quatre propriétés
 - **Bruyant.** Un coup de feu s'entend dans tout le bourg, et loin sur la grève. Le MJ décide qui l'entend, qui vient, et dans combien de rounds.
 - **Chargeur (N).** L'arme a N cartouches. Quand elles sont tirées, il faut **recharger**, ce qui prend une action. Les armes à chargeur de rechange (le pistolet automatique) se rechargent avec une interaction avec un objet.
 - **Compte tes cartouches.** Note-les sur ta fiche. Une cartouche tirée est une cartouche perdue.
-- **Cacher une arme.** Un revolver de poche se cache sous un manteau : Adresse (Escamotage) DD 10 contre la Perception passive de qui te regarde. Un revolver d'ordonnance, DD 13. Un fusil ne se cache pas. Personne ne porte d'arme en ville sans se faire remarquer.
+- **Cacher une arme.** Un revolver de poche se cache sous un manteau : Adresse (Escamotage) contre la Perception passive de qui te regarde. Un revolver d'ordonnance donne le désavantage à ce test. Un fusil ne se cache pas. Personne ne porte d'arme en ville sans se faire remarquer.
 
 > **Après le coup de feu.**
 >
@@ -203,16 +203,16 @@ Un combat se joue autant sur le sol que dans les dés. Voici les endroits où il
 Derrière les dunes, les marais sont faits de roseaux, de mares, de chemins de planches et de vase molle.
 
 - **Les roseaux cachent, ils n'arrêtent rien.** Ils donnent un obscurcissement léger : désavantage aux tests de Perception qui reposent sur la vue, mais aucun abri contre une balle.
-- **La vase molle.** Une créature qui ne bouge pas pendant deux rounds s'enfonce jusqu'aux genoux : sa vitesse tombe à 0 et elle est entravée. Se dégager demande une action et un test de Force (Athlétisme) DD 12, ou DD 10 avec l'aide d'un allié muni d'une corde ou d'une gaffe. Les pêcheurs ne comptent pas la vase comme un terrain difficile, mais elle les enlise comme les autres.
+- **La vase molle.** Sur une zone de vase molle marquée par le MJ, une créature qui finit trois tours de suite sans changer de case s'enfonce jusqu'aux genoux : vitesse 0, entravée. Se dégager : une action, Force (Athlétisme) DD 12, avec avantage si un allié aide avec une corde ou une gaffe. Les pêcheurs ne comptent pas la vase comme un terrain difficile, mais elle les enlise comme les autres.
 - **Les chemins de planches.** Ils tiennent une personne à la fois. Deux qui se croisent doivent se bousculer, et celui qui perd tombe dans la mare.
 
 ### La chaussée qui se recouvre
 
 La chaussée du Rocher-Gris découvre une heure et demie à chaque basse mer de vives-eaux (chapitre 3). Si un combat éclate sur la chaussée, le MJ **compte les rounds** : dix rounds font une minute, et il dit à voix haute où en est la mer, de dix en dix.
 
-- Quand la marge est épuisée, la mer remonte des deux côtés à la fois. Chaque round passé dans l'eau qui monte, un test d'Athlétisme DD 12 pour garder pied. Un échec : 1d6 dégâts contondants et le personnage est à terre dans l'eau.
+- Quand la marge est épuisée, la mer remonte des deux côtés à la fois. Chaque round passé dans l'eau qui monte, un test d'Athlétisme DD 12 pour garder pied. Un échec : 1d6 dégâts contondants et le personnage est à terre dans l'eau. Au bout de 5 rounds dans l'eau qui monte, elle arrive à la poitrine : le personnage nage (règles de l'eau froide) et la chaussée est perdue.
 - Une créature à terre dans l'eau qui monte commence à se noyer (chapitre 7) si personne ne la relève.
-- Les adversaires sont mouillés eux aussi. La mer ne choisit pas : un homme qui se bat jusqu'au bout de la chaussée perd souvent contre elle avant de perdre contre vous.
+- Les adversaires sont mouillés eux aussi. La mer ne choisit pas : un homme qui se bat jusqu'au bout de la chaussée perd souvent contre elle avant de perdre contre toi.
 
 ### Le pont d'un bateau
 
@@ -221,9 +221,9 @@ Sur un pont qui roule, tenir debout est une action. Par mer formée, le MJ deman
 - **Échec** : le personnage tombe à terre sur le pont.
 - **1 naturel** : il passe par-dessus bord (voir l'eau froide, chapitre 3).
 - Les attaques à distance faites depuis un pont qui roule ont le **désavantage**.
-- Les pêcheurs, les marins de la Compagnie et les gens de la côte ont **l'avantage** à ces tests (c'est ce que dit « Pied marin » dans la classe du pêcheur).
+- Les pêcheurs ont l'avantage à ces tests (Pied marin). Les autres, même nés sur la côte, lancent normalement.
 
-Dans une **barque** de pêche, on ne se bat pas debout. Se lever pour attaquer ou tirer demande le même test, DD 12 : la barque tangue, elle prend l'eau si plus de quatre personnes s'y bousculent,.
+Dans une **barque** de pêche, on ne se bat pas debout. Se lever pour attaquer ou tirer demande le même test, mais au DD 12. La barque tangue, et elle prend l'eau si plus de quatre personnes s'y bousculent.
 
 ### Dans le noir
 
@@ -263,11 +263,11 @@ Tu remplaces une attaque par un test de **Force (Athlétisme)** contre le même 
 
 Dans cette baie, partir est souvent la bonne décision. Partir bien est une affaire de règles.
 
-- **Se désengager** pour ne pas payer une attaque d'opportunité, puis **se précipiter** : 18 m par round à pied.
+- **Se précipiter** : 18 m par round. Si un adversaire est au contact, se désengager d'abord prend l'action du premier round (9 m), et la course ne commence qu'au suivant.
 - Un adversaire qui a ta vitesse ne te rattrape pas tant que tu cours et qu'il ne peut pas tirer ; il te rattrape si tu t'arrêtes ou si tu es plus lent que lui.
 - Pour **disparaître**, il faut sortir de la vue de tes poursuivants, puis réussir un test de groupe d'Adresse (Discrétion) contre leur Perception passive. Une ruelle, une barque, un tournant de falaise : le MJ décide ce qui compte comme « hors de vue ».
-- **La mer est un allié.** Les barques fuient plus vite que les hommes ne les suivent, à 4 km/h, 15 en canot à moteur (chapitre 3). Un homme qui n'a pas de bateau ne vous suit pas à l'eau.
-- **Les lents.** Beaucoup de choses que la mer rend marchent à 6 m par round, moins que vous. Un homme qui court les distance. Un homme qui s'arrête pour regarder ne les distance plus.
+- **La mer est un allié.** Une barque ne va pas plus vite qu'un marcheur (4 km/h), mais un homme sans bateau ne te suit pas sur l'eau ; un canot à moteur (15 km/h) distance tout le monde.
+- **Les lents.** Beaucoup de choses que la mer rend marchent à 6 m par round, moins que toi. Un homme qui court les distance. Un homme qui s'arrête pour regarder ne les distance plus.
 - Dans Forge JdR, quand tous les pions d'un groupe sont sortis de la portée de ceux qui les poursuivent, le MJ peut **résumer** la fuite et la jouer en une phrase.
 
 > **Exemple.**
@@ -303,7 +303,7 @@ Une négociation réussie arrête le combat. Elle laisse une trace : un homme à
 
 La mer de la baie rend des morts qui n'ont rien à faire sur la grève. Ils portent des lettres. Ils marchent, ou ils se lèvent. Ils font peur, et quelquefois ils font pire.
 
-Vous pouvez les frapper. Ça ne règle presque jamais rien. Le bestiaire du MJ donne une fiche à chaque créature de la mer, avec ses points de vie et ses coups, mais aussi les quatre sorties que les pêcheurs de Saint-Clair connaissent depuis plus longtemps que la gendarmerie :
+Tu peux les frapper. Ça ne règle presque jamais rien. Le bestiaire du MJ donne une fiche à chaque créature de la mer, avec ses points de vie et ses coups, mais aussi les quatre sorties que les pêcheurs de Saint-Clair connaissent depuis plus longtemps que la gendarmerie :
 
 - **Fuir.** Mettre de la hauteur entre elle et soi : un escalier, un toit, une jetée. Fermer une porte de l'intérieur. Les lents se laissent distancer.
 - **Attendre la marée.** Beaucoup de ce que rend la mer retourne à l'eau quand elle remonte. Un pêcheur sait à quelle heure. Le MJ aussi.
@@ -318,9 +318,9 @@ Vous pouvez les frapper. Ça ne règle presque jamais rien. Le bestiaire du MJ d
 
 Il arrive qu'une chose de la mer fasse mal, et qu'on ne puisse pas fuir. Le Choc et la Marée jouent alors comme partout (chapitre 1), avec trois rappels.
 
-- **Chaque créature de la mer a son DD.** La première fois de la séance que tu en vois une, ou que tu assistes à ce qu'elle fait, le MJ demande une sauvegarde de Sang-froid. En cas d'échec, tu gagnes de la Marée (1 point, ou 3 pour les grands spectacles de la mer), et un Présage par point.
+- **Chaque créature de la mer a son DD.** La première fois de la séance que tu en vois une, ou que tu assistes à ce qu'elle fait, le MJ demande une sauvegarde de Sang-froid. En cas d'échec, tu gagnes 1 point de Marée (3 pour un grand spectacle de la mer, qui en donne encore 1 si tu réussis).
 - **Trois points au plus par scène.** C'est une borne pour tous, à la table. Un combat est une scène. Si la Marée d'un personnage a déjà monté de 3 dans la scène, elle ne monte plus avant la scène suivante.
-- **Un seul pouvoir à prix par scène** (chapitre 5). Un combat où tu tiens un Revenu à distance en dépensant un Présage ne te permet plus de dépenser autre chose avant la fin de la scène.
+- **Un seul pouvoir à prix par scène** (chapitre 5). Utiliser *Pressentiment* (prix : un Présage) ferme les autres pouvoirs à prix jusqu'à la fin de la scène. Un Présage dépensé pour relancer un dé ne ferme rien, mais compte dans les 3 points.
 
 Dans les cas simples, un Revenu qu'on laisse passer va jusqu'à l'eau et s'y couche.
 
@@ -338,7 +338,7 @@ Une attaque qui touche fait les dégâts de l'arme (par exemple 1d8 pour le revo
 
 | Type | D'où il vient |
 |---|---|
-| Contondants | Gourdin, poing, gaffe, chute, vague |
+| Contondants | Gourdin, poing, chute, vague |
 | Perforants | Balle, couteau, harpon, gaffe, aiguille |
 | Tranchants | Couteau à poisson, hache d'incendie, sabre-baïonnette |
 | Feu | Pétrole renversé, lampe, incendie |
@@ -402,7 +402,7 @@ Tu utilises ton action : un test de **Sang-froid (Médecine) DD 10**.
 - Un personnage stable récupère **1 PV** au bout de 1d4 heures, si on ne le soigne pas avant. S'il subit un nouveau coup, il recommence les jets.
 - Pendant le combat, soigner un allié qui est à 0 PV avec un soin (*Mallette*) vaut mieux que le stabiliser : il se relève.
 
-### Stable, ce n'est pas sauvé
+### Stabilisé, pas encore sauvé
 
 Un blessé stable reste inconscient, à 0 PV, sans défense. Les sources de mort ne s'arrêtent pas parce qu'il respire encore.
 
@@ -416,7 +416,7 @@ Un blessé stable reste inconscient, à 0 PV, sans défense. Les sources de mort
 
 ### Mourir
 
-Les morts restent morts. Personne ne ramène personne, et personne à la table ne devrait en attendre autant.
+Les morts restent morts. Personne ne ramène personne.
 
 Sur la côte, on veille les morts. On ne leur ferme pas la bouche, on ne les laisse pas seuls la première nuit, on garde une assiette à la fenêtre. Un groupe qui perd l'un des siens fait la même chose : une soirée à l'auberge sans parler d'enquête, un nom dit à voix haute, une lettre écrite à la famille. La table peut jouer cette scène, ou la raconter en une phrase.
 
@@ -430,6 +430,7 @@ Le joueur dont le personnage meurt reste à la table. Le MJ choisit **une** des 
 
 Dans les trois cas :
 
+- Le nouveau personnage a l'argent de son origine et l'équipement de sa classe, comme au niveau 1, même s'il arrive à un niveau plus haut. Sa Marée est celle de son origine (0, ou 1 pour un Sensible), sans Présage.
 - Les **biens** du mort reviennent à sa famille, pas au groupe. Si la table le décide, le nouveau personnage peut hériter d'une arme ou d'un papier.
 - La **Marée** et les **Présages** du mort ne se transmettent pas.
 - Un personnage qui atteint 10 de Marée et marche vers l'eau n'est pas mort : il devient un personnage du MJ (chapitre 1). Son joueur en crée un autre de la même façon.
@@ -452,8 +453,8 @@ Voici un combat du début à la fin.
 **Initiative.** Armand 16, les contrebandiers 13 (un seul jet), Émile 12, Berthe 9, Odette 6.
 
 **Round 1.**
-- *Armand* (CA 14 : capote et casque) est à 15 m de la barque. Il se jette derrière un tas de filets (demi-abri) et tire au Lebel sur l'homme le plus proche, qui se tient dans la lumière faible de la lampe. Attaque : 14 au dé, +3, total 17 contre CA 12. Touché : 7 dégâts.
-- *Les contrebandiers* visent la lampe de Berthe. Désiré tire : 12 au dé, +4, total 16 contre la CA 11 de Berthe. Touché, 7 dégâts : elle passe de 14 à 7 PV. Son frère rate. Le troisième crie et reste derrière son fût.
+- *Armand* (CA 14 : capote et casque) est à 15 m de la barque. Il se jette derrière un tas de filets (demi-abri) et tire au Lebel sur Désiré, qui avance dans la lumière faible de la lampe. Attaque : 14 au dé, +3, total 17 contre CA 12. Touché : 7 dégâts.
+- *Les contrebandiers* visent la lampe de Berthe. Désiré tire : 12 au dé, +4, total 16 contre la CA 11 de Berthe. Touché, 7 dégâts : elle passe de 14 à 7 PV. L'un de ses hommes rate. Le troisième crie et reste derrière son fût.
 - *Émile* (CA 12) tire sur Désiré, qui se tient derrière la proue de la barque, demi-abri, CA 14. Il fait 8 au dé, +4 : 12. Raté.
 - *Berthe*, à 7 PV, pose la lampe derrière une pierre, la couvre de son ciré (une interaction) et se jette à plat ventre dans le noir.
 - *Odette* se glisse près d'elle et sort sa trousse.
@@ -461,14 +462,14 @@ Voici un combat du début à la fin.
 **Round 2.** Plus personne n'a de lumière.
 - *Armand* voit des silhouettes contre le sable pâle de la barque, mais il tire sur ce qu'il ne voit pas : désavantage. Il fait 8 et 4 : raté.
 - *Les contrebandiers* ne voient plus rien non plus. Désiré tire au jugé, avec le désavantage : raté. Ils reculent derrière la barque.
-- *Émile* crie : « Gendarmerie ! » Un mensonge : Présence (Tromperie), 11 au dé, +4, total 15 contre l'Intuition de Désiré, 11. Désiré hésite. Son frère lâche un fût.
+- *Émile* crie : « Gendarmerie ! » Un mensonge : Présence (Tromperie), 11 au dé, +4, total 15 contre l'Intuition de Désiré, 11. Désiré hésite. L'un de ses hommes lâche un fût.
 - *Berthe*, à terre, rampe vers la barque : ramper coûte le double, mais le galet ne lui coûte rien.
 - *Odette* utilise sa *Mallette* sur Berthe : 1d8 + 2, 8 PV. Berthe est à 14.
 
 **Round 3.**
 - *Armand* tire une troisième fois : 11 au dé, +3, 14 contre CA 14 (Désiré derrière la barque). Touché, 9 dégâts. Désiré passe sous la moitié de ses PV.
 - *Les contrebandiers* : Désiré crie en anglais, puis en français : « On se rend ! Le fût est à vous ! » Il lâche son revolver sur le sable.
-- *Émile* lui dit de ne plus bouger. *Berthe*, debout derrière la barque, a déjà posé sa gaffe contre le cou du frère. *Odette* allume enfin sa lampe électrique de poche, et on voit les visages.
+- *Émile* lui dit de ne plus bouger. *Berthe*, debout derrière la barque, a déjà posé sa gaffe contre le cou de l'un des hommes de Désiré. *Odette* allume enfin sa lampe électrique de poche, et on voit les visages.
 
 Le combat est fini : trois rounds, dix-huit secondes, trois cartouches de Lebel tirées. Le MJ demande à Armand : « Tu comptes tes cartouches ? » Il en reste cinq dans le magasin. Au bout de la jetée, une lanterne vient d'apparaître : la gendarmerie a entendu.
 

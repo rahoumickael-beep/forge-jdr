@@ -1,6 +1,6 @@
 # Chapitre 1 — Comment on joue
 
-Une partie de la Côte des Noyés ressemble à une veillée dans une cuisine de pêcheur, un soir où la mer est trop calme. Cinq personnes autour d'une table, ou d'un salon vocal, des dés, des fiches, une carte. L'une d'elles connaît la côte, ses marées et ses mensonges : c'est le maître du jeu. Les autres incarnent chacune un personnage, un expert de la Havraise, un médecin, un ancien poilu, une pêcheuse de la baie. Ensemble, vous racontez ce qui leur arrive, et ce que leur coûte de savoir.
+Une partie de la Côte des Noyés ressemble à une veillée dans une cuisine de pêcheur, un soir où la mer est trop calme. Cinq personnes autour d'une table, ou d'un salon vocal, des dés, des fiches, une carte. L'une d'elles connaît la côte, ses marées et ses mensonges : c'est le maître du jeu. Les autres incarnent chacune un personnage, un expert de la Havraise, un médecin, un ancien poilu, une pêcheuse de la baie. Ensemble, on raconte ce qui leur arrive, et ce que leur coûte de savoir.
 
 Ce chapitre explique la mécanique de base, ce qu'est une enquête d'horreur quand on la joue à voix haute, puis comment créer ton personnage et ce que tu fais de ses premiers francs. Tout le reste du livre s'appuie dessus. Si tu as déjà joué à un jeu compatible avec la cinquième édition du plus vieux jeu de rôle du monde, tu reconnaîtras presque tout ; lis quand même les encadrés, ils signalent ce qui change sur la côte.
 
@@ -35,11 +35,11 @@ Le maître du jeu tient plusieurs rôles à la fois.
 - **Il décrit.** Les lieux, la pluie, les visages, les bruits de la mer. Il le fait avec des détails concrets plutôt qu'avec des adjectifs.
 - **Il joue tout ce qui n'est pas un personnage joueur.** Le maréchal des logis-chef qui cite le règlement, le docteur qui donne des mesures, le gardien de phare qui répète le dernier mot de ta question.
 - **Il arbitre.** Il fixe la difficulté des tests, applique les règles, et tranche quand elles ne disent rien. Ses décisions valent pour la séance ; on en discute à la pause si besoin, pas au milieu d'une scène.
-- **Il garde les secrets.** La côte en a beaucoup. Le MJ en sait plus que vous sur ce que sont les Revenus, sur ce que racontent les lettres, sur ce que la mer attend. C'est voulu. Les personnages enquêtent, et les joueurs découvrent la baie en même temps qu'eux.
+- **Il garde les secrets.** La côte en a beaucoup. Le MJ en sait plus que toi sur ce que sont les Revenus, sur ce que racontent les lettres, sur ce que la mer attend. C'est voulu. Les personnages enquêtent, et les joueurs découvrent la baie en même temps qu'eux.
 - **Il joue le calendrier.** Les marées, le dernier train, l'hiver qui approche. Quand la mer remonte, c'est lui qui regarde la table.
 - **Il choisit certains réglages de la campagne**, en particulier la règle de remplacement d'un personnage mort (chapitre 4) et la façon de gagner des niveaux (chapitre 3). Il les annonce avant la première séance.
 
-Le MJ n'est pas l'adversaire des joueurs. Son travail est de rendre la partie intéressante, pas de la gagner. Un MJ qui veut noyer vos personnages n'a pas besoin de dés : il lui suffit de compter les minutes sur la chaussée.
+Le MJ n'est pas l'adversaire des joueurs : son travail est de rendre la partie intéressante. Un MJ qui voudrait noyer les personnages n'aurait pas besoin de dés : il lui suffirait de compter les minutes sur la chaussée.
 
 ## Le rôle des joueurs
 
@@ -59,7 +59,7 @@ Quelques habitudes rendent la table plus agréable.
 
 ## Jouer sur Forge JdR
 
-Forge JdR est une table en ligne. Le MJ ouvre une partie et vous donne son code. Chacun arrive chez soi, devant son écran, et déplace son pion sur la carte en temps réel. Le MJ voit toute la carte ; vous ne voyez que ce que votre personnage voit, et le brouillard cache le reste. Votre fiche est dans l'application : points de vie, pouvoirs, francs, Marée, tout se coche et se note là.
+Forge JdR est une table en ligne. Le MJ ouvre une partie et donne son code à la table. Chacun arrive chez soi, devant son écran, et déplace son pion sur la carte en temps réel. Le MJ voit toute la carte ; tu ne vois que ce que ton personnage voit, et le brouillard cache le reste. Ta fiche est dans l'application : points de vie, pouvoirs, francs, Marée, tout se coche et se note là.
 
 Il n'y a pas de chat écrit. La voix passe par Discord, comme autour d'une vraie table. Le **journal** de la partie, lui, garde les jets de dés, ce que le MJ narre et les événements importants. Si tu as manqué une phrase, relis-la.
 
@@ -67,28 +67,28 @@ Il n'y a pas de chat écrit. La voix passe par Discord, comme autour d'une vraie
 
 Ici, on ne se bat pas contre des monstres toutes les dix minutes. On enquête. On ouvre un registre, on pose une question à un témoin qui ne veut pas répondre, on mesure un corps, on lit une lettre. Le combat existe (chapitre 4), mais il est rare, et quand il arrive c'est le plus souvent que l'enquête a mal tourné.
 
-L'horreur ne vient pas des cris. Elle vient de ce qu'on ne sait pas et de ce qu'on commence à comprendre. Elle vient d'un détail qui ne colle pas : un voyageur sans bagage, une pièce frappée d'une année qui n'est pas arrivée, une marée qui monte quand elle devrait descendre. Un bon joueur d'horreur n'attend pas qu'on lui fasse peur. Il suit la piste, et c'est la piste qui fait peur.
+L'horreur ne vient pas des cris. Elle vient de ce qu'on ne sait pas et de ce qu'on commence à comprendre. Elle vient d'un détail qui ne colle pas : un voyageur sans bagage, une pièce frappée d'une année qui n'est pas arrivée, une marée qui monte quand elle devrait descendre. Ne cherche pas à avoir peur. Suis le voyageur sans bagage et la pièce de 1924 jusqu'au bout.
 
 ### Ce que la voix change
 
-Vous jouez à distance. Le silence d'un salon vocal n'est pas celui d'une cuisine : il est plus grand. Quelques repères.
+On joue à distance. Le silence d'un salon vocal n'est pas celui d'une cuisine : il est plus grand. Quelques repères.
 
-- **Le silence est un outil.** Quand le MJ s'arrête de parler, ce n'est pas qu'il a perdu le fil. Il laisse la scène respirer. Ne le comble pas.
+- **Le silence est un outil.** Quand le MJ s'arrête de parler, ce n'est pas qu'il ait perdu le fil. Il laisse la scène respirer. Ne le comble pas.
 - **Parle un peu plus bas.** Pas jusqu'au murmure, mais une scène à la lampe-tempête ne se joue pas comme une négociation avec un armateur. Le MJ en profitera, la table aussi.
 - **Éteins ce qui bipe.** Notifications, téléphone, tout ce qui sonne dans la pièce d'à côté. Le journal de Forge JdR garde les jets : tu n'as pas besoin de regarder tes messages en même temps.
 - **Une lumière faible aide.** Une lampe de bureau, pas un plafonnier. Tu n'es pas obligé de te mettre dans le noir : ça ne sert à rien si tu dois chercher tes dés.
-- **Rire n'est pas tuer l'ambiance.** Quand la tension monte, on rit. Laisse passer, puis reprends. L'horreur se joue souvent avec des sourires fatigués.
+- **Rire n'est pas tuer l'ambiance.** Quand la tension monte, on rit. Laisse passer, puis reprends.
 - **Dis quand tu lances.** « Sang-froid, avec avantage. » La table doit entendre le dé, comme autour d'un tapis.
 
 ### Lignes et voiles
 
 La côte parle de noyade, de deuil, de guerre, de cadavres, d'enfants qu'on ne retrouve pas. Avant la première séance, la table discute de ce qu'elle veut voir à l'écran et de ce qu'elle préfère laisser hors champ. Une ligne, c'est ce qui ne sera pas joué du tout. Un voile, c'est ce qui sera présent mais pas décrit : on sait que ça s'est passé, on n'entre pas dans la pièce.
 
-Un joueur peut demander de passer une scène sans avoir à se justifier. Le MJ la résume en une phrase et on continue. Ce n'est pas de la faiblesse. C'est ce qui permet à tout le monde de continuer à jouer avec l'inquiétude.
+Un joueur peut demander de passer une scène. Personne n'a à s'expliquer. La scène tient en une phrase, la table passe à la suivante.
 
 ### Les lettres et le dossier
 
-Les lettres des Revenus sont le cœur de l'enquête, mais les lire a un prix (voir « La Marée » plus bas). Dans le jeu, une lettre est un document : le MJ la lit à voix haute ou te la remet comme document, et ses mots restent dans le journal. Tu as le droit de t'arrêter à la moitié. Prends des notes. Un carnet de papier à côté de l'écran sert plus qu'une bonne mémoire.
+Les lettres des Revenus sont l'essentiel de l'enquête, mais les lire a un prix (voir « La Marée » plus bas). Dans le jeu, une lettre est un document : le MJ la lit à voix haute ou te la remet comme document, et ses mots restent dans le journal. Tu as le droit de t'arrêter à la moitié. Prends des notes. Un carnet de papier à côté de l'écran sert plus qu'une bonne mémoire.
 
 ## Les dés
 
@@ -245,7 +245,7 @@ En combat, l'aide prend une action (chapitre 4).
 
 ### Les tests de groupe
 
-Quand **tout le groupe** tente la même chose en même temps, et que la réussite dépend de l'ensemble, on fait un **test de groupe**. Exemples : longer une falaise sans réveiller les chiens, traverser la grève sans que la marée ne vous prenne, se fondre dans la foule d'un quai.
+Quand **tout le groupe** tente la même chose en même temps, et que la réussite dépend de l'ensemble, on fait un **test de groupe**. Exemples : longer une falaise sans réveiller les chiens, traverser la grève sans que la marée ne les prenne, se fondre dans la foule d'un quai.
 
 Chaque personnage fait le test. **Si au moins la moitié réussit, tout le groupe réussit.** Sinon, tout le groupe échoue.
 
@@ -297,6 +297,7 @@ Ici, personne ne lance de sort. Ce qu'on paie, c'est de savoir. Chaque personnag
 - lire une lettre d'un Revenu en entier : +1, sauf sauvegarde de Sang-froid DD 12 (on peut aussi n'en lire que la première moitié, sans risque) ;
 - toucher un Revenu à mains nues, ou passer une nuit seul avec lui : +1 ;
 - voir la mer faire ce qu'elle fait (la Fosse, la file sous l'eau, les lumières au large) : +3, ou +1 sur une sauvegarde de Sang-froid DD 13 réussie ;
+- voir un Revenu ou une créature de la mer pour la première fois de la séance : sauvegarde de Sang-froid au DD de sa fiche ; en cas d'échec, +1 de Marée et effrayé jusqu'à la fin de son prochain tour (certains, comme le Revenu qui se lève, ne font qu'effrayer) ;
 - se servir d'un Présage : +1.
 
 On compte environ une montée de Marée par séance. Personne ne gagne plus de **3 de Marée dans une même scène**, toutes sources confondues : pouvoirs, créatures, lettres.
@@ -309,7 +310,7 @@ La Marée a un prix, à mesure qu'elle monte.
 |---|---|
 | 3 | Le personnage rêve de noyade chaque nuit. Un repos long lui rend au plus un dé de vie, et aucun niveau d'épuisement. |
 | 5 | Il entend la mer à l'intérieur des maisons. Désavantage aux tests de Perception qui reposent sur l'ouïe. |
-| 7 | Il se souvient de choses qui ne sont pas encore arrivées, et n'arrive plus à les distinguer du reste. Une fois par séance, le MJ peut lui faire dire à voix haute une chose qui arrivera. |
+| 7 | Il entend des choses qui n'ont pas eu lieu, sans savoir si c'est un souvenir ou un rêve. Une fois par séance, le MJ peut lui faire dire à voix haute une chose qui arrivera. |
 | 10 | La mer l'appelle. À la prochaine marée haute de nuit, il marche vers l'eau. |
 
 À 10, pour retenir un personnage, il faut trois réussites avant deux échecs (Persuasion ou Intuition DD 15, ou Athlétisme pour le maintenir). Lui-même peut tenter une sauvegarde de Sang-froid DD 15 par heure. S'il entre dans l'eau, il devient un personnage du MJ.
@@ -324,7 +325,7 @@ Les horreurs plus simples (un cadavre, un monstre, un massacre) se jouent comme 
 - Un blessé grave, une scène de massacre : DD 12.
 - Une créature qui n'a rien à faire ici : DD 13 à 15.
 
-L'état effrayé dure jusqu'à la fin de la scène ; le personnage a le désavantage aux tests tant qu'il voit ce qui lui fait peur, et il ne s'en approche pas. Une nouvelle sauvegarde est permise à la fin de chaque tour du personnage.
+L'état effrayé dure jusqu'à la fin de la scène ; le personnage a le désavantage aux tests tant qu'il voit ce qui lui fait peur, et il ne s'en approche pas. Il refait la sauvegarde à la fin de chacun de ses tours.
 
 > **Le Choc n'est pas la Marée.**
 >
@@ -337,7 +338,7 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 1. **Une idée.** Avant de cliquer, pense à une personne, pas à des chiffres. Que fait-elle quand on lui dit « onzième » ? À qui doit-elle une lettre ? Une phrase suffit : « Une étudiante en médecine de Caen que la Havraise a fait venir pour examiner les corps, et qui ne sait pas encore ce qu'elle dira à ses professeurs. »
 2. **Ton origine.** Gens de la côte, Revenus de la guerre, Bourgeois de la ville, Étrangers, Enfants du siècle ou Sensibles. Chacune a deux variantes. L'origine donne des bonus de caractéristiques, la vitesse, ton argent de départ et deux ou trois traits qui te suivront toute la partie.
 3. **Ta classe.** Dix classes, de l'Expert en sinistres à l'Antiquaire. Elle donne ton dé de vie, tes armes et armures, tes sauvegardes, tes pouvoirs, et ta façon de te battre. Ta **spécialité** (le mot change selon la classe : Méthode, Arme, Pratique, Ministère, Rubrique, Atelier, Métier, Don, Brigade, Collection) se choisit au niveau 3. Lis les classes avant de choisir : un pouvoir qui touche à la mer, aux morts ou à ce qui va arriver coûte de la Marée.
-4. **Ton historique.** Ce que tu faisais avant. Il te donne deux compétences, un outil, un peu d'équipement, quelques francs, et un privilège. Expert en sinistres, Ancien poilu, Infirmière du front, Pêcheur de la baie, Journaliste, Abbé de campagne, Médium, Étudiant en médecine : choisis celui qui raconte quelque chose avec ta classe, ou contre elle.
+4. **Ton historique.** Ce que tu faisais avant. Il te donne deux compétences, un outil, un peu d'équipement, quelques francs, et un privilège. Expert en sinistres, Ancien poilu, Infirmière du front, Pêcheur de la baie, Journaliste, Abbé de campagne, Médium, Étudiant en médecine, Gendarme, Photographe, Antiquaire : choisis celui qui raconte quelque chose avec ta classe, ou contre elle.
 5. **Tes caractéristiques.** Force, Adresse, Endurance, Savoir, Sang-froid, Présence. Valeurs fixes, achat par points ou dés : le chapitre 2 donne les trois méthodes. Mets tes meilleures valeurs dans les caractéristiques de ta classe.
 6. **Tes compétences.** Celles de ton historique sont données. Ta classe t'en laisse choisir quelques-unes dans une liste. Ton origine peut t'en ajouter une.
 7. **Ta personnalité.** Un trait, un idéal, un lien, un défaut. Prends des phrases courtes qui sentent la côte (« Je note l'heure de la marée avant de regarder l'heure du train », « Je ne siffle jamais face à la mer », « Je garde un couvert de trop, au cas où »). Ce sont elles que le MJ utilisera.
@@ -374,18 +375,18 @@ Les francs que ton historique met dans ton équipement (de 20 à 40 F) s'ajouten
 
 Quelques mots sur chaque cas.
 
-- **Gens de la côte.** Trois cents francs, c'est un trimestre de pêche. Tu n'as pas besoin de t'en servir pour dormir : tu as une famille, une cousine, une grange.
+- **Gens de la côte.** Trois cents francs, c'est presque un mois de pêche. Tu n'as pas besoin de t'en servir pour dormir : tu as une famille, une cousine, une grange.
 - **Revenus de la guerre.** Deux cents francs et une pension de 80 F par mois que l'État verse quand il y pense. Tu dépenses peu, parce que tu as appris à ne pas compter sur grand-chose.
-- **Bourgeois de la ville.** Trois mille francs, c'est une somme que la côte n'a jamais vue d'un seul tenant. Le sortir en public est une erreur : sur la côte, un homme qui paie en billets est un homme qu'on regarde.
+- **Bourgeois de la ville.** Mille deux cents francs, c'est trois mois de salaire d'un pêcheur, et la côte ne les a jamais vus d'un seul tenant. Le sortir en public est une erreur : sur la côte, un homme qui paie en billets est un homme qu'on regarde.
 - **Étrangers.** Cinq cents francs, dans une poche cousue à l'intérieur de la veste. Tu les gardes pour partir.
-- **Enfants du siècle.** Quatre cents francs : une bicyclette neuve, un appareil, une robe, une chambre à l'auberge un mois. Tu choisis.
+- **Enfants du siècle.** Quatre cents francs : une bicyclette neuve (400 F, tout ce que tu as), ou un petit appareil et une quinzaine d'auberge. Pas les deux.
 - **Sensibles.** Deux cent cinquante francs, et une amie ou une tante chez qui dormir.
 
 ### Ce que tu fais de tes francs
 
 Tu as ton argent. Tu as quatre ou cinq choses à en faire, avant la première séance et pendant.
 
-- **Payer ton toit.** Une chambre à l'auberge coûte 15 F la nuit. Si tu y restes un mois, c'est presque 450 F. Cherche un logement moins cher, ou fais payer la Havraise.
+- **Payer ton toit.** Une chambre à l'auberge coûte 15 F la nuit. Si tu y restes un mois, c'est 350 F au tarif du mois. Cherche un logement moins cher, ou fais payer la Havraise.
 - **Garder un coussin.** Un mois de pêcheur, c'est 400 F. Garde de quoi tenir jusqu'à la prochaine mission.
 - **T'équiper.** Un revolver vaut 150 F, douze plaques de verre 25 F. Le chapitre 6 donne les prix. L'équipement de départ de ta classe ne coûte rien.
 - **Voyager.** Un billet de train du Havre à Cherbourg coûte 30 F en troisième classe, 60 F en première. Demande à ton MJ ce que la Havraise rembourse, et à qui.
@@ -397,11 +398,11 @@ Tu as ton argent. Tu as quatre ou cinq choses à en faire, avant la première s�
 >
 > Armand a 200 F et 30 F de son historique : 230 F, plus sa pension de 80 F par mois. Le MJ lui a promis ce qu'on paie à un pêcheur, 400 F par mois, jusqu'à la fin de l'enquête. Il ne dépensera rien avant le premier du mois, sauf en tabac.
 >
-> Odette a 400 F et 30 F de son historique : 430 F. Elle achète douze plaques de verre pour la morgue (25 F) et garde le reste pour la trousse du docteur.
+> Odette a 400 F et 30 F de son historique : 430 F. Elle achète douze plaques de verre pour la morgue (25 F) et garde le reste pour sa trousse.
 >
 > Berthe a 300 F et 20 F de son historique : 320 F. Elle n'en dépense presque rien : elle dort chez sa tante à Saint-Clair, et elle paie ses repas au poisson.
 
-Quand tu auras terminé, lis ton personnage à voix haute devant la table : qui il est, d'où il vient, ce qu'il a dans ses poches. C'est la première fois que vous les entendrez.
+Quand tu auras terminé, lis ton personnage à voix haute devant la table : qui il est, d'où il vient, ce qu'il a dans ses poches. C'est la première fois que la table les entend.
 
 ## Les grands principes de la côte
 
@@ -413,7 +414,7 @@ Les marées, les trains, les nuits qui tombent tôt. Le temps n'est jamais abstr
 
 ### Savoir coûte
 
-Lire une lettre en entier, toucher un Revenu, voir la mer faire ce qu'elle fait : tout cela fait monter la Marée. Tu peux choisir de ne pas savoir. Tu peux aussi choisir de savoir, et de payer. Le jeu n'a pas de bonne réponse, il a une jauge.
+Lire une lettre en entier, toucher un Revenu, voir la mer faire ce qu'elle fait : tout cela fait monter la Marée. Savoir coûte de la Marée, et la Marée ne redescend presque pas. Tu peux choisir de ne pas savoir, ou de savoir et de payer. Le jeu n'a pas de bonne réponse, il a une jauge.
 
 ### Un papier ouvre des portes
 
@@ -421,13 +422,13 @@ La lettre de mission, une carte de visite, un télégramme signé d'un directeur
 
 ### La côte se méfie
 
-Les gens de la côte parlent aux leurs. Ils parlent moins à un étranger, un Parisien, un gendarme. Ce n'est pas de l'hostilité. C'est une longue habitude de se protéger des choses qu'on ne comprend pas. Gagne leur confiance par un service, une assiette, une prière écoutée.
+Les gens de la côte parlent aux leurs. Ils parlent moins à un étranger, un Parisien, un gendarme. L'hostilité n'y est pour rien : la côte a une longue habitude de se protéger des choses qu'on ne comprend pas. Gagne leur confiance par un service, une assiette, une prière écoutée.
 
 ### Les règles sont des outils
 
 Ce livre ne prévoit pas tout. Quand une situation sort des règles, le MJ choisit la caractéristique la plus proche, fixe un DD, et on lance. Si ça marche bien, on le note pour la prochaine fois.
 
-### Personne n'est obligé de souffrir
+### Quand ça va trop loin
 
 Le jeu parle de noyade, de deuil, de guerre. Avant la première séance, la table discute de ce qu'elle veut voir à l'écran et de ce qu'elle préfère laisser hors champ. Un joueur peut demander de passer une scène sans avoir à se justifier. Le MJ la résume en une phrase et on continue.
 

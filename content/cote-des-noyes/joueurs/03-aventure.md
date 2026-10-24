@@ -23,7 +23,7 @@ Sur la carte, on compte en cases. **Une case fait 1,5 m de côté.** Une diagona
 - **Grimper** et **nager** coûtent le double : chaque case parcourue en compte deux. Une falaise mouillée, un cordage gras ou une eau agitée demandent en plus un test de Force (Athlétisme).
 - **Ramper** (quand on est à terre) coûte aussi le double.
 - **Sauter** : voir la Force, au chapitre 2. La distance sautée se paie sur la vitesse.
-- **Terrain difficile** : chaque case coûte le double. Des galets mouillés, du varech, de la vase, une lande de bruyère, une cave encombrée. Les coûts se cumulent : ramper dans la vase coûte trois cases par case. Les pêcheurs ne comptent jamais les galets, le varech ni la vase comme un terrain difficile (voir leur classe).
+- **Terrain difficile** : chaque case coûte le double. Des galets mouillés, du varech, de la vase, une lande de bruyère, une cave encombrée. Les coûts se cumulent : ramper dans la vase coûte quatre cases par case. Les pêcheurs ne comptent jamais les galets, le varech ni la vase comme un terrain difficile (voir leur classe).
 
 ### Les distances de la côte
 
@@ -90,13 +90,13 @@ Le phare du Rocher-Gris est relié à la terre par une chaussée de galets d'un 
 
 - Traverser la chaussée à pied prend **trente minutes** dans chaque sens (les galets mouillés ralentissent). Il reste donc **trente minutes de marge** pour un aller-retour.
 - Chaque halte, fouille, discussion ou combat de dix minutes consomme dix minutes de marge. Quand la marge est épuisée, la mer remonte.
-- Elle monte plus vite qu'un cheval au galop, des deux côtés à la fois. Chaque tour dans l'eau qui monte, un personnage fait un test d'Athlétisme (DD 12) pour garder pied. Un échec : 1d6 dégâts contondants et il est à terre.
+- Elle monte plus vite qu'un cheval au galop, des deux côtés à la fois. Chaque round dans l'eau qui monte, un personnage fait un test d'Athlétisme (DD 12) pour garder pied. Un échec : 1d6 dégâts contondants et il est à terre. Au bout de 5 rounds dans l'eau qui monte, elle arrive à la poitrine : le personnage nage (règles de l'eau froide) et la chaussée est perdue.
 
 Un phare, une chaussée, une montre : le MJ garde le compte, et il le dit à voix haute à chaque grande étape. Ne te fie pas à ta mémoire, note l'heure.
 
 > **Exemple.**
 >
-> Le groupe traverse la chaussée du Rocher-Gris. Berthe a regardé la marée : une heure et demie, pas plus. Ils arrivent au phare après trente minutes. Émile parle avec le gardien pendant quarante minutes. La marge était de trente : elle est épuisée de dix minutes avant même qu'ils repartent. Pour la dernière partie du retour, ils marchent dans l'eau qui monte. Le MJ demande un test d'Athlétisme DD 12 à chaque tour. Berthe passe. Émile (Force −1) rate : 1d6 dégâts, il est à terre dans l'eau jusqu'aux genoux. Armand le relève par le col.
+> Le groupe traverse la chaussée du Rocher-Gris. Berthe a regardé la marée : une heure et demie, pas plus. Ils arrivent au phare après trente minutes. Émile parle avec le gardien pendant quarante minutes. La marge était de trente : elle est dépassée de dix minutes avant même qu'ils repartent. Pour la dernière partie du retour, ils marchent dans l'eau qui monte. Le MJ demande un test d'Athlétisme DD 12 à chaque round. Berthe passe. Émile (Force −1) rate : 1d6 dégâts, il est à terre dans l'eau jusqu'aux genoux. Armand le relève par le col.
 
 ## L'eau froide
 
@@ -106,11 +106,11 @@ De septembre à février, l'eau de la baie est glaciale.
 - Nager habillé (manteau de laine, souliers de ville) demande un test d'Athlétisme (DD 12) à chaque tour. Un échec : le personnage coule d'un mètre, et ne remonte que s'il le réussit au tour suivant.
 - Un personnage au froid depuis une heure n'a plus de force pour grimper : il lui faut de l'aide.
 
-Les gens de la côte et les pêcheurs ont l'avantage à ces sauvegardes, et ils savent quand sortir de l'eau. Une famille de pêcheurs nage tout habillée sans test.
+Les gens de la côte (Fils de la baie) ont l'avantage à ces sauvegardes ; le pêcheur l'a dès le niveau 5 (Dans l'eau jusqu'au cou). Ils savent quand sortir de l'eau. Une famille de pêcheurs nage tout habillée sans test.
 
 > **Exemple.**
 >
-> Émile tombe d'un quai à marée haute, un soir d'octobre, dans son manteau de ville. Le MJ demande un test d'Athlétisme DD 12 chaque tour pour rester en surface. Émile (Force −1, pas de maîtrise) lance 9 : 8 au total, il coule d'un mètre. Au tour suivant, 15 : 14, il remonte, mais il a déjà bu. Berthe lui tend sa gaffe depuis le quai et le hisse en quelques tours. Il n'est pas resté dix minutes dans l'eau : pas de sauvegarde d'Endurance. Dans sa chambre, Odette lui retire son manteau mouillé et lui prescrit du calvados chaud.
+> Odette glisse d'un quai à marée haute, un soir d'octobre, dans son manteau de ville. Le MJ demande un test d'Athlétisme DD 12 chaque tour pour rester en surface. Odette (Force −1, pas de maîtrise) lance 9 : 8 au total, elle coule d'un mètre. Au tour suivant, 15 : 14, elle remonte, mais elle a déjà bu. Berthe lui tend sa gaffe depuis le quai et la hisse en quelques tours. Elle n'est pas restée dix minutes dans l'eau : pas de sauvegarde d'Endurance. Dans sa chambre, elle quitte son manteau mouillé et s'ordonne du calvados chaud, en médecin qu'elle est.
 
 ## Le repos
 
@@ -137,7 +137,7 @@ Un **repos court** dure **au moins une heure**. Les personnages ne font rien de 
 - chaque personnage peut **dépenser des dés de vie**, un à la fois. Pour chaque dé dépensé, il lance le dé et ajoute son modificateur d'Endurance : il récupère autant de PV (au minimum 0). Il peut décider de lancer un autre dé après avoir vu le résultat du premier ;
 - tous les **pouvoirs « repos court »** reviennent : on décoche leurs utilisations.
 
-Il n'y a pas de limite au nombre de repos courts dans une journée, sinon le temps qui passe et les dés de vie qui s'épuisent.
+Il n'y a pas de limite au nombre de repos courts dans une journée, à part le temps qui passe et les dés de vie qui s'épuisent.
 
 > **Exemple.**
 >
@@ -152,7 +152,7 @@ Le repos long est **interrompu** si les personnages passent au moins une heure �
 À la fin d'un repos long :
 
 - le personnage récupère **tous ses PV** ;
-- il récupère **la moitié de ses dés de vie** dépensés (la moitié de son nombre total de dés de vie, arrondie à l'inférieur, au minimum un) ;
+- il récupère **la moitié de ses dés de vie** (la moitié de son nombre total de dés de vie, arrondie à l'inférieur, au minimum un) ;
 - **tous ses pouvoirs** reviennent, ceux de repos court comme ceux de repos long ;
 - il perd **un niveau d'épuisement**, s'il a mangé, bu et dormi à l'abri.
 
@@ -178,11 +178,11 @@ Les Revenus de la guerre, eux, dorment mal sans la Marée : après chaque repos 
 
 ### S'éloigner de la côte
 
-La seule façon de faire redescendre la Marée est de s'éloigner de la mer : **une semaine loin de la mer, −1** ; **une semaine à Paris ou dans les terres, −2**. Le personnage garde ses Présages. Mais une semaine loin de la côte est une semaine perdue pour l'enquête.
+La façon ordinaire de faire redescendre la Marée est de s'éloigner de la mer ; la Veillée de l'Abbé en est une autre. **une semaine loin de la mer, −1** ; **une semaine à Paris ou dans les terres, −2**. Le personnage garde ses Présages. Mais une semaine loin de la côte est une semaine perdue pour l'enquête.
 
 ## Enquêter
 
-L'enquête est le cœur du jeu. Elle se fait en quatre gestes : consulter des archives, envoyer un télégramme ou passer un coup de fil, lire la presse, interroger des témoins. Le MJ décide de ce qui se trouve où ; les joueurs décident par où commencer.
+L'enquête est l'essentiel du jeu. Elle se fait en quatre gestes : consulter des archives, envoyer un télégramme ou passer un coup de fil, lire la presse, interroger des témoins. Le MJ décide de ce qui se trouve où ; les joueurs décident par où commencer.
 
 > **Le principe.**
 >
@@ -193,7 +193,7 @@ L'enquête est le cœur du jeu. Elle se fait en quatre gestes : consulter des ar
 Une mairie tient l'état civil (naissances, mariages, décès). Une paroisse tient ses registres de baptêmes et de sépultures, que le curé garde à la sacristie. La Havraise garde ses polices et ses dossiers au Havre, dans des classeurs jusqu'au plafond. Le tribunal de Cherbourg, la gendarmerie, les douanes ont les leurs. Une bibliothèque, à Caen ou à Rouen, a la collection des journaux.
 
 - **Accès.** Une lettre de mission de la Havraise ouvre les portes des bureaux ; elle fait froncer le sourcil des gendarmes. Un curé ouvre ses registres à qui le lui demande poliment. Un secrétaire de mairie ne les ouvre qu'à celui qui connaît quelqu'un.
-- **Chercher.** Une recherche prend une heure. Savoir (Investigation) DD 10 pour un registre bien tenu, DD 15 pour un registre en désordre, DD 20 pour un acte abîmé par l'eau ou écrit en latin. Le MJ peut accorder la réussite automatique à qui prend le temps (« prendre dix », chapitre 1).
+- **Chercher.** Une recherche prend une heure. Savoir (Investigation) DD 10 pour un registre bien tenu, DD 15 pour un registre en désordre, DD 20 pour un acte abîmé par l'eau ou écrit en latin. Le MJ peut accorder la réussite à qui prend le temps (« prendre dix », chapitre 1).
 - **Garder une copie.** Une page recopiée à la main est un indice. Une page photographiée par un Photographe (douze plaques coûtent 25 F) est une preuve.
 
 ### Le télégraphe et le téléphone
@@ -239,7 +239,7 @@ Un carnet de papier à côté de l'écran. Ce que tu as vu, ce qu'on t'a dit, ce
 
 ## L'argent et le travail
 
-On paie en francs. Les prix de la présentation de la côte valent partout, sauf indication contraire. Quelques petits prix de plus :
+On paie en francs. Les prix donnés plus haut valent partout, sauf indication contraire. Quelques petits prix de plus :
 
 | Quoi | Prix |
 |---|---|
@@ -254,7 +254,7 @@ Un expert reçoit **400 F de frais** et une chambre réservée à l'auberge du P
 
 ### Travailler pour des francs
 
-Un travail de niveau 1 paie de **50 à 150 F** pour une journée de garde, un service rendu, une expertise ponctuelle, un transport de documents. Le MJ propose des contrats ; les joueurs en cherchent, à la criée, au café, auprès d'un contact.
+Une journée ou une nuit de garde, un transport, un service paient 15 à 40 F. Une mission de quelques jours paie 100 à 250 F. Le MJ propose des contrats ; les joueurs en cherchent, à la criée, au café, auprès d'un contact.
 
 - **Une expertise.** Un notaire, une famille, un assureur veulent savoir. Le personnage répond. C'est le travail normal d'un expert.
 - **Une garde.** Un entrepôt, un bateau, une cave. Payée à la nuit.
@@ -262,11 +262,11 @@ Un travail de niveau 1 paie de **50 à 150 F** pour une journée de garde, un se
 - **Un travail de métier.** Médecin, pêcheur, journaliste, gendarme, photographe : un métier honnête, qui paie à la semaine ou au mois.
 - **Un coup de main.** Aider un voisin, haler une barque, tenir une porte. Payé en troc, en poisson, en gratitude.
 
-| Niveau | Un travail ordinaire paie |
+| Niveau | Une mission paie |
 |---|---|
-| 1 à 4 | 50 à 150 F |
-| 5 à 10 | 200 à 600 F |
-| 11 à 16 | 800 à 3 000 F |
+| 1 à 4 | 100 à 250 F |
+| 5 à 10 | 300 à 800 F |
+| 11 à 16 | 1 000 à 3 000 F |
 | 17 à 20 | 3 000 F et plus |
 
 Ces chiffres sont des repères : le MJ les fait varier selon le risque, l'employeur et l'urgence. Un pêcheur qui travaille toute l'année gagne 400 F par mois. Un expert de la Havraise, 1 200 F, plus ses frais. Un personnage recruté sur place est payé comme son métier le vaut, sauf accord contraire.
@@ -312,15 +312,15 @@ Voici ce qu'un personnage peut faire de ses journées. Chaque activité demande 
 
 **Se renseigner.** Le personnage passe ses journées au café, au marché, sur le quai, à la sortie de la messe, pour en apprendre plus sur un sujet. Il dépense au moins 5 F par jour (un verre, un pourboire, un timbre). Le MJ lui donne une information par tranche de quelques jours, selon la difficulté du sujet.
 
-**Se former.** Apprendre une nouvelle langue ou la maîtrise d'un nouvel outil prend **250 jours** et coûte **5 F par jour** (le maître, le matériel, les livres). Le temps n'a pas besoin d'être continu. Le MJ peut réduire la durée si le personnage a un très bon maître.
+**Se former.** Apprendre une nouvelle langue ou la maîtrise d'un nouvel outil prend **60 jours** et coûte **3 F par jour** (le maître, le matériel, les livres), la moitié avec un très bon maître. Le temps n'a pas besoin d'être continu.
 
-**Rendre des comptes.** Une expertise, une déposition, un rapport. Un personnage qui écrit à la Havraise, au parquet ou à un journal passe une demi-journée par lettre. Un rapport mal écrit se retourne contre son auteur.
+**Rendre des comptes.** Une expertise, une déposition, un rapport. Un personnage qui écrit à la Havraise, au parquet ou à un journal passe une demi-journée par lettre. Un rapport mal écrit se retourne contre toi.
 
-**Se faire des amis.** Tenir un café, une veillée, une messe. Rien ne s'achète : tout se doit.
+**Se faire des amis.** Tenir un café, une veillée, une messe. Peu de choses s'achètent : l'amitié, ici, se rend en services.
 
 > **Exemple.**
 >
-> Le groupe a dix jours avant le prochain rendez-vous. Émile écrit à Brévin pour rendre compte de ses frais : une demi-journée de plume. Odette passe ses journées à la morgue avec le docteur, sans rien demander. Armand accepte trois nuits de garde dans un entrepôt de Cherbourg : 200 F au total. Berthe sort en mer avec sa tante pour trois marées, et rapporte du poisson qui paie sa part de pension.
+> Le groupe a dix jours avant le prochain rendez-vous. Émile écrit à Brévin pour rendre compte de ses frais : une demi-journée de plume. Odette passe ses journées à la morgue avec le docteur, sans rien demander. Armand accepte trois nuits de garde dans un entrepôt de Cherbourg : 90 F au total. Berthe sort en mer avec sa tante pour trois marées, et rapporte du poisson qui paie sa part de pension.
 
 ## Le passage de niveau
 
@@ -376,8 +376,8 @@ On monte de niveau **après un repos long**, pas au milieu d'une scène.
 
 **La spécialité de ta classe** (Méthode, Arme, Pratique, Ministère, Rubrique, Atelier, Métier, Don, Brigade ou Collection, selon la classe) se choisit au **niveau 3**. Voir le chapitre des classes.
 
-**Des relations, pas des surhommes.** Sur la côte, les niveaux hauts ne font pas des héros. Ils donnent des relations (un ministre, un armateur, un rédacteur en chef), des talents d'enquêteur et des Présages mieux tenus : quatre au lieu de trois. Un expert de niveau 17 est quelqu'un que Paris écoute.
+**Des relations, pas des surhommes.** Sur la côte, les niveaux hauts ne font pas des héros. Ils donnent des relations (un ministre, un armateur, un rédacteur en chef), des talents d'enquêteur et des Présages mieux tenus : certaines classes en gardent quatre (le Médium dès le niveau 9, l'Abbé au 17, le Pêcheur au 20).
 
 > **Multiclassage.**
 >
-> Ce livre ne prévoit pas encore de règles pour mélanger deux classes. Un joueur qui veut que son poilu apprenne un peu de médecine en parle au MJ : le plus simple est de remplacer un pouvoir de sa classe par un pouvoir équivalent d'une autre, au même niveau.
+> Ce livre ne prévoit pas de règles pour mélanger deux classes. Un joueur qui veut que son poilu apprenne un peu de médecine en parle au MJ : le plus simple est de remplacer un pouvoir de sa classe par un pouvoir de même niveau d'une autre (chapitre 5). Le MJ refuse tout ce qui porterait la Marée au-dessus de ce que prévoit la classe d'origine.

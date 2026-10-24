@@ -11,19 +11,19 @@ Chaque personnage commence avec l'équipement de sa **classe** et de son **histo
 | Origine | Argent de départ |
 |---|---|
 | Gens de la côte | 300 F |
-| Revenus de la guerre | 200 F, plus une pension d'invalidité de 80 F par mois |
+| Revenus de la guerre | 200 F, plus une pension de 80 F par mois |
 | Bourgeois de la ville | 1 200 F |
 | Étrangers | 500 F |
 | Enfants du siècle | 400 F |
 | Sensibles | 250 F |
 
-L'Étranger d'outre-Manche ou d'outre-Atlantique retire en plus 300 F par mois à une banque de grande ville, sans se justifier.
+L'Étranger d'outre-Manche ou d'outre-Atlantique retire en plus 150 F par mois à une banque de grande ville, sans se justifier.
 
-Un **expert en sinistres** reçoit en plus **400 F de frais** de la Havraise, dont il rend compte à Brévin. Un **journaliste** touche de son journal 100 F de frais par semaine de jeu.
+Un **expert en sinistres** reçoit en plus **400 F de frais** de la Havraise, dont il rend compte à Brévin. Son salaire est versé au Havre : sur la côte, seuls les 400 F de frais sont à lui. Un **journaliste** touche de son journal 100 F de frais par semaine de jeu.
 
 > **Exemple.**
 >
-> Émile est Bourgeois de la ville : 1 200 F, plus les 40 F de son historique, soit 1 240 F à lui. Il a aussi 400 F de frais, qui ne lui appartiennent pas. Il laisse 1 000 F dans une banque de Cherbourg, garde 240 F sur lui, et note chaque dépense de la Havraise dans un carnet à part.
+> Émile est Bourgeois de la ville : 1 200 F, plus les 40 F de son historique, soit 1 240 F à lui. Il a aussi 400 F de frais, qui ne lui appartiennent pas. Il laisse 1 200 F dans une banque de Cherbourg, garde 40 F sur lui, et note chaque dépense de la Havraise dans un carnet à part.
 >
 > Armand a 200 F et 30 F de son historique : 230 F, et 80 F de pension chaque mois. Odette a 400 F et 30 F : 430 F. Elle achète douze plaques de verre pour la morgue (25 F) et garde le reste pour sa trousse. Berthe a 300 F et 20 F : 320 F. Elle ne dépense presque rien : elle dort chez sa tante.
 
@@ -48,7 +48,8 @@ Ce sont les prix donnés au chapitre 0. Voici les petits prix de tous les jours 
 
 | Quoi | Prix |
 |---|---|
-| Un café, un journal | 1 F |
+| Un café | 1 F |
+| Un journal | 0,25 F |
 | Un verre de calvados au comptoir | 2 F |
 | Un paquet de tabac | 3 F |
 | Un télégramme court, un verre pour délier une langue, un pourboire | 5 F |
@@ -63,7 +64,7 @@ Sur la côte, un homme qui paie avec un billet de cinq cents francs est un homme
 
 ### Vendre
 
-Un objet en bon état se revend la **moitié** de son prix. Les armes se vendent au tiers à un homme qui ne pose pas de questions, et ne se vendent pas du tout à la gendarmerie. Un **antiquaire** (voir sa classe) vend un quart plus cher.
+Un objet en bon état se revend à **moitié prix**. Les armes se vendent au tiers à un homme qui ne pose pas de questions, et ne se vendent pas du tout à la gendarmerie. Un **antiquaire** (voir sa classe) vend un quart plus cher.
 
 ### Crédit et ardoise
 
@@ -79,7 +80,7 @@ Chaque classe dit quelles armes elle maîtrise. Les armes se divisent en cinq gr
 
 - les **armes courantes** (couteaux, gaffe, harpon, gourdin, canne, scalpel, pelle) ;
 - les **revolvers de poche** ;
-- les **revolvers** (le revolver d'ordonnance et les revolvers de poche) ;
+- les **revolvers d'ordonnance** (le revolver d'ordonnance de 1892) ;
 - les **fusils de chasse** ;
 - les **armes de guerre** (pistolet automatique, Lebel, Berthier, baïonnette).
 
@@ -110,9 +111,9 @@ Personne ne porte d'arme en ville sans se faire remarquer.
 | Revolver de poche | 90 F | 1d6 perforant | 0,5 kg | Munitions (9/27 m), chargeur (5), légère, bruyant |
 | Revolver d'ordonnance de 1892 | 150 F | 1d8 perforant | 1 kg | Munitions (12/36 m), chargeur (6), bruyant |
 | Pistolet automatique | 220 F | 1d8 perforant | 1 kg | Munitions (12/36 m), chargeur (7), bruyant |
-| Fusil de chasse | 120 F | 2d6 perforants | 3 kg | Munitions (9/27 m), chargeur (2), deux mains, bruyant |
-| Mousqueton Berthier | 130 F | 2d6 perforants | 3 kg | Munitions (24/72 m), chargeur (3), deux mains, bruyant |
-| Fusil Lebel | 120 F | 2d6 perforants | 4 kg | Munitions (30/90 m), chargeur (8), deux mains, bruyant |
+| Fusil de chasse | 120 F | 2d6 perforant, 3d6 à 4,5 m ou moins | 3 kg | Munitions (9/27 m), chargeur (2), deux mains, bruyant |
+| Mousqueton Berthier | 100 F | 2d6 perforant | 3 kg | Munitions (24/72 m), chargeur (3), deux mains, bruyant, se recharge par une interaction (lame de 3) |
+| Fusil Lebel | 120 F | 2d6 perforant | 4 kg | Munitions (30/90 m), chargeur (8), deux mains, bruyant, recharger prend une action pour 2 cartouches |
 
 ### Armes de guerre au contact
 
@@ -202,7 +203,7 @@ Ce qu'un expert, un médecin, un journaliste ou un photographe porte dans sa ser
 
 | Objet | Prix | Poids | Remarques |
 |---|---|---|---|
-| Carnet, crayons | 1 F | — | Un joueur qui tient son dossier a toujours une longueur d'avance |
+| Carnet, crayons | 1 F | — | Dates, noms, heures : tout ce que tu notes se retrouve |
 | Calepin d'expert, mètre à ruban | 6 F | 0,25 kg | Pour mesurer une trace, une pièce, un corps |
 | Loupe | 18 F | — | Avantage à une recherche de détail à portée de main |
 | Loupe de joaillier | 60 F | — | Pour les poinçons et les écritures effacées |
@@ -263,7 +264,7 @@ Le Photographe commence avec son matériel (voir sa classe). Un autre personnage
 | Lampe rouge | 8 F | 0,5 kg |
 | Petit appareil à pellicule (huit vues) | 120 F | 1 kg |
 
-Le photographe de métier qui développe vos plaques en ville demande 5 F par plaque et une journée.
+Le photographe de métier qui développe tes plaques en ville demande 5 F par plaque et une journée.
 
 ## Le scaphandre
 
@@ -275,7 +276,7 @@ Un casque de cuivre, des semelles de plomb, un tuyau de toile, une pompe à bras
 | Les deux hommes de la pompe, par jour | 30 F chacun |
 | Achat, d'occasion | 4 000 F |
 
-Le porteur respire une heure sous l'eau jusqu'à **20 m**, avec deux alliés à la pompe. Il marche au fond à **demi-vitesse**. Un tuyau sectionné ou une pompe arrêtée, et il lui reste quelques minutes d'air (cinq, au plus). Le scaphandrier (sous-classe du Pêcheur) en fait son métier. Voir la Fosse suit la règle ordinaire (chapitre 1) : jamais plus de 3 de Marée dans la scène.
+Le porteur respire une heure sous l'eau jusqu'à **20 m**, avec deux alliés à la pompe. Il marche au fond à **demi-vitesse**. Un tuyau sectionné ou une pompe arrêtée, et il lui reste quelques minutes d'air (cinq, au plus). Le Scaphandrier (voie du Pêcheur) en fait son métier. Voir la Fosse suit la règle ordinaire (chapitre 1) : jamais plus de 3 de Marée dans la scène.
 
 C'est un objet de la collection (voir plus bas).
 
@@ -285,14 +286,14 @@ Les vitesses et les durées sont au chapitre 3. Voici ce qu'elles coûtent.
 
 | Moyen | Location | Achat |
 |---|---|---|
-| **Bicyclette** | 3 F la journée (chez le quincaillier) | 250 F neuve, 90 F d'occasion |
+| **Bicyclette** | 3 F la journée (chez le quincaillier) | 400 F neuve, 90 F d'occasion |
 | **Carriole** et cheval | 20 F la journée | 900 F |
 | **Barque** de pêche | 8 F la journée | 700 F d'occasion, 1 500 F neuve |
 | **Canot à moteur** (à Cherbourg) | 100 F la journée, essence comprise | 6 000 F |
 | **Automobile** (Hotchkiss de location, Renault d'occasion) | 150 F la journée, avec l'essence | 6 500 F d'occasion, 25 000 F neuve |
 | **Vedette** | Un billet de la Compagnie, ou une invitation | — |
 
-- **L'essence** coûte 1 F le litre. Une automobile en consomme 15 pour 100 km.
+- **L'essence** coûte 1 F le litre. Une automobile en consomme 15 aux 100 km.
 - **La barque** porte quatre personnes et leur équipement (chapitre 3). Les gens de la côte en ont une dans chaque port, et la prêtent à qui l'on connaît. La faveur *Une barque pour la nuit* en donne une plus grande, de six places.
 - **Le loueur d'automobiles de Cherbourg** demande souvent le double. Une réplique de la Havraise, ou une bonne Intimidation, le ramène au prix.
 - **Conduire** (chapitre 3) : les Enfants du siècle, les bourgeois, les anciens de l'ordonnance savent. Les autres, si le MJ le décide.
@@ -364,13 +365,13 @@ Certains objets n'ont pas de prix chez un marchand. Ils se glanent chez un greff
 
 **Scaphandre loué.** Le porteur respire une heure sous l'eau jusqu'à 20 m, avec deux alliés à la pompe, et marche au fond à demi-vitesse. Voir la Fosse suit la règle ordinaire : jamais plus de 3 de Marée dans la scène. Une fois.
 
-**Pièce frappée en 1924.** Un franc tout neuf, sans une rayure, trouvé dans la poche d'un noyé. La date a été frappée l'an prochain. Brévin vous rembourse 400 F de frais de plus et, une fois, le personnage a l'avantage à un test d'Investigation ou de Persuasion pour obtenir qu'on prenne l'affaire au sérieux. Une fois.
+**Pièce frappée en 1924.** Un franc tout neuf, sans une rayure, trouvé dans la poche d'un noyé. La date a été frappée l'an prochain. Brévin te rembourse 400 F de frais de plus et, une fois, le personnage a l'avantage à un test d'Investigation ou de Persuasion pour obtenir qu'on prenne l'affaire au sérieux. Une fois.
 
 **Blanc-seing de Brévin.** Une feuille à en-tête de la Havraise, signée en bas d'une main d'actuaire et laissée vide. Au choix : engager la Havraise jusqu'à 5 000 F, ou ouvrir n'importe quelle porte de la compagnie ou de ses courtiers. Brévin le reprochera au retour. Une fois.
 
 > **Peser son sac.**
 >
-> Un personnage porte sans gêne Force × 7,5 kg (chapitre 2). Armand, Force 16, porte 120 kg. Émile, Force 8, 60 kg. Un fusil Lebel, ses cartouches, une pelle-bêche, une capote, une corde : Armand ne le sent pas. Émile le sent, et ses chaussures de ville aussi.
+> Un personnage porte sans gêne Force × 7,5 kg (chapitre 2). Armand, Force 16, porte 120 kg. Émile, Force 8, 60 kg. Un fusil Lebel, ses cartouches, une pelle-bêche, une capote, une corde : le tout fait une quinzaine de kilos, et aucun des deux n'est gêné.
 
 > **Résumé du chapitre.**
 >
@@ -381,4 +382,4 @@ Certains objets n'ont pas de prix chez un marchand. Ils se glanent chez un greff
 > - Ciré, bottes, gilet de liège : ce qu'on porte décide de ce qu'on survit.
 > - Lampe-tempête : 9 m vif, 9 m faible. Lampe de poche : 6 m, 6 m. La lumière dit où tu es.
 > - Plaques : 12 pour 25 F. Scaphandre : 300 F la semaine, avec deux hommes.
-> - Les objets des cartes n'ont pas de prix : on les trouve.
+> - Les objets des cartes ont un effet de jeu ; ceux qu'on peut aussi acheter ont leur prix dans ce chapitre.

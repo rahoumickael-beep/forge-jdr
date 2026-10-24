@@ -16,7 +16,7 @@ const PRESAGE = " Prix : un Présage.";
 
 /** Le passif commun aux classes qui touchent à la mer, aux morts ou à ce qui va arriver. */
 const PRIX_COMMUN =
-  "Un pouvoir marqué « Prix : Marée +N » fait monter ta Marée de N points (chaque point te donne un Présage, comme toujours). Un pouvoir marqué « Prix : un Présage » en dépense un, ce qui coûte 1 point de Marée sans te donner de Présage en retour. Les autres pouvoirs ne coûtent rien. Un seul pouvoir à prix par scène, et jamais s'il te porterait au-dessus de 9 : le dixième point ne vient que de la mer. Dépenser un Présage ordinaire (relancer un dé, poser une question) ne compte pas comme un pouvoir à prix. Ce que la mer annonce arrive : si les joueurs changent la scène, cela arrive sous une autre forme.";
+  "Un pouvoir marqué « Prix : Marée +N » fait monter ta Marée de N points (chaque point te donne un Présage, comme toujours). Un pouvoir marqué « Prix : un Présage » en dépense un, ce qui coûte 1 point de Marée sans te donner de Présage en retour. Les autres pouvoirs ne coûtent rien. Un seul pouvoir à prix par scène, et jamais s'il te porterait au-dessus de 9. On ne dépense pas de Présage à 9 de Marée. Le dixième point ne vient jamais d'un choix : seulement d'une lettre, d'un corps ou de la mer. Dépenser un Présage ordinaire (relancer un dé, poser une question) ne compte pas comme un pouvoir à prix. Ce que la mer annonce arrive : si les joueurs changent la scène, cela arrive sous une autre forme.";
 
 /** DD des pouvoirs qui demandent une sauvegarde. */
 const DD = " DD de la sauvegarde : 8 + ta maîtrise + ton modificateur de caractéristique principale.";
@@ -36,7 +36,7 @@ export const CLASSES_NOYES: CharacterClass[] = [
     mainStats: ["Savoir", "Présence"],
     saves: ["Savoir", "Sang-froid"],
     armor: "Armures légères",
-    weapons: "Armes courantes, revolvers",
+    weapons: "Armes courantes, revolvers de poche, revolvers d'ordonnance",
     skills: { choose: 4, from: ["Investigation", "Intuition", "Persuasion", "Histoire", "Perception", "Tromperie", "Médecine", "Arcanes / Savoir"] },
     startingGear: ["Lettre de mission de la Havraise", "Calepin, crayons et mètre à ruban", "Revolver d'ordonnance de 1892 et six cartouches", "Manteau de laine et chapeau", "400 francs de frais"],
     powers: [
@@ -363,7 +363,7 @@ export const CLASSES_NOYES: CharacterClass[] = [
         [
           P(3, "Pieds de plomb", "passif", "passif", "En scaphandre, tu marches au fond de l'eau sans désavantage. Tu restes sous l'eau tant que ton aide pompe, tu connais le matériel et tu le répares avec des outils de pêcheur."),
           P(7, "Garder son calme au fond", "passif", "passif", "Avantage à tes sauvegardes de Sang-froid sous l'eau et dans le noir."),
-          P(11, "Remonter", "passif", "passif", "Tu remontes à bon rythme, sans accident, et tu remontes un allié inconscient de 30 m sans test."),
+          P(11, "Remonter", "passif", "passif", "Tu remontes à bon rythme, sans accident, et tu remontes un allié inconscient de 20 m sans test."),
           P(15, "Épaves", "action", "repos long", "Une heure sur une épave : avantage à tes tests de Perception et d'Investigation, et tu trouves l'objet qui valait la peine d'être remonté (le MJ le décide).", { uses: 1 }),
         ]),
     ],

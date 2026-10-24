@@ -18,7 +18,7 @@ Ce que tu gagnes en montant de niveau (chapitre 3) tient en trois choses :
 - des **relations** : un ministre, un armateur, un rédacteur en chef, un évêque ;
 - des **Présages** mieux tenus.
 
-Un expert de niveau 17 est quelqu'un que Paris écoute. Il n'est pas quelqu'un qui arrête une balle.
+Un expert de niveau 17 est quelqu'un que Paris écoute. Il ne se jette pas devant les balles.
 
 Voici, classe par classe, à quoi ressemble un pouvoir.
 
@@ -96,12 +96,12 @@ Les pouvoirs qui touchent à la mer, aux morts ou à ce qui va arriver ont un pr
 | **Marée +N** | Ta jauge monte de N points | Un Présage par point, comme toujours |
 | **Un Présage** | Tu en dépenses un : ta Marée monte de 1 | Aucun Présage en retour |
 
-Tous les autres pouvoirs, soigner, enquêter, tirer, négocier, photographier, sont des savoir-faire d'hommes et de femmes : ils ne coûtent ni Marée ni Présage. L'*Éclair* du Photographe et la *Mallette* du médecin sont gratuits.
+Tous les autres pouvoirs, soigner, enquêter, tirer, négocier, photographier, sont des savoir-faire d'hommes et de femmes : ils ne coûtent ni Marée ni Présage. L'*Éclair* du Photographe ne coûte ni Marée ni Présage, mais une charge de poudre-éclair (chapitre 6) ; la *Mallette* du médecin ne coûte rien.
 
 ### Quatre règles
 
-1. **Un seul pouvoir à prix par scène.** Quand tu en as utilisé un, les autres attendent la scène suivante.
-2. **Jamais au-dessus de 9.** Un pouvoir à prix qui te porterait à 10 ne marche pas. Le dixième point ne vient que de la mer.
+1. **Un seul pouvoir à prix par scène.** Quand tu en as utilisé un, les autres attendent la scène suivante. Utiliser *Pressentiment* (prix : un Présage) ferme les autres pouvoirs à prix jusqu'à la fin de la scène. Un Présage dépensé pour relancer un dé ne ferme rien, mais compte dans les 3 points.
+2. **Jamais au-dessus de 9.** Un pouvoir à prix qui te porterait à 10 ne marche pas. On ne dépense pas de Présage à 9 de Marée. Le dixième point ne vient jamais d'un choix : seulement d'une lettre, d'un corps ou de la mer.
 3. **Trois points de Marée par scène, au plus**, toutes sources confondues : pouvoirs, créatures, lettres (chapitre 1). Si tu as déjà reçu 3 points dans la scène, tu ne peux plus utiliser un pouvoir à prix avant la scène suivante.
 4. **Trois Présages en réserve, au plus.** Si un pouvoir t'en donnerait un quatrième, il est perdu. Aux niveaux élevés, certaines classes en gardent quatre.
 
@@ -135,7 +135,7 @@ Dépenser un Présage te coûte **1 de Marée**. Ce point ne te donne pas un nou
 
 > **Exemple.**
 >
-> Émile sait qu'il a trois Présages. Au moment de signer la décharge du docteur Lécuyer, il craint le piège. Il dépense un Présage : « Que se passe-t-il à la morgue dans la scène qui vient ? » Le MJ répond : « Quelqu'un entre par la porte de derrière. » Émile passe de 3 à 4 de Marée, sans nouveau Présage. Il lui reste deux Présages.
+> Dans une autre scène, Émile, à 3 de Marée, sait qu'il a trois Présages. Au moment de signer la décharge du docteur Lécuyer, il craint le piège. Il dépense un Présage : « Que se passe-t-il à la morgue dans la scène qui vient ? » Le MJ répond : « Quelqu'un entre par la porte de derrière. » Émile passe de 3 à 4 de Marée, sans nouveau Présage. Il lui reste deux Présages.
 
 ### Ce que la mer annonce arrive
 
@@ -156,7 +156,7 @@ Un Présage ne te permet jamais de faire autre chose que ce que ton personnage p
 
 Une grande partie des pouvoirs de niveau élevé ne se joue pas en combat. Ils se déclenchent **une fois par semaine de jeu** : un télégramme obtient une réponse dans la journée, un ministre te reçoit, un évêque t'ouvre un registre, un journal publie ton papier.
 
-- Le MJ décide ce que la personne sait, ce qu'elle accepte, ce qu'elle refuse. Elle répond franchement à ce que dit le pouvoir. Elle ne fait pas ce que tu veux ; elle sait ce que tu veux.
+- Le MJ décide ce que la personne sait, ce qu'elle accepte, ce qu'elle refuse. Elle répond franchement à ce que dit le pouvoir. Elle comprend ce que tu attends d'elle sans pour autant le faire.
 - Chaque service rendu est un service que tu dois. Le MJ s'en souvient.
 - Un pouvoir de relation ne remplace pas la Marée : il ne te sauve ni de la mer ni de ce que tu as lu.
 
@@ -183,7 +183,7 @@ Les participants qui ne sont pas médiums n'ont aucun pouvoir pendant la séance
 
 ### Ce que disent les morts
 
-Les morts ne savent que ce qu'ils ont su vivants. Ils répondent par **oui**, par **non** ou par **je ne sais pas**. Ils ne mentent pas, et ils ne sont pas toujours d'accord avec ce qu'on leur demande. S'il n'y a personne à entendre, le MJ le dit, et le médium paie quand même.
+Les morts ne savent que ce qu'ils ont su vivants. Ils répondent par **oui**, par **non** ou par **je ne sais pas**. Ils ne mentent pas, et ils ne répondent pas toujours à ce qu'on leur demande. S'il n'y a personne à entendre, le MJ le dit, et le médium paie quand même.
 
 > **Exemple.**
 >
@@ -204,7 +204,7 @@ L'appareil à soufflet, le trépied, la tente noire, les cuvettes de révélateu
 - **Douze plaques** pour 25 F. Le Photographe commence avec douze plaques (sa fiche de classe l'indique).
 - Une plaque prise est une plaque dépensée. Une plaque développée est une preuve.
 - Une plaque est en verre : elle se brise si elle tombe, elle voile à la lumière, elle ne sert qu'une fois. Une chute de plus de 1,5 m, un coup au contact, une immersion : le MJ décide ce qui reste.
-- Le **Photographe** a *Prise de vue* en pouvoir de classe. Un autre personnage qui a un appareil peut prendre un cliché net avec un test d'Adresse DD 12. Les Enfants du siècle savent s'en servir (leur origine) : ils ont l'avantage à ce test.
+- Le **Photographe** a *Prise de vue* en pouvoir de classe. Un autre personnage qui a un appareil peut prendre un cliché net avec un test d'Adresse DD 12. Les Enfants du siècle savent s'en servir (leur origine) : ils font ce test au DD 10.
 
 ### Développer
 
@@ -216,7 +216,7 @@ Tant que la plaque n'est pas développée, personne ne sait ce qu'elle montre. L
 
 ### Éclair, pose longue
 
-- L'**éclair** (poudre-éclair) aveugle ceux qui le reçoivent, fait un bruit sec, et laisse une odeur de brûlé. Il coûte une plaque. Dans une cave pleine de paille, il met le feu à la paille.
+- L'**éclair** (poudre-éclair) aveugle ceux qui le reçoivent, fait un bruit sec, et laisse une odeur de brûlé. Il ne coûte ni Marée ni Présage, mais une charge de poudre-éclair (chapitre 6). Dans une cave pleine de paille, il met le feu à la paille.
 - La **pose longue** expose une plaque une minute (ou dix, ou toute une nuit) dans un lieu sombre. Au développement, ce qui bougeait est un flou, ce qui ne bougeait pas est net.
 
 ### Quand la plaque montre la mer
@@ -248,7 +248,7 @@ La carte *Plaque photographique* donne la même chose aux joueurs qui n'ont pas 
 
 ## Échanger un pouvoir
 
-Ce livre ne prévoit pas encore de règles pour mélanger deux classes (chapitre 3). Un joueur qui veut qu'un poilu apprenne un peu de médecine en parle au MJ : le plus simple est de remplacer un pouvoir de sa classe par un pouvoir de même niveau d'une autre. Le MJ refuse tout ce qui porterait la Marée au-dessus de ce que prévoit la classe d'origine.
+Ce livre ne prévoit pas de règles pour mélanger deux classes (chapitre 3). Un joueur qui veut qu'un poilu apprenne un peu de médecine en parle au MJ : le plus simple est de remplacer un pouvoir de sa classe par un pouvoir de même niveau d'une autre. Le MJ refuse tout ce qui porterait la Marée au-dessus de ce que prévoit la classe d'origine.
 
 > **Résumé du chapitre.**
 >

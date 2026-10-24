@@ -43,7 +43,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     ],
     actions: [hit("Coup de bec", "contact", 4, "1,5 m", "1d4", "perforants")],
     lore: "Gris et blanc, l'œil pâle, le bec jaune taché de rouge. Les enfants de Saint-Clair disent qu'ils comptent les barques au retour. Chaque matin ils se rassemblent sur la grève, et les vieux jurent qu'ils ne se posent jamais sur un Revenu.",
-    gmNotes: "Ils servent de sonnette et d'indice : une volée immobile à dix mètres d'un corps, sans un cri, signale un Revenu avant que quiconque ne le voie (Perspicacité ou Nature DD 11). Ils ne touchent jamais aux Revenus, mais mangent les noyés ordinaires : cela distingue les deux. Un morceau de poisson jeté de côté fait taire un groupe entier. Réservés aux niveaux 1 et 2, par poignées.",
+    gmNotes: "Ils servent de sonnette et d'indice : une volée immobile à dix mètres d'un corps, sans un cri, signale un Revenu avant que quiconque ne le voie (Intuition ou Survie DD 11). Ils ne touchent jamais aux Revenus, mais mangent les noyés ordinaires : cela distingue les deux. Un morceau de poisson jeté de côté fait taire un groupe entier. Réservés aux niveaux 1 et 2, par poignées.",
     scene: "a big herring gull with a yellow beak stained red at the tip and a pale cold eye standing on wet ribbed sand, wings half open, feathers beaded with sea spray, an empty tidal flat with a distant line of fishing boats and a bank of grey fog behind it",
   }),
   creature({
@@ -120,7 +120,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
       hit("Enroulement", "contact", 8, "3 m", "2d8+5", "contondants", "Une cible agrippée est entraînée de 3 m sous l'eau, et elle commence à se noyer."),
     ],
     lore: "Long comme une barque, gris-noir, avec une gueule qui s'ouvre comme un sac. Les vieux pêcheurs disent qu'il y a des congres dans la Fosse depuis que la Fosse existe, et qu'ils n'ont jamais grossi autant que cette année. Les pêcheurs qui en remontent un coupent la ligne.",
-    gmNotes: "Il vit dans l'épave d'une barque disparue en 1912 et défend son trou. Il lâche sa proie s'il prend plus de 20 dégâts d'un coup. Un appât (poisson, carcasse) lancé à 9 m le détourne un round. Un harpon et une corde ramènent la bête hors de l'eau, où elle s'épuise : un pêcheur de la baie sait faire (Nature DD 13). En scaphandre, on ne peut pas fuir : il vaut mieux l'attirer ailleurs.",
+    gmNotes: "Il vit dans l'épave d'une barque disparue en 1912 et défend son trou. Il lâche sa proie s'il prend plus de 20 dégâts d'un coup. Un appât (poisson, carcasse) lancé à 9 m le détourne un round. Un harpon et une corde ramènent la bête hors de l'eau, où elle s'épuise : un pêcheur de la baie sait faire (Survie DD 13). En scaphandre, on ne peut pas fuir : il vaut mieux l'attirer ailleurs.",
     scene: "a huge dark grey conger eel coiling out of a hole in a sunken fishing boat on the sea floor, mouth open over rows of small sharp teeth, a rusted anchor chain and green weed drifting beside it, a diver's air hose trailing in the murky water",
   }),
 
@@ -155,7 +155,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
       { name: "Marchandise avant tout", text: "Il se rend ou se sauve sous la moitié de ses PV, mais ne lâche jamais le fût qu'il porte." },
     ],
     actions: [
-      hit("Revolver", "distance", 4, "9/27 m", "1d8+2", "perforants"),
+      hit("Revolver", "distance", 4, "12/36 m", "1d8+2", "perforants"),
       hit("Gourdin", "contact", 3, "1,5 m", "1d6+1", "contondants"),
     ],
     lore: "Il parle à voix basse, un anglais d'estuaire, et ne dit pas son nom. Il débarque de nuit sur la grève de Saint-Clair des fûts de whisky pour les cabarets de Cherbourg et de Paris, et il paie le douanier. Il n'aime ni les lanternes ni les curieux, mais les Revenus lui font encore plus peur que vous.",
@@ -168,14 +168,14 @@ export const BESTIAIRE_NOYES: Creature[] = [
     family: "Gens de 1923", size: "Moyenne", type: "humanoïde (humain)", region: "Saint-Clair-sur-Mer",
     cr: 0.25, ac: 13, acNote: "capote et ceinturon", hd: 6, speed: { marche: 9 },
     stats: [14, 12, 12, 10, 12, 12],
-    skills: { Perception: 3, Perspicacité: 3, Intimidation: 3 },
+    skills: { Perception: 3, Intuition: 3, Intimidation: 3 },
     languages: "français",
     traits: [
       { name: "Le règlement", text: "Il lit à voix haute l'article qui l'autorise. Tant qu'il ne l'a pas lu, il ne tire pas le premier." },
       { name: "Renfort", text: "Il siffle (action) : un autre gendarme arrive en 3 rounds, puis un autre deux rounds plus tard. Deux au plus." },
     ],
     actions: [
-      hit("Revolver d'ordonnance", "distance", 3, "9/27 m", "1d8+2", "perforants"),
+      hit("Revolver d'ordonnance", "distance", 3, "12/36 m", "1d8+2", "perforants"),
       hit("Sabre-baïonnette", "contact", 4, "1,5 m", "1d6+2", "tranchants"),
     ],
     lore: "Un képi à jugulaire, une capote bleu foncé, des bottes bien graissées. Ils sont quatre à la brigade de Saint-Clair et connaissent tout le monde par son prénom et par son casier. On les respecte comme on respecte le curé : à distance.",
@@ -197,10 +197,10 @@ export const BESTIAIRE_NOYES: Creature[] = [
     actions: [
       multi("Deux coups de poing américain.", { "Poing américain": 2 }),
       hit("Poing américain", "contact", 5, "1,5 m", "1d8+3", "contondants"),
-      hit("Revolver", "distance", 3, "9/27 m", "1d8+1", "perforants"),
+      hit("Revolver", "distance", 3, "12/36 m", "1d8+1", "perforants"),
     ],
     lore: "Un chapeau mou, un costume de drap sombre, des mains qui ne servent pas à écrire. La Compagnie les emploie à Cherbourg pour les quais et pour les dockers, et pour qu'un journaliste trop curieux perde sa plume dans une ruelle. Ils sont rarement seuls, et jamais à l'heure du déjeuner.",
-    gmNotes: "Il suit les ordres d'un employé de Lemarquand et n'en sait pas plus. Il bat pour avertir, pas pour tuer, sauf contre-ordre (le MJ décide). Il prend un message en lui payant le double ou en lui montrant que son patron l'a oublié (Perspicacité DD 14 pour le comprendre). Si le combat dure plus de quatre rounds, un deuxième arrive. Les tuer attire l'attention du parquet de Cherbourg.",
+    gmNotes: "Il suit les ordres d'un employé de Lemarquand et n'en sait pas plus. Il bat pour avertir, pas pour tuer, sauf contre-ordre (le MJ décide). Il prend un message en lui payant le double ou en lui montrant que son patron l'a oublié (Intuition DD 14 pour le comprendre). Si le combat dure plus de quatre rounds, un deuxième arrive. Les tuer attire l'attention du parquet de Cherbourg.",
     scene: "a broad-shouldered man in a dark wool suit and a soft felt hat with his hands in his pockets and brass knuckles shining on one fist, standing in a wet alley between warehouse walls on a harbour quay, a crane arm and a ship hull rising behind him in the rain",
   }),
   creature({
@@ -265,7 +265,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     actions: [
       multi("Deux tirs de revolver.", { Revolver: 2 }),
       multi("Ou deux coups de couteau.", { "Couteau de marin": 2 }),
-      hit("Revolver", "distance", 5, "9/27 m", "1d8+3", "perforants"),
+      hit("Revolver", "distance", 5, "12/36 m", "1d8+3", "perforants"),
       hit("Couteau de marin", "contact", 5, "1,5 m", "1d6+3", "tranchants"),
     ],
     reactions: [special("Larguer les amarres", "Quand il tombe sous la moitié de ses PV, il saute à bord de sa barque (réaction) et s'éloigne de 9 m sans provoquer d'attaque.")],
@@ -291,7 +291,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
       hit("Gaffe de bord", "contact", 6, "3 m", "2d6+4", "perforants", "Une cible Moyenne ou plus petite fait un jet de sauvegarde de Force DD 14 ou est tirée à 1,5 m de lui."),
     ],
     lore: "Quarante ans de mer, une barbe grise, un sifflet d'argent à la boutonnière. Le maître d'équipage commande les matelots du pont et connaît chaque cabine de la Reine-Hortense depuis son lancement. Les hommes disent qu'il dort mal depuis les essais de septembre, et qu'il ne regarde plus la passerelle en face.",
-    gmNotes: "Il est honnête, et il a peur. Il sait que les chaloupes sont du modèle d'avant-guerre et que les palans ne tiendront pas : il l'a dit à l'officier de quart, qui l'a fait taire. Il peut être convaincu de parler, de témoigner ou de saboter un départ. Persuasion DD 14 en privé, loin du bord. Il refuse de se battre contre des civils et lâche son arme devant une preuve (Perspicacité DD 12 pour le sentir). Le tuer ferme la voie de l'équipage.",
+    gmNotes: "Il est honnête, et il a peur. Il sait que les chaloupes sont du modèle d'avant-guerre et que les palans ne tiendront pas : il l'a dit à l'officier de quart, qui l'a fait taire. Il peut être convaincu de parler, de témoigner ou de saboter un départ. Persuasion DD 14 en privé, loin du bord. Il refuse de se battre contre des civils et lâche son arme devant une preuve (Intuition DD 12 pour le sentir). Le tuer ferme la voie de l'équipage.",
     scene: "a grizzled bosun with a grey beard in a heavy tarred oilskin coat and a silver whistle on a cord around his neck, a long iron boat hook held in both hands, standing on the wet deck of an ocean liner beside a row of lifeboats on davits, a tall red funnel and rigging behind him",
   }),
 
@@ -313,7 +313,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     ],
     actions: [hit("Étreinte froide", "contact", 4, "1,5 m", "2d6+2", "froid", "La cible est agrippée (évasion DD 12) et sent le froid de la mer pénétrer sa chair : elle ne récupère pas de PV jusqu'au début de son prochain tour.")],
     lore: "Un homme en manteau de ville, le chapeau tombé, les souliers neufs, la peau pâle et ridée comme celle d'un noyé de trois jours. Il ne pourrit pas et il ne parle pas. Il ne sait pas où il va, et il y va pourtant. Les pêcheurs le regardent passer en se découvrant.",
-    gmNotes: "Il retourne à la mer parce qu'on l'a touché, pas parce qu'il est malveillant. Le laisser faire est la solution : il entre dans l'eau, s'allonge et attend. Il ne se bat que s'il est agrippé ou retenu. Lui lire la première moitié de la lettre le fait s'arrêter un round. Un pêcheur de la baie sait le ramener sur la grève (Nature DD 12). À ne pas jouer à la légère : un bon début de campagne.",
+    gmNotes: "Il retourne à la mer parce qu'on l'a touché, pas parce qu'il est malveillant. Le laisser faire est la solution : il entre dans l'eau, s'allonge et attend. Il ne se bat que s'il est agrippé ou retenu. Lui lire la première moitié de la lettre le fait s'arrêter un round. Un pêcheur de la baie sait le ramener sur la grève (Survie DD 12). À ne pas jouer à la légère : un bon début de campagne.",
     scene: "a pale middle-aged man in a soaked wool overcoat and a creased felt hat standing up out of the wet sand of a tidal flat, water streaming from his sleeves, an unsealed wax-covered envelope pressed against his chest, empty eyes, a flat grey shoreline with a few fishermen far away behind him",
   }),
   creature({
@@ -323,7 +323,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     cr: 2, ac: 13, acNote: "", hd: 16, speed: { marche: 9 },
     stats: [12, 14, 14, 10, 12, 16],
     saves: { Sag: 3 },
-    skills: { Tromperie: 5, Perspicacité: 3, Persuasion: 5 },
+    skills: { Tromperie: 5, Intuition: 3, Persuasion: 5 },
     immunities: ["poison"],
     conditionImmunities: NOYES_ETATS,
     senses: "vision dans le noir 18 m",
@@ -362,7 +362,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
       hit("Aviron", "contact", 6, "3 m", "2d8+3", "contondants"),
     ],
     lore: "Six hommes en vareuse de pêche, cirés noirs, bottes de mer pleines d'eau. Ils marchent en file sur la lande de la Hague, dans le vent, rames sur l'épaule. Les bergers disent qu'on entend leur cloche avant de les voir, et qu'ils n'ont jamais fait de mal à personne qui laissait une assiette à la fenêtre.",
-    gmNotes: "Ce sont les hommes d'une barque que les naufrageurs d'autrefois ont fait échouer, et que la mer rend toujours à la même date. Ils cherchent la côte, pas les personnages. Une assiette de soupe posée sur un muret, un pas de côté, une prière dite en normand ou en latin les font passer sans combat (Religion ou Nature DD 12). Ils n'attaquent que ceux qui leur barrent la route ou font de la lumière sur la falaise. La mère Hamel les connaît par leurs noms.",
+    gmNotes: "Ce sont les hommes d'une barque que les naufrageurs d'autrefois ont fait échouer, et que la mer rend toujours à la même date. Ils cherchent la côte, pas les personnages. Une assiette de soupe posée sur un muret, un pas de côté, une prière dite en normand ou en latin les font passer sans combat (Histoire ou Survie DD 12). Ils n'attaquent que ceux qui leur barrent la route ou font de la lumière sur la falaise. La mère Hamel les connaît par leurs noms.",
     scene: "a file of six men in black oilskins and sea boots walking in single file across a heather moor at a cliff edge, oars carried on their shoulders, water running from their clothes, one in front carrying a small ship's bell on a rope, a grey stormy sea and a distant faint row of lights on the horizon",
   }),
   creature({
@@ -379,7 +379,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     traits: [
       MAREE_GRANDE(14),
       { name: "Ils passent", text: "Une file d'une cinquantaine de silhouettes marche en ligne sur le fond, ou sur une chaussée. Elle occupe un couloir de 3 m de large et passe par tout. Elle ne s'écarte pas, ne s'arrête pas, et traverse une créature qui lui barre la route plutôt que de la contourner." },
-      { name: "Sans visage", text: "Les silhouettes se ressemblent toutes : les personnages ne peuvent reconnaître l'une d'elles qu'en réussissant un test de Perspicacité DD 15." },
+      { name: "Sans visage", text: "Les silhouettes se ressemblent toutes : les personnages ne peuvent reconnaître l'une d'elles qu'en réussissant un test de Intuition DD 15." },
       { name: "La mer les tire", text: "Elle ne quitte pas la ligne de l'eau : elle s'arrête à 9 m au-dessus de la mer haute et revient. Les créatures sur un point surélevé de 3 m ne sont pas dans son couloir." },
     ],
     actions: [
@@ -387,7 +387,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
       hit("Piétinement", "contact", 7, "3 m", "2d12+5", "contondants", "Une cible Grande ou plus petite fait un jet de sauvegarde de Force DD 15 ou est renversée et piétinée : elle subit 2d6 dégâts contondants de plus."),
     ],
     lore: "Des silhouettes en manteau, en vareuse, en tablier de cuisine, qui marchent dans l'eau jusqu'au cou, sur le fond, tournées vers la terre. Depuis le phare, à la basse mer de vives-eaux, une longue ligne de têtes sombres avance au large sans suivre les vagues.",
-    gmNotes: "La file est la preuve que les Revenus ne viennent pas de nulle part : ils marchent depuis la Fosse. Elle n'est pas hostile, elle est indifférente. Une créature sur sa route est balayée comme par une rivière. S'écarter, monter, tenir une corde ou une chaîne tendue au-dessus de la chaussée suffit à rester vivant. Yves Le Bihan compte les silhouettes dans son carnet. Reconnaître un visage demande Perspicacité DD 15, sans Marée de plus. Ne jamais la jouer comme un combat classique : c'est un obstacle qui vous dépasse. XP seulement si les personnages l'affrontent.",
+    gmNotes: "La file est la preuve que les Revenus ne viennent pas de nulle part : ils marchent depuis la Fosse. Elle n'est pas hostile, elle est indifférente. Une créature sur sa route est balayée comme par une rivière. S'écarter, monter, tenir une corde ou une chaîne tendue au-dessus de la chaussée suffit à rester vivant. Yves Le Bihan compte les silhouettes dans son carnet. Reconnaître un visage demande Intuition DD 15, sans Marée de plus. Ne jamais la jouer comme un combat classique : c'est un obstacle qui vous dépasse. XP seulement si les personnages l'affrontent.",
     scene: "a long single file of pale silhouettes in overcoats and aprons wading chest deep through a grey shallow sea toward a stone causeway of wet pebbles, heads bowed and faces blurred, a tall stone lighthouse on a rock islet behind them, long low waves breaking",
   }),
   creature({
@@ -398,7 +398,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     cr: 12, ac: 17, acNote: "manteau galonné trempé", hd: 29, speed: { marche: 9 },
     stats: [18, 14, 18, 14, 16, 18],
     saves: { Con: 8, Sag: 7 },
-    skills: { Intimidation: 8, Perspicacité: 7, Persuasion: 8 },
+    skills: { Intimidation: 8, Intuition: 7, Persuasion: 8 },
     immunities: ["poison", "psychiques"],
     conditionImmunities: [...NOYES_ETATS, "charmé", "effrayé"],
     senses: "vision dans le noir 36 m",
@@ -437,7 +437,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     traits: [
       MAREE(13),
       { name: "Remonte du fond", text: "Il peut rester sous l'eau sans respirer, et il peut surgir d'un filet, d'un trou de rocher ou d'une barque sans que rien ne bouge à la surface. Avantage au premier jet d'attaque de son combat contre une créature à 1,5 m du bord de l'eau." },
-      { name: "Il veut finir sa pêche", text: "Il s'accroche à un filet, une corde ou une gaffe. Un personnage qui lui donne un objet de pêche (un filet, une ligne, un panier) le fait s'arrêter un round (Dressage ou Nature DD 12)." },
+      { name: "Il veut finir sa pêche", text: "Il s'accroche à un filet, une corde ou une gaffe. Un personnage qui lui donne un objet de pêche (un filet, une ligne, un panier) le fait s'arrêter un round (Dressage ou Survie DD 12)." },
     ],
     actions: [
       multi("Un coup de gaffe et une prise.", { "Gaffe": 1, "Prise de pêcheur": 1 }),
@@ -542,7 +542,7 @@ export const BESTIAIRE_NOYES: Creature[] = [
     cr: 20, ac: 18, acNote: "", hd: 21, speed: { marche: 0, nage: 12 },
     stats: [22, 12, 20, 10, 20, 24],
     saves: { Con: 14, Sag: 12, Cha: 14 },
-    skills: { Perception: 12, Perspicacité: 12 },
+    skills: { Perception: 12, Intuition: 12 },
     resistances: [PHYSIQUE],
     immunities: ["poison", "froid", "psychiques"],
     conditionImmunities: [...NOYES_ETATS, "agrippé", "à terre", "charmé", "effrayé", "paralysé", "étourdi"],
