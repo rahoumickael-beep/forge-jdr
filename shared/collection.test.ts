@@ -5,7 +5,9 @@ import { catalogue, carteDuCatalogue, nettoyerCollections, TAILLE_PAQUET, tirerP
 
 const CAT = catalogue("fantasy");
 
-test("collection : un catalogue d'Aubreterre avec des ids uniques et chaque rareté", () => {
+for (const genre of ["fantasy", "science-fiction"] as const) test(`collection : un catalogue ${genre} avec des ids uniques et chaque rareté`, () => {
+  const CAT = catalogue(genre);
+  assert.ok(CAT.length >= 25, `${CAT.length} cartes`);
   assert.equal(new Set(CAT.map((c) => c.id)).size, CAT.length);
   for (const r of ["commune", "peu-commune", "rare", "relique"]) assert.ok(CAT.some((c) => c.rarete === r), r);
   for (const c of CAT) {

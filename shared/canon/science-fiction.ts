@@ -103,7 +103,7 @@ export const ARCHIPEL: Canon = {
       gens: ["ferrailleurs", "chefs de tas"],
       peur: "les Échouées, et les sauts ratés",
       lieuDeRencontre: "une épave des Brisants",
-      lieux: [],
+      lieux: ["la Sainte-Patience", "le Phare des Brisants"],
     },
     {
       nom: "Les Mondes Éteints",
@@ -143,6 +143,11 @@ export const ARCHIPEL: Canon = {
     { nom: "Iselle d'Ancre", alias: ["Iselle", "Sainte Iselle"], titre: "fondatrice des Chantres", ou: "Ancre", faction: "chantres", etat: "mort" },
     { nom: "Barnabé Coquerel", alias: ["Coquerel"], titre: "homme de la Main Close aux docks", ou: "Gué-d'Ambre", faction: "main-close", etat: "vivant" },
     { nom: "Rakka Sel-Noir", alias: ["Rakka"], titre: "chasseuse de primes tarrak", ou: "Gué-d'Ambre", faction: "main-close", etat: "vivant" },
+    // La première mensualité (bibliothèque)
+    { nom: "Frère Ambroise", alias: ["Ambroise"], titre: "Chantre, rang de Voix, caché dans la Sainte-Patience", ou: "la Sainte-Patience", faction: "chantres", age: 60, etat: "vivant", scenario: "bib-sf-mensualite" },
+    { nom: "Lison", titre: "novice de dix ans qui entend la pierre", ou: "la Sainte-Patience", faction: "chantres", age: 10, etat: "vivant", scenario: "bib-sf-mensualite" },
+    { nom: "Ludivine Maréchal", alias: ["la Censeure Ludivine Maréchal", "Maréchal"], titre: "Censeure de la Frange", ou: "La Frange", faction: "censeurs", age: 35, etat: "vivant", scenario: "bib-sf-mensualite" },
+    { nom: "Tante Escarbille", alias: ["Escarbille"], titre: "chef de tas des Brisants", ou: "la Sainte-Patience", etat: "vivant", scenario: "bib-sf-mensualite" },
     { nom: "Celui-qui-s'est-levé", alias: ["le Dormeur de Cendrine"], titre: "le premier Dormeur réveillé", ou: "le Grand Large", etat: "dieu" },
   ],
 
@@ -181,6 +186,35 @@ export const ARCHIPEL: Canon = {
     { texte: "Une épave d'avant le Concordat vient d'apparaître dans les Brisants, et tout le monde y court.", factions: ["main-close"] },
     { texte: "Un ingénieur de Forge-Mère veut vendre des mesures que la Baronne a fait classer secrètes.", factions: ["valcourt"] },
   ],
+
+  cartes: {
+    evenements: [
+      { titre: "Le Phare clignote", texte: "La spirale du Phare faiblit, s'éteint une seconde, puis deux, et se rallume. Sur la fréquence commune, quelqu'un prie.", effet: "Tous les sauts sont suspendus une heure ; la file d'attente s'allonge et les esprits s'échauffent." },
+      { titre: "Contrôle de la Garde", texte: "Deux gardes en armure blanche montent à bord, visière baissée, et demandent les papiers de tout le monde, Ouvrés compris.", effet: "Fouille de la soute : un faux papier, un pot-de-vin ou une fuite. Un Ouvré sans maître est saisi." },
+      { titre: "Rafle des Censeurs", texte: "Une femme en long manteau noir passe dans les rangées du marché avec une pierre pâle au bout d'une perche, et fait poser la main aux enfants.", effet: "Un enfant pâlit. Ses parents regardent l'équipage." },
+      { titre: "La mensualité", texte: "Un message de la Main Close, à l'heure exacte : « Deux mille, mon petit. Ce soir. »", effet: "Payer, négocier un délai contre un service, ou voir arriver quelqu'un demain." },
+      { titre: "Saut raté", texte: "Le saut tremble, se tord, et le vaisseau sort à côté de la Route, dans le noir, avec une odeur de métal chaud.", effet: "2d10 dégâts à la coque, et une Échouée suit le vaisseau à la sortie." },
+      { titre: "Signal de détresse", texte: "Une voix d'enfant sur une fréquence de cargo, qui répète un numéro de quai et le mot « soute ».", effet: "Un cargo en panne dérive à un saut d'ici. Piège de pillards ou vraie détresse : le MJ choisit." },
+      { titre: "Convoi en file", texte: "Douze cargos de minerai attendent le Péage, bord à bord, et le dernier part à vide dans un quart d'heure.", effet: "Occasion de resquille : un saut sans Péage, test de pilotage DD 13." },
+      { titre: "Prime affichée", texte: "Sur les murs des docks, un visage que l'équipage connaît, et un chiffre.", effet: "Une prime sur un allié ou sur un membre de l'équipage ; un chasseur de primes arrive à la séance suivante." },
+      { titre: "Accident d'Orgue", texte: "Une onde de choc traverse les coques ; les vitres se fendent et les oreilles saignent. Là-haut, l'Orgue fume.", effet: "Chaque personnage fait une sauvegarde d'Endurance DD 12 ou est assourdi une heure ; un Chantre gagne 2 Écho." },
+      { titre: "Marché noir", texte: "Une Ikki siffle dans une ruelle : pièces de vaisseau, papiers, cristaux, tout à moitié prix, tout volé.", effet: "Une amélioration du vaisseau à moitié prix, mais la Maison volée le cherche." },
+      { titre: "La file des Ourdis", texte: "Une vingtaine d'Ourdis traversent la place en file, les antennes tournées vers le ciel, vers un Phare qu'aucun d'eux ne verra.", effet: "Un Ourdi demande à embarquer. Il paie en soie dure, et il ne supporte pas d'être seul." },
+      { titre: "Mutinerie de la Ligue", texte: "Dans un port de la Frange, des drapeaux à l'étoile rouge sortent des fenêtres, et la garnison ferme les portes.", effet: "Le port est fermé deux jours ; l'équipage choisit un camp ou attend dans la soute." },
+    ],
+    objets: [
+      { titre: "Faux transpondeur", texte: "Une boîte de cuivre qui sait mentir à un poste de Péage une fois.", effet: "Un contrôle de douane passé sous un autre nom, sans jet." },
+      { titre: "Lampe de ferrailleur", texte: "Une lampe de casque à verre jaune, cabossée, qui sent la graisse.", effet: "Une Échouée dans son faisceau a le désavantage et n'approche pas à moins de 3 m." },
+      { titre: "Éclat de pierre de Phare", texte: "Un caillou pâle et tiède qui bourdonne près d'un Phare. Le posséder est un crime.", effet: "Un Chantre retire 2 Écho, ou l'on sait si un Phare proche tremble." },
+      { titre: "Stimulant de bord", texte: "Un injecteur jetable au liquide ambré.", effet: "Un personnage à 0 PV se relève à 1 PV et regagne 2d4 PV." },
+      { titre: "Cellule de plasma", texte: "Une recharge de brûleur scellée, au poinçon de Valcourt.", effet: "Une attaque de brûleur fait +1d6 dégâts de feu." },
+      { titre: "Carte des Routes annotée", texte: "Un rouleau couvert de notes au crayon : postes qui ferment tôt, douaniers qui boivent.", effet: "Avantage à un jet de pilotage ou de resquille." },
+      { titre: "Sauf-conduit hégémonique", texte: "Une plaque blanche à la tour couronnée, au nom d'un autre.", effet: "Un barrage ou un poste de Péage laisse passer sans fouille, une fois." },
+      { titre: "Compensateur neuf", texte: "Une pièce de vaisseau encore dans sa caisse, sortie d'une épave des Brisants.", effet: "Efface le défaut « le compensateur tousse » du cargo." },
+      { titre: "Diapason de bois", texte: "Un diapason de bois blanc qui ne sonne pas. Il suffit de le poser sur une table.", effet: "Les fidèles d'Ancre ouvrent leur porte pour une nuit." },
+      { titre: "Jetons de la Maison", texte: "Une poignée de jetons de laiton frappés du tuyau d'orgue.", effet: "Dans les mondes de Valcourt, une porte d'usine s'ouvre ou un ouvrier parle." },
+    ],
+  },
 
   campagne: {
     jauge: {

@@ -2,6 +2,7 @@
 // à chaque fin de séance) ; le serveur tire le contenu, le joueur l'ouvre, puis joue ses cartes en partie.
 // Jamais d'argent réel : les paquets se gagnent ou se reçoivent, rien ne s'achète ni ne se revend.
 import { COLLECTION_AUBRETERRE } from "./canon/collection-fantasy";
+import { COLLECTION_ARCHIPEL } from "./canon/collection-science-fiction";
 import { Rng } from "./random";
 import type { GenreId } from "./types";
 
@@ -39,7 +40,7 @@ export const FAMILLES: { id: Famille; label: string }[] = [
 export const PAQUET = { communes: 3, peuCommunes: 2, chanceRelique: 0.25 };
 export const TAILLE_PAQUET = PAQUET.communes + PAQUET.peuCommunes + 1;
 
-const CATALOGUES: Partial<Record<GenreId, CarteDeCollection[]>> = { fantasy: COLLECTION_AUBRETERRE };
+const CATALOGUES: Partial<Record<GenreId, CarteDeCollection[]>> = { fantasy: COLLECTION_AUBRETERRE, "science-fiction": COLLECTION_ARCHIPEL };
 export const catalogue = (genre: GenreId): CarteDeCollection[] => CATALOGUES[genre] ?? [];
 export const carteDuCatalogue = (genre: GenreId, id: string) => catalogue(genre).find((c) => c.id === id);
 

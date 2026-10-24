@@ -70,3 +70,12 @@ test("campagne : la jauge garde sa valeur de départ, même au-dessus de 100", a
   reglerJauge(c, 200, ARCHIPEL);
   assert.equal(c.jauge, 131);
 });
+
+test("bibliothèque : chaque figure d'un scénario renvoie à un scénario qui existe, du bon genre", async () => {
+  const { LIBRARY } = await import("./library");
+  for (const C of Object.values(CANONS) as Canon[])
+    for (const f of C.figures.filter((x) => x.scenario)) {
+      const s = LIBRARY.find((x) => x.id === f.scenario);
+      assert.ok(s && s.genre === C.genre, `${f.nom} : scénario ${f.scenario}`);
+    }
+});
