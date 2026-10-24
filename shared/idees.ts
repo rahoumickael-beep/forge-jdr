@@ -29,7 +29,7 @@ export const IDEES: Record<GenreId, Idees> = {
     hooks: TERNELANDE.accroches.map((a) => a.texte),
     villains: ["un Dîmier qui prend deux souvenirs là où il en faut un", "un capitaine de compagnie franche qui vend les villages aux trois comtes", "un prêcheur effacé qui veut que tout le monde oublie", "un notaire de Haute-Cendre qui achète des morts à gage", "une sorcière qui a bu trop de sève et ne sait plus qui elle est"],
     motivations: ["retrouver le visage d'un enfant donné à la Dîme", "garder le pouvoir que donne la peur de la Dîme", "prouver que l'hiver finit seul au-delà de la mer", "que la Ternelande oublie tout et recommence"],
-    enemies: ["Loups d'hiver", "Corbeaux de dîme", "Brigands effacés", "Soldats de compagnie", "Écuyers dîmiers", "Oubliés", "Dîmiers", "Racines-qui-boivent", "Chevalier de compagnie", "Sylve blanche", "Grand Dîmier", "La Faim de la terre"],
+    enemies: ["Loups d'hiver", "Corbeaux de dîme", "Brigands des Landes", "Soldats de compagnie", "Écuyers dîmiers", "Reflets", "Dîmiers", "Racines-qui-boivent", "Chevalier de compagnie", "Sylve blanche", "Grand Dîmier", "La Faim de la terre"],
     twists: ["Le mort qu'on a donné à la Dîme était encore vivant.", "La famille qui paie pour un mort à gage a vendu son propre enfant.", "Le Dîmier sous le masque est un voisin.", "Les Registres ont été recopiés, et la copie dit autre chose.", "La pierre de dîme est chaude au toucher, comme si quelque chose buvait."],
     rewards: ["Un reliquaire qui rend un souvenir", "Dix livres d'argent", "Un couteau de fer froid", "Une fiole de lait d'oubli", "Un nom retrouvé dans les Registres", "Une nuit de la Dîme sans payer"],
   },

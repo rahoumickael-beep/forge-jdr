@@ -12,12 +12,12 @@
 | Quoi | Nom |
 |---|---|
 | Le royaume | **la Ternelande** |
-| Ses neuf provinces | **les Neuf Comtés** |
+| Ses provinces | **les Comtés** |
 | La capitale | **Haute-Cendre** |
 | Ceux qui prennent la Dîme | **la Cour Grise** |
 | Leurs cavaliers humains | **les Dîmiers** |
 | Ce qu'on donne | **la Dîme** |
-| Le Comte-Régent | **Aldebert de Vauclair** |
+| Le Comte-Régent | **Garnier de Vauclair** |
 | La monnaie | **le denier** |
 
 ---
@@ -26,7 +26,7 @@
 
 ### Le Long Hiver [Joueurs]
 
-Il y a cinq cent douze ans, l'hiver n'a pas fini. Il a duré onze ans. Les rivières ont gelé jusqu'au fond, les loups sont entrés dans les villes, et on brûlait les poutres des maisons pour ne pas mourir. On appelle ce temps **le Long Hiver**.
+Il y a cinq cent vingt-trois ans, l'hiver n'a pas fini. Il a duré onze ans. Les rivières ont gelé jusqu'au fond, les loups sont entrés dans les villes, et on brûlait les poutres des maisons pour ne pas mourir. On appelle ce temps **le Long Hiver**.
 
 La douzième année, au solstice, des cavaliers sont descendus des neiges du nord. Ils étaient grands, gris de peau et de cheveux, montés sur des chevaux pâles, et leurs visages ne bougeaient pas quand ils parlaient. Ils ont dit qu'ils pouvaient faire revenir le printemps. Ils ont demandé un prix : chaque hiver, chaque foyer leur donnerait un souvenir.
 
@@ -34,91 +34,95 @@ Les gens ont accepté. Le printemps est revenu. On les appelle depuis **la Cour 
 
 ### La Dîme [Joueurs]
 
-Chaque année, la nuit la plus longue, les **Dîmiers** passent dans chaque village : des cavaliers humains en manteau gris et masque d'étain, qui servent la Cour. Chaque foyer se rassemble autour de sa table. Le chef de famille pose le front contre la **pierre de dîme** du village, un bloc gris planté au milieu de la place, et choisit ce qu'il donne. Le plus souvent, on donne un mort : le visage, la voix, le nom d'un parent disparu. Au matin, personne dans la maison ne se souvient de lui. On sait qu'il y avait quelqu'un, à cause d'une chaise en trop ou d'un manteau dans le coffre, mais on ne sait plus qui.
+Chaque année, la nuit la plus longue, les **Dîmiers** passent dans chaque village : des cavaliers humains en manteau gris et masque d'étain, qui servent la Cour. Chaque foyer se rassemble autour de sa table. Le chef de famille pose le front contre la **pierre de dîme** du village, un bloc de grès gris gardé dans une cour fermée, et nomme ce qu'il donne. Le plus souvent, on donne un mort : le visage, la voix, le nom d'un parent disparu. Au matin, personne dans la maison ne se souvient de lui. On sait qu'il y avait quelqu'un, à cause d'une chaise en trop ou d'un manteau dans le coffre, mais on ne sait plus qui.
+
+On peut tricher. Un riche peut faire donner un souvenir à sa place : le vendeur pose lui-même son front sur la pierre, devant l'acheteur, et nomme ce qu'il cède. On appelle ça « prendre un mort à gage ». C'est interdit, et ça se fait partout. Mais on ne peut pas ne rien donner : la pierre garde une trace tiède de chaque front qui l'a touchée, et les Dîmiers passent la main dessus à l'aube. Un foyer qui n'a pas payé, le Dîmier lui prend un souvenir de plus, et c'est lui qui choisit lequel.
 
 C'est la règle depuis cinq siècles. Les gens d'ici disent « payer son mort ». On garde les vivants, on donne les morts, et le printemps revient.
 
 ### Le prix de la magie [Joueurs]
 
-La magie aussi se paie en souvenirs. Un sorcier qui fait autre chose que des tours de foire brûle quelque chose dans sa tête : un visage, une chanson, le chemin de sa maison. Les grands sorciers de Ternelande ne savent plus d'où ils viennent. On les craint pour ça : un homme qui n'a plus de souvenirs n'a plus de raison de ne pas faire le mal.
+La magie aussi se paie en souvenirs. Un sorcier qui fait autre chose que des tours de foire brûle quelque chose dans sa tête : un visage, une chanson, le chemin de sa maison. Les grands sorciers de Ternelande ne savent plus d'où ils viennent. On les place au bout de la table, et on évite de leur demander leur village.
 
 ### Aujourd'hui [Joueurs]
 
 **Date de jeu : l'hiver de l'an 512 de la Dîme.**
 
-Le roi est mort sans héritier il y a quatre ans. Le **Comte-Régent** Aldebert de Vauclair gouverne à Haute-Cendre en attendant que les Neuf Comtés s'accordent, et ils ne s'accordent pas : trois d'entre eux se font la guerre dans le sud, avec des mercenaires étrangers qui ne paient pas la Dîme. La peste de l'an 508 a vidé un village sur cinq. Les Dîmiers passent plus souvent, demandent davantage. Cette année, pour la première fois, ils ont demandé deux souvenirs par foyer.
+Le roi Gautier est mort sans héritier il y a quatre ans. Le **Comte-Régent** Garnier de Vauclair gouverne à Haute-Cendre en attendant que les Comtés s'accordent, et ils ne s'accordent pas : depuis trois ans, trois prétendants se font la guerre dans le sud, avec des mercenaires étrangers qui ne paient pas la Dîme. La peste de l'an 508 a vidé un village sur cinq. Les Dîmiers restent plus longtemps dans chaque village, et cette année, pour la première fois, ils demandent deux souvenirs par foyer.
 
 Et dans les **Landes Effacées**, où un village a refusé la Dîme il y a trente ans, les gens ne savent toujours pas comment ils s'appellent.
 
 ### Ce que personne ne sait [Secret]
 
-La Cour Grise est morte.
+La Cour Grise est morte, et la terre a faim.
 
-Il y a cent ans, en l'an 412, les Dîmiers de Haute-Cendre sont montés au **Palais Sans Ombre**, dans les Neiges Hautes, porter la Dîme comme chaque année. Ils ont trouvé la Cour assise à sa table, figée, changée en cendre grise qui tenait encore debout. Personne ne sait ce qui l'a tuée.
+Le Long Hiver n'était pas un hiver : c'était la terre de Ternelande qui s'endormait, épuisée. La Cour Grise, un peuple du nord qui se nourrit de souvenirs, a découvert qu'un souvenir versé dans le sol le réveille. Elle a fait planter les pierres de dîme, a pris la Dîme, en a mangé une part et versé le reste dans la terre. Le printemps est revenu. Pendant quatre siècles, la terre a appris à boire la mémoire des gens, comme on habitue un chien à manger dans la main.
 
-Les Dîmiers ont eu peur que le printemps ne revienne pas. Ils ont continué la Dîme, en secret, sans la Cour. Et le printemps est revenu quand même. Ils en ont conclu que le rituel suffisait, et ils ont gardé le pouvoir qu'il leur donnait : un village qui doute, on lui retire un souvenir de plus.
+En l'an 412, la terre avait trop faim. La nuit de la Dîme, au **Palais Sans Ombre**, elle a bu la Cour elle-même. Les Grands Dîmiers, montés porter le coffre de la Dîme, l'ont trouvée à sa table, changée en cendre grise qui tenait encore debout.
 
-Ils se trompent sur un point. Ce n'était pas la Cour qui mangeait les souvenirs. C'était la terre. Pendant quatre siècles, la Cour a appris à la terre de Ternelande à boire la mémoire des gens, comme on habitue un chien à manger dans la main. Quand la Cour est morte, la terre a continué d'avoir faim. La pierre de dîme ne transmet rien à personne : elle verse directement dans le sol. Et c'est la terre qui fait revenir le printemps, en échange.
+Ils ont eu peur que le printemps ne revienne pas. Ils ont continué la Dîme, en secret, sans la Cour. Le printemps est revenu quand même : depuis 412, toute la Dîme va directement dans le sol. Les Grands Dîmiers en ont conclu que le rituel suffisait, et ils ont gardé le pouvoir qu'il leur donnait.
 
-Si la Dîme s'arrête, la terre se servira seule. C'est ce qui est arrivé dans les Landes Effacées. Les Dîmiers le savent, sans tout comprendre : c'est pour ça qu'ils demandent deux souvenirs cette année. La terre a de plus en plus faim.
+Si la Dîme s'arrête, la terre se servira seule. C'est ce qui est arrivé dans les Landes Effacées. Et elle a de plus en plus faim : d'où les deux souvenirs de cette année.
 
 ---
 
-## 2. Les Neuf Comtés
+## 2. Les Comtés
 
 *Tout ce qui suit est connu des joueurs [Joueurs], sauf les passages marqués [MJ] ou [Secret].*
 
-La Ternelande s'étend des Neiges Hautes, au nord, jusqu'aux marais du sud. Un royaume de forêts de pins, de collines pelées, de lacs qui gèlent cinq mois par an. On voyage sur des routes de terre battue, en chariot l'été, en traîneau l'hiver. Il faut trois semaines pour aller d'un bout à l'autre, si les loups le permettent.
+La Ternelande s'étend des Neiges Hautes, au nord, jusqu'aux collines de vignes du sud. Ici, on mesure les distances en jours de traîneau et en bois de chauffage : une journée, une demi-corde. Il faut trois semaines pour aller d'un bout à l'autre du royaume, si les loups le permettent.
 
 ### Haute-Cendre (la capitale)
 
-**Paysage.** Une ville de pierre noire sur une colline, enfermée dans deux enceintes, dominée par la **Tour des Dîmiers**, une flèche sans fenêtre où l'on monte la Dîme de tout le royaume. Les toits sont d'ardoise, les rues pentues, glissantes six mois sur douze. Sur la grand-place, la plus grande pierre de dîme du royaume, haute comme trois hommes.
+**Paysage.** Une ville de briques cuites rouge sombre, bâtie en spirale autour d'un éperon rocheux, une rue unique qui monte en tournant jusqu'à la **Tour des Dîmiers**, une flèche sans fenêtre où l'on monte la Dîme de tout le royaume. Au pied de la Tour, dans une cour fermée de grilles, la plus grande pierre de dîme de la Ternelande, haute comme trois hommes.
 
-**Culture.** Ville de la cour royale vide, du Comte-Régent, des notaires et des Dîmiers. On y parle bas. On y paie la Dîme comme ailleurs, mais les riches achètent les souvenirs des pauvres pour payer à leur place : on appelle ça « prendre un mort à gage ». C'est illégal. Tout le monde le fait.
+**Culture.** Ville de la cour royale vide, du Comte-Régent, des notaires et des Dîmiers. On y parle bas. C'est ici que se fait le plus de commerce de morts à gage : les riches achètent les souvenirs des pauvres pour payer à leur place.
 
 **Ce qu'on craint.** Les Dîmiers, qui ont le droit d'entrer dans n'importe quelle maison. Et le silence de la Tour, d'où personne ne redescend jamais en parlant.
 
-**Image forte.** La nuit de la Dîme, sur la grand-place sous la neige, des centaines de gens en file devant la grande pierre, le front baissé, et à chaque front qui touche la pierre, une buée pâle qui s'échappe de la tête et s'enfonce dans le sol.
+**Image forte.** La nuit de la Dîme, dans la cour grillée sous la neige, des centaines de gens en file devant la grande pierre, le front baissé, et à chaque front qui touche la pierre, une buée pâle qui s'échappe de la tête et se défait dans le grès.
 
 ### Les Neiges Hautes (le nord)
 
-**Paysage.** Des montagnes blanches, un plateau de glace, un vent qui ne s'arrête jamais. Au bout, à vingt jours de traîneau de la dernière ferme, le **Palais Sans Ombre**, que la Cour habite. Personne ne l'a vu, sauf les Dîmiers.
+**Paysage.** Le vent a poli les cairns comme des galets. On reconnaît ceux des villages au bonnet que chaque famille y laisse. Au bout, à vingt jours de traîneau de la dernière ferme, le **Palais Sans Ombre**, que la Cour habite. Seuls les Grands Dîmiers y montent.
 
-**Culture.** Quelques villages de chasseurs de phoques et de bergers de rennes, sur le bord des neiges. Ils ne paient pas la Dîme aux Dîmiers : ils la portent eux-mêmes, chaque année, au **Cairn des Pâles**, à une journée de marche dans la neige, et ils reviennent sans un mot.
+**Culture.** Quelques villages de chasseurs de phoques et de bergers de rennes. Ils ne paient pas la Dîme aux Dîmiers : ils la portent eux-mêmes, chaque année, au **Cairn des Pâles**, à une journée de marche dans la neige, et ils reviennent sans un mot.
 
-**Ce qu'on craint.** De monter trop haut. On dit que ceux qui approchent du Palais oublient leur nom avant d'y arriver.
+**Ce qu'on craint.** De monter trop haut. Les guides refusent de dire à voix haute le nom du dernier campement.
 
-**[Secret]** Le Palais est vide. La Cour y est assise à table, changée en cendre. Le Cairn des Pâles est une pierre de dîme comme les autres.
+**Image forte.** Un traîneau de chasseurs arrêté devant un cairn gris, la neige balayée tout autour sauf sur les pierres, où les offrandes (un bonnet, une dent, un fil) attendent depuis des années sans qu'aucune bête y touche.
 
-**Image forte.** Une longue table de pierre dans une salle de glace, et autour, une douzaine de silhouettes grises assises, droites, en cendre figée, la tête un peu penchée comme pour écouter, et la neige qui tombe par le toit crevé et s'accumule sur leurs épaules.
+**[Secret]** Le Palais est sans vivants. La Cour y est assise à table, changée en cendre. Le Cairn des Pâles est une pierre de dîme comme les autres.
 
-### Vaugelée (les lacs)
+**Image du Palais [Secret].** Une longue table de pierre dans une salle de glace, et autour, une douzaine de silhouettes grises assises, droites, en cendre figée, la tête un peu penchée comme pour écouter, et la neige qui tombe par le toit crevé sur leurs épaules.
+
+### Vaugelée (les lacs de l'ouest)
 
 **Paysage.** Une région de lacs innombrables, reliés par des rivières lentes. L'hiver, on circule sur la glace ; les villages de pêcheurs sont sur des îles, en bois noirci, avec des toits de chaume jusqu'au sol.
 
-**Culture.** Pêcheurs sous la glace, passeurs, chasseurs de canards. Les gens de Vaugelée ont une coutume qu'on trouve sinistre ailleurs : ils donnent à la Dîme les souvenirs de leurs noyés, et ils jettent les corps dans le lac sans nom. On dit que le fond des lacs est plein de gens que personne ne connaît.
+**Culture.** Pêcheurs sous la glace, passeurs, chasseurs de canards. Les gens de Vaugelée donnent à la Dîme les souvenirs de leurs noyés, et jettent les corps dans le lac sans nom. On dit que le fond des lacs est plein de gens que personne ne connaît.
 
-**Ce qu'on craint.** Les **Oubliés** du lac : des formes pâles qu'on voit sous la glace, et qui frappent dessus de l'intérieur.
+**Ce qu'on craint.** Les **Reflets** : des formes qu'on voit sous la glace, et qui frappent dessus de l'intérieur.
 
-**Image forte.** Un pêcheur agenouillé au bord d'un trou dans la glace, une lanterne à la main, et sous la glace transparente, tout autour de lui, des dizaines de visages pâles tournés vers la lumière.
+**Image forte.** Un pêcheur agenouillé au bord d'un trou dans la glace, une lanterne à la main, et sous la glace transparente, tout autour de lui, des dizaines de visages tournés vers la lumière.
 
 ### La Forêt des Blancs-Bois (l'est)
 
-**Paysage.** Une forêt de bouleaux blancs, si blancs qu'ils paraissent éclairés la nuit. Leur sève est claire, un peu sucrée. Au fond de la forêt, les plus vieux ont des troncs larges comme des tours.
+**Paysage.** Une forêt de bouleaux si blancs qu'ils paraissent éclairés la nuit. Leur sève est claire, un peu sucrée. Au fond de la forêt, les plus vieux ont des troncs larges comme des tours.
 
-**Culture.** Les **Sylvains**, un peuple de la forêt, y vivent dans des maisons suspendues. Ils ne paient pas la Dîme aux Dîmiers : ils disent qu'ils la paient « aux arbres ». Les sorcières de Ternelande y viennent en secret recueillir la sève, qu'on appelle **le lait d'oubli**, et qu'elles vendent très cher.
+**Culture.** Les **Sylvains**, un peuple de la forêt, y vivent dans des maisons suspendues. Ils disent qu'ils paient la Dîme « aux arbres ». Les sorcières de Ternelande y viennent en secret recueillir la sève, qu'on appelle **le lait d'oubli**, et la vendent très cher. On raconte qu'elle fait voir des choses.
 
-**Ce qu'on craint.** De boire la sève sans savoir. Celui qui en boit trop se souvient de choses qu'il n'a pas vécues, et finit par ne plus savoir lesquelles sont à lui.
+**Ce qu'on craint.** De boire la sève sans savoir. Celui qui en boit trop ne sait plus très bien ce qu'il a vécu.
 
-**[Secret]** Les Blancs-Bois poussent là où la terre a le plus bu. Leur sève est faite de souvenirs : ceux de la Dîme, versés dans le sol depuis cinq siècles. Boire la sève, c'est boire les morts oubliés de toute la Ternelande.
+**Image forte.** Une sorcière à genoux au pied d'un bouleau colossal, une entaille dans l'écorce, une coupe de bois sous la plaie qui se remplit d'un liquide clair, et la brume entre les troncs.
 
-**Image forte.** Une sorcière à genoux au pied d'un bouleau colossal, une entaille dans l'écorce, une coupe de bois sous la plaie qui se remplit d'un liquide pâle, et autour d'elle, dans la brume entre les troncs, des silhouettes transparentes qui la regardent boire.
+**[Secret]** Les Blancs-Bois poussent là où la terre a le plus bu. Leur sève est faite des souvenirs de la Dîme. Boire la sève, c'est boire les morts oubliés de toute la Ternelande, et une sorcière qui sait s'y prendre peut y retrouver un souvenir précis.
 
 ### Les Comtés Rouges (le sud)
 
-**Paysage.** Des collines de vignes et de blé, des châteaux sur chaque hauteur, des villages fortifiés. Depuis quatre ans, la guerre : villages brûlés, ponts coupés, gibets aux carrefours.
+**Paysage.** Des collines de vignes et de blé, des châteaux sur chaque hauteur, des villages fortifiés. Depuis trois ans, la guerre : villages brûlés, ponts coupés, gibets aux carrefours.
 
-**Culture.** Trois comtes se battent pour le trône vide : la **Comtesse Ermengarde de Vair**, le **Comte Thibault le Roux** et l'évêque-comte de Saint-Mémoire. Ils paient des **compagnies franches**, des mercenaires venus de l'autre côté de la mer, qui ne paient pas la Dîme. Les gens les haïssent pour ça plus que pour le pillage.
+**Culture.** Trois prétendants se battent pour le trône vide : la **Comtesse Ermengarde de Vair**, le **Comte Thibault le Roux** et **Foulque**, l'évêque-comte de Saint-Mémoire. Ils paient des **compagnies franches**, des mercenaires venus de l'autre côté de la mer, qui ne paient pas la Dîme. Les gens les haïssent pour ça plus que pour le pillage.
 
 **Ce qu'on craint.** Les compagnies, la peste, et les villages où, après un massacre, personne n'est resté pour donner la Dîme.
 
@@ -126,21 +130,21 @@ La Ternelande s'étend des Neiges Hautes, au nord, jusqu'aux marais du sud. Un r
 
 ### Saint-Mémoire (la ville-abbaye)
 
-**Paysage.** Une ville bâtie autour d'une abbaye immense, sur une boucle de rivière. Des bibliothèques partout, des scriptoriums où brûlent des chandelles jour et nuit.
+**Paysage.** Une ville bâtie autour d'une abbaye immense, sur une boucle de rivière. Les moines écrivent debout, les doigts gantés de laine : on ne chauffe pas un scriptorium, à cause des registres.
 
-**Culture.** C'est le siège de l'**Église du Souvenir**. Ses moines tiennent les **Registres** : chaque mort de Ternelande y est inscrit, son nom, son visage décrit en trois lignes, avant qu'on le donne à la Dîme. Quand une famille veut savoir qui elle a oublié, elle vient lire les Registres. L'Église ne s'oppose pas à la Dîme ; elle dit seulement que les morts ont droit à un nom quelque part.
+**Culture.** C'est le siège de l'**Église du Souvenir**. Ses moines tiennent les **Registres** : chaque mort dont la famille a fait porter le nom y est inscrit, son visage décrit en trois lignes, avant qu'on le donne à la Dîme. Quand une famille veut savoir qui elle a oublié, elle vient lire les Registres. L'Église ne s'oppose pas à la Dîme ; elle dit seulement que les morts ont droit à un nom quelque part. L'abbaye est gouvernée par **Mère Odeline**, l'abbesse des Registres ; la ville, par l'évêque-comte Foulque, qui fait la guerre.
 
 **Ce qu'on craint.** L'incendie, plus que tout. Et les Dîmiers, qui trouvent les Registres dangereux.
 
-**[MJ]** L'évêque de Saint-Mémoire a lu dans les plus vieux Registres que les dîmes des premières années n'avaient « pas de poids » : la pierre n'avait pas bu. La Cour mangeait elle-même, à ce moment-là. C'est un des indices de la campagne.
+**[MJ]** Mère Odeline a remarqué que jusqu'en l'an 412, les moines notaient dans les Registres une chaleur sous les pierres de dîme, le matin d'après : « la pierre pèse ». Le Registre de l'an 412 est le dernier où on la note. Elle soupçonne qu'il s'est passé quelque chose cette année-là. Elle n'en a parlé à personne.
 
-**Image forte.** Un scriptorium long comme une église, des centaines de moines courbés sur des pupitres sous les chandelles, et au fond, montant jusqu'à la voûte, des étagères de registres reliés de cuir gris, des milliers, chacun plein de noms que plus personne ne connaît.
+**Image forte.** Un scriptorium long comme une église, des centaines de moines debout devant leurs pupitres sous les chandelles, et au fond, montant jusqu'à la voûte, des étagères de registres reliés de cuir gris, chacun plein de noms que plus personne ne connaît.
 
 ### Les Landes Effacées (l'ouest)
 
-**Paysage.** Des landes de bruyère grise sous un ciel bas, des villages entiers à l'abandon, ou presque. Les routes s'arrêtent au milieu des champs. Des maisons ont des portes murées sans raison apparente.
+**Paysage.** Des landes de bruyère sous un ciel bas, des villages entiers à l'abandon, ou presque. Les routes s'arrêtent au milieu des champs. Des maisons ont des portes murées sans raison apparente.
 
-**Culture.** Il y a trente ans, le village de **Morte-Fontaine** a refusé la Dîme. L'hiver suivant, toute la région a oublié : les noms, les visages, les chemins, la façon de faire le pain. Les survivants ont réappris à vivre comme des enfants. On les appelle les **Effacés**. Certains sont devenus des brigands, d'autres une sorte d'église sans dieu qui prêche l'oubli pour tous.
+**Culture.** Il y a trente ans, le village de **Morte-Fontaine** a refusé la Dîme. L'hiver suivant, toute la région a oublié : les noms, les visages, les chemins, la façon de faire le pain. Les survivants ont réappris à vivre comme des enfants. On les appelle les **Effacés**. Certains sont devenus des brigands. D'autres suivent un prêcheur sans nom et se font appeler les **Sans-Nom** : ils prêchent l'oubli pour tous.
 
 **Ce qu'on craint.** D'y entrer et d'en revenir sans souvenir. Ce n'est pas arrivé à un voyageur depuis vingt ans, mais tout le monde y pense.
 
@@ -152,7 +156,7 @@ La Ternelande s'étend des Neiges Hautes, au nord, jusqu'aux marais du sud. Un r
 
 **Paysage.** Un port de baleiniers sur une côte de falaises noires, des maisons de planches goudronnées, des carcasses de baleines sur les grèves. La mer gèle en hiver jusqu'à la sortie de la baie.
 
-**Culture.** On y voit des étrangers : marchands, baleiniers d'autres pays, qui ne paient pas la Dîme et repartent avant l'hiver. Ceux qui restent passé la nuit de la Dîme sont pris par les Dîmiers comme tout le monde. Brise-Glace vend les produits du monde extérieur, et des souvenirs : on y achète, au marché noir, des souvenirs d'étrangers pour payer sa propre Dîme.
+**Culture.** On y voit des étrangers : marchands, baleiniers d'autres pays, qui ne paient pas la Dîme et repartent avant l'hiver. Ceux qui restent passé la nuit de la Dîme sont dîmés comme tout le monde. Brise-Glace vend les produits du monde extérieur, et des souvenirs : au marché noir, un étranger qui a besoin d'argent pose son front sur la pierre du port pour le compte d'un Ternois.
 
 **Ce qu'on craint.** La banquise, et les étrangers qui ne partent pas.
 
@@ -166,33 +170,33 @@ La Ternelande s'étend des Neiges Hautes, au nord, jusqu'aux marais du sud. Un r
 
 ### Les Dîmiers
 
-**But.** Que la Dîme soit payée, chaque hiver, partout. **Méthode.** Les cavaliers, le droit d'entrer partout, la menace de prendre un souvenir de plus. **Ennemi.** Ceux qui refusent, ceux qui trichent, ceux qui posent des questions sur la Cour. **Signe.** Un masque d'étain lisse et un manteau gris. **Rangs.** Écuyer, Dîmier, Grand Dîmier.
+**But.** Que la Dîme soit payée, chaque hiver, partout. **Méthode.** Les cavaliers, le droit d'entrer partout, le souvenir de plus qu'ils prennent à qui triche. **Ennemi.** Ceux qui refusent, ceux qui trichent, ceux qui posent des questions sur la Cour. **Signe.** Un masque d'étain lisse et un manteau gris. **Rangs.** Écuyer, Dîmier, Grand Dîmier.
 
-**[MJ]** Les Dîmiers savent que la Cour est morte depuis cent ans. Pas tous : seulement les douze Grands Dîmiers et leur maître, le **Grand Dîmier Corentin Malhaume**. Les autres croient servir des maîtres vivants. Les Grands Dîmiers ont continué la Dîme par peur, puis par goût du pouvoir. Ils croient que c'est le rituel qui fait revenir le printemps. Ils ne savent pas que c'est la terre.
+**[MJ]** Les Dîmiers ordinaires croient servir des maîtres vivants. Les douze Grands Dîmiers savent que la Cour est morte depuis cent ans : ce sont eux qui montent chaque hiver au Palais avec le coffre, et qui en redescendent sans un mot. Seul leur maître, le **Grand Dîmier Corentin Malhaume**, soupçonne que c'est la terre qui boit : il a vu Morte-Fontaine de ses yeux.
 
 ### L'Église du Souvenir
 
-**But.** Que chaque mort ait un nom quelque part. **Méthode.** Les Registres, les prêtres de paroisse, les veillées. **Ennemi.** L'oubli, et les Dîmiers quand ils brûlent des Registres. **Signe.** Une plume blanche sur fond noir. **Rangs.** Frère scribe, Lecteur, Évêque.
+**But.** Que chaque mort ait un nom quelque part. **Méthode.** Les Registres, les prêtres de paroisse, les veillées. **Ennemi.** L'oubli, et les Dîmiers quand ils brûlent des Registres. **Signe.** Une plume blanche sur fond noir. **Rangs.** Frère scribe, Lecteur, Abbé.
 
-**[MJ]** L'évêque de Saint-Mémoire, **Mère Ysaure**, a trouvé dans les Registres de l'an 0 à l'an 412 une différence : avant 412, les dîmes « pèsent » sur les pierres (les moines notaient un poids, une chaleur) ; après 412, plus rien. Elle soupçonne que quelque chose a changé cette année-là. Elle n'en a parlé à personne.
+**[MJ]** L'Église est divisée. Mère Odeline garde les Registres et veut comprendre l'an 412. L'évêque-comte Foulque se sert de l'Église pour réclamer le trône, et ne lit plus les Registres depuis longtemps.
 
 ### Les Comtes
 
 **But.** Le trône vide. **Méthode.** La guerre, les compagnies franches, les mariages. **Ennemi.** Les autres comtes. **Signe.** Selon le comte : le loup de Vair, le cerf roux de Thibault, la plume de Saint-Mémoire.
 
-**[MJ]** Le Comte-Régent Aldebert de Vauclair est un homme honnête qui ne sait rien de la mort de la Cour. Il veut faire élire un roi par les Neuf Comtés avant que la guerre ne vide le pays. Les Grands Dîmiers lui cachent tout.
+**[MJ]** Le Comte-Régent Garnier de Vauclair est un homme honnête qui ne sait rien de la mort de la Cour. Il veut faire élire un roi par les Comtés avant que la guerre ne vide le pays. Les Grands Dîmiers lui cachent tout.
 
-### Les Effacés
+### Les Sans-Nom
 
-**But.** Ça dépend. Les uns veulent survivre ; les autres, que tout le monde oublie, pour que tout le monde soit égal. **Méthode.** Le brigandage, la prédication, le vol de pierres de dîme. **Ennemi.** Les Dîmiers. **Signe.** Un cercle vide tracé à la cendre sur le front.
+**But.** Que tout le monde oublie, pour que personne ne domine plus personne. **Méthode.** La prédication, le vol de pierres de dîme, et parfois le brigandage. **Ennemi.** Les Dîmiers. **Signe.** Un cercle vide tracé à la cendre sur le front.
 
-**[MJ]** Le prêcheur des Effacés, l'homme qu'on appelle **Personne**, a compris quelque chose : à Morte-Fontaine, ce n'est pas la Cour qui est venue prendre. Personne n'est venu. Le sol a pris. Il en a tiré une foi : la terre est dieu, et elle doit tout boire.
+**[MJ]** Leur prêcheur, qu'on appelle **Personne**, était Dîmier à Morte-Fontaine, la nuit où la terre a pris. Il a vu le sol boire. Il en a tiré une foi : la terre est dieu, et elle doit tout boire.
 
 ### Les Gardiennes
 
-**But.** Sauver des souvenirs. **Méthode.** Elles enferment des souvenirs dans des objets, des **reliquaires** (une bague, un dé à coudre, une mèche de cheveux tressée), avant la Dîme, pour qu'on puisse les reprendre après. C'est puni de mort. **Ennemi.** Les Dîmiers. **Signe.** Un fil rouge noué au poignet.
+**But.** Sauver des souvenirs. **Méthode.** Elles enferment des souvenirs dans des objets, des **reliquaires** (une bague, un dé à coudre, une mèche de cheveux tressée), avant la Dîme, pour qu'on puisse les reprendre après. C'est puni de mort. **Ennemi.** Les Dîmiers. **Signe.** Une aiguille piquée dans l'ourlet de la manche.
 
-**[MJ]** Les Gardiennes sont des sorcières de village. Leur doyenne, **la Mère Brunissende**, sait faire ce que personne d'autre ne sait faire : rendre un souvenir donné à la Dîme, si on lui apporte de la sève des Blancs-Bois. Elle a compris que les souvenirs de la Dîme finissent dans la sève. Elle ne sait pas pourquoi.
+**[MJ]** Les Gardiennes sont des sorcières de village. Leur doyenne, **la Mère Brunissende**, sait rendre un souvenir donné à la Dîme, si on lui apporte de la sève des Blancs-Bois. Elle a compris que les souvenirs de la Dîme finissent dans la sève. Elle ne sait pas pourquoi.
 
 ---
 
@@ -200,23 +204,27 @@ La Ternelande s'étend des Neiges Hautes, au nord, jusqu'aux marais du sud. Un r
 
 ### Les souvenirs [Joueurs]
 
-Chaque personnage écrit sur sa fiche **six souvenirs** : des choses précises qu'il tient à garder. Le visage de sa mère. Le nom de son premier cheval. Le goût du pain chez sa grand-mère. La chanson qu'on chantait à son mariage. Le chemin de la maison. La première fois qu'il a tué. Ces souvenirs sont à la fois son histoire et sa réserve de magie.
+Chaque personnage écrit sur sa fiche **six souvenirs** : des choses précises qu'il tient à garder. Le visage de sa mère. Le nom de son premier cheval. Le goût du pain chez sa grand-mère. La chanson qu'on chantait à son mariage. Le chemin de la maison. La première fois qu'il a tué. Ces souvenirs sont son histoire, sa monnaie pour la Dîme, et le prix de sa magie.
+
+Un souvenir est **intact**, **flou** ou **perdu**.
 
 ### Ce que coûte la magie [Joueurs]
 
-- Les petits pouvoirs (tours, sorts mineurs) ne coûtent rien.
-- Les pouvoirs du niveau 3 et plus demandent d'**user un souvenir** : le joueur en choisit un et le note comme usé (un trait au crayon). Un souvenir usé est flou : on sait qu'il était là, on ne le voit plus bien.
-- Un souvenir usé deux fois est **perdu** : on le raye. Le personnage ne s'en souviendra plus jamais, sauf par la sève des Blancs-Bois.
+- Les petits pouvoirs (tours, sorts de niveau 1 et 2) ne coûtent rien.
+- Le premier sort de niveau 3 ou plus qu'un personnage lance après un repos long **rend flou** un de ses souvenirs intacts, au choix du joueur. Les suivants, jusqu'au repos long, ne coûtent rien de plus.
+- Un sort de niveau 6 ou plus rend flou un souvenir à chaque fois.
+- Un souvenir flou qu'on use encore est **perdu** : on le raye. Le personnage ne s'en souviendra plus jamais.
+- **Raconter** : pendant un repos long, un personnage peut raconter un souvenir flou à un autre personnage. Le souvenir redevient intact. Une fois par palier de niveaux (1 à 4, 5 à 10, 11 à 16, 17 à 20) et par souvenir.
 - À chaque niveau pair, le personnage gagne un souvenir nouveau, tiré de ce qu'il a vécu en jeu.
-- Un personnage sans aucun souvenir intact devient **Vide** : il garde ses capacités, mais le MJ en prend le contrôle à la première scène où il doit choisir entre bien et mal.
+- Un personnage qui n'a plus aucun souvenir intact est **Vide**. Le joueur garde son personnage, mais à chaque grand choix moral, le MJ lui dit ce que ferait quelqu'un qui ne se souvient de personne, et le joueur doit le faire ou user un souvenir flou.
 
 ### La Dîme en jeu [Joueurs]
 
-La nuit de la Dîme, chaque personnage qui vit en Ternelande donne un souvenir, ou trouve une autre façon de payer : un mort à gage, un reliquaire, une fuite. Ne pas payer est un crime, et les Dîmiers le savent toujours.
+La nuit de la Dîme, chaque personnage qui vit en Ternelande raye un souvenir de sa fiche (deux cette année), ou trouve une autre façon de payer : un mort à gage, un reliquaire, une fuite. Ne pas payer se voit à l'aube, et le Dîmier prend alors lui-même un souvenir de plus.
 
 ### Ce que sait le MJ [Secret]
 
-Un souvenir usé par la magie ne disparaît pas dans le vide : il descend dans la terre, comme la Dîme. Chaque grand sort jeté en Ternelande nourrit la faim du sol. Les grands sorciers sont les meilleurs clients de la terre, sans le savoir.
+Un souvenir perdu par la magie ne disparaît pas dans le vide : il descend dans la terre, comme la Dîme. Les grands sorciers sont les meilleurs clients de la terre, sans le savoir.
 
 ---
 
@@ -226,23 +234,25 @@ Un souvenir usé par la magie ne disparaît pas dans le vide : il descend dans l
 
 ### Humains
 
-Les plus nombreux. Les **Ternois** du nord et des lacs, durs, taiseux, qui paient la Dîme sans se plaindre. Les **gens des Comtés**, du sud, plus riches, plus bavards, qui trouvent des arrangements avec tout, même avec la Dîme.
+Les plus nombreux. Les **Ternois** du nord et des lacs, durs, qui paient la Dîme sans se plaindre et parlent peu le jour de la Dîme. Les **gens des Comtés**, du sud, qui trouvent des arrangements avec tout, même avec la Dîme.
 
 ### Gris-de-Sang
 
-Les descendants des amours entre la Cour et les humains, rares, au teint cendré et aux yeux trop clairs. Ils ne peuvent pas oublier : la Dîme ne prend rien sur eux, la magie ne leur use rien. On les envie et on les déteste, parce qu'ils se souviennent de ceux que tout le monde a donnés. En jeu : leurs souvenirs ne s'usent pas à la magie, mais ils ne peuvent pas apprendre de nouveau souvenir, et les Oubliés sont attirés par eux.
+Les descendants des amours entre la Cour et les humains, rares, au teint cendré et aux yeux trop clairs. Ils n'oublient rien de ce qui leur arrive. Aux repas de famille, on les place au bout de la table, et personne ne leur demande de dire le nom du mort. En jeu : la magie ne rend jamais leurs souvenirs flous, mais la Dîme les prend comme les autres, et ils ne peuvent pas raconter pour retrouver un souvenir (ils ne perdent rien qu'on puisse leur rendre). Les Reflets les cherchent.
 
 ### Effacés
 
-Les gens des Landes, ou leurs enfants. Ils n'ont pas de passé : ils ont commencé leur vie à l'âge adulte, ou presque. En jeu : ils commencent avec deux souvenirs seulement, mais en gagnent un à chaque niveau, et rien de ce qui touche à la mémoire (charme, illusion, peur d'un souvenir) ne prend sur eux facilement.
+Les gens des Landes, ou leurs enfants. Ils n'ont pas de passé : ils ont commencé leur vie à l'âge adulte, ou presque. En jeu : ils commencent avec deux souvenirs seulement, en gagnent un à chaque niveau jusqu'à en avoir six, puis un par niveau pair comme les autres. Ils ont l'avantage contre tout ce qui charme, effraie ou trompe en jouant sur un souvenir.
 
 ### Sylvains
 
-Le peuple des Blancs-Bois. Grands, minces, la peau pâle comme l'écorce, les cheveux comme de la mousse grise. Ils boivent un peu de sève chaque jour, depuis l'enfance, et se souviennent par moments de vies qui ne sont pas les leurs. En jeu : une fois par jour, ils peuvent demander au MJ un souvenir qui n'est pas à eux (un indice), au risque de s'y perdre.
+Le peuple des Blancs-Bois. Grands, minces, la peau claire comme l'écorce de bouleau, les cheveux comme une mousse grise. Ils boivent un peu de sève chaque jour, depuis l'enfance. En jeu : une fois par séance, dans un lieu, un Sylvain peut demander au MJ un souvenir de cet endroit, de quelqu'un qui y est passé. Le MJ répond par une image vraie, sans dire de qui elle vient.
 
 ### Houilleurs
 
-Un petit peuple trapu des mines de charbon et de fer, sous les montagnes de l'est. La Cour ne les a jamais dîmés : la roche des montagnes ne boit pas. Ils se souviennent de cinq siècles d'histoire de famille, récités à la veillée. Les autres peuples les trouvent arrogants et rancuniers ; ils ont raison. En jeu : résistants, mineurs, ils ont l'avantage pour tout ce qui touche à la pierre, mais quittent rarement leurs montagnes sans y perdre quelque chose : hors de la roche, ils doivent payer la Dîme comme tout le monde.
+Un petit peuple trapu des mines de charbon et de fer, sous les montagnes de l'est. En l'an 201, ils ont refusé la Dîme, et la Cour les a laissés en paix ; personne n'a su pourquoi. Ils récitent leur histoire de famille à la veillée depuis trois siècles. Les autres peuples les trouvent rancuniers ; ils ont raison. En jeu : avantage aux jets de Vigueur et d'Endurance sous terre. Sous le ciel, ils paient la Dîme comme tout le monde.
+
+**[MJ]** La roche des montagnes ne boit pas. C'est pour ça que la Cour n'a rien pu prendre aux Houilleurs.
 
 ---
 
@@ -254,17 +264,17 @@ On voyage à pied, à cheval, en chariot ou en traîneau. Les routes sont mauvai
 
 ### Les armes [Joueurs]
 
-Épées, haches, piques, arbalètes : un monde du XIVe siècle, sans poudre. Les compagnies franches ont des armures complètes ; les paysans, des faux et des fourches. Le **fer froid**, battu sans feu à la forge du nord, blesse les choses de la Cour et les Oubliés.
+Épées, haches, piques, arbalètes : un monde du XIVe siècle, sans poudre. Les compagnies franches ont des armures complètes ; les paysans, des faux et des fourches. Le **fer froid**, battu sans feu à la forge du nord, blesse les Reflets.
 
 ### L'argent [Joueurs]
 
-Le denier d'argent, le sou (douze deniers), la livre (vingt sous). Un repas d'auberge vaut deux deniers, une nuit quatre, une épée dix livres. Au marché noir de Brise-Glace, un souvenir d'étranger vaut entre une et cinq livres, selon qu'on veut un mort ou un vivant.
+Le denier d'argent, le sou (douze deniers), la livre (vingt sous). Un repas d'auberge vaut deux deniers, une nuit quatre, une épée dix livres. Au marché noir de Brise-Glace, un mort à gage coûte entre une et cinq livres.
 
 ---
 
 ## 7. Chronologie
 
-On compte **de la Dîme** (depuis la descente de la Cour, an 0). Les actes de l'Église comptent aussi **du Long Hiver** (onze ans plus tôt) ; on s'en sert peu.
+On compte **de la Dîme** (depuis la descente de la Cour, an 0). Les actes du Comte-Régent comptent aussi **de la Régence** (depuis l'an 508).
 
 | An de la Dîme | Ce qui s'est passé |
 |---|---|
@@ -274,11 +284,10 @@ On compte **de la Dîme** (depuis la descente de la Cour, an 0). Les actes de l'
 | 60 | La Cour choisit ses premiers Dîmiers parmi les humains. |
 | 201 | Les Houilleurs refusent la Dîme ; la Cour les laisse en paix dans leurs montagnes. |
 | 377 | Fondation de Haute-Cendre autour de la grande pierre de dîme. |
-| 412 | **[Secret]** La Cour Grise meurt au Palais Sans Ombre. Les Grands Dîmiers gardent le secret. |
+| 412 | **[Secret]** La terre boit la Cour Grise au Palais Sans Ombre. Les Grands Dîmiers gardent le secret. |
 | 482 | Morte-Fontaine refuse la Dîme. L'hiver suivant, les Landes oublient tout. |
 | 504 | Naissance de la princesse Ide, dernière enfant du roi Gautier. Morte en 506. |
-| 508 | La grande peste : un village sur cinq vidé. |
-| 508 | Mort du roi Gautier sans héritier vivant. Aldebert de Vauclair devient Comte-Régent. |
+| 508 | La grande peste ; mort du roi Gautier sans héritier vivant. Garnier de Vauclair devient Comte-Régent. |
 | 509 | Début de la guerre des Comtés Rouges. |
 | 512 | **Année de jeu.** Les Dîmiers demandent deux souvenirs par foyer. |
 
@@ -288,33 +297,37 @@ On compte **de la Dîme** (depuis la descente de la Cour, an 0). Les actes de l'
 
 *Qui ils sont, ce qu'ils veulent, comment ils parlent : [Joueurs], si les personnages les ont croisés ou en ont entendu parler. Ce qu'ils cachent : [MJ].*
 
-### Aldebert de Vauclair, le Comte-Régent
+### Garnier de Vauclair, le Comte-Régent
 
 Soixante ans, à Haute-Cendre. Un vieux soldat honnête, fatigué, qui a accepté la régence parce que personne d'autre n'en voulait. **Ce qu'il veut** : un roi élu avant que la guerre ne vide le pays. **Ce qu'il cache** : il a donné à la Dîme, il y a dix ans, le souvenir de son fils mort, et il ne supporte plus de ne pas savoir qui il pleure. **Comment il parle** : lentement, en s'excusant de tout.
 
 ### Corentin Malhaume, le Grand Dîmier
 
-Cinquante ans, dans la Tour des Dîmiers. On ne voit jamais son visage. **Ce qu'il veut** : que la Dîme continue, quoi qu'il en coûte. **Ce qu'il cache** : il sait que la Cour est morte, et il a vu Morte-Fontaine de ses yeux. Il croit sincèrement que sans la Dîme, toute la Ternelande deviendra les Landes Effacées. Il a raison. **Comment il parle** : il ne dit jamais « je », seulement « la Cour ».
+Cinquante ans, dans la Tour des Dîmiers. On ne voit jamais son visage. **Ce qu'il veut** : que la Dîme continue, quoi qu'il en coûte. **Ce qu'il cache** : il sait que la Cour est morte, et il a vu Morte-Fontaine. Il croit que sans la Dîme, toute la Ternelande deviendra les Landes Effacées. Il a raison. **Comment il parle** : à l'infinitif, comme on lit un règlement. « Payer. Se taire. Rentrer. »
 
-### Mère Ysaure, évêque de Saint-Mémoire
+### Mère Odeline, abbesse des Registres
 
-Soixante-dix ans, aveugle d'un œil. **Ce qu'elle veut** : comprendre ce qui a changé en l'an 412. **Ce qu'elle cache** : elle fait recopier en secret tous les Registres dans une abbaye cachée des montagnes, chez les Houilleurs, au cas où les Dîmiers brûleraient Saint-Mémoire. **Comment elle parle** : en citant des noms de morts que plus personne ne connaît, pour qu'on les entende au moins une fois.
+Soixante-dix ans, à Saint-Mémoire, aveugle d'un œil. **Ce qu'elle veut** : comprendre ce qui a changé en l'an 412. **Ce qu'elle cache** : elle fait recopier en secret tous les Registres dans une abbaye cachée chez les Houilleurs, au cas où les Dîmiers brûleraient Saint-Mémoire. **Comment elle parle** : en citant des noms de morts lus dans les Registres, souvent de travers, et elle s'excuse de la faute : « Agnès Ravel, ou Raval, l'encre a coulé. »
 
 ### Ermengarde de Vair, la Comtesse
 
-Quarante ans, dans les Comtés Rouges. La meilleure générale des trois prétendants. **Ce qu'elle veut** : le trône. **Ce qu'elle cache** : ses mercenaires étrangers lui ont appris qu'au-delà de la mer, l'hiver finit tout seul. Elle compte s'en servir. **Comment elle parle** : sèche, drôle, elle vous tutoie au bout de trois mots.
+Quarante ans, dans les Comtés Rouges. La meilleure générale des trois prétendants. **Ce qu'elle veut** : le trône. **Ce qu'elle cache** : ses mercenaires lui ont appris qu'au-delà de la mer, l'hiver finit tout seul. Elle compte s'en servir. **Comment elle parle** : sèche, drôle, elle vous tutoie au bout de trois mots.
 
-### Personne, le prêcheur des Effacés
+### Foulque, l'évêque-comte
 
-Âge inconnu, dans les Landes. **Ce qu'il veut** : que tout le monde oublie, pour que personne ne domine plus personne. **Ce qu'il cache** : il était Dîmier, à Morte-Fontaine, la nuit où la terre a pris. Il a été le premier effacé, et il a vu le sol boire. **Comment il parle** : doucement, en posant des questions qui n'ont pas de réponse : « Et toi, qui étais-tu avant de le savoir ? »
+Cinquante-cinq ans, à Saint-Mémoire et sur les champs de bataille. Un prélat qui porte la cotte de mailles sous la chape. **Ce qu'il veut** : que l'Église ait le trône. **Ce qu'il cache** : il a fait brûler un Registre qui nommait sa propre mère, donnée à la Dîme par son père. **Comment il parle** : en sermons courts, et il bénit ses soldats avant de les envoyer mourir.
+
+### Personne, le prêcheur des Sans-Nom
+
+Âge inconnu, dans les Landes. **Ce qu'il veut** : que tout le monde oublie, pour que personne ne domine plus personne. **Ce qu'il cache** : il était Dîmier, à Morte-Fontaine, la nuit où la terre a pris. Il a vu le sol boire. **Comment il parle** : doucement, en posant des questions sans réponse : « Et toi, qui étais-tu avant de le savoir ? »
 
 ### La Mère Brunissende, doyenne des Gardiennes
 
-Quatre-vingts ans, dans un village de Vaugelée. **Ce qu'elle veut** : rendre à chaque famille un seul mort, celui qui lui manque le plus. **Ce qu'elle cache** : elle sait rendre un souvenir à la Dîme avec la sève des Blancs-Bois. **Comment elle parle** : par proverbes de grand-mère, et elle dit « mon agneau » à tout le monde, même aux Dîmiers.
+Quatre-vingts ans, dans un village de Vaugelée. Sage-femme depuis soixante ans. **Ce qu'elle veut** : rendre à chaque famille un seul mort, celui qui lui manque le plus. **Ce qu'elle cache** : elle sait rendre un souvenir à la Dîme avec la sève des Blancs-Bois. **Comment elle parle** : elle compte les gens qu'elle a mis au monde. « Toi, tu fais le quatre cent douzième. Tu es né par les pieds. »
 
 ### Dame Aube-de-Cendre [Secret]
 
-La seule de la Cour Grise qui ait survécu en l'an 412 : elle était descendue parmi les humains cette nuit-là, par amour pour un homme de Vaugelée. À son retour, elle a trouvé les siens en cendre. Elle s'est enfuie, a erré, a fini par oublier qui elle était. Elle mendie aujourd'hui sur les routes du sud, sous le nom de **la Vieille Grise**, une vieille femme au teint de cendre que les enfants suivent en riant. Elle seule sait comment la Cour a appris à la terre à boire, et donc, peut-être, comment l'en déshabituer. Pour qu'elle s'en souvienne, il faudrait lui rendre ses propres souvenirs, qui sont dans la sève.
+La seule de la Cour Grise qui ait survécu en l'an 412 : elle était descendue parmi les humains cette nuit-là, par amour pour un pêcheur de Vaugelée. À son retour, elle a trouvé les siens en cendre. Par chagrin, elle a versé tous ses souvenirs dans un bouleau des Blancs-Bois, et elle est devenue une vieille mendiante au teint de cendre qu'on appelle **la Vieille Grise**, sur les routes du sud. Elle seule sait comment la Cour a appris à la terre à boire, et peut-être comment l'en déshabituer. Pour qu'elle s'en souvienne, il faut retrouver l'arbre et lui faire boire sa propre sève. **Comment elle parle** : elle répond toujours à la question d'avant. « Hier, oui. Hier, j'ai ri. »
 
 ---
 
@@ -324,7 +337,7 @@ La seule de la Cour Grise qui ait survécu en l'an 412 : elle était descendue p
 - **Soldat d'une compagnie franche** : Athlétisme, Intimidation ; tu ne paies pas la Dîme, et tout le monde le sait.
 - **Moine scribe** : Histoire, Investigation ; tu as recopié des Registres, et tu te souviens de noms que personne ne connaît plus.
 - **Enfant des Landes** : Survie, Perspicacité ; tu as appris à vivre sans passé.
-- **Contrebandier de souvenirs** : Tromperie, Escamotage ; tu connais le marché noir de Brise-Glace.
+- **Marchand de morts à gage** : Tromperie, Persuasion ; tu connais le marché noir de Brise-Glace et ceux qui y vendent.
 - **Pêcheur sous la glace** : Survie, Perception ; tu as vu les visages sous le lac.
 - **Écuyer dîmier** : Intimidation, Perspicacité ; tu as porté le masque, et tu l'as rendu.
 - **Apprentie gardienne** : Arcanes, Médecine ; tu sais faire un reliquaire, et c'est un crime.
@@ -339,30 +352,37 @@ Environ trois ans de jeu, un hiver par an. Chaque nuit de la Dîme est une séan
 
 ### La jauge : la Mémoire du pays [MJ]
 
-Elle commence à **100**. Elle baisse quand un village ne paie pas la Dîme (la terre se sert), quand un grand sort est jeté (−1 pour un sort de niveau 6 à 8, −3 pour un sort de niveau 9), quand on brûle des Registres (−5). Elle remonte quand on rend un souvenir à quelqu'un (+1), quand un Registre est sauvé (+2), quand un village trouve une autre façon de nourrir la terre (+5).
+Elle part à **100** au début de l'hiver 512 (les Landes Effacées sont déjà perdues, elles ne comptent plus). Elle ne bouge que la nuit de la Dîme. Ce soir-là, le MJ fait le compte de l'année :
 
-- **75** : les gens commencent à oublier des choses entre les Dîmes : des noms de rue, des recettes.
-- **50** : un deuxième village s'efface, dans les Comtés Rouges, en pleine guerre.
-- **25** : la terre prend aussi aux vivants : à la Dîme, on oublie des enfants qui sont encore là.
+- −10 pour chaque village qui n'a pas payé ;
+- −2 pour chaque souvenir que les personnages ont perdu pour de bon depuis la Dîme précédente ;
+- +5 pour chaque village qui a trouvé une autre façon de nourrir la terre ;
+- +3 pour chaque Registre sauvé ou souvenir rendu à une famille.
+
+À chaque seuil, le monde change :
+
+- **90** : les gens oublient des choses entre les Dîmes : des noms de rue, des recettes.
+- **60** : un deuxième village s'efface, dans les Comtés Rouges.
+- **30** : à la Dîme, des familles oublient aussi des enfants vivants.
 - **0** : la Grande Oubliance. Fin de campagne, sauf si quelqu'un a trouvé comment rassasier ou déshabituer la terre.
 
-### Réserve du MJ : les Oublis [MJ]
+### Réserve du MJ : les Lacunes [MJ]
 
-Le MJ gagne un Oubli chaque fois qu'un personnage perd un souvenir pour de bon. Il en a six au plus. Il en dépense un pour faire oublier une chose à un PNJ au mauvais moment, faire surgir un Oublié, ou rendre un chemin introuvable.
+Le MJ gagne une Lacune chaque fois qu'un personnage perd un souvenir pour de bon. Il en a quatre au plus. Il en dépense une pour faire oublier une chose à un PNJ au mauvais moment, faire surgir un Reflet, ou rendre un chemin introuvable jusqu'au lendemain.
 
 ### Accroches de campagne (20) [MJ]
 
 **Niveaux 1 à 4 : on paie, ou on triche.**
-1. **Le mort à gage** (Dîmiers, Gardiennes) : un riche marchand de Haute-Cendre paie pour qu'on lui trouve un mort à donner à sa place. La famille qu'on lui propose n'est pas d'accord.
+1. **Le mort à gage** (Dîmiers, Gardiennes) : un notaire de Haute-Cendre paie pour qu'on lui trouve un mort à donner à sa place. La famille qu'on lui propose n'est pas d'accord.
 2. **Le reliquaire** (Gardiennes, Dîmiers) : une Gardienne a caché le souvenir d'un enfant mort dans un dé à coudre ; un Dîmier le cherche.
-3. **Les visages sous la glace** (Église) : à Vaugelée, les Oubliés frappent sous la glace. L'Église veut leurs noms, pour les Registres.
+3. **Les visages sous la glace** (Église) : à Vaugelée, les Reflets frappent sous la glace. L'Église veut leurs noms, pour les Registres.
 4. **La compagnie** (Comtes) : une compagnie franche occupe un village et refuse de partir avant la nuit de la Dîme. Le village sera puni pour elle.
 5. **Deux souvenirs** (Dîmiers) : un village refuse de donner le deuxième souvenir demandé cette année. Les Dîmiers arrivent dans trois jours.
 
 **Niveaux 5 à 10 : on comprend que la terre boit.**
-6. **Le poids des dîmes** (Église) : Mère Ysaure fait chercher un moine qui a volé le Registre de l'an 412.
+6. **Le poids des dîmes** (Église) : Mère Odeline fait chercher un moine qui a volé le Registre de l'an 412.
 7. **Le lait d'oubli** (Gardiennes) : apporter de la sève à la Mère Brunissende, à travers les Blancs-Bois, pour rendre un mort au Comte-Régent.
-8. **Morte-Fontaine** (Effacés) : entrer dans les Landes, parler à Personne, et ne pas en revenir effacé.
+8. **Morte-Fontaine** (Sans-Nom) : entrer dans les Landes, parler à Personne, et ne pas en revenir effacé.
 9. **Au-delà de la mer** (Comtes) : la Comtesse de Vair cherche à faire venir un navire étranger à Brise-Glace avant la Dîme, pour prouver que l'hiver finit seul ailleurs.
 10. **Le Cairn des Pâles** (Dîmiers) : suivre les gens des Neiges jusqu'au Cairn, et voir que ce n'est qu'une pierre.
 
@@ -370,22 +390,40 @@ Le MJ gagne un Oubli chaque fois qu'un personnage perd un souvenir pour de bon. 
 11. **Le Palais Sans Ombre** (Dîmiers) : vingt jours de traîneau, et la Cour en cendre à sa table.
 12. **Le Grand Dîmier** (Dîmiers, Comtes) : Malhaume sait que les personnages savent. Il propose un marché : se taire, ou voir leur village dîmé deux fois.
 13. **La Vieille Grise** (Gardiennes) : une mendiante au teint de cendre se souvient, dans son sommeil, d'une salle de glace.
-14. **La sève de la Dame** (Gardiennes, Église) : retrouver, dans les Blancs-Bois, l'arbre qui a bu les souvenirs de Dame Aube-de-Cendre.
-15. **L'évêque-comte** (Église, Comtes) : la guerre arrive à Saint-Mémoire ; il faut sauver les Registres, ou une partie.
+14. **La sève de la Dame** (Gardiennes, Église) : retrouver, dans les Blancs-Bois, l'arbre qui a bu les souvenirs de la mendiante.
+15. **L'évêque-comte** (Église, Comtes) : la guerre arrive à Saint-Mémoire ; Foulque veut s'y retrancher, Odeline veut sauver les Registres.
 
 **Niveaux 17 à 20 : on choisit ce que la terre mangera.**
-16. **Ce que dit la Dame** (Gardiennes) : rendue à elle-même, Aube-de-Cendre explique : la Cour a nourri la terre de souvenirs pour la faire dormir sous la neige. Elle s'est habituée.
-17. **La Grande Oubliance** (Effacés) : Personne veut faire refuser la Dîme à tout le royaume, pour que la terre prenne tout.
+16. **Ce que dit la Dame** (Gardiennes) : rendue à elle-même, Aube-de-Cendre explique : la Cour a réveillé la terre en la nourrissant, et la terre s'est habituée.
+17. **La Grande Oubliance** (Sans-Nom) : Personne veut faire refuser la Dîme à tout le royaume, pour que la terre prenne tout.
 18. **Le roi élu** (Comtes) : l'élection du roi à Haute-Cendre, la nuit de la Dîme.
 19. **Le dernier repas** (Dîmiers) : Malhaume propose de donner à la terre un seul souvenir immense, celui de toute une ville, pour la rassasier cent ans.
-20. **Ce qu'on donnera** (toutes) : continuer la Dîme, déshabituer la terre (et risquer des hivers sans fin), ou lui donner ce que la Cour n'a jamais donné : les souvenirs de la Cour elle-même, gardés par la Dame.
+20. **Ce qu'on donnera** (toutes) : continuer la Dîme ; laisser la terre se rendormir, et le Long Hiver revenir ; ou lui donner ce qu'aucune Dîme n'a jamais donné : les souvenirs de la Cour elle-même, gardés dans un arbre.
+
+---
+
+## 11. Première séance [MJ]
+
+### Le village : Saint-Ours-des-Glaces
+
+Un village de quarante foyers sur la rive d'un lac de Vaugelée, à trois jours de Haute-Cendre. Une église en bois, une auberge, la cour de la pierre de dîme fermée par une grille rouillée. C'est la nuit de la Dîme dans deux jours. Les personnages y sont tous pour une raison commune : ils ont été engagés par le bailli, **Étienne Morel**, pour escorter le Dîmier de passage jusqu'au village suivant, parce qu'une compagnie franche rôde.
+
+### Ce qui se passe
+
+- Le Dîmier, **Hugues aux mains froides**, arrive avec deux écuyers. Il annonce les deux souvenirs. Le village gronde.
+- Une Gardienne, **la veuve Aude**, cache dans un dé à coudre le souvenir de sa fille noyée. Elle demande aux personnages de garder le dé pendant la Dîme.
+- Un riche meunier, **Maître Gombert**, veut acheter un mort à gage à la famille la plus pauvre du village, les **Lagel**, pour payer ses deux souvenirs.
+- La nuit, sous la glace du lac, les Reflets frappent. Le meunier dit que c'est un signe de la Cour. Le prêtre dit que ce sont des noyés qu'on a oubliés.
+- À l'aube de la Dîme, la compagnie franche arrive.
+
+Chaque choix a un prix : protéger le dé, c'est mentir au Dîmier ; empêcher la vente, c'est laisser le meunier payer de sa propre mémoire ; se battre contre la compagnie, c'est risquer le village. La nuit de la Dîme, chaque personnage raye ses deux souvenirs, ou triche.
 
 ---
 
 ## Notes pour la suite
 
-- Canon typé à écrire dans `shared/canon/dark-fantasy.ts`.
+- Canon typé dans `shared/canon/dark-fantasy.ts`.
 - Classes propres : Chasseur de sorcières, Mercenaire, Chirurgien-barbier, Pèlerin, Sorcière des ronces, Mémorialiste, Fossoyeur, Coupe-jarret, Dîmier renégat, Complainteur.
-- Bestiaire : loups d'hiver, corbeaux de dîme, Oubliés, Effacés, compagnies franches, Dîmiers, Grand Dîmier, Racines-qui-boivent, Sylve blanche, Vieille Grise, la Faim de la terre.
-- Règle des souvenirs à intégrer à la fiche et au créateur.
+- Bestiaire : loups d'hiver, corbeaux de dîme, Reflets, Sans-Nom, compagnies franches, Dîmiers, Grand Dîmier, Racines-qui-boivent, Sylve blanche, Vieille Grise, la Faim de la terre.
+- Règle des souvenirs intégrée à la fiche (souvenirs intacts, flous, perdus).
 - Style graphique : en attente du choix de Mickael (gravure à l'eau-forte, huile sombre, gravure sur bois).
