@@ -4,9 +4,14 @@
 // Ce que la Flotte transportait vraiment, le Navire blanc et le registre de ses caisses sont dans les secrets, pas dans la chronologie :
 // la chronologie ne dit que ce que tout le monde sait.
 // Tous les personnages sont inventés. Les événements de la campagne s'écartent de l'histoire dès 1716 ; aucun pirate ayant réellement existé n'a sa place ici.
-import { GRAINS_MAX, REGLE_DES_GRAINS } from "../iles-regles";
 import { NOMS_ILES_DU_VENT } from "./pirates-table";
 import type { Canon } from "./types";
+
+/** Les Grains : la réserve du MJ. Code du MJ seulement. */
+export const GRAINS_MAX = 4;
+export const REGLE_DES_GRAINS =
+  "Chaque jeton de Chance dépensé par un joueur donne un Grain au MJ (quatre au plus). Il en dépense un pour faire tourner le vent au mauvais moment, faire apparaître une voile à l'horizon, ou faire parler un meneur dans l'équipage.";
+
 
 export const ILES_DU_VENT: Canon = {
   genre: "pirates",

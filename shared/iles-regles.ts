@@ -1,12 +1,7 @@
 // Règles propres aux Îles du Vent (pirates, Antilles, 1716), lues par les joueurs dans le livre en ligne.
 // Rien de secret. Le Moral du navire et la Chance tiennent la place du surnaturel ; l'argent se compte en piastres et en livres tournois.
-// La réserve du MJ (les Grains) est exportée à part : elle appartient au guide du MJ, pas aux règles que lisent les joueurs.
+// La réserve du MJ (les Grains) vit dans shared/canon/pirates.ts, côté MJ.
 import type { RuleSection } from "./rules";
-
-/** Les Grains : la réserve du MJ. Utilisée par le canon (shared/canon/pirates.ts), jamais par le code des joueurs. */
-export const GRAINS_MAX = 4;
-export const REGLE_DES_GRAINS =
-  "Chaque jeton de Chance dépensé par un joueur donne un Grain au MJ (quatre au plus). Il en dépense un pour faire tourner le vent au mauvais moment, faire apparaître une voile à l'horizon, ou faire parler un meneur dans l'équipage.";
 
 export const REGLES_ILES: RuleSection[] = [
   {
