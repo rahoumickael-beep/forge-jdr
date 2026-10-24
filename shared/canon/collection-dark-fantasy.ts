@@ -86,7 +86,7 @@ export const COLLECTION_TERNELANDE: CarteDeCollection[] = [
     usage: "L'équipe passe un barrage, une ville fermée ou une ligne de bataille sans être arrêtée." },
   { id: "df-veillee", nom: "Veillée de famille", famille: "faveur", rarete: "commune", recharge: "par-seance",
     texte: "Une soirée au coin du feu chez des gens qui vous ont recueillis, à se raconter les morts.",
-    usage: "Pendant le repos long qui suit, chaque personnage peut raconter un souvenir flou en plus." },
+    usage: "Pendant le repos long qui suit, chaque personnage peut raconter un second souvenir flou, différent du premier." },
   { id: "df-dette-de-houilleur", nom: "Dette de Houilleur", famille: "faveur", rarete: "rare", recharge: "une-fois",
     texte: "Un Houilleur n'oublie rien, ni les insultes ni les services. Vous lui avez rendu un service.",
     usage: "Une galerie des montagnes de l'est s'ouvre pour l'équipe : un abri sûr, ou un passage sous la montagne." },

@@ -4,6 +4,7 @@
 import { AUBRETERRE } from "./canon/fantasy";
 import { ARCHIPEL } from "./canon/science-fiction";
 import { TERNELANDE } from "./canon/dark-fantasy";
+import { RESIDENCE } from "./canon/cyberpunk";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -42,12 +43,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Une mensualité effacée", "800 lumens", "Un faux transpondeur", "Un éclat de pierre de Phare", "Une Route sans Péage, connue de peu", "La reconnaissance du clan Deux-Enclumes"],
   },
   "cyberpunk": {
-    hooks: ["Un employé corpo veut déserter avec des données explosives.", "Votre fixer a disparu, il vous doit de l'argent.", "Un virus efface les souvenirs des gens dans la rue.", "Une star de la musique est en réalité une IA."],
-    villains: ["un PDG immortel", "un gang de cyberpsychos", "une IA voyou", "un flic qui vend la ville"],
-    motivations: ["télécharger son esprit dans le réseau", "contrôler toute la ville", "effacer son passé"],
-    enemies: ["Gangers", "Agents de sécurité", "Drones de police", "Cyberpsycho", "Escouade corpo", "Netrunner ennemi", "Mech anti-émeute", "Assassin chromé", "IA voyou"],
-    twists: ["Le client est votre propre clone numérique.", "Les données volées contiennent vos souvenirs.", "La corporation finance aussi la rébellion."],
-    rewards: ["Un implant de pointe", "50 000 eddies", "Un appartement en hauteur", "Un contact chez les corpos"],
+    hooks: RESIDENCE.accroches.map((a) => a.texte),
+    villains: ["un huissier-chef qui vend ses arrangements", "un administrateur des Hauts qui achète des années aux pauvres", "un médecin de Clinique qui transfère des heures en douce", "une intelligence de la Foncière qui n'obéit plus", "un chef de comité qui s'est fait payer sa grève"],
+    motivations: ["payer le loyer du mois sans passer sous zéro", "acheter dix ans de plus à une Clinique", "faire tomber la Révision avant janvier", "retrouver le nom de celui qui crédite le fonds de grève"],
+    enemies: ["Clercs", "Huissiers", "Chiens de garde", "Rats des Souterrains", "Drones de cadastre", "Gros bras du Port-Franc", "Cousus de combat", "Huissier-chef", "Corps de garde de la Tour-Mère"],
+    twists: ["Les heures volées viennent d'un Compteur de mort que la Clinique n'a pas déclaré.", "Le client est un Enfant des Hauts qui a fui sa famille.", "Le voisin qui prévenait le palier est aussi celui qui vendait les adresses.", "La voix du soir dit une phrase qu'elle n'a jamais prononcée.", "La Foncière finance aussi la grève."],
+    rewards: ["Cent heures de loyer payées", "Un Compteur piraté", "Un implant dont le loyer est réglé un an", "Une place dans le tram des Hauts, une fois", "La reconnaissance du Comité du Bloc 14", "Un avis d'expulsion annulé"],
   },
   "horreur": {
     hooks: ["Un ami vous envoie une lettre puis disparaît.", "Un tableau change chaque nuit.", "Des disparitions suivent les marées.", "Un héritage vous attend dans une maison isolée."],

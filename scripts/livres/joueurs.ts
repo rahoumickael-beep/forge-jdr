@@ -14,6 +14,12 @@ import { esc, illustration, markdown, md } from "./texte";
 const DOSSIER = `${MONDE.dossier}/joueurs`;
 const STATS = GENRES.find((g) => g.id === MONDE.genre)!.stats;
 const FIGURES = MONDE.joueurs.figures;
+
+/** « qu'on choisit au niveau 3 », ou « au niveau 1, 2 ou 3 selon la classe » quand ça varie. */
+function niveauxDesVoies(classes: { id: string }[]): string {
+  const n = [...new Set(classes.map((c) => subclassLevel(c.id)))].sort((a, b) => a - b);
+  return n.length === 1 ? `qu'on choisit au niveau ${n[0]}.` : `qu'on choisit au niveau ${n.slice(0, -1).join(", ")} ou ${n[n.length - 1]} selon la classe.`;
+}
 const PORTRAITS = MONDE.joueurs.portraits;
 
 /** Chapitre de règles écrit en Markdown : titre pris sur « # Chapitre N — Titre ». */
@@ -191,7 +197,7 @@ export function livreDesJoueurs(): Livre {
 
   n++;
   const classes = CLASSES.filter((c) => c.genre === MONDE.genre);
-  unites.push({ titre: "Les classes", marque: `Chapitre ${n}`, niveau: 1, entete: "Livre des joueurs · Les classes", ouverture: true, html: ouverture(`Chapitre ${n}`, "Les classes", MONDE.joueurs.chapeauClasses) + `<div class="cols"><p class="lettrine">Ta classe dit ce que tu sais faire quand les choses tournent mal. Chacune a deux voies, qu'on choisit au niveau 1, 2 ou 3 selon la classe.</p><table class="tab long"><thead><tr><th>Classe</th><th>Dé</th><th>Rôle</th></tr></thead><tbody>${classes.map((c) => `<tr><td>${esc(c.name)}</td><td>d${c.hitDie}</td><td>${esc(c.role)}</td></tr>`).join("")}</tbody></table></div>` });
+  unites.push({ titre: "Les classes", marque: `Chapitre ${n}`, niveau: 1, entete: "Livre des joueurs · Les classes", ouverture: true, html: ouverture(`Chapitre ${n}`, "Les classes", MONDE.joueurs.chapeauClasses) + `<div class="cols"><p class="lettrine">Ta classe dit ce que tu sais faire quand les choses tournent mal. Chacune a deux voies, ${niveauxDesVoies(classes)}</p><table class="tab long"><thead><tr><th>Classe</th><th>Dé</th><th>Rôle</th></tr></thead><tbody>${classes.map((c) => `<tr><td>${esc(c.name)}</td><td>d${c.hitDie}</td><td>${esc(c.role)}</td></tr>`).join("")}</tbody></table></div>` });
   for (const c of classes) unites.push({ titre: c.name, niveau: 2, entete: "Livre des joueurs · Les classes", html: classe(c) });
 
   chapitre("Historiques et personnalité", "Ce que tu faisais avant, et ce que tu ne sais pas cacher.", historiques());

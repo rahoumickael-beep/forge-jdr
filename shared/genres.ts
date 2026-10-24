@@ -1,6 +1,7 @@
 import { LIEUX_AUBRETERRE, NOMS_AUBRETERRE } from "./canon/fantasy-table";
 import { LIEUX_ARCHIPEL, NOMS_ARCHIPEL } from "./canon/science-fiction-table";
 import { LIEUX_TERNELANDE, NOMS_TERNELANDE } from "./canon/dark-fantasy-table";
+import { LIEUX_RESIDENCE, NOMS_RESIDENCE } from "./canon/cyberpunk-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -89,17 +90,17 @@ export const GENRES: Genre[] = [
   {
     id: "cyberpunk",
     label: "Cyberpunk",
-    pitch: "Mégapoles néon, implants, hackers et corporations.",
+    pitch: "La Résidence : une ville entière appartient à une société, et le loyer se paie avec les heures de sa vie.",
     theme: { background: "#0d0716", floor: "#2c2440", wall: "#130d20", water: "#1aa6b7", vegetation: "#3b8f4a", road: "#3d3357", door: "#ff3fa4", grid: "rgba(255,63,164,.15)" },
-    stats: ["Corps", "Réflexes", "Tech", "Intelligence", "Cool", "Empathie"],
-    archetypes: ["Netrunner", "Solo", "Fixer", "Techie", "Médecin des rues", "Journaliste", "Nomade", "Flic corrompu"],
-    origins: ["Gosse des bas-fonds", "Ex-employé corpo", "Nomade des Badlands", "Enfant de star", "Augmenté militaire"],
-    equipment: ["Pistolet intelligent", "Lame-mante", "Cyberdeck", "Lunettes thermiques", "Manteau blindé", "Grenade EMP", "Faux identifiants", "Moto électrique"],
-    abilities: ["Piratage de réseau", "Réflexes boostés", "Intimidation", "Contacts dans la rue", "Bricolage d'implants", "Camouflage optique"],
-    nameStart: ["Jax", "Kiro", "Neo", "Rook", "Vex", "Zara", "Tak", "Mika", "Nyx", "Rex"],
-    nameEnd: [" Volt", " Chrome", " Zero", " Byte", " Ghost", " Razor", " Silk"],
-    places: ["le marché noir de Kowloon-2", "la tour Arasaka-Nova", "le club Néon Lotus", "les égouts du district 9", "le data-center sous-marin"],
-    traits: ["paranoïaque", "accro à l'adrénaline", "code d'honneur de rue", "vend n'importe qui"],
+    stats: ["Corps", "Réflexes", "Endurance", "Technique", "Instinct", "Aplomb"],
+    archetypes: ["Fouineur", "Solo", "Médic de rue", "Huissier défroqué", "Coursier", "Syndicaliste", "Fixeur", "Mécano", "Prêcheur des Sans-Bail", "Journaliste"],
+    origins: ["Résident des Blocs", "Enfant des Hauts", "Prolongé", "Sans-Bail", "Cousu", "Locataire"],
+    equipment: ["Taser à harpon", "Pistolet à aiguilles", "Matraque électrique", "Lame de céramique", "Armure légère en fibre", "Compteur piraté", "Brassard d'Huissier", "Clé barrée", "Ciré de la Digue", "Trousse de médic de rue", "Lunettes de visée", "Carte de la Friche"],
+    abilities: ["Entrer dans le Réseau", "Effacer sa trace", "Négocier un arrangement", "Soigner un corps qui fond", "Courir les passerelles", "Parler au nom du palier", "Réparer un implant", "Tenir une porte", "Mentir à un Huissier", "Écouter la Voix"],
+    nameStart: NOMS_RESIDENCE.prenoms,
+    nameEnd: NOMS_RESIDENCE.familles,
+    places: LIEUX_RESIDENCE,
+    traits: ["compte tout en heures", "vérifie son solde avant de s'asseoir", "garde un avis d'expulsion plié dans sa poche", "parle bas, comme dans les Hauts", "ne dort jamais sans entendre la pluie", "salue chaque caméra par son numéro"],
   },
   {
     id: "horreur",

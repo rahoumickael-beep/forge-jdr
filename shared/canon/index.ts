@@ -3,12 +3,13 @@ import type { GenreId } from "../types";
 import { AUBRETERRE } from "./fantasy";
 import { ARCHIPEL } from "./science-fiction";
 import { TERNELANDE } from "./dark-fantasy";
+import { RESIDENCE } from "./cyberpunk";
 import type { Canon } from "./types";
 
 export type { Canon } from "./types";
-export { AUBRETERRE, ARCHIPEL, TERNELANDE };
+export { AUBRETERRE, ARCHIPEL, TERNELANDE, RESIDENCE };
 
-export const CANONS: Partial<Record<GenreId, Canon>> = { fantasy: AUBRETERRE, "science-fiction": ARCHIPEL, "dark-fantasy": TERNELANDE };
+export const CANONS: Partial<Record<GenreId, Canon>> = { fantasy: AUBRETERRE, "science-fiction": ARCHIPEL, "dark-fantasy": TERNELANDE, cyberpunk: RESIDENCE };
 
 export const canonDe = (genre: GenreId): Canon | undefined => CANONS[genre];
 
