@@ -31,7 +31,7 @@ export const COLLECTION_ILES: CarteDeCollection[] = [
     usage: "Montrée à un équipage, elle prouve qui a promis quoi : avantage en Persuasion pour réclamer sa part. La perdre est une faute grave : le Moral baisse de 1 si l'équipage l'apprend." },
   { id: "pi-fusil-boucanier", nom: "Un fusil boucanier", famille: "objet", rarete: "rare", recharge: "par-seance",
     texte: "Un canon long comme un bras et demi, la crosse patinée par la fumée du boucan. Celui qui l'a fait n'a jamais vu un navire, et il a vu plus de bœufs que vous.",
-    usage: "Attaque à distance (portée 36/108 m), 1d12 perforants, un seul coup avant de recharger, ce qui prend une action. Avantage à votre premier tir d'une scène contre une cible qui ne vous a pas vu. Il vaut 6 piastres." },
+    usage: "Attaque à distance (portée 18/54 m), 1d12 perforants, un seul coup avant de recharger, ce qui prend une action. Avantage à votre premier tir d'une scène contre une cible qui ne vous a pas vu. Il vaut 10 piastres." },
   { id: "pi-conque-des-mornes", nom: "Une conque des mornes", famille: "objet", rarete: "rare", recharge: "par-seance",
     texte: "Un grand coquillage rose à l'embouchure polie. Son son porte d'une crête à l'autre. On ne l'achète pas : on vous la confie.",
     usage: "Soufflée dans les mornes de Saint-Domingue, les sentinelles répondent et vous laissent passer jusqu'au prochain sentier. Elle ne sert pas à tendre un piège. La perdre est une faute, et celui qui vous l'a confiée le sait." },
