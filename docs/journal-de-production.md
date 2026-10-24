@@ -84,7 +84,15 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Livres : la fabrique est devenue indépendante du monde (`scripts/livres/monde.ts`, `--monde=archipel`) ; Aubreterre sort à l’identique. `npm run livres:archipel` : livre des joueurs (107 p., huit chapitres adaptés par deux agents puis vérifiés), guide du MJ (30 p.), bestiaire (40 p.).
 - Partie automatique SF (`node scripts/apercu-vaisseaux.mjs`) : créateur pas à pas, poste, tir, refus d’un poste non tenu.
 - Essais de style des 8 autres mondes en file (ids dans `comfyui/sorties/ids-essais-mondes.txt`) : à montrer à Mickael.
-- Reste pour l’Archipel : poser les 21 planches de livre, les relectures des chapitres 04 à 07 (règles, orthographe), la carte des Routes (illustration), la repeinture de Solenne.
+- 25/10 : 21 planches de livre posées (une variante choisie par sujet), Garde Hégémonique et Rakka repeints posés, livres SF refaits. La planche « Équipages » est repeinte (soldats trop proches d’une licence). Reste : la carte des Routes (illustration), la repeinture de Solenne.
+
+## Monde dark fantasy : la Ternelande (« La Dîme »), 24-25/10/2026
+- Mickael dort : décisions prises par Claude, à relire au réveil. Bible `content/ternelande/lore.md` réécrite après relecture ; secret : le Long Hiver était la terre endormie, la Cour Grise l’a réveillée en versant des souvenirs, la terre a bu la Cour en 412.
+- Canon `shared/canon/dark-fantasy.ts` (+ table publique). Souvenirs sur la fiche (`shared/souvenirs.ts`) : intact, flou, perdu ; une Lacune au MJ par souvenir perdu. Règles du monde (`shared/ternelande-regles.ts`), 30 cartes à collectionner, pioches de 12 événements et 10 objets.
+- Classes (`shared/ternelande-classes.ts`, 10) : Chasseur de sorcières, Mercenaire, Chirurgien-barbier, Pèlerin, Sorcière des ronces, Mémorialiste, Fossoyeur, Coupe-jarret, Dîmier renégat, Complainteur. Peuples (`shared/ternelande-origines.ts`) : humains, Gris-de-Sang, Effacés, Sylvains, Houilleurs ; 8 historiques. Relues par l’agent des règles, rééquilibrées : plafond « un souvenir ne redevient intact qu’une fois par repos long », Gris-de-Sang (ses sorts lui prennent un souvenir d’un coup au lieu de le rendre flou), sorts de mort avec sauvegarde, Soldat de compagnie franche (le village paie sa Dîme à sa place).
+- Bestiaire (`shared/ternelande-bestiaire.ts`, agent des fiches) : 24 créatures, 4 familles (Bêtes d’hiver, Gens de la Dîme, Choses de la terre, Reflets), FP 1/8 à 20, trois légendaires ; « La Faim de la terre » vue des joueurs comme « Ce qui boit sous la lande ».
+- Scénario d’ouverture « Deux souvenirs » (`shared/library-ternelande.ts`), à Saint-Ours-des-Glaces : le Dîmier Hugues aux mains froides (frère oublié de Colin Lagel), la veuve Aude et le dé à coudre, le Reflet d’Isabeau, la compagnie du Héron de Wendel Haak.
+- Charte dark fantasy toujours provisoire (lumière mise en tête du prompt) : pas de peinture avant le choix de Mickael.
 
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.

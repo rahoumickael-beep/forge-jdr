@@ -214,7 +214,7 @@ export const TERNELANDE: Canon = {
       ],
       descentes: [
         { action: "Chaque village qui n'a pas payé la Dîme", perte: 10 },
-        { action: "Chaque souvenir perdu pour de bon par les personnages dans l'année", perte: 2 },
+        { action: "Chaque souvenir perdu pour de bon par les personnages dans l'année, autrement qu'en payant la Dîme (magie, Reflets, souvenir pris par un Dîmier)", perte: 2 },
       ],
     },
     reserve: {

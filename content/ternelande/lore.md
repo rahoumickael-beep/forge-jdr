@@ -355,7 +355,7 @@ Environ trois ans de jeu, un hiver par an. Chaque nuit de la Dîme est une séan
 Elle part à **100** au début de l'hiver 512 (les Landes Effacées sont déjà perdues, elles ne comptent plus). Elle ne bouge que la nuit de la Dîme. Ce soir-là, le MJ fait le compte de l'année :
 
 - −10 pour chaque village qui n'a pas payé ;
-- −2 pour chaque souvenir que les personnages ont perdu pour de bon depuis la Dîme précédente ;
+- −2 pour chaque souvenir que les personnages ont perdu pour de bon depuis la Dîme précédente, autrement qu'en payant la Dîme (magie, Reflets, souvenir pris par un Dîmier) ;
 - +5 pour chaque village qui a trouvé une autre façon de nourrir la terre ;
 - +3 pour chaque Registre sauvé ou souvenir rendu à une famille.
 
@@ -406,7 +406,7 @@ Le MJ gagne une Lacune chaque fois qu'un personnage perd un souvenir pour de bon
 
 ### Le village : Saint-Ours-des-Glaces
 
-Un village de quarante foyers sur la rive d'un lac de Vaugelée, à trois jours de Haute-Cendre. Une église en bois, une auberge, la cour de la pierre de dîme fermée par une grille rouillée. C'est la nuit de la Dîme dans deux jours. Les personnages y sont tous pour une raison commune : ils ont été engagés par le bailli, **Étienne Morel**, pour escorter le Dîmier de passage jusqu'au village suivant, parce qu'une compagnie franche rôde.
+Un village de quarante foyers sur une île d'un lac de Vaugelée, à une demi-journée de glace de la rive et à trois jours de Haute-Cendre. Une église en bois, une auberge, la cour de la pierre de dîme fermée par une grille rouillée. C'est la nuit de la Dîme dans deux jours. Les personnages y sont tous pour une raison commune : ils ont été engagés par le bailli, **Étienne Morel**, pour escorter le Dîmier de passage depuis la rive jusqu'au village, parce qu'une compagnie franche rôde.
 
 ### Ce qui se passe
 

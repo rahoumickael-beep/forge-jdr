@@ -47,8 +47,8 @@ export const ORIGINES_TERNELANDE: Origin[] = [
     darkvision: 12,
     unique: true,
     traits: [
-      { name: "Rien ne s'efface", text: "La magie ne rend jamais tes souvenirs flous : ni tes sorts, ni ceux des autres. Les pouvoirs qui te font rendre flou un souvenir de ton plein gré (comme Brûler un souvenir) ne marchent pas pour toi." },
-      { name: "Rien à raconter", text: "La Dîme te prend tes souvenirs comme aux autres. Tu ne peux pas raconter pour en retrouver un, et on ne peut pas te le raconter : ce que tu perds ne revient pas." },
+      { name: "Rien ne s'efface", text: "La magie des autres (Reflets, pouvoirs de vol de souvenir, sorts d'oubli) ne rend jamais flou un de tes souvenirs. Tes propres sorts te coûtent comme aux autres, mais rien ne s'efface à moitié chez toi : le souvenir que ton sort aurait rendu flou est perdu d'un coup. Les pouvoirs qui te font rendre flou un souvenir de ton plein gré (comme Brûler un souvenir) ne marchent pas pour toi." },
+      { name: "Rien à raconter", text: "La Dîme te prend tes souvenirs comme aux autres. Tu ne peux pas raconter pour en retrouver un, et on ne peut pas te le raconter : ce que tu perds ne revient pas. Les pouvoirs qui rendraient un souvenir intact ne marchent pas sur toi." },
       { name: "Les Reflets te cherchent", text: "Un Reflet qui te voit te préfère aux autres. Les Reflets ont l'avantage aux tests pour te trouver." },
     ],
     subs: [
@@ -107,7 +107,7 @@ export const ORIGINES_TERNELANDE: Origin[] = [
     darkvision: 12,
     unique: true,
     traits: [
-      { name: "Ce que garde le lieu", text: "Une fois par séance, dans un lieu, tu peux demander au MJ un souvenir de cet endroit, de quelqu'un qui y est passé. Le MJ répond par une image vraie, sans dire de qui elle vient." },
+      { name: "Ce que garde le lieu", text: "Une fois par repos long, dans un lieu, tu peux demander au MJ un souvenir de cet endroit, de quelqu'un qui y est passé. Le MJ répond par une image vraie, sans dire de qui elle vient." },
       { name: "Écorce", text: "Tu te caches dans une forêt même avec un simple abri partiel, et tu grimpes aux arbres à ta vitesse." },
     ],
     subs: [
@@ -137,7 +137,7 @@ export const ORIGINES_TERNELANDE: Origin[] = [
     darkvision: 12,
     unique: true,
     traits: [
-      { name: "Sous la montagne", text: "Sous terre, avantage aux jets de Vigueur et d'Endurance. Sous le ciel, tu paies la Dîme comme tout le monde." },
+      { name: "Sous la montagne", text: "Sous terre, avantage aux sauvegardes de Vigueur et d'Endurance. Sous le ciel, tu paies la Dîme comme tout le monde." },
       { name: "Trapu", text: "Ta vitesse n'est pas réduite par une armure lourde. Tu sais d'où vient une galerie et si elle va s'effondrer." },
     ],
     subs: [
@@ -153,7 +153,7 @@ export const ORIGINES_TERNELANDE: Origin[] = [
         name: "Récitant de famille",
         blurb: "C'est toi qu'on a choisi pour apprendre l'histoire de ta lignée, quarante générations, sans en sauter une.",
         bonus: { 4: 1 },
-        traits: [{ name: "Quarante générations", text: "Maîtrise d'Histoire. Une fois par repos long, tu peux raconter un souvenir flou à un allié comme s'il te l'avait confié : il redevient intact, sans compter dans sa limite par palier." }],
+        traits: [{ name: "Quarante générations", text: "Maîtrise d'Histoire. Une fois par palier de niveaux, tu peux raconter un souvenir flou à un allié comme s'il te l'avait confié : il redevient intact, sans compter dans sa limite par palier." }],
       },
     ],
   },
@@ -165,10 +165,10 @@ export const HISTORIQUES_TERNELANDE: Background[] = [
     genre: "dark-fantasy",
     name: "Fossoyeur de paroisse",
     blurb: "Tu as creusé les tombes de ton village, et noté chaque nom sur une planche.",
-    skills: ["Religion", "Médecine"],
+    skills: ["Histoire", "Médecine"],
     tool: "Outils de fossoyeur",
     gear: ["Pelle", "Lanterne", "Planche de noms à la craie", "2 livres"],
-    feature: { name: "Qui dort où", text: "Tu sais qui a été enterré où dans ta paroisse, même quand la famille l'a oublié. Dans un autre cimetière, un test de Religion DD 12 te le dit pour une tombe." },
+    feature: { name: "Qui dort où", text: "Tu sais qui a été enterré où dans ta paroisse, même quand la famille l'a oublié. Dans un autre cimetière, un test d'Histoire DD 12 te le dit pour une tombe." },
   },
   {
     id: "df-compagnie-franche",
@@ -178,7 +178,7 @@ export const HISTORIQUES_TERNELANDE: Background[] = [
     skills: ["Athlétisme", "Intimidation"],
     tool: "Jeu de dés",
     gear: ["Tabard d'une compagnie", "Contrat signé d'une croix", "Dague", "3 livres"],
-    feature: { name: "Hors de la Dîme", text: "Tant que tu sers une compagnie franche, les Dîmiers ne te demandent rien. Les villageois le savent : ils te logent mal, te vendent cher, et te dénoncent volontiers. Si tu quittes la compagnie, tu paies comme les autres." },
+    feature: { name: "Hors de la Dîme", text: "Tant que tu sers une compagnie franche, les Dîmiers ne te prennent rien. Mais le village où tu passes la nuit de la Dîme paie pour toi : la pierre ne connaît pas les étrangers, et elle prend deux souvenirs de plus aux villageois. Ils le savent : ils te logent mal, te vendent cher, et te dénoncent volontiers. Si tu quittes la compagnie, tu paies comme les autres." },
   },
   {
     id: "df-moine-scribe",
@@ -238,7 +238,7 @@ export const HISTORIQUES_TERNELANDE: Background[] = [
     skills: ["Arcanes / Savoir", "Médecine"],
     tool: "Nécessaire de couture",
     gear: ["Aiguille piquée dans l'ourlet de la manche", "Dé à coudre vide", "Herbes de sage-femme", "15 sous"],
-    feature: { name: "L'aiguille dans l'ourlet", text: "Tu sais faire un reliquaire (une heure, un souvenir d'une personne consentante, un seul à la fois). Les Gardiennes reconnaissent ton aiguille, et te cachent pour une nuit." },
+    feature: { name: "L'aiguille dans l'ourlet", text: "Tu sais faire un reliquaire (une heure, un souvenir d'une personne consentante, un seul reliquaire à la fois, une fois par hiver). Les Gardiennes reconnaissent ton aiguille, et te cachent pour une nuit." },
   },
 ];
 
