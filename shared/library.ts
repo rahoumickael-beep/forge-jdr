@@ -1,6 +1,7 @@
 // Bibliothèque de scénarios écrits à la main.
 // Contrairement aux scénarios tirés au hasard, ceux-ci sont prêts à jouer : textes à lire, choix, carte proposée.
 import { MENSUALITE } from "./library-archipel";
+import { NUMERO_ONZE } from "./library-noyes";
 import { AVIS_DE_SIX_HEURES } from "./library-residence";
 import { DEUX_SOUVENIRS } from "./library-ternelande";
 import type { Scenario } from "./types";
@@ -257,4 +258,4 @@ Expérience : environ 150 XP par personnage si tous les combats ont lieu. Fais p
   },
 };
 
-export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE, DEUX_SOUVENIRS, AVIS_DE_SIX_HEURES];
+export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE, DEUX_SOUVENIRS, AVIS_DE_SIX_HEURES, NUMERO_ONZE];

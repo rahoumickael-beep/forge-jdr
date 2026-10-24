@@ -119,6 +119,11 @@ export const COTE_DES_NOYES: Canon = {
     { nom: "Irène Vauquelin", alias: ["Madame Vauquelin", "Vauquelin"], titre: "médium, fondatrice du Cercle Thalassa", ou: "l'hôtel des Bains", faction: "thalassa", age: 45, etat: "vivant" },
     // Dans les lettres et à la première séance (bible, sections 8 et 11)
     { nom: "Louise Marchal", alias: ["Marchal", "mademoiselle Marchal"], titre: "institutrice", ou: "Caen", age: 25, etat: "vivant" },
+    { nom: "Lucien Tellier", alias: ["Tellier", "le numéro onze"], titre: "représentant en draps, mari de Germaine Tellier", ou: "Rouen", etat: "vivant" },
+    { nom: "Gaston Hardouin", alias: ["Gaston", "Hardouin"], titre: "contrebandier", ou: "Saint-Clair-sur-Mer", etat: "vivant" },
+    { nom: "Marcel", alias: ["le vieux Marcel"], titre: "pêcheur de Saint-Clair, qui a trouvé le numéro onze", ou: "Saint-Clair-sur-Mer", etat: "vivant" },
+    { nom: "Madame Hébert", alias: ["Hébert"], titre: "sœur de Raymond Coquart, destinataire de la lettre du numéro neuf", ou: "Cherbourg", etat: "vivant" },
+    { nom: "Jules", alias: ["le petit Jules"], titre: "gamin de Saint-Clair, messager du phare", ou: "Saint-Clair-sur-Mer", etat: "vivant" },
     { nom: "Germaine Tellier", alias: ["Madame Tellier", "Tellier"], titre: "destinataire de la lettre du numéro onze", ou: "Rouen", etat: "vivant" },
   ],
 

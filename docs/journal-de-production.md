@@ -94,6 +94,19 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Scénario d’ouverture « Deux souvenirs » (`shared/library-ternelande.ts`), à Saint-Ours-des-Glaces : le Dîmier Hugues aux mains froides (frère oublié de Colin Lagel), la veuve Aude et le dé à coudre, le Reflet d’Isabeau, la compagnie du Héron de Wendel Haak.
 - Charte dark fantasy toujours provisoire (lumière mise en tête du prompt) : pas de peinture avant le choix de Mickael.
 
+- Livre des joueurs (8 chapitres, deux agents puis relectures règles et orthographe) : plafond « un même souvenir ne redevient intact qu’une fois par repos long », eau glacée et grand froid unifiés, glace, prix et salaires en deniers revus, personnages d’exemple fixes (Perrin fossoyeur, Anseau chirurgien-barbier). Gris-de-Sang revu une seconde fois : sorts de niveau 3 à 5, souvenir flou comme les autres ; niveau 6 et plus, perdu d’un coup (sinon un lanceur Gris-de-Sang était Vide en une semaine). Livres : 106/28/36 p. (`npm run livres:ternelande`), sans peintures.
+
+## Monde cyberpunk : la Résidence (« Ville sous bail »), 25/10/2026
+- Mickael dort : décisions de Claude, à relire. Bible `content/residence/lore.md` relue et reprise : fondateur renommé Hector Valcroze (Sauvagnac était un nom réel gênant) ; le gestionnaire du Bail est public, son nom « la Concierge » est secret ; heures : payer ne vieillit pas tant que le solde est positif ; sous zéro, un niveau d’épuisement par tranche de 100 h de dette, mort à −500 h (la règle « un niveau par semaine » tuait un docker en six semaines) ; calendrier « du Bail », 2052 = an 0 ; jauge « l’Emprise du Conseil » (100, jamais au-dessus).
+- Canon `shared/canon/cyberpunk.ts` (+ table), classes (`residence-classes.ts` : Fouineur, Solo, Médic de rue, Huissier défroqué, Coursier, Syndicaliste, Fixeur, Mécano, Prêcheur des Sans-Bail, Journaliste), origines (Résident des Blocs 300 h, Enfant des Hauts 1 500 h, Prolongé, Sans-Bail, Cousu 300 h, Locataire 6 mois de bail), règles du monde, bestiaire de 24 créatures (`residence-bestiaire.ts`, quatre familles), 30 cartes, scénario « L’avis de six heures » : tous relus et corrigés.
+- Prix des grands pouvoirs de piratage : une trace ou des heures (rang 3-5 : 15 h, rang 6-8 : 60 h, rang 9 : 80 h ; 100 h par jour au plus) ; trois traces = une escouade d’Huissiers.
+- **Question pour Mickael (A/B/C)** : aux hauts niveaux, 60 h ne pèsent plus rien. A : prix en heures multiplié par la maîtrise (rang 6-8 à 300 h au niveau 13) ; B : garder les prix fixes, la trace reste la vraie limite ; C : seules les traces, plus d’heures. Reco : A.
+- Livre des joueurs (8 chapitres) écrit, relu, en correction ; fabrique `scripts/livres/monde-residence.ts`, planches `shared/canon/residence-peintures.ts`.
+
+## Monde d’horreur : la Côte des Noyés (1923), 25/10/2026
+- Bible `content/cote-des-noyes/lore.md` relue et reprise : fuites du secret retirées des passages joueurs ; noms : la Havraise (assurances), la Compagnie des Paquebots de la Manche, Edmond Lemarquand ; baie sur la côte ouest du Cotentin (Carteret – nez de Jobourg) ; maréchal des logis-chef Coquart ; la Marée (0 à 10, Présages, seuils) et la jauge « les Passagers » (1 412, maximum 1 512 : `max` ajouté au type de jauge).
+- Canon `shared/canon/horreur.ts` (+ table), genre horreur refait (caractéristiques Force, Adresse, Endurance, Savoir, Sang-froid, Présence). Scénario « Le numéro onze » écrit (en relecture). Classes, origines, règles et bestiaire en cours (agents).
+
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
 - Planche du demi-orc à repeindre.

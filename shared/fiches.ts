@@ -28,6 +28,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   "Gens du Bail": "neon magenta and cyan reflections in falling rain, wet concrete and yellow armband tones",
   "Drones et automates": "cold white scanner beams cutting through rain mist, gunmetal and indicator green tones",
   Cousus: "sickly green clinic glow and flickering red warning lamps, pale skin and chrome tones",
+  // La Côte des Noyés
+  "Bêtes de la côte": "grey dawn mist over the tidal flats, wet shingle and seaweed tones",
+  "Gens de 1923": "paraffin lamp and lighthouse lantern in rain, sepia and tarred wool tones",
+  "Ce que rend la mer": "flat pre-dawn grey light on wet sand, drowned pallor and cold silver tones",
+  "La Fosse": "faint green light seen from underwater, murk and drifting silt tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */
