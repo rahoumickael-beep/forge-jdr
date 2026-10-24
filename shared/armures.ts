@@ -80,8 +80,12 @@ const SOMME = /^(\d[\d  ]*) (godets|francs|dollars|lumens|lm|h|po|pa|livres?|sou
 
 /**
  * Équipement de départ : classe puis historique, sans doublon ni seconde gourde.
- * Les sommes de même monnaie s'additionnent, sauf au Grand Sec où l'on garde la plus haute.
+ * Un objet déjà cité au début d'un autre (« Lasso de crin » et « Lasso de crin de douze mètres ») ne compte qu'une fois.
+ * Les sommes de même monnaie s'additionnent, sauf dans les mondes où l'on garde la plus haute.
  */
+/** Mondes dont le livre dit : l'argent de départ est la plus haute des sommes, pas leur total. */
+export const PLUS_HAUTE_SOMME = new Set(["post-apo", "western"]);
+
 export function equipementDeDepart(classe: readonly string[], historique: readonly string[], plusHauteSomme = false): string[] {
   const objets: string[] = [];
   const sommes = new Map<string, number>();
@@ -94,7 +98,8 @@ export function equipementDeDepart(classe: readonly string[], historique: readon
       sommes.set(m[2], avant === undefined ? valeur : plusHauteSomme ? Math.max(avant, valeur) : avant + valeur);
       continue;
     }
-    if (objets.includes(objet)) continue;
+    const bas = objet.toLowerCase();
+    if (objets.some((o) => o.toLowerCase().startsWith(bas) || bas.startsWith(o.toLowerCase()))) continue;
     if (mot(objet) === "gourde" && objets.some((o) => mot(o) === "gourde")) continue;
     objets.push(objet);
   }

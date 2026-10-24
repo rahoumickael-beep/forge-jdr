@@ -20,7 +20,8 @@
     "livres:ternelande": "tsx scripts/livres/index.ts tout dist-livre --monde=ternelande",
     "livres:residence": "tsx scripts/livres/index.ts tout dist-livre --monde=residence",
     "livres:noyes": "tsx scripts/livres/index.ts tout dist-livre --monde=noyes",
-    "livres:sec": "tsx scripts/livres/index.ts tout dist-livre --monde=sec"
+    "livres:sec": "tsx scripts/livres/index.ts tout dist-livre --monde=sec",
+    "livres:asile": "tsx scripts/livres/index.ts tout dist-livre --monde=asile"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.1.0",

@@ -200,7 +200,7 @@ Dans le Champ, il n'y a pas de magie. Il y a des hommes et des femmes qui tirent
 Les cartouches comptent. Chaque personnage tient sur sa fiche le nombre de cartouches de chaque arme.
 
 - 1 cartouche par attaque.
-- Revolver : 6 coups, recharger prend une action. Winchester : 15 coups.
+- Revolver : 6 coups, recharger les six coups prend une action (une action bonus pour le Pistolero). Winchester : 15 coups.
 - 50 cartouches pèsent 1,5 kg.
 - On pille 1d6 cartouches sur un ennemi tombé. On ne ramasse pas ses douilles.
 
@@ -254,7 +254,7 @@ Le revolver Colt, le Winchester à levier, le fusil Sharps des chasseurs de biso
 
 ### L'argent [Joueurs]
 
-Le dollar américain et la piastre d'argent du Champ, qui valent la même chose. Un repas coûte 25 cents, une nuit à l'auberge 1 dollar, un bon cheval 60 dollars, un Colt 17, un Winchester 25, une boîte de 50 cartouches 1 à 5 selon l'endroit. Un vaquero gagne 30 dollars par mois, un shérif 75.
+Le dollar américain et la piastre d'argent du Champ, qui valent la même chose. Un repas coûte 25 cents, une nuit à l'auberge 1 dollar, un bon cheval 60 dollars, un Colt 17, un Winchester 30, une boîte de 50 cartouches 1 à 5 selon l'endroit. Un vaquero gagne 30 dollars par mois, un shérif 75.
 
 ---
 

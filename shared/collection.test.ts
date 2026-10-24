@@ -5,7 +5,7 @@ import { catalogue, carteDuCatalogue, nettoyerCollections, TAILLE_PAQUET, tirerP
 
 const CAT = catalogue("fantasy");
 
-for (const genre of ["fantasy", "science-fiction", "dark-fantasy", "cyberpunk", "horreur", "post-apo"] as const) test(`collection : un catalogue ${genre} avec des ids uniques et chaque rareté`, () => {
+for (const genre of ["fantasy", "science-fiction", "dark-fantasy", "cyberpunk", "horreur", "post-apo", "western"] as const) test(`collection : un catalogue ${genre} avec des ids uniques et chaque rareté`, () => {
   const CAT = catalogue(genre);
   assert.ok(CAT.length >= 25, `${CAT.length} cartes`);
   assert.equal(new Set(CAT.map((c) => c.id)).size, CAT.length);
@@ -29,7 +29,7 @@ test("collection : un paquet = 3 communes, 2 peu communes, puis une rare ou une 
     assert.equal(new Set(ids).size, ids.length, "pas de doublon dans un même paquet");
   }
   assert.ok(reliques / N > 0.2 && reliques / N < 0.3, `reliques : ${reliques / N}`);
-  assert.deepEqual(tirerPaquet("western", 1), [], "un monde sans catalogue ne donne rien");
+  assert.deepEqual(tirerPaquet("pirates", 1), [], "un monde sans catalogue ne donne rien");
 });
 
 test("collection : une collection importée ne garde que des cartes du catalogue et des joueurs présents", () => {

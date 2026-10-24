@@ -28,4 +28,5 @@ test("calcule les cas des livres", () => {
 test("fusionne l'équipement de départ", () => {
   assert.deepEqual(equipementDeDepart(["Gourde de douze godets", "30 godets"], ["Gourde", "40 godets", "Corde"], true), ["Gourde de douze godets", "Corde", "40 godets"]);
   assert.deepEqual(equipementDeDepart(["Sac", "10 po"], ["Sac", "5 po"]), ["Sac", "15 po"]);
+  assert.deepEqual(equipementDeDepart(["Lasso de crin de douze mètres", "Chapeau à larges bords et jambières de cuir"], ["Lasso de crin", "Chapeau à larges bords"]), ["Lasso de crin de douze mètres", "Chapeau à larges bords et jambières de cuir"]);
 });

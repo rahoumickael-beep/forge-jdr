@@ -7,6 +7,7 @@ import { COLLECTION_TERNELANDE } from "./canon/collection-dark-fantasy";
 import { COLLECTION_RESIDENCE } from "./canon/collection-cyberpunk";
 import { COLLECTION_NOYES } from "./canon/collection-horreur";
 import { COLLECTION_SEC } from "./canon/collection-post-apo";
+import { COLLECTION_ASILE } from "./canon/collection-western";
 import { Rng } from "./random";
 import type { GenreId } from "./types";
 
@@ -44,7 +45,7 @@ export const FAMILLES: { id: Famille; label: string }[] = [
 export const PAQUET = { communes: 3, peuCommunes: 2, chanceRelique: 0.25 };
 export const TAILLE_PAQUET = PAQUET.communes + PAQUET.peuCommunes + 1;
 
-const CATALOGUES: Partial<Record<GenreId, CarteDeCollection[]>> = { fantasy: COLLECTION_AUBRETERRE, "science-fiction": COLLECTION_ARCHIPEL, "dark-fantasy": COLLECTION_TERNELANDE, cyberpunk: COLLECTION_RESIDENCE, horreur: COLLECTION_NOYES, "post-apo": COLLECTION_SEC };
+const CATALOGUES: Partial<Record<GenreId, CarteDeCollection[]>> = { fantasy: COLLECTION_AUBRETERRE, "science-fiction": COLLECTION_ARCHIPEL, "dark-fantasy": COLLECTION_TERNELANDE, cyberpunk: COLLECTION_RESIDENCE, horreur: COLLECTION_NOYES, "post-apo": COLLECTION_SEC, western: COLLECTION_ASILE };
 export const catalogue = (genre: GenreId): CarteDeCollection[] => CATALOGUES[genre] ?? [];
 export const carteDuCatalogue = (genre: GenreId, id: string) => catalogue(genre).find((c) => c.id === id);
 

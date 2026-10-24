@@ -189,7 +189,7 @@ export const CHAMP_D_ASILE: Canon = {
   cartes: {
     evenements: [
       { titre: "L'arbre en travers", texte: "Un tronc couché sur la piste, l'écorce encore blanche. Pas un bruit dans les saules, sinon un cheval qui souffle quelque part.", effet: "Embuscade possible : jet de Perception DD 13 pour repérer les cavaliers avant qu'ils ne sortent." },
-      { titre: "Le clocher à midi", texte: "L'ombre du clocher touche le marché ; la place se vide d'un coup, les volets claquent, les mères rappellent leurs enfants.", effet: "Un duel ou une arrestation se prépare : un jet de Perspicacité DD 12 dit qui l'attend." },
+      { titre: "Le clocher à midi", texte: "L'ombre du clocher touche le marché ; la place se vide d'un coup, les volets claquent, les mères rappellent leurs enfants.", effet: "Un duel ou une arrestation se prépare : un jet d'Intuition DD 12 dit qui l'attend." },
       { titre: "Les mires du rail", texte: "Au loin sur la prairie, une file de géomètres plante des piquets, une mire sur l'épaule. Le vieux rancher les regarde de sa galerie, le sabre sur les genoux.", effet: "Ces piquets sont arrachés ou respectés : le Champ le saura avant la nuit." },
       { titre: "Le gué à la lune", texte: "Un troupeau de chevaux passe l'eau en silence. Sur la colline, la braise d'une cigarette.", effet: "Voleurs de chevaux ou rurales : sauvegarde d'Adresse DD 12 pour ne pas être vu en traversant." },
       { titre: "La voie qui s'arrête", texte: "Une locomotive au bout des rails, la vapeur qui monte dans le soir, et à dix mètres devant elle une petite borne gravée d'un aigle, d'une abeille et du millésime « 1820 ».", effet: "Qui franchit la borne avec un piquet ou un fusil est vu de tout Fort-Rail." },
@@ -203,10 +203,10 @@ export const CHAMP_D_ASILE: Canon = {
     ],
     objets: [
       { titre: "Un Colt de l'armée", texte: "Un revolver à six coups, la crosse usée par une autre main, un 17 marqué au couteau sous le pontet.", effet: "Dégâts de revolver, six coups ; recharger prend une action. Il vaut 17 dollars." },
-      { titre: "Un Winchester à levier", texte: "Une carabine à levier de 1873, la plaque de couche cabossée, un clou de laiton planté dans la crosse pour chaque saison.", effet: "Quinze coups ; portée longue. Il vaut 25 dollars." },
+      { titre: "Un Winchester à levier", texte: "Une carabine à levier de 1873, la plaque de couche cabossée, un clou de laiton planté dans la crosse pour chaque saison.", effet: "Quinze coups ; portée longue. Il vaut 30 dollars." },
       { titre: "Une boîte de cinquante cartouches", texte: "Un carton gras, un cachet de cire, l'adresse d'un armurier de Saint-Louis.", effet: "Cinquante cartouches, 1,5 kg ; 1 dollar à Fort-Rail, 2 à Bonne-Espérance, 5 à la Croix-de-Pierre." },
       { titre: "Un sabre d'aïeul", texte: "Un sabre de cavalerie de l'Empire, le fourreau cabossé, une abeille gravée près de la garde. Il a pendu des années au-dessus d'une cheminée.", effet: "Arme de guerre ; un Asilien le reconnaît et vous doit des égards, ou des comptes." },
-      { titre: "Une mire de géomètre", texte: "Une mire de laiton dans son étui, une chaîne d'arpenteur, un carnet de piquets marqués d'une locomotive dans un cercle.", effet: "Avantage aux jets de Nature et d'Investigation pour lire un tracé ; le rail la réclame." },
+      { titre: "Une mire de géomètre", texte: "Une mire de laiton dans son étui, une chaîne d'arpenteur, un carnet de piquets marqués d'une locomotive dans un cercle.", effet: "Avantage aux jets de Survie et d'Investigation pour lire un tracé ; le rail la réclame." },
       { titre: "Un sac de farine de Bonne-Espérance", texte: "Du coton gris, le nom de la ville imprimé en bleu, cousu bout à bout avec d'autres en tipi.", effet: "Vaut un cadeau à la Croix-de-Pierre : avantage en Persuasion auprès de qui le reçoit." },
       { titre: "Une étoile de Ranger", texte: "Une étoile dans un cercle, découpée dans une pièce d'argent mexicaine, l'épingle tordue.", effet: "Ouvre la parole d'un shérif ; les rurales et la Bande des Lys la reconnaissent aussi, et pas de la même façon." },
       { titre: "Un jeu de cartes marqué", texte: "Un jeu français aux coins un peu trop doux, que les doigts reconnaissent dans le noir.", effet: "Avantage aux jets d'Escamotage et de Tromperie à la table ; le surprendre avec coûte 1 point de Nom." },
