@@ -5,6 +5,7 @@ import { AUBRETERRE } from "./canon/fantasy";
 import { ARCHIPEL } from "./canon/science-fiction";
 import { TERNELANDE } from "./canon/dark-fantasy";
 import { RESIDENCE } from "./canon/cyberpunk";
+import { COTE_DES_NOYES } from "./canon/horreur";
 import type { GenreId } from "./types";
 
 export interface Idees {
@@ -51,12 +52,12 @@ export const IDEES: Record<GenreId, Idees> = {
     rewards: ["Cent heures de loyer payées", "Un Compteur piraté", "Un implant dont le loyer est réglé un an", "Une place dans le tram des Hauts, une fois", "La reconnaissance du Comité du Bloc 14", "Un avis d'expulsion annulé"],
   },
   "horreur": {
-    hooks: ["Un ami vous envoie une lettre puis disparaît.", "Un tableau change chaque nuit.", "Des disparitions suivent les marées.", "Un héritage vous attend dans une maison isolée."],
-    villains: ["un culte d'adorateurs", "une entité venue d'ailleurs", "un médecin aux expériences interdites", "un fantôme vengeur"],
-    motivations: ["ouvrir la porte aux Grands Anciens", "vaincre la mort", "se venger des vivants"],
-    enemies: ["Villageois hostiles", "Cultistes", "Chiens possédés", "Profonds", "Goule", "Spectre", "Shoggoth", "Avatar d'un dieu"],
-    twists: ["Un des héros descend des cultistes.", "La créature essayait de vous prévenir.", "Tout se passe dans un rêve partagé."],
-    rewards: ["Un tome de savoir interdit", "La vérité (coûte de la santé mentale)", "Un héritage maudit"],
+    hooks: COTE_DES_NOYES.accroches.map((a) => a.texte),
+    villains: ["un directeur d'assurances qui ne veut sauver que ses millions", "un président de compagnie qui a économisé sur les chaloupes", "une médium qui vend les voix des noyés", "un gendarme qui garde les lettres dans un tiroir", "des contrebandiers qui n'aiment pas les lanternes sur la grève"],
+    motivations: ["que le navire parte à l'heure malgré tout", "classer l'affaire avant que Paris ne s'en mêle", "faire taire les experts", "savoir ce que valent les lettres avant de payer"],
+    enemies: ["Contrebandiers", "Noyés qui marchent", "Crabes de la Fosse", "Congres de la Fosse", "Chiens de la lande", "Hommes de main de la Compagnie", "File des Revenus", "Ce qui vit dans la Fosse", "La mer elle-même"],
+    twists: ["La lettre est adressée à l'un d'entre vous.", "Le noyé de la morgue est vivant à Caen.", "Un passager sauvé ne reviendra plus sur la grève, et la mer prendra quelqu'un d'autre.", "La lettre a été écrite pour que quelqu'un la lise à temps."],
+    rewards: ["Une lettre de recommandation d'un ministre", "Quatre cents francs de frais", "La confiance de la mère Hamel", "Un Présage de plus", "Une copie des lettres originales", "L'amitié d'un armateur"],
   },
   "post-apo": {
     hooks: ["La dernière source d'eau pure est menacée.", "Un abri scellé vient de s'ouvrir.", "Une caravane promet un passage vers une terre verte.", "Un enfant ne craint pas les radiations."],

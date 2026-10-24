@@ -2,6 +2,7 @@ import { LIEUX_AUBRETERRE, NOMS_AUBRETERRE } from "./canon/fantasy-table";
 import { LIEUX_ARCHIPEL, NOMS_ARCHIPEL } from "./canon/science-fiction-table";
 import { LIEUX_TERNELANDE, NOMS_TERNELANDE } from "./canon/dark-fantasy-table";
 import { LIEUX_RESIDENCE, NOMS_RESIDENCE } from "./canon/cyberpunk-table";
+import { LIEUX_COTE_DES_NOYES, NOMS_COTE_DES_NOYES } from "./canon/horreur-table";
 import type { GenreId, Ton } from "./types";
 
 /** Couleurs de rendu de la carte pour un genre. */
@@ -105,17 +106,17 @@ export const GENRES: Genre[] = [
   {
     id: "horreur",
     label: "Horreur",
-    pitch: "Enquêtes, créatures indicibles et santé mentale fragile.",
+    pitch: "La Côte des Noyés : Cotentin, 1923. La mer rend des noyés habillés en voyageurs, et des experts d'assurances lisent leurs lettres.",
     theme: { background: "#0e0f0d", floor: "#4a4a40", wall: "#1c1d19", water: "#203a36", vegetation: "#2f3d26", road: "#3e3c33", door: "#7a1f1f", grid: "rgba(0,0,0,.4)" },
-    stats: ["Force", "Dextérité", "Constitution", "Intelligence", "Pouvoir", "Santé mentale"],
-    archetypes: ["Détective privé", "Professeur d'occultisme", "Journaliste", "Médecin", "Antiquaire", "Prêtre", "Photographe", "Ancien soldat"],
-    origins: ["Bostonien", "Aristocrate anglais", "Fermier du Vermont", "Immigrée italienne", "Universitaire de Miskatonic"],
-    equipment: ["Revolver", "Lampe torche", "Carnet de notes", "Appareil photo", "Livre interdit", "Flasque de whisky", "Crucifix", "Pied-de-biche"],
-    abilities: ["Fouiller", "Bibliothèque", "Psychologie", "Occultisme", "Premiers soins", "Discrétion"],
-    nameStart: ["Ar", "Ed", "Har", "Lav", "Ru", "Wil", "Abi", "Cor", "Eli", "Mar"],
-    nameEnd: ["thur", "gar", "vey", "inia", "dolph", "bur", "gail", "nelia", "jah", "tha"],
-    places: ["le manoir Blackwood", "l'asile d'Arkham", "le village de pêcheurs d'Innsmouth", "la bibliothèque interdite", "le phare abandonné"],
-    traits: ["sceptique", "nerveux", "fasciné par l'occulte", "insomniaque"],
+    stats: ["Force", "Adresse", "Endurance", "Savoir", "Sang-froid", "Présence"],
+    archetypes: ["Expert en sinistres", "Ancien poilu", "Médecin", "Abbé", "Journaliste", "Photographe", "Pêcheur", "Médium", "Gendarme", "Antiquaire"],
+    origins: ["Gens de la côte", "Revenus de la guerre", "Bourgeois de la ville", "Étrangers", "Enfants du siècle", "Sensibles"],
+    equipment: ["Revolver d'ordonnance de 1892", "Lampe-tempête", "Carnet de notes", "Appareil photographique à soufflet", "Lettre de mission de la Havraise", "Flasque de calvados", "Gaffe de pêcheur", "Table des marées"],
+    abilities: ["Poser les bonnes questions", "Lire un contrat", "Tenir une tranchée", "Soigner un corps qui ne pourrit pas", "Connaître les marées", "Bénir les morts", "Faire parler un témoin", "Tenir sa lampe dans le vent", "Écouter la mer"],
+    nameStart: NOMS_COTE_DES_NOYES.prenoms,
+    nameEnd: NOMS_COTE_DES_NOYES.familles,
+    places: LIEUX_COTE_DES_NOYES,
+    traits: ["vérifie les marées avant de sortir", "ne siffle jamais face à la mer", "garde une lettre non ouverte dans sa poche", "compte les couverts sur la table", "dort avec la lampe allumée", "parle de la mer comme d'une voisine"],
   },
   {
     id: "post-apo",

@@ -98,7 +98,7 @@ export function noterFait(c: Campagne, texte: string) {
 }
 
 /** Plafond de la jauge d'un monde : 100, ou plus si elle part plus haut (131 Phares dans l'Archipel). */
-export const jaugeMax = (canon: Canon | undefined) => Math.max(100, canon?.campagne?.jauge?.depart ?? 100);
+export const jaugeMax = (canon: Canon | undefined) => canon?.campagne?.jauge?.max ?? Math.max(100, canon?.campagne?.jauge?.depart ?? 100);
 
 /** Règle la jauge ; rend les seuils franchis vers le bas, à annoncer au MJ. */
 export function reglerJauge(c: Campagne, valeur: number, canon: Canon | undefined): { valeur: number; effet: string }[] {

@@ -67,6 +67,8 @@ export interface Accroche {
 /** Une jauge de campagne propre au monde : elle descend, et le monde change à chaque seuil. */
 export interface JaugeDuMonde {
   nom: string;
+  /** Au plus (par défaut, le départ ou 100). */
+  max?: number;
   depart: number;
   /** Du plus haut au plus bas. */
   seuils: { valeur: number; effet: string }[];
