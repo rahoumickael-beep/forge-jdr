@@ -1,6 +1,7 @@
 // Bibliothèque de scénarios écrits à la main.
 // Contrairement aux scénarios tirés au hasard, ceux-ci sont prêts à jouer : textes à lire, choix, carte proposée.
 import { MENSUALITE } from "./library-archipel";
+import { DEUX_SOUVENIRS } from "./library-ternelande";
 import type { Scenario } from "./types";
 
 /** Campagne fantasy « Le Trône du Dieu Mort », scénario 1 : ouverture, niveau 1. */
@@ -255,4 +256,4 @@ Expérience : environ 150 XP par personnage si tous les combats ont lieu. Fais p
   },
 };
 
-export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE];
+export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE, DEUX_SOUVENIRS];

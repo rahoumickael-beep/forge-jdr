@@ -3,6 +3,7 @@
 // Fiches façon D&D 5e : FP 0 à 20, distances en mètres (1 case = 1,5 m).
 // Tout est original ou tiré du folklore : aucune créature protégée hors SRD 5.1.
 import { BESTIAIRE_ARCHIPEL } from "./archipel-bestiaire";
+import { BESTIAIRE_TERNELANDE } from "./ternelande-bestiaire";
 import { stylePeinture } from "./charte";
 import { cost, fabriquerCreature, hit, modOf, multi, recharge, save, special, type CreatureInput } from "./fiches";
 import type { Encounter, GenreId } from "./types";
@@ -1644,7 +1645,7 @@ const CREATURES_AUBRETERRE: Creature[] = [
 ];
 
 /** Toutes les créatures de tous les mondes ; creaturesFor(genre) pour un seul. */
-export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL];
+export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE];
 
 /** Créatures d'un genre (pour l'instant, seul le monde fantasy d'Aubreterre en a). */
 export function creaturesFor(genre: GenreId): Creature[] {

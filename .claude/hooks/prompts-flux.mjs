@@ -11,12 +11,13 @@ const file = relative(root, String(ti.file_path ?? "")).replaceAll("\\", "/");
 // Fichiers qui contiennent des prompts : Aubreterre (fantasy) ou l'Archipel (science-fiction, fichiers archipel-*).
 const jsonPrompts = /^comfyui\/prompts-[^/]+\.json$/.test(file);
 const archipel = /^shared\/(canon\/)?archipel-[^/]+\.ts$/.test(file) || /^scripts\/livres\/monde-archipel\.ts$/.test(file) || /^comfyui\/prompts-archipel[^/]*\.json$/.test(file);
-const tsPrompts = file === "shared/bestiary.ts" || /^scripts\/livres\/[^/]+\.ts$/.test(file) || archipel;
+const ternelande = /^shared\/(canon\/)?ternelande-[^/]+\.ts$/.test(file) || /^scripts\/livres\/monde-ternelande\.ts$/.test(file);
+const tsPrompts = file === "shared/bestiary.ts" || /^scripts\/livres\/[^/]+\.ts$/.test(file) || archipel || ternelande;
 if (!jsonPrompts && !tsPrompts) process.exit(0);
 
 const regles = JSON.parse(readFileSync(join(root, "comfyui", "regles-flux.json"), "utf8"));
 const negation = new RegExp(regles.negation, "i");
-const anachronisme = new RegExp(regles.anachronismes[archipel ? "science-fiction" : "fantasy"], "i");
+const anachronisme = new RegExp(regles.anachronismes[archipel ? "science-fiction" : ternelande ? "dark-fantasy" : "fantasy"], "i");
 
 /** Prompts trouvés dans un morceau de fichier. */
 function prompts(text) {

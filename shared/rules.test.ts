@@ -1,16 +1,18 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL } from "./canon";
+import { ARCHIPEL, TERNELANDE } from "./canon";
 import { classesFor, CLASSES } from "./rules";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
-const jouables = [...fantasy, ...archipel];
+const ternelande = classesFor("dark-fantasy");
+const jouables = [...fantasy, ...archipel, ...ternelande];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
   assert.equal(archipel.length, 10);
+  assert.equal(ternelande.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -89,5 +91,14 @@ test("classes de l'Archipel : aucun secret du canon dans ce que lisent les joueu
   for (const word of BANNED) {
     const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
     assert.ok(!re.test(text.toLowerCase()), `classes de l'Archipel : « ${word} »`);
+  }
+});
+
+test("classes de la Ternelande : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify(ternelande);
+  for (const secret of TERNELANDE.secrets) assert.ok(!text.includes(secret), secret);
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes de la Ternelande : « ${word} »`);
   }
 });

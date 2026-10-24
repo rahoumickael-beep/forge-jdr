@@ -3,6 +3,7 @@
   "negation": "\\b(no|without|sans)\\s",
   "anachronismes": {
     "fantasy": "\\b(electric|electricity|telephone|power lines?|pylons?|asphalt|cars?|trucks?|plastic|concrete|neon|guns?|rifles?|pistols?|roads?|stakes?|poles?|light ?bulbs?|lamp ?posts?|street ?lights?|cables?|wires?|zippers?|sunglasses|wristwatch|helicopter|aircraft)\\b",
-    "science-fiction": "\\b(lightsabers?|light ?swords?|jedi|sith|stormtroopers?|droids?|darth|x-wings?|tie fighters?|millennium falcon|death star|nasa|american flag|planet earth|earth)\\b"
+    "science-fiction": "\\b(lightsabers?|light ?swords?|jedi|sith|stormtroopers?|droids?|darth|x-wings?|tie fighters?|millennium falcon|death star|nasa|american flag|planet earth|earth)\\b",
+    "dark-fantasy": "\\b(electric|electricity|telephone|power lines?|pylons?|asphalt|cars?|trucks?|plastic|concrete|neon|guns?|rifles?|pistols?|roads?|stakes?|poles?|light ?bulbs?|lamp ?posts?|street ?lights?|cables?|wires?|zippers?|sunglasses|wristwatch|helicopter|aircraft)\\b"
   }
 }

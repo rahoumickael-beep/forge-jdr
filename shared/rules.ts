@@ -1,6 +1,7 @@
 // Livre des règles de Forge JdR : règles de base inspirées de D&D 5e, classes et pouvoirs.
 // Brouillon v0.2 : les 14 classes fantasy sont complètes ; les 10 classes de l'Archipel (SF) sont dans archipel-classes.ts.
 import { CLASSES_ARCHIPEL } from "./archipel-classes";
+import { CLASSES_TERNELANDE } from "./ternelande-classes";
 import { REGLES_ARCHIPEL } from "./archipel-regles";
 import { REGLES_TERNELANDE } from "./ternelande-regles";
 import type { GenreId } from "./types";
@@ -974,6 +975,7 @@ export const CLASSES: CharacterClass[] = [
     subclasses: SUBCLASSES[c.id]?.list ?? [],
   })),
   ...CLASSES_ARCHIPEL,
+  ...CLASSES_TERNELANDE,
 ];
 
 /** La sous-classe d'un personnage, s'il en a choisi une. */

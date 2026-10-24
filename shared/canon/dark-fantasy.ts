@@ -134,6 +134,10 @@ export const TERNELANDE: Canon = {
     { nom: "Hugues aux mains froides", alias: ["Hugues"], titre: "Dîmier de passage", ou: "Saint-Ours-des-Glaces", faction: "dimiers", etat: "vivant" },
     { nom: "Aude", alias: ["la veuve Aude"], titre: "Gardienne de Saint-Ours-des-Glaces", ou: "Saint-Ours-des-Glaces", faction: "gardiennes", etat: "vivant" },
     { nom: "Gombert", alias: ["Maître Gombert"], titre: "meunier de Saint-Ours-des-Glaces", ou: "Saint-Ours-des-Glaces", etat: "vivant" },
+    { nom: "Colin Lagel", alias: ["Colin", "Lagel", "les Lagel"], titre: "pêcheur sous la glace, veuf", ou: "Saint-Ours-des-Glaces", etat: "vivant" },
+    { nom: "Isabeau", titre: "fille de la veuve Aude, noyée sous la glace en 509", ou: "Saint-Ours-des-Glaces", etat: "mort" },
+    { nom: "Josselin", alias: ["Père Josselin"], titre: "prêtre de Saint-Ours-des-Glaces", ou: "Saint-Ours-des-Glaces", faction: "eglise", etat: "vivant" },
+    { nom: "Wendel Haak", alias: ["Wendel", "la compagnie du Héron", "Héron"], titre: "capitaine de la compagnie du Héron", ou: "Vaugelée", faction: "comtes", etat: "vivant" },
     { nom: "Dame Aube-de-Cendre", alias: ["Aube-de-Cendre", "la Vieille Grise"], titre: "dernière de la Cour Grise", ou: "Les Comtés Rouges", etat: "vivant" },
   ],
 
