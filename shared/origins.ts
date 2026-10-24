@@ -1,7 +1,7 @@
 // Création de personnage façon Baldur's Gate 3 : origines, historiques, personnalité.
 // Contenu du monde fantasy d'Aubreterre (voir la bible du monde dans les fichiers du projet) ;
 // celui de l'Archipel (SF) est dans archipel-origines.ts.
-import { HISTORIQUES_ARCHIPEL, ORIGINES_ARCHIPEL } from "./archipel-origines";
+import { HISTORIQUES_ARCHIPEL, ORIGINES_ARCHIPEL, PERSONNALITE_ARCHIPEL } from "./archipel-origines";
 import type { GenreId } from "./types";
 
 /** Index des caractéristiques : 0 For, 1 Dex, 2 Con, 3 Int, 4 Sag, 5 Cha (noms adaptés au genre). */
@@ -415,6 +415,9 @@ export const PERSONALITY: Record<"trait" | "ideal" | "bond" | "flaw", string[]> 
     "J'ai peur du noir depuis le Glas, et je préfère mourir que l'avouer.",
   ],
 };
+
+/** Suggestions de personnalité du monde de la partie. */
+export const personnaliteDe = (genre: GenreId): typeof PERSONALITY => (genre === "science-fiction" ? PERSONNALITE_ARCHIPEL : PERSONALITY);
 
 /** Achat par points (27 points, valeurs de 8 à 15). */
 export const POINT_BUY_BUDGET = 27;

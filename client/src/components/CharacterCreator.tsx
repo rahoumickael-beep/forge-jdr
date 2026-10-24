@@ -7,6 +7,7 @@ import {
   backgroundsFor,
   originsFor,
   PERSONALITY,
+  personnaliteDe,
   POINT_BUY_BUDGET,
   POINT_BUY_COST,
   STANDARD_ARRAY,
@@ -425,7 +426,7 @@ export function CharacterCreator({ room, onDone, onClose }: { room: RoomView; on
                       <textarea className="input" rows={2} value={traits[k]} maxLength={300} onChange={(e) => setTraits({ ...traits, [k]: e.target.value })} />
                     </label>
                     <div className="cc-chips">
-                      {PERSONALITY[k].map((p) => (
+                      {personnaliteDe(room.genre)[k].map((p) => (
                         <button key={p} type="button" className="cc-chip small" aria-pressed={traits[k] === p} onClick={() => setTraits({ ...traits, [k]: p })}>{p}</button>
                       ))}
                     </div>

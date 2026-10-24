@@ -2,7 +2,7 @@
 // complètes compatibles 5e, et la création de personnage avec les origines, les 14 classes et leurs sous-classes.
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { BACKGROUNDS, ORIGINS, PERSONALITY, POINT_BUY_COST, STANDARD_ARRAY, subclassLevel, type Origin } from "../../shared/origins";
+import { BACKGROUNDS, ORIGINS, personnaliteDe, POINT_BUY_COST, STANDARD_ARRAY, subclassLevel, type Origin } from "../../shared/origins";
 import { CLASSES, REGLES_DU_MONDE, type CharacterClass, type Power, type RuleSection } from "../../shared/rules";
 import { MODELES } from "../../shared/vaisseaux";
 import { GENRES } from "../../shared/genres";
@@ -102,7 +102,7 @@ function historiques(): string {
       .join("")}
     <h3>Personnalité</h3>
     <p>Choisis ou tire un trait, un idéal, un lien et un défaut. Ils ne t'obligent à rien : ils donnent au MJ et aux autres joueurs une prise sur ton personnage.</p>
-    ${table("Traits", PERSONALITY.trait)}${table("Idéaux", PERSONALITY.ideal)}${table("Liens", PERSONALITY.bond)}${table("Défauts", PERSONALITY.flaw)}
+    ${table("Traits", personnaliteDe(MONDE.genre).trait)}${table("Idéaux", personnaliteDe(MONDE.genre).ideal)}${table("Liens", personnaliteDe(MONDE.genre).bond)}${table("Défauts", personnaliteDe(MONDE.genre).flaw)}
   </div>`;
 }
 

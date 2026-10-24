@@ -52,6 +52,40 @@ try {
   await pl.getByRole("button", { name: "C'est mon personnage" }).click();
   await pl.waitForTimeout(400);
 
+  // Une deuxième joueuse passe par le créateur pas à pas, avec une espèce, une classe et un historique de l'Archipel.
+  const p2 = await (await browser.newContext({ viewport: { width: 1400, height: 900 } })).newPage();
+  p2.setDefaultTimeout(15000);
+  p2.on("pageerror", (e) => fail(`erreur JS côté joueuse 2 : ${e.message}`));
+  await p2.goto(`${URL}/?partie=${code}`);
+  await p2.fill("#pseudo", "Inès");
+  await p2.getByRole("button", { name: "S'asseoir à la table" }).click();
+  await p2.getByRole("button", { name: "Créer pas à pas" }).click();
+  await p2.getByRole("button", { name: /Tarrak/ }).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.getByRole("button", { name: /Chantre/ }).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.getByRole("button", { name: /Fidèle d'Ancre/ }).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  for (const [stat, n] of [["Instinct", 7], ["Endurance", 6], ["Puissance", 2]]) for (let i = 0; i < n; i++) await p2.getByRole("button", { name: `Monter ${stat}` }).click();
+  await p2.screenshot({ path: join(OUT, "createur-carac.png") });
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  const suivant = p2.getByRole("button", { name: "Suivant" });
+  while (await suivant.isDisabled()) await p2.locator('.cc-chip[aria-pressed="false"]:not([disabled])').first().click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.fill("#cc-nom", "Garance Morel");
+  await p2.locator(".cc-trait").first().locator(".cc-chip").nth(1).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.getByRole("button", { name: "Suivant" }).click();
+  await p2.screenshot({ path: join(OUT, "createur-recap.png") });
+  await p2.getByRole("button", { name: "Entrer dans l'histoire" }).click();
+  await p2.waitForTimeout(500);
+  const garance = await gm.evaluate(() => window.__forge?.().characters.find((c) => c.name === "Garance Morel"));
+  if (!garance) fail("le personnage SF créé pas à pas n'arrive pas chez le MJ");
+  else {
+    if (!("Instinct" in garance.stats) || "Sagesse" in garance.stats) fail(`caractéristiques du genre absentes : ${Object.keys(garance.stats).join(", ")}`);
+    console.log(`Créateur : ${garance.name}, ${garance.origin}, ${garance.archetype}, PV ${garance.hp}, CA ${garance.ac}, Instinct ${garance.stats.Instinct}`);
+  }
+
   // Le MJ sort le cargo du groupe et une corvette, montre la corvette et pose les deux.
   const mj = (e, p) => gm.evaluate(([e, p]) => window.__forgeSend(e, p), [e, p]);
   await mj("vaisseau:creer", { modele: "cargo-leger", nom: "Pie-Grièche", equipage: "groupe" });

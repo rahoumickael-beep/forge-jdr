@@ -272,3 +272,39 @@ export const HISTORIQUES_ARCHIPEL: Background[] = [
     feature: { name: "Le diapason sous la table", text: "Les fidèles reconnaissent le signe du diapason et te cachent pour une nuit." },
   },
 ];
+
+/** Suggestions de personnalité de l'Archipel (le joueur peut toujours écrire la sienne). */
+export const PERSONNALITE_ARCHIPEL: Record<"trait" | "ideal" | "bond" | "flaw", string[]> = {
+  trait: [
+    "Je touche la coque avant chaque saut, toujours au même endroit.",
+    "Je compte mes dettes à voix haute, celles des autres aussi.",
+    "Je parle aux moteurs, et j'ai l'impression qu'ils m'écoutent.",
+    "Je garde un éclat de cristal dans ma botte, et je ne dis pas pourquoi.",
+    "Je ne dis « monsieur » qu'à mes créanciers.",
+    "Je dors avec ma combinaison de vide à portée de main.",
+  ],
+  ideal: [
+    "La parole donnée. Un serment vaut plus qu'un contrat.",
+    "La Frange libre. Aucun Péage ne vaut une vie.",
+    "L'ordre. Sans l'Hégémonie, les Routes seraient aux pillards.",
+    "L'équipage. Le reste de l'Archipel peut bien s'éteindre.",
+    "Le Chant. Ce qu'on a brisé en une nuit doit revenir.",
+    "Les lumens. C'est la seule chose qui ne ment pas.",
+  ],
+  bond: [
+    "Mon monde natal est éteint. J'y ai laissé quelqu'un.",
+    "Je dois une vie à une Chantre dont j'ignore le nom.",
+    "J'étais sur le dernier vaisseau sorti de Morne-Saline avant le silence.",
+    "La Vieille Mère m'a prêté de l'argent une fois. Je n'ai jamais fini de payer.",
+    "Un Censeur m'a laissé partir quand j'étais enfant. Je veux savoir pourquoi.",
+    "Ce cargo appartenait à ma mère. Je le récupérerai, dette comprise.",
+  ],
+  flaw: [
+    "Je ne laisse jamais une dette impayée, même quand il faudrait.",
+    "Je resquille par principe, même quand j'ai de quoi payer.",
+    "J'ai peur des Phares, et je préfère mourir que l'avouer.",
+    "Je mens sur mon passé, et je ne me souviens plus de toutes les versions.",
+    "Je bois pour oublier le bourdonnement de l'Orgue.",
+    "Je méprise les gens de Solenne et je le leur fais sentir.",
+  ],
+};
