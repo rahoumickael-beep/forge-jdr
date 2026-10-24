@@ -230,14 +230,14 @@ On compte en quarts d'heure à pied. Du Trocadéro à la Galerie des Machines, i
 À l'Éternelle, il n'y a pas de magie. Il y a des appareils que presque personne ne comprend, brevetés au Trocadéro et loués aux particuliers : un gant à ressort, une lampe à arc de poche, une canne-grappin, une cuirasse à vapeur. Chaque personnage peut porter jusqu'à **deux brevets** (licence de 200 francs par appareil, payable au Bureau ; l'employé et le fils de Signataire se la font avancer par leur patron, l'ouvrier la reçoit de la Chambre, qui la prête à 5 francs par semaine, l'engagé des Villages de son impresario, avec une retenue de 1 franc par semaine). Il a aussi une **Pression**, de 0 à 10, notée sur sa fiche. Elle part à 0.
 
 - La Pression monte de **1** à chaque fois qu'un pouvoir ou un objet porte la mention **« Chaudière »** : un appareil qu'on emploie à plein régime. Elle monte aussi de 1 quand on **force** un appareil plus loin que sa conception (avantage au jet, ou +1d6 aux dégâts, une fois par scène).
-- Elle baisse de **2** quand on fait **purger** l'appareil chez un mécanicien (5 francs, une heure, une fois par jour), de **1** après un repos long dans le Champ, de **3** après un repos long hors de l'enceinte de l'Exposition (les gens des Villages, faute de permis de sortie, ne baissent que de **1** après un repos long).
+- Elle baisse de **2** quand on fait **purger** l'appareil chez un mécanicien (5 francs, une heure, une fois par jour), de **2** après un repos long dans le Champ, de **4** après un repos long hors de l'enceinte de l'Exposition (les gens des Villages, faute de permis de sortie, ne baissent que de **1** après un repos long).
 
 ### Ce que fait la Pression [Joueurs]
 
-- **3** : la chaudière chauffe. Les contrôleurs peuvent demander la carte et le numéro de brevet une fois par séance.
+- **3** : la chaudière chauffe. Les contrôleurs te demandent systématiquement ta carte et ton numéro de brevet.
 - **5** : surcharge. Quand un 1 naturel sort sur un jet d'attaque ou de test avec l'appareil, il s'enraye : il est inutilisable jusqu'à réparation (une heure, 10 francs). Au seuil 5 et plus, c'est l'appareil que le joueur vient d'employer qui s'enraye ou explose.
 - **7** : fuite. Quand on force l'appareil, il brûle les mains : 1d6 (2d6 dès le niveau 11) dégâts de feu ou de vapeur. Les gardes vous remarquent à distance.
-- **10** : éclatement. L'appareil explose : 2d6 + le niveau du personnage, de vapeur, dans un rayon de 3 mètres (sauvegarde pour moitié, avec la caractéristique d'Endurance du monde), il est détruit, la Pression retombe à 4. Une licence neuve coûte 200 francs.
+- **10** : éclatement. L'appareil explose : 2d6 de vapeur, plus 1d6 par tranche de 4 niveaux, dans un rayon de 3 mètres (sauvegarde pour moitié, avec la caractéristique d'Endurance du monde), il est détruit, la Pression retombe à 4. Une licence neuve coûte 200 francs.
 
 Ce système remplace les emplacements de sorts : personne n'en a, parce que personne ne lance de sort.
 

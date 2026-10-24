@@ -1,6 +1,6 @@
 // Canon de l'Exposition éternelle (steampunk, Paris, octobre 1899), tiré de la bible du monde (content/exposition-eternelle/lore.md).
 // Ajouter un nom ici est une décision : on la note dans docs/journal-de-production.md.
-// Les années de la chronologie sont des années ordinaires ; les Permanents comptent aussi « de l'Exposition » à partir de 1889 (an 0, l'ouverture).
+// Les années de la chronologie sont des années ordinaires ; les Permanents comptent aussi « de l'Exposition » à partir de 1889 (an I, l'ouverture ; 1899 est l'an XI).
 // Ce que la machine sous le sol est, ce que le Commissariat en tire et ce que prépare la Nuit du Siècle sont dans les secrets, pas dans la chronologie :
 // la chronologie ne dit que ce que tout le monde sait.
 // Tous les personnages sont inventés. L'Exposition de 1889 a bien eu lieu au Champ-de-Mars ; ses créateurs, comme les personnes réelles de l'époque, n'ont aucune place ici.
@@ -25,7 +25,7 @@ export const EXPOSITION: Canon = {
     { an: 1878, quoi: "Exposition universelle ; construction du Trocadéro." },
     { an: 1887, quoi: "Janvier : début de la construction de la Tour." },
     { an: 1888, quoi: "Création du Bureau des Brevets. Les premiers Signataires sont choisis." },
-    { an: 1889, quoi: "6 mai : ouverture de l'Exposition universelle. C'est l'an 0 de l'Exposition." },
+    { an: 1889, quoi: "6 mai : ouverture de l'Exposition universelle. C'est l'an I de l'Exposition." },
     { an: 1889, quoi: "6 novembre : l'Exposition devait fermer. Le gouvernement la proroge par décret ; le 12, la Chambre ratifie le décret à une voix de majorité par une loi de prorogation, qui sera renouvelée chaque 31 décembre." },
     { an: 1890, quoi: "Les premiers Permanents s'installent. Première nuit où la lumière baisse à Grenelle." },
     { an: 1891, quoi: "Première ligne de dirigeables, du Trocadéro aux Invalides." },
@@ -114,7 +114,7 @@ export const EXPOSITION: Canon = {
   ],
   autresLieux: [
     "Partout", "l'Éternelle", "le Champ", "le Champ-de-Mars", "les Invalides", "Paris", "la Seine", "la rive droite", "la rive gauche", "le Muséum", "la Préfecture", "la Sûreté", "la Chambre",
-    "Versailles", "Saint-Pétersbourg", "New York", "la Manche", "Rennes", "Londres", "l'Angleterre", "la Russie", "l'Italie", "l'Amérique", "la France", "l'Europe", "le Sénégal", "le Vietnam",
+    "Versailles", "Strasbourg", "l'Alsace", "l'Empire allemand", "l'Allemagne", "l'hôpital Beaujon", "Saint-Pétersbourg", "New York", "la Manche", "Rennes", "Londres", "l'Angleterre", "la Russie", "l'Italie", "l'Amérique", "la France", "l'Europe", "le Sénégal", "le Vietnam",
     "l'Annam", "le Tonkin", "la Nouvelle-Calédonie", "la Kabylie", "l'Algérie", "l'allée des Palmiers", "les quartiers voisins", "les Salons", "la rue de Grenelle", "la rue Montmartre",
     "le dépôt de l'enceinte", "la loge", "la légation", "la Compagnie", "l'Affaire", "le procès de Rennes", "l'omnibus", "le tramway", "le fiacre",
   ],
@@ -243,7 +243,7 @@ export const EXPOSITION: Canon = {
       { titre: "Une carte de Permanent", texte: "Un carton jauni, un tampon de cuivre, trois lignes à l'encre : un nom, une loge, une date.", effet: "Entrée sans billet dans l'enceinte. Elle coûte 5 francs par mois ; la perdre, c'est repasser par le Trocadéro." },
       { titre: "Un numéro de La Sirène de Javel", texte: "Quatre pages mal pliées, une encre qui laisse des traces. En une, un mécanicien mort, et la date du dernier avis de grève.", effet: "5 centimes. Avantage à un test de Persuasion avec un mécanicien ou une ouvrière à qui on le montre ; un garde qui le trouve sur toi le saisit." },
       { titre: "Une médaille de laiton retournée", texte: "Un rond de laiton numéroté, épinglé à l'envers, numéro contre la poitrine.", effet: "Dans les Villages, elle te désigne comme un ami du Conseil : un lit, un repas, une information contre un service. Ailleurs, un garde la remarque." },
-      { titre: "Une matraque à tension", texte: "Une tige de cuivre gainée de cuir, lourde comme un manche de marteau, qui tiédit dans la main.", effet: "1d6 contondants + 1d6 foudre, sauvegarde d'Endurance DD 12 ou désavantage jusqu'à la fin du prochain tour ; six décharges. Elle vaut 80 francs au marché noir, et c'est déjà un délit." },
+      { titre: "Une matraque à tension", texte: "Une tige de cuivre gainée de cuir, lourde comme un manche de marteau, qui tiédit dans la main.", effet: "1d6 contondants ; un coup par tour porte une décharge (+1d6 foudre, sauvegarde d'Endurance DD 12 ou désavantage aux attaques jusqu'à la fin du prochain tour) ; quatre décharges. Elle vaut 80 francs au marché noir, et c'est déjà un délit." },
       { titre: "Un gant à ressort", texte: "Un gant de cuir clouté, un ressort sous la paume, et un numéro de brevet gravé sur le poignet.", effet: "Coups de poing de 1d6 ; à plein régime, 2d6 de force et la cible est repoussée de 3 m (Force DD 12), la Pression monte de 1. Il vaut 60 francs, plus la licence." },
       { titre: "Un calepin à ressort", texte: "Un petit carnet de cuir au ressort fatigué, couvert de noms, de dates et de chiffres, à moitié en abréviations.", effet: "Avantage à un test d'Investigation sur ce qui y est noté. Qui le perd perd aussi ce qu'il a retenu : le MJ dit ce que tu ne retrouves pas." },
     ],

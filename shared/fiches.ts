@@ -53,6 +53,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   "Gens de la foire et de la pègre": "warm gaslight haze on a crowded evening street, soot black and tarnished gold tones",
   "Gardes, Sûreté et Commissariat": "blue-grey dusk over wet cobblestones with a polished brass gleam, steel blue and pewter tones",
   "Figures et grandes machines": "red furnace glow under a vaulted glass roof, one pale shaft of daylight through iron girders, copper and soot tones",
+  // La Cellule Hermès (photo de dossier, flash et grain)
+  "La rue et les témoins": "orange sodium streetlight on wet pavement, deep shadows between parked cars, grey and amber tones",
+  "Forces de l'ordre": "cold blue-white flash bouncing off glass and wet asphalt, steel blue and pale yellow tones",
+  "Les privés": "flat yellowish tube light in an underground car park, concrete grey and dark jacket black tones",
+  "Figures et scènes": "pale overcast window daylight over a paper-strewn table, cold paper grey and ink black tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */
