@@ -143,7 +143,7 @@ export function renderSpace(c: MapCtx): HTMLCanvasElement {
   for (const r of map.rooms) {
     const cx = (r.x + r.w / 2) * S;
     const cy = (r.y + r.h / 2) * S;
-    if (r.label === "Phare") {
+    if (r.label?.startsWith("Phare")) {
       const halo = g.createRadialGradient(cx, cy, 0, cx, cy, S * 3);
       halo.addColorStop(0, "rgba(210,230,255,0.45)");
       halo.addColorStop(1, "rgba(210,230,255,0)");

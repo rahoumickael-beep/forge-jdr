@@ -8,6 +8,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { PDFDocument } from "pdf-lib";
 import { chromium, type Page } from "playwright";
+import { MONDE } from "./monde";
 import { CSS, POLICES } from "./style";
 import { esc, HD, md } from "./texte";
 
@@ -41,7 +42,7 @@ export interface Livre {
 }
 
 const doc = (body: string, parchemin = true) =>
-  `<!doctype html><html lang="fr"><head><meta charset="utf-8"><link rel="stylesheet" href="${POLICES}"><style>${CSS}</style></head><body>${parchemin ? '<div class="parchemin"></div>' : ""}${body}</body></html>`;
+  `<!doctype html><html lang="fr"><head><meta charset="utf-8"><link rel="stylesheet" href="${POLICES}">${MONDE.polices ? `<link rel="stylesheet" href="${MONDE.polices}">` : ""}<style>${CSS}${MONDE.css ?? ""}</style></head><body>${parchemin ? '<div class="parchemin"></div>' : ""}${body}</body></html>`;
 
 async function imprimer(page: Page, html: string, fond = true): Promise<Uint8Array> {
   await page.setContent(html, { waitUntil: "networkidle" });

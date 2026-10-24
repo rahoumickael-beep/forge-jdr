@@ -2,11 +2,12 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { FIN_DE_STYLE, promptPeinture, type Cadrage } from "../../shared/charte";
+import { MONDE } from "./monde";
 
-export const ILLU_DIR = resolve("content/aubreterre/illustrations");
+export const ILLU_DIR = resolve(`${MONDE.dossier}/illustrations`);
 /** Version d'impression (--hd) : les images agrandies par comfyui/agrandir.mjs, quand elles existent. */
 export const HD = process.argv.includes("--hd");
-const ILLU_HD = resolve("content/aubreterre/illustrations-hd");
+const ILLU_HD = resolve(`${MONDE.dossier}/illustrations-hd`);
 
 
 export const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -32,7 +33,7 @@ const CADRAGE: Record<Format, Cadrage> = { large: "scene", colonne: "portrait", 
  * Le style vient de la charte du genre (shared/charte.ts) ; un prompt déjà complet (bestiaire) est gardé tel quel.
  */
 export function illustration(id: string, prompt: string, format: Format = "large", legende = "") {
-  const complet = FIN_DE_STYLE.test(prompt) ? prompt : promptPeinture("fantasy", CADRAGE[format], prompt);
+  const complet = FIN_DE_STYLE.test(prompt) ? prompt : promptPeinture(MONDE.genre, CADRAGE[format], prompt);
   const [width, height] = TAILLES[format];
   illustrationsDemandees.set(id, { id, prompt: complet, width, height });
   const cap = legende ? `<figcaption>${md(legende)}</figcaption>` : "";

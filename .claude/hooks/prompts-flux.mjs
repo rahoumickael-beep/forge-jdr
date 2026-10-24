@@ -10,7 +10,7 @@ const file = relative(root, String(ti.file_path ?? "")).replaceAll("\\", "/");
 
 // Fichiers qui contiennent des prompts : Aubreterre (fantasy) ou l'Archipel (science-fiction, fichiers archipel-*).
 const jsonPrompts = /^comfyui\/prompts-[^/]+\.json$/.test(file);
-const archipel = /^shared\/archipel-[^/]+\.ts$/.test(file) || /^comfyui\/prompts-archipel[^/]*\.json$/.test(file);
+const archipel = /^shared\/(canon\/)?archipel-[^/]+\.ts$/.test(file) || /^scripts\/livres\/monde-archipel\.ts$/.test(file) || /^comfyui\/prompts-archipel[^/]*\.json$/.test(file);
 const tsPrompts = file === "shared/bestiary.ts" || /^scripts\/livres\/[^/]+\.ts$/.test(file) || archipel;
 if (!jsonPrompts && !tsPrompts) process.exit(0);
 
