@@ -40,7 +40,12 @@ export const TERNELANDE: Canon = {
       gens: ["notaires", "Dîmiers", "courtisans"],
       peur: "les Dîmiers qui entrent partout, et le silence de la Tour",
       lieuDeRencontre: "les ruelles gelées de Haute-Cendre",
-      lieux: ["la Tour des Dîmiers", "la grande pierre de dîme", "la grand-place"],
+      lieux: [
+        "la Tour des Dîmiers", "la grande pierre de dîme", "la grand-place",
+        "la Montée du Sel", "la Porte des Boues", "l'Écritoire des Quatre-Vents",
+        "l'Hôtel de la Monnaie Grise", "l'Auberge du Chaudron Fendu", "le Palais de l'Éperon",
+        "le Puits des Chaînes", "la Cour des Manteaux", "la Fosse des Rois",
+      ],
     },
     {
       nom: "Les Neiges Hautes",
@@ -49,7 +54,12 @@ export const TERNELANDE: Canon = {
       gens: ["chasseurs de phoques", "bergers de rennes", "gens des Neiges"],
       peur: "de monter trop haut et d'oublier son nom",
       lieuDeRencontre: "le bord des Neiges Hautes",
-      lieux: ["le Palais Sans Ombre", "le Cairn des Pâles"],
+      lieux: [
+        "le Palais Sans Ombre", "le Cairn des Pâles",
+        "la Marche de Givre", "Bourg-Fumant", "la Forge Sans Feu",
+        "l'Échelle des Os", "la Halte des Trois-Bonnets", "la Baie des Mâchoires",
+        "le Dernier Piquet", "le Cœur Gelé",
+      ],
     },
     {
       nom: "Vaugelée",
@@ -58,7 +68,12 @@ export const TERNELANDE: Canon = {
       gens: ["pêcheurs sous la glace", "passeurs", "chasseurs de canards"],
       peur: "les Reflets, qui frappent sous la glace",
       lieuDeRencontre: "un lac gelé de Vaugelée",
-      lieux: ["Saint-Ours-des-Glaces"],
+      lieux: [
+        "Saint-Ours-des-Glaces",
+        "l'Écluse-Morte", "le Lac Sans Nom", "l'Île aux Nasses",
+        "le Gué des Perches", "la Cabane de la Mère", "la Cloche Engloutie",
+        "l'Auberge de l'Anguille Grise",
+      ],
     },
     {
       nom: "La Forêt des Blancs-Bois",
@@ -67,7 +82,12 @@ export const TERNELANDE: Canon = {
       gens: ["Sylvains", "sorcières"],
       peur: "de boire la sève sans savoir",
       lieuDeRencontre: "une clairière des Blancs-Bois",
-      lieux: ["les Blancs-Bois"],
+      lieux: [
+        "les Blancs-Bois",
+        "la Rivière Lente", "la Lisière des Écorces", "le Pont d'Osier-Blanc",
+        "la Clairière des Cent-Tasses", "le Haut-Tressage", "l'Arbre de la Mendiante",
+        "la Fosse au Charbon-Roi",
+      ],
     },
     {
       nom: "Les Comtés Rouges",
@@ -76,7 +96,11 @@ export const TERNELANDE: Canon = {
       gens: ["paysans", "compagnies franches", "gens des Comtés"],
       peur: "les compagnies, la peste, et les villages où personne n'est resté pour payer",
       lieuDeRencontre: "un village brûlé des Comtés Rouges",
-      lieux: [],
+      lieux: [
+        "la Route des Vignes", "la Rouge-Eau", "Château-Vair",
+        "Mont-Cerf", "le Pont-Brûlé", "Sainte-Cendre-les-Vignes",
+        "l'Auberge du Pressoir-Rompu", "le Champ des Quatre-Cents",
+      ],
     },
     {
       nom: "Saint-Mémoire",
@@ -85,7 +109,12 @@ export const TERNELANDE: Canon = {
       gens: ["moines", "frères scribes", "lecteurs"],
       peur: "l'incendie, et les Dîmiers qui trouvent les Registres dangereux",
       lieuDeRencontre: "les faubourgs de Saint-Mémoire",
-      lieux: ["l'abbaye de Saint-Mémoire", "les Registres"],
+      lieux: [
+        "l'abbaye de Saint-Mémoire", "les Registres",
+        "la Boucle-Grise", "la Grande Nef des Noms", "le Palais de la Crosse-Ferrée",
+        "la Rue des Parcheminiers", "l'Hospice des Sans-Visage", "la Tour du Sablier",
+        "la Chambre de l'An Zéro", "l'Auberge de la Plume Noire",
+      ],
     },
     {
       nom: "Les Landes Effacées",
@@ -94,7 +123,11 @@ export const TERNELANDE: Canon = {
       gens: ["Effacés"],
       peur: "d'y entrer et d'en revenir sans souvenir",
       lieuDeRencontre: "une ferme abandonnée des Landes Effacées",
-      lieux: ["Morte-Fontaine"],
+      lieux: [
+        "Morte-Fontaine",
+        "le Comté des Genêts", "la Borne Fendue", "la Ferme aux Portraits",
+        "le Moulin qui Tourne à Vide", "la Fosse aux Pierres", "le Camp des Cendres",
+      ],
     },
     {
       nom: "Brise-Glace",
@@ -103,10 +136,14 @@ export const TERNELANDE: Canon = {
       gens: ["baleiniers", "étrangers", "marchands"],
       peur: "la banquise, et les étrangers qui ne partent pas",
       lieuDeRencontre: "les quais de Brise-Glace",
-      lieux: [],
+      lieux: [
+        "la Baie des Os", "l'Escalier des Harpons", "la Grève des Fondoirs",
+        "le Quai des Étrangers", "la Taverne du Narval Borgne", "la Halle au Sel-Noir",
+        "la Cour de l'Écume", "la Carcasse du Roi-Soleil",
+      ],
     },
   ],
-  autresLieux: ["Partout", "les montagnes de l'est"],
+  autresLieux: ["Partout", "les montagnes de l'est", "Sous-Fer", "l'Abbaye-sous-Roche", "les Îles de Cuivre"],
 
   factions: [
     { id: "dimiers", nom: "Les Dîmiers", alias: ["Dîmier", "Grand Dîmier", "Grands Dîmiers", "Écuyer"], but: "que la Dîme soit payée, chaque hiver, partout", signe: "un masque d'étain lisse et un manteau gris", penche: "la Cour", membres: ["Écuyer", "Dîmier", "Grand Dîmier"] },
@@ -139,6 +176,31 @@ export const TERNELANDE: Canon = {
     { nom: "Josselin", alias: ["Père Josselin"], titre: "prêtre de Saint-Ours-des-Glaces", ou: "Saint-Ours-des-Glaces", faction: "eglise", etat: "vivant" },
     { nom: "Wendel Haak", alias: ["Wendel", "la compagnie du Héron", "Héron"], titre: "capitaine de la compagnie du Héron", ou: "Vaugelée", faction: "comtes", etat: "vivant" },
     { nom: "Dame Aube-de-Cendre", alias: ["Aube-de-Cendre", "la Vieille Grise"], titre: "dernière de la Cour Grise", ou: "Les Comtés Rouges", etat: "vivant" },
+    // Section 2 — Les Comtés
+    { nom: "Barthélemy Crochart", alias: ["Maître Barthélemy Crochart", "Maître Crochart", "Crochart"], titre: "notaire juré à l'Écritoire des Quatre-Vents", ou: "l'Écritoire des Quatre-Vents", etat: "vivant" },
+    { nom: "Aliénor de la Cendre", alias: ["Sœur Aliénor de la Cendre", "Sœur Aliénor"], titre: "lectrice de l'Église du Souvenir à Haute-Cendre", ou: "Haute-Cendre", faction: "eglise", etat: "vivant" },
+    { nom: "Renaud le Gris", alias: ["Renaud"], titre: "écuyer dîmier de la grande pierre", ou: "Haute-Cendre", faction: "dimiers", etat: "vivant" },
+    { nom: "Torvald l'Ébréché", alias: ["Torvald"], titre: "maître-guide de Bourg-Fumant", ou: "Bourg-Fumant", etat: "vivant" },
+    { nom: "Gisla aux Doigts Noirs", alias: ["Gisla"], titre: "batteuse de fer à la Forge Sans Feu", ou: "la Forge Sans Feu", faction: "gardiennes", etat: "vivant" },
+    { nom: "Enguerrand de la Roche", alias: ["Sieur Enguerrand de la Roche", "Sieur Enguerrand"], titre: "Dîmier de la Marche de Givre", ou: "la Marche de Givre", faction: "dimiers", etat: "vivant" },
+    { nom: "Bénédicte la Perche", alias: ["Bénédicte"], titre: "maîtresse-passeuse du Gué des Perches", ou: "le Gué des Perches", etat: "vivant" },
+    { nom: "Anselme du Jonc", alias: ["Frère Anselme du Jonc", "Frère Anselme"], titre: "frère scribe itinérant en Vaugelée", ou: "Vaugelée", faction: "eglise", etat: "vivant" },
+    { nom: "Loup-Gombert", alias: ["Maître Loup-Gombert"], titre: "aubergiste de l'Anguille Grise", ou: "l'Auberge de l'Anguille Grise", faction: "comtes", etat: "vivant" },
+    { nom: "Lierre-d'Hiver", titre: "veilleur sylvain du Pont d'Osier-Blanc", ou: "le Pont d'Osier-Blanc", faction: "sylvains", etat: "vivant" },
+    { nom: "La Ronce", alias: ["la Ronce"], titre: "sorcière des ronces de la Clairière des Cent-Tasses", ou: "la Clairière des Cent-Tasses", faction: "gardiennes", etat: "vivant" },
+    { nom: "Orson le Muet", alias: ["Orson"], titre: "charbonnier de la Lisière des Écorces", ou: "la Lisière des Écorces", etat: "vivant" },
+    { nom: "Balthazar Kroll", alias: ["Capitaine Balthazar Kroll", "Kroll", "les Lances de Poix"], titre: "capitaine de la compagnie des Lances de Poix", ou: "Les Comtés Rouges", faction: "comtes", etat: "vivant" },
+    { nom: "Jehanne la Vigneronne", titre: "syndic des survivants de Sainte-Cendre-les-Vignes", ou: "Sainte-Cendre-les-Vignes", faction: "gardiennes", etat: "vivant" },
+    { nom: "Barnabé l'Encreur", alias: ["Frère Barnabé l'Encreur", "Frère Barnabé"], titre: "sous-bibliothécaire de la Grande Nef des Noms", ou: "la Grande Nef des Noms", faction: "eglise", etat: "vivant" },
+    { nom: "Thomas", alias: ["frère Thomas", "Frère Thomas"], titre: "moine fugitif de Saint-Mémoire", ou: "Saint-Mémoire", faction: "eglise", etat: "vivant" },
+    { nom: "Godefroy de la Boucle", alias: ["Sire Godefroy de la Boucle", "Sire Godefroy"], titre: "prévôt d'armes de l'évêque-comte Foulque", ou: "le Palais de la Crosse-Ferrée", faction: "comtes", etat: "vivant" },
+    { nom: "Mahaut de Pierrefroide", alias: ["Dame Mahaut de Pierrefroide", "Dame Mahaut"], titre: "veuve de Haute-Cendre et informatrice des Dîmiers", ou: "l'Auberge de la Plume Noire", faction: "dimiers", etat: "vivant" },
+    { nom: "Celui-qui-Fauche", titre: "chef de bande effacé du Moulin qui Tourne à Vide", ou: "le Moulin qui Tourne à Vide", etat: "vivant" },
+    { nom: "Marthe la Cendreuse", alias: ["Marthe"], titre: "lieutenante des Sans-Nom", ou: "le Camp des Cendres", faction: "sans-nom", etat: "vivant" },
+    { nom: "Hugolin le Compteur", alias: ["Hugolin"], titre: "frère convers à la Borne Fendue", ou: "la Borne Fendue", faction: "eglise", etat: "vivant" },
+    { nom: "Gudrun la Baleinière", alias: ["Maîtresse Gudrun la Baleinière", "Maîtresse Gudrun", "Gudrun"], titre: "syndic des armateurs de Brise-Glace", ou: "Brise-Glace", etat: "vivant" },
+    { nom: "Vasco de la Mer-Chaude", alias: ["Vasco"], titre: "courtier étranger au Narval Borgne", ou: "la Taverne du Narval Borgne", etat: "vivant" },
+    { nom: "Landry l'Écumeur", alias: ["Sieur Landry l'Écumeur", "Sieur Landry"], titre: "Dîmier du port de Brise-Glace", ou: "Brise-Glace", faction: "dimiers", etat: "vivant" },
   ],
 
   divinites: [
@@ -152,6 +214,11 @@ export const TERNELANDE: Canon = {
     "la Dîme", "Dîme", "Long Hiver", "pierre de dîme", "payer son mort", "mort à gage", "lait d'oubli", "sève", "Registres", "Registre",
     "Reflets", "Reflet", "Vide", "souvenir", "souvenirs", "intact", "flou", "perdu", "Raconter", "fer froid", "denier", "deniers", "sou", "livre", "livres",
     "Grande Oubliance", "la Mémoire du pays", "Lacunes", "Lacune", "Comtés", "Landes Effacées",
+    "Grand Greffier", "la Foire aux Chaises", "le Blanc-Silence", "la Nuit des Cornes", "l'Appel du Trou",
+    "la Dérive des Écorces", "Toussaint", "les Racines-qui-boivent", "la Saignée Blanche", "la Sylve Blanche",
+    "corbeaux de dîme", "le Village Vide", "la Cuvée des Morts", "la Faim de la terre", "l'Étincelle",
+    "la Veillée des Trois Lignes", "le Vent Creux", "le Jour du Premier Mot", "Saint-Martin", "la Criée des Fronts",
+    "la Nuit de Prise", "le Grand Débâclage", "L'Hirondelle de Cuivre", "Roi-Soleil",
   ],
 
   secrets: ["La Cour Grise est morte", "la Cour est morte", "changée en cendre", "la terre a bu", "a bu la Cour", "la terre a faim", "la terre se servira", "la roche des montagnes ne boit pas", "Aube-de-Cendre"],
