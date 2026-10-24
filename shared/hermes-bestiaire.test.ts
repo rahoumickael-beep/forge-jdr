@@ -194,7 +194,7 @@ test("hermès : la violence a des suites, les policiers ne sont pas des monstres
   // Chaque fiche dit ce que coûte la violence en Empreinte et comment éviter le combat par un jet.
   for (const c of HE) {
     assert.match(c.gmNotes, /Empreinte/, `${c.id} : les gmNotes parlent de l'Empreinte`);
-    assert.match(c.gmNotes, /Éviter le combat/, `${c.id} : la sortie sans combat`);
+    assert.match(c.gmNotes, /Éviter le combat|Sans combat|Pour s'en passer/,`${c.id} : la sortie sans combat`);
     assert.match(c.gmNotes, /(Persuasion|Intimidation|Tromperie|Investigation|Discrétion|Escamotage|Intuition)/, `${c.id} : un jet pour l'éviter`);
   }
   // Les forces de l'ordre : un coup de feu sur elles se paie, dit en toutes lettres.

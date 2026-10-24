@@ -9,6 +9,8 @@
 // pistolet à impulsion électrique (attaque à distance 3/9 m, puis sauvegarde d'Endurance DD 13, aucun dégât), pistolet semi-automatique de 9 mm
 // (1d10, 15/45 m, quinze coups, changer de chargeur en action bonus), fusil de chasse (2d6, 9/27 m, deux coups).
 // Une créature réduite à 0 PV par une arme à feu est mourante et meurt à la fin de son troisième tour sans soins : le texte des tirs le rappelle.
+// Le coup de filet (police, FP 13) est une fiche de scène, pas un adversaire : on en sort, on ne le combat pas.
+// Les PX d'une scène à éviter reviennent au groupe qui s'en sort sans tuer.
 // Les grandes fiches (équipes, dispositifs, sites) sont des fiches de rencontre rapide : elles résument des gens qu'on ne combat pas, on les contourne.
 // Les secrets du canon (le Cabinet, la Collection, le Coffre, l'exécutant) ne vivent que dans gmNotes ; les fiches qui les trahissent ont un nom public.
 import type { Creature } from "./bestiary";
@@ -18,6 +20,8 @@ const creature = (input: CreatureInput): Creature => fabriquerCreature("contempo
 
 const CHARGEUR = "Son pistolet tient quinze cartouches ; changer de chargeur prend une action bonus. Sur un 1 naturel au d20, l'arme s'enraye : une action pour la dégager.";
 
+const CHARGEUR_GROUPE = "Chaque tireur a quinze cartouches. Sur un 1 naturel, ce tireur-là s'enraye : la fiche perd un tir par round tant qu'un autre n'a pas pris son action pour le dégager.";
+
 const pistolet = (toHit: number, degats: string) =>
   hit("Pistolet semi-automatique de 9 mm", "distance", toHit, "15/45 m", degats, "perforants", "Quinze coups ; changer de chargeur prend une action bonus. Une créature réduite à 0 PV par une arme à feu est mourante et meurt à la fin de son troisième tour sans soins.");
 const matraque = (toHit: number, degats: string) => hit("Matraque télescopique", "contact", toHit, "1,5 m", degats, "contondants");
@@ -25,7 +29,7 @@ const couteau = (toHit: number, degats: string) => hit("Couteau de poche", "cont
 const manche = (toHit: number, degats: string) =>
   hit("Manche de pioche ou barre de chantier", "contact", toHit, "1,5 m", degats, "contondants", "1d8 à deux mains.");
 const impulsion = (toHit: number) =>
-  hit("Pistolet à impulsion électrique", "distance", toHit, "3/9 m", "0", "aucun", "Un seul tir, puis une action pour recharger. Si l'attaque touche, la cible fait un jet de sauvegarde d'Endurance DD 13 : en cas d'échec elle est incapable d'agir et sa vitesse tombe à 0 jusqu'à la fin de son prochain tour ; en cas de réussite elle a le désavantage à ses attaques jusqu'à la fin de son prochain tour.");
+  hit("Pistolet à impulsion électrique", "distance", toHit, "3/9 m", "0", "aucun", "Un seul tir, puis une action pour recharger. Si l'attaque touche, la cible fait un jet de sauvegarde d'Endurance DD 13 : en cas d'échec elle est incapable d'agir et sa vitesse tombe à 0 jusqu'à la fin de son prochain tour ; en cas de réussite elle a le désavantage à ses attaques jusqu'à la fin de son prochain tour. Une même créature ne peut pas être touchée deux fois en dix minutes. Compte comme une scène où l'on tire pour l'Empreinte.");
 
 export const BESTIAIRE_HERMES: Creature[] = [
   // ===== La rue et les témoins =====
@@ -42,15 +46,15 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Rideau", text: "S'il se sait regardé, il laisse retomber le rideau et reste derrière sa porte." },
     ],
     actions: [hit("Canne", "contact", 2, "1,5 m", "1", "contondants", "Il ne s'en sert que si on entre chez lui.")],
-    lore: "Un cardigan gris, des lunettes relevées sur le front, un carnet à spirale posé sur le rebord de la fenêtre. Il habite au deuxième depuis trente ans et connaît les heures du facteur, du livreur de pain et de ceux qui ne devraient pas passer.",
-    gmNotes: "Il n'est pas un ennemi, il s'ennuie. Il note ce qu'il voit et le raconte à qui lui offre un café ; s'il parle à un policier, l'Empreinte monte de 1. Éviter le combat : Persuasion DD 13, ou un service rendu (un colis monté, une course) ; Tromperie DD 12 pour lui faire croire à un déménagement. Frapper un vieil homme chez lui, c'est un témoin, une ambulance et un commissariat de plus. Niveaux 1 et 2, en toile de fond.",
+    lore: "Un carnet à spirale posé sur le rebord de la fenêtre, des lunettes relevées sur le front, un cardigan gris. Il habite au deuxième depuis trente ans et connaît les heures du facteur, du livreur de pain et de ceux qui ne devraient pas passer.",
+    gmNotes: "Il n'est pas un ennemi. Il s'ennuie, et cela suffit à le rendre bavard. Il note ce qu'il voit et le raconte à qui lui offre un café ; s'il parle à un policier, l'Empreinte monte de 1. Éviter le combat : Persuasion DD 13, ou un service rendu (un colis monté, une course) ; Tromperie DD 12 pour lui faire croire à un déménagement. Frapper un vieil homme chez lui, c'est un témoin, une ambulance et un commissariat de plus. Niveaux 1 et 2, en toile de fond.",
     scene: "an elderly man in a grey cardigan with glasses pushed up on his forehead standing in a half-open apartment doorway on a stairwell landing, a spiral notebook and a pen in his hand, a row of mailboxes and a worn doormat beside him, stained plaster walls",
   }),
   creature({
     id: "vigile-de-gare",
     name: "Vigile de gare",
     family: "La rue et les témoins", size: "Moyenne", type: "humanoïde", region: "Paris",
-    cr: 0.125, ac: 11, acNote: "veste d'uniforme", hd: 3, speed: { marche: 9 },
+    cr: 0.125, ac: 11, acNote: "blouson renforcé", hd: 3, speed: { marche: 9 },
     stats: [12, 11, 12, 10, 11, 10],
     skills: { Perception: 2 },
     languages: "français",
@@ -59,7 +63,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Tournée", text: "Il refait le même circuit toutes les huit minutes. Perception DD 12 pour en relever l'horaire." },
     ],
     actions: [matraque(3, "1d4+1")],
-    lore: "Un gilet jaune par-dessus la chemise, un badge au bout d'un cordon, un gobelet de café à la main. Il fait le tour de la salle de la gare du Nord, une fois, deux fois, et regarde les mains plutôt que les visages.",
+    lore: "Un badge au bout d'un cordon, un gobelet de café à la main, un gilet fluo par-dessus la chemise. Il fait le tour de la salle de la gare du Nord, une fois, deux fois, et regarde les mains plutôt que les visages.",
     gmNotes: "Il veut finir sa nuit sans histoire et n'est pas payé pour se faire casser le nez. Il observe, il appelle, il suit à dix mètres. Éviter le combat : Discrétion DD 12 pendant qu'il tourne le dos, un bagage oublié dont on va se plaindre (Tromperie DD 12), ou un billet en main et l'air de celui qui attend (Persuasion DD 11). Deux vigiles de plus, et la caméra de la salle voit la scène : Empreinte +1 si elle est nette. Niveaux 1 et 2.",
     scene: "a security guard in a yellow high-visibility vest over a white shirt, an ID card on a lanyard at his chest, a paper coffee cup in one hand and a short telescopic baton clipped to his belt, standing on the polished floor of a large railway station concourse beside a departures board, travellers blurred behind him",
   }),
@@ -76,8 +80,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Il voit tout", text: "Avantage aux tests de Perception dans la rue où il traîne." },
     ],
     actions: [couteau(3, "1d4+1"), manche(3, "1d6+1")],
-    lore: "Un survêtement gris, une chaîne fine au cou, un téléphone qu'il ne pose jamais. Il traîne autour des quais de la Joliette et sait qui a changé de voiture, qui a payé comptant et qui a dormi dehors. Ce qu'il sait, il le vend ; il ne le donne à personne.",
-    gmNotes: "Il vend de l'information aux dockers, aux policiers et à tout inconnu qui paie, et la lui acheter, c'est aussi la lui faire revendre. Il veut 50 € et qu'on ne dise pas son nom. Éviter le combat : Persuasion DD 12 avec un billet de 50 €, Intimidation DD 14 le fait parler mais il file ensuite chez un policier qu'il connaît (l'Empreinte monte de 1 si elle est à 3 ou plus). Il sort le couteau pour fuir, pas pour tuer. Niveaux 1 à 3.",
+    lore: "Un téléphone qu'il ne pose jamais, une chaîne fine au cou, un survêtement gris. Il traîne autour des quais de la Joliette et sait qui a changé de voiture, qui a payé comptant et qui a dormi dehors. Ce qu'il sait, il le vend ; il ne le donne à personne.",
+    gmNotes: "Il vend de l'information aux dockers, aux policiers et à tout inconnu qui paie, et la lui acheter, c'est aussi la lui faire revendre. Il veut 50 € et qu'on ne dise pas son nom. Sans combat : Persuasion DD 12 avec un billet de 50 €, Intimidation DD 14 le fait parler mais il file ensuite chez un policier qu'il connaît (l'Empreinte monte de 1 si elle est à 3 ou plus). Il sort le couteau pour fuir, pas pour tuer. Niveaux 1 à 3.",
     scene: "a wiry young man in a grey tracksuit top with the hood down and a thin chain at his neck, hands in his pockets, standing at the corner of a narrow Marseille side street beside a shuttered shop, a scooter and overflowing bins behind him, eyes fixed on something outside the frame",
   }),
   creature({
@@ -87,7 +91,6 @@ export const BESTIAIRE_HERMES: Creature[] = [
     cr: 0.25, ac: 12, acNote: "pelage ras", hd: 3, speed: { marche: 12 },
     stats: [15, 14, 14, 3, 12, 6],
     skills: { Perception: 3 },
-    senses: "odorat fin",
     languages: "—",
     traits: [
       { name: "Odorat aiguisé", text: "Avantage aux tests de Perception fondés sur l'odorat." },
@@ -95,7 +98,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
     ],
     actions: [hit("Morsure", "contact", 4, "1,5 m", "1d6+2", "perforants", "Une cible Moyenne ou plus petite fait un jet de sauvegarde de Force DD 12 ou tombe à terre.")],
     lore: "Un berger au poil ras et au collier de cuir sans nom, qui longe la clôture de l'ancienne caserne à heures fixes. Le gardien l'appelle par un sifflement à deux notes ; personne d'autre n'a essayé deux fois.",
-    gmNotes: "Il garde un périmètre, pas un homme. Il aboie d'abord, et le gardien vient voir. Éviter le combat : rester à plus de trois mètres de la clôture, lui jeter de la viande (Dressage DD 12), ou le tromper avec le sifflement à deux notes (Perception DD 13 pour l'entendre, Escamotage DD 11 pour le refaire). Un chien tué laisse du sang, un vétérinaire et une plainte ; la caméra de la barrière voit tout, et l'Empreinte monte de 1 si elle est nette. Niveaux 1 à 4, souvent par deux.",
+    gmNotes: "Il garde un périmètre, pas un homme. Il aboie d'abord, et le gardien vient voir. Pour s'en passer : rester à plus de trois mètres de la clôture, lui jeter de la viande (Dressage DD 12), ou le tromper avec le sifflement à deux notes (Perception DD 13 pour l'entendre, Escamotage DD 11 pour le refaire). Un chien tué laisse du sang, un vétérinaire et une plainte ; la caméra de la barrière voit tout, et l'Empreinte monte de 1 si elle est nette. Niveaux 1 à 4, souvent par deux.",
     scene: "a lean shepherd dog with a short dark coat and a plain leather collar standing alert along a chain-link fence, ears forward, a gravel yard and a low concrete building behind it, an empty car park beyond the fence",
   }),
   creature({
@@ -112,8 +115,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Chargeur", text: CHARGEUR },
     ],
     actions: [matraque(3, "1d4+1"), impulsion(3), pistolet(3, "1d10+1")],
-    lore: "Casquette bleu marine, gilet sous la veste, une radio qui grésille sur l'épaule. Ils patrouillent par deux sur le front de mer et connaissent le nom du boulanger. Ils n'ont pas de mandat à faire exécuter, seulement une ville à tenir calme.",
-    gmNotes: "Il veut que la rue reste calme et que le rapport soit court. Un contrôle d'identité tourne mal avec une fausse pièce ou une arme : Empreinte +1, +3 s'il trouve le pistolet. Éviter le combat : Persuasion DD 12 (un habitué de la Tourette parle pour vous), Tromperie DD 13 avec des papiers propres, ou partir avant qu'il ne note la plaque. Tirer sur un policier fait monter l'Empreinte de 2, +1 par blessé grave ou mort, et lance la chasse à l'homme : c'est la fin de la mission. Niveaux 1 à 3.",
+    lore: "Une radio grésille sur l'épaule. Ils patrouillent par deux sur le front de mer, casquette bleu marine et gilet sous la veste, et connaissent le nom du boulanger. Ils n'ont pas de mandat à faire exécuter, seulement une ville à tenir calme.",
+    gmNotes: "Il veut que la rue reste calme et que le rapport soit court. Un contrôle d'identité tourne mal avec une fausse pièce ou une arme : Empreinte +1, +3 s'il trouve le pistolet. Éviter le combat : Persuasion DD 12 (un habitué de la Tourette parle pour vous), Tromperie DD 13 avec des papiers propres, ou partir avant qu'il ne note la plaque. Tirer sur un policier fait monter l'Empreinte de 2, +1 par blessé grave ou mort, et la porte à 7 au moins : toutes les patrouilles ont votre signalement. S'il meurt, elle passe à 10. Son pistolet à impulsion : une même créature ne peut pas être touchée deux fois en dix minutes, et le tir compte comme une scène où l'on tire pour l'Empreinte. Niveaux 1 à 3.",
     scene: "a municipal police officer in a navy cap and a navy jacket with a reflective band, a holstered pistol and a folded telescopic baton on his belt, standing on a harbour quayside next to a patrol scooter, a ferry hull behind him",
   }),
   creature({
@@ -127,10 +130,11 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Terrain difficile", text: "Traverser la foule coûte le double de déplacement. Elle occupe tout le hall : les créatures qui s'y trouvent sont dans sa zone." },
       { name: "Mille téléphones", text: "Chaque téléphone levé est une caméra. Perception DD 13 pour compter ceux qui filment. Une scène d'action nette dans la foule fait monter l'Empreinte de 1." },
       { name: "Elle se referme", text: "Une créature qui s'enfuit dans la foule a l'avantage à Discrétion, mais aussi le désavantage à Perception tant qu'elle y reste." },
+      { name: "Des gens, pas une cible", text: "Tout dégât infligé à la foule blesse des civils : chaque tranche de 10 dégâts fait un blessé grave (Empreinte +1). À 0 PV, la foule s'est dispersée et le hall est vide." },
     ],
-    actions: [save("Mouvement de foule", "For", 12, "Un train annoncé, un cri, une détonation : la foule se précipite vers une sortie. Les créatures dans un rayon de 6 m de la poussée font un jet de sauvegarde, moitié des dégâts en cas de réussite ; en cas d'échec elles sont aussi entraînées de 3 m.", "2d6", "contondants", 2)],
+    actions: [save("Mouvement de foule", "For", 12, "Un train annoncé, un cri, une détonation : la foule se précipite vers une sortie. Les créatures sur le trajet entre le point de départ et la sortie visée par le MJ, sur 6 m de large, font un jet de sauvegarde, moitié des dégâts en cas de réussite ; en cas d'échec elles sont aussi entraînées de 3 m.", "2d6", "contondants", 2)],
     lore: "Dix-huit heures à la gare du Nord : un train supprimé, deux cents personnes sur le quai et un seul escalier. Tout le monde regarde son téléphone, et personne ne regarde où il marche.",
-    gmNotes: "Une scène, pas un ennemi : la foule n'attaque personne, elle se déplace. Elle sert à couvrir une filature, à perdre un poursuivant, ou à faire monter l'Empreinte quand quelqu'un tire au milieu. Éviter le combat : Discrétion DD 11 pour s'y fondre, Athlétisme DD 12 pour la traverser à contre-courant, ou ne pas déclencher le mouvement. Un cri, une arme sortie, un coup de feu déclenchent le Mouvement de foule au tour suivant ; les blessés se comptent ensuite aux urgences, et chaque blessé grave coûte 1 d'Empreinte. Niveaux 1 à 5.",
+    gmNotes: "Une scène, pas un ennemi : la foule n'attaque personne, elle se déplace. Les PX d'une scène à éviter reviennent au groupe qui s'en sort sans tuer. Elle sert à couvrir une filature, à perdre un poursuivant, ou à faire monter l'Empreinte quand quelqu'un tire au milieu. Éviter le combat : Discrétion DD 11 pour s'y fondre, Athlétisme DD 12 pour la traverser à contre-courant, ou ne pas déclencher le mouvement. Un cri, une arme sortie, un coup de feu déclenchent le Mouvement de foule au tour suivant ; les blessés se comptent ensuite aux urgences, et chaque blessé grave coûte 1 d'Empreinte. Niveaux 1 à 5.",
     scene: "a dense crowd of commuters with rolling suitcases and backpacks packed on a railway platform, many holding phones raised above their heads, a narrow stairway entrance jammed with people, a departures sign above, coats and umbrellas, faces turned in the same direction",
   }),
 
@@ -148,15 +152,15 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Chargeur", text: CHARGEUR },
     ],
     actions: [matraque(3, "1d4+1"), pistolet(3, "1d10+1")],
-    lore: "Un gilet fluo sur un blouson sombre, une tablette dans la main, le regard qui passe sur les plaques. À Trieste, ils contrôlent un camion sur dix, et chacun sait lequel il sera.",
-    gmNotes: "Il veut remplir sa feuille et rentrer. Il a le droit de fouiller, pas celui de s'énerver. Éviter le combat : Tromperie DD 13 avec des papiers de chargement en règle, Persuasion DD 12 pour qu'il tire un autre camion, ou 200 à 500 € glissés à un collègue (le portier de nuit, pas lui). Une fouille qui trouve une arme ou 10 000 € ou plus en espèces est une garde à vue, et l'Empreinte monte de 1. Tirer sur un douanier : voir le policier municipal. Niveaux 1 à 3.",
+    lore: "Une tablette dans la main, le regard qui passe sur les plaques, un gilet fluo sur un blouson sombre. À Trieste, ils contrôlent un camion sur dix, et chacun sait lequel il sera.",
+    gmNotes: "Il veut remplir sa feuille et rentrer. Il a le droit de fouiller, pas celui de s'énerver. Sans combat : Tromperie DD 13 avec des papiers de chargement en règle, Persuasion DD 12 pour qu'il tire un autre camion, ou 200 à 500 € glissés à l'employé de la barrière, jamais à lui. Une fouille qui trouve une arme ou 10 000 € ou plus en espèces est une garde à vue, et l'Empreinte monte de 1. Tirer sur un douanier : Empreinte +2, +1 par blessé grave ou mort, 7 au moins, 10 s'il meurt. Trieste ferme le port. Niveaux 1 à 3.",
     scene: "a customs officer in a navy jacket and a reflective vest, a tablet in one hand and a clipboard under his arm, standing beside the open rear doors of a white freight truck on a port quay, stacked pallets and a stone warehouse behind him",
   }),
   creature({
     id: "inspectrice-de-la-section",
     name: "Inspectrice de la Section",
     family: "Forces de l'ordre", size: "Moyenne", type: "humanoïde", region: "Paris",
-    cr: 0.25, ac: 12, acNote: "costume à doublure renforcée", hd: 8, speed: { marche: 9 },
+    cr: 0.25, ac: 12, acNote: "manteau renforcé", hd: 4, speed: { marche: 9 },
     stats: [10, 12, 10, 14, 14, 14],
     skills: { Investigation: 4, Intuition: 4, Perception: 4 },
     languages: "français, anglais, néerlandais",
@@ -168,7 +172,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
       hit("Serviette lourde", "contact", 2, "1,5 m", "1d6", "contondants", "Elle ne s'en sert que pour sa vie."),
       save("Mise en demeure", "Sag", 12, "Elle lit une liste de questions numérotées. Une créature qui répond à voix haute fait un jet de sauvegarde d'Instinct DD 12, sinon elle a le désavantage à ses jets de Tromperie face à l'inspectrice jusqu'à la fin de la scène."),
     ],
-    lore: "Un costume sombre, les cheveux attachés, une serviette lourde et une carte tricolore dans un porte-cartes noir. Elle parle en listes : premièrement, deuxièmement. Elle porte les mêmes boucles d'oreilles depuis dix ans.",
+    lore: "Elle parle en listes : premièrement, deuxièmement. Costume sombre, cheveux attachés, une serviette lourde et une carte tricolore dans un porte-cartes noir. Elle porte les mêmes boucles d'oreilles depuis dix ans.",
     gmNotes: "Judith Aldebert, ou l'un de ses auditeurs. Elle veut un cas qui tienne devant un tribunal, donc un coursier vivant et prêt à parler ; elle ne sait pas encore à qui elle a affaire. Aucune fiche de combat n'y change rien : si on la frappe, la Section a un dossier, un témoin et une raison. Éviter le combat : Persuasion DD 14 pour refuser sans mentir, Tromperie DD 15 (désavantage après Mise en demeure), ou la laisser parler et ne rien signer. Un échec de 5 ou plus au jet laisse une trace : l'Empreinte monte de 1. Niveaux 1 à 6, et plus encore comme alliée.",
     scene: "a woman in her forties in a dark suit with her hair tied back, a heavy leather briefcase in one hand and a black card wallet held open at chest height, small earrings, standing on a station forecourt beside tall glass doors, a taxi rank blurred behind her",
   }),
@@ -190,8 +194,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       matraque(4, "1d4+2"),
       pistolet(4, "1d10+2"),
     ],
-    lore: "Un blouson sombre, les mains dans les poches, un café serré posé sur la barrière. Ils sont deux sur les quais de la Joliette à la descente du ferry, et ils n'ont l'air de rien, sauf qu'ils regardent tout le monde.",
-    gmNotes: "C'est le contrôle en civil de la bible. Il cherche un colis, un visage ou une plaque, et il se contente d'une explication plausible. Éviter le combat : Perception DD 14 pour le voir avant lui, Tromperie DD 14 devant son collègue, ou changer de ferry. Désavantage à Tromperie si vous portez des sacs identiques. Si la fouille trouve une arme ou 10 000 € ou plus, c'est la garde à vue (24 à 48 heures, avocat commis d'office) et l'Empreinte monte de 1. Un coup de feu sur un policier : Empreinte +2, +1 par blessé, et toute la ville cherche. Niveaux 1 à 4.",
+    lore: "Les mains dans les poches, un café serré qui refroidit sur la barrière. Ils sont deux sur les quais de la Joliette à la descente du ferry, et ils n'ont l'air de rien, sauf qu'ils regardent tout le monde.",
+    gmNotes: "C'est le contrôle en civil de la bible. Il cherche un colis, un visage ou une plaque, et il se contente d'une explication plausible. Éviter le combat : Perception DD 14 pour le voir avant lui, Tromperie DD 14 devant son collègue, ou changer de ferry. Désavantage à Tromperie si vous portez des sacs identiques. Si la fouille trouve une arme ou 10 000 € ou plus, c'est la garde à vue (24 à 48 heures, avocat commis d'office) et l'Empreinte monte de 1. Un coup de feu sur un policier : Empreinte +2, +1 par blessé grave ou mort, 7 au moins, et toute la ville cherche. Niveaux 1 à 4.",
     scene: "a man in his late thirties in a dark bomber jacket and jeans, hands in his jacket pockets, a police armband half hidden under his sleeve, standing at a harbour ferry gate with a paper coffee cup on a barrier beside him, shipping containers in the background",
   }),
   creature({
@@ -212,8 +216,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       pistolet(4, "1d10+2"),
       matraque(3, "1d4+1"),
     ],
-    lore: "Un imperméable beige trop long, une tasse de thé froid sur le bureau, un tableau de liège couvert de photographies. Il écoute avec le coude sur la table et pose la même question trois fois, à trois endroits différents.",
-    gmNotes: "Il suit un dossier que sa hiérarchie veut classer, comme le coursier de la valise ou le plombier de la rue de la Brasserie. Il n'est pas hostile à un témoin honnête, il note chaque version. Éviter le combat : Persuasion DD 14 avec un récit qui tient et un avocat à sa suite, Investigation DD 14 pour lui donner une autre piste, ou une disparition rapide avant la garde à vue. Un coup de feu sur lui : Empreinte +2, +1 par blessé grave ou mort, mandat sous 48 heures. Niveaux 2 à 5.",
+    lore: "Une tasse de thé froid sur le bureau, un tableau de liège couvert de photographies, un imperméable beige trop long sur le dossier de la chaise. Il écoute avec le coude sur la table et pose la même question trois fois, à trois endroits différents.",
+    gmNotes: "Il suit un dossier que sa hiérarchie veut classer, comme le coursier de la valise ou le plombier de la rue de la Brasserie. Il n'est pas hostile à un témoin honnête, il note chaque version. Éviter le combat : Persuasion DD 14 avec un récit qui tient et un avocat à sa suite, Investigation DD 14 pour lui donner une autre piste, ou une disparition rapide avant la garde à vue. Un coup de feu sur lui : Empreinte +2, +1 par blessé grave ou mort, 7 au moins, mandat sous 48 heures. Niveaux 2 à 5.",
     scene: "a tired plainclothes detective in a beige raincoat that is too long, a notebook in one hand, a mug of tea on the desk behind him, standing in a cramped open-plan office with metal filing drawers and stacked folders, a corkboard of photographs on the wall",
   }),
   creature({
@@ -234,8 +238,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       pistolet(5, "1d10+3"),
       matraque(4, "1d4+2"),
     ],
-    lore: "Une combinaison sombre, un casque, un gilet qui change la silhouette. Les gars de l'intervention montent par l'escalier de service, se taisent dans la cage et ne sonnent pas. Quand ils arrivent, la rue sait pourquoi.",
-    gmNotes: "On ne le rencontre qu'après qu'une porte a été forcée, qu'un cri a été entendu ou que l'Empreinte a franchi le seuil Fiché. Il a un mandat et un ordre : sécuriser, pas tuer. Éviter le combat : poser l'arme, les mains visibles (aucun jet), parler à voix basse (Persuasion DD 15) et demander un avocat ; la fuite par la cour de service (Athlétisme DD 14) laisse une porte forcée de plus. Un coup de feu sur eux fait passer l'Empreinte à 10 si elle était à 8 ou plus. Niveaux 4 à 8.",
+    lore: "Ils montent par l'escalier de service, se taisent dans la cage et ne sonnent pas : combinaison sombre, casque, gilet qui change la silhouette. Quand ils arrivent, la rue sait pourquoi.",
+    gmNotes: "On ne le rencontre qu'après qu'une porte a été forcée, qu'un cri a été entendu ou que l'Empreinte a franchi le seuil Fiché. Il a un mandat et un ordre : sécuriser, pas tuer. Éviter le combat : poser l'arme, les mains visibles (aucun jet), parler à voix basse (Persuasion DD 15) et demander un avocat ; la fuite par la cour de service (Athlétisme DD 14) laisse une porte forcée de plus. Un coup de feu sur eux : Empreinte +2, +1 par blessé grave ou mort, et 10 dès qu'un des leurs est blessé. Niveaux 4 à 6 pour un seul, en renfort ; jamais seul autrement : trois à cinq forment la Brigade (niveaux 8 à 12).",
     scene: "a heavily equipped police tactical officer in dark overalls with a plate carrier vest and a helmet, a pistol held low in both hands, a radio on his shoulder strap, standing in the stairwell of an apartment block, concrete steps and a metal handrail beside him",
   }),
   creature({
@@ -247,15 +251,15 @@ export const BESTIAIRE_HERMES: Creature[] = [
     skills: { Perception: 4 },
     languages: "français",
     traits: [
-      { name: "Cinq hommes, une fiche", text: "La fiche représente l'équipe entière, qui occupe un couloir. Elle ne meurt pas : à la moitié de ses PV, ceux qui restent se replient ou se rendent ; à 0, ils sont blessés ou neutralisés." },
+      { name: "Cinq agents, une fiche", text: "La fiche représente l'équipe entière, qui occupe un couloir. Elle ne meurt pas : à la moitié de ses PV, ceux qui restent se replient ou se rendent ; à 0, ils sont blessés ou neutralisés." },
       { name: "Gilets à plaques", text: "Désavantage à Discrétion. Le bélier d'acier ouvre une porte ordinaire en une action." },
-      { name: "Chargeur", text: CHARGEUR },
+      { name: "Chargeur", text: CHARGEUR_GROUPE },
     ],
     actions: [
       multi("Quatre tirs de pistolet, tirés par des hommes différents.", { "Pistolet semi-automatique de 9 mm": 4 }),
       pistolet(6, "1d10+3"),
     ],
-    lore: "Cinq hommes dans un couloir, le dernier la main sur l'épaule du suivant. Le premier tient un bélier d'acier court, les autres leur arme pointée vers le sol. Ils n'ont pas de visage sous le casque, et le voisin qui regarde par le judas ne comprend pas ce qu'il voit.",
+    lore: "Cinq silhouettes dans un couloir, la dernière, une femme, la main sur l'épaule du suivant. Le premier tient un bélier d'acier court, les autres leur arme pointée vers le sol. Ils n'ont pas de visage sous le casque, et le voisin qui regarde par le judas ne comprend pas ce qu'il voit.",
     gmNotes: "Une brigade n'arrive que pour une affaire déjà instruite : un mandat, une écoute, un témoin. À l'Empreinte 7 ou plus, elle peut frapper à l'aube. Éviter le combat : être partis avant l'aube (Investigation DD 14 pour deviner l'heure), sortir par la cave ou les toits d'à côté, ou se rendre sans résister. Ils ne tirent pas sur une créature qui lâche son arme. S'ils sont blessés, la police ne lâche plus : l'Empreinte monte à 10. Niveaux 8 à 12.",
     scene: "a stack of five police tactical officers in dark overalls, plate carrier vests and helmets standing in a narrow apartment corridor, pistols pointed at the floor, the front man holding a short steel ram, each man with a hand on the shoulder of the one ahead, plain white walls",
   }),
@@ -277,8 +281,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       couteau(3, "1d4+1"),
       special("Brouilleur de poche", "En action bonus, il coupe téléphones et balises dans un rayon de 10 m jusqu'à la fin de son prochain tour. Un balayage (Investigation DD 14) le trouve."),
     ],
-    lore: "Un blouson sombre, un casque autour du cou, un ordinateur portable ouvert sur les genoux dans une camionnette grise. Il parle peu et regarde des écrans. Le matin, il paie son café en carte.",
-    gmNotes: "Il n'est jamais seul : il est dans la camionnette de l'équipe, à cinquante mètres. Il veut son matériel intact et sa prime. Prendre son ordinateur donne la liste des caméras lues ; le tuer, c'est un meurtre de plus. Éviter le combat : Intimidation DD 12 pour le faire céder sa machine, Persuasion DD 13 avec un pot-de-vin de 500 €, ou couper l'alimentation de la camionnette (Escamotage DD 12). Il a pu prévenir son chef : Empreinte +1 si l'Écoute de terrain est dépensée. Niveaux 1 à 4.",
+    lore: "Un casque autour du cou, un ordinateur sur les genoux, l'écran réglé au plus bas pour ne pas éclairer la vitre. Il parle peu et regarde des écrans. Le matin, il paie son café en carte.",
+    gmNotes: "Il n'est jamais seul : il est dans la camionnette de l'équipe, à cinquante mètres. Il veut son matériel intact et sa prime. Prendre son ordinateur donne la liste des caméras lues ; le tuer, c'est un meurtre de plus. Sans combat : Intimidation DD 12 pour le faire céder sa machine, Persuasion DD 13 avec un pot-de-vin de 500 €, ou couper l'alimentation de la camionnette (Escamotage DD 12). Il a pu prévenir son chef : Empreinte +1 si l'Écoute de terrain est dépensée. Niveaux 1 à 4.",
     scene: "a young man in a dark hooded jacket with over-ear headphones around his neck sitting in the open side door of a grey van, a laptop open on his knees, a small black box in his hand, cables on the floor of the van, a wet logistics yard behind him",
   }),
   creature({
@@ -295,9 +299,9 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Chargeur", text: CHARGEUR },
     ],
     actions: [pistolet(4, "1d10+2"), matraque(3, "1d4+1")],
-    lore: "Un blouson sombre, des gants de conduite, une oreillette. Il attend dans la voiture, vitres fermées, un thermos sur le siège passager. Il sait quelle rue est en sens unique pour les caméras et laquelle ne l'est pas.",
+    lore: "Des gants de conduite, une oreillette, le siège reculé d'un cran pour tout voir sans bouger la tête. Il attend dans la voiture, vitres fermées, une bouteille isotherme sur le siège passager. Il sait quelle rue est en sens unique pour les caméras et laquelle ne l'est pas.",
     gmNotes: "Il est payé 3 800 € par mois pour attendre et partir vite. Il ne descend pas sans ordre. Il tire sur une voiture qui bloque la sienne, pas sur un piéton qui passe. Éviter le combat : laisser la voiture passer, noter la plaque (Perception DD 13), ou bloquer l'issue avec un utilitaire pour lui laisser le choix de s'arrêter (Intimidation DD 13). S'il la suit, la fiche « Poursuite en voiture » s'applique. Un coup de feu dans la rue : Empreinte +2, +1 par blessé. Niveaux 1 à 4.",
-    scene: "a broad man in a dark jacket and leather driving gloves leaning against the open driver door of a grey saloon car in a quiet street, one hand on the roof, an earpiece in his ear, scanning the street, a thermos on the car seat, rows of shipping containers at the end of the road",
+    scene: "a broad man in a dark jacket and leather driving gloves leaning against the open driver door of a grey saloon car in a quiet street, one hand on the roof, an earpiece in his ear, scanning the street, an insulated flask on the car seat, rows of shipping containers at the end of the road",
   }),
   creature({
     id: "homme-de-main-d-ostrevent",
@@ -317,8 +321,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       pistolet(4, "1d10+2"),
       matraque(4, "1d4+2"),
     ],
-    lore: "Un blouson sombre, les cheveux courts, une alliance et une carte professionnelle en plastique sans photo. Ancien militaire ou ancien policier, il porte les mêmes chaussures depuis cinq ans. Ses collègues l'appellent par son prénom ; lui, il ne les appelle pas.",
-    gmNotes: "Ostrevent envoie deux à quatre de ces hommes quand un client veut « une conversation ». Ils ont la consigne de ne rien casser en ville et de revenir avec ce qui a été demandé. Éviter le combat : Persuasion DD 14 (leur patron paie moins qu'un témoin se tait), Intimidation DD 15 si le groupe est plus nombreux, ou couper la route à l'arrière (Athlétisme DD 13). Un coup de feu en ville : Empreinte +2, +1 par blessé grave ou mort, et la police est là avant que vous ayez quitté les lieux. Niveaux 2 à 5.",
+    lore: "Les cheveux courts, une alliance, une carte professionnelle sur un cordon qu'il rentre dans sa chemise en descendant de voiture. Ancien militaire ou ancien policier, il porte les mêmes chaussures depuis cinq ans. Ses collègues l'appellent par son prénom ; lui, il ne les appelle pas.",
+    gmNotes: "Ostrevent envoie deux à quatre de ces hommes quand un client veut « une conversation ». Ils ont la consigne de ne rien casser en ville et de revenir avec ce qui a été demandé. Éviter le combat : Persuasion DD 14 (leur patron paie moins qu'un témoin se tait), Intimidation DD 15 si le groupe est plus nombreux, ou couper la route à l'arrière (Athlétisme DD 13). Un coup de feu en ville : Empreinte +2, +1 par blessé grave ou mort, et la police est là avant que vous ayez quitté les lieux. Niveaux 4 à 7 pour deux à quatre hommes ; aux niveaux 1 à 3, un seul, à la matraque, qui ne sort le pistolet qu'après un coup de feu des coursiers.",
     scene: "a stocky man in a dark jacket with a plain plastic ID card on a cord at his chest, short hair and a wedding ring, standing in an underground car park beside a grey unmarked van, hands loose at his sides, concrete pillars and painted bay numbers behind him",
   }),
   creature({
@@ -340,15 +344,15 @@ export const BESTIAIRE_HERMES: Creature[] = [
       matraque(5, "1d4+3"),
     ],
     reactions: [special("Interposition", "Quand une attaque vise son client à 1,5 m de lui, il s'interpose : l'attaque le vise à la place, avec le même jet.")],
-    lore: "Un manteau anthracite, une oreillette, les mains jointes devant lui. Il ne sourit pas, il ne parle pas, et il compte les gens qui entrent dans la pièce. Dans le hall de la banque, personne ne se rappelle son visage.",
-    gmNotes: "Il protège un client, pas un secret. Sa mission est de sortir celui-ci de la pièce, pas de gagner un combat. Éviter le combat : Persuasion DD 15 (le client est sain et sauf), Intimidation DD 16 devant témoins, ou un détour par la porte de service que le client emprunte (Investigation DD 14). Il ne tire que si quelqu'un sort une arme. Un coup de feu dans une banque fait venir la police cantonale : Empreinte +2, +1 par blessé grave. Niveaux 5 à 9.",
+    lore: "Les mains jointes devant lui, une oreillette, un manteau anthracite. Il ne sourit pas, il ne parle pas, et il compte les gens qui entrent dans la pièce. Dans le hall de la banque, personne ne se rappelle son visage.",
+    gmNotes: "Il protège un client, pas un secret. Sa mission est de sortir celui-ci de la pièce, pas de gagner un combat. Pour s'en passer : Persuasion DD 15 (le client est sain et sauf), Intimidation DD 16 devant témoins, ou un détour par la porte de service que le client emprunte (Investigation DD 14). Il ne tire que si quelqu'un sort une arme. Un coup de feu dans une banque fait venir la police cantonale : Empreinte +2, +1 par blessé grave. Niveaux 5 à 9.",
     scene: "a tall bodyguard in a charcoal overcoat with an earpiece and a coiled wire at his collar, hands clasped in front of him, standing in the marble lobby of a private bank beside a revolving door, a polished reception desk and a framed founder's portrait behind him",
   }),
   creature({
     id: "dorian-meyssonnier",
     name: "Dorian Meyssonnier",
     family: "Les privés", size: "Moyenne", type: "humanoïde", region: "Bruxelles",
-    cr: 4, ac: 17, acNote: "gilet à plaques sous la veste", hd: 14, speed: { marche: 9 },
+    cr: 4, ac: 15, acNote: "gilet pare-balles souple", hd: 14, speed: { marche: 9 },
     stats: [16, 16, 16, 12, 14, 12],
     saves: { Dex: 5, Sag: 4 },
     skills: { Perception: 4, Intimidation: 3, Discrétion: 5 },
@@ -364,30 +368,30 @@ export const BESTIAIRE_HERMES: Creature[] = [
       matraque(5, "1d4+3"),
     ],
     lore: "La quarantaine, la barbe courte et grise, une veste sombre au col relevé. Un chef d'équipe d'Ostrevent : il observe à la jumelle, il compte les sorties, il dit « OK » et ses hommes savent déjà quoi faire.",
-    gmNotes: "Il veut le coffret ou la valise, pas un mort. Il a la consigne de ne pas tuer, sauf si on tire le premier. Il cherche un accord, pas une bataille : lui offrir ce qu'il vient chercher contre la vie sauve de l'intéressé. Éviter le combat : Persuasion DD 15, Intimidation DD 16 devant témoins, ou le laisser attendre une camionnette qui ne repart pas. S'il croit à un piège, il se retire. Un coup de feu : Empreinte +2, +1 par blessé grave ou mort, et Ostrevent n'oublie pas un visage. Niveaux 3 à 7.",
+    gmNotes: "Il veut le coffret ou la valise, pas un mort. Il a la consigne de ne pas tuer, sauf si on tire le premier. Il cherche un accord, pas une bataille : lui offrir ce qu'il vient chercher contre la vie sauve de l'intéressé. Éviter le combat : Persuasion DD 15, Intimidation DD 16 devant témoins, ou le laisser attendre une camionnette qui ne repart pas. S'il croit à un piège, il se retire. Un coup de feu : Empreinte +2, +1 par blessé grave ou mort, et Ostrevent n'oublie pas un visage. Niveaux 5 à 9.",
     scene: "a lean man in his forties in a dark jacket with the collar turned up, a short grey beard, binoculars hanging at his chest, standing beside a grey van parked in front of a brick townhouse with a brass nameplate, a paper cup on the van roof",
   }),
   creature({
     id: "equipe-d-extraction",
     name: "Équipe d'extraction",
     family: "Les privés", size: "Grande", type: "humanoïdes (équipe de six)", region: "Rotterdam",
-    cr: 8, ac: 17, acNote: "gilets à plaques", hd: 20, speed: { marche: 9 },
+    cr: 8, ac: 17, acNote: "gilets à plaques", hd: 28, speed: { marche: 9 },
     stats: [16, 16, 16, 10, 12, 10],
     skills: { Perception: 4 },
     languages: "néerlandais, français, anglais",
     traits: [
-      { name: "Six hommes, une fiche", text: "La fiche représente l'équipe entière, deux fourgons et six hommes. À la moitié de ses PV, ceux qui restent se replient en traînant leurs blessés ; à 0, ils sont neutralisés ou en fuite." },
+      { name: "Six personnes, une fiche", text: "La fiche représente l'équipe entière, deux fourgons et six hommes. À la moitié de ses PV, ceux qui restent se replient en traînant leurs blessés ; à 0, ils sont neutralisés ou en fuite." },
       { name: "Extraction", text: "Leur but est d'emmener une personne vivante. Ils tirent sur celui qui les en empêche, pas sur celle qu'ils emmènent." },
-      { name: "Chargeur", text: CHARGEUR },
+      { name: "Chargeur", text: CHARGEUR_GROUPE },
     ],
     actions: [
-      multi("Six tirs de pistolet, tirés par des hommes différents.", { "Pistolet semi-automatique de 9 mm": 6 }),
+      multi("Quatre tirs de pistolet, tirés par des tireurs différents.", { "Pistolet semi-automatique de 9 mm": 4 }),
       pistolet(6, "1d10+3"),
       matraque(6, "1d4+3"),
     ],
-    lore: "Deux fourgons gris qui se garent l'un derrière l'autre, six hommes en blouson sombre qui descendent sans claquer les portières. L'un tient une civière pliée, un autre un long sac noir. Ils ne courent pas : ils savent combien de temps ils ont.",
+    lore: "Deux fourgons gris qui se garent l'un derrière l'autre, cinq hommes et une femme en blouson sombre qui descendent sans claquer les portières. L'un tient une civière pliée, un autre un long sac noir. Ils ne courent pas : ils savent combien de temps ils ont.",
     gmNotes: "Le groupe Ostrevent les loue pour extraire une personne d'un hôtel, d'un entrepôt ou d'un hôpital : un témoin, un cadre, un coursier. Ils ne tuent pas leur cible. Éviter le combat : devancer l'extraction (Investigation DD 15 pour deviner l'heure), faire sortir la personne par un autre chemin, ou obtenir de leur chef d'équipe un autre contrat (Persuasion DD 16). Un coup de feu dans un port : Empreinte +2, +1 par blessé grave ou mort, et la police du port est en alerte. Niveaux 8 à 12.",
-    scene: "six men in dark jackets and caps climbing out of two grey vans parked one behind the other in a harbour logistics yard, one holding a folded stretcher, one carrying a long black bag, wet concrete, shipping containers stacked behind them",
+    scene: "five men and a woman in dark jackets and caps climbing out of two grey vans parked one behind the other in a harbour logistics yard, one holding a folded stretcher, one carrying a long black bag, wet concrete, shipping containers stacked behind them",
   }),
 
   // ===== Figures et scènes =====
@@ -395,12 +399,12 @@ export const BESTIAIRE_HERMES: Creature[] = [
     id: "ettore-scalvini",
     name: "Ettore Scalvini",
     family: "Figures et scènes", size: "Moyenne", type: "humanoïde", region: "Trieste",
-    cr: 0.25, ac: 12, acNote: "manteau renforcé", hd: 9, speed: { marche: 9 },
+    cr: 0.25, ac: 12, acNote: "manteau renforcé", hd: 5, speed: { marche: 9 },
     stats: [10, 13, 12, 16, 16, 14],
     skills: { Intuition: 5, Persuasion: 4, Perception: 5 },
     languages: "italien, français, anglais, allemand, slovène",
     traits: [
-      { name: "Phrases longues", text: "Il parle en phrases tournées autour d'un silence. Une créature qui l'écoute plus d'une minute fait un jet de sauvegarde d'Instinct DD 13, sinon elle dit une chose de plus qu'elle ne voulait." },
+      { name: "Phrases longues", text: "Il parle en phrases tournées autour d'un silence. Une créature qui l'écoute plus d'une minute fait un jet de sauvegarde d'Instinct DD 13 ; en cas d'échec, le MJ pose au joueur une question directe à laquelle il doit répondre franchement ou prendre 1 d'Empreinte." },
       { name: "Il ne tire pas", text: "Son pistolet reste sous la veste. Il ne le sort que pour se rendre à l'évidence." },
       { name: "Chargeur", text: CHARGEUR },
     ],
@@ -421,6 +425,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
       { name: "Caméras", text: "Un dôme sous la corniche et deux caméras sur la rue. Perception DD 13 pour les compter. Être filmé nettement dans une scène d'action fait monter l'Empreinte de 1." },
       { name: "Relève", text: "Les hommes de l'équipe se relèvent toutes les quatre heures. Pendant la relève, une porte de service reste une minute sans témoin." },
       { name: "Le voisin regarde", text: "Un habitant à la fenêtre note les visites. Une créature qui le salue est notée de plus." },
+      { name: "Équipe démobilisée", text: "À 0 PV, l'équipe a plié bagage avec ses images ; la scène est alertée et l'Empreinte monte de 1 par caméra non détruite." },
       { name: "Chargeur", text: CHARGEUR },
     ],
     actions: [
@@ -428,7 +433,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
       pistolet(5, "1d10+3"),
     ],
     lore: "Une maison de maître d'Ixelles à la façade en brique noircie, une plaque de cuivre à la porte, une camionnette grise garée en face avec les vitres teintées. Rien ne bouge, sauf un rideau au premier étage.",
-    gmNotes: "Ce n'est pas un ennemi qui attaque : c'est une scène que l'on traverse. L'équipe veut voir qui entre et qui sort, et elle ne tire que si on lui tire dessus. Éviter le combat : Perception DD 12 repère la camionnette, Discrétion DD 13 pour entrer par la cour de service pendant la relève, ou la cave qui donne rue d'à côté (Athlétisme DD 13). Prise sur le fait, l'Empreinte monte de 1 ; un coup de feu fait venir la police belge : Empreinte +2, +1 par blessé. Niveaux 1 à 5.",
+    gmNotes: "On traverse cette fiche ; on ne la combat pas. Les PX d'une scène à éviter reviennent au groupe qui s'en sort sans tuer. L'équipe veut voir qui entre et qui sort, et elle ne tire que si on lui tire dessus. Éviter le combat : Perception DD 12 repère la camionnette, Discrétion DD 13 pour entrer par la cour de service pendant la relève, ou la cave qui donne rue d'à côté (Athlétisme DD 13). Prise sur le fait, l'Empreinte monte de 1 ; un coup de feu fait venir la police belge : Empreinte +2, +1 par blessé. Niveaux 1 à 5.",
     scene: "a narrow brick townhouse on a quiet street with a brass plaque beside the front door, a grey van parked opposite with tinted windows, a camera dome under the eaves, a net curtain moved aside at a first floor window, the whole facade seen from the opposite pavement",
   }),
   creature({
@@ -442,15 +447,15 @@ export const BESTIAIRE_HERMES: Creature[] = [
     languages: "—",
     traits: [
       { name: "Circulation", text: "Chaque round, le MJ place un obstacle : un camion qui déboîte, un feu rouge, un cycliste, une voie qui se rétrécit. Adresse DD 13 au volant pour l'éviter, sinon 2d6 dégâts de collision à tous les occupants." },
-      { name: "Aller plus vite", text: "Le véhicule le plus rapide gagne 1 round d'avance par round où il ne rate pas. À 3 rounds d'avance, la poursuite est gagnée ; à 3 rounds de retard, perdue." },
+      { name: "Aller plus vite", text: "Chaque round, chaque conducteur fait le test de Circulation. Si le poursuivi réussit et le poursuivant échoue, le poursuivi gagne 1 point d'avance ; dans le cas inverse, il en perd 1 ; sinon rien ne bouge. À 3 points d'avance, la poursuite est gagnée ; à −3, perdue." },
       { name: "Les caméras de la route", text: "Une poursuite en ville est lue par au moins trois caméras : l'Empreinte monte de 1 si la plaque est relevée." },
     ],
     actions: [
-      save("Collision", "Dex", 16, "Le véhicule rabat, serre ou percute. Une créature dans une voiture à 1,5 m fait un jet de sauvegarde, moitié des dégâts en cas de réussite ; en cas d'échec sa voiture dérape et perd un round d'avance.", "6d10", "contondants"),
+      save("Collision", "Dex", 16, "Le véhicule rabat, serre ou percute. Une créature dans une voiture à 1,5 m fait un jet de sauvegarde, moitié des dégâts en cas de réussite ; en cas d'échec sa voiture dérape et perd 1 point d'avance.", "4d10", "contondants"),
       special("Freinage brutal", "Le véhicule s'arrête net. Les créatures qui suivent de trop près font un test d'Adresse DD 13, sinon elles percutent son arrière."),
     ],
-    lore: "Une berline grise sans plaque de société qui change de file à cent trente à l'heure, un feu de détresse clignotant à l'arrière. Elle double sur la droite, serre une camionnette, passe sous un pont. Le conducteur ne lève jamais la tête.",
-    gmNotes: "Une scène de poursuite, pas un adversaire à tuer : la fiche est le véhicule qui vous suit ou que vous suivez. Éviter le combat : un détour par un parking couvert (Investigation DD 13 pour repérer l'entrée à temps), un garagiste que le Chauffeur connaît, ou une sortie d'autoroute vers un péage qui lève la barrière. Une voiture qui percute un piéton, c'est un blessé grave : Empreinte +1, la police est prévenue. Un chauffeur de la Cellule gagne l'avantage à tous les jets de la poursuite. Niveaux 3 à 8.",
+    lore: "Une berline grise sans plaque de société qui change de file à toute allure, un feu de détresse clignotant à l'arrière. Elle double sur la droite, serre une camionnette, passe sous un pont. Le conducteur ne lève jamais la tête.",
+    gmNotes: "La fiche est le véhicule qui vous suit ou que vous suivez ; elle ne se tue pas. Les PX d'une scène à éviter reviennent au groupe qui s'en sort sans tuer. Éviter le combat : un détour par un parking couvert (Investigation DD 13 pour repérer l'entrée à temps), un garagiste que le Chauffeur connaît, ou une sortie d'autoroute vers un péage qui lève la barrière. Une voiture qui percute un piéton, c'est un blessé grave : Empreinte +1, la police est prévenue. Un chauffeur de la Cellule gagne l'avantage à tous les jets de la poursuite. Niveaux 3 à 8.",
     scene: "a dark grey saloon car skidding sideways on a wet urban ring road at high speed, tyres smoking, spray rising from the tarmac, concrete overpass pillars behind it, motion blur on the guardrail, seen from the side at eye level",
   }),
   creature({
@@ -473,8 +478,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
       pistolet(7, "1d10+4"),
       couteau(7, "1d4+4"),
     ],
-    lore: "Un gilet sans manches sur une chemise blanche, un trousseau de clés à la ceinture, un gobelet de café dans la main. Il dit bonjour à tout le monde, par son prénom. Le portier de nuit ne l'a jamais vu s'énerver.",
-    gmNotes: "Bastien Orlhac, intendant de l'ancienne caserne et seul exécutant du Cabinet : il a le dossier des deux écartements de 2021 et il sait ce que renferme le troisième étage. Il agit seul, lentement, avec une patience de comptable. Ce qu'il veut : que le site reste silencieux. Ce qu'il cache : qu'il a déjà tué, et que l'autre côté lui paie sa retraite. Éviter le combat : Persuasion DD 16 (il écoute une offre honnête), Tromperie DD 17, ou une porte qu'il n'a pas fermée. Un coup de feu : Empreinte +2, +1 par blessé grave ou mort. Niveaux 9 à 14.",
+    lore: "Il dit bonjour à tout le monde, par son prénom. Un trousseau de clés à la ceinture, un gobelet de café dans la main, un gilet sans manches sur une chemise blanche. Le portier de nuit ne l'a jamais vu s'énerver.",
+    gmNotes: "Bastien Orlhac, intendant de l'ancienne caserne et seul exécutant du Cabinet : il a le dossier des deux écartements de 2021 et il sait ce que renferme le troisième étage. Il agit seul, lentement, avec une patience de comptable. Ce qu'il veut : que le site reste silencieux. Ce qu'il cache : qu'il a déjà tué, et que l'autre côté lui paie sa retraite. Éviter le combat : Persuasion DD 16 (il écoute une offre honnête), Tromperie DD 17, ou une porte qu'il n'a pas fermée. Un coup de feu : Empreinte +2, +1 par blessé grave ou mort. Niveaux 5 à 10 ; aux niveaux 9 à 14 seulement avec l'équipe de nuit (Le Coffre verrouillé).",
     scene: "a calm middle-aged man in a grey fleece vest over a white shirt with a ring of keys on his belt, short grey hair, a paper cup of coffee in one hand, standing at a raised barrier gate of a former military site, a guard booth and a long low hangar behind him",
   }),
   creature({
@@ -489,7 +494,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
     traits: [
       { name: "Un patron et ses hommes", text: "La fiche représente Tournemine et son escorte de cinq hommes. À la moitié de ses PV, il fait signe et l'escorte se replie en l'emportant ; à 0, ils sont blessés ou en fuite, et lui avec." },
       { name: "Combien ?", text: "Il parle à voix basse, avec des chiffres. Une créature qui lui répond fait un jet de sauvegarde de Présence DD 16, sinon elle ne peut pas lui mentir sur un montant jusqu'à la fin de la scène." },
-      { name: "Chargeur", text: CHARGEUR },
+      { name: "Plan de rechange (3/jour)", text: "Quand la fiche rate un jet de sauvegarde, elle le réussit : un homme tient le coup, un second véhicule bloque la sortie." },
+      { name: "Chargeur", text: CHARGEUR_GROUPE },
     ],
     actions: [
       multi("Six tirs de pistolet, tirés par six hommes différents.", { "Pistolet semi-automatique de 9 mm": 6 }),
@@ -497,7 +503,7 @@ export const BESTIAIRE_HERMES: Creature[] = [
     ],
     legendary: {
       perRound: 3,
-      text: "Il fait 3 actions légendaires par round, une à la fois, à la fin du tour d'une autre créature.",
+      text: "Il peut entreprendre 3 actions légendaires, une seule à la fois, à la fin du tour d'une autre créature. Il récupère les actions dépensées au début de son tour.",
       actions: [
         special("Fait signe", "Un de ses hommes se déplace de sa vitesse et change de position sans provoquer d'attaque d'opportunité."),
         pistolet(7, "1d10+3"),
@@ -505,36 +511,37 @@ export const BESTIAIRE_HERMES: Creature[] = [
       ],
     },
     lore: "Quarante-neuf ans, large, le crâne rasé, une alliance et une chevalière. Ancien capitaine, il parle à voix basse et il compte. Cinq hommes en blouson sombre se tiennent à trois mètres de lui sans qu'il les regarde jamais.",
-    gmNotes: "Patron du groupe Ostrevent, qui l'a installé à Rotterdam. Il veut un contrat de long terme ; il cache qu'il est prêt à vendre aux coursiers un renseignement contre un document précis. Il a travaillé pour le Service dans les années 2010 et sait que quelque chose s'est cassé. Il ne s'affronte pas : il achète, il échange, il garde un coup d'avance. Éviter le combat : Persuasion DD 16, Tromperie DD 17 (il connaît les chiffres), ou lui apporter ce qu'il demande. Un coup de feu sur lui ou près de lui est la fin de la Cellule à Rotterdam : Empreinte +2, +1 par blessé grave ou mort. Niveaux 8 à 14.",
+    gmNotes: "Patron du groupe Ostrevent, qui l'a installé à Rotterdam. Il veut un contrat de long terme ; il cache qu'il est prêt à vendre aux coursiers un renseignement contre un document précis. Il a travaillé pour le Service dans les années 2010 et sait que quelque chose s'est cassé. Il ne s'affronte pas : il achète, il échange, il garde un coup d'avance. Éviter le combat : Persuasion DD 16, Tromperie DD 17 (il connaît les chiffres), ou lui apporter ce qu'il demande. Un coup de feu sur lui ou près de lui est la fin de la Cellule à Rotterdam : Empreinte +2, +1 par blessé grave ou mort. Niveaux 11 à 14.",
     scene: "a broad heavy-set man with a shaved head in a dark overcoat, a wedding ring and a signet ring, hands in his coat pockets, standing at the edge of a container terminal quay with five men in dark jackets arranged behind him, stacks of blue containers and tall cranes",
   }),
   creature({
     id: "coup-de-filet",
     name: "Coup de filet",
     family: "Figures et scènes", size: "Gigantesque", type: "scène (opération de police)", region: "Paris",
-    cr: 13, ac: 17, acNote: "véhicules et gilets", hd: 16, speed: { marche: 9 },
+    cr: 13, ac: 17, acNote: "véhicules et gilets", hd: 20, speed: { marche: 9 },
     stats: [16, 16, 18, 12, 14, 12],
     languages: "français",
     traits: [
       { name: "Le cordon", text: "Un quartier fermé par des véhicules et des policiers. On en sort en se rendant, pas en tirant. Les sorties sont tenues par des équipes de trois à six agents." },
       { name: "Un mandat", text: "Toute l'opération repose sur un mandat et un témoin. Si l'un des deux tombe, elle recule d'un jour." },
-      { name: "Chargeur", text: CHARGEUR },
+      { name: "Plan de rechange (3/jour)", text: "Quand la fiche rate un jet de sauvegarde, elle le réussit : un second cordon se ferme, un agent tient sa position, un fourgon bloque la sortie." },
+      { name: "Chargeur", text: CHARGEUR_GROUPE },
     ],
     actions: [
-      multi("Sept tirs de pistolet, tirés par des agents différents.", { "Pistolet semi-automatique de 9 mm": 7 }),
+      multi("Cinq tirs de pistolet, tirés par des agents différents.", { "Pistolet semi-automatique de 9 mm": 5 }),
       pistolet(8, "1d10+3"),
     ],
     legendary: {
       perRound: 3,
-      text: "Elle fait 3 actions légendaires par round, une à la fois, à la fin du tour d'une autre créature.",
+      text: "Il peut entreprendre 3 actions légendaires, une seule à la fois, à la fin du tour d'une autre créature. Il récupère les actions dépensées au début de son tour.",
       actions: [
         special("Resserrer le cordon", "Une issue du quartier se ferme. Les créatures qui y couraient doivent changer de direction."),
         pistolet(8, "1d10+3"),
         cost(special("Sommation", "Une voix amplifiée ordonne de poser les armes. Une créature qui ne les pose pas devient la cible prioritaire de l'équipe la plus proche."), 2),
       ],
     },
-    lore: "Dix fourgons en travers du boulevard, des agents en gilet jaune qui détournent les passants, un hélicoptère qui tourne trois fois au-dessus du toit. Sur le trottoir d'en face, une femme en costume sombre tient un papier plié en deux.",
-    gmNotes: "C'est la fin d'une Cellule, pas une rencontre : l'Empreinte est à 10 ou un mandat a été signé. À cette fiche, la partie n'est plus un combat mais une sortie. Éviter le combat : se rendre sans arme (aucun jet, un avocat commis d'office), passer par un témoin qui vient attester d'une autre histoire (Persuasion DD 17), ou profiter du seul instant où le cordon n'est pas fermé (Investigation DD 16 pour le trouver, Discrétion DD 17 pour passer). Tirer sur un cordon de police est mourir. Niveaux 14 à 17, quand l'Empreinte est à 10.",
+    lore: "Dix fourgons en travers du boulevard, des agents en gilet fluo qui détournent les passants, un hélicoptère qui tourne trois fois au-dessus du toit. Sur le trottoir d'en face, une femme en costume sombre tient un papier plié en deux.",
+    gmNotes: "C'est la fin d'une Cellule, pas une rencontre : l'Empreinte est à 10 ou un mandat a été signé. À cette fiche, la Cellule est déjà finie ; il ne reste qu'à sortir. Les PX d'une scène à éviter reviennent au groupe qui s'en sort sans tuer. Éviter le combat : se rendre sans arme (aucun jet, un avocat commis d'office), passer par un témoin qui vient attester d'une autre histoire (Persuasion DD 17), ou profiter du seul instant où le cordon n'est pas fermé (Investigation DD 16 pour le trouver, Discrétion DD 17 pour passer). Tirer sur le cordon, c'est y rester. Niveaux 14 à 17, quand l'Empreinte est à 10.",
     scene: "a street cordon of police vehicles and uniformed officers in navy jackets stretched across a wide city boulevard, officers with pistols raised behind open car doors, a white van parked across the road, pedestrians held back by barrier tape",
   }),
   creature({
@@ -548,7 +555,8 @@ export const BESTIAIRE_HERMES: Creature[] = [
     traits: [
       { name: "Verrouillage", text: "Les barrières sont baissées, les badges révoqués, les deux fourgons en travers de l'entrée. Entrer ou sortir sans y avoir été autorisé demande un test de Discrétion DD 18 par obstacle." },
       { name: "Toutes les caméras", text: "Chaque entrée, chaque couloir, chaque parking est filmé. Une créature nettement filmée fait monter l'Empreinte de 1." },
-      { name: "Chargeur", text: CHARGEUR },
+      { name: "Plan de rechange (3/jour)", text: "Quand la fiche rate un jet de sauvegarde, elle le réussit : une porte tient, un tireur de l'équipe de nuit couvre le couloir, un fourgon bloque la sortie." },
+      { name: "Chargeur", text: CHARGEUR_GROUPE },
     ],
     actions: [
       multi("Huit tirs de pistolet, tirés par l'équipe de nuit.", { "Pistolet semi-automatique de 9 mm": 8 }),
@@ -557,15 +565,15 @@ export const BESTIAIRE_HERMES: Creature[] = [
     ],
     legendary: {
       perRound: 3,
-      text: "Elle fait 3 actions légendaires par round, une à la fois, à la fin du tour d'une autre créature.",
+      text: "Il peut entreprendre 3 actions légendaires, une seule à la fois, à la fin du tour d'une autre créature. Il récupère les actions dépensées au début de son tour.",
       actions: [
         special("Fermer une porte", "Une porte du site se verrouille, sans appel."),
         pistolet(8, "1d10+3"),
-        cost(special("Appel", "L'équipe de nuit prévient celui qui est derrière : six hommes de plus sont là en 1d4+2 rounds."), 2),
+        cost(special("Appel", "L'équipe de nuit appelle du renfort : six hommes de plus sont là en 1d4+2 rounds."), 2),
       ],
     },
     lore: "Une barrière baissée à six heures du matin, deux fourgons blancs en travers de la route, un gardien qui ne boit plus son café. Les projecteurs sont allumés en plein jour, et personne ne répond à l'interphone.",
-    gmNotes: "L'ancienne caserne de Luxembourg, le Coffre, une fois verrouillée à la fin de la campagne : ménage, renvois, témoins écartés. Orlhac y est avec l'équipe de nuit. Entrer, c'est tomber sur un site préparé à ne rien laisser sortir. Éviter le combat : Investigation DD 17 pour trouver une porte de service oubliée, un faux badge de livraison (Escamotage DD 16), ou ne pas entrer. Détruire ou emporter ce qu'il abrite est le choix de la campagne : prévenir Aldebert, la presse ou un juge avant de franchir la barrière. Un coup de feu : Empreinte +2, +1 par blessé grave ou mort. Niveaux 15 à 20.",
+    gmNotes: "L'ancienne caserne de Luxembourg, le Coffre, une fois verrouillée à la fin de la campagne : ménage, renvois, témoins écartés. Orlhac y est avec l'équipe de nuit. Entrer, c'est tomber sur un site préparé à ne rien laisser sortir. Les PX d'une scène à éviter reviennent au groupe qui s'en sort sans tuer. Éviter le combat : Investigation DD 17 pour trouver une porte de service oubliée, un faux badge de livraison (Escamotage DD 16), ou ne pas entrer. Détruire ou emporter ce qu'il abrite est le choix de la campagne : prévenir Aldebert, la presse ou un juge avant de franchir la barrière. Un coup de feu : Empreinte +2, +1 par blessé grave ou mort. Niveaux 15 à 20.",
     scene: "a former military barracks compound seen from the front, a long low concrete wall with a barrier gate lowered across the entrance, two white vans parked across the road, a guard booth, tall floodlight masts and a flat-roofed hangar behind, bare trees along the fence",
   }),
 ];
