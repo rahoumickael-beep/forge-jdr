@@ -113,7 +113,7 @@ export const ORIGINES_ASILE: Origin[] = [
     genre: "western",
     name: "Gens de la Comanchería",
     blurb: "Numunuu, « le Peuple », ou enfant de deux mondes né au poste de la Croix-de-Pierre. On parle la langue de la traite et on connaît les usages des deux camps.",
-    bonus: { 4: 1 },
+    bonus: { 2: 1 },
     speed: 6,
     unique: true,
     traits: [
@@ -125,10 +125,10 @@ export const ORIGINES_ASILE: Origin[] = [
       {
         id: "ws-comancheria-quahadi",
         name: "Numunuu des Quahadi",
-        blurb: "Tu es né dans un campement du Llano. Tu as appris à monter avant de marcher, et tes histoires ont plus de lunes que n'importe quel livre de Bonne-Espérance.",
+        blurb: "Ce que Bonne-Espérance a mis dans des livres, ton camp le dit à voix haute, depuis plus longtemps qu'eux.",
         bonus: { 1: 1, 2: 1 },
         traits: [
-          { name: "Cavalier du Llano", text: "Maîtrise de Dressage et de Survie. Tu montes sans selle sans désavantage, et ta monture ne fatigue pas la première heure de galop." },
+          { name: "Cavalier du Llano", text: "Maîtrise de Survie et d'Histoire. Tu connais les points d'eau du Llano et les récits de ton camp, mot pour mot. Tu montes sans selle sans désavantage." },
         ],
       },
       {
@@ -222,7 +222,7 @@ export const HISTORIQUES_ASILE: Background[] = [
     skills: ["Dressage", "Survie"],
     tool: "Matériel de selle (lasso, selle, éperons)",
     gear: ["Lasso de crin", "Selle et éperons", "Chapeau à larges bords", "Gourde", "25 dollars"],
-    feature: { name: "Un rancho qui t'embauche", text: "Dans les ranchos du Brazos, on t'embauche à 30 dollars par mois sans poser de question, et on te prête un cheval frais pour la route." },
+    feature: { name: "La piste à bétail", text: "Tu connais les pistes du Kansas, leurs relais et leurs gués. Avantage aux tests de Survie pour trouver de l'eau et du fourrage pour des bêtes sur une piste, et un vieux de la piste te redit ce qu'il sait." },
   },
   {
     id: "ws-h-soldat",
@@ -242,7 +242,7 @@ export const HISTORIQUES_ASILE: Background[] = [
     skills: ["Escamotage", "Tromperie"],
     tool: "Jeu de cartes",
     gear: ["Deux jeux de cartes", "Jetons d'ivoire", "Gilet brodé", "Derringer de manche", "50 dollars"],
-    feature: { name: "Une place à la table", text: "Dans un saloon, un patron te garde une chaise et te dit qui est en ville. Tu connais les règles du jeu local et les parieurs qui perdent trop." },
+    feature: { name: "Le jeu du lieu", text: "Dans toute ville, tu trouves une partie en moins d'une heure. Tu connais les règles locales, les mauvais perdants et les parieurs qui perdent trop." },
   },
   {
     id: "ws-h-arpenteur",

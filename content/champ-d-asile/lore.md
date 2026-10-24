@@ -180,8 +180,8 @@ On compte en jours de cheval. Il faut cinq jours pour traverser le Champ d'est e
 
 Dans le Champ, il n'y a pas de magie. Il y a des hommes et des femmes qui tirent plus vite, montent mieux, mentent mieux que les autres, et ça se sait. Chaque personnage a un **Nom**, de 0 à 10 : ce qu'on raconte de lui dans les saloons.
 
-- Le Nom monte quand le personnage fait un **coup d'éclat** devant témoins : un duel gagné, un train arrêté, une évasion, un pouvoir de classe marqué « Coup d'éclat ». Le MJ décide du coup d'éclat. +1 au plus par séance et par personnage, +2 si un journal le publie. Un exploit de groupe donne +1 à chacun.
-- Il redescend d'un point après un mois sans témoin ni combat.
+- Le Nom monte quand le personnage fait un **coup d'éclat** devant témoins : un duel gagné, un train arrêté, une évasion, un pouvoir de classe marqué « Coup d'éclat ». Le MJ décide du coup d'éclat. +1 au plus par séance et par personnage ; un journal double ce gain une fois par scénario. Un exploit de groupe donne +1 à chacun.
+- Il redescend d'un point après un scénario entier sans témoin ni combat. Passé 7, seul un grand éclat, annoncé par le MJ, fait encore monter le Nom (un par scénario au plus).
 - On peut aussi le faire baisser exprès : payer un faux témoin, se faire passer pour mort, obtenir une grâce (−2 à −5, au prix d'une aventure).
 
 ### Ce que donne le Nom [Joueurs]

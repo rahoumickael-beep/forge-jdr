@@ -287,5 +287,5 @@ test("classes du Champ-d'Asile : la poudre est comptée, le Nom monte par coup d
     }
   }
   const texte = JSON.stringify(REGLES_ASILE);
-  for (const mot of ["100 dollars", "500 dollars", "Colt | 17 dollars", "Winchester | 25 dollars", "25 dollars sur parole", "un point par séance", "1,5 kg"]) assert.ok(texte.includes(mot), `règles du Nom et de la poudre : « ${mot} »`);
+  for (const mot of ["100 dollars", "500 dollars", "Colt | 17 dollars", "Winchester | 30 dollars", "25 dollars sur parole", "Au plus un point par séance", "1,5 kg"]) assert.ok(texte.includes(mot), `règles du Nom et de la poudre : « ${mot} »`);
 });

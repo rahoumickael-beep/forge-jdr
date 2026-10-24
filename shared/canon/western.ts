@@ -243,7 +243,7 @@ export const CHAMP_D_ASILE: Canon = {
     accroches: [
       { titre: "La diligence", niveaux: [1, 4], factions: ["lys", "rail"], texte: "La diligence de Fort-Rail est attaquée ; parmi les voyageurs, un géomètre du rail." },
       { titre: "Le rancho Wagram", niveaux: [1, 4], factions: ["assemblee", "rail"], texte: "Le vieux Roux refuse de vendre ; des hommes viennent la nuit." },
-      { titre: "Les chevaux volés", niveaux: [1, 4], factions: ["rurales"], texte: "Un troupeau du Champ passe le gué du Concho ; les rurales d'Arredondo, loués par les ranchos du sud, paient les voleurs à la tête, morts ou vifs, et abattent avant de demander." },
+      { titre: "Les chevaux volés", niveaux: [1, 4], factions: ["rurales"], texte: "Un troupeau du Champ passe le gué du Concho ; les hommes d'Arredondo, les rurales, loués par les ranchos du sud, paient les voleurs à la tête, morts ou vifs, et abattent avant de demander." },
       { titre: "Le mandat", niveaux: [1, 4], factions: ["rangers"], texte: "Le capitaine Burke a un mandat contre un Asilien qui n'a rien fait." },
       { titre: "La foire", niveaux: [1, 4], factions: ["assemblee", "rail"], texte: "À la foire aux chevaux, le favori de la course, un étalon du rancho Eylau, est déjà promis au rail par le fils du propriétaire, endetté au jeu. Le vieux ne sait rien. Qui gagne la course, et à qui revient le cheval ?" },
       { titre: "Les maisons fouillées", niveaux: [5, 10], factions: ["rail"], texte: "Trois maisons de vieilles familles ont été fouillées sans rien voler." },
