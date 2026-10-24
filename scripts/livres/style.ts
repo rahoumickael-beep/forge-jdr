@@ -108,9 +108,9 @@ table.tab.long { break-inside: auto; }
 .abil { width: 100%; text-align: center; font-size: 9pt; color: #6e2414; }
 .abil th { font-family: Cinzel, serif; font-size: 8.4pt; }
 
-/* Page de créature : planche plus basse, et la fiche passe d'une colonne à l'autre comme dans les manuels 5e. */
-.creature .illu.large { height: 74mm; }
-.creature.longue .illu.large { height: 150mm; }
+/* Page de créature : planche entière en tête de la première colonne (peinte en portrait), et la fiche passe d'une colonne à l'autre comme dans les manuels 5e. */
+.creature .illu.colonne { height: auto; margin-bottom: 4mm; }
+.creature .illu.colonne img { height: auto; aspect-ratio: 1024 / 1223; }
 .creature .statblock { break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .creature .statblock h5, .creature .statblock p, .creature .statblock table { break-inside: avoid; }
 .creature .statblock h5 { break-after: avoid; }

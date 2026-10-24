@@ -48,6 +48,16 @@ const doc = (body: string, parchemin = true) =>
 async function imprimer(page: Page, html: string, fond = true): Promise<Uint8Array> {
   await page.setContent(html, { waitUntil: "networkidle" });
   await page.evaluate(() => document.fonts.ready);
+  // Contrôle sans tokens : une planche dont le cadre cache plus d'un quart de la peinture est signalée.
+  const coupees = await page.evaluate(() =>
+    [...document.querySelectorAll<HTMLImageElement>(".illu img")].flatMap((img) => {
+      const { naturalWidth: nw, naturalHeight: nh, clientWidth: cw, clientHeight: ch } = img;
+      if (!nw || !nh || !cw || !ch) return [];
+      const visible = Math.min(nw / nh, cw / ch) / Math.max(nw / nh, cw / ch);
+      return visible < 0.75 ? [`${img.dataset.id} (${Math.round(visible * 100)} % visible)`] : [];
+    }),
+  );
+  if (coupees.length) console.warn(`Planches trop coupées : ${[...new Set(coupees)].join(", ")}`);
   return page.pdf({ format: "A4", printBackground: fond, preferCSSPageSize: true });
 }
 
@@ -70,7 +80,7 @@ function sommaire(livre: Livre, debuts: number[]) {
 export async function fabriquer(livre: Livre, out: string) {
   mkdirSync(out, { recursive: true });
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
-  const page = await browser.newPage();
+  const page = await browser.newPage({ viewport: { width: 794, height: 1123 } }); // largeur A4 : cadres mesurés comme à l’impression
 
   // Le parchemin, peint une fois en JPEG.
   const page2 = await browser.newPage({ viewport: { width: 794, height: 1123 }, deviceScaleFactor: HD ? 3 : 2 }); // ×3 : parchemin à près de 300 dpi pour l'impression

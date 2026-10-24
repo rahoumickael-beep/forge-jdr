@@ -113,16 +113,16 @@ export function bestiaire(): Livre {
         niveau: 2,
         entete: `Bestiaire · ${f.titre}`,
         html: `<div class="tete"><div class="sous">${esc(f.titre)} · ${esc(c.region)} · Puissance ${crLabel(c.cr)}</div><h2>${esc(c.name)}</h2></div>
-        <div class="creature">${illustration(c.id, c.illustration, "large")}
-        <div class="cols">
+        <div class="creature">
+        <div class="cols">${illustration(c.id, c.illustration, "colonne")}
           <p class="lettrine">${md(c.lore)}</p>
           ${ficheDeStats(c)}
           <aside class="encart dark"><h4>Au MJ</h4><p>${md(c.gmNotes)}</p></aside>
         </div></div>`,
         // Trop long pour une page : grande planche, récit et note au MJ d'abord, la fiche entière en regard.
         siLong: `<div class="tete"><div class="sous">${esc(f.titre)} · ${esc(c.region)} · Puissance ${crLabel(c.cr)}</div><h2>${esc(c.name)}</h2></div>
-        <div class="creature longue">${illustration(c.id, c.illustration, "large")}
-        <div class="cols"><p class="lettrine">${md(c.lore)}</p><aside class="encart dark"><h4>Au MJ</h4><p>${md(c.gmNotes)}</p></aside></div>
+        <div class="creature longue">
+        <div class="cols">${illustration(c.id, c.illustration, "colonne")}<p class="lettrine">${md(c.lore)}</p><aside class="encart dark"><h4>Au MJ</h4><p>${md(c.gmNotes)}</p></aside></div>
         <div class="saut"></div>
         <div class="cols">${ficheDeStats(c)}</div></div>`,
       });
