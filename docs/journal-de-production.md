@@ -105,7 +105,17 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 
 ## Monde d’horreur : la Côte des Noyés (1923), 25/10/2026
 - Bible `content/cote-des-noyes/lore.md` relue et reprise : fuites du secret retirées des passages joueurs ; noms : la Havraise (assurances), la Compagnie des Paquebots de la Manche, Edmond Lemarquand ; baie sur la côte ouest du Cotentin (Carteret – nez de Jobourg) ; maréchal des logis-chef Coquart ; la Marée (0 à 10, Présages, seuils) et la jauge « les Passagers » (1 412, maximum 1 512 : `max` ajouté au type de jauge).
-- Canon `shared/canon/horreur.ts` (+ table), genre horreur refait (caractéristiques Force, Adresse, Endurance, Savoir, Sang-froid, Présence). Scénario « Le numéro onze » écrit (en relecture). Classes, origines, règles et bestiaire en cours (agents).
+- Canon `shared/canon/horreur.ts` (+ table), genre horreur refait (caractéristiques Force, Adresse, Endurance, Savoir, Sang-froid, Présence).
+- Classes (`noyes-classes.ts` : Expert en sinistres, Ancien poilu, Médecin, Abbé, Journaliste, Photographe, Pêcheur, Médium, Gendarme, Antiquaire), origines, 11 historiques, règles de la Marée ; bestiaire de 23 créatures ; scénario « Le numéro onze » ; 30 cartes ; livre des joueurs (8 chapitres) et livres PDF (104/27/35 p.) : tout relu et corrigé. Règle ajoutée : pas plus de 3 de Marée par scène, toutes sources confondues (sinon un combat envoyait un personnage à la mer). Contrebandier renommé Gaston Hardouin (Gaston Leroux est l’auteur du *Fantôme de l’Opéra*).
+
+## Monde post-apocalyptique : le Grand Sec, 25/10/2026
+- Bible `content/grand-sec/lore.md` : le Bas-Pays sans pluie depuis 2031, le Rhône route de sable, l’eau comme monnaie (le godet) ; secret : les Mâts, tours d’ensemencement des nuages, poussent la pluie vers Montclair (le Ventoux). Relue et corrigée (âges, géographie, Aubanel → Peyrol, Rose Mistral → Rose Faucon, un seul clin d’œil au Félibrige : Roumanille).
+- Canon, classes (Batelier, Puisatier, Pillard repenti, Sourcière, Mécano, Gardian, Pénitent, Médecin des sables, Fouilleur, Chef de convoi), origines, règles de la soif (gourde de 12 godets, efforts payés en eau, eau produite plafonnée à 6 godets par jour, au plus 2 niveaux d’épuisement retirés par 24 h), bestiaire de 24 créatures, 30 cartes, scénario « Le pont d’Aramon » : relus et corrigés. Livre des joueurs : chapitres 00-03 écrits, 04-07 en cours.
+- Piste de style à proposer à Mickael : une affiche de 1960 passée au soleil (ocre, lavande délavée, blanc de chaux) plutôt que le pochoir rouillé.
+
+## Monde western : le Champ-d’Asile, 1878, 25/10/2026
+- Bible `content/champ-d-asile/lore.md` : la colonie de 1818 a survécu, territoire francophone sur le haut Brazos ; secret : le Traité des Deux Rivières avec les Comanches (Numunuu, bande Quahadi) rend la terre le 14 juillet 1880, l’Assemblée a brûlé sa copie. Relue et corrigée (le 14 juillet, fête du Traité choisie par le colonel Duvernet ; aigle et abeille au lieu du lys ; Peyrac → Sorbier ; Comanches sans clichés).
+- Canon, classes (Pistolero, Vaquero, Shérif, Joueur, Éclaireur, Chasseur de primes, Médecin de campagne, Prédicateur, Hors-la-loi, Arpenteur), origines, règles du Nom (réputation qui attire les tueurs) et de la poudre, bestiaire de 24 créatures (les Numunuu n’y sont pas des monstres), scénario « La diligence de Fort-Rail » : écrits ; scénario relu et corrigé ; relectures des classes et du bestiaire en cours.
 
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
