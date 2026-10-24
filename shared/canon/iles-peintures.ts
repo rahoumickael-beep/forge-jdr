@@ -64,7 +64,7 @@ export const PEINTURES_ILES: Record<string, Peinture> = {
   "figure-faucheux": {
     cadrage: "portrait",
     lumiere: "stormy sea light",
-    sujet: "a forty-year-old sea captain with a square jaw and a weathered face, a tricorn hat and a heavy buff coat, an iron hook in place of his left hand resting on a table beside a brass compass, standing on the quarterdeck of a brigantine, a hard and watchful expression",
+    sujet: "a forty-year-old sea captain with a square jaw and a weathered face, a tricorn hat and a heavy buff coat, an iron cuff riveted over the wrist stump of his left arm resting on a table beside a brass compass, standing on the quarterdeck of a brigantine, a hard and watchful expression",
   },
   "figure-arriaga": {
     cadrage: "portrait",

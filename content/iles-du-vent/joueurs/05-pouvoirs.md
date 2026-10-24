@@ -2,7 +2,7 @@
 
 Entre deux sabords fermés, une lanterne pend à un crochet et se balance avec le navire. Un gabier de dix-sept ans a la jambe ouverte du genou à la cheville : une poulie de hune l'a prise dans sa chute. Mathurin a posé son coffre ouvert sur un baril, passé l'aiguille dans la flamme, versé de l'eau-de-vie sur ses mains. Quatre hommes tiennent le garçon. Personne dans l'entrepont ne parle de miracle. Il y a du fil, un homme qui a scié des jambes entre deux bordées, et un maître de manœuvre qui tient la lanterne à bout de bras.
 
-Un pouvoir, aux Îles, est un métier poussé très loin. Il coûte parfois des charges de poudre, parfois du Moral au navire entier, presque jamais autre chose que du temps. Ce chapitre explique comment lire les pouvoirs de ta classe, ce que coûte un coup de main, ce que toutes les classes ont en commun, et ce que chacune fait de mieux.
+Un pouvoir, aux Îles, est un métier. Il coûte parfois des charges de poudre, parfois du Moral au navire entier, presque jamais autre chose que du temps. Ce chapitre explique comment lire les pouvoirs de ta classe, ce que coûte un coup de main, ce que toutes les classes ont en commun, et ce que chacune fait de mieux.
 
 > **Si tu viens d'un autre jeu.**
 >
@@ -124,9 +124,9 @@ Les plus grands pouvoirs de chaque classe portent la mention **Coup de main**. I
 | Canonnier | *Bordée* : un point à 36 m, 6 m de rayon, 6d8 contondants, sauvegarde d'Adresse | *Salve générale* : même chose, 10d8, rayon de 9 m |
 | Boucanier | *Descente à terre* : vingt personnes touchent terre sans être vues pendant une heure | *Retraite dans les bois* : vingt personnes disparaissent dans le couvert |
 | Chirurgien de bord | *Poste de blessés* : six alliés regagnent 3d8 + Instinct pendant un repos court et perdent un niveau d'épuisement | *Pas un homme de plus* : tous les alliés à 18 m regagnent 6d8 + Instinct et se défont d'un état |
-| Gabier | *Pluie de grappins* : huit alliés atteignent le pont adverse sans test, et les ennemis qui ne vous ont pas vus sont surpris | *Chute de la grand-voile* : une voile sur 6 m, à 18 m, 4d8 contondants et entravé |
+| Gabier | *Pluie de grappins* : huit alliés atteignent le pont adverse sans test, et les ennemis qui ne t'ont pas vu sont surpris | *Chute de la grand-voile* : une voile sur 6 m, à 18 m, 4d8 contondants et entravé |
 | Bretteur | *Tenir le pont* : une minute, un passage tenu ; les ennemis s'arrêtent, les alliés derrière toi ont +2 CA | *À la brèche* : une charge de 18 m, avantage, +4d8, et chaque allié qui te voit attaque en réaction |
-| Maître de manœuvre | *Tout le monde aux bras* : dix minutes, avantage aux tests de manœuvre, +3 m de vitesse aux alliés | *À mon coup de sifflet* : les alliés à 18 m relancent chacun un d20 raté |
+| Maître de manœuvre | *Tout le monde aux bras* (dix minutes, hors combat) : avantage aux tests de manœuvre, +3 m de vitesse aux alliés | *À mon coup de sifflet* : les alliés à 18 m relancent chacun un d20 raté |
 | Contrebandier | *Le chargement passe* : le navire passe une visite sans fouille | *Tout le port regarde ailleurs* : vingt personnes ne sont pas remarquées pendant une heure |
 | Aumônier | *Sermon au pied du grand mât* : une minute, niveau + Présence en PV temporaires, à 9 m | *Prière des naufragés* : une minute, le premier allié qui tomberait à 0 PV reste à 1 PV |
 | Plongeur | *L'équipage à l'eau* : huit alliés retiennent leur souffle deux fois plus longtemps | *Passe dans les récifs* : le navire passe un récif sans test |
@@ -155,10 +155,30 @@ Presque tous les niveaux d'une classe suivent le même rythme. Voici où tombent
 | Plongeur | d8 | 5 | 6 | | | 20 (*La mer te connaît*, sous l'eau et près d'un récif) |
 
 - **Attaque supplémentaire.** Deux attaques au lieu d'une quand tu prends l'action Attaquer. Avec des armes à feu, deux armes chargées différentes.
-- **Expertise.** Double maîtrise dans deux compétences que tu maîtrises parmi celles que ta classe cite. Le Chirurgien de bord n'en a pas : il a des soins qui se multiplient.
+- **Expertise.** Elle double la maîtrise de deux compétences que tu maîtrises parmi celles que ta classe cite. Le Chirurgien de bord n'en a pas : il a des soins qui se multiplient.
 - **Œil fiable** (niveau 11, toutes les classes). Pour les compétences que ta classe nomme et que tu maîtrises, un résultat de 9 ou moins au d20 compte comme un 10.
-- **Avantage aux jets contre la mort.** Aux jets contre la mort, avec 1 PV quand tu te stabilises. Le *Cuir tanné* du Capitaine est autre chose : +1 aux sauvegardes tant que le Moral est à 6 ou plus.
+- **Avantage aux jets contre la mort.** Il donne l'avantage aux jets contre la mort, et tu te relèves avec 1 PV quand tu te stabilises. Le *Cuir tanné* du Capitaine est autre chose : +1 aux sauvegardes tant que le Moral est à 6 ou plus.
 - **Esquive instinctive** (niveau 5) : le Gabier et le Contrebandier réduisent de moitié les dégâts d'une attaque qu'ils voient, en réaction, à volonté.
+
+### Les passifs que les autres chapitres citent
+
+Ces pouvoirs ne prennent ni action ni réaction : ils agissent seuls, et les chapitres 2, 4 et 7 y renvoient.
+
+| Pouvoir | Classe, niveau | Ce qu'il fait |
+|---|---|---|
+| *Plan d'abordage* | Capitaine de course, 3 | Une fois par combat, après dix minutes de préparation, toi et les alliés à 9 m qui t'entendent avez l'avantage à l'initiative |
+| *Voix de l'équipage* | Élu de l'équipage, 3 | Un litige entre deux membres de l'équipage se règle sans test si tu en fais ton affaire devant tous ; avantage en Persuasion pour apaiser un murmure |
+| *Cuir tanné* | Capitaine, 15 | Tant que le Moral est à 6 ou plus, toi et les alliés à 9 m qui t'entendent avez +1 aux sauvegardes |
+| *Œil de batterie* | Maître-canonnier de batterie, 3 | Ton Savoir s'ajoute aux dégâts d'un canon de 8 ou d'un pierrier, et tu ignores le demi-abri de la cible |
+| *Poudre sèche* | Canonnier, 9 | Tes armes à feu tirent même mouillées, et tu décrasses une arme enrayée en action bonus |
+| *Sourd au tonnerre* | Canonnier, 15 | Avantage aux sauvegardes d'Adresse contre l'explosion, l'artillerie et le feu ; une détonation ne te rend jamais sourd |
+| *Mains sûres* | Chirurgien de bord, 6 | Tu stabilises un mourant en action bonus |
+| *Dur au mal* | Chirurgien de bord, 15 | Un poison ordinaire, une eau sale ou une viande avariée ne t'empoisonnent pas |
+| *Œil de hune* | Vigie, 3 | Avantage à l'initiative ; les alliés à 9 m qui t'entendent ne sont pas surpris tant que tu ne l'es pas |
+| *Se rattraper* | Gabier, 9 | Une attaque, un coup de roulis ou un souffle qui te ferait tomber ou te pousser ne te déplace pas : tu t'accroches au gréement |
+| *Souple comme un cordage* | Gabier, 15 | Les attaques d'opportunité contre toi ont le désavantage, et te relever ne te coûte que 1,5 m de vitesse |
+| *Rien à perdre* | Aumônier, 9 | Sous la moitié de tes PV, tu ne peux pas être effrayé |
+| *Tenir l'air* | Plongeur, 3 | Ton souffle est doublé, et tu as l'avantage aux sauvegardes contre la fumée et les gaz |
 
 Les classes sans attaque supplémentaire (Chirurgien, Gabier, Contrebandier, Aumônier) ont d'autres moyens de faire mal : *Coup du haut*, *Coup fourré*, le *Bistouri* du Chirurgien de la Marine, le *Coup de bâton ferré* de l'Aumônier.
 
@@ -189,7 +209,7 @@ L'Élu de l'équipage règle les litiges devant tous (*Voix de l'équipage*, *À
 
 Il sait ce que pèse un boulet et combien de pas il faut compter avant qu'une mèche brûle. *Mains de poudre* lui fait recharger une arme à feu en action bonus. *Artifice de grenadier* ajoute son Savoir aux dégâts d'une grenade par tour, fixe le DD de leur sauvegarde à 8 + maîtrise + Savoir, et empêche la pluie d'éteindre sa mèche. *Calculer la portée* (action bonus, deux fois par repos court) lui fait ignorer le désavantage de la longue portée et ajoute 1d4 à son attaque ce tour-là. *Chevrotine*, au niveau 2, vide le tromblon sur un cône de 4,5 m.
 
-Inés commence avec ses grenades (DD 12), ses grenades de fer, *Mains de poudre* et *Calculer la portée* (deux fois par repos court).
+Inés commence avec ses grenades de fer (DD 12), *Mains de poudre* et *Calculer la portée* (deux fois par repos court).
 
 Le Maître-canonnier de batterie pointe les pièces : *Œil de batterie* ajoute son Savoir aux dégâts d'un canon de 8 ou d'un pierrier et ignore le demi-abri, *Boulet ramé* double les dégâts contre un mât ou une voile, *Grain de mitraille* balaie un cône de 9 m. Le Grenadier travaille de près et de loin : *Bras de lanceur* donne 9 m de portée de plus, *Éclats choisis* épargne ses alliés, *Pot de poudre* fait 6d6 dans un rayon de 6 m, *Mèche bien comptée* ajoute 2d6.
 
@@ -225,11 +245,11 @@ Les Tireurs du boucan visent plus loin (*Longue portée* à une fois et demie la
 
 ### Chirurgien de bord
 
-Une scie, du fil et une bouteille d'eau-de-vie. *Coffre de chirurgien* rend à un allié à portée de main 1d8 + son Instinct en PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17), avec autant d'utilisations que son Instinct + 2 (trois au moins) par repos long, dont une qui revient après chaque repos court. *Diagnostic* lit une cause : DD 10 pour une blessure, 15 pour une fièvre ou une maladie, 20 pour un poison rare. *Eau-de-vie et linge* donne aux alliés soignés l'avantage aux sauvegardes d'Endurance contre l'infection et la fièvre. *Sauver un homme* tient en vie, une fois par combat, un membre d'équipage qui aurait dû mourir : il ne compte pas comme perdu pour le Moral.
+Une scie, du fil et une bouteille d'eau-de-vie. *Coffre de chirurgien* rend à un allié à portée de main 1d8 + son Instinct en PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17), avec trois utilisations par repos long, dont une qui revient après chaque repos court. *Diagnostic* lit une cause : DD 10 pour une blessure, 15 pour une fièvre ou une maladie, 20 pour un poison rare. *Eau-de-vie et linge* donne aux alliés soignés l'avantage aux sauvegardes d'Endurance contre l'infection et la fièvre. *Sauver un homme* tient en vie, une fois par combat, un membre d'équipage qui aurait dû mourir : il ne compte pas comme perdu pour le Moral.
 
-Mathurin commence avec le *Coffre de chirurgien* (1d8 + 2, quatre utilisations), *Diagnostic*, *Eau-de-vie et linge* et *Sauver un homme*. Au niveau 2, *Quinquina* mettra fin à un empoisonnement ou à une fièvre de marais, et *Mains calmes* aidera un allié à passer un choc.
+Mathurin commence avec le *Coffre de chirurgien* (1d8 + 2, trois utilisations), *Diagnostic*, *Eau-de-vie et linge* et *Sauver un homme*. Au niveau 2, *Quinquina* mettra fin à un empoisonnement ou à une fièvre de marais, et *Mains calmes* aidera un allié à passer un choc.
 
-Les Chirurgiens de la Marine opèrent vite et avec peu sur une table de caisse (*Bistouri*, *Amputer à temps*, *Table de caisse*). Les Apothicaires des îles cueillent leurs remèdes chez ceux qui les connaissent depuis des siècles (*Herbier*, *Contre-venin*, *Fièvre domptée*).
+Les Chirurgiens de la Marine opèrent vite et avec peu sur une table de caisse (*Bistouri*, *Amputer à temps*, *Table de caisse*). Les Apothicaires des îles cueillent leurs remèdes là où ils les trouvent : chez les vieilles des cases, chez les Kalinagos, chez les marrons, qui ne les donnent pas pour rien (*Herbier*, *Contre-venin*, *Fièvre domptée*).
 
 | Niv. | Pouvoir | Activation | Recharge | Moral |
 |---|---|---|---|---|
@@ -268,7 +288,7 @@ La Vigie prévient avant que la voile ait un nom (*Œil de hune*, *Cri d'alarme*
 
 Il tient son sabre comme d'autres tiennent leur langue. *Panache* ajoute sa Présence à l'initiative. *Provocation* (action bonus) donne le désavantage à un adversaire à 9 m qui rate sa sauvegarde de Présence, contre tout autre que lui, pendant une minute. *Parade* (niveau 2) ajoute sa maîtrise à sa CA contre une attaque au corps à corps, s'il tient une arme à finesse. *Pas de course* (niveau 2) lui fait foncer ou se désengager en action bonus. *Riposte* (niveau 7) lui fait attaquer en réaction un adversaire qui vient de le rater.
 
-Jeanne commence avec *Panache* (+5 à l'initiative) et *Provocation* (trois fois par repos court, DD 12). Au niveau 2, *Parade* lui donnera +2 de CA contre un coup.
+Jeanne commence avec *Panache* (sa Présence, +2, à l'initiative) et *Provocation* (trois fois par repos court, DD 12). Au niveau 2, *Parade* lui donnera +2 de CA contre un coup.
 
 Les Duellistes de l'Anse aiment les duels devant témoins (*Pointe*, *Feinte*, *Estoc*, *Désarmer*). Les Bagarreurs d'abordage se battent à deux pas, dans la fumée (*Mains pleines*, *Mêlée*, *Le pont est à nous*).
 
@@ -302,7 +322,7 @@ Les Quartiers-maîtres tiennent les comptes et la discipline (*La loi du bord*, 
 | 7 | *Séparer deux hommes* (Quartier-maître) | action | 2 par repos court |  |
 | 7 | *Étai* (Maître charpentier) | action | 2 par repos court |  |
 | 9 | *Tenir la barre* | réaction | 1 par repos long |  |
-| 11 | *Tout le monde aux bras* | action | 1 par repos long | −1 |
+| 11 | *Tout le monde aux bras* | dix minutes, hors combat | 1 par repos long | −1 |
 | 11 | *Voie d'eau stoppée* (Maître charpentier) | action | 1 par repos long |  |
 | 17 | *À mon coup de sifflet* | action | 1 par repos long | −1 |
 
@@ -326,9 +346,9 @@ Les Passeurs cachent des gens que d'autres veulent garder (*Cacher quelqu'un*, *
 
 ### Aumônier
 
-Prêtre, moine ou pasteur sans paroisse, il a suivi un équipage pour dire les derniers mots aux hommes qui meurent. *Mot de réconfort* (action bonus, 18 m) donne à un allié 1d6 + sa Présence en PV temporaires et met fin à sa peur, autant de fois que sa Présence (une au moins) par repos long, et aussi après un repos court dès le niveau 5. *Chaire de pont* lui donne l'avantage en Persuasion et en Représentation devant un équipage, et une voix qui porte à 90 m. *Foi sans phrase* lui donne l'avantage aux sauvegardes contre la peur, et permet à un allié effrayé à 3 m de l'ignorer. *Tenir la ligne* (niveau 2) donne 1d6 + Présence PV temporaires à lui et aux alliés à 9 m. *Coup de bâton ferré* (niveau 2) ajoute 1d8 à une attaque au contact et effraie la cible sur une sauvegarde de Présence ratée.
+Prêtre, moine ou pasteur sans paroisse, il a suivi un équipage pour dire les derniers mots aux hommes qui meurent. *Mot de réconfort* (action bonus, 18 m) donne à un allié 1d6 + sa Présence en PV temporaires et met fin à sa peur, trois fois par repos long, et dès le niveau 5 aussi après un repos court. *Chaire de pont* lui donne l'avantage en Persuasion et en Représentation devant un équipage, et une voix qui porte à 90 m. *Foi sans phrase* lui donne l'avantage aux sauvegardes contre la peur, et permet à un allié effrayé à 3 m de l'ignorer. *Tenir la ligne* (niveau 2) donne 1d6 + Présence PV temporaires à lui et aux alliés à 9 m. *Coup de bâton ferré* (niveau 2) ajoute 1d8 à une attaque au contact et effraie la cible sur une sauvegarde de Présence ratée.
 
-Les Confesseurs des mourants veillent près des blessés (*Veiller*, *Dernier mot*, *Enterrer les morts*, *Le dernier qui reste*). Les Prêcheurs des ports tiennent des foules (*Chaire de fortune*, *Réveil sous la tente*, *La foule derrière toi*, *Entre toi et l'arme*).
+Les Confesseurs des mourants veillent près des blessés (*Veiller*, *Dernier mot*, *Enterrer les morts*, *Le dernier qui reste*). Les Prêcheurs des ports tiennent des foules (*Chaire de fortune*, *Sermon sous la voile*, *La foule derrière toi*, *Entre toi et l'arme*).
 
 | Niv. | Pouvoir | Activation | Recharge | Moral |
 |---|---|---|---|---|
@@ -338,7 +358,7 @@ Les Confesseurs des mourants veillent près des blessés (*Veiller*, *Dernier mo
 | 5 | *Tenir jusqu'au bout* | réaction | 1 par repos court |  |
 | 7 | *Foi qui tient* | réaction | 2 par repos court |  |
 | 7 | *Dernier mot* (Confesseur des mourants) | réaction | 2 par repos court |  |
-| 7 | *Réveil sous la tente* (Prêcheur des ports) | action | 2 par repos court |  |
+| 7 | *Sermon sous la voile* (Prêcheur des ports) | action | 2 par repos court |  |
 | 11 | *Sermon au pied du grand mât* | action | 1 par repos long | −1 |
 | 11 | *Enterrer les morts* (Confesseur des mourants) | action | 1 par repos long |  |
 | 11 | *La foule derrière toi* (Prêcheur des ports) | action | 1 par repos long |  |
@@ -347,7 +367,7 @@ Les Confesseurs des mourants veillent près des blessés (*Veiller*, *Dernier mo
 
 ### Plongeur
 
-Il descend là où les autres se noient. *Souffle long* lui fait retenir son souffle 2 + 2 × son modificateur d'Endurance minutes (au moins 3) ; une arme à feu ne tire pas sous l'eau. *Nageur* lui donne sa vitesse à la nage, l'avantage en Athlétisme pour nager et le droit de combattre sous l'eau au contact sans désavantage. *Œil sous l'eau* lui fait voir à 18 m dans une eau trouble. *Fouiller l'épave* lui dit, en dix minutes, ce qu'une épave contient de précieux ou de dangereux, et si elle est sûre. *Remonter vite* (niveau 2) le ramène de 9 m à la surface en action bonus, sans attaque d'opportunité.
+Il descend là où les autres se noient. Libre, affranchi ou évadé, tout plongeur a appris avec la même corde. Tous ne l'ont pas tenue de leur plein gré ; dis qui tenait l'autre bout. *Souffle long* lui fait retenir son souffle 2 + 2 × son modificateur d'Endurance minutes (au moins 3) ; une arme à feu ne tire pas sous l'eau. *Nageur* lui donne sa vitesse à la nage, l'avantage en Athlétisme pour nager et le droit de combattre sous l'eau au contact sans désavantage. *Œil sous l'eau* lui fait voir à 18 m dans une eau trouble. *Fouiller l'épave* lui dit, en dix minutes, ce qu'une épave contient de précieux ou de dangereux, et si elle est sûre. *Remonter vite* (niveau 2) le ramène de 9 m à la surface en action bonus, sans attaque d'opportunité.
 
 Dossou commence avec *Souffle long* (2 + 2 × 3 = 8 minutes), *Nageur*, *Œil sous l'eau* et *Fouiller l'épave*. Au niveau 3, le Plongeur à la corde ou le Maître de cloche lui ajouteront leurs pouvoirs, et *Tenir l'air* doublera son souffle.
 
@@ -392,8 +412,8 @@ Une grande partie des pouvoirs de niveau élevé ne se joue pas en combat. Ils s
 - Un pouvoir **ne ressuscite pas**. Un mort est mort, et le *Coffre de chirurgien* ne rend rien à qui a raté son troisième jet contre la mort.
 - Un pouvoir **ne remplace pas une charge**. Aucune classe ne tire sans compter.
 - Un pouvoir **ne rend pas le Moral**. Un coup de main en dépense ; rien n'en rend, sauf ce que dit le chapitre 3.
-- Un pouvoir **ne supprime pas** l'épuisement plus que la règle ne le permet (chapitre 7).
-- Un pouvoir **ne vaut pas** une preuve devant un lieutenant du roi, un gouverneur ou une chasse-partie. Il aide à la trouver.
+- Un pouvoir **ne retire pas plus d'épuisement** que ce que dit le chapitre 7.
+- Un pouvoir **ne tient pas lieu de papier** devant un lieutenant du roi, un gouverneur ou une chasse-partie.
 
 ## Combiner les effets
 

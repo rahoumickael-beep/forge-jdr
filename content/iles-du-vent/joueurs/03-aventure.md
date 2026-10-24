@@ -37,7 +37,7 @@ On mesure les distances en jours de mer, et le vent décide de tout. De la Marti
 | Sloop, bon vent | de 40 à 60 lieues |
 | Sloop, calme plat ou vent debout | le MJ décide |
 
-Le brigantin, la goélette et le sloop sont les navires des pirates ; le galion et la frégate sont ceux des rois. Un sloop fait de quatre à huit nœuds. Une lieue marine vaut un peu plus de cinq kilomètres et demi.
+Le brigantin, la goélette et le sloop sont les navires des pirates ; le galion et la frégate sont ceux des rois. Un sloop fait de cinq à sept nœuds, soit de quarante à soixante lieues par jour. Une lieue marine vaut un peu plus de cinq kilomètres et demi.
 
 **La route.** On trouve sa latitude au soleil, avec l'arbalète de Jacob ou le quartier de Davis, et on devine sa longitude à l'estime, au loch et au compas. Se perdre est ordinaire. Un test de Survie du pilote fixe la dérive : DD 10 par temps clair, DD 15 sous la pluie ou la nuit, DD 20 par grain.
 
@@ -102,17 +102,15 @@ Un coup de main réussi ne rend pas le Moral. Les premiers coups de main arriven
 
 Une cargaison de captifs n'est pas une prise. Elle ne se partage pas, ne rapporte ni piastres ni Moral, et n'a pas de prix dans ce livre.
 
-Les Antilles de 1716 sont un monde d'esclavage : les plantations, la traite et les marrons sont là, et le jeu ne le cache pas. Le groupe décide de ce que devient une telle cargaison (la déposer à terre, la libérer, l'emmener quelque part), et c'est une scène à jouer, avec des personnes qui ont un nom, des raisons et leur mot à dire. Ce n'est jamais un butin.
+Les Antilles de 1716 sont un monde d'esclavage : les plantations, la traite et les marrons sont là, et le jeu ne le cache pas. Le groupe décide de ce que deviennent ces gens : les déposer à terre où ils choisissent d'aller, les libérer, ou refuser de les prendre à bord. Ils ont un nom, une langue, un mot à dire, et ils le disent. Aucun personnage n'est obligé de prendre part à la traite, et la table qui veut jouer quelqu'un qui vend des gens joue une autre campagne.
 
 Si l'équipage réclame la vente des captifs, c'est une scène de discours (Persuasion DD 15). Un échec n'oblige pas le groupe à vendre : le Moral baisse de 1, et le groupe doit trouver une autre issue.
-
-Aucun personnage n'est obligé de prendre part à la traite, et le jeu ne la récompense jamais.
 
 ## La chasse-partie
 
 Chaque équipage signe sa chasse-partie avant d'appareiller : le pacte qui dit qui commande, qui touche quoi, et ce que devient un homme blessé. On la lit à voix haute, article par article, et à chaque article l'équipage dit oui.
 
-Le partage se fait en parts. Une part pour chaque matelot, deux pour le capitaine, une et demie pour le quartier-maître, une et un quart pour le chirurgien, le canonnier, le charpentier et le maître de manœuvre. Un tiers de la prise va à l'armement du navire (la poudre, les vivres, la réparation), le reste se partage entre les parts.
+Le partage se fait en parts. Une part pour chaque matelot, deux pour le capitaine, une et demie pour le quartier-maître, une et un quart pour le chirurgien, le canonnier, le charpentier et le maître de manœuvre. Un tiers de ce qui reste après les membres perdus va à l'armement du navire (la poudre, les vivres, la réparation), le reste se partage entre les parts.
 
 La chasse-partie dit aussi ce que vaut un membre perdu. Barème courant :
 
@@ -169,17 +167,11 @@ Ce sont des armes courantes : toutes les classes savent s'en servir. Les armes b
 
 **Les pièces d'artillerie.** Sur les navires, dans les forts et aux batteries, on tire des pièces plus lourdes, qui ne se portent pas : le canon de 8 (4d10 contondants, 36 m, deux servants, une seule fois par tour) et le pierrier (2d8 perforants, 18 m, un servant, qui se porte à terre).
 
-Un personnage qui n'a plus de charges se bat au coutelas, à la hache ou à la crosse. Compter les charges fait la tension d'une bataille : ne laisse pas le joueur y échapper.
+Un personnage qui n'a plus de charges se bat au coutelas, à la hache ou à la crosse. Compte tes charges : c'est ce qui fait la tension d'une bataille, et personne n'y échappe.
 
 ## Les fièvres et le mal de Siam
 
-Dans les Îles, la fièvre tue plus de monde que les boulets. Le mal de Siam (la fièvre jaune) rôde dans les ports bas, en saison des pluies, et sur les navires qui ont longtemps mouillé près des mangroves.
-
-- Quand le groupe passe plus d'une semaine de jeu dans un port bas ou près d'une mangrove en saison des pluies, chaque personnage fait une sauvegarde d'Endurance DD 11, ou DD 13 si la semaine de jeu suivante se passe au même endroit. Qui échoue gagne un niveau d'épuisement et une fièvre : il ne peut pas le perdre avant d'avoir reçu les soins d'un chirurgien (test de Médecine DD 13) puis un repos long.
-- Sans chirurgien, un repos long dans un lit sec et à l'ombre permet une nouvelle sauvegarde DD 13 chaque semaine de jeu ; deux réussites de suite mettent fin à la fièvre.
-- Le **scorbut** menace après trois semaines de mer sans vivres frais : un niveau d'épuisement par semaine de plus, jusqu'à une escale. Les agrumes aident ; le tafia, non.
-
-Un chirurgien de bord est plus précieux qu'un canon : sans lui, une blessure grave se paie en hommes, donc en Moral.
+La fièvre tue plus de monde que les boulets, et un chirurgien de bord est plus précieux qu'un canon : sans lui, une blessure grave se paie en hommes, donc en Moral. Le mal de Siam, le scorbut et l'eau pourrie ont leurs règles au chapitre 7.
 
 ## Le repos
 
@@ -230,11 +222,11 @@ Restrictions :
 
 ### Où dormir
 
-Un repos long se prend à bord dans un hamac, à terre à l'auberge, chez un habitant, dans un village de marrons.
+Un repos long se prend à bord dans un hamac, à terre à l'auberge, chez un habitant, dans un village de marrons si l'on t'y conduit.
 
 - **L'auberge** : un repas à l'auberge coûte 1 réal, une nuit 2 réaux, un pot de tafia 1 réal.
 - **À bord.** Un hamac et la ration. Les gabiers dorment dans la hune quand le temps est beau.
-- **Chez un habitant.** Gratuit si on connaît quelqu'un. Sinon, un service ou quelques réaux. Un Marron est reçu pour une nuit dans un village des mornes sans qu'on pose de question.
+- **Chez un habitant.** Gratuit si on connaît quelqu'un. Sinon, un service ou quelques réaux. Un village de marrons reçoit pour une nuit celui dont un des siens répond. La sentinelle te fait répéter ton nom et ton affaire avant de te laisser monter. Si personne ne répond de toi, tu dors dehors, et un évadé inconnu reste à la sentinelle un évadé qui a pu être suivi.
 - **Dehors.** Un feu réchauffe et se voit. Par temps de pluie, l'abri d'un rocher ou d'une voile tendue suffit ; sans abri, le MJ peut refuser le repos long.
 - **Dans une chapelle ou une mission.** On y reçoit sans poser de question, tant qu'on n'apporte pas la guerre.
 
@@ -248,7 +240,7 @@ Aux Îles, on trouve de l'eau plus facilement que dans le désert, mais une sour
 | Une côte de sable, une mangrove | 13 |
 | Un îlot de corail, une caye sans arbre | 18 |
 
-L'eau d'une mare ou d'un puits inconnu se boit, mais demande une sauvegarde d'Endurance DD 12. Un échec donne la fièvre, et le personnage est empoisonné jusqu'au prochain repos long. L'eau bouillie dix minutes ne demande plus de sauvegarde.
+L'eau d'une mare ou d'un puits inconnu se boit, mais elle demande une sauvegarde d'Endurance (chapitre 7).
 
 ## Gagner sa vie
 
@@ -263,7 +255,7 @@ Une part de prise, pour un simple matelot, va de 10 à 1 000 piastres. Voici des
 | 11 à 16 | 400 à 1 000 piastres |
 | 17 à 20 | 1 000 piastres et plus |
 
-Un pistolet vaut 3 piastres, un sabre 2, un mousquet 6. Un sloop d'occasion vaut 800 piastres. Une mission de niveau 1 paie donc un pistolet et un sabre, parfois les deux et un mousquet. Aucune ligne de ce tableau ne compte des personnes : ni une cargaison de captifs, ni un homme qu'on rend à un maître.
+Une mission de niveau 1 paie de quoi s'équiper : pistolet et sabre font 5 piastres, un mousquet de plus 11. Aucune ligne de ce tableau ne compte des personnes : ni des captifs, ni un homme qu'on rend à un maître.
 
 ### Ce qu'on peut faire
 
@@ -281,7 +273,7 @@ Un pistolet vaut 3 piastres, un sabre 2, un mousquet 6. Un sloop d'occasion vaut
 - **Les Frères de la Côte** paient à la part, devant tout l'équipage. Un capitaine qui retarde le partage perd son équipage avant sa réputation.
 - **Le gouverneur de La Havane** paie à la tête, en piastres, pour un pirate livré. On ne travaille pas pour lui sans se demander ce qui se passera après.
 - **Le lieutenant du roi** paie en grâces, en lettres de passe et en silence. Il appelle ça un service rendu au roi, et il le note.
-- **La Compagnie anglaise** paie bien et vite, en livres sterling, par la main de son agent de Kingston. Elle regarde ce que tu portes et à qui tu parles.
+- **Les négociants de Kingston** paient bien et vite, en livres sterling, par la main de leur agent, Mr. Truscott. Ils regardent ce que tu portes et à qui tu parles.
 - **Les marrons des mornes** ne vendent pas leur temps. On échange avec eux : de la poudre, des outils, des nouvelles. Quand Mère Abla demande un service, elle le demande à des gens précis, et elle se souvient de leur réponse.
 
 Un travail pour le compte d'un roi laisse une ligne dans un livre de compte. Un travail payé par un équipage laisse une chasse-partie signée. Un travail payé par un village de marrons laisse une parole, qu'on fait répéter.
@@ -319,8 +311,7 @@ Chaque activité demande de s'y consacrer au moins huit heures par jour.
 
 **Régler ses comptes.** Un partage en retard, une dette de jeu, une part promise à la famille d'un mort. Un personnage qui passe une journée à tout noter sait où il en est.
 
-**Se faire des amis.** Tenir une table, une veillée, une soirée de tafia. Peu de choses s'achètent : l'amitié, ici, se rend en services.
-
+**Se faire des amis.** Tenir une table, une veillée, une soirée de tafia.
 > **Exemple.**
 >
 > Le groupe a dix jours à l'Anse-aux-Lames avant d'appareiller. Jeanne passe trois jours à réclamer une part qu'un quartier-maître avait oubliée : 60 piastres, qu'elle fait compter devant témoins. Dossou monte aux mornes revoir le village qui l'a recueilli : on l'y reçoit pour la nuit, et on lui apprend que les chasseurs ont changé de chemin. Mathurin passe quatre jours à soigner des fièvres dans les cases du quai : on le paie en poules et en un lit sec. Inés se renseigne au Grand Hunier sur les navires qui ont touché Carthagène : 1 réal par jour, 6 réaux en six jours, et un nom.
@@ -368,8 +359,7 @@ On monte de niveau **après un repos long**, pas au milieu d'une scène.
 - Au **niveau 1**, un personnage a le maximum de son dé de vie + son modificateur d'Endurance. Un Bretteur avec Endurance 13 commence avec 10 + 1 = 11 PV ; un Chirurgien de bord avec la même Endurance, 8 + 1 = 9.
 - À **chaque niveau suivant**, il lance son dé de vie et ajoute son modificateur d'Endurance, ou il prend la valeur fixe : 5 pour un d8, 6 pour un d10, plus son modificateur d'Endurance. Il gagne toujours au moins 1 PV.
 - Si son modificateur d'Endurance augmente, ses PV maximum augmentent rétroactivement de 1 par niveau.
-
-**Un dé de vie de plus**, puisqu'il en a autant que de niveaux.
+- Il gagne aussi un dé de vie de plus, puisqu'il en a autant que de niveaux.
 
 **De nouveaux pouvoirs**, selon la table de sa classe. Un pouvoir qui progresse change tout seul.
 
@@ -379,8 +369,7 @@ On monte de niveau **après un repos long**, pas au milieu d'une scène.
 
 **La spécialité de ta classe** (Commandement, Spécialité, Chasse, Pratique, Poste, École, Charge, Filière, Ministère ou Plongée, selon la classe) se choisit au **niveau 3**. Voir le chapitre des classes.
 
-**Des relations, pas des surhommes.** Aux Îles, les niveaux hauts ne font pas des surhommes. À partir du niveau 13, ils donnent des relations (un maître de port, un armateur, un équipage entier qui t'écoute) et des coups de main de plus en plus audacieux. Le corps reste celui d'une personne qui peut tomber d'une balle.
-
+**Des relations, pas des surhommes.** Aux Îles, les niveaux hauts ne font pas des surhommes. À partir du niveau 13, ils donnent des relations (un maître de port, un armateur, un équipage entier qui t'écoute) et des coups de main de plus en plus audacieux.
 > **Multiclassage.**
 >
 > Ce livre ne prévoit pas de règles pour mélanger deux classes. Un joueur qui veut que son Bretteur apprenne un peu de médecine en parle au MJ : le plus simple est de remplacer un pouvoir de sa classe par un pouvoir de même niveau d'une autre (chapitre 5). Le MJ refuse tout ce qui contournerait le prix en Moral des coups de main de la classe d'origine.

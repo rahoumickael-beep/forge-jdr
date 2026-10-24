@@ -88,7 +88,7 @@ Vingt charges de poudre et de plomb pèsent un kilo. Personne ne porte une centa
 - *En hauteur* : avec 3 m d'élan, tu sautes **0,9 m + 0,3 m par point de modificateur de Force** (au minimum 0). Sans élan, la moitié.
 - Chaque mètre sauté se paie sur ton déplacement.
 
-L'espace entre un quai et un navire qui s'écarte fait rarement moins de trois mètres. Ne compte pas sur le saut si l'eau est au fond.
+L'espace entre un quai et un navire qui s'écarte fait rarement moins de trois mètres. Ne compte pas sur le saut si l'eau est profonde.
 
 ### Adresse
 
@@ -108,7 +108,7 @@ La santé, la résistance à la douleur, à la fatigue et à la maladie. Aux Îl
 - **Points de vie** : le modificateur d'Endurance s'ajoute aux PV à chaque niveau. Un +2 en Endurance, c'est 2 PV de plus par niveau, soit 40 PV de plus au niveau 20.
 - **Tests d'Endurance** : rares. Tenir un quart de plus, rester sous l'eau jusqu'au bout de son souffle, avaler une eau qui sent mauvais.
 - **Pouvoirs** : c'est la caractéristique du Maître de manœuvre et du Plongeur ; le Capitaine, le Chirurgien de bord, le Maître de manœuvre et le Plongeur en maîtrisent la sauvegarde.
-- **Sauvegarde d'Endurance** : la fièvre, le mal de Siam, le scorbut, le poison d'une arête de poisson, l'eau pourrie, le tafia de trop, la chaleur du pont. C'est la sauvegarde que tu feras le plus souvent loin des ports.
+- **Sauvegarde d'Endurance** : la fièvre, le mal de Siam, le scorbut, le poison d'une arête de poisson, l'eau pourrie, le tafia de trop, la chaleur du pont. C'est la sauvegarde que tu feras le plus souvent, en mer comme au port.
 
 Il n'y a aucune compétence associée à l'Endurance.
 
@@ -155,7 +155,7 @@ Voici les seize compétences, par caractéristique.
 
 > **Arcanes / Savoir.**
 >
-> Il n'y a rien de surnaturel aux Îles. Le mot est celui de la fiche, et il recouvre ici tout ce qu'on apprend dans les livres : l'astronomie du pilote, les cartes marines, la chimie de la poudre, le calcul des portées, le droit des gens. À la table, on dit simplement « un Savoir de livre ». La « Perspicacité » d'autres traductions s'appelle ici **Intuition**.
+> Le mot est celui de la fiche, et il recouvre ici tout ce qu'on apprend dans les livres : l'astronomie du pilote, les cartes marines, la chimie de la poudre, le calcul des portées, le droit des gens. À la table, on dit simplement « un Savoir de livre ». La « Perspicacité » d'autres traductions s'appelle ici **Intuition**.
 
 ### Athlétisme (Force)
 
@@ -203,7 +203,7 @@ Les faits du passé : la guerre de Succession, les familles d'armateurs et leurs
 
 ### Investigation (Savoir)
 
-Chercher des indices et en tirer des conclusions. Là où la Perception remarque, l'Investigation comprend.
+Chercher des indices et en tirer des conclusions.
 
 > Dans la cabine d'un capitaine, Mathurin trouve un journal de bord dont une page a été arrachée. Il fait un test de Savoir (Investigation) : l'empreinte de la plume reste sur la page suivante, avec un nom de baie et une heure.
 
@@ -213,7 +213,7 @@ Autres usages : deviner qui a payé pour une affiche, trouver le défaut d'un me
 
 Calmer une bête, la mener, deviner ses intentions. Convaincre un chien de garde que tu n'es pas un voleur, mener une mule sur un sentier de morne, calmer une meute de chasse excitée par l'odeur du sang.
 
-> Un chien jaune garde la porte d'un entrepôt de l'Anse-aux-Lames. Jeanne s'accroupit, lui parle bas, lui tend la main ouverte. Instinct (Dressage), DD 13.
+> Un chien jaune garde la porte d'un entrepôt de l'Anse-aux-Lames. Dossou s'accroupit, lui parle bas, lui tend la main ouverte. Instinct (Dressage), DD 13.
 
 ### Intuition (Instinct)
 
@@ -356,7 +356,7 @@ Un **jet de sauvegarde** est un d20 + modificateur de caractéristique, + bonus 
 
 > **Exemple.**
 >
-> Après une semaine de jeu dans un port bas, en saison des pluies, le MJ demande à chaque personnage une sauvegarde d'Endurance DD 11 contre le mal de Siam. Jeanne, qui ne maîtrise pas l'Endurance, lance d20 + 1. Elle fait 9 : raté de peu. Elle gagne un niveau d'épuisement et une fièvre, et elle ne pourra les perdre qu'avec les soins d'un chirurgien, puis un repos long. Mathurin, qui maîtrise l'Endurance (+3), fait 14 : il tient, et il peut la soigner (Médecine, DD 13).
+> Après une semaine de jeu dans un port bas, en saison des pluies, le MJ demande à chaque personnage une sauvegarde d'Endurance DD 11 contre le mal de Siam. Jeanne, qui ne maîtrise pas l'Endurance, lance d20 + 1. Elle fait 9 au dé, 10 avec son +1 : raté de peu. Elle gagne un niveau d'épuisement et une fièvre, et elle ne pourra les perdre qu'avec les soins d'un chirurgien, puis un repos long. Mathurin, qui maîtrise l'Endurance (+3), fait 11 au dé, 14 avec son +3 : il tient, et il peut la soigner (Médecine, DD 13).
 
 ## La Perception passive
 
@@ -425,7 +425,7 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 >
 > Compétences maîtrisées : Acrobaties +5 et Survie +4 (variante) ; Athlétisme +1 et Perception +4 (historique) ; Persuasion +4, Tromperie +4 et Intuition +4 (classe). Sans maîtrise : Discrétion +3, Escamotage +3, Intimidation +2, Représentation +2, et ainsi de suite.
 >
-> Perception passive 14. Initiative +5 (Adresse +3, plus sa Présence grâce à Panache). Points de vie 11 (d10 au maximum + Endurance +1). Classe d'armure 14 : sa veste de cuir donne 11, plus son Adresse +3. Outil : outils de gréement. Style de combat : Duel, soit +2 aux dégâts avec une arme à une main et rien dans l'autre.
+> Perception passive 14. Initiative +5 (Adresse +3, plus sa Présence grâce à Panache). Points de vie 11 (d10 au maximum + Endurance +1). Classe d'armure 14 : sa veste de cuir donne 11, plus son Adresse +3. Outil : outils de gréement. Style de combat : Duel (+2 aux dégâts d'une arme de contact tenue à une main, rien dans l'autre).
 >
 > Sabre d'abordage : attaque +5 (Adresse +3, maîtrise +2), dégâts 1d8 + 5 tranchants (Adresse +3, Duel +2). Pistolet à silex : attaque +5, dégâts 1d10 + 3 perforants ; un coup, puis recharger ; 10 charges. Argent : 15 piastres. Chance : 1.
 
@@ -454,4 +454,4 @@ Sur ta fiche de personnage, assure-toi d'avoir noté :
 | Argent | 15 piastres | 8 piastres | 15 piastres | 18 piastres |
 | Chance | 1 | 1 | 1 | 1 |
 
-Dossou a choisi le style de combat Duel pour son coutelas (+2 aux dégâts), et Inés le style Tir (+2 aux attaques à distance). Mathurin, qui n'a pas de style, n'a que son Adresse et sa maîtrise. La CA des quatre vient de leur veste de cuir (11) plus leur Adresse. Le tablier de cuir de Mathurin vaut autant que sa veste, et ne s'y ajoute pas. Les pouvoirs du premier niveau se lisent au chapitre 5 ; deux valeurs en sortent déjà, le souffle de Dossou (2 + 2 × son Endurance +3, soit 8 minutes sous l'eau) et le DD des grenades d'Inés (8 + maîtrise 2 + Savoir +2, soit 12).
+Dossou a choisi le style de combat Duel pour son coutelas (+2 aux dégâts, tant que son autre main est vide), et Inés le style Tir (+2 aux attaques à distance). Mathurin, qui n'a pas de style, n'a que son Adresse et sa maîtrise. La CA des quatre vient de leur veste de cuir (11) plus leur Adresse. Le tablier de cuir de Mathurin vaut autant que sa veste, et ne s'y ajoute pas. Les pouvoirs du premier niveau se lisent au chapitre 5 ; deux valeurs en sortent déjà, le souffle de Dossou (2 + 2 × son modificateur d'Endurance (+3), soit 8 minutes sous l'eau) et le DD des grenades d'Inés (8 + maîtrise 2 + Savoir +2, soit 12).

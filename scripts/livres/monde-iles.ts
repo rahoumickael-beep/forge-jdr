@@ -107,7 +107,7 @@ export const ILES_LIVRES: Monde = {
     introRencontres: "Un combat dans les Îles du Vent se prépare comme dans la cinquième édition : on additionne les PX des adversaires, on corrige selon leur nombre, et on compare au seuil du groupe. Mais ici, un abordage se compte aussi en Moral et en poudre : comptez les deux.",
     encartRencontres: `<aside class="encart"><h4>Ce qu'un combat coûte</h4><p>Un coup de canon s'entend de loin, et un homme perdu se compte. Chaque combat qui coûte un homme à l'équipage fait baisser le Moral, et le Moral commande ce que l'équipage accepte de faire la prochaine fois. Les armes à poudre tirent un coup avant de recharger. Laissez toujours une sortie : un cap à doubler, un parlementaire, une voile qui paraît.</p></aside>`,
     chapeauRencontres: "Les chiffres de la cinquième édition, et ce que le Moral et la poudre y changent.",
-    planchesScenarios: { "bib-pi-barre-noire": "warm lantern light at midnight in a crowded harbour tavern of palm thatch and ship timber, a dark silver ingot set on a barrel head in the middle of the room, a hook-handed captain, a merchant in a grey coat and a young woman diver watching it, sailors packed shoulder to shoulder along the walls" },
+    planchesScenarios: { "bib-pi-barre-noire": "warm lantern light at midnight in a crowded harbour tavern of palm thatch and ship timber, a dark silver ingot set on a barrel head in the middle of the room, a captain with an iron cuff riveted over his left wrist, a merchant in a grey coat and a young woman diver watching it, sailors packed shoulder to shoulder along the walls" },
     couverture: sujet("couverture-mj"),
     sousTitre: "Les secrets des Îles du Vent · la Flotte · le Navire blanc",
   },

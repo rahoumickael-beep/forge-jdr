@@ -35,5 +35,5 @@ export const LIEUX_ILES_DU_VENT = [
   "les tentes de voiles de Nassau, devant une caisse d'épave où l'on lit la chasse-partie",
   "le quai de Saint-Pierre de la Martinique, entre les barriques de sucre, sous le volcan",
   "un sentier de crête des mornes de Saint-Domingue, sous le regard d'une sentinelle",
-  "la fosse de Bahama, au crépuscule, sur une mer d'encre où file un courant",
+  "la fosse de Bahama, à l'aube, sur une mer d'encre où file un courant",
 ];

@@ -37,7 +37,7 @@ Le maître du jeu tient plusieurs rôles à la fois.
 - **Il joue le monde.** Le vent, le temps, les saisons des ouragans, les gens qui se souviennent de ce que tu as fait.
 - **Il choisit certains réglages de la campagne**, en particulier la règle de la mort d'un personnage (chapitre 4) et la façon de gagner des niveaux (chapitre 3). Il les annonce avant la première séance.
 
-Le MJ n'est pas l'adversaire des joueurs : son travail est de rendre la partie intéressante. Un MJ qui voudrait ta mort n'aurait pas besoin de dés. Il lui suffirait de ne rien te dire sur la voile qui vient de se montrer à l'horizon.
+Le MJ n'est pas l'adversaire des joueurs : son travail est de rendre la partie intéressante.
 
 ## Le rôle des joueurs
 
@@ -67,7 +67,7 @@ Il n'y a pas de chat écrit. La voix passe par Discord, comme autour d'une vraie
 
 Ici, on ne se bat pas tous les quarts d'heure. On appareille, on attend le vent, on négocie avec des gens qui ont plus de canons ou plus de papiers que toi, on guette une voile qui grossit ou qui s'éloigne. On revient à l'Anse-aux-Lames avec trois hommes de moins qu'au départ et une dispute de plus sur le partage. Le combat existe (chapitre 4), mais il arrive en général parce que quelqu'un a menti, parce que quelqu'un a eu peur, ou parce qu'une chasse-partie a été mal lue.
 
-Aux Îles, on ne fait rien seul. Ton groupe a un navire, le navire a un équipage, et l'équipage a une humeur que les règles appellent le **Moral**. Un combat gagné sans perdre un homme remonte les épaules. Un partage retardé fait murmurer : le premier jour de retard, personne ne dit rien ; le huitième, quelqu'un se lève dans la cale.
+Ton groupe a un navire, le navire a un équipage, et l'équipage a une humeur que les règles appellent le **Moral**. Un combat gagné sans perdre un homme remonte les épaules. Un partage retardé fait murmurer : chaque semaine de retard coûte 1 point de Moral, et la deuxième, quelqu'un se lève dans la cale.
 
 ### Ce que la voix change
 
@@ -86,7 +86,7 @@ Les Îles parlent de choses dures. Des hommes, des femmes et des enfants arrach�
 
 Avant la première séance, la table discute de ce qu'elle veut voir à l'écran et de ce qu'elle préfère laisser hors champ. Une **ligne**, c'est ce qui ne sera pas joué du tout. Un **voile**, c'est ce qui sera présent mais pas décrit : on sait que ça s'est passé, on ne regarde pas.
 
-Quiconque joue un Marron, un Africain libre ou un affranchi, ou fait parler un captif du quai, joue quelqu'un de précis : une personne avec un nom, un village dont elle a été arrachée et des raisons de faire ou de ne pas faire ce qu'elle fait. Personne n'est obligé de jouer un personnage qui a été esclave, ni de rejouer l'esclavage ; le voile suffit. Une cargaison de captifs n'est jamais une prise : le jeu ne lui donne pas de prix, et le chapitre 3 dit pourquoi. Si la table n'est pas prête à traiter ces gens comme des gens, elle choisit une autre histoire.
+Quiconque joue un Marron, un Africain libre ou un affranchi, ou fait parler un captif du quai, joue quelqu'un de précis : une personne avec un nom, un village dont elle a été arrachée et des raisons de faire ou de ne pas faire ce qu'elle fait. Personne n'est obligé de jouer un personnage qui a été esclave, ni de rejouer l'esclavage ; le voile suffit. Ce que le jeu fait des captifs est écrit une fois, au chapitre 3. Si la table n'est pas prête à traiter ces gens comme des gens, elle choisit une autre histoire.
 
 Un joueur peut demander de passer une scène. Personne n'a à s'expliquer. La scène tient en une phrase, la table passe à la suivante.
 
@@ -243,7 +243,7 @@ Chaque personnage fait le test. **Si au moins la moitié réussit, tout le group
 
 > **Exemple.**
 >
-> Le groupe doit quitter une taverne de Nassau sans réveiller le garde de nuit. Quatre personnages lancent Adresse (Discrétion) contre un DD 12. Jeanne fait 17, Dossou 12, Mathurin 6, Inés 9. Deux réussites sur quatre : la moitié. Le groupe passe. Le coffre de Mathurin a cliqueté contre un pied de table, mais Jeanne a posé la main sur l'épaule du garde avant qu'il ne bouge.
+> Le groupe doit quitter une cabane de voiles de Nassau sans réveiller le dormeur qui garde les barils. Quatre personnages lancent Adresse (Discrétion) contre un DD 12. Jeanne fait 17, Dossou 12, Mathurin 6, Inés 9. Deux réussites sur quatre : la moitié. Le groupe passe. Le coffre de Mathurin a cliqueté contre un baril, mais Jeanne a posé la main sur l'épaule du dormeur avant qu'il ne bouge.
 
 ### Qui fait le test ?
 
@@ -281,11 +281,11 @@ Quelques mots reviennent souvent à la table.
 
 ## Le Moral et la Chance
 
-Deux choses distinguent les Îles d'un jeu de rôle ordinaire. Elles servent dans tous les chapitres : en voici le principe. Le chapitre 3 donne leurs règles complètes, le chapitre 4 les armes, le chapitre 5 les pouvoirs de classe.
+Deux choses vont de pair. Elles servent dans tous les chapitres : en voici le principe. Le chapitre 3 donne leurs règles complètes, le chapitre 4 les armes, le chapitre 5 les pouvoirs de classe.
 
 ### Le Moral
 
-Il n'y a rien de surnaturel aux Îles. Il y a des capitaines, des canonniers, des gabiers qui tirent de leurs hommes plus qu'ils ne devraient. Ce qui les rend possibles, c'est le **Moral** du navire : un nombre de 0 à 10, qui part à 6. Il monte quand on partage une prise devant tout l'équipage et que personne n'a à se plaindre, quand on gagne un combat sans perdre un homme, quand on fait escale dans un port ami. Il baisse quand on retarde un partage, quand un combat coûte des hommes, quand le capitaine ment à l'équipage et que cela se sait. Certains pouvoirs de classe portent la mention **Coup de main** : une manœuvre audacieuse qui coûte 1 point de Moral. Les premiers apparaissent au niveau 11. Avant, le Moral monte et descend sans que personne ne le dépense.
+Les pouvoirs des classes sont des métiers, et ce qui les rend possibles, c'est le **Moral** du navire : un nombre de 0 à 10, qui part à 6. Il monte quand on partage une prise devant tout l'équipage et que personne n'a à se plaindre, quand on gagne un combat sans perdre un homme, quand on fait escale dans un port ami. Il baisse quand on retarde un partage, quand un combat coûte des hommes, quand le capitaine ment à l'équipage et que cela se sait. Certains pouvoirs de classe portent la mention **Coup de main** : une manœuvre audacieuse qui coûte 1 point de Moral. Les premiers apparaissent au niveau 11. Avant, le Moral monte et descend sans que personne ne le dépense.
 
 ### La Chance
 
@@ -293,7 +293,7 @@ Les marins sont superstitieux. Chaque personnage a une **Chance** : de 0 à 3 je
 
 > **Moral et Chance.**
 >
-> Le Moral appartient au navire : quand il baisse, tout le bord le sent. Un jeton de Chance est à toi seul, et il ne se prête pas. Les deux se notent sur les fiches, et aucun ne revient avec un repos.
+> Le Moral appartient au navire : quand il baisse, tout le bord le sent. Un jeton de Chance est à toi seul, et il ne se prête pas. Les deux se notent sur ta fiche et sur celle du navire, et aucun ne revient avec un repos.
 
 ## Créer ton personnage
 
@@ -363,7 +363,7 @@ Chaque historique donne deux compétences, un outil, quelques objets, des piastr
 > Tu les retrouveras dans tous les chapitres.
 >
 > - **Jeanne Cadoret**, bretteur, Flibustiers de la Côte (variante Mousse de la Côte), historique Matelot. Fille d'un flibustier de la Tortue, montée aux haubans à neuf ans, elle a ensuite servi sur un navire marchand pour apprendre ce qu'on n'enseigne pas sur un sloop. Elle a pris le sabre le jour où son père est mort sans que personne lui ait payé sa part, et elle réclame toujours la sienne avant d'ouvrir la bouche.
-> - **Dossou**, plongeur, Marrons (variante Évadé de la plantation), historique Plongeur d'épaves. Vendu enfant, il a travaillé dix ans sur une plantation de la plaine, puis on l'a loué à un armateur de la côte nord pour plonger sur des épaves, une pierre aux pieds, la corde à la ceinture et le fouet sur la berge. Il le dit lui-même : il a été esclave. Une nuit de grain, il a coupé sa corde, regagné la terre à la nage et monté jusqu'aux mornes, où un village l'a recueilli. Il descend de temps en temps à l'Anse-aux-Lames, où personne ne demande d'où vient un plongeur pourvu qu'il remonte. Un planteur a mis une prime sur sa tête.
+> - **Dossou**, plongeur, Marrons (variante Évadé de la plantation), historique Plongeur d'épaves. Vendu enfant, il a travaillé dix ans sur une plantation de la plaine, puis on l'a loué à un armateur de la côte nord pour plonger sur des épaves, une pierre aux pieds, la corde à la ceinture et le fouet sur la berge. Il le dit lui-même : il a été esclave. Une nuit de grain, il a coupé sa corde, regagné la terre à la nage et monté jusqu'aux mornes, où un village l'a recueilli. Il descend de temps en temps à l'Anse-aux-Lames, où personne ne demande d'où vient un plongeur pourvu qu'il remonte. Un planteur a mis une prime sur sa tête. Il descend à l'Anse pour la seule paye qui l'intéresse, la part d'un plongeur libre, qu'il met de côté pour quelqu'un resté sur la plaine et dont il ne dit pas le nom. Il répond aux questions par des questions, et il ne tourne jamais le dos à une porte.
 > - **Mathurin Lorrain**, chirurgien de bord, Gens de France (variante Déserteur de La Rochelle), historique Chirurgien de bord. Fils d'un maréchal-ferrant de Lorraine, engagé à seize ans dans un régiment du roi, il a porté le mousquet, puis tenu la scie à l'hôpital de la garnison de La Rochelle. Il a déserté un matin d'hiver pour une raison qu'il garde pour lui. Une corde l'attend en France.
 > - **Inés Barroso**, canonnière, Espagnols et Créoles de Cuba (variante Marin de Carthagène), historique Contrebandier. Née à Carthagène, elle a servi aux pièces de la batterie basse d'un galion du roi d'Espagne, puis elle a fait passer des caisses entre Carthagène et La Havane, sans question d'un côté et avec beaucoup de l'autre. Chez les flibustiers, elle doit prouver sa loyauté. Elle commence par ne rien promettre.
 >
@@ -409,31 +409,31 @@ Quand tu auras terminé, lis ton personnage à voix haute devant la table : qui 
 
 ## Les grands principes des Îles
 
-Sept choses que le MJ répète à chaque séance. Il est utile que les joueurs les aient en tête.
+Huit choses que le MJ répète à chaque séance. Il est utile que les joueurs les aient en tête.
 
 ### La poudre se compte
 
-Une arme à feu tire un coup, puis il faut la recharger. Compte tes charges avant de lever ton pistolet.
+Une arme à feu tire un coup, puis il faut la recharger : compte tes charges avant de lever ton pistolet.
 
 ### Le partage se fait devant tous
 
-Un partage retardé fait murmurer, un partage truqué fait sauter un capitaine. Le Moral monte quand on compte à voix haute, devant l'équipage, et que personne n'a de raison de se plaindre.
+On compte à voix haute, devant l'équipage, et personne ne sort de la cale en grondant.
 
 ### Les captifs ne sont pas une prise
 
-Une cargaison de captifs ne se partage pas, ne rapporte ni piastres ni Moral, et n'a pas de prix dans ce livre. Le groupe décide de ce qu'elle devient, et c'est une scène à jouer. Aucun personnage n'est obligé de prendre part à la traite, et le jeu ne la récompense jamais.
+Ce principe est écrit une fois, au chapitre 3 ; ici, retiens seulement que c'est une scène à jouer, jamais un partage.
 
 ### La parole tient ou casse
 
-Une chasse-partie signée engage tout l'équipage. Chez les marrons, une promesse se fait répéter, mot pour mot.
+Une chasse-partie signée engage tout l'équipage ; chez les marrons, une promesse se fait répéter, mot pour mot.
 
 ### Chacun sa voie
 
-Les Frères de la Côte, le gouverneur de La Havane, le lieutenant du roi, la Compagnie anglaise, les marrons : chacun a ses raisons et ses morts. Quand une puissance te demande ton aide, demande-lui ce qu'elle t'offre et ce qu'elle te fera porter.
+Quand une puissance te demande ton aide, demande-lui ce qu'elle t'offre et ce qu'elle te fera porter. Le lieutenant du roi et un chef de marrons ne te demanderont pas la même chose.
 
 ### Un équipage vaut ceux qui y restent
 
-On navigue à plusieurs parce que la traversée est longue, et que quelqu'un doit tenir la barre pendant que les autres dorment.
+Quelqu'un tient la barre pendant que les autres dorment, et c'est rarement le même deux nuits de suite.
 
 ### Les règles sont des outils
 

@@ -13,7 +13,7 @@ export const REGLES_ILES: RuleSection[] = [
     id: "pi-moral",
     title: "Le navire et son Moral",
     body: [
-      "Dans les Îles, on ne fait rien seul. Le groupe a un navire, et le navire a un équipage. L'équipage a un Moral, de 0 à 10, noté sur la fiche du navire. Le Moral part à 6.",
+      "Le groupe a un navire, et le navire a un équipage. L'équipage a un Moral, de 0 à 10, noté sur la fiche du navire. Le Moral part à 6.",
       "Comment il monte :",
       "- +1 quand on partage une prise selon la chasse-partie, et que personne n'a de raison de se plaindre (un partage juste).",
       "- +1 quand on gagne un combat sans perdre un seul homme, une fois par séance.",
@@ -43,7 +43,7 @@ export const REGLES_ILES: RuleSection[] = [
     id: "pi-coup-de-main",
     title: "Ce que coûte un coup de main",
     body: [
-      "Il n'y a rien de surnaturel dans les Îles. Il y a des capitaines, des canonniers, des gabiers qui tirent de leurs hommes plus qu'ils ne devraient. Certains pouvoirs de classe portent la mention « Coup de main » : une manœuvre audacieuse, un abordage sous le feu, une ruse qui exige que tout l'équipage suive.",
+      "Certains pouvoirs de classe portent la mention « Coup de main » : une manœuvre audacieuse, un abordage sous le feu, une ruse qui exige que tout l'équipage suive.",
       "- Chaque coup de main coûte 1 point de Moral au navire.",
       "- Un seul coup de main par scène, pour tout le navire, quel que soit le nombre de personnages qui en ont un.",
       "- On ne peut pas faire de coup de main quand le Moral est à 1 ou à 0 : l'équipage ne suit plus.",
@@ -56,9 +56,9 @@ export const REGLES_ILES: RuleSection[] = [
     title: "Les captifs ne sont pas une prise",
     body: [
       "Une cargaison de captifs n'est pas une prise. Elle ne se partage pas, ne rapporte ni piastres ni Moral, et n'a pas de prix dans ce livre.",
-      "Les Antilles de 1716 sont un monde d'esclavage : les plantations, la traite et les marrons sont là, et le jeu ne le cache pas. Le groupe décide de ce que devient une telle cargaison (la déposer à terre, la libérer, l'emmener quelque part) et c'est une scène à jouer, avec des personnes qui ont un nom, des raisons et leur mot à dire. Ce n'est jamais un butin.",
+      "Les Antilles de 1716 sont un monde d'esclavage : les plantations, la traite et les marrons sont là, et le jeu ne le cache pas. Le groupe décide de ce que deviennent ces gens : les déposer à terre où ils choisissent d'aller, les libérer, ou refuser de les prendre à bord. Ils ont un nom, une langue, un mot à dire, et ils le disent. Ce n'est jamais un butin.",
       "Si l'équipage réclame la vente des captifs, c'est une scène de discours (Persuasion DD 15). Un échec n'oblige pas le groupe à vendre : le Moral baisse de 1, et le groupe doit trouver une autre issue.",
-      "Aucun personnage n'est obligé de prendre part à la traite, et le jeu ne la récompense jamais.",
+      "Aucun personnage n'est obligé de prendre part à la traite, et la table qui veut jouer quelqu'un qui vend des gens joue une autre campagne.",
     ],
   },
   {
@@ -76,7 +76,7 @@ export const REGLES_ILES: RuleSection[] = [
     title: "La chasse-partie",
     body: [
       "Chaque équipage signe sa chasse-partie avant d'appareiller : le pacte qui dit qui commande, qui touche quoi, et ce que devient un homme blessé. On la lit à voix haute, article par article, et à chaque article l'équipage dit oui.",
-      "Le partage se fait en parts. Une part pour chaque matelot, deux pour le capitaine, une et demie pour le quartier-maître, une et un quart pour le chirurgien, le canonnier, le charpentier et le maître de manœuvre. Un tiers de la prise va à l'armement du navire (la poudre, les vivres, la réparation), le reste se partage entre les parts.",
+      "Le partage se fait en parts. Une part pour chaque matelot, deux pour le capitaine, une et demie pour le quartier-maître, une et un quart pour le chirurgien, le canonnier, le charpentier et le maître de manœuvre. Un tiers de ce qui reste après les membres perdus va à l'armement du navire (la poudre, les vivres, la réparation), le reste se partage entre les parts.",
       "La chasse-partie dit aussi ce que vaut un membre perdu. Barème courant : un œil, 100 piastres ; un doigt, 100 ; une main ou un pied, 400 ; un bras ou une jambe, 500 ; les deux jambes ou les deux bras, 800 ; un homme tué, 600 aux siens, s'il en a.",
       "Le partage se fait dans cet ordre : d'abord les membres perdus, prélevés sur la prise commune ; puis le tiers de l'armement sur le reste ; puis le reste en parts.",
       "Le partage est juste quand il est fait devant tout l'équipage, compte à voix haute, sans que personne ne soit lésé : c'est lui qui donne +1 de Moral. Tout ce qui est partagé est une prise de mer, de la marchandise, de l'argent, des armes. Jamais des personnes.",
@@ -87,7 +87,7 @@ export const REGLES_ILES: RuleSection[] = [
     title: "Naviguer",
     body: [
       "On mesure les distances en jours de mer, et le vent décide de tout. De la Martinique à Saint-Domingue, cinq jours avec les alizés dans le dos ; quinze jours et plus pour remonter.",
-      "Le brigantin, la goélette et le sloop sont les navires des pirates ; le galion et la frégate sont ceux des rois. Un sloop fait de quatre à huit nœuds, soit de quarante à soixante lieues par jour par bon vent. Une lieue marine vaut un peu plus de cinq kilomètres et demi.",
+      "Le brigantin, la goélette et le sloop sont les navires des pirates ; le galion et la frégate sont ceux des rois. Un sloop fait de cinq à sept nœuds, soit de quarante à soixante lieues par jour. Une lieue marine vaut un peu plus de cinq kilomètres et demi.",
       "On trouve sa latitude au soleil, avec l'arbalète de Jacob ou le quartier de Davis, et on devine sa longitude à l'estime, au loch et au compas. Se perdre est ordinaire. Un test de Survie du pilote fixe la dérive : DD 10 par temps clair, DD 15 sous la pluie ou la nuit, DD 20 par grain.",
       "Les ouragans viennent d'août à octobre. Un navire pris par un ouragan sans abri fait un test de manœuvre DD 15 chaque jour ; un échec coûte de la voilure, un échec de plus de 5 coûte un mât.",
       "Un équipage a besoin d'eau douce et de vivres : comptez une ration par homme et par jour, et un baril d'eau pour trente hommes et trois jours. Un jour sans ration, rien ne bouge ; à partir du deuxième jour de suite, le Moral baisse de 1 par jour, sans passer sous 2 tant qu'il reste de l'eau. Le premier repas complet rend 1 point.",
@@ -171,8 +171,6 @@ export const REGLES_ILES: RuleSection[] = [
       "Dans les Îles, la fièvre tue plus de monde que les boulets. Le mal de Siam (la fièvre jaune) rôde dans les ports bas, en saison des pluies, et sur les navires qui ont longtemps mouillé près des mangroves.",
       "Quand le groupe passe plus d'une semaine de jeu dans un port bas ou près d'une mangrove en saison des pluies, chaque personnage fait une sauvegarde d'Endurance DD 11, ou DD 13 si la semaine de jeu suivante se passe au même endroit. Qui échoue gagne un niveau d'épuisement et une fièvre : il ne peut pas le perdre avant d'avoir reçu les soins d'un chirurgien (test de Médecine DD 13) puis un repos long.",
       "Sans chirurgien, un repos long dans un lit sec et à l'ombre permet une nouvelle sauvegarde DD 13 chaque semaine de jeu ; deux réussites de suite mettent fin à la fièvre.",
-      "Le scorbut menace après trois semaines de mer sans vivres frais : un niveau d'épuisement par semaine de plus, jusqu'à une escale. Les agrumes aident ; le tafia, non.",
-      "Un chirurgien de bord est plus précieux qu'un canon : sans lui, une blessure grave se paie en hommes, donc en Moral.",
-    ],
+      "Le scorbut : après trois semaines de mer sans vivres frais, chaque semaine de plus, sauvegarde d'Endurance DD 12 (avantage s'il reste des agrumes), sinon un niveau d'épuisement, jusqu'à une escale. Le tafia n'y fait rien.",    ],
   },
 ];

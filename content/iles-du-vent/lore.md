@@ -35,7 +35,7 @@ Depuis, tout ce qui flotte dans les Antilles va en Floride. Les Espagnols ont in
 
 Les Français disent les Îles du Vent pour tout ce qu'ils connaissent d'ici, de la Martinique à Saint-Domingue.
 
-Sur la côte nord de Saint-Domingue, la partie française de l'île, une baie profonde entre deux caps, et au fond, un bourg de bois et de palmes : **l'Anse-aux-Lames**. Les flibustiers y vendent leurs prises, y réparent leurs navires, y signent leurs chasses-parties. Le gouverneur général siège à Léogane, loin. Au quotidien, c'est le lieutenant du roi qui ferme les yeux, parce qu'il touche sa part et parce que les flibustiers défendent la côte contre les Anglais et les Espagnols. Depuis la paix de 1713, la France ne délivre plus de lettres de course : on n'est plus corsaire, on est pirate, et la corde attend ceux qui se font prendre.
+Sur la côte nord de Saint-Domingue, la partie française de l'île, une baie profonde entre deux caps, et au fond, un bourg de bois et de palmes : **l'Anse-aux-Lames**. Les flibustiers y vendent leurs prises, y réparent leurs navires, y signent leurs chasses-parties. Le gouverneur général siège à Léogane, loin. Au quotidien, c'est le lieutenant du roi qui ferme les yeux, parce qu'il touche sa part et parce que les flibustiers défendent la côte contre les Anglais et les Espagnols. Depuis la paix de 1713, la France ne délivre plus de lettres de course : on n'est plus corsaire, on est pirate, et la corde attend ceux qui se font prendre. À Utrecht, l'Angleterre a obtenu en plus l'asiento, le droit de vendre des captifs d'Afrique aux colonies espagnoles pendant trente ans.
 
 ### Aujourd'hui [Joueurs]
 
@@ -69,7 +69,7 @@ On mesure les distances en jours de mer, et le vent décide de tout : de la Mart
 
 **Paysage.** Une baie bleu sombre entre deux caps rocheux, un bourg de cases de bois sur pilotis, un quai de pierre, une église au toit de palmes, la maison du lieutenant du roi, et sur la colline, une batterie de huit canons qui n'a jamais tiré sur un flibustier.
 
-**Culture.** Flibustiers, boucaniers descendus des bois, marchands, aubergistes, couturières, prostituées, prêtres, affranchis, captifs qui travaillent au quai. On y signe les chasses-parties à la taverne du **Grand Hunier**.
+**Culture.** Flibustiers, boucaniers descendus des bois, marchands, aubergistes, couturières, prostituées, prêtres, affranchis, captifs qui travaillent au quai. Un affranchi y tient boutique ou sert à bord, et chaque matin il vérifie que son papier est dans sa poche. On y signe les chasses-parties à la taverne du **Grand Hunier**.
 
 **Ce qu'on craint.** Le mal de Siam, les ouragans d'août, et la frégate du roi qui viendra un jour faire respecter la paix.
 
@@ -79,7 +79,7 @@ On mesure les distances en jours de mer, et le vent décide de tout : de la Mart
 
 **Paysage.** Une côte basse de sable et de palétuviers, des eaux turquoise à six brasses, des épaves dont les mâts dépassent à marée basse. Le **camp de plongée espagnol**, un fort de pieux et quelques canons, et en face, sur la mer, les barques qui guettent.
 
-**Culture.** Soldats espagnols, plongeurs réduits en esclavage, pirates, chasseurs d'épaves de tous les pays.
+**Culture.** Soldats espagnols, plongeurs réduits en esclavage, pirates, chasseurs d'épaves de tous les pays, et sur la plage, les Ais, qui vivaient là avant le camp et ont déjà vendu des vivres aux rescapés.
 
 **Ce qu'on craint.** Les requins, les patrouilles espagnoles, les autres pirates, et les nuits sans lune.
 
@@ -89,13 +89,13 @@ On mesure les distances en jours de mer, et le vent décide de tout : de la Mart
 
 ### La Havane
 
-**Paysage.** La plus grande ville des Antilles, le port fortifié, le château du Morro à l'entrée de la baie, les galions, les églises, le palais du gouverneur.
+**Paysage.** La plus grande ville des Antilles, le port fortifié, le château du Morro à l'entrée de la baie, les galions, les églises, la forteresse de la Real Fuerza, où loge le gouverneur.
 
 **Culture.** Le cœur de l'Empire espagnol aux Indes. Marchands, soldats, moines, les familiers du Saint-Office. Un pirate pris y est pendu dans la semaine.
 
 **Ce qu'on craint.** La peste, les Anglais, et le gouverneur depuis qu'il a perdu la Flotte.
 
-**Image forte.** La baie de La Havane au matin, la chaîne qui ferme le port tirée sur l'eau, et au balcon du palais, un homme en noir qui tourne le dos à la baie, une main sur son chapelet, et lit sa messe à voix basse.
+**Image forte.** La baie de La Havane au matin, la chaîne qui ferme le port tirée sur l'eau, et au balcon de la Real Fuerza, un homme en noir qui tourne le dos à la baie, une main sur son chapelet, et lit sa messe à voix basse.
 
 ### Nassau
 
@@ -133,7 +133,7 @@ On mesure les distances en jours de mer, et le vent décide de tout : de la Mart
 
 **Culture.** Les marins l'évitent par gros temps. Rien n'y vit qu'on puisse pêcher.
 
-**Image forte.** Un courant bleu-noir qui file vers le nord, une bouée de liège arrachée de sa ligne, et au crépuscule, très loin, une tache pâle qui n'est ni un grain ni une voile.
+**Image forte.** Un courant bleu-noir qui file vers le nord, une bouée de liège arrachée de sa ligne, et à l'aube, très loin, une tache pâle qui s'efface avant qu'on la nomme.
 
 **[Secret]** C'est là que la *Santa Clara* coule les caisses du faux. Une soixantaine de caisses y sont déjà, moins d'un vingtième du faux ; le reste dort encore dans la *Capitana*. La scène : une frégate blanche immobile sur une mer d'encre au crépuscule, et le long de sa coque, des marins qui font glisser une caisse dans l'eau, sans un bruit. Elles y restent.
 
@@ -159,13 +159,13 @@ On mesure les distances en jours de mer, et le vent décide de tout : de la Mart
 
 ### Le lieutenant du roi à Saint-Domingue
 
-**But.** Que la colonie prospère et que la paix tienne. **Méthode.** Fermer les yeux contre une part, et pendre un pirate de temps en temps pour Versailles. **Ennemi.** Les Anglais, les marrons, et les pirates trop bruyants. **Signe.** La fleur de lys sur le pavillon blanc du roi. C'est **monsieur de Vaucelles**.
+**But.** Que la colonie prospère et que la paix tienne. **Méthode.** Fermer les yeux contre une part, et pendre un pirate de temps en temps pour que Paris le sache. **Ennemi.** Les Anglais, les marrons, et les pirates trop bruyants. **Signe.** La fleur de lys sur le pavillon blanc du roi. C'est **monsieur de Vaucelles**.
 
 **[MJ]** Vaucelles a reçu une lettre du Régent : la France veut savoir pourquoi l'Espagne a l'air si nerveuse depuis le naufrage. Il cherche quelqu'un qui plongerait pour lui.
 
-### La Compagnie des Indes occidentales anglaise
+### Les négociants de Kingston
 
-**But.** Le commerce, et l'argent de la Flotte s'il traîne. **Méthode.** Les corsaires de la Jamaïque, l'argent, les espions. **Ennemi.** Les Espagnols, les pirates qui attaquent ses navires. **Signe.** La croix de Saint-Georges. Son agent dans les îles est **Mr. Josiah Truscott**, de Kingston, où les négociants ont pris la place de ceux de Port Royal, ruiné depuis 1692 et 1703.
+**But.** Le commerce, et l'argent de la Flotte s'il traîne. **Méthode.** Les corsaires de la Jamaïque, l'argent, les espions. **Ennemi.** Les Espagnols, les pirates qui attaquent leurs navires. **Signe.** La croix de Saint-Georges. Leur agent dans les îles est **Mr. Josiah Truscott**, de Kingston, où les négociants ont pris la place de ceux de Port Royal, ruiné depuis 1692 et 1703.
 
 ### Les marrons des mornes
 
@@ -197,7 +197,7 @@ Il n'y a pas de magie. Il y a des capitaines qui tirent de leurs hommes plus qu'
 - **2 à 3** : on murmure ; désavantage aux tests de manœuvre, et le MJ peut faire parler un meneur.
 - **0 à 1** : mutinerie imminente. Le groupe a une scène pour reprendre la main (discours, partage immédiat, sacrifice d'un meneur) ; sinon l'équipage choisit un autre capitaine ou débarque le groupe.
 
-Une cargaison de captifs n'est pas une prise. Elle ne se partage pas, ne rapporte ni piastres ni Moral, et n'a pas de prix dans ce livre. Le groupe décide de ce qu'elle devient (la déposer à terre, la libérer, l'emmener) et c'est une scène, pas un butin.
+Une cargaison de captifs n'est pas une prise. Elle ne se partage pas, ne rapporte ni piastres ni Moral, et n'a pas de prix dans ce livre. Le groupe décide de ce que deviennent ces gens : les déposer à terre où ils choisissent d'aller, les libérer, ou refuser de les prendre à bord. Ils ont un nom, une langue, un mot à dire, et ils le disent.
 
 ### La Chance [Joueurs]
 
@@ -223,7 +223,7 @@ Chasseurs des bois de Saint-Domingue, qui fument la viande sur le boucan et tire
 
 ### Marrons
 
-Nés libres dans les mornes, ou évadés d'une plantation. On connaît le prix de la liberté. En jeu : avantage à se cacher et à survivre dans les montagnes, et des alliés dans les villages des mornes ; mais un planteur, quelque part, a mis une prime sur ta tête.
+Nés libres dans les mornes, ou évadés d'une plantation. On connaît le prix de la liberté. En jeu : avantage à se cacher et à survivre dans les montagnes, et un village qui te reçoit pour une nuit si l'un des siens répond de toi ; mais un planteur, quelque part, a mis une prime sur ta tête.
 
 ### Gens de France
 
@@ -235,7 +235,7 @@ Nés à La Havane, à Carthagène ou à Saint-Domingue espagnol. En jeu : on par
 
 ### Gens de toutes les mers
 
-Anglais, Hollandais, Irlandais, Africains libres, Caraïbes des îles : tous ceux que la mer a jetés ici. En jeu : une langue de plus, des contacts dans un port étranger, et un passé que personne ne vérifie.
+Anglais, Hollandais, Irlandais, Africains libres, affranchis nés aux Îles, Kalinagos des îles qui ont choisi un pont de navire. La mer a jeté les uns ici ; les autres y étaient avant les navires. En jeu : une langue de plus, des contacts dans un port étranger, et un passé que personne ne vérifie.
 
 ---
 
@@ -243,7 +243,7 @@ Anglais, Hollandais, Irlandais, Africains libres, Caraïbes des îles : tous ceu
 
 ### Naviguer [Joueurs]
 
-Le brigantin, la goélette, le sloop pour les pirates ; le galion, la frégate pour les rois. Un sloop fait quatre à huit nœuds : de quarante à soixante lieues par jour par bon vent. De la Martinique à Saint-Domingue, cinq jours avec les alizés dans le dos ; pour remonter, quinze jours et plus. On trouve sa latitude au soleil, on devine sa longitude. Les ouragans viennent d'août à octobre.
+Le brigantin, la goélette, le sloop pour les pirates ; le galion, la frégate pour les rois. Un sloop fait de cinq à sept nœuds, soit de quarante à soixante lieues par jour. De la Martinique à Saint-Domingue, cinq jours avec les alizés dans le dos ; pour remonter, quinze jours et plus. On trouve sa latitude au soleil, on devine sa longitude. Les ouragans viennent d'août à octobre.
 
 ### Les armes [Joueurs]
 
@@ -264,7 +264,7 @@ On compte les années comme partout. Les flibustiers comptent aussi **depuis la 
 | 1665 | Les Français s'installent sur la côte nord de Saint-Domingue. |
 | 1697 | La paix de Ryswick ; l'Espagne reconnaît la partie française de Saint-Domingue. |
 | 1701-1713 | La guerre de Succession d'Espagne, douze ans de guerre ; les flibustiers servent comme corsaires. |
-| 1713 | La paix d'Utrecht ; plus de lettres de course : les corsaires deviennent pirates. |
+| 1713 | La paix d'Utrecht : plus de lettres de course ; les corsaires deviennent pirates. L'Angleterre obtient en plus l'asiento, le droit de vendre des captifs d'Afrique aux colonies espagnoles pendant trente ans. |
 | 1715 | 24 juillet : la Flotte d'Argent appareille ; dans la nuit du 30 au 31, elle sombre sur les bancs de Floride (an 0 de la Flotte). Septembre : mort de Louis XIV, régence du duc d'Orléans. Décembre : première attaque pirate du camp de plongée. |
 | 1716 | **Année de jeu.** Hiver : seconde attaque du camp. Printemps : Nassau devient leur repaire. Un navire blanc croise depuis l'automne. |
 
@@ -278,15 +278,15 @@ On compte les années comme partout. Les flibustiers comptent aussi **depuis la 
 
 ### Nicolas Faucheux, dit Bras-de-Fer
 
-Quarante ans, capitaine du brigantin *Vengeance-de-Rouen*. Un crochet de fer à la place de la main gauche, perdue à Carthagène. **Ce qu'il veut** : le plus gros coup de l'histoire, puis une maison à Dieppe. **Ce qu'il cache** [Secret] : il garde une pièce fausse comme porte-bonheur. Il ne sait pas ce que pèse la pièce qu'il a dans sa poche. Et il vend ses prises au même port que les négriers. **Comment il parle** : en comptant : trois mots, un coup de crochet sur la table.
+Quarante ans, capitaine du brigantin *Vengeance-de-Rouen*. Il a perdu la main gauche à Carthagène ; une manchette de fer rivée au poignet lui sert de massue. **Ce qu'il veut** : le plus gros coup de l'histoire, puis une maison à Dieppe. **Ce qu'il cache** [Secret] : il garde une pièce fausse comme porte-bonheur. Il ne sait pas ce que pèse la pièce qu'il a dans sa poche. Et il vend ses prises au même port que les négriers. **Comment il parle** : en comptant : trois mots, un coup de manchette sur la table.
 
 ### Don Ignacio de Arriaga, gouverneur de La Havane
 
-Cinquante-cinq ans. Petit, sec, habillé de noir, un chapelet entre les doigts. **Ce qu'il veut** : que l'argent de la Flotte soit remonté par les Espagnols, et seulement par eux. **Ce qu'il cache** [Secret] : il a jeté la Flotte à la côte. **Comment il parle** : poliment, en latin quand il est en colère, et il ne regarde jamais la mer.
+Cinquante-cinq ans. Petit, sec, habillé de noir, un chapelet entre les doigts. **Ce qu'il veut** : que l'argent de la Flotte soit remonté par les Espagnols, et seulement par eux. **Ce qu'il cache** [Secret] : il a jeté la Flotte à la côte. **Comment il parle** : poliment, en latin quand il est en colère (« Quousque tandem ! »).
 
 ### Monsieur de Vaucelles, lieutenant du roi à Saint-Domingue
 
-Quarante-cinq ans, un mouchoir imbibé d'eau de fleur d'oranger qu'il se passe sous le nez devant les gens qu'il interroge. **Ce qu'il veut** : une carrière à Versailles. **Ce qu'il cache** : le Régent lui demande en secret ce qui inquiète l'Espagne. **Comment il parle** : en compliments, et il appelle tout le monde « mon cher ».
+Quarante-cinq ans, un mouchoir imbibé d'eau de fleur d'oranger qu'il se passe sous le nez devant les gens qu'il interroge. **Ce qu'il veut** : une place au Conseil de Marine, ou à défaut un brevet signé de Paris. **Ce qu'il cache** : le Régent lui demande en secret ce qui inquiète l'Espagne. **Comment il parle** : en compliments, et il appelle tout le monde « mon cher ».
 
 ### Mère Abla, cheffe des marrons des mornes
 
@@ -366,14 +366,14 @@ Une pièce prouve une fraude, pas son auteur. Le registre de Larrañaga prouve l
 6. **La voile blanche** (Navire blanc) : un équipage jure l'avoir vue couler des caisses ; personne ne le croit.
 7. **La pièce qui sonne faux** (marrons) : Ama montre sa pièce ; Mère Abla demande qu'on libère les plongeurs en échange de son histoire.
 8. **Nassau** (Frères de la Côte) : la république des pirates vote ; quelqu'un veut l'or de la Flotte pour l'acheter.
-9. **Kingston** (Compagnie anglaise) : Truscott propose un marché : la Floride contre une commission du gouverneur de la Jamaïque, que Londres n'a pas approuvée.
+9. **Kingston** (négociants de Kingston) : Truscott propose un marché : la Floride contre une commission du gouverneur de la Jamaïque, que Londres n'a pas approuvée.
 10. **Le porte-bonheur de Bras-de-Fer** (Frères de la Côte) : Faucheux perd sa pièce au jeu ; elle passe de main en main.
 
 **Niveaux 11 à 16 : la preuve.**
 11. **La Santa Clara** (Navire blanc) : Bras-de-Fer veut l'aborder pour le butin, Vaucelles veut qu'on la suive sans tirer ; si on la coule, la paix tient (+10), mais la preuve disparaît.
 12. **Le registre** (Navire blanc) : Larrañaga garde le registre ; Arriaga a envoyé quelqu'un pour le lui reprendre. Qui le tient en premier décide de ce qu'il vaut.
 13. **La Havane** (gouverneur) : Arriaga reçoit les personnages comme émissaires d'un traité, et sait qu'ils cherchent la preuve. Il veut un marché, pas un massacre.
-14. **La lettre du Régent** (lieutenant du roi) : Vaucelles a besoin d'une preuve pour Versailles.
+14. **La lettre du Régent** (lieutenant du roi) : Vaucelles a besoin d'une preuve pour Paris.
 15. **La fosse de Bahama** (Navire blanc) : un plongeur jure avoir vu les caisses depuis un récif. Le groupe a une nuit pour y descendre avant la *Santa Clara*.
 
 **Niveaux 17 à 20 : la guerre ou la paix.**

@@ -66,11 +66,11 @@ C'est l'état d'un matelot devant un abordage qui monte, d'un homme qui voit un 
 
 ### Empoigné
 
-Quelque chose ou quelqu'un tient la créature. Le bestiaire du MJ dit parfois « agrippé » : c'est le même état.
+Quelque chose ou quelqu'un tient la créature. 
 
 - Sa **vitesse tombe à 0**, et elle ne profite d'aucun bonus de vitesse.
 - L'état prend fin si l'empoigneur est neutralisé, ou si un effet éloigne la créature de lui.
-- La créature peut se libérer en utilisant son action pour un test de Force (Athlétisme) ou d'Adresse (Acrobaties) contre celui de l'empoigneur (chapitre 4).
+- La créature peut se libérer en utilisant son action pour un test de Force (Athlétisme) ou d'Adresse (Acrobaties) contre celui de l'empoigneur (chapitre 4). Un monstre peut fixer un DD d'évasion à la place du test opposé.
 
 ### Empoisonné
 
@@ -86,7 +86,7 @@ La créature est attachée ou prise.
 - Les attaques contre elle ont l'**avantage**.
 - Ses propres attaques ont le **désavantage**, et elle a le désavantage à ses sauvegardes d'Adresse.
 
-Une corde, un filet, une voile qui tombe, un collet, des fers. Se libérer demande une action et un test de Force (Athlétisme) ou d'Adresse (Acrobaties) : DD 12 pour une corde ou un filet, DD 15 pour des chaînes ; pour un collet ou une voile tombée, le DD du pouvoir qui l'a tendu. Quelqu'un qui aide donne l'avantage.
+Une corde, un filet, une voile qui tombe, un collet, des fers. Se libérer demande une action. Se défaire d'une corde en se tortillant (Adresse (Acrobaties)) : DD 12 ; la rompre à la force (Force (Athlétisme)) : DD 17. Un filet : DD 12 ; des chaînes : DD 15 ; pour un collet ou une voile tombée, le DD du pouvoir qui l'a tendu. Quelqu'un qui aide donne l'avantage.
 
 ### Étourdi
 
@@ -100,11 +100,11 @@ La créature ne sait pas ce qui se passe.
 - Elle rate ses sauvegardes de Force et d'Adresse.
 - Les attaques contre elle ont l'**avantage**, et toute attaque au contact qui touche est un **coup critique**.
 
-On tombe inconscient à 0 PV (chapitre 4) ou assommé. Un dormeur est inconscient tant qu'il dort : un coup ou une secousse le réveille. Un homme de quart qui dort sur son poste se réveille sur un seau d'eau.
+On tombe inconscient à 0 PV (chapitre 4) ou assommé. Un dormeur ne voit rien et ne réagit pas ; un bruit, un coup ou une secousse le réveille. Un homme de quart qui dort sur son poste se réveille sur un seau d'eau.
 
 ### Invisible
 
-Rien de surnaturel ne rend invisible. Dans le noir complet, on ne voit pas, ce qui est l'état aveuglé pour celui qui est dans l'obscurité, pas l'invisibilité pour celui qu'on ne voit pas (chapitre 4). Un tireur sans lumière, un homme couché derrière un baril, un manteau sombre sur une nuit sans lune : l'attaquant qui ne voit pas sa cible a le désavantage, et celui qu'on ne voit pas a l'avantage quand il attaque.
+Personne n'est invisible aux Îles, mais on se cache. Un tireur sans lumière, un homme couché derrière un baril, un manteau sombre sur une nuit sans lune : l'attaquant qui ne voit pas sa cible a le désavantage, et celui qu'on ne voit pas a l'avantage quand il attaque (chapitre 4).
 
 ### Neutralisé
 
@@ -138,12 +138,12 @@ Aux Îles, c'est presque toujours le corps : la fièvre, le soleil, la soif, le 
 | Cause | Règle |
 |---|---|
 | **Le mal de Siam** | Plus d'une semaine de jeu dans un port bas ou près d'une mangrove en saison des pluies : sauvegarde d'Endurance DD 11, DD 13 si la semaine suivante se passe au même endroit. Un échec donne un niveau et une fièvre (voir plus bas) |
-| **Le scorbut** | Trois semaines de mer sans vivres frais : un niveau par semaine de plus, jusqu'à une escale. Les agrumes aident ; le tafia, non |
+| **Le scorbut** | Après trois semaines de mer sans vivres frais, chaque semaine de plus : sauvegarde d'Endurance DD 12 (avantage s'il reste des agrumes), sinon un niveau, jusqu'à une escale. Le tafia n'y fait rien |
 | **Le coup de chaleur** | Une heure d'effort au soleil du pont, sans ombre ni eau à boire : sauvegarde d'Endurance DD 10. Un échec donne un niveau, un niveau par après-midi au plus. L'ombre d'une voile tendue annule la sauvegarde |
 | **Le jour sans boire** | Un jour sans boire la moitié de sa ration d'eau : sauvegarde d'Endurance DD 15, ou un niveau |
 | **L'eau pourrie** | Sauvegarde d'Endurance DD 12 : un échec donne la fièvre (empoisonné, voir plus bas) |
 | **La faim** | Un niveau par jour entier sans manger, après 3 + modificateur d'Endurance jours (au moins 1) ; un repas complet remet le compte à zéro |
-| **Une nuit sans repos long** | Après une nuit passée à veiller ou à manœuvrer (un grain qui exige tout le monde sur le pont interrompt le repos long) : sauvegarde d'Endurance DD 10 le lendemain matin. Un échec donne un niveau |
+| **Une nuit sans repos** | Après une deuxième nuit de suite passée à veiller ou à manœuvrer : sauvegarde d'Endurance DD 10 le lendemain matin, un niveau d'épuisement en cas d'échec. Une seule nuit blanche ne coûte rien |
 
 La faim existe, mais on meurt de soif ou de fièvre bien avant. C'est la règle de la cinquième édition, que le MJ applique sans s'étendre.
 
@@ -158,7 +158,7 @@ La faim existe, mais on meurt de soif ou de fièvre bien avant. C'est la règle 
 >
 > Après une semaine de jeu dans un port bas, en saison des pluies, Jeanne rate sa sauvegarde d'Endurance : 9 contre le DD 11. Elle gagne un niveau d'épuisement et une fièvre. Niveau 1 : désavantage à ses tests de caractéristique, et sa Perception passive tombe de 14 à 9. Mathurin la soigne (Instinct (Médecine) DD 13) : 10 au dé, +4, total 14. La fièvre est tombée. Une nuit de repos long, un repas complet : elle perd son niveau et retrouve sa Perception de 14.
 >
-> Le navire, lui, a tiré des bords cinq semaines sans escale. Les trois premières semaines passent sans rien coûter. Aux semaines 4 et 5, chacun prend un niveau d'épuisement, soit deux au total. À l'escale, la perte s'arrête, et un repos long avec un repas complet rend un niveau à chacun, un par jour.
+> Le navire, lui, a tiré des bords cinq semaines sans escale. Les trois premières semaines passent sans rien coûter. Aux semaines 4 et 5, chacun fait sa sauvegarde d'Endurance DD 12 : deux jets, et Jeanne n'en rate qu'un, donc un seul niveau d'épuisement. À l'escale, la perte s'arrête, et un repos long avec un repas complet rend un niveau.
 
 ## Les fièvres et le mal de Siam
 
@@ -167,11 +167,8 @@ Dans les Îles, la fièvre tue plus de monde que les boulets. Le mal de Siam (la
 - **Attraper la fièvre.** Voir le tableau plus haut. Qui échoue gagne un niveau d'épuisement et une **fièvre** : il ne peut pas perdre ce niveau avant d'avoir reçu les soins d'un chirurgien (test d'Instinct (Médecine) DD 13) puis un repos long.
 - **Sans chirurgien.** Un repos long dans un lit sec et à l'ombre permet une nouvelle sauvegarde d'Endurance DD 13 chaque semaine de jeu. Deux réussites de suite mettent fin à la fièvre.
 - **Reconnaître la maladie.** Un test d'Instinct (Médecine) DD 15, ou le *Diagnostic* du Chirurgien de bord, distingue la fièvre d'une plaie, celle de l'eau pourrie, un coup de chaleur et le mal de Siam. Il faut l'isoler avant d'en parler à l'équipage.
-- **Se rétablir.** Trois jours de repos permettent une sauvegarde d'Endurance DD 15 pour mettre fin à une maladie ou à un poison qui empêche de récupérer (chapitre 3).
-- **La fièvre d'une plaie.** Une plaie ouverte (balle, lame, morsure) qu'on n'a pas nettoyée dans la journée (eau-de-vie, linge propre, dix minutes) donne une sauvegarde d'Endurance DD 10 à l'aube. Un échec donne la fièvre : empoisonné, jusqu'au prochain repos long ou jusqu'à ce qu'un chirurgien le soigne. Les alliés que le Chirurgien de bord a soignés ont l'avantage à cette sauvegarde (*Eau-de-vie et linge*).
+- **La fièvre d'une plaie.** Une plaie ouverte qui t'a laissé sous la moitié de tes PV (balle, lame, morsure) et qu'on n'a pas nettoyée dans la journée (eau-de-vie, linge propre, dix minutes) donne une sauvegarde d'Endurance DD 10 à l'aube. Un échec donne la fièvre : empoisonné, jusqu'au prochain repos long ou jusqu'à ce qu'un chirurgien le soigne. Les alliés que le Chirurgien de bord a soignés ont l'avantage à cette sauvegarde (*Eau-de-vie et linge*).
 - **Le Quinquina et la Fièvre domptée.** *Quinquina* (niveau 2) met fin à un empoisonnement ou à une fièvre de marais ; *Fièvre domptée* (Apothicaire des îles, niveau 11) soigne le mal de Siam en une journée de soins (Médecine DD 13) et donne l'avantage à la sauvegarde suivante.
-
-Un chirurgien de bord est plus précieux qu'un canon : sans lui, une blessure grave se paie en hommes, donc en Moral.
 
 ## La mauvaise eau
 
@@ -183,12 +180,12 @@ L'eau d'un puits, d'un baril ou d'une mare inconnue se boit, mais demande une sa
 ## Le souffle, la fumée, le feu
 
 - **Retenir son souffle.** Un personnage tient 1 + son modificateur d'Endurance minutes (au moins 30 secondes). Passé ce temps, il tombe à 0 PV après un nombre de rounds égal à son modificateur d'Endurance (au moins 1), puis il commence à mourir. Le Plongeur tient 2 + 2 × son modificateur d'Endurance minutes, au moins 3 (*Souffle long*) : Dossou, Endurance +3, 8 minutes ; Mathurin, Endurance +1, 2 minutes. Une arme à feu ne tire pas sous l'eau.
-- **La fumée.** Un incendie dans la voilure, dans la cale ou dans un entrepont donne une zone faiblement éclairée pour la vue (chapitre 4). Rester plus d'une minute dans une fumée épaisse sans linge sur le visage demande une sauvegarde d'Endurance DD 12, ou un niveau d'épuisement. Un linge mouillé donne l'avantage. Le Plongeur à *Tenir l'air* (niveau 3) a l'avantage contre la fumée et les gaz.
+- **La fumée.** Un incendie dans la voilure, dans la cale ou dans un entrepont donne une zone faiblement éclairée pour la vue (chapitre 4). Chaque minute passée dans une fumée épaisse sans linge sur le visage demande une sauvegarde d'Endurance DD 12, sous peine d'un niveau d'épuisement. Un linge mouillé donne l'avantage. Le Plongeur à *Tenir l'air* (niveau 3) a l'avantage contre la fumée et les gaz.
 - **Le feu** n'est pas un état : ce sont des dégâts (chapitre 4).
 
 ## Les poisons et les bêtes
 
-- **La physalie.** Ses filaments traînent sur plusieurs brasses et sont attaqués par avantage par qui nage sans l'avoir repérée (Perception DD 10). Sauvegarde d'Endurance DD 9 : en cas d'échec, tu es empoisonné pendant une heure (désavantage aux tests d'Athlétisme pour nager et aux attaques), en cas de réussite, tu ne subis que la moitié des dégâts. Un chirurgien frotte la brûlure au sable mouillé, la rince à l'eau douce (Médecine DD 10) ; sans soin, la douleur reste une journée entière.
+- **La physalie.** Ses filaments traînent sur plusieurs brasses ont l'avantage contre qui nage sans les avoir repérés (Perception DD 10). Sauvegarde d'Endurance DD 9 : en cas d'échec, tu es empoisonné pendant une heure (désavantage aux tests d'Athlétisme pour nager et aux attaques), en cas de réussite, tu ne subis que la moitié des dégâts. Un chirurgien frotte la brûlure au sable mouillé, la rince à l'eau douce (Médecine DD 10) ; sans soin, la douleur reste une journée entière.
 - **Les morsures.** Un barracuda mord ce qui brille, un requin des bancs sent une blessure ouverte à 90 m. Leurs dents n'empoisonnent pas, mais les plaies qu'elles laissent s'infectent (voir « La fièvre d'une plaie »).
 - **L'arête de poisson, le serpent, le scorpion.** Même sauvegarde que la physalie ; le MJ ajuste le DD.
 - **Le tafia.** Voir plus haut.
@@ -238,7 +235,7 @@ d20 + modificateur de la caractéristique + bonus de maîtrise si tu maîtrises.
 
 ### Le combat
 
-Rounds de six secondes, cases de 1,5 m. Vitesse 9 m. Une action, un déplacement, une action bonus, une réaction par round. Initiative : d20 + Adresse. Surprise : Discrétion contre Perception passive. Abri : +2 (demi), +5 (trois quarts), total. Une attaque d'opportunité quand une créature quitte ta portée sans se désengager. Le pont roule : Acrobaties DD 10, 12 ou 15 pour courir ou sauter.
+Rounds de six secondes, cases de 1,5 m. Vitesse 9 m. Une action, un déplacement, une action bonus, une réaction par round. Initiative : d20 + Adresse. Surprise : Discrétion contre Perception passive. Abri : +2 (demi), +5 (trois quarts), total. Une attaque d'opportunité quand une créature quitte ta portée sans se désengager. Le pont roule : Acrobaties DD 10, 12 ou 15 pour foncer ou sauter.
 
 ### Les pouvoirs
 
@@ -266,4 +263,4 @@ Une piastre vaut huit réaux. Un repas 1 réal, une nuit à l'auberge 2 réaux, 
 
 ### Les Îles
 
-Le partage se fait devant tout l'équipage, à voix haute. Les coutumes qui coûtent rapportent de la Chance : verser un pot de tafia à la mer, toucher le mât avant l'abordage, ne pas siffler à bord, laisser la première part aux morts. Une cargaison de captifs n'est pas une prise. Les Frères de la Côte donnent quartier à qui pose les armes.
+Le partage se fait devant tout l'équipage, à voix haute. Les coutumes qui coûtent rapportent de la Chance : verser un pot de tafia à la mer, toucher le mât avant l'abordage, ne pas siffler à bord, laisser la première part aux morts. Les captifs ne sont jamais une prise (chapitre 3). Les Frères de la Côte donnent quartier à qui pose les armes avant l'abordage.

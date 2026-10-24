@@ -14,7 +14,7 @@ Chaque personnage commence avec l'équipement de sa **classe**, auquel l'**histo
 >
 > **Dossou** a vingt brasses de corde de chanvre, sa pierre de lest, son sac de toile étanche, son coutelas, un pistolet et dix charges, une veste de cuir, un couteau d'épave. Il a 8 piastres. Sa CA est de 12 (11 + Adresse +1).
 >
-> **Mathurin** a son coffre de chirurgien (scie, bistouri, aiguilles, fil), l'eau-de-vie et les linges, un flacon de quinquina, un pistolet et dix charges, une veste de cuir, un tablier de cuir, une gourde. Il a 15 piastres, celles de sa classe. Son tablier vaut une veste de cuir, mais ne s'y ajoute pas : sa CA est de 12 (11 + Adresse +1).
+> **Mathurin** a son coffre de chirurgien (scie, bistouri, aiguilles, fil), l'eau-de-vie et les linges, un flacon de quinquina, un pistolet et dix charges, une veste de cuir, un tablier de cuir. Il a 15 piastres, celles de sa classe. Son tablier vaut une veste de cuir, mais ne s'y ajoute pas : sa CA est de 12 (11 + Adresse +1).
 >
 > **Inés** a son tromblon et ses vingt charges, un pistolet, trois grenades de fer, de la mèche lente et un briquet à silex, une hache d'abordage, une veste de cuir, un coffre à double fond, une lettre de passe contrefaite, un poignard et une gourde. Elle a 18 piastres : c'est la somme de son historique de Contrebandier, plus haute que celle de sa classe (10). Sa CA est de 14 (11 + Adresse +3).
 >
@@ -29,7 +29,7 @@ On paie en piastres, en réaux, en livres tournois et parfois en livres sterling
 | Un repas à l'auberge | 1 réal |
 | Une nuit à l'auberge | 2 réaux |
 | Un pot de tafia | 1 réal |
-| Un baril de tafia (quarante pots) | 5 piastres |
+| Un baril de tafia (quarante pots, prix de gros) | 4 piastres |
 | Un pistolet à silex | 3 piastres |
 | Un sabre d'abordage | 2 piastres |
 | Un mousquet | 6 piastres |
@@ -53,7 +53,7 @@ Un matelot qui s'équipe d'un pistolet et d'un sabre dépense cinq piastres : c'
 
 ### Marchander
 
-Marchander est un test de Présence (Persuasion), que le MJ fixe à un DD de 13 pour un marchand ordinaire. Une réussite baisse le prix d'environ un cinquième : un pistolet à 3 piastres passe à 2 piastres et 3 réaux, un fusil boucanier à 10 piastres passe à 8. Un échec ne ferme pas la porte, mais le vendeur ne descendra plus. À l'Anse, le patron du Grand Hunier marchande volontiers ; l'armurier non.
+Marchander est un test de Présence (Persuasion) contre le DD de l'attitude du marchand (chapitre 4) : 15 pour un marchand ordinaire. Une réussite baisse le prix d'un cinquième : un pistolet à 3 piastres passe à 2 piastres et 3 réaux, un fusil boucanier à 10 piastres passe à 8. Un échec ne ferme pas la porte, mais le vendeur ne descendra plus. À l'Anse, le patron du Grand Hunier marchande volontiers ; l'armurier non.
 
 ### Vendre et troquer
 
@@ -61,7 +61,7 @@ Un objet en bon état se revend à moitié prix. Une prise se vend selon la chas
 
 ### Crédit
 
-Un aubergiste fait crédit à ceux qu'il connaît, une nuit ou deux. Un marchand de port fait crédit sur parole à ceux que leur classe ou leur nom recommande : 10 piastres pour un Cadet de Saint-Malo dans un port français, 50 piastres pour un Courtier de port (niveau 7) ou un Capitaine (niveau 13). Ce crédit est une avance, à rendre à la fin de la semaine de jeu suivante. Ne pas la rendre se sait dans le port, et la carte « Crédit chez un marchand » en fait perdre un jeton de Chance.
+Un aubergiste fait crédit à ceux qu'il connaît, une nuit ou deux. Un marchand de port fait crédit sur parole à ceux que leur classe ou leur nom recommande : 10 piastres pour un Cadet de Saint-Malo dans un port français, 50 piastres pour un Courtier de port (niveau 7) ou un Capitaine (niveau 13). Ce crédit est une avance, à rendre à la fin de la semaine de jeu suivante. Ne pas la rendre se sait dans le port, et la faveur « Crédit chez un marchand » de la collection (voir plus bas) en fait perdre un jeton de Chance.
 
 ## Les armes
 
@@ -99,8 +99,7 @@ La règle d'un coup, du long feu et de l'eau est au chapitre 4.
 | Bistouri | 4 réaux | 1d4 tranchants | 0,1 kg | Léger, finesse |
 | Crosse de pistolet ou manche de pique | — | 1d4 contondants | — | Arme improvisée |
 
-Le sabre d'abordage est court et lourd. Le coutelas est la lame de tous les matelots, et la hache sert à l'abordage autant qu'au cordage. Le bâton ferré est l'arme de l'Aumônier : le bois est lisse, le fer aux deux bouts est ce qui compte. Le bistouri coupe un homme aussi bien qu'une plaie.
-
+Le sabre d'abordage est court et lourd. Le coutelas est la lame de tous les matelots, et la hache sert à l'abordage autant qu'au cordage. Le bâton ferré est l'arme de l'Aumônier : le bois est lisse, le fer aux deux bouts est ce qui compte.
 ### Les propriétés des armes
 
 **Un coup, recharger.** L'arme à feu tire une fois. La recharger prend une action (chapitre 4).
@@ -158,7 +157,7 @@ Il n'y a pas d'armure lourde sous les tropiques, et presque personne ne porte de
 Il n'y a pas de bouclier sur un pont de navire : on n'a pas assez de mains.
 
 - **Mettre une armure** prend une minute pour une armure légère, cinq pour une intermédiaire. L'enlever prend une minute.
-- **Tomber à l'eau.** Qui tombe à l'eau en cuirasse coule. Il faut une action et un test de Force DD 15 pour la défaire. Une veste de cuir ou un justaucorps de buffle ne te noie pas, mais le cuir trempé pèse : désavantage aux tests pour nager (chapitre 4).
+- **Tomber à l'eau.** Qui tombe à l'eau en cuirasse coule. Il faut une action et un test de Force DD 15 pour la défaire. Une veste de cuir ou un justaucorps de buffle ne te noie pas.
 - **Valeur à la table.** Avec une Adresse de +3 : la veste de cuir donne 14, le justaucorps de buffle 15, la cuirasse (au plus +2) 16.
 
 ## Le matériel de bord
@@ -174,11 +173,11 @@ Il n'y a pas de bouclier sur un pont de navire : on n'a pas assez de mains.
 | **Torche de résine** | 1 réal | Vive 6 m, faible 6 m, une heure |
 | **Briquet à silex et amadou** | 1 réal | Un feu en une minute si le bois est sec |
 | **Poire à poudre et sac à balles** | 4 réaux | Pour porter ses charges à la ceinture |
-| **Mèche lente, une brasse** | 1 réal | Brûle sous la pluie si on la garde sèche |
+| **Mèche lente, une brasse** | 1 réal | Garde-la sèche : elle brûle même sous la pluie |
 | **Sac de toile étanche** | 4 réaux | Garde la poudre et les papiers au sec dans une chute à l'eau |
 | **Hamac** | 2 réaux | Sur un navire, c'est le plus souvent gratuit |
 
-La lumière dit où tu es. Une lanterne tenue haute sur un pont est vue de tous les navires à l'ancre dans la rade.
+Une lanterne tenue haute sur un pont est vue de tous les navires à l'ancre dans la rade.
 
 Une **ration** par homme et par jour, et un baril d'eau pour trente hommes et trois jours : ce sont les vivres du navire (chapitre 3). L'équipage ne les paie pas de sa poche ; ils sortent du tiers de la prise qui va à l'armement.
 
@@ -206,7 +205,7 @@ Le **coffre de chirurgien** donne l'avantage à un test d'Instinct (Médecine) p
 On loue rarement un navire : on l'arme, on le prend, ou on y prend une place. Les repères sont ceux du chapitre 3 :
 
 - **Le sloop, la goélette, le brigantin** sont les navires des pirates ; **le galion et la frégate** sont ceux des rois.
-- Un **sloop** fait de quatre à huit nœuds, soit de quarante à soixante lieues par jour par bon vent. Un sloop d'occasion se paie 800 piastres. Un sloop de flibustiers porte une quarantaine d'hommes, qui servent à la part.
+- Un **sloop** fait de cinq à sept nœuds, soit de quarante à soixante lieues par jour. Un sloop d'occasion se paie 800 piastres. Un sloop de flibustiers porte une quarantaine d'hommes, qui touchent une part.
 - Un équipage se paie en **parts** (chapitre 3) : une pour le matelot, deux pour le capitaine, une et demie pour le quartier-maître, une et un quart pour le chirurgien, le canonnier, le charpentier et le maître de manœuvre.
 - Un navire a un **Moral** (chapitre 3) et, pour les règles du combat de navire à navire, le MJ.
 
@@ -234,7 +233,7 @@ Certains objets n'ont pas de prix sur un étal. Ils se glanent chez un ancien, d
 | Un fusil boucanier | Rare | Un canon long d'un bras et demi, la crosse patinée par la fumée |
 | Une conque des mornes | Rare | Un grand coquillage rose qu'on ne vend pas : on la confie |
 | Le pavillon de l'équipage | Relique | Un carré de toile noire, vingt points de couture par nom |
-| Un huit repêché de la Capitana | Relique | Une piastre de la Flotte, noire de coquillages |
+| Un huit repêché de la Capitana | Relique | Une piastre repêchée au fond, noire de coquillages |
 
 L'effet de chaque objet est écrit sur sa carte. Ceux qu'on peut aussi acheter (le pistolet, la grenade, la longue-vue, le coffre) ont leur prix dans ce chapitre ; la carte donne un petit avantage de plus, parce que celui-là a servi.
 

@@ -5,12 +5,12 @@
 // Conventions : aucun surnaturel (le Navire blanc est une frégate, l'ouragan est une tempête). Les marrons ne sont jamais des ennemis par défaut :
 // la seule fiche de marron est une sentinelle, rangée avec ceux qui portent les armes, et le MJ peut toujours lui parler.
 // Les chasseurs de marrons sont des adversaires, mais chaque fiche dit comment éviter le combat. Aucune fiche ne chiffre un captif ou un plongeur
-// comme une prise : une cargaison de captifs n'est pas un butin (voir les règles du navire).
+// comme une prise : les captifs ne sont jamais un butin (voir les règles du navire).
 // Dans les textes, les caractéristiques portent les noms du monde : Force, Adresse, Endurance, Savoir, Instinct, Présence.
 // Armes de 1715 (table de shared/iles-regles.ts) : pistolet à silex (1d10, 9/27 m), mousquet (1d12, 12/36 m), fusil boucanier (1d12, 18/54 m),
 // tromblon (2d6, 6/18 m), sabre d'abordage (1d8, finesse), coutelas (1d6), hache d'abordage (1d8), poignard (1d4), grenade de fer (2d6, DD 12).
 // Une arme à feu tire un seul coup, puis recharger prend une action : un « tir » dans une attaque multiple suppose l'arme chargée à l'avance.
-// Les navires sont des fiches de rencontre rapide (coque = PV) ; le vrai combat naval se joue aux postes du navire.
+// Les navires sont des fiches de rencontre rapide (coque = PV) ; le vrai combat naval se joue avec le canon de 8, le pierrier et les tests de manœuvre.
 // Les secrets du canon (le faux argent, la Santa Clara, le registre de son capitaine) ne vivent que dans gmNotes.
 import type { Creature } from "./bestiary";
 import { cost, fabriquerCreature, hit, multi, save, special, type CreatureInput } from "./fiches";
@@ -18,7 +18,7 @@ import { cost, fabriquerCreature, hit, multi, save, special, type CreatureInput 
 const creature = (input: CreatureInput): Creature => fabriquerCreature("pirates", input);
 
 const PHYSIQUE = "contondants, perforants et tranchants";
-const ETATS_ENV = ["empoisonné", "épuisement", "charmé", "effrayé", "agrippé", "à terre", "entravé", "paralysé", "étourdi"];
+const ETATS_ENV = ["empoisonné", "épuisement", "charmé", "effrayé", "empoigné", "à terre", "entravé", "paralysé", "étourdi"];
 const ETATS_COQUE = ETATS_ENV;
 // Trait commun à ceux qui tirent : une arme à feu tire un seul coup.
 const ARMES_CHARGEES = "Il commence le combat avec ses armes à feu chargées. Chaque tir les vide : tant qu'il n'a pas passé une action à recharger, le tir de son attaque multiple est remplacé par un coup au corps à corps.";
@@ -109,7 +109,7 @@ export const BESTIAIRE_ILES: Creature[] = [
     ],
     actions: [
       multi("Une morsure et un coup de queue.", { Morsure: 1, Queue: 1 }),
-      hit("Morsure", "contact", 6, "1,5 m", "2d10+4", "perforants", "La cible est agrippée (évasion DD 14). Tant qu'elle l'est, elle est entravée, et le crocodile ne peut mordre qu'elle."),
+      hit("Morsure", "contact", 6, "1,5 m", "2d10+4", "perforants", "La cible est empoignée (évasion DD 14). Tant qu'elle l'est, elle est entravée, et le crocodile ne peut mordre qu'elle."),
       hit("Queue", "contact", 6, "1,5 m", "1d12+4", "contondants", "Une cible Grande ou plus petite fait un jet de sauvegarde de Force DD 14 ou tombe à terre."),
     ],
     lore: "Gris-vert, long comme une barque, caché entre les racines de palétuviers au fond de la baie. On ne voit que deux yeux et le bout d'un museau. Les lavandières, les pêcheurs de crabes et les enfants de l'Anse-aux-Lames connaissent chaque bras de vase où il dort, et personne ne leur apprend à ne pas y aller seuls.",
@@ -171,7 +171,7 @@ export const BESTIAIRE_ILES: Creature[] = [
       hit("Pistolet à silex", "distance", 4, "9/27 m", "1d10+2", "perforants", "Un coup ; recharger prend une action."),
     ],
     lore: "Une veste de cuir tachée de goudron, un foulard noué sur le front, deux pistolets pendus à une bandoulière et un sabre court, lourd comme une hache de bûcheron. Il monte à l'abordage en criant, saute sur la lisse d'un autre pont et se demande ensuite combien lui reviendra de la prise. Il sait qu'une corde l'attend à Saint-Pierre.",
-    gmNotes: "Ils attaquent en groupe, d'un pont à l'autre, grappin en main. Leur premier mouvement est un coup de pistolet, puis le sabre. Ils cèdent devant une prise sans résistance (le capitaine amène le pavillon et le pillage se fait en bon ordre) et deviennent féroces devant un équipage qui se bat. Un quartier-maître qui lit la chasse-partie à voix haute les calme (Persuasion DD 12). Ils ne tuent pas ceux qui se rendent : ce n'est pas la coutume, et la coutume leur sert. Niveaux 2 à 5 : deux ou trois au niveau 2, quatre à six à partir du niveau 4.",
+    gmNotes: "Ils attaquent en groupe, d'un pont à l'autre, grappin en main. Leur premier mouvement est un coup de pistolet, puis le sabre. Ils cèdent devant une prise sans résistance (le capitaine amène le pavillon et le pillage se fait en bon ordre) et deviennent féroces devant un équipage qui se bat. Un quartier-maître qui lit la chasse-partie à voix haute les calme (Persuasion DD 10). Ils ne tuent pas ceux qui se rendent : ce n'est pas la coutume, et la coutume leur sert. Niveaux 2 à 5 : deux ou trois au niveau 2, quatre à six à partir du niveau 4.",
     scene: "a rough pirate in a stained leather vest and a knotted headscarf swinging across to a ship's rail on a rope, a short heavy cutlass raised in one hand and two flintlock pistols slung across his chest, taut sails and a bright sea behind him",
   }),
   creature({
@@ -239,7 +239,7 @@ export const BESTIAIRE_ILES: Creature[] = [
       hit("Pistolet à silex", "distance", 4, "9/27 m", "1d10+2", "perforants", "Un coup ; recharger prend une action."),
     ],
     lore: "L'homme de l'équipage, élu contre le capitaine pour que le capitaine ne décide pas seul. Il porte à la ceinture une bourse de cuir, une clef et une balance de cuivre, et il distribue les parts devant tout le monde, pièce par pièce. Il tranche les querelles à bord, frappe le premier à l'abordage, et tient la chasse-partie dans la poche de son justaucorps.",
-    gmNotes: "Il veut deux choses : un partage juste et un équipage entier. Il ne tire pas sur un personnage qui a partagé devant tous, ni sur un capitaine qui a tenu parole. Ce qui le fait basculer : un partage retardé de plus d'une semaine, un mensonge du capitaine qu'il apprend, un blessé laissé à terre. Un quartier-maître qui retourne l'équipage contre un capitaine est plus dangereux que dix sabres (Persuasion DD 15 pour l'en dissuader, DD 12 avec un partage juste). Niveaux 3 à 6.",
+    gmNotes: "Il veut deux choses : un partage juste et un équipage entier. Il ne tire pas sur un personnage qui a partagé devant tous, ni sur un capitaine qui a tenu parole. Ce qui le fait basculer : un partage retardé de plus d'une semaine, un mensonge du capitaine qu'il apprend, un blessé laissé à terre. Un quartier-maître qui retourne l'équipage contre un capitaine est plus dangereux que dix sabres (Persuasion DD 15 pour l'en dissuader, DD 10 avec un partage juste). Niveaux 3 à 6.",
     scene: "a stocky quartermaster in a buff leather coat with a leather purse, a brass balance and an iron key hanging at his belt, a curved cutlass drawn and his other hand raised for silence, standing on a ship's quarterdeck before a crowd of sailors",
   }),
   creature({
@@ -290,7 +290,7 @@ export const BESTIAIRE_ILES: Creature[] = [
     id: "soldat-espagnol",
     name: "Soldat espagnol",
     family: "Soldats et chasseurs", size: "Moyenne", type: "humanoïde (Espagnol)", region: "Les bancs de Floride",
-    cr: 0.5, ac: 16, acNote: "cuirasse", hd: 4, speed: { marche: 9 },
+    cr: 0.5, ac: 16, acNote: "cuera épaisse et plastron", hd: 4, speed: { marche: 9 },
     stats: [12, 14, 13, 10, 11, 10],
     skills: { Perception: 2 },
     languages: "espagnol",
@@ -303,8 +303,8 @@ export const BESTIAIRE_ILES: Creature[] = [
       hit("Mousquet", "distance", 4, "12/36 m", "1d12+2", "perforants", "Un coup ; recharger prend une action."),
       hit("Sabre", "contact", 4, "1,5 m", "1d8+2", "tranchants"),
     ],
-    lore: "Fantassin de la garnison de La Havane, cuirasse rouillée sous une casaque de drap délavée par le sel, mousquet sur l'épaule. Au camp de la Floride, il garde la plage, compte les barres que les plongeurs remontent et ne regarde pas l'homme qui les porte. La solde est en retard de quatre mois.",
-    gmNotes: "Trente hommes tiennent le camp, par relèves de huit. Un soldat seul se rend contre sa vie sauve ou se laisse acheter (5 piastres, Persuasion DD 12) : la solde en retard fait plus pour la corruption qu'un discours. Ils ouvrent les caisses, regardent le couvercle et en mettent certaines dans une chaloupe à part, sur ordre du sergent, sans savoir pourquoi. Tuer un soldat du camp coûte à la Paix des Îles. Niveaux 3 à 5, par quatre (au niveau 2, deux au plus).",
+    lore: "Fantassin de la garnison de La Havane, cuera épaisse et plastron rouillé sous une casaque de drap délavée par le sel, mousquet sur l'épaule. Au camp de la Floride, il garde la plage, compte les barres que les plongeurs remontent et ne regarde pas l'homme qui les porte. La solde est en retard de quatre mois.",
+    gmNotes: "Trente hommes tiennent le camp, par relèves de huit. Un soldat seul se rend contre sa vie sauve ou se laisse acheter (5 piastres, Persuasion DD 10) : la solde en retard fait plus pour la corruption qu'un discours. Ils ouvrent les caisses, regardent le couvercle et en mettent certaines dans une chaloupe à part, sur ordre du sergent, sans savoir pourquoi. Tuer un soldat du camp coûte à la Paix des Îles. Niveaux 3 à 5, par quatre (au niveau 2, deux au plus).",
     scene: "a Spanish infantryman in a faded sea-bleached coat and a rusty breastplate, a long musket on his shoulder, standing on a white sand beach with a stack of wooden crates and a small palisade fort of sharpened stakes behind him",
   }),
   creature({
@@ -373,7 +373,7 @@ export const BESTIAIRE_ILES: Creature[] = [
       hit("Sabre", "contact", 5, "1,5 m", "1d8+3", "tranchants"),
     ],
     lore: "Il porte le justaucorps du roi et une cuirasse qu'il a graissée lui-même, sur un sloop qui longe la côte de Saint-Pierre aux anses de l'ouest. Il fouille les barriques de sucre pour y chercher du tafia sans droit, et les navires pour y chercher des pirates. Le pavillon blanc à la fleur de lys, c'est lui qui le fait respecter.",
-    gmNotes: "Il faut un sergent (cette fiche) et trois matelots de pont ; dix hommes est une scène de fuite ou de négociation. Ils préfèrent arrêter à tuer : un pirate pendu rapporte plus à Versailles que six morts en mer. Un laissez-passer écrit de Vaucelles ou une grâce publique les arrête (Persuasion DD 13) ; dix piastres bien placées aussi, mais le lieutenant compte. Tuer un garde-côte du roi fait appareiller la frégate. Ils ne poursuivent pas hors des eaux françaises : à Nassau, ils n'ont aucun droit. Niveaux 3 à 6.",
+    gmNotes: "Il faut un sergent (cette fiche) et trois matelots de pont ; dix hommes est une scène de fuite ou de négociation. Ils préfèrent arrêter à tuer : un pirate pendu rapporte plus à Paris que six morts en mer. Un laissez-passer écrit de Vaucelles ou une grâce publique les arrête (Persuasion DD 10) ; dix piastres bien placées aussi, mais le lieutenant compte. Tuer un garde-côte du roi fait appareiller la frégate. Ils ne poursuivent pas hors des eaux françaises : à Nassau, ils n'ont aucun droit. Niveaux 3 à 6.",
     scene: "a French coast guard in a long dark blue coat and a steel breastplate with a three-cornered hat, a musket at the ready and a cutlass at his side, standing on the deck of a small sloop with a white pennant, a green volcanic island and white buildings behind him",
   }),
   creature({
@@ -387,7 +387,7 @@ export const BESTIAIRE_ILES: Creature[] = [
     languages: "anglais, français passable, espagnol",
     traits: [
       { name: "Commission de Kingston", text: "Il porte la croix de Saint-Georges. Il ne tire jamais sur un navire qui montre le même signe, et il a l'avantage aux jets de Persuasion face à un officier anglais." },
-      { name: "Ordre de la prise", text: "Il capture avant de couler : sous la moitié de ses PV, il demande quartier plutôt que de se faire tuer pour la Compagnie." },
+      { name: "Ordre de la prise", text: "Il capture avant de couler : sous la moitié de ses PV, il demande quartier plutôt que de se faire tuer pour les négociants de Kingston." },
       { name: "Armes chargées", text: ARMES_CHARGEES },
     ],
     actions: [
@@ -395,7 +395,7 @@ export const BESTIAIRE_ILES: Creature[] = [
       hit("Sabre d'abordage", "contact", 6, "1,5 m", "1d8+4", "tranchants"),
       hit("Pistolet à silex", "distance", 6, "9/27 m", "1d10+4", "perforants", "Un coup ; recharger prend une action."),
     ],
-    lore: "Un lieutenant de sloop de Kingston, justaucorps de buffle propre, tricorne droit, le poignet toujours un peu relevé comme à l'escrime. Il parle un français scolaire appris sur des prisonniers. La Compagnie le paie pour prendre des navires espagnols en temps de paix, et pour dire ensuite que ce n'était pas lui.",
+    lore: "Un lieutenant de sloop de Kingston, justaucorps de buffle propre, tricorne droit, le poignet toujours un peu relevé comme à l'escrime. Il parle un français scolaire appris sur des prisonniers. Les négociants de Kingston le paient pour prendre des navires espagnols en temps de paix, et pour dire ensuite que ce n'était pas lui.",
     gmNotes: "Il veut la prise, pas la bataille, et ses ordres viennent de Truscott par Kingston : il sait peu de choses et le cache bien. Il propose un partage (un tiers pour lui, deux pour l'équipage anglais) à qui lui livre un navire espagnol seul ou un camp mal gardé. Sorties : lui montrer qu'un navire du roi suit, lui céder le pavillon contre le silence, ou le battre à la manœuvre. Il ne torture personne et le dit. Niveaux 5 à 8.",
     scene: "a smart English privateer lieutenant in a clean buff coat and a straight three-cornered hat, a slim cutlass drawn in a fencer's pose and a pistol in his other hand, standing on the foredeck of a trim sloop under a red cross pennant, a bright blue sea behind him",
   }),
@@ -435,15 +435,15 @@ export const BESTIAIRE_ILES: Creature[] = [
     skills: { Athlétisme: 6, Intimidation: 6, Perception: 5, Persuasion: 6 },
     languages: "français, un peu d'anglais",
     traits: [
-      { name: "Crochet de fer", text: "Sa main gauche perdue à Carthagène est remplacée par un crochet. Il peut agripper une cible Moyenne ou plus petite qu'il touche du crochet (évasion DD 14) ; tant qu'elle l'est, elle a le désavantage à ses attaques contre un autre que lui." },
+      { name: "Manchette de fer", text: "Il a perdu la main gauche à Carthagène ; une manchette de fer rivée au poignet lui sert de massue. Il peut empoigner une cible Moyenne ou plus petite qu'il touche de la manchette (évasion DD 14) ; tant qu'elle l'est, elle a le désavantage à ses attaques contre un autre que lui." },
       { name: "Quatre pistolets", text: "Il porte quatre pistolets chargés. Chaque tir (action ou action légendaire) en vide un. À zéro, plus de tir avant qu'il ait passé une action à en recharger un." },
-      { name: "En trois mots", text: "Il parle en comptant, trois mots à la fois, et un coup de crochet sur la table. Une créature qui l'entend plus d'une minute fait un jet de sauvegarde de Présence DD 14, sinon elle a le désavantage aux jets de Persuasion face à lui jusqu'à la fin de la scène." },
+      { name: "En trois mots", text: "Il parle en comptant, trois mots à la fois, et un coup de manchette sur la table. Une créature qui l'entend plus d'une minute fait un jet de sauvegarde de Présence DD 14, sinon elle a le désavantage aux jets de Persuasion face à lui jusqu'à la fin de la scène." },
       { name: "Chance du forban (1/jour)", text: "Quand il rate un jet de sauvegarde, il peut le réussir à la place." },
     ],
     actions: [
-      multi("Un coup de crochet, puis un coup de sabre ou un tir de pistolet.", { "Crochet de fer": 1, "Sabre d'abordage": 1 }),
+      multi("Un coup de manchette, puis un coup de sabre ou un tir de pistolet.", { "Manchette de fer": 1, "Sabre d'abordage": 1 }),
       hit("Sabre d'abordage", "contact", 6, "1,5 m", "1d8+3", "tranchants"),
-      hit("Crochet de fer", "contact", 6, "1,5 m", "1d6+3", "perforants"),
+      hit("Manchette de fer", "contact", 6, "1,5 m", "1d6+3", "perforants"),
       hit("Pistolet à silex", "distance", 6, "9/27 m", "1d10+3", "perforants", "Un coup ; recharger prend une action."),
     ],
     legendary: {
@@ -455,9 +455,9 @@ export const BESTIAIRE_ILES: Creature[] = [
         cost(special("Ordre d'abordage", "Deux de ses hommes à 18 m qui l'entendent se déplacent de leur vitesse et font une attaque."), 2),
       ],
     },
-    lore: "Capitaine du brigantin Vengeance-de-Rouen, un crochet de fer à la place de la main gauche, perdue à Carthagène. Le plus craint des Frères de la Côte. Il parle en comptant : trois mots, puis un coup de crochet sur la table. On dit qu'il compte chaque part lui-même, deux fois, devant tout l'équipage, et que personne ne l'a jamais pris en défaut.",
+    lore: "Capitaine du brigantin Vengeance-de-Rouen. Il a perdu la main gauche à Carthagène ; une manchette de fer rivée au poignet lui sert de massue. Le plus craint des Frères de la Côte. Il parle en comptant : trois mots, puis un coup de manchette sur la table. On dit qu'il compte chaque part lui-même, deux fois, devant tout l'équipage, et que personne ne l'a jamais pris en défaut.",
     gmNotes: "Il veut le plus gros coup de l'histoire, puis une maison à Dieppe. Il respecte la chasse-partie à la lettre et fait payer cher celui qui la viole. Ce que les Frères disent à voix basse : il vend ses prises au même port que les négriers et ne pose pas de questions. Ce qu'il cache : il garde une pièce fausse dans sa poche comme porte-bonheur. Sorties : lui tenir tête devant son équipage (Intimidation DD 17, Persuasion DD 16), lui offrir le plus gros coup en échange d'un autre ou le battre à la chasse-partie lue à voix haute. Il ne tue pas un homme qui le regarde en face. Il épargne ceux qui se rendent, mais il ne libère ni ne protège les captifs d'une prise. Niveaux 5 à 10.",
-    scene: "a tall broad captain in a worn red coat and a battered three-cornered hat with a polished iron hook in place of his left hand, a cutlass in his right and four flintlock pistols slung across his chest, standing on a ship's quarterdeck before taut sails and a stormy sky",
+    scene: "a tall broad captain in a worn red coat and a battered three-cornered hat with a polished iron cuff riveted over the wrist stump of his left arm, a cutlass in his right and four flintlock pistols slung across his chest, standing on a ship's quarterdeck before taut sails and a stormy sky",
   }),
   creature({
     id: "capitaine-du-navire-blanc",

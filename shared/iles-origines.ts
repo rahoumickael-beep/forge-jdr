@@ -1,7 +1,7 @@
 // Origines jouables et historiques des Îles du Vent (pirates, Antilles, 1716), d'après la bible (sections 5 et 9).
 // Caractéristiques : 0 Force, 1 Adresse, 2 Endurance, 3 Savoir, 4 Instinct, 5 Présence.
 // Les origines sont des milieux, pas des essences : chacune a un petit défaut jouable, et l'argent de départ se compte en piastres.
-// Les Marrons, les Africains libres et les Caraïbes des îles sont des personnes avec leurs raisons, pas des figurants ni des clichés.
+// Les Marrons, les Africains libres, les affranchis et les Kalinagos des îles sont des personnes avec leurs raisons, pas des figurants ni des clichés.
 // Lu par les joueurs : aucun secret du canon ici.
 import type { Background, Origin } from "./origins";
 
@@ -15,7 +15,7 @@ export const ORIGINES_ILES: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Le pied marin", text: "Avantage aux tests de manœuvre. Un pont qui roule ne te gêne pas, et tu t'y déplaces sans désavantage." },
+      { name: "Le pied marin", text: "Avantage aux tests de manœuvre. Un pont qui roule ne te gêne pas : tu ne fais jamais le test d'Acrobaties du roulis." },
       { name: "Où vendre une prise", text: "Tu connais tous les ports où l'on peut vendre une prise sans trop de questions. Une fois par semaine de jeu, tu trouves un acheteur et un prix honnête pour une marchandise de bord." },
       { name: "Marqué par la Côte", text: "Dans un port du roi, on reconnaît un flibustier à sa démarche. Désavantage à ton premier test de Persuasion avec chaque officier ou fonctionnaire du roi." },
     ],
@@ -78,13 +78,13 @@ export const ORIGINES_ILES: Origin[] = [
     id: "pi-marrons",
     genre: "pirates",
     name: "Marrons",
-    blurb: "Nés libres dans les mornes, ou évadés d'une plantation. On connaît le prix de la liberté, on a des alliés dans les villages cachés, et un planteur a mis une prime sur sa tête.",
+    blurb: "Nés libres dans les mornes, ou évadés d'une plantation. On connaît le prix de la liberté, un village caché te reçoit si l'un des siens répond de toi, et un planteur a mis une prime sur sa tête.",
     bonus: { 2: 1 },
     speed: 6,
     unique: true,
     traits: [
       { name: "Les mornes pour maison", text: "Avantage aux tests de Discrétion et de Survie dans les montagnes et la forêt. Tu trouves un sentier là où les autres voient un mur." },
-      { name: "Les villages des mornes", text: "Dans les mornes, un village de marrons t'accueille pour une nuit sans poser de question, et on y échange des nouvelles. Une fois par semaine de jeu, un éclaireur te dit ce qui se passe sur les routes." },
+      { name: "Les villages des mornes", text: "Dans les mornes, un village de marrons reçoit pour une nuit celui dont un des siens répond ; la sentinelle te fait répéter ton nom et ton affaire. On y échange des nouvelles. Une fois par semaine de jeu, un éclaireur te dit ce qui se passe sur les routes." },
       { name: "Une prime sur ta tête", text: "Un planteur, quelque part, paie pour ta capture, vivant ou mort. Dans une ville de plantation, le MJ peut faire venir un chasseur de marrons ; tu as le désavantage à tes tests de Persuasion avec un planteur." },
     ],
     subs: [
@@ -180,7 +180,7 @@ export const ORIGINES_ILES: Origin[] = [
     id: "pi-toutes-mers",
     genre: "pirates",
     name: "Gens de toutes les mers",
-    blurb: "Anglais, Hollandais, Irlandais, Africains libres, Caraïbes des îles : tous ceux que la mer a jetés ici. On a une langue de plus, des contacts dans un port étranger, et un passé que personne ne vérifie.",
+    blurb: "Anglais, Hollandais, Irlandais, Africains libres, affranchis nés aux Îles, Kalinagos des îles qui ont choisi un pont de navire : la mer a jeté les uns ici, les autres y étaient avant les navires. On a une langue de plus, des contacts dans un port étranger, et un passé que personne ne vérifie.",
     bonus: { 4: 1 },
     speed: 6,
     unique: true,
@@ -202,7 +202,7 @@ export const ORIGINES_ILES: Origin[] = [
       {
         id: "pi-toutes-mers-libre",
         name: "Libre des îles",
-        blurb: "Africain libre, affranchi ou Caraïbe des îles : tu as gagné ou gardé ta liberté, et tu connais chaque crique de ton île, chaque courant, chaque maître de port.",
+        blurb: "Africain libre ou affranchi né aux Îles : tu as gagné ou gardé ta liberté, et tu connais chaque crique de ton île, chaque courant, chaque maître de port. Un Kalinago qui a choisi un pont de navire joue aussi cette variante, avec une histoire à lui.",
         bonus: { 2: 1, 5: 1 },
         traits: [
           { name: "Chaque crique", text: "Maîtrise de Perception et d'Intuition. Tu repères un mouillage ou une patrouille avant qu'elle ne te voie, et tu lis un maître de port à ses mains. Dans un port de la Côte, on te traite en égal ; ailleurs, tu es surveillé." },

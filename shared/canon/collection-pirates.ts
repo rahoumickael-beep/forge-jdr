@@ -39,7 +39,7 @@ export const COLLECTION_ILES: CarteDeCollection[] = [
     texte: "Un carré de toile noire cousu à la main, vingt points de couture pour chaque nom de l'équipage, et chacun son signe. Chaque capitaine a le sien, et celui-ci est le vôtre.",
     usage: "Une fois, après un partage juste : vous le hissez devant l'équipage assemblé. Le Moral monte de 1, jusqu'à 10 au plus. Perdu ou taché, il coûte le même point." },
   { id: "pi-huit-repeche-de-la-capitana", nom: "Un huit repêché de la Capitana", famille: "objet", rarete: "relique", recharge: "par-seance",
-    texte: "Une piastre de la Flotte d'Argent, noire de coquillages, l'effigie à peine lisible. Quelqu'un l'a remontée à six brasses, et la garde depuis dans un coin de sa poche.",
+    texte: "Une piastre noire de coquillages, l'effigie à peine lisible. Quelqu'un l'a remontée à six brasses, et la garde depuis dans un coin de sa poche.",
     usage: "Une fois par séance, vous la frottez entre vos doigts avant un jet important : vous gagnez un jeton de Chance sans coutume à payer, dans la limite de 3. Personne ne sait si ça marche. Tout le monde le fait." },
   // ——— Alliés ———
   { id: "pi-mousse-du-quai", nom: "Un mousse de l'Anse-aux-Lames", famille: "allie", rarete: "commune", recharge: "par-seance",

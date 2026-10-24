@@ -21,8 +21,8 @@ const RECHARGE_COMMUN = "Voir « Les armes de 1715 ».";
 
 const NAVIRE_COMMUN = "Voir « Le navire et son Moral ».";
 
-const STYLE_TIR = "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main et rien dans l'autre), Tir (+2 aux attaques à distance) ou Deux armes (ajoute ton modificateur aux dégâts de la seconde arme).";
-const STYLE_CORPS = "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance).";
+const STYLE_TIR = "Choisis : Défense (+1 CA), Duel (+2 aux dégâts d'une arme de contact tenue à une main, rien dans l'autre), Tir (+2 aux attaques à distance) ou Deux armes (ajoute ton modificateur aux dégâts de la seconde arme).";
+const STYLE_CORPS = "Choisis : Défense (+1 CA), Duel (+2 aux dégâts d'une arme de contact tenue à une main, rien dans l'autre), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance).";
 
 const MORT_DUR = "Avantage aux jets contre la mort. Quand tu te stabilises, tu te relèves avec 1 PV.";
 
@@ -200,7 +200,7 @@ export const CLASSES_ILES: CharacterClass[] = [
     powers: [
       P(1, "Un coup, puis recharger", "passif", "passif", RECHARGE_COMMUN),
       P(1, "Le navire compte", "passif", "passif", NAVIRE_COMMUN),
-      P(1, "Coffre de chirurgien", "action", "repos long", "Un allié à portée de main regagne 1d8 + Instinct PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Utilisations : ton modificateur d'Instinct + 2 (3 au moins), récupérées après un repos long ; une revient après un repos court.", { uses: 3 }),
+      P(1, "Coffre de chirurgien", "action", "repos long", "Un allié à portée de main regagne 1d8 + Instinct PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Trois utilisations, récupérées après un repos long ; une revient après un repos court.", { uses: 3 }),
       P(1, "Diagnostic", "action", "à volonté", "Un patient ou un cadavre à portée de main : test de Médecine (DD 10 pour une blessure, 15 pour une fièvre ou une maladie, 20 pour un poison rare). Tu lis la cause. Sur un mort, tu sais depuis quand et de quoi."),
       P(1, "Eau-de-vie et linge", "passif", "passif", "Avec de l'eau-de-vie et des linges propres, dix minutes : tu nettoies une plaie. Les alliés que tu as soignés ont l'avantage aux sauvegardes d'Endurance contre l'infection et la fièvre."),
       P(1, "Sauver un homme", "réaction", "repos court", "Une fois par combat, un membre d'équipage qui aurait dû mourir est tenu en vie à bord (il ne compte pas comme perdu pour le Moral). Se refait après un repos court.", { uses: 1 }),
@@ -253,7 +253,7 @@ export const CLASSES_ILES: CharacterClass[] = [
     powers: [
       P(1, "Un coup, puis recharger", "passif", "passif", RECHARGE_COMMUN),
       P(1, "Le navire compte", "passif", "passif", NAVIRE_COMMUN),
-      P(1, "Pied marin", "passif", "passif", "Tu grimpes à ta vitesse normale. Un pont qui roule, une vergue qui bouge ou une échelle de corde ne te donnent aucun désavantage."),
+      P(1, "Pied marin", "passif", "passif", "Tu grimpes à ta vitesse normale. Un pont qui roule, une vergue qui bouge ou une échelle de corde ne te donnent aucun désavantage, et tu ne fais jamais le test d'Acrobaties du roulis."),
       P(1, "Du haut des vergues", "passif", "passif", "Tu réduis de 5 × ton niveau les dégâts d'une chute que tu peux atténuer avec une corde, une voile ou un gréement."),
       P(1, "Coup du haut", "passif", "passif", "Une fois par tour, +1d6 dégâts à une attaque avec une arme légère ou à distance, si tu as l'avantage ou si un allié est à 1,5 m de la cible. 2d6 au niveau 3, 3d6 au 5, 4d6 au 7, 5d6 au 9, 6d6 au 11, 7d6 au 13, 8d6 au 15, 9d6 au 17."),
       P(1, "Veille de hune", "passif", "passif", "Avantage aux tests de Perception. Tu repères une voile à 20 km par temps clair, un feu de camp à 10 km la nuit."),
@@ -306,7 +306,7 @@ export const CLASSES_ILES: CharacterClass[] = [
     powers: [
       P(1, "Un coup, puis recharger", "passif", "passif", RECHARGE_COMMUN),
       P(1, "Le navire compte", "passif", "passif", NAVIRE_COMMUN),
-      P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Deux armes (ajoute ton modificateur aux dégâts de la seconde arme) ou Tir (+2 aux attaques à distance)."),
+      P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 aux dégâts d'une arme de contact tenue à une main, rien dans l'autre), Deux armes (ajoute ton modificateur aux dégâts de la seconde arme) ou Tir (+2 aux attaques à distance)."),
       P(1, "Panache", "passif", "passif", "Ajoute ton modificateur de Présence à tes jets d'initiative."),
       P(1, "Provocation", "action bonus", "repos court", "Une créature à 9 m qui t'entend : sauvegarde de Présence, ou elle a le désavantage à ses attaques contre un autre que toi pendant une minute." + DD("Présence"), { uses: 3, range: "9 m" }),
       P(2, "Parade", "réaction", "repos court", "Une créature te touche au corps à corps et tu tiens une arme à finesse : ajoute ta maîtrise à ta CA contre cette attaque.", { uses: 3 }),
@@ -362,13 +362,13 @@ export const CLASSES_ILES: CharacterClass[] = [
       P(1, "Coup de sifflet", "action bonus", "repos court", "Un allié à 18 m qui t'entend se déplace de sa vitesse, sans provoquer d'attaque d'opportunité, ou fait l'action Se désengager.", { uses: 3, range: "18 m" }),
       P(1, "Gréer", "passif", "passif", "Avantage aux tests de manœuvre que tu diriges. Réparer un cordage ou une voile prend dix minutes pour toi, et une heure pour un autre."),
       P(1, "Tenir bon", "action bonus", "repos court", "Récupère 1d10 + niveau PV.", { uses: 1 }),
-      P(2, "Coup de collier", "passif", "repos court", "Une fois, à ton tour, tu fais une action de plus (pas de sort, pas de Coup de main).", { uses: 1 }),
+      P(2, "Coup de collier", "passif", "repos court", "Une fois, à ton tour, tu fais une action de plus (pas de Coup de main).", { uses: 1 }),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
       P(6, "Expertise", "passif", "passif", "Double maîtrise dans deux compétences que tu maîtrises parmi Athlétisme et Intimidation."),
       P(7, "Rattraper", "réaction", "repos court", "Un allié à 9 m tombe, glisse ou est jeté à l'eau : tu le retiens par un cordage ou un bras. Il ne subit aucun dégât de chute et reste à bord.", { uses: 2, range: "9 m" }),
       P(9, "Tenir la barre", "réaction", "repos long", "Relance un jet de sauvegarde raté.", { uses: 1 }),
       P(11, "Œil fiable", "passif", "passif", "Pour celles de ces compétences que tu maîtrises : Athlétisme, Perception et Survie, un résultat de 9 ou moins au d20 compte comme un 10."),
-      P(11, "Tout le monde aux bras", "action", "repos long", "Pendant dix minutes, le navire a l'avantage à tous ses tests de manœuvre, et les alliés qui t'entendent gagnent 3 m de vitesse." + COUP, { uses: 1 }),
+      P(11, "Tout le monde aux bras", "action", "repos long", "Hors combat, pendant dix minutes, le navire a l'avantage à tous ses tests de manœuvre, et les alliés qui t'entendent gagnent 3 m de vitesse." + COUP, { uses: 1 }),
       P(13, "Un maître est un maître", "passif", "passif", "Dans un port, un chantier ou un autre navire, on t'écoute, on te prête un homme, un cordage, une planche. Une fois par semaine de jeu, un maître de port te dit quel navire cherche des bras."),
       P(15, "Cuir de gaillard", "passif", "passif", MORT_DUR),
       P(17, "À mon coup de sifflet", "action", "repos long", "Tous les alliés à 18 m qui t'entendent relancent chacun un d20 raté dans la minute ; le nouveau résultat compte." + COUP, { uses: 1, range: "18 m" }),
@@ -464,7 +464,7 @@ export const CLASSES_ILES: CharacterClass[] = [
       P(1, "Un coup, puis recharger", "passif", "passif", RECHARGE_COMMUN),
       P(1, "Le navire compte", "passif", "passif", NAVIRE_COMMUN),
       P(1, "Style de combat", "passif", "passif", STYLE_CORPS),
-      P(1, "Mot de réconfort", "action bonus", "repos long", "Un allié à 18 m qui t'entend gagne 1d6 + ta Présence PV temporaires et n'est plus effrayé. Autant d'utilisations que ta Présence (au moins une) ; elles reviennent après un repos court à partir du niveau 5.", { uses: 3, range: "18 m" }),
+      P(1, "Mot de réconfort", "action bonus", "repos long", "Un allié à 18 m qui t'entend gagne 1d6 + ta Présence PV temporaires et n'est plus effrayé. Trois utilisations ; elles reviennent après un repos court à partir du niveau 5.", { uses: 3, range: "18 m" }),
       P(1, "Chaire de pont", "passif", "passif", "Avantage aux tests de Persuasion et de Représentation devant une foule ou un équipage rassemblé. Ta voix s'entend à 90 m."),
       P(1, "Foi sans phrase", "passif", "passif", "Avantage aux sauvegardes contre la peur. Un allié à 3 m de toi qui est effrayé peut ignorer cet état jusqu'à la fin de son tour."),
       P(2, "Tenir la ligne", "action", "repos court", "Toi et les alliés à 9 m qui t'entendent gagnez 1d6 + ta Présence PV temporaires.", { uses: 2, range: "9 m" }),
@@ -494,7 +494,7 @@ export const CLASSES_ILES: CharacterClass[] = [
         "Il a prêché sur des places, dans des granges, sur des ponts. Sa voix porte plus loin que son pistolet, et ceux qui l'entendent marchent derrière lui sans regarder l'heure.",
         [
           P(3, "Chaire de fortune", "passif", "passif", "Une foule qui t'entend ne t'attaque pas la première, sauf si on l'y pousse. Avantage aux tests de Représentation."),
-          P(7, "Réveil sous la tente", "action", "repos court", "Dix minutes de prêche : les alliés à 9 m qui t'entendent gagnent des PV temporaires égaux à ta Présence, et ne sont plus effrayés.", { uses: 2 }),
+          P(7, "Sermon sous la voile", "action", "repos court", "Dix minutes de prêche : les alliés à 9 m qui t'entendent gagnent des PV temporaires égaux à ta Présence, et ne sont plus effrayés.", { uses: 2 }),
           P(11, "La foule derrière toi", "action", "repos long", "Une foule de vingt personnes au plus, disposée à te suivre, marche derrière toi dix minutes : elle fait barrage, porte l'eau, éclaire la route. Elle ne combat pas.", { uses: 1 }),
           P(15, "Entre toi et l'arme", "réaction", "repos long", "Une attaque vise un allié à 9 m : tu prends la place de la cible, et les dégâts sont réduits de moitié.", { uses: 1, range: "9 m" }),
         ]),
@@ -512,7 +512,7 @@ export const CLASSES_ILES: CharacterClass[] = [
     armor: "Armures légères",
     weapons: "Armes courantes",
     skills: { choose: 3, from: ["Athlétisme", "Perception", "Survie", "Discrétion", "Investigation", "Acrobaties", "Intuition", "Médecine"] },
-    startingGear: ["Corde de chanvre de vingt brasses", "Pierre de lest et sac de toile étanche", "Coutelas", "Pistolet à silex et dix charges", "Veste de cuir", "8 piastres"],
+    startingGear: ["Corde de chanvre de vingt brasses", "Pierre de lest", "Sac de toile étanche", "Coutelas", "Pistolet à silex et dix charges", "Veste de cuir", "8 piastres"],
     powers: [
       P(1, "Un coup, puis recharger", "passif", "passif", RECHARGE_COMMUN),
       P(1, "Le navire compte", "passif", "passif", NAVIRE_COMMUN),
@@ -520,7 +520,7 @@ export const CLASSES_ILES: CharacterClass[] = [
       P(1, "Nageur", "passif", "passif", "Ta vitesse de nage égale ta vitesse. Avantage aux tests d'Athlétisme pour nager. Tu combats sous l'eau sans désavantage au corps à corps."),
       P(1, "Œil sous l'eau", "passif", "passif", "Tu vois dans l'eau trouble comme dans l'eau claire, à 18 m, et tu reconnais un courant, un récif ou un requin à la couleur."),
       P(1, "Fouiller l'épave", "action", "à volonté", "Dix minutes sur une épave : le MJ te dit ce qu'elle contient de précieux ou de dangereux, et si elle est sûre. Une barre d'argent, un coffre, un cadavre, une voie d'eau."),
-      P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance)."),
+      P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 aux dégâts d'une arme de contact tenue à une main, rien dans l'autre), Arme à deux mains (relance les 1 et les 2 aux dégâts) ou Tir (+2 aux attaques à distance)."),
       P(2, "Remonter vite", "action bonus", "à volonté", "Tu remontes de 9 m à la surface sans provoquer d'attaque d'opportunité."),
       P(3, "Tenir l'air", "passif", "passif", "Tu tiens deux fois plus longtemps sans respirer qu'avec ton Souffle long, et tu as l'avantage aux sauvegardes contre la fumée, les gaz et les vapeurs, sous l'eau comme à terre."),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),

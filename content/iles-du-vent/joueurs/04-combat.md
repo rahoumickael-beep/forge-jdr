@@ -1,12 +1,12 @@
 # Chapitre 4 — Le combat
 
-Un grappin mord la lisse d'un brigantin, et le bruit court d'un pont à l'autre : un coup de maillet sur du chêne. Deux secondes plus tard, un mousquet claque dans le noir, la fumée monte jusqu'à la hune et la lanterne de poupe n'éclaire plus qu'un nuage blanc. Les hommes s'appellent par leur nom pour ne pas se tirer dessus. Quelqu'un compte à voix haute les charges qu'il lui reste, et il en manque.
+Un grappin mord la lisse d'un brigantin, et le bruit court d'un pont à l'autre : un coup de maillet sur du chêne. Deux secondes plus tard, un mousquet claque dans le noir, la fumée monte jusqu'à la hune et la lanterne de poupe n'éclaire plus qu'un nuage blanc. Les hommes s'appellent par leur nom pour ne pas se tirer dessus. Quelqu'un compte à voix haute les charges qui lui restent, et il en manque.
 
 Ce chapitre donne les règles pour se battre, du premier regard au dernier jet contre la mort : le pont d'un brigantin de nuit, une vergue, une plage de Floride, une ruelle de l'Anse-aux-Lames. Il dit aussi ce qu'on fait quand on ne tire pas : crier quartier, payer, fuir, se rendre, ou reconnaître qu'un requin ne se négocie pas. La poudre et les charges sont au chapitre 3, les armes et les armures au chapitre 6.
 
 > **Si tu viens d'un autre jeu.**
 >
-> Le combat est celui de la cinquième édition : rounds de six secondes, cases de 1,5 m, initiative, une action, un déplacement, une action bonus et une réaction par tour. Ce qui change aux Îles : une arme à feu tire un seul coup, puis il faut une action entière pour la recharger ; il n'y a pas de bouclier sur un pont ; le pont roule et l'eau est toujours à un pas ; enfin, un combat se paie en Moral, qui monte quand on gagne sans perdre un homme et qui baisse quand on en perd. Aucune classe ne lance de sort.
+> Le combat est celui de la cinquième édition : rounds de six secondes, cases de 1,5 m, initiative, une action, un déplacement, une action bonus et une réaction par tour. Ce qui change aux Îles : une arme à feu tire un seul coup, puis il faut une action entière pour la recharger ; le pont roule et l'eau est toujours à un pas ; enfin, un combat se paie en Moral, qui monte quand on gagne sans perdre un homme et qui baisse quand on en perd. Aucune classe ne lance de sort.
 
 ## Le déroulé d'un combat
 
@@ -28,9 +28,9 @@ Le veilleur d'un navire au mouillage ne guette pas ce qui rame sans bruit dans l
 - Un personnage surpris **ne peut ni se déplacer, ni agir, ni réagir** pendant son premier tour. Il peut en revanche être la cible de tout le monde.
 - La surprise ne concerne que le premier round. Elle joue pour chaque créature, pas pour tout un camp : dans un groupe, l'un entend ce que les autres n'entendent pas.
 - Un coup de feu, une lanterne allumée, un homme qui crie : un camp qui s'est annoncé n'est plus caché.
-- Le MJ tient compte de la lumière. Dans la lumière faible, la Perception passive baisse de 5 pour ce qui se voit (chapitre 2). Celui qui regarde la nuit depuis un cercle de lanterne y voit moins que celui qui a les yeux faits au noir.
+- Le MJ tient compte de la lumière (voir « La nuit »). Dans la lumière faible, la Perception passive baisse de 5 pour ce qui se voit (chapitre 2).
 
-Certains pouvoirs jouent sur cette règle : l'**Œil de hune** de la Vigie protège de la surprise les alliés qui l'entendent, la **Pluie de grappins** du Gabier surprend les ennemis qui ne l'ont pas vu venir (chapitre 5). Le premier round d'un abordage décide souvent du reste.
+Certains pouvoirs jouent sur cette règle : l'**Œil de hune** de la Vigie protège de la surprise les alliés qui l'entendent, la **Pluie de grappins** du Gabier surprend les ennemis qui ne l'ont pas vu venir (chapitre 5).
 
 ## L'initiative
 
@@ -48,14 +48,14 @@ Trois classes ont un avantage ici : le Bretteur ajoute sa Présence à l'initiat
 
 Ta vitesse est de **9 m (6 cases)**, comme celle de toutes les origines des Îles. Tu peux la répartir à ta guise : avancer, tirer, reculer, tant que tu ne dépasses pas le total. Les règles de terrain du chapitre 3 s'appliquent : grimper, nager et ramper comptent double, et un pont encombré de cordages, un sable mou ou la vase d'une mangrove aussi. Les coûts se cumulent : ramper dans la vase coûte quatre cases par case.
 
-- Se relever, quand on est à terre, coûte la moitié de ta vitesse (1,5 m pour le Gabier qui a *Souple comme un cordage*).
+- Se relever, quand on est à terre, coûte la moitié de ta vitesse, soit 4,5 m (1,5 m pour le Gabier qui a *Souple comme un cordage*, niveau 15).
 - Passer à travers une case occupée par un allié est permis. Par un adversaire, non, sauf si la créature est deux fois plus petite que toi.
 - Tu peux te déplacer avant ou après ton action, ou entre deux attaques si tu en as plusieurs.
 - Sauter se paie sur ta vitesse (chapitre 2). Le Voltigeur d'abordage saute deux fois plus loin, et un saut de plus de 3 m ne lui fait pas provoquer d'attaque d'opportunité (*Élan*).
 
 ### Les actions bonus
 
-Une action bonus est un geste rapide que seul un pouvoir permet : provoquer un adversaire (*Provocation*), estimer une distance (*Calculer la portée*), donner un coup de sifflet, se balancer au bout d'un cordage. Sans pouvoir adapté, tu n'en as pas. Tu n'en fais qu'une par tour.
+Une action bonus est un geste rapide que seul un pouvoir ou le combat à deux armes permet : provoquer un adversaire (*Provocation*), estimer une distance (*Calculer la portée*), donner un coup de sifflet, se balancer au bout d'un cordage, frapper de la seconde arme. Sans l'un des deux, tu n'en as pas. Tu n'en fais qu'une par tour.
 
 Recharger n'est pas une action bonus, sauf pour deux classes : le Canonnier recharge n'importe quelle arme à feu en action bonus (*Mains de poudre*), le Boucanier son fusil boucanier ou son mousquet (*Rechargement de chasseur*).
 
@@ -99,7 +99,7 @@ Tu aides un allié à faire un test : il a l'**avantage**. Tu peux aussi aider u
 
 ### Se cacher
 
-Test d'Adresse (Discrétion) contre la Perception passive de ceux qui pourraient te voir. Tu ne peux te cacher que derrière un abri ou dans une zone d'ombre. Quand tu attaques, ou que tu fais du bruit, tu es repéré. Un coup de feu ne se fait pas en silence.
+Test d'Adresse (Discrétion) contre la Perception passive de ceux qui pourraient te voir. Tu ne peux te cacher que derrière un abri ou dans une zone d'ombre. Quand tu attaques, ou que tu fais du bruit, tu es repéré.
 
 ### Se tenir prêt
 
@@ -154,7 +154,7 @@ Quand une créature hostile que tu vois **quitte ta portée** sans se désengage
 
 Si tu tiens une arme **légère** dans chaque main (coutelas, poignard, bistouri) et que tu attaques avec l'une, tu peux utiliser ton action bonus pour attaquer avec l'autre. Tu n'ajoutes pas ton modificateur aux dégâts de cette deuxième attaque, sauf s'il est négatif (le style de combat *Deux armes* te l'accorde). Les armes à feu ne sont pas légères : deux pistolets ne se tirent pas en action bonus, et c'est pourquoi on en porte six.
 
-**Le style Duel** (+2 aux dégâts) vaut quand tu tiens une arme à une main et rien dans l'autre. Un sabre et un pistolet vide dans l'autre main : pas de bonus.
+**Le style Duel** (+2 aux dégâts d'une arme de contact tenue à une main, rien dans l'autre) ne vaut que si l'autre main est vide. Un sabre et un pistolet vide dans l'autre main : pas de bonus.
 
 ### Les armes à feu
 
@@ -162,16 +162,16 @@ Les armes à feu se jouent comme des armes à distance, avec des règles propres
 
 - **Un coup, puis recharger.** Une arme à feu tire **un seul coup**. La recharger prend **une action entière**, pendant le combat comme dehors : pas d'action bonus, pas d'attaque à la volée, sauf pour le Canonnier et le Boucanier. Le Canonnier qui a *Poudre sèche* (niveau 9) décrasse en plus une arme enrayée en action bonus.
 - **Long feu.** Sur un 1 naturel au d20, l'arme fait long feu : l'attaque rate, la charge est perdue et l'arme est enrayée. Il faut une action pour la décrasser (Utiliser un objet), puis le rechargement normal.
-- **L'eau.** Une arme à feu mouillée (plongeon, grain, embarcation retournée) ne tire plus avant d'avoir été séchée et rechargée. Une arme à feu ne tire pas sous l'eau. Le Canonnier à *Poudre sèche* tire quand même.
+- **L'eau.** Une arme à feu mouillée (plongeon, grain, embarcation retournée) ne tire plus avant d'avoir été séchée et rechargée. Sous l'eau, un pistolet ne tire pas : la poudre est noyée. Le Canonnier à *Poudre sèche* tire quand même.
 - **Compte tes charges.** Vingt charges de poudre et de plomb pèsent un kilo et coûtent une piastre. Note-les sur ta fiche, arme par arme (chapitre 3). Une charge tirée est perdue. Sur un ennemi tombé, tu pilles 1d6 charges.
-- **Le bruit et la lumière.** Un coup de feu s'entend de loin et appelle du monde : le MJ décide qui l'entend et dans combien de rounds. De nuit, le tir éclaire le tireur : jusqu'à son prochain tour, ses adversaires savent dans quelle case il est.
+- **Le bruit et la lumière.** Un coup de feu s'entend de loin et appelle du monde : le MJ décide qui l'entend et dans combien de rounds. De nuit, la flamme du bassinet montre le tireur : jusqu'au début de son prochain tour, ses adversaires le voient et n'ont plus le désavantage de viser ce qu'ils ne voient pas.
 - **La fumée.** La poudre noire fume. Une demi-douzaine de coups tirés dans un entrepont ou sur un pont sans vent forme un nuage : la zone devient faiblement éclairée pour la vue jusqu'à ce que le vent reprenne.
 
 **Les grenades.** Allumer la mèche et lancer la grenade prend une action. Qui n'a pas de mèche allumée à portée de main perd une action de plus à en allumer une. La grenade de fer fait 2d6 perforants, la grenade de terre cuite 1d6 contondants, dans un rayon de 3 m, à 9 m au plus. Toute créature dans le rayon fait une sauvegarde d'Adresse (DD 12 pour la grenade de fer, DD 11 pour la terre cuite) et subit la moitié des dégâts si elle réussit. La terre cuite met le feu à ce qui brûle : voiles, toile goudronnée, paille. Tu ne portes que quatre grenades à la fois, ni plus.
 
 > **Après le coup de feu.**
 >
-> Un pistolet tiré sur le quai de l'Anse-aux-Lames, le lieutenant du roi le met sur le compte des flibustiers qui lui doivent une part. À Saint-Pierre de la Martinique, on pend aussi les pirates, quand ils ne paient pas assez. À La Havane, un pirate pris y est pendu dans la semaine. Le MJ te dit dans quelle ville tu es avant que tu ne lèves ton arme.
+> Un pistolet tiré sur le quai de l'Anse-aux-Lames, le lieutenant du roi le met sur le compte des flibustiers qui lui doivent une part. Le même coup de feu à Saint-Pierre ou à La Havane appelle la garde, puis la potence. Le MJ te dit dans quelle ville tu es avant que tu ne lèves ton arme.
 
 ## Les abris
 
@@ -184,8 +184,6 @@ Un obstacle entre l'attaquant et sa cible protège la cible.
 | **Abri total** | Ne peut pas être visé directement | Derrière une cloison de chêne, au fond de l'écoutille, dans la hune d'un autre mât |
 
 Un abri se prend à son tour, en se déplaçant. Une créature, amie ou ennemie, qui se tient sur la ligne entre l'attaquant et la cible donne un demi-abri. Une cloison de sapin n'est pas le bordé de chêne d'une coque : le MJ décide ce qu'une balle de mousquet traverse.
-
-Il n'y a pas de bouclier sur un pont de navire : on n'a pas assez de mains.
 
 ### Les objets
 
@@ -227,14 +225,14 @@ On aborde la nuit parce que les équipages dorment. Le noir est une condition de
 
 - Une **lanterne** de pont éclaire en vive sur **9 m**, en faible sur **9 m** de plus. Une **torche** de résine : 6 m et 6 m. La lune, quand elle est là, donne de la lumière faible partout à découvert ; sans lune, les étoiles suffisent pour distinguer des formes sur l'eau.
 - **Attaquer quelque chose qu'on ne voit pas** a le désavantage. Être attaqué par quelqu'un qu'on ne voit pas, c'est subir une attaque **avec avantage**.
-- **Se tenir dans la lumière, c'est être visible.** Le veilleur qui regarde la nuit depuis le cercle de sa lanterne voit moins loin que celui qui a les yeux faits au noir.
+- **Se tenir dans la lumière, c'est être visible.** Qui regarde le noir en ayant une lanterne devant lui est ébloui : −5 à sa Perception passive. Qui lui tourne le dos ne subit rien.
 - Éteindre une lanterne est une interaction ; la briser d'un tir, une attaque contre sa CA (13, 2 PV).
 
 ### Le roulis
 
 Au mouillage par temps calme, un pont est un plancher. Dès que la mer se forme, il roule, et il faut le pied marin pour courir dessus.
 
-Quand le pont roule, le MJ demande à qui **court, fonce, saute ou grimpe** un test d'**Adresse (Acrobaties)** au début de son tour :
+Quand le pont roule, le MJ demande à qui **fonce ou saute** un test d'**Adresse (Acrobaties)** au début de son tour :
 
 | Mer | DD |
 |---|---|
@@ -244,11 +242,11 @@ Quand le pont roule, le MJ demande à qui **court, fonce, saute ou grimpe** un t
 
 Un échec : tu es **à terre**. Un 1 naturel, à 1,5 m d'une lisse ou d'une écoutille ouverte : tu passes par-dessus bord ou dans l'écoutille, sauf sauvegarde d'Adresse DD 12 pour t'accrocher. Marcher d'un pas normal, tirer, frapper ne demande aucun test.
 
-Les Flibustiers de la Côte (*Le pied marin*) et les Gabiers (*Pied marin*) n'ont pas à faire ce test : un pont qui roule ne les gêne pas.
+Les Flibustiers de la Côte (*Le pied marin*) et les Gabiers (*Pied marin*) ne font jamais ce test d'Acrobaties du roulis : un pont qui roule ne les gêne pas.
 
 ### Les cordages et les vergues
 
-- **Grimper** coûte le double. Un hauban sec ne demande rien de plus ; un hauban mouillé, un cordage lisse ou une mer formée demandent un test de Force (Athlétisme), DD 12, et DD 15 par grain. Un échec te laisse sur place ; si tu échoues de 5 ou plus, tu tombes.
+- **Grimper** coûte le double. Un hauban sec ne demande rien de plus ; un hauban mouillé, un cordage lisse ou une mer formée demandent un test de Force (Athlétisme), DD 12, et DD 15 par grain. Un échec te laisse sur place ; si tu échoues de 5 ou plus, tu glisses : sauvegarde d'Adresse DD 12 pour t'accrocher au cordage, sinon tu tombes de la hauteur déjà gravie.
 - **Une vergue** se tient debout sur un test d'Adresse (Acrobaties), DD 12 (chapitre 2). Sauter de la vergue sur le pont d'en face en demande un autre pour atterrir debout.
 - **Se balancer** d'un cordage de 9 m sans provoquer d'attaque d'opportunité est un pouvoir du Gabier (*Se balancer*, niveau 2). Les autres peuvent tenter la même chose avec un test d'Athlétisme, DD 12, et le MJ décide d'où ils arrivent.
 - **Le grappin** du Gabier (*Lancer le grappin*, niveau 2) s'accroche à 18 m et lui permet de se hisser ou de tirer à lui une créature de taille Moyenne ou moins.
@@ -258,7 +256,7 @@ Les Flibustiers de la Côte (*Le pied marin*) et les Gabiers (*Pied marin*) n'on
 La mer est à un pas du pont. Un homme qui tombe se retrouve dans une eau qui bouge, avec ses armes, sa tenue et le navire qui dérive.
 
 - **Nager** coûte le double (chapitre 3). Par eau calme, aucun test. Par mer formée, un test de Force (Athlétisme) DD 10 chaque round pour avancer : un échec te laisse sur place, un échec de 5 ou plus te fait boire (tu perds ton action). Le Plongeur nage à sa vitesse normale (*Nageur*).
-- **En armure.** Qui tombe à l'eau en **cuirasse** coule. Il faut une action et un test de Force DD 15 pour la défaire. Une **veste de cuir** ou un **justaucorps de buffle** ne te noie pas, mais le cuir trempé pèse : tu as le désavantage à tes tests pour nager.
+- **En armure.** Qui tombe à l'eau en **cuirasse** coule. Il faut une action et un test de Force DD 15 pour la défaire. Une veste de cuir ou un justaucorps de buffle ne te noie pas.
 - **Les armes à feu mouillées** ne tirent plus. Les grenades et les mèches non plus.
 - **Remonter à bord** par une échelle de corde ou les cadènes ne demande rien. Se hisser par-dessus la lisse depuis l'eau est un test de Force (Athlétisme) DD 12 ; hisser un blessé depuis un canot, DD 13 (chapitre 2). Un cordage lancé de la lisse donne l'avantage.
 - **Retenir son souffle** : voir le chapitre 7.
@@ -284,7 +282,7 @@ Les navires, les forts et les batteries tirent des pièces qui ne se portent pas
 
 Un canon de 8 ne tire qu'une fois par tour, servi par deux hommes. Le pierrier est la pièce qu'on monte sur une barque, une plage ou le haut d'un mur. Le Canonnier tire mieux que les autres : *Œil de batterie* (niveau 3 du Maître-canonnier de batterie) ajoute son Savoir aux dégâts et ignore le demi-abri de la cible, *Boulet ramé* double les dégâts contre un mât ou une voile, et *Bordée* (niveau 11) fait tirer le navire entier sur un point de 6 m de rayon, à 36 m.
 
-**Combattre de navire à navire.** Ce livre n'en donne pas les règles complètes : qui tire sur quoi, quand on vire, ce que vaut une coque, un gouvernail ou une voile. Le MJ les a. Ce que tu dois savoir à ta place de joueur : chaque personnage a un poste ; les tests de manœuvre du navire (Survie pour la route, Athlétisme ou Acrobaties pour la mise en œuvre) se font par celui qui tient la barre ou borde la voile ; et le Moral de l'équipage les soutient ou les gêne (voir « Le navire pendant le combat »).
+**Combattre de navire à navire.** Ce livre n'en donne pas les règles complètes : qui tire sur quoi, quand on vire, ce que vaut une coque, un gouvernail ou une voile. Le MJ les a. Ce que tu dois savoir à ta place de joueur : chaque personnage tient la place que le MJ lui donne (barre, voiles, pièce, mousquets) ; les tests de manœuvre du navire (Survie pour la route, Athlétisme ou Acrobaties pour la mise en œuvre) se font par celui qui tient la barre ou borde la voile ; et le Moral de l'équipage les soutient ou les gêne (voir « Le navire pendant le combat »).
 
 ### À terre
 
@@ -307,7 +305,7 @@ Tu remplaces une attaque par un test de **Force (Athlétisme)** contre le test d
 
 Tu remplaces une attaque par un test de **Force (Athlétisme)** contre le même test de la cible. Si tu gagnes, tu la pousses de 1,5 m ou tu la jettes à terre. Au bord d'une lisse, d'une écoutille ou d'un quai, **dans le vide** : la cible a droit à une sauvegarde d'Adresse DD 12 pour s'agripper au bord, sinon elle tombe (voir « Les chutes » et « Tomber à l'eau »).
 
-Le Bagarreur d'abordage (*Mêlée*) et le Bretteur (*Le pont est à nous*) en font une spécialité ; le Maître de manœuvre (*Rattraper*) et le Gabier (*Se rattraper*) font exactement le contraire.
+Le Bagarreur d'abordage (*Mêlée*, *Le pont est à nous*) en fait une spécialité ; le Maître de manœuvre (*Rattraper*) et le Gabier (*Se rattraper*) font exactement le contraire.
 
 ## Fuir
 
@@ -328,9 +326,9 @@ Un combat n'est pas obligé d'aller jusqu'au bout.
 
 Un personnage peut se rendre à tout moment : il lâche son arme, lève les mains, le dit à voix haute. Le MJ décide de ce que fait l'autre camp, selon qui c'est.
 
-- **Les Frères de la Côte** donnent quartier à qui pose les armes : la coutume le veut, et elle leur sert, parce qu'un équipage qui sait qu'on l'épargnera se rend plus vite.
-- **Les soldats du roi d'Espagne** pendent les pirates. À La Havane, c'est dans la semaine.
-- **Les gens du roi de France** ferment les yeux à l'Anse et pendent à Saint-Pierre, selon ce que tu as payé.
+- **Les Frères de la Côte** donnent quartier à qui pose les armes avant l'abordage. Qui a tiré sur eux n'a plus de part à rien, et la coutume ne dit pas ce qu'il devient.
+- **Les soldats du roi d'Espagne** pendent les pirates.
+- **Les gens du roi de France** ferment les yeux à l'Anse et pendent ailleurs, selon ce que tu as payé.
 - **Un garde-côte** qui peut parler avant de tirer ordonne de mettre en panne : qui s'exécute n'est pas attaqué ce round-là.
 - **Une sentinelle des mornes** n'attaque jamais la première une personne qui lève les mains, dit son nom et son affaire.
 - **Les chasseurs de marrons** sont payés à la tête, vivant ou mort. Un marron qui lève les mains devant eux parie sur une prime : le MJ le lui dit avant qu'il le fasse.
@@ -339,16 +337,16 @@ Les adversaires du MJ se rendent aussi. Un matelot qui n'est pas payé pour mour
 
 ### Négocier
 
-Négocier se fait avec la voix, au milieu du combat, à ton tour : c'est une **action**, avec un test de Présence (Persuasion, Intimidation ou Tromperie). Le MJ fixe le DD selon l'**attitude** de l'autre : 10 pour un bienveillant, 15 pour un neutre, 20 pour un méfiant. Ce qui compte pour le MJ est ce que tu proposes.
+Négocier se fait avec la voix, au milieu du combat, à ton tour : c'est une **action**, avec un test de Présence (Persuasion, Intimidation ou Tromperie). Le MJ fixe le DD selon l'**attitude** de l'autre : 10 pour un bienveillant, 15 pour un neutre, 20 pour un méfiant. Contre plusieurs adversaires, un seul test, au DD du plus méfiant ; le MJ peut séparer le chef des autres. Ce qui compte pour le MJ est ce que tu proposes.
 
 | Ce que tu mets sur la table | Effet sur le DD |
 |---|---|
 | **La vie sauve** à qui lâche son arme, ou le droit de repartir | −5 |
-| **De l'argent** : au moins une piastre par adversaire | −5 |
+| **De l'argent** : au moins 5 piastres par adversaire | −5 |
 | **Une menace crédible** (un tromblon braqué, deux hommes qui couvrent la sortie) | −5 |
 | **Une demande absurde** (« rends-moi ton navire et dis merci ») | +5 |
 
-Un DD ne descend jamais sous 5, et le MJ garde le dernier mot. Une négociation réussie arrête le combat. Elle laisse une trace : un matelot que tu as épargné se souvient de ton visage, un lieutenant qui t'a laissé partir sait ton nom. Un quartier-maître qui lit la chasse-partie à voix haute calme des flibustiers en colère (Persuasion DD 12).
+Un DD ne descend jamais sous 10, et le MJ garde le dernier mot. Une négociation réussie arrête le combat. Elle laisse une trace : un matelot que tu as épargné se souvient de ton visage, un lieutenant qui t'a laissé partir sait ton nom. Un quartier-maître qui lit la chasse-partie à voix haute calme des flibustiers en colère (Persuasion DD 10).
 
 Un équipage vaincu n'est ni une prise ni une marchandise. Chacun de ceux qui se rendent signe la chasse-partie s'il le veut, ou descend à terre avec de l'eau et un cap (chapitre 3).
 
@@ -364,7 +362,7 @@ Un combat aux Îles n'a pas toujours d'adversaire. Un grain, un incendie dans la
 
 > **Comment le savoir ?**
 >
-> Pose des questions. « Qu'est-ce que cette bête veut ? Depuis quand n'a-t-elle pas mangé ? Où va-t-elle si je recule ? » Un test d'Instinct (Survie) ou d'Intuition, DD 13, peut t'ouvrir une sortie de plus. Un plongeur de la Floride, un chasseur de marrons ou un vieux pilote en sait souvent plus que n'importe quel livre. Le MJ n'invente pas une sortie pour te sauver : il en met là où la fiche en a.
+> Pose des questions. « Qu'est-ce que cette bête veut ? Depuis quand n'a-t-elle pas mangé ? Où va-t-elle si je recule ? » Un test d'Instinct (Survie) ou d'Intuition, DD 13, peut t'ouvrir une sortie de plus. Un plongeur de Floride, un chasseur de marrons ou un vieux pilote en sait souvent plus que n'importe quel livre. Le MJ n'invente pas une sortie pour te sauver : il en met là où la fiche en a.
 
 ## Les dégâts
 
@@ -406,13 +404,13 @@ Dans l'eau profonde, le MJ peut retirer 1d6 à une chute, au minimum 0 ; sur le 
 
 ### Le feu
 
-La toile goudronnée, la paille et le bois sec brûlent d'un coup. Une grenade de terre cuite ou une lanterne renversée sur de la toile met le feu à la zone pour 1d4 rounds : 1d6 de feu par round pour qui s'y trouve, sauvegarde d'Adresse DD 12 pour moitié, et le feu gagne une case par round tant qu'il y a de quoi brûler. Se jeter à terre et rouler éteint un homme en flammes ; un seau d'eau ou une couverture mouillée, un foyer d'une case. Un feu dans la voilure se combat à la hache : on coupe la voile avant qu'il ne gagne le mât.
+La toile goudronnée, la paille et le bois sec brûlent d'un coup. Une grenade de terre cuite ou une lanterne renversée sur de la toile met le feu à une zone de 3 m de rayon. Il dure tant qu'il y a de quoi brûler et gagne une case par round. Une créature qui commence son tour dans le feu fait une sauvegarde d'Adresse DD 12 : 1d6 de feu, la moitié si elle réussit. Qui rate prend feu : 1d6 de feu au début de chacun de ses tours, jusqu'à ce qu'il se jette à terre et roule (une action) ou qu'un voisin l'éteigne. Un seau d'eau ou une couverture mouillée éteint un foyer d'une case. Un feu dans la voilure se combat à la hache : on coupe la voile avant qu'il ne gagne le mât.
 
 ## Les soins
 
 On récupère des PV par le repos (chapitre 3), par les pouvoirs de soin (le *Coffre de chirurgien*, *Tenir bon* du Maître de manœuvre, *Mot de réconfort* de l'Aumônier), par les soins d'un chirurgien et de son coffre (chapitre 6). Les PV rendus s'ajoutent au total, sans dépasser le maximum. Un mort ne récupère rien. Un personnage à 0 PV qui récupère au moins 1 PV **reprend conscience** et peut agir à son prochain tour.
 
-Un chirurgien de bord est plus précieux qu'un canon : sans lui, une blessure grave se paie en hommes, donc en Moral. Un blessé que le chirurgien garde en vie à bord n'est pas un homme perdu (*Sauver un homme*).
+*Sauver un homme* (chapitre 5) tient en vie un blessé qui n'est pas perdu pour le Moral.
 
 ## Tomber à 0 PV
 
@@ -455,11 +453,10 @@ Les succès et les échecs n'ont pas besoin d'être consécutifs. Ils repartent 
 >
 > Mathurin est à terre, à 0 PV, un coup de crosse sur la tempe. Au début de son tour, il fait son premier jet contre la mort : 7, un échec. Dossou, dont le tour vient après, s'agenouille à ses côtés et tente un test d'Instinct (Médecine) DD 10 : 6 au dé, +4, total 10. Ça atteint le DD. Mathurin est stable, sans autre jet à faire, et il rouvrira les yeux dans une heure ou deux, à 1 PV.
 
-**Stabilisé, pas encore sauvé.** Un blessé stable reste inconscient, à 0 PV, sans défense. Les adversaires qui ne se rendent pas finissent ce qu'ils ont commencé. Un blessé laissé sur le pont d'un navire qui coule ne l'est plus longtemps. Une plaie qu'on ne nettoie pas dans la journée appelle la fièvre (chapitre 7). Sur un navire, le chirurgien de bord compte pour deux : il tient en vie ceux qui n'auraient pas dû l'être.
-
+**Stabilisé, pas encore sauvé.** Un blessé stable reste inconscient, à 0 PV, sans défense. Les adversaires qui ne se rendent pas finissent ce qu'ils ont commencé. Un blessé laissé sur le pont d'un navire qui coule ne l'est plus longtemps. Une plaie qu'on ne nettoie pas dans la journée appelle la fièvre (chapitre 7).
 ### Indulgent
 
-À 0 PV, le personnage est hors combat jusqu'à la fin de la scène, puis il se relève avec 1 PV et une cicatrice ou un défaut à jouer. Pas de jets contre la mort. Elle convient aux tables qui veulent du sang et pas de cercueil.
+À 0 PV, le personnage est hors combat jusqu'à la fin de la scène, puis il se relève avec 1 PV et une cicatrice ou un défaut à jouer. Pas de jets contre la mort.
 
 ### Impitoyable
 
@@ -498,7 +495,7 @@ Un combat à bord n'engage pas que quatre personnages. Il engage un équipage, e
 - **À 8 ou plus**, l'équipage suit sans discuter : les tests de manœuvre du navire se font avec l'avantage. **À 2 ou 3**, on murmure : désavantage. **À 0 ou 1**, la mutinerie est imminente, et personne ne fait de coup de main.
 - **Un coup de main** (les premiers arrivent au niveau 11) coûte 1 point de Moral. Un seul par scène, pour tout le navire. Un coup de main réussi ne rend pas le Moral.
 
-Le MJ tient le compte à ta place, mais l'équipage le sait avant toi. Un homme qui tombe près de toi et qu'on ne relève pas, quelqu'un qui compte les morts à voix haute : ce sont des points de Moral qui descendent.
+Le MJ tient le compte à ta place. Un homme qui tombe près de toi et qu'on ne relève pas, quelqu'un qui compte les morts à voix haute : ce sont des points de Moral qui descendent.
 
 ## Un combat complet
 
@@ -508,12 +505,12 @@ Voici un combat du début à la fin.
 
 Le pont fait seize cases de long sur quatre de large (24 m sur 6). Chaque lanterne éclaire en vive sur 9 m et en faible sur 9 m de plus. Les quatre montent par les cadènes du grand mât, au milieu du pont, dans la zone de lumière faible entre les deux lanternes.
 
-- **À l'avant**, un soldat espagnol de la garnison qui rentre avec la cargaison. Il est debout contre la lisse, le dos à la lanterne de proue, le mousquet chargé. 22 PV, CA 16 (cuirasse), mousquet à +4 (1d12+2 perforants, 12/36 m), sabre à +4 (1d8+2). Il est à 9 m du groupe. Il regarde la mer, les yeux faits à la nuit : Perception passive 12.
+- **À l'avant**, un soldat espagnol de la garnison qui rentre avec la cargaison. Il est debout contre la lisse, le dos à la lanterne de proue, le mousquet chargé. 22 PV, CA 16 (cuera épaisse et plastron), mousquet à +4 (1d12+2 perforants, 12/36 m), sabre à +4 (1d8+2). Il est à 9 m du groupe. Il regarde la mer, les yeux faits à la nuit : Perception passive 12.
 - **À la poupe**, trois matelots de pont autour du timon, face à la lanterne. 4 PV, CA 10, poignard à +2 (1d4). Ils sont à 9 ou 10,5 m du groupe. Éblouis par la lumière, leur Perception passive est de 7 (12 moins 5). Un matelot n'est pas payé pour mourir : il lâche son arme si on lui promet la vie sauve.
 
 > **Comment le MJ a dosé la rencontre.**
 >
-> Un soldat espagnol vaut 100 PX (FP 1/2), un matelot de pont 10 PX (FP 0) : 130 PX bruts. Quatre adversaires, donc ×2 : 260. Pour quatre personnages de niveau 1, le budget d'une rencontre moyenne est de 200 PX, d'une rencontre difficile de 280. La rencontre est difficile, et c'est le soldat qui la rend telle : un seul suffit, et il en faudrait trois ou quatre de plus pour la rendre mortelle. Les matelots comptent surtout pour la sortie qu'ils offrent.
+> Un soldat espagnol vaut 100 PX (FP 1/2), un matelot de pont 10 PX (FP 0) : 130 PX bruts. Quatre adversaires, donc ×2 : 260. Pour quatre personnages de niveau 1, une rencontre moyenne vaut 200 PX, une difficile 300, une mortelle 400. Celle-ci est moyenne, au bord du difficile, et c'est le soldat qui pèse : un seul mousquet touché prend presque tous les PV d'un chirurgien. Un deuxième soldat à la place d'un matelot la rendrait mortelle (220 × 2 = 440). Les matelots comptent surtout pour la sortie qu'ils offrent.
 
 **Surprise.** Chacun fait un test de Discrétion. Jeanne : 14 au dé, +3, total 17. Dossou : 10, +3, total 13. Mathurin : 7, +1, total 8. Inés : 12, +3, total 15. La Perception passive du soldat est de 12 : Jeanne, Dossou et Inés passent, mais pas Mathurin, qui a heurté un seau de goudron du talon. Le soldat tourne la tête : il n'est pas surpris. Les matelots, qui ont 7, ne remarquent personne, pas même Mathurin (8 est plus que 7). Ils sont surpris.
 
@@ -521,43 +518,43 @@ Le pont fait seize cases de long sur quatre de large (24 m sur 6). Chaque lanter
 
 **Round 1.**
 
-- *Jeanne*, accroupie derrière le fût du grand mât, utilise *Provocation* (action bonus) sur le soldat, à 9 m. Sa sauvegarde de Présence contre le DD 12 de Jeanne (8 + maîtrise 2 + Présence +2) : 7, +0, total 7. Raté : il a le désavantage à ses attaques contre tout autre que Jeanne pendant une minute. Elle tire son pistolet sur lui, à 9 m, dans la première portée : 9 au dé, +5, total 14 contre CA 16. Raté. Son pistolet est vide. Il lui reste neuf charges.
+- *Jeanne*, debout près du grand mât, utilise *Provocation* (action bonus) sur le soldat, à 9 m. Sa sauvegarde de Présence contre le DD 12 de Jeanne (8 + maîtrise 2 + Présence +2) : 7, +0, total 7. Raté : il a le désavantage à ses attaques contre tout autre que Jeanne pendant une minute. Elle tire son pistolet sur lui, à 9 m, dans la première portée : 9 au dé, +5, total 14 contre CA 16. Raté. Son pistolet est vide. Il lui reste neuf charges.
 - *Inés* voit le soldat à 9 m, plus loin que la portée normale du tromblon (6 m). Elle utilise *Calculer la portée* (action bonus, il lui en reste une) : pas de désavantage, et 1d4 en plus. Attaque : 11 au dé, +7, +2 au d4, total 20 contre CA 16. Touché. Dégâts : 2d6 donnent 5 et 3, +3 : 11. Le soldat passe de 22 à 11 PV. Son tromblon est vide. Il lui reste dix-neuf charges.
 - *Les matelots* sont surpris. Ils ne font rien.
 - *Le soldat* choisit Jeanne, qui l'a provoqué (aucun désavantage contre elle). Mousquet : 10 au dé, +4, total 14 contre CA 14. Ça atteint la CA : touché. Dégâts : 6, +2 : 8. Jeanne passe de 11 à 3 PV. Son mousquet est vide.
-- *Mathurin* est à 1,5 m de Jeanne. Il utilise son *Coffre de chirurgien* (action) : 1d8 donne 6, +2 d'Instinct : 8. Jeanne remonte de 3 à 11, son maximum. Une de ses quatre utilisations est partie.
+- *Mathurin* est à 1,5 m de Jeanne. Il utilise son *Coffre de chirurgien* (action) : 1d8 donne 6, +2 d'Instinct : 8. Jeanne remonte de 3 à 11, son maximum. Une de ses trois utilisations est partie.
 - *Dossou* sort son coutelas (interaction) et se déplace de 5 cases le long de la lisse (7,5 m), où rien ne traîne. Il arrive au contact du soldat, dont le mousquet est vide. Attaque : 11 au dé, +3, total 14 contre CA 16. Raté.
 
 **Round 2.**
 
 - *Jeanne* se déplace de 5 cases pour être au contact du soldat. Elle sort son sabre (interaction) en gardant son pistolet vide dans l'autre main. Attaque : 15 au dé, +5, total 20. Touché. Dégâts : 1d8 donne 5, **+3**, pas +5 : elle tient encore le pistolet, donc le style Duel ne compte pas. Le soldat passe de 11 à 3 PV.
-- *Inés*, qui n'a pas besoin de tirer, recharge le tromblon en action bonus (*Mains de poudre*) et utilise son action pour crier « *¡Cuartel!* » aux trois matelots, en espagnol, pour qu'ils la comprennent. Test de Présence (Persuasion) : le MJ fixe un DD de 12, parce qu'ils ont peur sans avoir envie de mourir. Elle fait 6, +0 : 6. Raté. Elle dépense son jeton de Chance et relance : 14, +0 : 14. Réussi. Sa Chance passe à 0.
+- *Inés*, qui n'a pas besoin de tirer, recharge le tromblon en action bonus (*Mains de poudre*) et utilise son action pour crier « *¡Cuartel!* » aux trois matelots, en espagnol, pour qu'ils la comprennent. Test de Présence (Persuasion) : le MJ fixe le DD : neutres 15, moins 5 pour la vie sauve offerte, soit 10. Elle fait 6, +0 : 6. Raté. Elle dépense son jeton de Chance et relance : 14, +0 : 14. Réussi. Sa Chance passe à 0.
 - *Les matelots* lâchent leurs poignards. Ils n'étaient pas payés pour mourir.
 - *Le soldat* est à 3 PV. Il refuse de quitter son poste : il s'adosse à la lisse, ses deux adversaires au contact, et passe son action à **recharger** son mousquet (il verse la poudre, bourre, met la balle). Il lui reste un coup, plein, et il le sait.
 - *Mathurin* traverse le pont (5 cases) et utilise l'action **Aider** : il se place à 1,5 m du soldat et distrait sa garde. La première attaque de Dossou contre lui aura l'avantage.
-- *Dossou* attaque avec l'avantage : 4 et 6, il garde le meilleur, 6. Total 9 contre CA 16. Raté, deux fois.
+- *Dossou* attaque avec l'avantage : 4 et 6, il garde le meilleur, 6. Raté : 9 contre CA 16.
 
 **Round 3.**
 
 - *Jeanne* range son pistolet vide (interaction), son sabre est déjà en main : plus rien dans l'autre, le Duel compte. Attaque : 12 au dé, +5, total 17. Touché. Dégâts : 1d8 donne 2, +5 : 7. Il n'en reste que 3 au soldat. Il tombe à 0 PV. Jeanne tourne son sabre et l'**assomme** du plat de la lame : il est inconscient et stable.
 - Le combat est fini : trois rounds, dix-huit secondes.
 
-**Après.** Mathurin s'agenouille près du soldat : il respire. Une bosse, un bras tordu, il se réveillera dans une heure ou deux avec un mal de crâne. Les matelots restent contre le timon, les mains vides, et regardent Jeanne. Elle leur dit ce que dit la coutume : qui veut signer la chasse-partie signe, qui ne veut pas descend avec de l'eau dans le canot du brigantin et on lui laisse un cap. L'équipage n'a perdu aucun homme : Jeanne est tombée à 3 PV, et Mathurin l'a relevée. Le Moral monte de 1, de 6 à 7. Le MJ attribue 130 PX à partager entre quatre : 32 chacun. Les charges tirées : une pour Jeanne, une pour Inés.
+**Après.** Mathurin s'agenouille près du soldat : il respire. Une bosse, un bras tordu, il se réveillera dans une heure ou deux avec un mal de crâne. Les matelots restent contre le timon, les mains vides, et regardent Jeanne. Elle leur dit ce que dit la coutume : qui veut signer la chasse-partie signe, qui ne veut pas descend avec de l'eau dans le canot du brigantin et on lui laisse un cap. L'équipage n'a perdu aucun homme : Jeanne est tombée à 3 PV, et Mathurin l'a relevée. Le Moral monte de 1, de 6 à 7. Le MJ attribue 130 PX à partager entre quatre : 32 chacun, les deux restants au premier qui monte de niveau. Les charges tirées : une pour Jeanne, une pour Inés.
 
 > **Et sans tirer ?**
 >
-> Le MJ avait laissé une autre issue ouverte. Avant le premier tir, Jeanne pouvait crier quartier aux matelots : leur trait les amène à poser les armes sur une promesse de vie sauve, et ils n'avaient que leur solde à perdre. Le soldat, lui, ne quitte pas son poste sans l'ordre de son sergent, et la voix seule ne l'aurait pas fait bouger. Mais sa solde a quatre mois de retard, et Inés parle espagnol. Une conversation de dix mots dans le noir, cinq piastres posées sur la lisse, un test de Présence (Persuasion) DD 12, et il aurait regardé ailleurs pendant que le groupe passait. Le brigantin aurait été pris sans une charge tirée. Le Moral serait resté à 6, puisqu'il n'y a pas eu de combat à gagner, mais les PX auraient été les mêmes : un adversaire évité par la ruse compte (chapitre 3).
+> Le MJ avait laissé une autre issue ouverte. Avant le premier tir, Jeanne pouvait crier quartier aux matelots : les matelots posent les armes sur une promesse de vie sauve : ils n'ont que leur solde à perdre. Le soldat, lui, ne quitte pas son poste sans l'ordre de son sergent, et la voix seule ne l'aurait pas fait bouger. Mais sa solde a quatre mois de retard, et Inés parle espagnol. Une conversation de dix mots dans le noir, cinq piastres posées sur la lisse, un test de Présence (Persuasion) DD 10 (neutre 15, moins 5 pour l'argent), et il aurait regardé ailleurs pendant que le groupe passait. Le brigantin aurait été pris sans une charge tirée. Le Moral serait resté à 6, puisqu'il n'y a pas eu de combat à gagner, mais les PX auraient été les mêmes : un adversaire évité par la ruse compte (chapitre 3).
 
 > **Résumé du chapitre.**
 >
 > - Round de 6 secondes, cases de 1,5 m, vitesse 9 m. Une action, un déplacement, une action bonus, une réaction.
-> - Surprise : Discrétion contre Perception passive. Le noir retire 5 à la Perception passive de qui regarde depuis la lumière.
+> - Surprise : Discrétion contre Perception passive. Qui regarde le noir en ayant une lanterne devant lui perd 5 en Perception passive.
 > - Une arme à feu tire un coup ; la recharger prend une action (action bonus pour le Canonnier et le Boucanier). Un 1 naturel fait long feu ; l'eau éteint les armes.
-> - Abri : +2 (demi), +5 (trois quarts), total (aucune attaque directe). Pas de bouclier sur un pont.
-> - Le pont roule : Acrobaties DD 10, 12 ou 15 pour courir, foncer, sauter ou grimper. Les Flibustiers et les Gabiers n'y sont pas soumis.
+> - Abri : +2 (demi), +5 (trois quarts), total (aucune attaque directe).
+> - Le pont roule : Acrobaties DD 10, 12 ou 15 pour foncer ou sauter. Les Flibustiers et les Gabiers n'y sont jamais soumis.
 > - Tomber à l'eau : nage double, cuirasse qui coule (action, Force DD 15), armes à feu mouillées. Chute : 1d6 par 3 m.
 > - Artillerie : canon de 8 4d10, 36 m, deux servants ; pierrier 2d8, 18 m, un servant. Le combat de navire à navire est entre les mains du MJ.
 > - Fuir : se désengager, foncer, hors de vue, test de groupe de Discrétion. Se rendre : lâcher son arme, lever les mains, le dire à voix haute ; chaque camp répond à sa façon.
-> - Négocier : action, test de Présence contre un DD de 10, 15 ou 20. La vie sauve, l'argent, la menace : −5 chacun.
+> - Négocier : action, test de Présence contre un DD de 10, 15 ou 20, jamais sous 10. La vie sauve, l'argent, la menace : −5 chacun.
 > - À 0 PV : jets contre la mort (10 ou plus), Médecine DD 10 pour stabiliser. Trois règles au choix du MJ : héroïque, indulgente, impitoyable.
 > - Moral : +1 pour un combat sans perdre un homme ; −1 si un homme est perdu, −2 si plus de cinq.
