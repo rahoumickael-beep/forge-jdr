@@ -1,5 +1,6 @@
 // Livre des règles de Forge JdR : règles de base inspirées de D&D 5e, classes et pouvoirs.
-// Brouillon v0.2 : les 14 classes fantasy sont complètes, les autres genres viendront après validation de Mickael.
+// Brouillon v0.2 : les 14 classes fantasy sont complètes ; les 10 classes de l'Archipel (SF) sont dans archipel-classes.ts.
+import { CLASSES_ARCHIPEL } from "./archipel-classes";
 import type { GenreId } from "./types";
 
 export type Recharge = "à volonté" | "repos court" | "repos long" | "passif";
@@ -964,11 +965,14 @@ const SUBCLASSES: Record<string, { title: string; list: Subclass[] }> = {
   },
 };
 
-export const CLASSES: CharacterClass[] = BASE_CLASSES.map((c) => ({
-  ...c,
-  subclassTitle: SUBCLASSES[c.id]?.title ?? "Sous-classe",
-  subclasses: SUBCLASSES[c.id]?.list ?? [],
-}));
+export const CLASSES: CharacterClass[] = [
+  ...BASE_CLASSES.map((c) => ({
+    ...c,
+    subclassTitle: SUBCLASSES[c.id]?.title ?? "Sous-classe",
+    subclasses: SUBCLASSES[c.id]?.list ?? [],
+  })),
+  ...CLASSES_ARCHIPEL,
+];
 
 /** La sous-classe d'un personnage, s'il en a choisi une. */
 export function subclassOf(classId: string | undefined, subclassId: string | undefined): Subclass | undefined {
@@ -979,7 +983,6 @@ export function subclassOf(classId: string | undefined, subclassId: string | und
 /** Noms provisoires des classes pour les autres genres, à remplir après validation des classes fantasy. */
 export const CLASS_NAMES_BY_GENRE: Partial<Record<GenreId, string[]>> = {
   "dark-fantasy": ["Mercenaire", "Sorcière des ronces", "Coupe-jarret", "Inquisiteur", "Chasseur de sorcières", "Pèlerin maudit"],
-  "science-fiction": ["Soldat d'élite", "Psionique", "Contrebandière", "Médecin de bord", "Éclaireur", "Diplomate"],
   cyberpunk: ["Solo", "Netrunner", "Fixer", "Médecin des rues", "Techie", "Nomade"],
   horreur: ["Ancien soldat", "Occultiste", "Détective", "Médecin", "Journaliste", "Prêtre"],
   "post-apo": ["Pillard", "Mutant", "Éclaireuse", "Docteur des ruines", "Mécano", "Chef de convoi"],

@@ -1,13 +1,17 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
+import { ARCHIPEL } from "./canon";
 import { classesFor, CLASSES } from "./rules";
 
 const fantasy = classesFor("fantasy");
+const archipel = classesFor("science-fiction");
+const jouables = [...fantasy, ...archipel];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
-  for (const c of fantasy) {
+  assert.equal(archipel.length, 10);
+  for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
   }
@@ -19,7 +23,7 @@ test("sous-classes : ids uniques", () => {
 });
 
 test("sous-classes : premier pouvoir au niveau de choix, puis 3 ou 4 de plus", () => {
-  for (const c of fantasy) {
+  for (const c of jouables) {
     const entry = subclassLevel(c.id);
     for (const s of c.subclasses) {
       const levels = s.powers.map((p) => p.level);
@@ -42,7 +46,7 @@ test("sous-classes : premier pouvoir au niveau de choix, puis 3 ou 4 de plus", (
 });
 
 test("sous-classes : les deux d'une classe tombent aux mêmes niveaux", () => {
-  for (const c of fantasy) {
+  for (const c of jouables) {
     const [a, b] = c.subclasses.map((s) => s.powers.map((p) => p.level).join(","));
     assert.equal(a, b, `${c.name} : niveaux différents entre sous-classes`);
   }
@@ -67,7 +71,7 @@ const PROTECTED = [
 ];
 
 test("sous-classes : ni tournure bannie, ni nom protégé, ni Gorvan dans le texte joueur", () => {
-  for (const c of fantasy) {
+  for (const c of jouables) {
     for (const s of c.subclasses) {
       const text = JSON.stringify(s).toLowerCase();
       for (const word of [...BANNED, ...PROTECTED]) {
@@ -76,5 +80,14 @@ test("sous-classes : ni tournure bannie, ni nom protégé, ni Gorvan dans le tex
       }
       assert.ok(!text.includes("gorvan"), `${s.id} nomme Gorvan, qui doit rester caché aux joueurs`);
     }
+  }
+});
+
+test("classes de l'Archipel : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify(archipel);
+  for (const secret of ARCHIPEL.secrets) assert.ok(!text.includes(secret), secret);
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes de l'Archipel : « ${word} »`);
   }
 });

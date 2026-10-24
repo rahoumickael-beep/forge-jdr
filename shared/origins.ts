@@ -1,5 +1,7 @@
 // Création de personnage façon Baldur's Gate 3 : origines, historiques, personnalité.
-// Contenu du monde fantasy d'Aubreterre (voir la bible du monde dans les fichiers du projet).
+// Contenu du monde fantasy d'Aubreterre (voir la bible du monde dans les fichiers du projet) ;
+// celui de l'Archipel (SF) est dans archipel-origines.ts.
+import { HISTORIQUES_ARCHIPEL, ORIGINES_ARCHIPEL } from "./archipel-origines";
 import type { GenreId } from "./types";
 
 /** Index des caractéristiques : 0 For, 1 Dex, 2 Con, 3 Int, 4 Sag, 5 Cha (noms adaptés au genre). */
@@ -291,6 +293,7 @@ export const ORIGINS: Origin[] = [
       },
     ],
   },
+  ...ORIGINES_ARCHIPEL,
 ];
 
 export const BACKGROUNDS: Background[] = [
@@ -374,6 +377,7 @@ export const BACKGROUNDS: Background[] = [
     gear: ["Bâton de marche", "Besace de cierges", "Insigne de plomb de la Rotonde", "6 po"],
     feature: { name: "La route des pèlerins", text: "Tu sais où trouver un abri gratuit, de l'eau potable et des nouvelles fraîches à chaque étape. Les gens de la route te protègent." },
   },
+  ...HISTORIQUES_ARCHIPEL,
 ];
 
 /** Suggestions de personnalité. Le joueur peut toujours écrire la sienne. */

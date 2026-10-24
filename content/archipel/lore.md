@@ -33,7 +33,7 @@ Entre deux étoiles, il faut des années à un vaisseau, même rapide. Personne 
 
 Dans presque chaque système habité se dresse un **Phare** : une tour de pierre pâle, haute de plusieurs kilomètres, enroulée sur elle-même comme une coquille. Certains sont plantés sur une planète, d'autres flottent seuls dans le vide. Personne ne sait les tailler, personne ne sait les réparer, et ils ont tous plus de cent mille ans. On sait seulement les faire chanter. Un vaisseau qui entre dans le champ d'un Phare ouvert est jeté le long d'une **Route** jusqu'au Phare suivant, en quelques heures, parfois en quelques minutes. Les Routes sont fixes. On ne va que là où un Phare répond.
 
-On appelle **l'Archipel** l'ensemble des étoiles reliées par les Phares : cent quarante systèmes, comme des îles dans une mer noire. Au-delà, c'est **le Grand Large**, où l'on ne va pas.
+On appelle **l'Archipel** l'ensemble des étoiles reliées par les Phares : cent quarante systèmes, comme des îles dans une mer noire. Plus loin, c'est **le Grand Large**, où l'on ne va pas.
 
 ### Le Chant et l'Hégémonie [Joueurs]
 
@@ -229,8 +229,8 @@ Chaque chant laisse un **Écho**. Un peu, c'est un bourdonnement dans les oreill
 
 - Le Chantre a une réserve d'**Écho** (de 0 au double de son niveau, plus 2). Les petits pouvoirs en ajoutent 1, les grands 2 ou 3. Un repos long en retire la moitié.
 - Un Chantre joueur est un **autodidacte** (il entend la pierre et a appris seul, par bribes) ou un **novice caché** (formé en secret par un survivant). Depuis onze ans, plus personne n'a reçu la formation complète.
-- Au-delà de son niveau en Écho, le Chantre est **troublé** : désavantage aux tests de Sagesse, et le MJ peut lui décrire ce qu'il entend.
-- À la valeur maximale, il doit réussir un jet de sauvegarde de Sagesse (DD 10 + Écho au-delà du niveau) ou perdre connaissance une minute, et le MJ gagne un point de sa réserve.
+- Quand son Écho dépasse son niveau, le Chantre est **troublé** : désavantage aux tests d'Instinct, et le MJ peut lui décrire ce qu'il entend.
+- À la valeur maximale, il doit réussir un jet de sauvegarde d'Instinct (DD 10 + ce qui dépasse son niveau) ou perdre connaissance une minute, et le MJ gagne un point de sa réserve.
 - **Le Chant brisé** : un Chantre peut forcer un pouvoir pour doubler son effet. Il prend alors le double d'Écho, et le Phare le plus proche le sent. C'est la voie des Dissonants. Elle marche très bien.
 
 ### Ce que sait le MJ [Secret]

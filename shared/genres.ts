@@ -76,7 +76,7 @@ export const GENRES: Genre[] = [
     pitch: "L'Archipel : on saute d'étoile en étoile par les Phares, et les Phares s'éteignent un à un.",
     theme: { background: "#0b1220", floor: "#3a4a62", wall: "#1a2333", water: "#1f6f8b", vegetation: "#2e7a5f", road: "#55657d", door: "#e0a33a", grid: "rgba(120,180,255,.18)" },
     stats: ["Puissance", "Réflexes", "Endurance", "Technique", "Instinct", "Présence"],
-    archetypes: ["Chantre", "Pilote", "Mécanicienne", "Fusilier", "Contrebandière", "Chasseur de primes", "Médecin de bord", "Diplomate", "Ferrailleur", "Éclaireuse"],
+    archetypes: ["Chantre", "Pilote", "Mécanicienne", "Fusilier", "Contrebandière", "Chasseur de primes", "Médecin de bord", "Diplomate", "Ferrailleur", "Capitaine"],
     origins: ["Humain ancrien", "Humain frangier", "Vaëlle", "Tarrak", "Ikki", "Ourdi", "Ouvré"],
     equipment: ["Pistolet brûleur", "Fusil brûleur", "Lame vibrante", "Matraque électrique", "Combinaison de vide", "Trousse de mécanicien", "Trousse de médecin de bord", "Grappin magnétique", "Faux transpondeur", "Carte des Routes annotée", "Sauf-conduit hégémonique", "Éclat de pierre de Phare"],
     abilities: ["Esquive en vrille", "Tir de couverture", "Réparation de fortune", "Pousser par le Chant", "Entendre la pierre", "Négocier une dette", "Pirater un transpondeur", "Saut en resquille", "Premiers soins de bord", "Fouiller une épave"],
