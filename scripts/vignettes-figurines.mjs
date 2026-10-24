@@ -17,7 +17,6 @@ const ALIAS = {
   "gorvan-fragment": "ce-qui-attend-en-bas",
   "celui-qui-s-est-leve": "la-silhouette-de-cendrine",
   "gerance": "le-nouveau-gestionnaire",
-  "l-officier-de-la-soute": "l-officier-du-matin",
 };
 const nomPublic = (f) => (ALIAS[f.replace(/\.jpg$/, "")] ?? f.replace(/\.jpg$/, "")) + ".webp";
 const SORTIE = "client/public/pions";

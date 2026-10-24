@@ -46,7 +46,7 @@ test("côte des noyés : aucun secret dans ce que lisent les joueurs, un nom pub
     assert.equal(trahit(c.illustration), undefined, `${c.id} : secret dans le prompt d'image`);
     assert.equal(trahit(c.id), undefined, `${c.id} : secret dans l'identifiant`);
   }
-  assert.ok(CN.some((c) => c.id === "l-officier-de-la-soute" && c.publicName), "le dernier Revenu a un nom public");
+  assert.ok(CN.some((c) => c.id === "l-officier-du-matin" && c.publicName), "le dernier Revenu a un nom public");
 });
 
 test("côte des noyés : aucun anachronisme de 1923 ni licence connue dans les textes", () => {
