@@ -48,7 +48,7 @@ export const RESIDENCE_LIVRES: Monde = {
     chapeauOrigines: "Six façons d'être né dans une ville qui appartient à quelqu'un d'autre.",
     texteOrigines: "Chaque origine a deux variantes. Choisis l'origine, puis la variante, et ajoute leurs bonus à tes caractéristiques. Note ton solde de départ : c'est ton argent, et c'est ta marge avant de fondre.",
     chapeauClasses: "Dix métiers de la rue, des toits et du Réseau.",
-    encartCreation: `<aside class="encart"><h4>Ton solde</h4><p>Avant de choisir ta classe, regarde ton poignet. Ton solde de départ dépend de ton origine : 300 h pour un Résident des Blocs, 5 000 h pour un Enfant des Hauts, rien pour un Sans-Bail. Un loyer d'une pièce coûte 200 h par mois. Sous zéro, tu fonds : un niveau d'épuisement par semaine. Fais le compte avant la première partie.</p></aside>`,
+    encartCreation: `<aside class="encart"><h4>Ton solde</h4><p>Avant de choisir ta classe, regarde ton poignet. Ton solde de départ dépend de ton origine : 300 h pour un Résident des Blocs, 1 500 h pour un Enfant des Hauts, rien pour un Sans-Bail. Un loyer d'une pièce coûte 200 h par mois. Sous zéro, tu fonds : un niveau d'épuisement par semaine. Fais le compte avant la première partie.</p></aside>`,
     chapeauRegles: "Les heures et le solde, fondre, les implants et leurs loyers, le Réseau et les traces, les heures volées, l'argent.",
     couverture: sujet("couverture-joueurs"),
     sousTitre: "La Résidence · un monde pour la cinquième édition",

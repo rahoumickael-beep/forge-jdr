@@ -14,9 +14,9 @@ const rang = (n: number) =>
   n <= 2
     ? ` Rang ${n}, sans prix.`
     : n <= 5
-      ? ` Rang ${n}. S'il est le premier pouvoir de rang 3 ou plus que tu utilises depuis ton dernier repos long, il te coûte une trace ou 10 h.`
+      ? ` Rang ${n}. S'il est le premier pouvoir de rang 3 à 5 que tu utilises depuis ton dernier repos long, il te coûte une trace ou 15 h.`
       : n <= 8
-        ? ` Rang ${n}. Coûte une trace ou 40 h à chaque fois.`
+        ? ` Rang ${n}. Coûte une trace ou 60 h à chaque fois.`
         : " Rang 9. Coûte deux traces ou 80 h.";
 
 /** Un pouvoir qui est un implant : il a un loyer mensuel en heures. */
@@ -26,10 +26,10 @@ const implant = (h: number) => ` Implant, loyer ${h} h par mois.`;
 const surcadence = (h: number) => ` Surcadence : brûle ${h} h de ton solde.`;
 
 const PRIX_RESEAU =
-  "Tes pouvoirs de piratage ont un rang de 1 à 9, écrit dans le pouvoir. Rang 1 et 2 : ils passent dans le bruit du Réseau, sans prix. Le premier pouvoir de rang 3 à 5 que tu utilises après un repos long te coûte une trace ou 10 h, au choix ; les suivants ne coûtent rien jusqu'au repos long. Un pouvoir de rang 6 à 8 te coûte une trace ou 40 h à chaque fois. Un pouvoir de rang 9 te coûte deux traces ou 80 h. Payer en heures, c'est descendre ton solde, quitte à passer sous zéro. Payer en traces, c'est se rapprocher de la troisième : à trois traces, un Huissier vient frapper dans l'heure.";
+  "Un pouvoir de piratage a un rang de 1 à 9 : rang 1 et 2, gratuit ; rang 3 à 5, une trace ou 15 h, une fois par jour ; rang 6 à 8, une trace ou 60 h à chaque fois ; rang 9, deux traces ou 80 h ; à trois traces, un Huissier frappe dans l'heure.";
 
 const PRIX_SOLO =
-  "Tes implants peuvent tourner plus fort que leur réglage. Un pouvoir marqué « Surcadence » brûle à chaque usage les heures qu'il indique (5 h, 20 h ou 50 h). Tu peux brûler des heures que tu n'as pas : tu passes sous zéro, et tu fonds. Tes autres pouvoirs ne coûtent rien.";
+  "La Surcadence est le prix du Solo : tes implants peuvent tourner plus fort que leur réglage. Un pouvoir marqué « Surcadence » brûle à chaque usage les heures qu'il indique (10 h, 30 h ou 80 h). Tu peux brûler des heures que tu n'as pas : tu passes sous zéro, et tu fonds. Tes autres pouvoirs ne coûtent rien.";
 
 export const CLASSES_RESIDENCE: CharacterClass[] = [
   {
@@ -48,7 +48,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     powers: [
       P(1, "Le prix", "passif", "passif", PRIX_RESEAU),
       P(1, "Entrer", "action", "à volonté", "Un verrou, une porte, un ascenseur, une caméra ou un lecteur à 18 m : test de Technique (DD 10 pour un verrou de couloir, 15 pour une porte de bureau, 20 pour une porte des Hauts). Réussi, tu l'ouvres, le fermes ou le détournes pendant une minute." + rang(1), { range: "18 m" }),
-      P(1, "Coup de jus", "action", "à volonté", "Une machine, un drone ou une créature qui porte un implant (le Compteur en est un), à 18 m : sauvegarde d'Endurance ou 1d8 dégâts de foudre et pas de réaction jusqu'à ton prochain tour (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Un Sans-Bail sans implant n'en souffre pas." + rang(1), { range: "18 m" }),
+      P(1, "Coup de jus", "action", "à volonté", "Une machine, un drone ou une créature qui porte un implant ou un Compteur (un Locataire, corps de machine, y est sensible), à 18 m : sauvegarde d'Endurance ou 1d8 dégâts de foudre et pas de réaction jusqu'à ton prochain tour (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Un Sans-Bail, sans Compteur ni implant, n'en souffre pas." + rang(1), { range: "18 m" }),
       P(2, "Deux fenêtres", "passif", "passif", "Tu utilises Entrer en action bonus."),
       P(2, "Lire un Compteur", "action", "à volonté", "Un Compteur ou un implant à 9 m : tu lis le solde, les loyers dus, l'état de santé de son porteur et ses déplacements de la journée." + rang(2), { range: "9 m" }),
       P(2, "Brouiller sa trace", "passif", "passif", "Une nuit entière sur ta console, une fois par semaine : test de Technique DD 15 (avantage pour toi), et ta trace retombe d'un cran. Les autres personnages le font avec des outils de fouineur, sans l'avantage."),
@@ -101,14 +101,14 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
       P(1, "Réflexes câblés", "passif", "passif", "Tu ajoutes ta maîtrise à ton initiative." + implant(30)),
       P(1, "Style de combat", "passif", "passif", "Choisis : Tir (+2 aux attaques à distance), Défense (+1 CA), Duel (+2 dégâts avec une arme à une main) ou Arme à deux mains (relance les 1 et les 2 aux dégâts)."),
       P(1, "Stimulant", "action bonus", "repos court", "Récupère 1d10 + niveau PV.", { uses: 1 }),
-      P(2, "Emballement", "action bonus", "repos court", "Une action supplémentaire pendant ton tour. Deux utilisations à partir du niveau 17." + surcadence(5), { uses: 1 }),
+      P(2, "Emballement", "action bonus", "repos court", "Une action supplémentaire pendant ton tour. Deux utilisations à partir du niveau 17." + surcadence(10), { uses: 1 }),
       P(3, "Le métier", "passif", "passif", "Dans les Blocs et au Port-Franc, tu trouves un contrat en une journée : de 40 à 100 h pour une nuit de garde ou un colis difficile."),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer (trois au niveau 11, quatre au niveau 20)."),
       P(6, "Plaques sous-cutanées", "passif", "passif", "Réduis de 2 les dégâts contondants, perforants et tranchants de chaque attaque qui te touche." + implant(40)),
-      P(9, "Passer outre", "réaction", "repos long", "Relance un jet de sauvegarde raté. Deux utilisations à partir du niveau 13." + surcadence(20), { uses: 1 }),
+      P(9, "Passer outre", "réaction", "repos long", "Relance un jet de sauvegarde raté. Deux utilisations à partir du niveau 13." + surcadence(30), { uses: 1 }),
       P(13, "Cœur de rechange", "passif", "repos long", "La première fois que tu tombes à 0 PV après un repos long, tu restes à 1 PV." + implant(60), { uses: 1 }),
       P(15, "Dur à tuer", "passif", "passif", "Avantage aux jets contre la mort. Quand tu te stabilises, tu te relèves avec 1 PV."),
-      P(17, "Dernière cadence", "action bonus", "repos long", "Pendant une minute : avantage à tes attaques et +1d8 dégâts à chacune. Quand elle s'arrête, tu prends un niveau d'épuisement." + surcadence(50), { uses: 1 }),
+      P(17, "Dernière cadence", "action bonus", "repos long", "Pendant une minute : avantage à tes attaques et +1d8 dégâts à chacune. Quand elle s'arrête, tu prends un niveau d'épuisement." + surcadence(80), { uses: 1 }),
     ],
     subclassTitle: "Contrat",
     subclasses: [
@@ -125,8 +125,8 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
         [
           P(3, "Souffle retenu", "passif", "passif", "Si tu ne t'es pas déplacé ce tour, ta première attaque à distance ignore le désavantage de longue portée et fait +1d6 dégâts."),
           P(7, "Visée câblée", "passif", "passif", "Tes attaques à distance ignorent la demi-couverture et les trois quarts de couverture." + implant(25)),
-          P(11, "Balle qui passe", "action", "repos court", "Une attaque à distance contre chaque créature d'une ligne de 18 m, jets séparés." + surcadence(20), { uses: 1, range: "18 m" }),
-          P(15, "Un seul coup", "action", "repos long", "Si tu n'as ni bougé ni attaqué à ton tour précédent, une attaque à distance contre une créature que tu as gardée en vue : avantage et +6d8 dégâts." + surcadence(50), { uses: 1 }),
+          P(11, "Balle qui passe", "action", "repos court", "Une attaque à distance contre chaque créature d'une ligne de 18 m, jets séparés." + surcadence(30), { uses: 1, range: "18 m" }),
+          P(15, "Un seul coup", "action", "repos long", "Si tu n'as ni bougé ni attaqué à ton tour précédent, une attaque à distance contre une créature que tu as gardée en vue : avantage et +6d8 dégâts." + surcadence(80), { uses: 1 }),
         ]),
     ],
   },
@@ -150,11 +150,11 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
       P(3, "Seringue", "passif", "passif", "Avec une seringue ou un scalpel, tu peux utiliser ton Instinct pour attaquer. Une fois par tour, +1d6 dégâts contre une créature qui a perdu au moins la moitié de ses PV (2d6 au niveau 9, 3d6 au 17)."),
       P(5, "Remettre en route", "réaction", "repos long", "Un allié à 1,5 m tombe à 0 PV : il reste à 1 PV et regagne 2d8 PV.", { uses: 1 }),
       P(6, "Doigts de précision", "passif", "passif", "Avantage aux tests de Médecine ; tu stabilises un mourant en action bonus." + implant(20)),
-      P(7, "Sédatif", "action", "repos court", "Une créature à portée de main : sauvegarde d'Endurance ou inconsciente une minute. Elle se réveille si elle subit des dégâts ou si on la secoue.", { uses: 1 }),
+      P(7, "Sédatif", "action", "repos court", "Une créature à portée de main : sauvegarde d'Endurance ou inconsciente une minute. Elle se réveille si elle subit des dégâts ou si on la secoue. Sans effet sur une créature qui a plus de 50 PV.", { uses: 1 }),
       P(9, "Salle de soins", "action", "repos long", "Pendant un repos court, dix minutes de soins : jusqu'à six alliés regagnent 3d8 + Instinct PV.", { uses: 1 }),
       P(11, "Contre-poison", "action", "repos court", "Un allié est guéri d'un poison, d'une maladie, ou des états empoisonné ou étourdi.", { uses: 3 }),
       P(13, "Veillée de soins", "passif", "passif", "Pendant un repos long que tu passes à soigner, chaque allié perd un niveau d'épuisement de plus, et retrouve ses PV maximums s'ils avaient été réduits. L'épuisement dû à la dette reste."),
-      P(17, "Rien ne meurt sous mes mains", "passif", "passif", "Tant que tu es conscient, tes alliés à 9 m ont l'avantage aux jets contre la mort, et aucun ne meurt d'un coup sec tant qu'il lui reste des PV."),
+      P(17, "Rien ne meurt sous mes mains", "passif", "passif", "Tant que tu es conscient, tes alliés à 9 m ont l'avantage aux jets contre la mort, et aucun ne meurt d'un coup sec : il tombe à 0 PV au lieu de mourir."),
     ],
     subclassTitle: "Pratique",
     subclasses: [
@@ -166,10 +166,10 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
           P(11, "Sac plein", "passif", "passif", "Trousse de médic a deux utilisations de plus."),
           P(15, "Deux patients", "passif", "passif", "Une fois par tour, tu soignes deux alliés avec une seule utilisation de Trousse de médic."),
         ]),
-      S("medic-charcutier", "Charcutier du Port-Franc", "Il remet debout n'importe qui. Les effets secondaires, c'est pour plus tard.",
+      S("medic-charcutier", "Charcutier du Port-Franc", "Ses patients repartent debout. Les yeux, on les rend plus tard.",
         "Au Port-Franc, personne ne demande d'où viennent les implants ni les doses. Le charcutier travaille vite, pas cher, et sans papiers. Ses patients repartent debout. Dans quel état, c'est une autre question.",
         [
-          P(3, "Cocktail", "action", "repos long", "Un allié à portée de main : avantage à ses tests et sauvegardes de Corps et de Réflexes pendant une heure, et 2d6 PV temporaires. À la fin, sauvegarde d'Endurance DD 12 ou un niveau d'épuisement.", { uses: 2 }),
+          P(3, "Cocktail", "action", "repos long", "Un allié à portée de main : avantage à ses tests et sauvegardes de Corps et de Réflexes pendant une heure, et 2d6 PV temporaires. À la fin, sauvegarde d'Endurance (DD 8 + ta maîtrise + ton Instinct) ou un niveau d'épuisement.", { uses: 2 }),
           P(7, "Greffe de chantier", "action", "repos long", "Dix minutes sur un implant éteint ou abîmé d'un allié : il refonctionne un jour entier, sans loyer. Le lendemain, il s'éteint de nouveau.", { uses: 1 }),
           P(11, "Dose de table", "action", "repos court", "Une créature à portée de main : 6d6 dégâts de poison et empoisonnée une minute ; moitié et pas empoisonnée si sauvegarde d'Endurance.", { uses: 1 }),
           P(15, "Points faibles", "passif", "passif", "Tes attaques font +2d8 dégâts de poison contre une créature empoisonnée."),
@@ -219,7 +219,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
           P(3, "Bélier", "action bonus", "repos court", "Une créature ou un obstacle à 1,5 m : sauvegarde de Corps ou repoussée de 3 m et à terre ; une porte non blindée cède.", { uses: 2 }),
           P(7, "Épaule", "passif", "passif", "Tu enfonces une porte ordinaire d'un seul test de Corps (avantage), sans bruit si tu le décides."),
           P(11, "Un appartement vidé", "action", "repos court", "Cône de 4,5 m : sauvegarde de Corps ou 4d8 dégâts contondants et à terre ; moitié et debout si elle réussit.", { uses: 1 }),
-          P(15, "Rien ne tient", "passif", "passif", "Tes attaques ignorent la résistance des objets et des portes, et une cloison, une grille ou une vitre ne t'arrête pas."),
+          P(15, "Rien ne tient", "passif", "passif", "Tes attaques ignorent la résistance des objets et des portes, et les cloisons minces, grilles et vitres ne donnent plus d'abri contre toi."),
         ]),
     ],
   },
@@ -237,7 +237,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     skills: { choose: 4, from: ["Acrobaties", "Athlétisme", "Discrétion", "Escamotage", "Perception", "Intuition", "Persuasion", "Investigation", "Tromperie"] },
     startingGear: ["Sac thermique à sangle", "Matraque pliante", "Gilet de fibre", "Grappin de poignet", "Plan des passerelles griffonné au dos d'un avis"],
     powers: [
-      P(1, "Coup de passage", "passif", "à volonté", "Une fois par tour, +1d6 dégâts à une attaque si tu as l'avantage, ou si un allié est à côté de la cible (+1d6 tous les deux niveaux)."),
+      P(1, "Coup de passage", "passif", "à volonté", "Une fois par tour, +1d6 dégâts à une attaque avec une arme légère ou à distance, si tu as l'avantage ou si un allié est à côté de la cible (+1d6 tous les deux niveaux)."),
       P(1, "Expertise", "passif", "passif", "Double maîtrise pour deux compétences de ton choix (deux de plus au niveau 6)."),
       P(1, "Pieds sûrs", "passif", "passif", "Passerelles, échelles, rambardes et toits ne sont jamais un terrain difficile pour toi."),
       P(2, "Ruse de coursier", "action bonus", "à volonté", "Foncer, te désengager ou te cacher."),
@@ -257,7 +257,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
       S("coursier-livreur", "Livreur de nuit", "Il porte des colis dont l'expéditeur ne signe pas. Il ne demande pas, c'est la règle.",
         "On l'appelle quand un paquet doit aller du Port-Franc aux Hauts sans passer par un seul lecteur. Il fait les trajets de nuit, par les toits et les gaines, sans lampe, avec un sac qui ne cliquette pas.",
         [
-          P(3, "Rien dans les poches", "passif", "passif", "Une fouille ne trouve jamais l'objet que tu caches (de la taille d'une main) ; avantage aux tests d'Escamotage."),
+          P(3, "Rien dans les poches", "passif", "passif", "Une fouille ne trouve jamais l'objet que tu caches (de la taille d'une main) , sauf test de Perception contre DD 8 + ta maîtrise + ton Escamotage ; avantage aux tests d'Escamotage."),
           P(7, "Sortir par la fenêtre", "réaction", "repos court", "Une attaque te touche : tu te déplaces de la moitié de ta vitesse sans provoquer, tu te caches si tu le peux, et l'attaque fait moitié moins de dégâts.", { uses: 2 }),
           P(11, "Faux colis", "action", "repos court", "Tu lances un faux colis, un sac bruyant, une alarme : les créatures à 9 m le regardent. Sauvegarde d'Instinct pour ne pas lui consacrer leur prochain tour.", { uses: 1, range: "9 m" }),
           P(15, "Fantôme de couloir", "passif", "passif", "Tant que tu ne portes pas de lumière ni de bruit, tu es invisible aux caméras et aux lecteurs de Compteur."),
@@ -265,7 +265,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
       S("coursier-sprinter", "Sprinter de toits", "Il ne court pas après quelqu'un : il arrive avant.",
         "Pour livrer une ordonnance en moins de trois minutes, il faut des jambes que rien n'arrête. Le sprinter saute d'un toit à l'autre, rebondit sur les murs, et quand il a enfin ralenti, la cible est déjà par terre.",
         [
-          P(3, "Élan", "action bonus", "repos court", "Foncer, puis une attaque avec ton déplacement. Cette attaque fait +1d6 dégâts si tu as parcouru au moins 6 m en ligne droite vers la cible.", { uses: 3 }),
+          P(3, "Élan", "action bonus", "repos court", "En action bonus, tu fonces puis tu fais une attaque. Elle fait +1d6 dégâts si tu as parcouru 6 m en ligne droite vers la cible.", { uses: 3 }),
           P(7, "Pas de côté", "réaction", "repos court", "Une attaque te vise : tu te déplaces de 3 m sans provoquer d'attaque, et l'attaque a le désavantage.", { uses: 2 }),
           P(11, "Rebond", "passif", "passif", "Tu cours sur un mur ou un plafond jusqu'à la fin de ton déplacement, et chaque saut peut partir d'une paroi."),
           P(15, "Plus vite que le bruit", "action", "repos long", "Pendant une minute, ta vitesse double et tu fais une attaque de plus par action Attaquer.", { uses: 1 }),
@@ -303,7 +303,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
       S("syndic-negociateur", "Négociateur", "Il s'assoit en face de l'administrateur, et il sait déjà ce qu'il va lui laisser.",
         "Une grève se gagne autour d'une table plus souvent que dans la rue. Le négociateur arrive avec un dossier, un sourire, et la moitié du Bloc derrière la porte. Il cède sur les virgules, jamais sur les chiffres.",
         [
-          P(3, "Table ouverte", "action", "repos long", "Dix minutes de discussion : un groupe hostile mais non engagé au combat devient indifférent, et accepte de parler. L'effet cesse si tu ou un allié attaque.", { uses: 1 }),
+          P(3, "Table ouverte", "action", "repos long", "Dix minutes de discussion : un groupe hostile mais non engagé au combat devient indifférent, sauf s'il a une raison de vouloir ta peau (le MJ le dit avant), et accepte de parler. L'effet cesse si tu ou un allié attaque.", { uses: 1 }),
           P(6, "Clause", "réaction", "repos court", "Tu rates un test de Persuasion, d'Intuition ou d'Histoire : relance-le.", { uses: 2 }),
           P(10, "Médiation", "action", "repos court", "Deux camps à 18 m, au plus six créatures : sauvegarde d'Aplomb ou elles ne s'attaquent pas entre elles jusqu'à la fin de ton prochain tour.", { uses: 1, range: "18 m" }),
           P(14, "Pas sans mon avocat", "réaction", "repos long", "Une créature à 18 m prend un de tes alliés (arrestation, saisie, coup de grâce) : sauvegarde d'Aplomb ou elle ne le fait pas avant ton prochain tour.", { uses: 1, range: "18 m" }),
@@ -313,7 +313,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
         [
           P(3, "Poing levé", "action bonus", "repos court", "Les alliés à 9 m gagnent ton niveau en PV temporaires et +1 CA jusqu'à la fin de ton prochain tour.", { uses: 2, range: "9 m" }),
           P(6, "Tenir la rue", "passif", "passif", "Tes alliés à 3 m ne peuvent être ni repoussés ni jetés à terre contre leur gré."),
-          P(10, "Charge du cortège", "action", "repos court", "Toi et tes alliés à 9 m vous déplacez de la moitié de votre vitesse. Quiconque touche un ennemi fait +1d8 dégâts ce tour.", { uses: 1, range: "9 m" }),
+          P(10, "Charge du cortège", "action", "repos court", "Toi et tes alliés à 9 m vous déplacez de la moitié de votre vitesse. Chaque allié fait +1d8 dégâts à sa première touche ce tour.", { uses: 1, range: "9 m" }),
           P(14, "Les premiers rangs", "réaction", "repos long", "Un allié à 9 m va tomber à 0 PV : il reste à 1 PV, et toi tu prends la moitié des dégâts restants.", { uses: 1, range: "9 m" }),
         ]),
     ],
@@ -332,11 +332,12 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     skills: { choose: 4, from: ["Persuasion", "Tromperie", "Intuition", "Investigation", "Escamotage", "Histoire", "Perception", "Intimidation"] },
     startingGear: ["Pistolet à aiguilles", "Costume de ville un peu fatigué", "Carnet de contacts codé", "Trois cartes de visite au nom de trois inconnus", "Sacoche à double fond"],
     powers: [
-      P(1, "Contact", "action", "repos long", "Tu appelles quelqu'un qui te doit ou qui te connaît. Choisis : un renseignement (le MJ répond à une question, en vrai), un accès (une porte ou un laissez-passer pour une heure), un matériel (un objet de 100 h au plus, apporté d'ici une heure) ou un service (un passant fait ce que tu demandes, sans risque pour lui).", { uses: 2 }),
+      P(1, "Contact", "action", "repos long", "Tu appelles quelqu'un qui te doit ou qui te connaît. Choisis : un renseignement (le MJ répond à une question, en vrai), un accès (une porte ou un laissez-passer pour une heure), un matériel (un objet de 30 h au plus, apporté d'ici une heure) ou un service (un passant fait ce que tu demandes, sans risque pour lui).", { uses: 2 }),
       P(1, "Graisser la patte", "action", "à volonté", "Tu offres de 10 à 100 h, prises de ton solde, à une créature non hostile : avantage à ton test de Persuasion, d'Intimidation ou de Tromperie auprès d'elle (le MJ juge ce qu'elle accepte)."),
       P(1, "Marché noir", "passif", "passif", "Tu trouves en une soirée un revendeur pour n'importe quel objet, tu le payes quatre cinquièmes de son prix, et tu reconnais un implant ou une arme volée au premier regard."),
       P(2, "Expertise", "passif", "passif", "Double maîtrise pour deux compétences de ton choix (deux de plus au niveau 6)."),
-      P(3, "Je sais ce que vous avez fait", "réaction", "repos court", "Une créature à 18 m qui te connaît : sauvegarde d'Aplomb ou elle te laisse tranquille et n'attaque ni toi ni tes alliés pendant une minute, sauf si on la blesse ou si elle se sent démasquée.", { uses: 2, range: "18 m" }),
+      P(3, "Je sais ce que vous avez fait", "réaction", "repos court", "Quand une créature qui te connaît t'attaque ou te vise : sauvegarde d'Aplomb ou elle te laisse tranquille et n'attaque ni toi ni tes alliés pendant une minute, sauf si on la blesse ou si elle se sent démasquée.", { uses: 2, range: "18 m" }),
+      P(5, "Coup de pouce", "réaction", "repos court", "Tu ajoutes ton Aplomb à une attaque ou à une sauvegarde d'un allié à 9 m.", { uses: 3, range: "9 m" }),
       P(5, "Déjà arrangé", "action", "repos long", "Tu déclares qu'un détail a été arrangé d'avance (une porte restée entrouverte, une caisse d'armes dans un casier, un garde payé). Le MJ dit ce qui est vrai, dans les limites du plausible.", { uses: 1 }),
       P(7, "Papiers", "action", "repos long", "Une journée de travail et 50 h : de faux papiers (un Compteur de passage, une accréditation) pour toi ou un allié, valables pendant une semaine. Ils passent les contrôles automatiques, pas un Huissier qui vérifie.", { uses: 1 }),
       P(9, "Loyers de faveur", "passif", "passif", "Tu discutes les loyers : ceux de tes implants et de ceux de tes alliés baissent d'un quart. Arrondis à l'entier."),
@@ -379,18 +380,18 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     startingGear: ["Mallette d'outils de mécano", "Drone de poche bricolé", "Chalumeau", "Combinaison de fibre", "Pistolet à aiguilles", "Sac de pièces"],
     powers: [
       P(1, "Le prix", "passif", "passif", PRIX_RESEAU),
-      P(1, "Drone de poche", "passif", "passif", "Tu as un drone (taille P, vol 9 m, CA 12 + ta maîtrise, PV égaux à 3 × ton niveau + ta Technique). Il agit juste après toi : il esquive, ou, si tu le lui ordonnes en action bonus, il attaque (ton bonus d'attaque, 1d6 + Technique dégâts perforants, portée 9 m), éclaire à 9 m ou apporte un objet léger. S'il tombe à 0 PV, une nuit de travail et 20 h de pièces le remettent en état."),
+      P(1, "Drone de poche", "passif", "passif", "Tu as un drone (taille P, vol 9 m, CA 12 + ta maîtrise, PV égaux à 3 × ton niveau + ta Technique). Il agit juste après toi : il esquive, ou, si tu le lui ordonnes en action bonus, il attaque (ton bonus d'attaque, 1d6 + Technique dégâts perforants, 2d6 au niveau 11, 3d6 au 17, portée 9 m), éclaire à 9 m ou apporte un objet léger. S'il tombe à 0 PV, une nuit de travail et 20 h de pièces le remettent en état."),
       P(1, "Rafistoler", "action", "à volonté", "Un drone, une machine ou un implant abîmé à portée de main regagne 1d8 + Technique PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Cela ne soigne pas les créatures.", { range: "1,5 m" }),
       P(1, "Étincelle", "action", "à volonté", "Attaque à distance : 1d10 dégâts de feu ou de foudre, au choix (2d10 au niveau 5, 3d10 au 11, 4d10 au 17).", { range: "18 m" }),
       P(3, "Modifs", "action", "repos long", "Dix minutes sur une arme ou une armure et 50 h de pièces : elle gagne +1 aux attaques et aux dégâts, ou +1 CA, jusqu'à ton prochain repos long. Deux objets à la fois à partir du niveau 11.", { uses: 3 }),
       P(5, "Pare-éclats", "réaction", "repos court", "Un allié, un drone ou une machine à 9 m va subir des dégâts : ils baissent de 1d10 + Technique.", { uses: 3, range: "9 m" }),
-      P(5, "Contourner le loyer", "action", "repos long", "Un implant à portée de main éteint pour loyer impayé fonctionne de nouveau pendant une journée entière. La Foncière voit le contournement." + rang(3), { uses: 1 }),
+      P(5, "Contourner le loyer", "action", "repos long", "Un implant à portée de main éteint pour loyer impayé fonctionne de nouveau pendant une journée entière. La Foncière le voit : un Huissier passe sous trois jours." + rang(3), { uses: 1 }),
       P(7, "Drone de combat", "passif", "passif", "Ton drone fait deux attaques quand il attaque, et ses PV passent à 5 × ton niveau + ta Technique."),
       P(9, "Brouilleur de poche", "action", "repos court", "Sphère de 9 m de rayon à 27 m, pendant une minute : drones, implants et lecteurs y ont le désavantage à leurs attaques et à leurs sauvegardes. Concentration." + rang(4), { uses: 2, range: "27 m" }),
-      P(11, "Deuxième drone", "passif", "passif", "Tu as un second drone, avec la moitié des PV du premier. Il obéit aux mêmes ordres."),
+      P(11, "Deuxième drone", "passif", "passif", "Tu as un second drone, avec la moitié des PV du premier et une seule attaque. Une seule action bonus commande les deux."),
       P(13, "Exosquelette de chantier", "action", "repos long", "Pendant une minute : 5 × ton niveau PV temporaires, avantage aux tests et attaques de Corps, +1d8 dégâts au contact.", { uses: 1 }),
       P(15, "Tourelle de poche", "action", "repos long", "Tu poses une tourelle qui tire pendant une minute (attaque avec ton bonus, 3d8 dégâts perforants, portée 27 m) sur la cible que tu désignes chaque tour en action bonus.", { uses: 1 }),
-      P(17, "Forteresse roulante", "passif", "passif", "Tes drones ont résistance aux dégâts contondants, perforants et tranchants, et leurs PV doublent."),
+      P(17, "Forteresse roulante", "passif", "passif", "Tes drones ont la résistance aux dégâts contondants, perforants et tranchants."),
     ],
     subclassTitle: "Atelier",
     subclasses: [
@@ -408,7 +409,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
           P(3, "Pose légère", "action", "repos long", "Une nuit de travail et 100 h de pièces : un allié consentant reçoit un implant mineur au choix (yeux de nuit à 18 m, bras de force avec avantage en Athlétisme, ou nerfs rapides avec +2 en initiative), pour un loyer de 15 h par mois. Un seul à la fois par allié.", { uses: 1 }),
           P(7, "Entretien", "passif", "passif", "Chaque mois, les implants que tu as posés ou entretenus coûtent 5 h de loyer en moins."),
           P(11, "Greffe de combat", "action bonus", "repos court", "Un allié à portée de main : un de ses implants donne l'avantage à ses attaques ou à ses sauvegardes jusqu'à la fin de son prochain tour.", { uses: 2 }),
-          P(15, "Chef-d'œuvre", "action", "repos long", "Une nuit de travail et 400 h de pièces : tu refais un implant d'un allié, qui passe à son meilleur réglage (ses pouvoirs de ce niveau font +1d6 ou +1 CA, selon ce qui convient) sans que son loyer augmente.", { uses: 1 }),
+          P(15, "Chef-d'œuvre", "action", "repos long", "Une nuit de travail et 400 h de pièces : tu refais un implant d'un allié, dont un de ses pouvoirs d'implant gagne +1d6 dégâts, +1 CA ou +3 m de vitesse, au choix, sans que son loyer augmente.", { uses: 1 }),
         ]),
     ],
   },
@@ -426,7 +427,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     skills: { choose: 2, from: ["Persuasion", "Intuition", "Médecine", "Survie", "Histoire", "Représentation", "Intimidation"] },
     startingGear: ["Bâton de marche ferré", "Manteau de pluie rapiécé", "Cahier de prêches à la craie", "Bouteille d'eau filtrée", "Fanion de la Friche"],
     powers: [
-      P(1, "Sans Compteur", "passif", "passif", "Tu as arraché ton Compteur, ou tu n'en as jamais eu. Pas de solde de départ, pas de dette, pas de fonte : tu ne gagnes jamais de niveau d'épuisement à cause du solde. Les lecteurs de Compteur ne te voient pas, mais ni tram, ni porte de la Foncière, ni Clinique ne s'ouvre pour toi. Tu ne peux pas porter d'implant, et tu ne paies aucun prix : tes pouvoirs sont limités par leurs usages."),
+      P(1, "Sans Compteur", "passif", "passif", "Tu as arraché ton Compteur, ou tu n'en as jamais eu. Tu perds les soldes, loyers, échéances et implants de ton origine (un Cousu ou un Prolongé a payé pour partir ; un Enfant des Hauts n'est plus signalé à sa famille). Pas de solde de départ, pas de dette, pas de fonte. Les lecteurs ne te voient pas, mais ni tram, ni porte de la Foncière, ni Clinique ne s'ouvre pour toi. Pas d'implant. Aucun de tes pouvoirs ne coûte de trace ni d'heures. Ton prix, c'est ce que tu ne peux plus faire : pas de tram, pas de porte, pas de soins, pas d'achat en heures. Le Locataire ne peut pas être Prêcheur."),
       P(1, "Eau claire", "action", "repos long", "Réserve de 5 × niveau PV à rendre au toucher, ou 5 points pour guérir une fièvre ou un poison.", { uses: 1 }),
       P(1, "Parole pour ceux qui n'ont rien", "action", "repos long", "Jusqu'à trois alliés à 18 m ajoutent 1d4 à leurs attaques et à leurs sauvegardes pendant une minute. Concentration.", { uses: 2, range: "18 m" }),
       P(1, "On te croit", "passif", "passif", "Avantage aux tests de Persuasion auprès de ceux qui ont tout perdu : Sans-Bail, locataires en dette, vieux des Blocs."),
@@ -451,7 +452,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
           P(11, "Amarre", "réaction", "repos court", "Un allié à 9 m va tomber (d'un toit, d'une passerelle, à l'eau) : tu l'attrapes et il ne tombe pas.", { uses: 1, range: "9 m" }),
           P(15, "Embarquer tout le monde", "action", "repos long", "Pendant une minute, toi et tes alliés à 9 m avez vitesse doublée et ne provoquez pas d'attaque d'opportunité.", { uses: 1, range: "9 m" }),
         ]),
-      S("precheur-carrefour", "Prêcheur de carrefour", "Il prêche debout sur un bidon, sous la pluie. La foule se tait pour l'entendre.",
+      S("precheur-carrefour", "Prêcheur de carrefour", "Il parle bas, sur un bidon, et la foule se rapproche pour entendre.",
         "Aux carrefours des Blocs comme aux abords du Port-Franc, il dit tout haut ce que les écrans taisent. Il sait quand ralentir, quand hausser le ton, quand se taire. Les gens restent et écoutent, un peu honteux, un peu soulagés.",
         [
           P(3, "Prêche", "action", "repos court", "Les créatures de ton choix à 18 m qui t'entendent : sauvegarde d'Aplomb ou elles ne peuvent plus attaquer, dans le silence, jusqu'à la fin de ton prochain tour.", { uses: 1, range: "18 m" }),
@@ -487,8 +488,8 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
       P(7, "Sous couverture", "action", "repos long", "Dix minutes : tu passes pour quelqu'un d'autre (livreur, technicien, invité) auprès de ceux qui ne te connaissent pas, pendant une journée.", { uses: 1 }),
       P(9, "Les écrans", "action", "repos long", "Pendant dix minutes, tous les écrans et haut-parleurs d'un bâtiment affichent une preuve que tu dépenses : tous les PNJ présents la connaissent, et les créatures hostiles ont le désavantage à leurs sauvegardes d'Aplomb contre toi." + rang(5), { uses: 1 }),
       P(11, "Dossier qui s'épaissit", "passif", "passif", "Tu gagnes une preuve après chaque repos long, si le MJ juge que tu as fait avancer une enquête."),
-      P(13, "En direct", "action", "repos long", "Pendant une minute, tu retransmets ce que tu vois sur les écrans proches. Les créatures hostiles à 18 m qui regardent un écran : sauvegarde d'Aplomb ou elles ne peuvent ni t'attaquer ni attaquer tes alliés tant que tu gardes la concentration. Concentration." + rang(6), { uses: 1 }),
-      P(17, "Dossier complet", "passif", "passif", "Quand tu publies avec trois preuves ou plus, Publier fait 8d6 dégâts psychiques et la cible a le désavantage à ses sauvegardes contre toi jusqu'à ton prochain repos long."),
+      P(13, "En direct", "action", "repos long", "Pendant une minute, tu retransmets ce que tu vois sur les écrans proches. Les créatures hostiles à 18 m qui regardent un écran : sauvegarde d'Aplomb ou elles ne peuvent ni t'attaquer ni attaquer tes alliés tant que tu gardes la concentration." + rang(6), { uses: 1 }),
+      P(17, "Dossier complet", "passif", "passif", "Quand tu dépenses trois preuves d'un coup avec Publier, il fait 8d6 dégâts psychiques et la cible a le désavantage à ses sauvegardes contre toi jusqu'à ton prochain repos long."),
       P(20, "Tout le monde sait", "action", "repos long", "Une personne ou un groupe dont tu détiens trois preuves : tout le quartier l'apprend dans la journée, et cela ne peut plus être démenti. La cible a le désavantage à ses sauvegardes contre toi et tes alliés pendant un jour." + rang(9), { uses: 1 }),
     ],
     subclassTitle: "Rubrique",

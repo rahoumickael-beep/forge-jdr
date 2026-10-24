@@ -48,7 +48,7 @@ export const ORIGINES_RESIDENCE: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Un capital", text: "Solde de départ : 5 000 h. Toute dépense de 500 h ou plus d'un coup est signalée à ta famille, qui sait alors où tu es." },
+      { name: "Un capital", text: "Solde de départ : 1 500 h. Toute dépense de 300 h ou plus d'un coup est signalée à ta famille, qui sait alors où tu es." },
       { name: "Manières et un nom", text: "Maîtrise de Persuasion. Avantage aux tests de Persuasion et d'Histoire face aux gens des Hauts, qui te prennent d'abord pour l'un des leurs." },
       { name: "Une famille qui te cherche", text: "Ta famille a lancé des gens à tes trousses : un cousin, un avocat, un agent. Le MJ les envoie quand il juge que tu t'es fait remarquer." },
     ],
@@ -184,7 +184,7 @@ export const ORIGINES_RESIDENCE: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Un corps au bail", text: "Tu ne vieillis pas, tu ne fonds pas et tu n'as pas de Compteur : tu ne paies pas en heures mais en mois de bail. Tu commences avec 12 mois. Un mois vaut 200 h : tout ce que tu gagnes ou dépenses se compte à ce taux. Chaque premier du mois, un mois de bail est prélevé ; à zéro, on vient retirer le corps." },
+      { name: "Un corps au bail", text: "Tu ne vieillis pas et tu ne fonds pas. Tu commences avec 6 mois de bail (1 200 h). Tu comptes en heures comme tout le monde ; le premier du mois, 200 h sont retirées de ton bail. À zéro, on vient retirer le corps. Un Locataire ne peut pas être Prêcheur des Sans-Bail." },
       { name: "Corps synthétique", text: "Résistance aux dégâts de poison, aucune maladie, pas besoin de manger. Un repos long te demande quatre heures de veille immobile." },
       { name: "Bien meublé", text: "La loi te range avec les meubles : tu ne peux ni signer de bail, ni porter plainte, ni voter au Comité. Un Huissier peut saisir ton corps comme un objet." },
     ],
@@ -250,7 +250,7 @@ export const HISTORIQUES_RESIDENCE: Background[] = [
     skills: ["Investigation", "Arcanes / Savoir"],
     tool: "Outils de fouineur",
     gear: ["Console de poignet usée", "Câbles et adaptateurs", "Boîtier brouilleur de poche", "Carnet de mots de passe périmés", "20 h"],
-    feature: { name: "Une trace derrière toi", text: "Tu commences la partie avec une trace. En échange, tu connais le Réseau d'un Bloc : avantage à ton premier test pour y entrer, et un autre fouineur te doit un service." },
+    feature: { name: "Une trace derrière toi", text: "Tu commences la partie avec une trace, qui retombe au premier loyer payé. En échange, tu connais le Réseau d'un Bloc : avantage à ton premier test pour y entrer, et un autre fouineur te doit un service." },
   },
   {
     id: "cp-h-coursier",

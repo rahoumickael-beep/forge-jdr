@@ -187,7 +187,7 @@ Le **Compteur** est un implant de la taille d'une pièce, sous la peau du poigne
 
 - **Le solde.** Tant qu'il est positif, payer ne fait pas vieillir : c'est de l'argent.
 - **Fondre.** Sous zéro, chaque heure de dette fait vieillir le corps d'un jour. En jeu : un personnage en dette gagne un niveau d'épuisement par semaine passée sous zéro, et aucun repos ne le retire avant le remboursement. À 500 h de dette, il tombe à 0 PV et ne se relève plus.
-- **Solde de départ** : Résident des Blocs 300 h, Enfant des Hauts 5 000 h, Prolongé 600 h, Cousu 150 h, Sans-Bail 0 (pas de Compteur). Un travail de niveau 1 paie de 40 à 100 h.
+- **Solde de départ** : Résident des Blocs 300 h, Enfant des Hauts 1 500 h, Prolongé 600 h, Cousu 150 h, Sans-Bail 0 (pas de Compteur). Un travail de niveau 1 paie de 40 à 100 h.
 - **La jouvence.** Les Cliniques de Prolongation rajeunissent le corps contre des heures : un an pour mille heures environ.
 - On ne peut pas retirer son Compteur sans médecin : il est relié au cœur. Les Sans-Bail le font quand même.
 
@@ -198,8 +198,8 @@ Toute la Résidence est câblée. Le **Réseau** relie les Compteurs, les portes
 ### Ce que coûtent les implants et le Réseau [Joueurs]
 
 - Les **implants** (yeux, bras, réflexes, mémoire) se louent, comme le reste. Chaque implant a un loyer mensuel en heures. Un implant dont on ne paie plus le loyer s'éteint à distance.
-- Un personnage qui pirate (entre dans le Réseau sans droit) laisse une **trace**. La trace monte d'un cran à chaque piratage, réussi ou raté, et retombe d'un cran à chaque loyer payé. À trois traces, un Huissier vient frapper.
-- Les **heures volées** coûtent moitié moins que les vraies, mais elles peuvent refluer : chaque fois qu'un personnage en dépense plus de 50 d'un coup, il fait une sauvegarde d'Endurance DD 12. Échec : toutes les heures volées dépensées dans les sept derniers jours refluent, et il les perd de son solde, quitte à passer sous zéro.
+- Un personnage qui pirate (entre dans le Réseau sans droit) laisse une **trace**. La trace monte d'un cran à chaque grand piratage, réussi ou raté (le livre des joueurs donne le prix de chaque pouvoir), et retombe d'un cran à chaque loyer payé. À trois traces, un Huissier vient frapper.
+- Les **heures volées** coûtent moitié moins que les vraies, mais elles peuvent refluer : chaque fois qu'un personnage en dépense plus de 50 dans la même journée, il fait une sauvegarde d'Endurance DD 12. Échec : toutes les heures volées dépensées dans les sept derniers jours refluent, et il les perd de son solde, quitte à passer sous zéro.
 
 ### Ce que sait le MJ [Secret]
 
