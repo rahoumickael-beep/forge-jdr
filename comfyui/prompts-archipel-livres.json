@@ -126,8 +126,57 @@
     "seed": 3025381207
   },
   {
+    "id": "region-solenne",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a colossal pale spiral shell tower in low orbit above a planet-wide city of white terraces, a black organ-like machine of pipes clamped to its flank like a leech, jets of steam, a ring of tiny ships circling it like gulls",
+    "width": 1344,
+    "height": 768,
+    "seed": 1312675040
+  },
+  {
+    "id": "region-brisants",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a tiny scavenger in a pressure suit standing on the hull of a dead battleship six kilometers long inside a red and violet nebula, thousands of shipwrecks drifting around, a lamp in her hand",
+    "width": 1344,
+    "height": 768,
+    "seed": 1286191506
+  },
+  {
+    "id": "region-valcourt",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a gigantic new organ machine of pipes and coils, tall as a cathedral, rolling out of an immense foundry on a platform pulled by tugboats, thousands of workers in helmets watching from steel walkways, chimneys ten kilometers high behind",
+    "width": 1344,
+    "height": 768,
+    "seed": 2054486394
+  },
+  {
+    "id": "region-ancre",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a procession of villagers in rain cloaks walking along a stone causeway across a misty lake toward a pale spiral tower in the water, laying broken crystal blades at the foot of a black pipe machine, a gaunt figure in a long black coat watching",
+    "width": 1344,
+    "height": 768,
+    "seed": 1548905885
+  },
+  {
+    "id": "region-karrag",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a great hall carved in black basalt where forty massive grey four-armed people hammer together on a single armor plate, sparks flying, their mouths open in a work chant, chains and hooks hanging from the vault",
+    "width": 1344,
+    "height": 768,
+    "seed": 804734768
+  },
+  {
+    "id": "figure-malachie-orsat",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a very tall thin man of fifty with grey hair combed back and a gentle tired face, a long black coat with a mouth sewn shut embroidered on the chest, a blackened crystal blade held upright",
+    "width": 1344,
+    "height": 768,
+    "seed": 3582907658
+  },
+  {
+    "id": "region-mondes-eteints",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, the dead grey shell of a colossal spiral tower split open from top to bottom, floating alone in darkness, and far behind it an immense pale silhouette walking slowly away into the stars",
+    "width": 1344,
+    "height": 768,
+    "seed": 396255741
+  },
+  {
     "id": "scenario-bib-sf-mensualite",
-    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a battered cargo starship landing in orange dust on a frontier spaceport of adobe domes, a half-buried pale spiral tower behind the town, its spiral light going dark for one second, dockworkers shielding their eyes",
+    "prompt": "warm amber light from one side against a deep blue night, 1970s science fiction paperback cover painting, retro science fiction illustration, airbrushed gouache, deep ultramarine blues and warm amber highlights, grand scale, wide establishing scene, smooth gradients, crisp hard-edged highlights, plain unmarked fabric and hulls, clean unmarked image, a long crate sealed with grey wax in the dark hold of a battered cargo ship, lit by a single hand lamp, a child's knitted wool cap left on its lid, two crew members watching from the shadows",
     "width": 1344,
     "height": 768,
     "seed": 2758872621
