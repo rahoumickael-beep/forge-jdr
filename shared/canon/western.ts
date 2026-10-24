@@ -58,7 +58,7 @@ export const CHAMP_D_ASILE: Canon = {
       gens: ["vieilles familles", "vaqueros", "Asiliens de souche"],
       peur: "les voleurs de chevaux, la sécheresse, le prix que le rail propose",
       lieuDeRencontre: "la galerie d'un rancho du Brazos, au coucher du soleil",
-      lieux: ["le rancho Wagram", "le rancho Austerlitz", "le rancho Eylau", "Wagram", "Austerlitz", "Eylau"],
+      lieux: ["le rancho Wagram", "le rancho Austerlitz", "le rancho Eylau", "le rancho Marengo", "Wagram", "Austerlitz", "Marengo", "Eylau"],
     },
     {
       nom: "La Croix-de-Pierre",
@@ -118,6 +118,8 @@ export const CHAMP_D_ASILE: Canon = {
     // À la première séance (bible, section 11)
     { nom: "Jean Sorbier", alias: ["Sorbier"], titre: "voyageur en manteau de cuir, qui se dit marchand de bestiaux", ou: "Fort-Rail", etat: "vivant" },
     { nom: "Elijah Moss", alias: ["Moss", "le géomètre"], titre: "géomètre du rail", ou: "Fort-Rail", faction: "rail", etat: "vivant" },
+    { nom: "Gaspard Lenoir", alias: ["Lenoir", "le vieux Lenoir"], titre: "propriétaire du rancho Austerlitz", ou: "Les Ranchos du Brazos", etat: "vivant" },
+    { nom: "Toinou Brassac", alias: ["Toinou", "Brassac"], titre: "garde de la diligence de Fort-Rail", ou: "Fort-Rail", etat: "vivant" },
     { nom: "Clémence Roux", alias: ["Clémence", "mademoiselle Roux"], titre: "fille du vieux Roux, du rancho Wagram", ou: "Les Ranchos du Brazos", etat: "vivant" },
     { nom: "Bastide", alias: ["le vieux Bastide", "le cocher"], titre: "cocher de la diligence de Fort-Rail", ou: "Fort-Rail", etat: "vivant" },
     { nom: "Roux", alias: ["le vieux Roux"], titre: "propriétaire du rancho Wagram", ou: "Les Ranchos du Brazos", etat: "vivant" },

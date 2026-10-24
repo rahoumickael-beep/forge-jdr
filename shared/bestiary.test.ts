@@ -30,7 +30,7 @@ test("bestiaire : ids uniques et nombre de créatures", () => {
   assert.equal(new Set(ids).size, ids.length, "id en double");
   assert.ok(BESTIARY.length >= 45 && BESTIARY.length <= 60, `${BESTIARY.length} créatures`);
   assert.equal(creaturesFor("fantasy").length, BESTIARY.length);
-  assert.equal(creaturesFor("western").length, 0);
+  assert.equal(creaturesFor("pirates").length, 0);
 });
 
 test("bestiaire : FP de 0 à 20, un tiers de morts, des légendaires", () => {

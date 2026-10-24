@@ -1,14 +1,16 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { subclassLevel } from "./origins";
-import { ARCHIPEL, COTE_DES_NOYES, GRAND_SEC, RESIDENCE, TERNELANDE } from "./canon";
-import { classesFor, CLASSES, SKILLS } from "./rules";
+import { ARCHIPEL, CHAMP_D_ASILE, COTE_DES_NOYES, GRAND_SEC, RESIDENCE, TERNELANDE } from "./canon";
+import { classesFor, CLASSES, CLASS_NAMES_BY_GENRE, REGLES_DU_MONDE, SKILLS } from "./rules";
 import { HISTORIQUES_RESIDENCE, ORIGINES_RESIDENCE, PERSONNALITE_RESIDENCE } from "./residence-origines";
 import { REGLES_RESIDENCE } from "./residence-regles";
 import { HISTORIQUES_NOYES, ORIGINES_NOYES, PERSONNALITE_NOYES } from "./noyes-origines";
 import { REGLES_NOYES } from "./noyes-regles";
 import { HISTORIQUES_SEC, ORIGINES_SEC, PERSONNALITE_SEC } from "./sec-origines";
 import { REGLES_SEC } from "./sec-regles";
+import { HISTORIQUES_ASILE, ORIGINES_ASILE, PERSONNALITE_ASILE } from "./asile-origines";
+import { REGLES_ASILE } from "./asile-regles";
 
 const fantasy = classesFor("fantasy");
 const archipel = classesFor("science-fiction");
@@ -16,7 +18,8 @@ const ternelande = classesFor("dark-fantasy");
 const residence = classesFor("cyberpunk");
 const noyes = classesFor("horreur");
 const sec = classesFor("post-apo");
-const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec];
+const asile = classesFor("western");
+const jouables = [...fantasy, ...archipel, ...ternelande, ...residence, ...noyes, ...sec, ...asile];
 
 test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(fantasy.length, 14);
@@ -25,6 +28,7 @@ test("sous-classes : deux par classe fantasy, avec un titre", () => {
   assert.equal(residence.length, 10);
   assert.equal(noyes.length, 10);
   assert.equal(sec.length, 10);
+  assert.equal(asile.length, 10);
   for (const c of jouables) {
     assert.equal(c.subclasses.length, 2, `${c.name} : ${c.subclasses.length} sous-classes`);
     assert.ok(c.subclassTitle && c.subclassTitle !== "Sous-classe", `${c.name} : pas de titre de sous-classe`);
@@ -230,4 +234,58 @@ test("classes du Grand Sec : le prix des pouvoirs est dit en godets, au plus 2 p
       if (m) assert.ok(Number(m[1]) <= 2, `${c.name} : ${p.name} coûte trop d'eau`);
     }
   }
+});
+
+test("classes du Champ-d'Asile : aucun secret du canon dans ce que lisent les joueurs", () => {
+  const text = JSON.stringify([asile, ORIGINES_ASILE, HISTORIQUES_ASILE, REGLES_ASILE, PERSONNALITE_ASILE]);
+  for (const secret of CHAMP_D_ASILE.secrets) assert.ok(!text.includes(secret), secret);
+  for (const mot of ["1880", "copie", "Traité", "cordelette", "Sorbier"]) {
+    assert.ok(!text.toLowerCase().includes(mot.toLowerCase()), `texte joueur du Champ-d'Asile : « ${mot} »`);
+  }
+  for (const word of BANNED) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${word}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `classes du Champ-d'Asile : « ${word} »`);
+  }
+  for (const mot of CHAMP_D_ASILE.anachronismes) {
+    const re = new RegExp(`(^|[^a-zà-ÿœ])${mot.toLowerCase()}([^a-zà-ÿœ]|$)`);
+    assert.ok(!re.test(text.toLowerCase()), `anachronisme dans le Champ-d'Asile : « ${mot} »`);
+  }
+});
+
+test("classes du Champ-d'Asile : compétences connues, caractéristiques du genre, ids préfixés", () => {
+  const noms = new Set(SKILLS.map((s) => s.name));
+  const stats = new Set(["Force", "Adresse", "Endurance", "Savoir", "Instinct", "Présence"]);
+  for (const c of asile) {
+    assert.ok(c.id.startsWith("ws-"), c.id);
+    for (const s of c.skills.from) assert.ok(noms.has(s), `${c.name} : compétence « ${s} » inconnue`);
+    for (const s of [...c.mainStats, ...c.saves]) assert.ok(stats.has(s), `${c.name} : caractéristique « ${s} » inconnue`);
+    assert.equal(c.subclasses[0].powers[0].level, 3, `${c.name} : premier pouvoir de sous-classe au niveau 3`);
+    assert.ok(!/Dextérité|Agilité|Sagesse|Charisme|Intelligence|Constitution/.test(JSON.stringify(c)), `${c.name} : nom de caractéristique d'un autre genre`);
+  }
+  for (const h of HISTORIQUES_ASILE) for (const s of h.skills) assert.ok(noms.has(s), `${h.name} : compétence « ${s} » inconnue`);
+  assert.equal(ORIGINES_ASILE.length, 6);
+  assert.equal(HISTORIQUES_ASILE.length, 8);
+  for (const o of ORIGINES_ASILE) assert.equal(o.subs.length, 2, `${o.name} : deux variantes`);
+  assert.equal(CLASS_NAMES_BY_GENRE.western?.length, 10);
+  for (const c of asile) assert.ok(CLASS_NAMES_BY_GENRE.western?.includes(c.name), `${c.name} absent de la liste de noms`);
+  assert.ok(REGLES_DU_MONDE.western === REGLES_ASILE);
+});
+
+test("classes du Champ-d'Asile : la poudre est comptée, le Nom monte par coup d'éclat", () => {
+  for (const c of asile) {
+    const tous = [...c.powers, ...c.subclasses.flatMap((s) => s.powers)];
+    const poudre = tous.some((p) => /Poudre : \d cartouches?\./.test(p.effect));
+    if (poudre) assert.ok(c.powers.some((p) => p.name === "La poudre compte"), `${c.name} : pouvoir à poudre sans passif « La poudre compte »`);
+    for (const p of tous) {
+      const m = p.effect.match(/Poudre : (\d) cartouches?\./);
+      if (m) assert.ok(Number(m[1]) <= 3, `${c.name} : ${p.name} fait partir trop de cartouches`);
+    }
+    const eclat = tous.some((p) => /Coup d'éclat :/.test(p.effect));
+    assert.equal(c.powers.some((p) => p.name === "Ce qu'on raconte"), eclat, `${c.name} : coup d'éclat et passif « Ce qu'on raconte » vont ensemble`);
+    for (const p of tous.filter((x) => /Coup d'éclat :/.test(x.effect))) {
+      assert.ok(p.recharge === "repos long" && p.uses === 1, `${c.name} : ${p.name} (coup d'éclat) une fois par repos long`);
+    }
+  }
+  const texte = JSON.stringify(REGLES_ASILE);
+  for (const mot of ["100 dollars", "500 dollars", "Colt | 17 dollars", "Winchester | 25 dollars", "25 dollars sur parole", "un point par séance", "1,5 kg"]) assert.ok(texte.includes(mot), `règles du Nom et de la poudre : « ${mot} »`);
 });

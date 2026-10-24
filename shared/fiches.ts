@@ -38,6 +38,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   "Gens de la Route": "low evening backlight and warm campfire embers through blowing ochre dust, faded lavender shadows and rust tones",
   "Gens des citadelles": "hard white midday sun with deep lavender blue shadows, whitewashed stone and ochre tones",
   "Machines d'avant": "ochre dust haze under a pale chalky sun on peeling paint, long lavender blue shadows and rust tones",
+  // Le Champ-d'Asile (peinture de l'Ouest du XIXe siècle)
+  "Bêtes de la prairie": "golden late afternoon sun low over the prairie, ochre dust and sage green tones",
+  "Gens de la loi": "stormy slate sky over the prairie with a shaft of pale sun, deep blue shadows and tan leather tones",
+  "Hors-la-loi": "glowing embers of a campfire at dusk under a deep blue sky, warm amber and soot tones",
+  "Gens du rail": "warm oil lamp glow of a saloon through coal smoke and locomotive steam, amber and soot black tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */

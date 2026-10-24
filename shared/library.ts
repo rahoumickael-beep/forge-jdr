@@ -4,6 +4,7 @@ import { MENSUALITE } from "./library-archipel";
 import { NUMERO_ONZE } from "./library-noyes";
 import { AVIS_DE_SIX_HEURES } from "./library-residence";
 import { PONT_D_ARAMON } from "./library-sec";
+import { DILIGENCE_DE_FORT_RAIL } from "./library-asile";
 import { DEUX_SOUVENIRS } from "./library-ternelande";
 import type { Scenario } from "./types";
 
@@ -259,4 +260,4 @@ Expérience : environ 150 XP par personnage si tous les combats ont lieu. Fais p
   },
 };
 
-export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE, DEUX_SOUVENIRS, AVIS_DE_SIX_HEURES, NUMERO_ONZE, PONT_D_ARAMON];
+export const LIBRARY: Scenario[] = [TOURBE, MENSUALITE, DEUX_SOUVENIRS, AVIS_DE_SIX_HEURES, NUMERO_ONZE, PONT_D_ARAMON, DILIGENCE_DE_FORT_RAIL];

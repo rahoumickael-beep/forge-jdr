@@ -7,6 +7,7 @@ import { BESTIAIRE_TERNELANDE } from "./ternelande-bestiaire";
 import { BESTIAIRE_RESIDENCE } from "./residence-bestiaire";
 import { BESTIAIRE_NOYES } from "./noyes-bestiaire";
 import { BESTIAIRE_SEC } from "./sec-bestiaire";
+import { BESTIAIRE_ASILE } from "./asile-bestiaire";
 import { stylePeinture } from "./charte";
 import { cost, fabriquerCreature, hit, modOf, multi, recharge, save, special, type CreatureInput } from "./fiches";
 import type { Encounter, GenreId } from "./types";
@@ -30,7 +31,9 @@ export type FamilleResidence = "Bêtes de la ville" | "Gens du Bail" | "Drones e
 export type FamilleNoyes = "Bêtes de la côte" | "Gens de 1923" | "Ce que rend la mer" | "La Fosse";
 /** Familles du Grand Sec */
 export type FamilleSec = "Bêtes du Sec" | "Gens de la Route" | "Gens des citadelles" | "Machines d'avant";
-export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande | FamilleResidence | FamilleNoyes | FamilleSec;
+/** Familles du Champ-d'Asile */
+export type FamilleAsile = "Bêtes de la prairie" | "Gens de la loi" | "Hors-la-loi" | "Gens du rail";
+export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande | FamilleResidence | FamilleNoyes | FamilleSec | FamilleAsile;
 
 export type Region =
   // Aubreterre
@@ -86,6 +89,13 @@ export type Region =
   | "Le Mont Chauve et Montclair"
   | "Le Mur de Valence"
   | "La Camargue de sel"
+  // Le Champ-d'Asile
+  | "Bonne-Espérance"
+  | "Fort-Rail"
+  | "Les Ranchos du Brazos"
+  | "La Croix-de-Pierre"
+  | "La Comanchería"
+  | "La Frontière du sud"
   | "Partout";
 
 export interface Speed {
@@ -1678,7 +1688,7 @@ const CREATURES_AUBRETERRE: Creature[] = [
 ];
 
 /** Toutes les créatures de tous les mondes ; creaturesFor(genre) pour un seul. */
-export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE, ...BESTIAIRE_RESIDENCE, ...BESTIAIRE_NOYES, ...BESTIAIRE_SEC];
+export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE, ...BESTIAIRE_RESIDENCE, ...BESTIAIRE_NOYES, ...BESTIAIRE_SEC, ...BESTIAIRE_ASILE];
 
 /** Créatures d'un genre (pour l'instant, seul le monde fantasy d'Aubreterre en a). */
 export function creaturesFor(genre: GenreId): Creature[] {

@@ -6,7 +6,7 @@ import { existsSync, mkdirSync, readdirSync } from "node:fs";
 import sharp from "sharp";
 
 // Une source par monde ; les ids des créatures ne se recoupent pas d'un monde à l'autre (testé).
-const SOURCES = ["content/aubreterre/illustrations", "content/archipel/illustrations", "content/residence/illustrations", "content/cote-des-noyes/illustrations", "content/grand-sec/illustrations"].filter((d) => existsSync(d));
+const SOURCES = ["content/aubreterre/illustrations", "content/archipel/illustrations", "content/residence/illustrations", "content/cote-des-noyes/illustrations", "content/grand-sec/illustrations", "content/champ-d-asile/illustrations"].filter((d) => existsSync(d));
 // Créatures dont le vrai nom trahit un secret : le fichier public prend le nom public (fichierCreature dans shared/bestiary.ts,
 // shared/bestiary.test.ts vérifie la concordance). L'adresse d'une image arrive chez les joueurs.
 const ALIAS = {
