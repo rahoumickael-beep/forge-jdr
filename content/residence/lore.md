@@ -43,7 +43,7 @@ Le fondateur a quatre-vingt-dix-sept ans et en paraissait cinquante à sa derni�
 
 **Date de jeu : novembre 2089.**
 
-Le Conseil vient d'annoncer la **Révision** : au premier janvier, tous les loyers augmentent d'un quart. Dans les Blocs, les comités de locataires parlent de grève. Les Huissiers ont doublé leurs patrouilles. À la Friche, ceux qui ont arraché leur Compteur vivent sans heures et sans bail, et la Foncière a promis de « régulariser » la Friche avant l'hiver.
+Le Conseil vient d'annoncer la **Révision** : au 1er janvier, tous les loyers augmentent d'un quart. Dans les Blocs, les comités de locataires parlent de grève. Les Huissiers ont doublé leurs patrouilles. À la Friche, ceux qui ont arraché leur Compteur vivent sans heures et sans bail, et la Foncière a promis de « régulariser » la Friche avant l'hiver.
 
 ### Ce que personne ne sait [Secret]
 
@@ -186,8 +186,8 @@ L'horloge se dit en heures, comme partout ; la monnaie se dit en heures de Compt
 Le **Compteur** est un implant de la taille d'une pièce, sous la peau du poignet gauche, avec un affichage vert. Il montre ce qu'on a : **le solde**, en heures. On paie en posant son poignet contre un autre Compteur ou une borne.
 
 - **Le solde.** Tant qu'il est positif, payer ne fait pas vieillir : c'est de l'argent.
-- **Fondre.** Sous zéro, chaque heure de dette fait vieillir le corps d'un jour. En jeu : un personnage en dette gagne un niveau d'épuisement par semaine passée sous zéro, et aucun repos ne le retire avant le remboursement. À 500 h de dette, il tombe à 0 PV et ne se relève plus.
-- **Solde de départ** : Résident des Blocs 300 h, Enfant des Hauts 1 500 h, Prolongé 600 h, Cousu 150 h, Sans-Bail 0 (pas de Compteur). Un travail de niveau 1 paie de 40 à 100 h.
+- **Fondre.** Sous zéro, chaque heure de dette fait vieillir le corps d'un jour. En jeu : un niveau d'épuisement par tranche complète de 100 h de dette (−100 h : niveau 1, −200 h : niveau 2, et ainsi de suite) ; aucun repos ne le retire avant le remboursement. À −500 h, le personnage tombe à 0 PV et ne se relève plus.
+- **Solde de départ** : Résident des Blocs 300 h, Enfant des Hauts 1 500 h, Prolongé 600 h, Cousu 300 h, Sans-Bail 0 (pas de Compteur). Un travail de niveau 1 paie de 40 à 100 h.
 - **La jouvence.** Les Cliniques de Prolongation rajeunissent le corps contre des heures : un an pour mille heures environ.
 - On ne peut pas retirer son Compteur sans médecin : il est relié au cœur. Les Sans-Bail le font quand même.
 
@@ -233,7 +233,7 @@ Un corps refait aux implants, loués pièce à pièce : yeux, bras, colonne. Sou
 
 ### Locataire
 
-Un esprit sans corps : la copie d'une personne, faite de son vivant, qui a continué après sa mort dans un corps synthétique loué à la Foncière. Ils sont rares, et la loi les appelle des « biens meublés ». En jeu : ne vieillit pas et ne paie pas en heures, mais en mois de bail : si le loyer du corps n'est pas payé, on le lui retire.
+Un esprit sans corps : la copie d'une personne, faite de son vivant, qui a continué après sa mort dans un corps synthétique loué à la Foncière. Ils sont rares, et la loi les appelle des « biens meublés ». En jeu : ne vieillit pas et ne paie pas en heures, mais en mois de bail : si le loyer du corps n'est pas payé, on le lui retire. Un Locataire n'a pas de Compteur au poignet : son bail est inscrit dans son corps, et les lecteurs le lisent comme un Compteur. Son bail tient lieu de loyer : il n'a pas d'autre logement à payer.
 
 ---
 
@@ -245,7 +245,7 @@ Le tram, les ascenseurs, les passerelles, les barques à la Friche, les tunnels 
 
 ### Les armes [Joueurs]
 
-Pistolets et fusils à aiguilles, matraques électriques, lames de céramique, armures légères en fibre. Les armes à poudre sont rares et interdites dans les Hauts. Les Huissiers portent des **tasers à harpon**, qui ancrent un fuyard au sol.
+Pistolets et fusils à aiguilles, matraques électriques, lames de céramique, armures légères en fibre. Les armes à poudre sont rares et interdites dans les Hauts. Les Huissiers portent des **tasers à harpon**, dont le câble entrave un fuyard.
 
 ### L'argent [Joueurs]
 

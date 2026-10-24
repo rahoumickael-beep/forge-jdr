@@ -91,7 +91,7 @@ export const AVIS_DE_SIX_HEURES: Scenario = {
       description:
         "Seulement si la négociation échoue et que les personnages bloquent la porte. Les clercs tirent au taser à harpon pour immobiliser, pas pour tuer. Ils se rendent à 4 PV. Tessandier ne se bat que s'il est frappé, et recule dès qu'il passe sous la moitié des siens. Les voisins comptent : chaque tranche de dix témoins retire un clerc de la première salve, parce qu'il hésite.",
       enemies: [
-        { name: "Clerc huissier", count: 3, hp: 9, ac: 13, attack: "Taser à harpon +3, 1d6+1 foudre, JS Corps DD 11 ou entravé", danger: "Faible" },
+        { name: "Clerc huissier", count: 3, hp: 9, ac: 13, attack: "Taser à harpon +3, 1d6+1 foudre, entravé (Corps ou Réflexes DD 11 pour arracher le harpon)", danger: "Faible" },
         { name: "Grégoire Tessandier, huissier-chef", count: 1, hp: 22, ac: 14, attack: "Matraque électrique +4, 1d6+2 contondants (+1 foudre si la cible est entravée)", danger: "Moyen" },
       ],
       difficulty: "Difficile (évitable)",
@@ -111,13 +111,13 @@ export const AVIS_DE_SIX_HEURES: Scenario = {
   ],
   gmNotes: `Ce scénario ouvre la campagne. Il doit faire passer trois choses, sans jamais les expliquer : tout se paie en heures, et quelqu'un vieillit pour chaque dette réglée ; les Huissiers sont des locataires comme les autres ; quelqu'un, dans le Réseau, regarde les personnages et les aide.
 
-Avant la séance. Chaque joueur note son solde de départ sur sa fiche (Bloc 300 h, Hauts 1 500 h, Prolongé 600 h, Cousu 150 h, Sans-Bail 0). Dis-leur que la dette de Nadia est de 600 h, et laisse-les faire le calcul.
+Avant la séance. Chaque joueur note son solde de départ sur sa fiche (Bloc 300 h, Hauts 1 500 h, Prolongé 600 h, Cousu 300 h, Sans-Bail 0). Dis-leur que la dette de Nadia est de 600 h, et laisse-les faire le calcul.
 
 Durée : un peu moins de 3 h. Mise en place : 10 minutes. Acte 1 : 40 minutes. Acte 2 : 30 minutes. Acte 3 : 20 minutes. Acte 4 : 1 h 10. Si la soirée file, saute les gros bras : Basile paie son avance en douce, et l'indice sur la clinique passe par lui.
 
 Tessandier. Il lit, et il regarde son poignet. À sept heures quatorze, il dit au serrurier : « On y va. » Il préfère cinquante heures et un mois de délai à une bagarre filmée : un clerc blessé devant la caméra lui coûte son brassard, pas seulement sa prime. Seul avec les personnages à sept heures dix, il le dit à demi-mot.
 
-Les heures volées. Celui dont le Compteur reçoit les heures de Basile et paie les Huissiers fait la sauvegarde d'Endurance DD 12 (plus de 50 h dans la même journée). Échec : les 600 h refluent aussitôt de son solde, et il passe sous zéro (un personnage des Blocs à 300 h tombe à −300 h : un niveau d'épuisement par semaine). Si les heures sont passées par le Compteur de Nadia, c'est elle qui fait la sauvegarde ; à −600 h, elle a dépassé le seuil de 500 : il reste une semaine pour lui rendre 100 h, sinon elle ne se relève plus. C'est un très bon début de campagne, et une très mauvaise semaine pour elle.
+Les heures volées. Celui dont le Compteur reçoit les heures de Basile et paie les Huissiers fait la sauvegarde d'Endurance DD 12 (plus de 50 h dans la même journée). Échec : les 600 h refluent aussitôt de son solde, et il passe sous zéro (un personnage des Blocs à 300 h tombe à −300 h : trois niveaux d'épuisement). Si les heures sont passées par le Compteur de Nadia, c'est elle qui fait la sauvegarde ; à −600 h, elle a dépassé le seuil de −500 h : il reste une semaine pour lui rendre 100 h, sinon elle ne se relève plus. C'est un très bon début de campagne, et une très mauvaise semaine pour elle.
 
 Le courrier de minuit. C'est la Concierge, qui ne dit pas son nom. Elle a choisi ceux qui étaient dans le couloir. La quittance ne règle rien ; elle leur donne quelque chose à dire à Tessandier.
 

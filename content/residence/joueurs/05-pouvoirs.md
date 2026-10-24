@@ -41,7 +41,7 @@ Le premier du mois, à minuit, le loyer de chaque implant tombe en même temps q
 - **Éteindre un implant n'est pas le détruire.** Un fouineur peut éteindre celui d'un ennemi pendant un tour ; un pouvoir comme *Surcharge* peut le détruire pour de bon, et il faudra le remplacer.
 - Un implant se **retire** chez un médecin. Le Compteur est relié au cœur, et certains implants le sont aussi. N'arrache rien toi-même.
 
-> **Exemple.** Théo, Mécano, a une paire d'yeux louée et ses plaques sous la peau. Le 30 du mois, son solde est de 55 h. Le lendemain, son loyer d'une pièce (200 h) et ses deux implants (70 h) tomberaient ensemble. Il décide à voix haute : il paie les yeux, il laisse les plaques s'éteindre, et le logement le fait passer sous zéro. Ses plaques s'éteignent à minuit, sa dette est de 175 h, et il commence à fondre. Mauvais mois.
+> **Exemple.** Yanis, Solo, a une paire d'yeux louée et ses plaques sous la peau. Le 30 du mois, son solde est de 55 h. Le lendemain, son loyer d'une pièce (200 h) et ses deux implants (70 h) tomberaient ensemble. Il décide à voix haute : il paie les yeux, il laisse les plaques s'éteindre, et le logement le fait passer sous zéro. Ses plaques s'éteignent à minuit, sa dette est de 175 h, et il commence à fondre. Mauvais mois.
 
 **Remettre en marche.** Payer le loyer rallume l'implant tout de suite. Quelques pouvoirs le font sans payer : le *Contourner le loyer* du Mécano, la *Greffe de chantier* du Médic de rue charcutier. Dans les deux cas, c'est temporaire, et la Foncière voit le contournement.
 
@@ -56,7 +56,7 @@ Les pouvoirs de piratage ont un rang, écrit dans le pouvoir. Voici ce que coût
 | Rang | Prix |
 |---|---|
 | 1 ou 2 | Rien. Le pouvoir passe dans le bruit du Réseau. |
-| 3 à 5 | Le **premier** pouvoir de ces rangs que tu utilises dans la journée coûte **une trace ou 15 h**, au choix. Les suivants, jusqu'au prochain repos long, ne coûtent rien. |
+| 3 à 5 | Le **premier** pouvoir de ces rangs que tu utilises depuis ton dernier repos long coûte **une trace ou 15 h**, au choix. Les suivants, jusqu'au prochain repos long, ne coûtent rien. |
 | 6 à 8 | **Une trace ou 60 h**, à chaque usage. |
 | 9 | **Deux traces ou 80 h**, à chaque usage. |
 
@@ -73,9 +73,9 @@ Les pouvoirs de piratage ont un rang, écrit dans le pouvoir. Voici ce que coût
 - **À trois traces, un Huissier vient frapper** : une escouade (un huissier et trois clercs) arrive dans l'heure. Après la visite, qu'on y survive ou qu'on s'enfuie, le personnage repart avec une trace.
 - Les caméras, les lecteurs et les trams lisent les Compteurs : on sait toujours où tu es, sauf si tu es Sans-Bail ou si tu as un Compteur piraté. Une trace ne dit pas où tu es, elle dit **ce que tu as fait**.
 
-> **Exemple.** Inès, Fouineuse de niveau 5, arrive devant une tourelle de couloir. Elle utilise *Prendre la main* (rang 3), le premier pouvoir de rang 3 à 5 de sa journée : elle paie 15 h plutôt qu'une trace. La tourelle lui obéit pendant une minute. Plus loin, elle ouvre une caméra avec *Rideau* (rang 3) : c'est son deuxième pouvoir de ce rang, il ne coûte rien. Elle a payé 15 h de piratage dans la journée, sur ses 100 h autorisées.
+> **Exemple.** Inès, Fouineuse de niveau 5, arrive devant une tourelle de couloir. Elle utilise *Prendre la main* (rang 3), le premier pouvoir de rang 3 à 5 depuis son dernier repos long : elle paie 15 h plutôt qu'une trace. La tourelle lui obéit pendant une minute. Plus loin, elle couvre le couloir avec *Rideau* (rang 3) : c'est son deuxième pouvoir de ce rang, il ne coûte rien. Elle a payé 15 h de piratage dans la journée, sur ses 100 h autorisées.
 
-> **Trois traces.** Inès n'aime pas en laisser. Au niveau 13, une nuit, en urgence, elle enchaîne trois pouvoirs de rang 6 : elle paie trois fois une trace, faute de solde. Le troisième pouvoir marque sa troisième trace. Dans l'heure, un huissier et trois clercs sont dans l'escalier. Les rangs 6 à 8 ne pardonnent pas.
+> **Trois traces.** Inès n'aime pas en laisser. Au niveau 15, une nuit, en urgence, elle lance *Clef maîtresse* (rang 6, une trace), puis *Panne générale* (rang 7, une trace). Un verrou forcé avec ses outils marque la troisième. Dans l'heure, un huissier et trois clercs sont dans l'escalier. Les rangs 6 à 8 ne pardonnent pas.
 
 ## Les heures dépensées par un pouvoir
 
@@ -88,9 +88,10 @@ Les implants d'un Solo peuvent tourner plus fort que leur réglage. Un pouvoir m
 - Tu peux brûler des heures que tu n'as pas. Tu passes sous zéro, et tu **fonds** (chapitre 7).
 - La surcadence brûle des heures **de plus** que le loyer. Elle ne remplace rien.
 - Les autres pouvoirs du Solo ne coûtent rien d'autre que leurs utilisations.
-- Un Locataire convertit : une surcadence qui brûle 200 h lui prend un mois de bail.
+- Un Locataire paie la surcadence sur son bail, heure pour heure : une surcadence qui brûle 200 h lui prend un mois de bail.
+- Sans Compteur, tu paies la surcadence en PV : 2, 6 ou 16 PV.
 
-> **Exemple.** Camille, Solo, a 130 h au solde. Elle utilise *Emballement* (surcadence de 10 h) pour une action de plus, puis *Passer outre* (surcadence de 30 h) pour relancer une sauvegarde ratée contre une barre de manutention. Il lui reste 90 h. Au prochain loyer, elle se fera des calculs.
+> **Exemple.** Yanis, Solo, a 130 h au solde. Il utilise *Emballement* (surcadence de 10 h) pour une action de plus, puis *Passer outre* (surcadence de 30 h) pour relancer une sauvegarde ratée contre une barre de manutention. Il lui reste 90 h.
 
 ### Les autres heures
 
@@ -107,9 +108,9 @@ Les **heures volées** sont prises sur des Compteurs piratés. On les achète au
 - **Réussite** : rien ne reflue.
 - Tiens deux comptes sur ta fiche : le solde, et ce qu'il contient d'heures volées, avec le jour de chaque dépense. Un Compteur qui reflue ne ment pas : la Foncière voit la dette, et les Huissiers aussi.
 
-Le Courtier du Port-Franc a l'avantage à cette sauvegarde. Un infirmier de Bloc peut te laisser la relancer. Une carte de collection (chapitre 6) peut en décider autrement.
+Le Fixeur courtier du Port-Franc a l'avantage à cette sauvegarde. Un infirmier de Bloc peut te laisser la relancer. Une carte de collection (chapitre 6) peut en décider autrement.
 
-> **Exemple.** Amina, Fixeuse, achète 300 h volées pour 150 h. Dans la même journée, elle en dépense 60 pour une affaire : plus de 50, donc sauvegarde d'Endurance DD 12. Elle fait 9 : le reflux. Les 60 h dépensées dans les sept derniers jours lui sont reprises. Elle avait 80 h au solde : elle en a maintenant 20. Elle ne dira pas combien d'heures de son sommeil la banque lui a reprises.
+> **Exemple.** Amina, Fixeuse, achète 300 h volées pour 150 h. Dans la même journée, elle en dépense 60 pour une affaire : plus de 50, donc sauvegarde d'Endurance DD 12. Elle fait 9 : le reflux. Les 60 h dépensées dans les sept derniers jours lui sont reprises. Elle avait 80 h au solde : elle en a maintenant 20.
 
 ## Lire un pouvoir
 
@@ -129,7 +130,7 @@ Ce pouvoir d'exemple n'existe sur aucune fiche de la Résidence ; il sert à lir
 | **Utilisations** | Combien de fois on peut s'en servir avant la recharge | 2 |
 | **Portée** | Jusqu'où il porte | 36 m (24 cases) |
 | **Effet** | Ce qu'il fait | La sphère, les dégâts, la sauvegarde |
-| **Prix** | Ce qu'il coûte en plus | Rang 5 : une trace ou 15 h, si c'est ton premier pouvoir de rang 3 à 5 du jour |
+| **Prix** | Ce qu'il coûte en plus | Rang 5 : une trace ou 15 h, si c'est ton premier pouvoir de rang 3 à 5 depuis ton dernier repos long |
 
 Quand un élément manque, on applique ces valeurs par défaut :
 - pas de **portée** : le pouvoir ne concerne que toi, ou ce que tu touches ;
@@ -158,7 +159,7 @@ Certains passifs ont quand même des utilisations. *Cœur de rechange* du Solo e
 | **Repos long** | À la fin d'un repos long seulement |
 | **Passif** | Toujours actif, pas d'utilisation à compter |
 
-Sur la fiche, chaque utilisation est une case. Tu en coches une quand tu te sers du pouvoir. Le repos décoche ce qui revient. **Le prix d'un pouvoir ne revient pas avec lui** : le repos rend l'utilisation, pas l'argent. Mais un repos long est aussi le moment où le « premier pouvoir de rang 3 à 5 du jour » recommence à coûter.
+Sur la fiche, chaque utilisation est une case. Tu en coches une quand tu te sers du pouvoir. Le repos décoche ce qui revient. **Le prix d'un pouvoir ne revient pas avec lui** : le repos rend l'utilisation, pas l'argent. Mais un repos long est aussi le moment où le « premier pouvoir de rang 3 à 5 depuis ton dernier repos long » recommence à coûter.
 
 ### La portée
 
@@ -238,7 +239,7 @@ Quelques pouvoirs ne se jouent pas pendant un combat. Ils demandent une nuit, di
 
 Deux pouvoirs peuvent agir en même temps sur une même créature. Leurs effets s'additionnent, sauf s'il s'agit du même pouvoir : dans ce cas, seul le plus puissant compte. Deux bonus de même nature ne se cumulent pas.
 
-> **Exemple.** Camille est protégée par ses plaques, et un allié lui accorde les PV temporaires du *Tenir le piquet*. Les deux marchent ensemble : l'un réduit les coups, l'autre ajoute un tampon. Si Sofia lui donne deux fois ses PV temporaires, Camille choisit lesquels garder.
+> **Exemple.** Yanis est protégé par ses plaques, et un allié lui accorde les PV temporaires du *Tenir le piquet*. Les deux marchent ensemble : l'un réduit les coups, l'autre ajoute un tampon. Si Sofia lui donne deux fois ses PV temporaires, Yanis choisit lesquels garder.
 
 ## Qui a des pouvoirs
 

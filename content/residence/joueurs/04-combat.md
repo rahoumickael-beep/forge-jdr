@@ -79,7 +79,7 @@ Si tu as plusieurs vitesses (marche et nage, par exemple), tu peux passer de l'u
 
 ### Les actions bonus
 
-Tu n'as une action bonus que si un pouvoir, un trait ou une règle te le dit. Le *Stimulant* du Solo, la *Ruse de coursier* du Coursier, le *Mot d'ordre* du Syndicaliste, la *Trousse de médic* de l'Urgentiste sont des actions bonus. Tu ne peux en faire **qu'une par tour**, et tu choisis quand pendant ton tour. Si quelque chose t'empêche d'agir, tu ne peux pas non plus faire d'action bonus.
+Tu n'as une action bonus que si un pouvoir, un trait ou une règle te le dit. Le *Stimulant* du Solo, la *Ruse de coursier* du Coursier, le *Mot d'ordre* du Syndicaliste, la *Trousse de médic* du Médic de rue sont des actions bonus. Tu ne peux en faire **qu'une par tour**, et tu choisis quand pendant ton tour. Si quelque chose t'empêche d'agir, tu ne peux pas non plus faire d'action bonus.
 
 ### Les interactions simples
 
@@ -93,7 +93,7 @@ Tu peux dire quelques mots pendant ton tour : crier un ordre, prévenir un alli�
 
 ### La réaction
 
-Une **réaction** est une réponse instantanée à un déclencheur. Tu en as **une par round**. Elle revient au début de ton tour. La plus courante est l'**attaque d'opportunité** ; certains pouvoirs utilisent aussi la réaction (*Se mettre devant* du Garde du corps, *Esquive instinctive* du Coursier, *Remettre en route* du Médic de rue).
+Une **réaction** est une réponse instantanée à un déclencheur. Tu en as **une par round**. Elle revient au début de ton tour. La plus courante est l'**attaque d'opportunité** ; certains pouvoirs utilisent aussi la réaction (*Se mettre devant* du Solo garde du corps, *Esquive instinctive* du Coursier, *Remettre en route* du Médic de rue).
 
 Si une réaction interrompt le tour d'une autre créature, celle-ci reprend son tour ensuite.
 
@@ -257,19 +257,19 @@ La moitié des combats de la Résidence se jouent dans un couloir de Bloc : troi
 - **Deux de front.** Le couloir fait deux cases de large. Deux créatures peuvent se battre côte à côte, pas trois. Une créature Grande ne peut pas s'y croiser avec une autre.
 - **Les portes.** Une porte ouverte ne protège de rien. Une porte fermée est un abri total, mais une porte de logement est une porte creuse : voir « Les objets » plus bas. Ouvrir une porte est une interaction simple. L'enfoncer est un test de Corps (Athlétisme).
 - **Les voisins.** Derrière chaque porte, quelqu'un écoute. Un combat de couloir fait ouvrir des portes, sortir des enfants, apparaître des comités de palier. Une foule de curieux compte comme un terrain difficile et peut couvrir un fuyard ou boucher un angle de tir : le MJ le dit.
-- **Les caméras.** Il y en a à chaque bout et au-dessus de chaque porte de service. Tout ce qui se passe dans un couloir est filmé, sauf si quelqu'un les éteint avant (chapitre 5). Ce n'est pas une règle de combat, c'est une conséquence : les images de l'après-midi sont chez la Foncière le soir.
+- **Les caméras.** Il y en a à chaque bout et au-dessus de chaque porte de service. Tout ce qui se passe dans un couloir est filmé, sauf si quelqu'un les éteint avant (chapitre 5). Ça ne relève pas du combat : les images de l'après-midi sont chez la Foncière le soir.
 - **Les ascenseurs et les trappes.** Les cabines ferment leurs portes sur ordre du Réseau. Un Huissier qui ferme un ascenseur coupe une sortie. Rouvrir une porte d'ascenseur sans droit est un piratage (chapitre 5), qui laisse une trace.
 
-> **Exemple.** Mehdi tient la porte d'un voisin au quarantième étage du Bloc 77. Le couloir fait deux cases de large : un clerc et un Huissier arrivent côte à côte. Mehdi ne peut pas reculer à travers la porte, c'est un logement d'une pièce. Il se met en travers : les deux ne peuvent plus passer sans le renverser. C'est exactement ce qu'il voulait.
+> **Exemple.** Léa tient la porte d'un voisin au quarantième étage du Bloc 77. Le couloir fait deux cases de large : un clerc et un Huissier arrivent côte à côte. Léa ne peut pas reculer à travers la porte, c'est un logement d'une pièce. Elle se met en travers : les deux ne peuvent plus passer sans le renverser. C'est exactement ce qu'il voulait.
 
 ## Sous la pluie
 
 Il pleut toujours sur les Blocs. À l'intérieur, rien ne change. Dehors, sur les passerelles, les toits, les quais et les allées du Port-Franc, tout change un peu.
 
 - **Pluie battante.** C'est la pluie normale des passerelles ouvertes. Les tests de **Perception** qui reposent sur la vue ou sur l'ouïe ont le désavantage au-delà de **18 m**. Les attaques à distance ne changent pas : les aiguilles passent, la pluie ne les arrête pas. Les créatures qui se cachent ont l'avantage à leur test de Discrétion contre ceux qui sont à plus de 9 m.
-- **Sol mouillé.** Béton lisse, tôle de passerelle, quai, escalier de secours : chaque fois que tu prends l'action **Se précipiter**, ou que tu es poussé, tiré ou bousculé, tu fais une **sauvegarde de Réflexes DD 10**. Échec : tu tombes **à terre**. Des semelles crantées te dispensent de cette sauvegarde, comme *Pieds sûrs* chez le Coursier. Un ciré de la Digue et des bottes à crampons ne l'enlèvent pas : ils t'aident à tenir debout, pas à courir.
-- **L'eau et l'électricité.** Une créature debout dans l'eau (flaque de plus d'une main de profondeur, quai noyé, tunnel des Souterrains) a le **désavantage** à ses sauvegardes contre les dégâts de foudre. Un taser à harpon qui touche quelqu'un dans l'eau fait aussi 1d6 dégâts de foudre aux créatures à 1,5 m de la cible, dans la même eau. Ils tombent sur ton camp comme sur l'autre.
-- **Le froid et le vent.** Au-dessus du vingtième étage, sur une passerelle, le vent s'ajoute. Une attaque à distance faite à plus de 24 m dans le vent a le désavantage, qu'elle soit à aiguilles ou non.
+- **Sol mouillé.** Béton lisse, tôle de passerelle, quai, escalier de secours : chaque fois que tu prends l'action **Se précipiter**, ou que tu es poussé, tiré ou bousculé, tu fais une **sauvegarde de Réflexes DD 10**. Échec : tu tombes **à terre**. Des semelles crantées ou des bottes à crampons te dispensent de cette sauvegarde, comme *Pieds sûrs* chez le Coursier ; un ciré de la Digue ne l'enlève pas : il t'aide à tenir debout, pas à courir.
+- **L'eau et l'électricité.** Une créature debout dans l'eau (plus de 15 cm d'eau sur une surface plane : quai noyé, tunnel, canal ; les flaques de passerelle ne comptent pas) a le **désavantage** à ses sauvegardes contre les dégâts de foudre. Un taser à harpon qui touche quelqu'un dans l'eau fait aussi 1d6 dégâts de foudre aux créatures à 1,5 m de la cible, dans la même eau. Ils tombent sur ton camp comme sur l'autre.
+- **Le froid et le vent.** Au-dessus du vingtième étage, sur une passerelle, le vent s'ajoute. Dans le vent, la portée longue de toute arme à distance est réduite de moitié.
 
 Un **ciré** (chapitre 6) protège de la pluie battante, pas du vent. Le ciré jaune de la Garde de la Digue est le meilleur de la Résidence : il tient le sel, le froid et les embruns.
 
@@ -280,10 +280,10 @@ Une passerelle relie deux Blocs tous les vingt étages. Soixante mètres de vide
 - **Largeur.** Une passerelle courante fait deux cases de large. Les passerelles de service n'en font qu'une : personne ne s'y croise sans que l'un des deux s'efface.
 - **La rambarde** donne un demi-abri. Une rambarde peut être enjambée (3 m de déplacement) ou franchie d'un saut, mais elle empêche de tomber par accident.
 - **Pousser quelqu'un à travers une rambarde.** Une bousculade réussie (voir plus bas) peut renverser une créature sur la rambarde : si elle rate une **sauvegarde de Réflexes DD 12**, elle bascule et tombe. En cas de réussite, elle s'agrippe au bord : elle est pendue dans le vide, à terre, et elle doit réussir un test de Corps (Athlétisme) DD 12 pour se hisser (une action).
-- **Tomber.** Une chute inflige **1d6 dégâts contondants par 3 m**, jusqu'à 20d6. Une chute d'une passerelle haute se termine sur la passerelle du dessous ou dans la rue : dans les deux cas, ce n'est pas une chute qu'on raconte après. Les Coursiers des passerelles et les Prolongés d'avant la Crue connaissent des gaines et des filets de chantier qui coupent les chutes : le MJ en place quelques-uns.
+- **Tomber.** Une chute inflige **1d6 dégâts contondants par 3 m**, jusqu'à 20d6. Dans la plupart des cas, un filet de chantier, un auvent ou la passerelle du dessous arrête la chute à 6 m (2d6). Une chute sans rien dessous reste mortelle. Les Coursiers des passerelles et les Prolongés d'avant la Crue connaissent des gaines et des filets de chantier : le MJ en place quelques-uns.
 - **Les grappins.** Un grappin de poignet ou une corde de chantier permet de traverser un vide de 9 m ou de remonter une chute, sur un test de Corps (Athlétisme) DD 12.
 
-> **Exemple.** Sur la passerelle entre les Blocs 14 et 31, Camille voit un clerc braquer un taser à harpon sur Inès, qui n'a qu'une case de large derrière elle. Camille prend l'action Attaquer et remplace son attaque par une bousculade : Corps (Athlétisme) 15 contre le 9 du clerc. Elle le jette contre la rambarde. Sauvegarde de Réflexes DD 12 : le clerc fait 7. Il bascule. Les deux mains crispées sur le bord, il pend au-dessus de soixante mètres de pluie. Il n'est plus un problème. Le MJ rappelle à la table que les caméras de la passerelle ont tout vu.
+> **Exemple.** Sur la passerelle entre les Blocs 14 et 31, Yanis voit un clerc braquer un taser à harpon sur Inès, qui n'a qu'une case de large derrière elle. Yanis prend l'action Attaquer et remplace son attaque par une bousculade : Corps (Athlétisme) 15 contre le 9 du clerc. Il le jette contre la rambarde. Sauvegarde de Réflexes DD 12 : le clerc fait 7. Il bascule. Les deux mains crispées sur le bord, il pend au-dessus de soixante mètres de pluie. Il n'est plus un problème. Le MJ rappelle à la table que les caméras de la passerelle ont tout vu.
 
 ## Empoigner et bousculer
 
@@ -320,7 +320,7 @@ C'est l'arme des Huissiers. Ils l'ont en main avant la matraque. Un harpon croch
 
 - **Le tir.** Attaque à distance de Réflexes, portée **9/18 m**. La cible doit être de taille Grande ou plus petite.
 - **Si ça touche**, la cible subit **1d6 dégâts de foudre** et se retrouve **entravée** (chapitre 7) : le harpon la tient au sol par le câble. Un seul harpon à la fois par cible.
-- **Se libérer.** La cible entravée peut utiliser son action pour arracher le harpon : test de **Corps (Athlétisme)** ou de **Réflexes (Acrobaties)** **DD 13**. Si elle réussit, l'état prend fin, et le harpon lui laisse une plaie de 1 dégât perforant. Un allié à 1,5 m peut aussi l'aider avec une action (Aider), ou arracher le harpon pour elle : même test, avantage à qui s'en occupe.
+- **Se libérer.** La cible entravée peut utiliser son action pour arracher le harpon : test de **Corps (Athlétisme)** ou de **Réflexes (Acrobaties)**, DD selon le tireur (11 pour un clerc, 13 pour un huissier, 12 pour un drone, 16 pour les Hauts : la fiche du tireur le dit). Si elle réussit, l'état prend fin, et le harpon lui laisse une plaie de 1 dégât perforant. Un allié à 1,5 m peut aussi l'aider avec une action (Aider), ou arracher le harpon pour elle : même test, avantage à qui s'en occupe.
 - **Couper le câble.** Le câble a une CA de 12 et 3 PV. Une attaque qui touche et lui inflige 3 dégâts tranchants (une lame de céramique, un scalpel, une cisaille) le coupe : la cible est libre, le harpon reste planté, et ne gêne plus personne.
 - **Recharger.** Un taser à harpon n'a qu'un tir. Mettre une cartouche demande une action.
 - **Le tireur.** Il a une main prise tant qu'il tient le câble. S'il lâche son arme, le câble reste tendu, mais l'état ne dépend plus de lui.
@@ -366,7 +366,7 @@ Négocier, c'est le plus court des combats. Le MJ décide si l'autre camp est pr
 
 Tu peux baisser ce DD en **posant des heures sur la table**. On négocie en dizaines : 30 h devant un gros bras, 50 h devant un huissier qui n'a pas fini sa tournée. Une offre qui lui paie ce que lui rapporterait l'expulsion baisse le DD de 5 ; une offre moindre ne fait que lui donner l'avantage à ton test. Un Huissier-chef qui a vu cent offres ne baisse pas le DD pour moins de cent heures. Le Fixeur sait mieux que personne ce qu'une somme vaut à qui la regarde (*Graisser la patte*).
 
-> **Exemple.** Amina, le Fixeur, voit un clerc tomber sous la moitié de ses PV. « Il reste trois étages avant ta prime, lui dit-elle. Moi, j'ai quarante heures. » Le clerc a un loyer en retard, le MJ dit qu'il est indifférent, DD 15, abaissé à 10 par l'offre. Aplomb (Persuasion) 14 : réussi. Le clerc range son taser, descend l'escalier, et note dans son carnet qu'il n'a rien vu. Amina se retrouve avec quarante heures de moins et une dette morale : quelqu'un qui la reconnaîtra.
+> **Exemple.** Amina, le Fixeur, voit un clerc tomber sous la moitié de ses PV. « Il reste trois étages avant ta prime, lui dit-elle. Moi, j'ai quarante heures. » Le clerc a un loyer en retard, le MJ dit qu'il est indifférent, DD 15, abaissé à 10 par l'offre. Aplomb (Persuasion) 14 : réussi. Le clerc range son taser, descend l'escalier, et note dans son carnet qu'il n'a rien vu.
 
 Une négociation ne dure pas plus d'un round à la table. Si elle échoue, le combat reprend dans l'ordre de l'initiative, au tour de celui qui devait jouer.
 
@@ -388,7 +388,7 @@ Un pouvoir ou une arme qui touche plusieurs cibles lance ses dégâts **une seul
 
 Sur un coup critique, tu lances **deux fois tous les dés de dégâts** de l'attaque, puis tu ajoutes les modificateurs une seule fois. Les dés de dégâts supplémentaires (le *Coup de passage* du Coursier, la *Seringue* du Médic de rue, la décharge d'une matraque électrique) sont aussi doublés.
 
-> **Exemple.** Léa fait un 20 naturel avec sa matraque pliante contre un clerc dont l'Huissier regarde ailleurs. Son *Coup de passage* ajoute 1d6, parce qu'un allié est à côté de la cible. Elle lance 2d4 contondants + 2d6 + son modificateur de Réflexes.
+> **Exemple.** Nadia, coursière, fait un 20 naturel avec sa matraque pliante contre un clerc dont l'Huissier regarde ailleurs. Son *Coup de passage* ajoute 1d6, parce qu'un allié est à côté de la cible. Elle lance 2d4 contondants + 2d6 + son modificateur de Réflexes.
 
 ### Les types de dégâts
 
@@ -412,11 +412,11 @@ Chaque attaque et chaque pouvoir infligent un type de dégâts. Le type n'a pas 
 
 On applique d'abord tous les autres modificateurs (bonus, réductions comme les *Plaques sous-cutanées* du Solo), puis la résistance, puis la vulnérabilité. Plusieurs résistances au même type ne se cumulent pas.
 
-> **Exemple.** Camille, Solo, a des plaques sous la peau qui réduisent chaque coup (le chiffre est sur sa fiche : 2 aujourd'hui). Une barre de manutention la touche pour 9 contondants : elle en prend 7. Avec en plus la résistance aux dégâts contondants d'une carapace, elle en prendrait 3 : on retire d'abord les 2, on divise par deux ensuite.
+> **Exemple.** Yanis, Solo, a des plaques sous la peau qui réduisent chaque coup (le chiffre est sur sa fiche : 2 aujourd'hui). Une barre de manutention le touche pour 9 contondants : il en prend 7. Avec en plus la résistance aux dégâts contondants d'une carapace, il en prendrait 3 : on retire d'abord les 2, on divise par deux ensuite.
 
 ## Les soins
 
-Un personnage récupère des PV par le repos (chapitre 3), par les pouvoirs de soin (la *Trousse de médic*, le *Refrain* du Prêcheur de carrefour), par les trousses de Bloc et les seringues de soins (chapitre 6), et dans une Clinique de Prolongation, contre des heures.
+Un personnage récupère des PV par le repos (chapitre 3), par les pouvoirs de soin (la *Trousse de médic*, le *Refrain* du Prêcheur des Sans-Bail, sous-classe de carrefour), par les trousses de Bloc et les seringues de soins (chapitre 6), et dans une Clinique de Prolongation, contre des heures.
 
 On ajoute les PV rendus au total actuel, sans jamais dépasser le maximum. Un mort ne peut pas récupérer de PV ; les Cliniques rajeunissent les vivants, et ne rappellent personne.
 
@@ -455,7 +455,7 @@ Les succès et les échecs n'ont pas besoin d'être consécutifs. On les coche s
 
 ### À zéro heure
 
-Un personnage qui **fond** et dont la dette atteint **500 h** tombe à 0 PV et ne se relève plus (chapitre 7). On ne se bat pas contre ça : on le règle avant, à l'heure du loyer.
+Un personnage qui **fond** et dont le solde atteint **−500 h** tombe à 0 PV et ne se relève plus (chapitre 7). On ne se bat pas contre ça : on le règle avant, à l'heure du loyer.
 
 ### Et après la mort ?
 
@@ -470,7 +470,7 @@ Certains pouvoirs et traits donnent des **PV temporaires** : le *Tenir le piquet
 - Ce ne sont **pas des soins**. Ils ne peuvent pas dépasser, ni compléter, ton maximum de PV. Un personnage à 0 PV qui reçoit des PV temporaires ne reprend pas conscience.
 - Ils disparaissent après un **repos long**, ou à la fin de la durée indiquée par le pouvoir.
 
-> **Exemple.** Mehdi a 14 PV sur 20. Sofia lui donne 7 PV temporaires avec *Tenir le piquet*. Un clerc le frappe pour 10 : les 7 PV temporaires disparaissent, et Mehdi perd 3 PV normaux. Il en a 11.
+> **Exemple.** Yanis a 14 PV sur 20. Sofia lui donne 7 PV temporaires avec *Tenir le piquet*. Un clerc le frappe pour 10 : les 7 PV temporaires disparaissent, et Yanis perd 3 PV normaux. Il en a 11.
 
 ## Les objets
 
@@ -493,33 +493,35 @@ Enfoncer une porte, plutôt que la frapper, se fait par un test de Corps (Athlé
 
 Pour finir, voici un combat du début à la fin.
 
-**La situation.** Camille (Solo), Inès (Fouineur), Karim (Huissier défroqué) et Mehdi (Médic de rue) gardent une porte du quarantième étage du Bloc 77. Derrière, Samir Roux, quarante ans et soixante au visage, attend l'aube : il doit trois cents heures, et son avis est tombé à vingt-deux heures. Le Comité de palier les a payés pour qu'il ne soit pas seul. À l'autre bout du couloir, l'ascenseur ouvre ses portes : un Huissier, deux clercs, et un drone d'huissier qui diffuse l'avis d'une voix plate. La pluie tape sur la verrière. Le couloir fait deux cases de large. L'Huissier a lu l'avis à voix haute. Tout le monde sait qu'on va se battre ; personne n'est surpris.
+**La situation.** Yanis (Solo), Inès (Fouineur), Karim (Huissier défroqué) et Léa (Médic de rue) gardent une porte du quarantième étage du Bloc 77. Derrière, Samir Roux, quarante ans et soixante au visage, attend l'aube : il doit trois cents heures, et son avis est tombé à vingt-deux heures. Le Comité de palier les a payés pour qu'il ne soit pas seul. À l'autre bout du couloir, l'ascenseur ouvre ses portes : un Huissier, deux clercs, et un drone d'huissier qui diffuse l'avis d'une voix plate. La pluie tape sur la verrière. Le couloir fait deux cases de large. L'Huissier a lu l'avis à voix haute. Tout le monde sait qu'on va se battre ; personne n'est surpris.
 
-**Initiative.** Inès 17, Karim 14, les clercs 12 (un seul jet pour les deux), l'Huissier 11, Camille 10, Mehdi 8, le drone 7.
+**Initiative.** Inès 17, Karim 14, les clercs 12 (un seul jet pour les deux), l'Huissier 11, Yanis 10, Léa 8, le drone 7.
 
 **Round 1.**
 - *Inès* utilise *Entrer* en action bonus : test de Technique réussi, les portes de l'ascenseur se referment derrière l'escouade. Personne ne repart par là. Elle se glisse ensuite derrière l'angle de la porte voisine et prend l'action Se cacher : 18 contre la Perception passive de l'Huissier, 12. Elle est cachée.
 - *Karim* avance de 4,5 m et tire sur le premier clerc avec son taser à harpon. Touché : le clerc est entravé.
 - *Les clercs* : le second tire sur Karim. Il touche. Karim prend 1d6 de foudre, et un harpon dans la cuisse : entravé, vitesse 0, désavantage à ses attaques.
 - *L'Huissier* s'approche de Karim et frappe de sa matraque électrique. Le coup touche : 7 contondants et 3 de foudre.
-- *Camille* reste devant la porte de Samir. Elle prend l'action Esquiver : l'Huissier est à 4,5 m et elle ne veut pas lui laisser le passage.
-- *Mehdi* se déplace de 4,5 m et utilise sa *Trousse de médic* sur Karim : 1d8 + son Instinct, 9 PV.
-- *Le drone* tire un harpon sur Camille. L'Esquive lui donne le désavantage, et il rate.
+- *Yanis* reste devant la porte de Samir. Il prend l'action Esquiver : l'Huissier est à 4,5 m et il ne veut pas lui laisser le passage.
+- *Léa* se déplace de 4,5 m et utilise sa *Trousse de médic* sur Karim : 1d8 + son Instinct, 9 PV.
+- *Le drone* tire un harpon sur Yanis. L'Esquive lui donne le désavantage, et il rate.
 
 **Round 2.**
-- *Inès* tire sur le clerc entravé. Les attaques contre une cible entravée ont l'avantage : elle touche pour 7 perforants. Le clerc passe sous la moitié de ses PV, fait sa sauvegarde d'Aplomb, la rate, et lâche son taser.
-- *Karim* utilise son action pour arracher le harpon : Corps (Athlétisme) 15 contre le DD 13. Il est libre, 1 dégât de plus, et il lui reste 9 m de déplacement. Il se rapproche du second clerc.
+- *Inès* tire sur le clerc entravé. Les attaques contre une cible entravée ont l'avantage : elle touche pour 7 perforants. Le clerc passe sous la moitié de ses PV : il se rend (voir « Se rendre ») et lâche son taser.
+- *Karim* utilise son action pour arracher le harpon : Corps (Athlétisme) 15 contre le DD 11 du clerc. Il est libre, 1 dégât de plus, et il lui reste 9 m de déplacement. Il se rapproche du second clerc.
 - *Le second clerc* sort sa matraque et frappe Karim : 5 contondants.
-- *L'Huissier* se tourne vers Camille, qui a toujours son Esquive : désavantage, et il rate.
-- *Camille* frappe l'Huissier de sa lame de céramique : 9 tranchants. Il recule d'un pas.
-- *Mehdi* soigne encore Karim : 8 PV.
-- *Le drone* tire un deuxième harpon, sur Mehdi. Touché : 1d6 de foudre, Mehdi est entravé. Ses mains restent libres : il peut encore soigner ce qui est à portée de main.
+- *L'Huissier* se tourne vers Yanis, qui a toujours son Esquive : désavantage, et il rate.
+- *Yanis* frappe l'Huissier de sa lame de céramique : 9 tranchants. Il recule d'un pas.
+- *Léa* soigne encore Karim : 8 PV.
+- *Le drone* tire un deuxième harpon, sur Léa. Touché : 1d6 de foudre, Léa est entravée. Ses mains restent libres : elle peut encore soigner ce qui est à portée de main.
 
 **Round 3.**
 - *Inès* utilise *Coup de jus* sur le drone, qui porte un implant : rang 1, aucune trace. Il rate sa sauvegarde d'Endurance, prend 2d8 de foudre et ne peut plus réagir jusqu'à son prochain tour.
-- *Karim* frappe le second clerc de sa matraque : 7. Il passe sous la moitié de ses PV et se rend, à genoux, le poignet gauche tourné vers le plafond.
-- *L'Huissier*, seul avec un drone brouillé, regarde ses clercs. Il fait ce qu'un Huissier fait quand l'heure tourne : « Les frais de cette intervention sont à la charge de l'occupant. » Puis, plus bas : « Cinquante heures, et je n'ai pas vu le palier. »
-- *Karim*, qui a rendu son brassard, négocie. L'Huissier est indifférent : DD 15. L'offre fait le poids d'une expulsion : DD 10. Aplomb (Persuasion) 17. Réussi.
+- *Karim* frappe le second clerc de sa matraque : 7. Il passe sous la moitié de ses PV et se rend (voir « Se rendre »), à genoux, le poignet gauche tourné vers le plafond.
+- *L'Huissier*, seul avec un drone brouillé, regarde ses clercs. Il fait ce qu'un Huissier fait quand l'heure tourne : « Les frais de cette intervention sont à la charge de l'occupant. »
+
+**Round 4.**
+- *Karim*, qui a rendu son brassard, négocie. L'Huissier est indifférent : DD 15. L'offre fait le poids d'une expulsion : DD 10. Aplomb (Persuasion) 17. Réussi. L'Huissier, plus bas : « Cinquante heures, et je n'ai pas vu le palier. »
 - *Le combat est fini.*
 
 **Après le combat.** Karim paie cinquante heures. L'Huissier ramasse ses harpons, relève ses clercs, appelle l'ascenseur qu'Inès rouvre d'un geste, et descend sans se retourner. La porte de Samir s'entrouvre. Il regarde le couloir, les câbles, la pluie sur la verrière, et dit : « Vous avez fait du bruit. » Sur le palier, quelqu'un met une casserole de soupe à chauffer. Au plafond, la caméra n'a rien perdu.

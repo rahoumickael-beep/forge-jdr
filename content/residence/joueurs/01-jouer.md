@@ -31,7 +31,7 @@ Le maître du jeu tient plusieurs rôles à la fois.
 - **Il arbitre.** Il fixe la difficulté des tests, applique les règles, et tranche quand elles ne disent rien. Ses décisions valent pour la séance ; on en discute à la pause si besoin, pas au milieu d'un combat.
 - **Il garde les secrets.** La Résidence en a beaucoup. Le MJ en sait plus que vous sur ce qui se passe dans la Tour-Mère, sous les Souterrains et derrière les discours du soir. C'est voulu. Les personnages découvrent la ville en même temps que les joueurs.
 - **Il joue le calendrier.** Le premier du mois, la Révision, les patrouilles qui doublent. Quand le loyer tombe, c'est lui qui regarde la table.
-- **Il choisit certains réglages de la campagne**, en particulier la règle de mort (chapitre 4) et la façon de gagner des niveaux (chapitre 3). Il les annonce avant la première séance.
+- **Il choisit certains réglages de la campagne**, en particulier la règle de remplacement d'un personnage mort (chapitre 4) et la façon de gagner des niveaux (chapitre 3). Il les annonce avant la première séance.
 
 Le MJ n'est pas l'adversaire des joueurs. Son travail est de rendre la partie intéressante, pas de la gagner. Un MJ qui veut tuer vos personnages n'a pas besoin de dés : il lui suffit d'attendre le premier du mois.
 
@@ -130,7 +130,7 @@ Une attaque est un d20 + ton modificateur d'attaque (Corps ou Réflexes pour une
 
 ## Les jets de sauvegarde
 
-Une **sauvegarde** sert à éviter ou à réduire un effet qui te tombe dessus : un coup de jus, un tir de taser à harpon, une fièvre de l'eau, un reflux. Tu lances un d20, tu ajoutes le modificateur de la caractéristique demandée, et ta maîtrise si ta classe maîtrise cette sauvegarde. Le DD dépend de l'effet.
+Une **sauvegarde** sert à éviter ou à réduire un effet qui te tombe dessus : un coup de jus, une fièvre de l'eau, un reflux. Tu lances un d20, tu ajoutes le modificateur de la caractéristique demandée, et ta maîtrise si ta classe maîtrise cette sauvegarde. Le DD dépend de l'effet.
 
 > **On ne choisit pas de rater.** Une créature peut renoncer volontairement à une sauvegarde contre un effet qu'elle accepte, comme un allié qui veut qu'on le soigne. Le texte de l'effet le précise. Sinon, on lance. Notamment : on ne choisit pas de laisser un reflux passer.
 
@@ -243,7 +243,7 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 5. **Tes caractéristiques.** Corps, Réflexes, Endurance, Technique, Instinct, Aplomb. Valeurs fixes, achat par points ou dés : le chapitre 2 donne les trois méthodes. Mets tes meilleures valeurs dans les caractéristiques de ta classe.
 6. **Tes compétences.** Celles de ton historique sont données. Ta classe t'en laisse choisir quelques-unes dans une liste. Ton origine peut t'en ajouter une.
 7. **Ta personnalité.** Un trait, un idéal, un lien, un défaut. Prends des phrases courtes qui sentent les couloirs (« Je compte les marches à voix basse », « Je n'ai jamais rendu un sou qu'on ne m'ait demandé trois fois »). Ce sont elles que le MJ utilisera.
-8. **Ton nom et ton apparence.** Un prénom et un nom de famille, comme Camille Benali, Yanis Diallo, Inès Haddad, Léa Moreau ou Théo Costa. Note aussi un détail qu'on voit de loin : un manteau de pluie, un poignet bandé, un brassard décousu. Tu peux envoyer un portrait.
+8. **Ton nom et ton apparence.** Un prénom et un nom de famille, comme Sofia Benali, Yanis Diallo, Inès Haddad, Léa Moreau ou Théo Costa. Note aussi un détail qu'on voit de loin : un manteau de pluie, un poignet bandé, un brassard décousu. Tu peux envoyer un portrait.
 9. **Ton solde.** Pas d'écran pour celle-ci : tu l'écris sur ta fiche. Elle a sa section plus bas.
 
 À la fin, vérifie ta fiche : les valeurs et leurs modificateurs, le bonus de maîtrise, les sauvegardes, les compétences, la Perception passive, l'initiative, les points de vie, la classe d'armure et ton solde. Le chapitre 2 donne la liste complète de ce qu'il faut avoir noté.
@@ -253,6 +253,8 @@ Tu commences au **niveau 1**, sauf décision contraire du MJ. L'écran de créat
 > - **Yanis Diallo**, solo, Cousu (ancien docker), historique Docker du Port-Franc. Il a porté des conteneurs vingt ans. Ses bras sont loués.
 > - **Léa Moreau**, médic de rue, Sans-Bail (arrachée), historique Infirmier de Bloc. Elle a arraché son Compteur à la fin de l'hiver dernier.
 > - **Théo Costa**, syndicaliste, Enfant des Hauts (renié), historique Avocat de locataires. Il a plaidé contre la Foncière dans les couloirs, et il a perdu.
+>
+> Quelques figurants (Karim, Amina, Sofia, Nadia) passent dans les exemples.
 
 ### Ton solde de départ
 
@@ -263,7 +265,7 @@ Ton solde dépend de ton origine. Inscris-le sur ta fiche, avec ton équipement.
 | Résident des Blocs | 300 h, dont 100 h de loyer en retard |
 | Enfant des Hauts | 1 500 h |
 | Prolongé | 600 h |
-| Cousu | 150 h |
+| Cousu | 300 h |
 | Sans-Bail | 0 h, et pas de Compteur |
 | Locataire | 6 mois de bail (1 200 h ; un mois vaut 200 h) |
 
@@ -274,7 +276,7 @@ Quelques mots sur chaque cas.
 - **Résident des Blocs.** Tu commences à 300 h, mais 100 h ne sont pas à toi : ton palier les réclame avant la fin de l'année. Il te reste 200 h de libre, soit un mois de loyer.
 - **Enfant des Hauts.** Quinze cents heures, c'est une fortune dans les Blocs. Toute dépense de 300 h ou plus d'un coup est signalée à ta famille, qui sait alors où tu es. Dépense tôt et peu, ou paie en petites sommes.
 - **Prolongé.** Six cents heures, et ta Clinique prélève une échéance chaque premier du mois. Si tu la manques, elle reprend des années.
-- **Cousu.** Cent cinquante heures, et deux implants dont le loyer total tombe aussi chaque premier du mois. Tu commences léger, avec un corps qui coûte.
+- **Cousu.** Trois cents heures, et deux implants dont le loyer total (55 h) tombe aussi chaque premier du mois. Avec le loyer d'une pièce, il te reste 45 h après le premier du mois. Tu commences léger, avec un corps qui coûte.
 - **Locataire.** Tu ne paies pas en heures mais en mois de bail : six, au départ. Chaque premier du mois, 200 h sont retirées, soit un mois. À zéro, on vient retirer le corps.
 
 ### Ce que tu fais de tes heures
@@ -288,15 +290,15 @@ Tu as ton solde. Tu as quatre à cinq choses à en faire, avant la première sé
 - **Les prêter, les donner, les cacher.** Les gens des Blocs aident leur palier. Une dizaine d'heures glissée au bon moment achète plus qu'un pistolet.
 
 > **Exemple.** Inès démarre avec 300 h (origine) et 20 h (historique de Fouineur) : 320 h. Les 100 h du loyer en retard ne sont pas à elle ; son palier lui laisse jusqu'à décembre pour les rendre. Il lui reste 220 h. Elle en garde 200 pour le loyer de décembre, et 20 pour manger. Elle n'achètera rien avant son premier travail.
-> Yanis a 150 h et 40 h de son historique de docker : 190 h. Ses deux implants lui coûtent 55 h par mois, plus 200 h de loyer pour sa pièce. Il est sous zéro le premier du mois si personne ne le paie.
+> Yanis a 300 h et 40 h de son historique de docker : 340 h. Ses deux implants lui coûtent 55 h par mois, plus 200 h de loyer pour sa pièce : il lui reste 85 h après le premier du mois, et rien si le travail ne vient pas le mois suivant.
 > Léa n'a pas de Compteur. Elle a une barque, trois conserves de troc et la dette d'un voisin qui lui doit un service.
-> Théo a 1 500 h et une famille qui le cherche. Il paie son loyer par petites sommes, sous le seuil de 500 h, pour que personne ne remonte jusqu'à lui.
+> Théo a 1 500 h et une famille qui le cherche. Il paie son loyer par petites sommes, sous le seuil de 300 h, pour que personne ne remonte jusqu'à lui.
 
 Quand tu auras terminé, lis ton personnage à voix haute devant la table : qui il est, d'où il vient, combien il a sur son Compteur. C'est la première fois que vous les entendrez.
 
 ## Les grands principes de la Résidence
 
-Pour finir, six idées qui donnent à la Résidence sa couleur. Le MJ les connaît ; il est utile que les joueurs les aient en tête.
+Six choses que le MJ répète à chaque séance. Il est utile que les joueurs les aient en tête.
 
 ### Tout se paie en heures
 

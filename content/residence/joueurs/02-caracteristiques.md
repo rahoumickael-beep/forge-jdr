@@ -71,7 +71,7 @@ La puissance du corps : soulever, pousser, frapper, grimper, tenir sous un poids
 - **Tests de Corps** : forcer une porte, retenir une grille qui retombe, tordre une barre d'armature, tenir un volet fermé pendant qu'un Huissier pousse de l'autre côté.
 - **Attaques et dégâts** : avec une arme au contact, on ajoute le Corps au jet d'attaque et aux dégâts (sauf arme à finesse, voir le chapitre 6). Les armes de jet ordinaires, comme le crochet de docker lancé, utilisent aussi le Corps.
 - **Pouvoirs** : c'est la caractéristique du Solo et de l'Huissier défroqué.
-- **Sauvegarde de Corps** : résister à ce qui veut te déplacer de force ou te plaquer. Une bousculade dans un couloir, un câble qui se tend, un taser à harpon qui t'ancre au sol.
+- **Sauvegarde de Corps** : résister à ce qui veut te déplacer de force ou te plaquer. Une bousculade dans un couloir, un câble qui se tend, un bélier d'Huissier qui te plaque.
 
 **Porter et soulever.** Un personnage porte sans gêne jusqu'à **Corps × 7,5 kg**. Il peut pousser, tirer ou soulever jusqu'à deux fois plus (**Corps × 15 kg**), mais il n'avance alors que de 1,5 m par round. Les créatures de taille Grande doublent ces chiffres ; les Très Petites les divisent par deux.
 
@@ -110,7 +110,7 @@ Il n'y a aucune compétence associée à l'Endurance. Elle travaille en silence.
 La mémoire, le raisonnement, la main qui sait : comprendre un mécanisme, relier des indices, entrer dans un système. Rien à voir avec ta culture générale, sauf quand elle sert à ouvrir quelque chose.
 
 - **Tests de Technique** : comprendre comment fonctionne une serrure électrique, estimer ce qu'un implant a coûté, lire un schéma de gaine, ouvrir une porte sur le Réseau, réparer un drone.
-- **Pouvoirs** : c'est la caractéristique du Fouineur, du Médic de rue et du Mécano.
+- **Pouvoirs** : c'est la caractéristique du Fouineur et du Mécano.
 - **Sauvegarde de Technique** : rare. Résister à ce qui attaque ton raisonnement ou ton système : une illusion, un flot de fausses données, un piratage qui te vise toi, pas ta machine.
 
 ### Instinct
@@ -118,7 +118,7 @@ La mémoire, le raisonnement, la main qui sait : comprendre un mécanisme, relie
 L'attention, l'intuition, le sens commun et le cran : remarquer, comprendre les gens et les bêtes, survivre dehors, ne pas céder.
 
 - **Tests d'Instinct** : sentir qu'on est suivi, lire un visage, trouver le nord dans un tunnel, soigner une plaie, compter ce qu'il reste dans un sac.
-- **Pouvoirs** : c'est la caractéristique du Médic de rue, du Fixeur, du Prêcheur des Sans-Bail et du Journaliste.
+- **Pouvoirs** : c'est la caractéristique du Médic de rue et du Journaliste.
 - **Sauvegarde d'Instinct** : peur, charme, ordres qu'on n'a pas choisis, mensonges bien faits. En Résidence, c'est la sauvegarde qu'on fait quand un administrateur sourit trop.
 
 ### Aplomb
@@ -360,7 +360,7 @@ Ce qui la modifie souvent :
 
 - **Lumière faible** : désavantage aux tests de Perception basés sur la vue, donc −5 à la Perception passive pour ce qui se voit. Dans les Blocs, la moitié des couloirs n'a plus de plafonnier depuis que le palier fait des économies.
 - **Rythme rapide** : −5.
-- **Pluie battante** : on n'entend plus rien à trois pas, le MJ applique le désavantage aux tests d'ouïe.
+- **Pluie battante** : désavantage aux tests de Perception de vue ou d'ouïe au-delà de 18 m (chapitre 4).
 - **Vision dans le noir** (visière implantée, certains implants oculaires) : permet de voir dans l'obscurité comme en lumière faible, donc avec −5, au lieu de ne rien voir.
 
 On peut calculer de la même façon une **Intuition passive** ou une **Investigation passive**. Le MJ s'en sert quand un personnage remarque, sans y réfléchir, que quelqu'un ment ou qu'un papier est faux.

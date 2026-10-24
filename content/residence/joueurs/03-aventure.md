@@ -65,8 +65,8 @@ Un ascenseur lit le Compteur comme le tram, mais il y ajoute un droit : il monte
 Tous les vingt étages, une passerelle relie un Bloc à son voisin. Les gens y vendent, y attendent, y fument. Elles sont mouillées, étroites, et sans filet.
 
 - Une passerelle ordinaire se traverse sans test.
-- Sous la pluie, ou poursuivi, ou chargé : test de Réflexes (Acrobaties) DD 10 à 15. Un échec fait glisser. Un deuxième échec fait tomber.
-- Une rambarde ou un bord se longe avec un test de Réflexes (Acrobaties) DD 15 ou plus.
+- Une rambarde ou un bord se longe avec un test de Réflexes (Acrobaties) DD 15.
+- Le sol mouillé suit le chapitre 4 (glissade sur sol mouillé).
 - Pousser quelqu'un dans le vide est une attaque. Le chapitre 4 en dit plus.
 
 **Les chutes.** Une chute inflige **1d6 dégâts contondants par 3 m**, jusqu'à 20d6. Le personnage tombe à terre, sauf s'il réussit une sauvegarde de Réflexes DD 15. Tomber dans l'eau (la mer, un canal de la Friche) réduit les dégâts de moitié, mais pose un autre problème : l'eau de la Résidence n'est pas filtrée. Un câble, une gaine ou une toiture peuvent arrêter la chute : le MJ le dit.
@@ -78,7 +78,7 @@ Tous les vingt étages, une passerelle relie un Bloc à son voisin. Les gens y v
 - Une barque à la perche avance à la **vitesse de marche** d'un personnage qui la manie. À la rame, la même, mais plus fatigante.
 - Manier une barque entre des balcons demande rarement un test. Dans un courant, de nuit, ou sous une vague de la Digue : test de Réflexes. Le MJ peut demander un test de groupe si toute la barque aide.
 - Une barque porte quatre personnages et leur équipement. Avec plus, elle prend l'eau.
-- Un personnage qui tombe à l'eau doit nager (le double de vitesse) et risque les **fièvres de l'eau** : sauvegarde d'Endurance DD 12 après une journée à patauger. Échec : désavantage aux tests d'Endurance et un niveau d'épuisement, tant que la fièvre n'est pas soignée (test d'Instinct (Médecine) DD 12).
+- Un personnage qui tombe à l'eau doit nager (le double de vitesse) et risque les **fièvres de l'eau** : voir « Boire à la Friche » au chapitre 7 (sauvegarde d'Endurance DD 11).
 - Un Enfant de la Friche ou un Sans-Bail né sur un toit se débrouille ici mieux que n'importe qui : c'est dans ses traits.
 
 ## Les Souterrains
@@ -132,7 +132,7 @@ Le repos long est **interrompu** si les personnages passent au moins une heure �
 - il récupère **la moitié de ses dés de vie** dépensés (la moitié de son nombre total de dés de vie, arrondie à l'inférieur, au minimum un) ;
 - **tous ses pouvoirs** reviennent, ceux de repos court comme ceux de repos long ;
 - il perd **un niveau d'épuisement**, s'il a mangé, bu et dormi à l'abri, et s'il n'est pas sous zéro (voir « Fondre ») ;
-- les pouvoirs de piratage repartent de zéro : le premier pouvoir de rang élevé de la journée redevient le « premier ».
+- les pouvoirs de piratage repartent de zéro : le premier pouvoir de rang élevé depuis ton dernier repos long redevient le « premier ».
 
 Restrictions :
 
@@ -145,23 +145,24 @@ Dormir à l'abri veut dire : chez soi, chez un voisin, dans un local du palier, 
 
 - **Chez soi.** Un logement loué ne coûte rien de plus que son loyer. Le MJ ne demande rien.
 - **Chez un voisin ou au Comité.** Gratuit si on a un contact. Sinon, un service ou quelques heures.
-- **Une capsule à la nuit.** Un casier de tôle avec un matelas, un verrou et un lecteur. Compte 6 h environ.
-- **Dehors.** Une nuit sans abri donne un niveau d'épuisement, sauf sauvegarde d'Endurance DD 12. La pluie ne s'arrête jamais, et les Huissiers passent.
+- **Une couchette de dortoir (6 h) ou une capsule d'hôtel (15 h).** La capsule est un casier de tôle avec un matelas, un verrou et un lecteur.
+- **Dehors.** Une nuit sans abri donne un niveau d'épuisement, sauf sauvegarde d'Endurance DD 10. La pluie ne s'arrête jamais, et les Huissiers passent.
 - **À la Friche.** Un toit avec un potager et une famille qui vous connaît est un abri. Un toit sans personne, non.
+- **Faim, soif, marche.** Faim : un niveau d'épuisement par jour entier sans manger, après 3 + modificateur d'Endurance jours. Soif : un niveau par jour sans boire. Marche forcée : après 8 heures de marche, sauvegarde d'Endurance DD 10, +1 par heure supplémentaire.
 
 ### Fondre
 
 Un personnage dont le solde passe sous zéro **fond** : chaque heure de dette fait vieillir son corps d'un jour. En jeu :
 
-- Il gagne un **niveau d'épuisement par semaine passée sous zéro**.
+- Il gagne un **niveau d'épuisement par tranche complète de 100 h de dette** (−100 h : niveau 1, −200 h : niveau 2, et ainsi de suite).
 - **Aucun repos ne retire cet épuisement** avant le remboursement. Dès que le solde repasse à zéro ou au-dessus, il perd un niveau par repos long.
-- À **500 h de dette**, le personnage tombe à 0 PV et ne se relève plus.
+- À **−500 h**, le personnage tombe à 0 PV et ne se relève plus.
 
 Le chapitre 7 donne l'effet de chaque niveau d'épuisement.
 
 On ne le voit pas tout de suite : une dette de vingt heures, c'est vingt jours de plus sur le visage. On le voit en six mois, ou le jour où on retrouve un ami. Ceux qui fondent évitent les miroirs. Les médics de rue les tiennent une heure par mois pour qu'ils ne prennent pas le niveau suivant, et les Cliniques, elles, les regardent passer.
 
-> **Exemple.** Le solde de Yanis est à −65 h le premier du mois. Il ne le sait pas, ou fait comme si. Il a soixante-cinq jours de plus au corps, et une semaine pour trouver du travail. À la fin de la semaine, il prend un niveau d'épuisement. À la fin de la deuxième, un autre. S'il atteint −500 h, il ne se relève plus.
+> **Exemple.** Le solde de Yanis est à −65 h le premier du mois. Il ne le sait pas, ou fait comme si. Aucun niveau d'épuisement encore, mais soixante-cinq jours de plus au visage. Si la dette atteint −100 h, il prend un premier niveau ; à −200 h, un deuxième. S'il atteint −500 h, il ne se relève plus.
 
 ## Le premier du mois
 
@@ -177,7 +178,7 @@ Dans cet ordre :
 
 Un loyer que tu ne peux pas payer ne disparaît pas. Il devient une dette, et la dette, un jour de vie par heure. Un avis d'expulsion peut aussi tomber : il arrive à six heures du matin sur le Compteur, et les Huissiers à sept. Le MJ en fait une scène : tu as une heure pour payer, cacher, prévenir ou résister.
 
-> **Après la Révision.** Au premier janvier 2090, tous les loyers augmentent d'un quart. Une pièce passe de 200 h à 250 h. Le MJ prévient la table avant.
+> **Après la Révision.** Au 1er janvier 2090, tous les loyers augmentent d'un quart. Une pièce passe de 200 h à 250 h. Le MJ prévient la table avant.
 
 ## Les traces et le Réseau
 
@@ -192,13 +193,13 @@ Le Réseau relie les Compteurs, les portes, les ascenseurs, les caméras, les tr
 | Rang | Prix |
 |---|---|
 | 1 ou 2 | rien |
-| 3 à 5 | une trace ou 15 h, pour le premier de la journée seulement |
+| 3 à 5 | une trace ou 15 h, pour le premier depuis ton dernier repos long seulement |
 | 6 à 8 | une trace ou 60 h, à chaque fois |
 | 9 | deux traces ou 80 h |
 
 Les caméras, les lecteurs et les trams lisent les Compteurs : on sait toujours où vous êtes, sauf si vous êtes Sans-Bail, ou si vous avez un Compteur piraté.
 
-> **Exemple.** Inès entre dans la serrure d'un local technique (rang 1, gratuit), puis dans une caméra de couloir (rang 1, gratuit), puis dans le lecteur d'un ascenseur des Hauts (rang 4 : une trace ou 15 h, premier de la journée). Elle paie 15 h : son solde passe de 320 h à 305 h. Plus tard, une autre porte plus difficile (rang 7) lui coûterait une trace ou 60 h. Elle choisit la trace. C'est la deuxième : elle s'arrête là, et le voisin du dessous commence à se demander pourquoi le courant clignote.
+> **Exemple.** Inès entre dans la serrure d'un local technique (rang 1, gratuit), puis dans une caméra de couloir (rang 1, gratuit), puis dans le lecteur d'un ascenseur des Hauts (rang 4 : une trace ou 15 h, premier depuis son dernier repos long). Elle paie 15 h : son solde passe de 320 h à 305 h. Plus tard, une autre porte plus difficile (rang 7) lui coûterait une trace ou 60 h. Elle choisit la trace. C'est la deuxième : elle s'arrête là, et le voisin du dessous commence à se demander pourquoi le courant clignote.
 
 ### Les heures volées
 
@@ -258,8 +259,9 @@ Le logement est le gros poste de ton mois. Voici les repères, au mois. Le prix 
 | Misérable | Rien | Dormir sur un palier ou dans un tunnel, vivre de troc, pas de Compteur ou pas de droit |
 | Capsule | 120 h | Un casier de tôle, un matelas, un verrou |
 | Pièce | 200 h | Une pièce de Bloc, seul ou en famille |
+| Studio avec fenêtre | 300 h | Une pièce et un coin cuisine, avec du jour |
 | Deux pièces | 400 h | Un logement pour une famille, une cuisine, une fenêtre |
-| Hauts | 2 000 h et plus | Un appartement avec vue, un ascenseur à soi, un voisin qui ne vous connaît pas |
+| Hauts | à partir de 2 000 h | Un appartement avec vue, un ascenseur à soi, un voisin qui ne vous connaît pas |
 
 Les repas ordinaires se paient 1 h au marché d'un Bloc, soit une trentaine d'heures par mois pour un repas par jour.
 
@@ -269,7 +271,7 @@ Le train de vie a des effets. Les gens des Hauts ne parlent pas à quelqu'un qui
 
 Voici ce qu'un personnage peut faire de ses journées. Chaque activité demande de s'y consacrer au moins huit heures par jour.
 
-**Travailler.** Un personnage qui exerce un métier gagne de quoi payer un train de vie **pièce** sans dépenser. S'il maîtrise une compétence ou un outil adapté, il vit au niveau **deux pièces**.
+**Travailler.** Un personnage qui exerce un métier gagne 180 h par mois, comme un docker : il ne couvre pas tout à fait une pièce. Avec une maîtrise adaptée, 300 h.
 
 **Se rétablir.** Trois jours de repos permettent de faire une sauvegarde d'Endurance DD 15. En cas de réussite, le personnage met fin à une maladie ou un poison qui l'empêche de récupérer, ou il obtient l'avantage aux sauvegardes contre cette maladie pendant les vingt-quatre heures suivantes.
 

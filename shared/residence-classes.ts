@@ -26,10 +26,10 @@ const implant = (h: number) => ` Implant, loyer ${h} h par mois.`;
 const surcadence = (h: number) => ` Surcadence : brûle ${h} h de ton solde.`;
 
 const PRIX_RESEAU =
-  "Un pouvoir de piratage a un rang de 1 à 9 : rang 1 et 2, gratuit ; rang 3 à 5, une trace ou 15 h, une fois par jour ; rang 6 à 8, une trace ou 60 h à chaque fois ; rang 9, deux traces ou 80 h ; à trois traces, un Huissier frappe dans l'heure.";
+  "Un pouvoir de piratage a un rang de 1 à 9 : rang 1 et 2, gratuit ; rang 3 à 5, une trace ou 15 h, pour le premier depuis ton dernier repos long ; rang 6 à 8, une trace ou 60 h à chaque fois ; rang 9, deux traces ou 80 h ; tu ne paies pas plus de 100 h par jour en heures, le reste en traces ; à trois traces, un Huissier frappe dans l'heure.";
 
 const PRIX_SOLO =
-  "La Surcadence est le prix du Solo : tes implants peuvent tourner plus fort que leur réglage. Un pouvoir marqué « Surcadence » brûle à chaque usage les heures qu'il indique (10 h, 30 h ou 80 h). Tu peux brûler des heures que tu n'as pas : tu passes sous zéro, et tu fonds. Tes autres pouvoirs ne coûtent rien.";
+  "La Surcadence est le prix du Solo : tes implants peuvent tourner plus fort que leur réglage. Un pouvoir marqué « Surcadence » brûle à chaque usage les heures qu'il indique (10 h, 30 h ou 80 h). Tu peux brûler des heures que tu n'as pas : tu passes sous zéro, et tu fonds. Sans Compteur, tu paies la Surcadence en PV : 2, 6 ou 16 PV. Tes autres pouvoirs ne coûtent rien.";
 
 export const CLASSES_RESIDENCE: CharacterClass[] = [
   {
@@ -95,7 +95,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     armor: "Toutes les armures et boucliers anti-émeute",
     weapons: "Toutes les armes",
     skills: { choose: 2, from: ["Athlétisme", "Acrobaties", "Intimidation", "Perception", "Discrétion", "Intuition"] },
-    startingGear: ["Pistolet à aiguilles et trois chargeurs", "Lame de céramique", "Armure de fibre", "Gilet pare-éclats", "Contrat à la journée plié en quatre"],
+    startingGear: ["Pistolet à aiguilles et trois chargeurs", "Lame de céramique", "Armure de fibre","Contrat à la journée plié en quatre"],
     powers: [
       P(1, "Le prix", "passif", "passif", PRIX_SOLO),
       P(1, "Réflexes câblés", "passif", "passif", "Tu ajoutes ta maîtrise à ton initiative." + implant(30)),
@@ -146,7 +146,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     powers: [
       P(1, "Trousse de médic", "action", "repos long", "Un allié à portée de main regagne 1d8 + Instinct PV (2d8 au niveau 5, 3d8 au 11, 4d8 au 17). Une utilisation de plus aux niveaux 5, 9, 13 et 17 ; une utilisation revient après un repos court.", { uses: 3 }),
       P(1, "Lire les constantes", "action", "à volonté", "Un Compteur à portée de main : tu lis les PV, les poisons, les maladies, les implants et la dette de son porteur. Sur un cadavre, tu sais depuis quand et de quoi il est mort."),
-      P(2, "Tenir un fondeur", "passif", "passif", "Une heure de soins auprès d'un patient sous zéro : il ne prend pas le niveau d'épuisement de la semaine suivante. Une fois par patient et par mois. Tes soins marchent aussi sur un Sans-Bail, que les Cliniques refusent."),
+      P(2, "Tenir un fondeur", "passif", "passif", "Une heure de soins auprès d'un patient sous zéro : il ne prend pas le niveau d'épuisement suivant. Une fois par patient et par mois. Tes soins marchent aussi sur un Sans-Bail, que les Cliniques refusent."),
       P(3, "Seringue", "passif", "passif", "Avec une seringue ou un scalpel, tu peux utiliser ton Instinct pour attaquer. Une fois par tour, +1d6 dégâts contre une créature qui a perdu au moins la moitié de ses PV (2d6 au niveau 9, 3d6 au 17)."),
       P(5, "Remettre en route", "réaction", "repos long", "Un allié à 1,5 m tombe à 0 PV : il reste à 1 PV et regagne 2d8 PV.", { uses: 1 }),
       P(6, "Doigts de précision", "passif", "passif", "Avantage aux tests de Médecine ; tu stabilises un mourant en action bonus." + implant(20)),
@@ -191,14 +191,14 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     startingGear: ["Matraque électrique", "Taser à harpon", "Armure légère d'Huissier, brassard décousu", "Visière opaque rayée", "Un avis d'expulsion jamais remis"],
     powers: [
       P(1, "Article et alinéa", "passif", "passif", "Tu connais les procédures de la Foncière : ce qu'un avis permet, ce qu'il interdit. Tu reconnais un faux avis au premier coup d'œil, et tu as l'avantage aux tests d'Intimidation contre un locataire qui doit des heures."),
-      P(1, "Harpon", "action", "repos court", "Attaque à distance au taser à harpon : 1d6 dégâts de foudre, et la cible est ancrée au sol (vitesse 0) jusqu'à ce qu'elle réussisse un test de Corps contre un DD de 8 + ta maîtrise + ton Corps, en action.", { uses: 2, range: "9 m" }),
+      P(1, "Harpon", "action", "repos court", "Attaque à distance au taser à harpon : 1d6 dégâts de foudre, et la cible est entravée par le câble (vitesse 0) jusqu'à ce qu'elle l'arrache, en action, par un test de Corps (Athlétisme) ou de Réflexes (Acrobaties) contre un DD de 8 + ta maîtrise + ton Corps.", { uses: 2, range: "9 m" }),
       P(1, "Style de combat", "passif", "passif", "Choisis : Défense (+1 CA), Duel (+2 dégâts avec une arme à une main) ou Arme à deux mains (relance les 1 et les 2 aux dégâts)."),
       P(2, "Notification", "action bonus", "repos court", "Une créature à 9 m qui t'entend : sauvegarde d'Aplomb ou elle a le désavantage à toute attaque qui ne te vise pas jusqu'à la fin de son prochain tour.", { uses: 2, range: "9 m" }),
       P(3, "Je connais vos tournées", "passif", "passif", "Une heure à observer un Bloc ou un quartier : tu sais où passent les patrouilles d'Huissiers, à quelle heure, et combien ils sont."),
       P(5, "Attaque supplémentaire", "passif", "passif", "Deux attaques au lieu d'une quand tu prends l'action Attaquer."),
       P(6, "Visière rayée", "passif", "passif", "Tu vois dans le noir à 18 m, tu as l'avantage aux sauvegardes contre l'aveuglement, et tu lis le solde d'un Compteur à 9 m." + implant(25)),
-      P(9, "Saisie", "action", "repos long", "Une créature ancrée, entravée ou à terre à côté de toi : sauvegarde de Corps ou elle est entravée, et tu prends un objet qu'elle porte. Deux utilisations à partir du niveau 13.", { uses: 1 }),
-      P(11, "Exécution forcée", "passif", "passif", "Tes attaques contre une créature ancrée, entravée ou à terre font +1d8 dégâts."),
+      P(9, "Saisie", "action", "repos long", "Une créature entravée ou à terre à côté de toi : sauvegarde de Corps ou elle est entravée, et tu prends un objet qu'elle porte. Deux utilisations à partir du niveau 13.", { uses: 1 }),
+      P(11, "Exécution forcée", "passif", "passif", "Tes attaques contre une créature entravée ou à terre font +1d8 dégâts."),
       P(13, "Je n'ai pas fini", "réaction", "repos long", "Relance un jet de sauvegarde raté.", { uses: 1 }),
       P(15, "Dernier avis", "action", "repos long", "Les créatures de ton choix à 9 m qui t'entendent : sauvegarde d'Aplomb ou effrayées une minute (nouvelle sauvegarde à la fin de chacun de leurs tours).", { uses: 1, range: "9 m" }),
       P(17, "Armure rendue", "passif", "passif", "Tant que tu portes une armure, +1 CA, et résistance aux dégâts contondants."),
@@ -239,7 +239,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
     powers: [
       P(1, "Coup de passage", "passif", "à volonté", "Une fois par tour, +1d6 dégâts à une attaque avec une arme légère ou à distance, si tu as l'avantage ou si un allié est à côté de la cible (+1d6 tous les deux niveaux)."),
       P(1, "Expertise", "passif", "passif", "Double maîtrise pour deux compétences de ton choix (deux de plus au niveau 6)."),
-      P(1, "Pieds sûrs", "passif", "passif", "Passerelles, échelles, rambardes et toits ne sont jamais un terrain difficile pour toi."),
+      P(1, "Pieds sûrs", "passif", "passif", "Passerelles, échelles, rambardes et toits ne sont jamais un terrain difficile pour toi, et tu ne glisses jamais sur un sol mouillé."),
       P(2, "Ruse de coursier", "action bonus", "à volonté", "Foncer, te désengager ou te cacher."),
       P(2, "Grappin de poignet", "passif", "passif", "Pendant ton déplacement, tu grimpes une paroi de 9 m, ou tu franchis un vide de 9 m, sans test."),
       P(3, "Je connais un raccourci", "passif", "passif", "Dans les Blocs, ton groupe parcourt une même distance de passerelles, d'escaliers et de cages en moitié moins de temps, et tu as toujours une deuxième sortie."),
@@ -398,7 +398,7 @@ export const CLASSES_RESIDENCE: CharacterClass[] = [
       S("mecano-armurier", "Armurier de fortune", "Il fait des armes avec ce qu'il trouve. Elles tirent, la plupart du temps.",
         "Au Port-Franc comme à la Friche, on achète peu et on fabrique beaucoup. L'armurier a un chalumeau, un tour, des aiguilles de récupération, et un sens très net de ce qu'il ne faut pas mettre au même endroit.",
         [
-          P(3, "Arme maison", "passif", "passif", "Tu fabriques un pistolet ou une matraque (une nuit de travail et 100 h) : +1 aux attaques, et tu ajoutes ta Technique aux dégâts à la place de ta caractéristique d'attaque."),
+          P(3, "Arme maison", "passif", "passif", "Tu fabriques un pistolet ou une matraque (une nuit de travail et 200 h, et l'arme ne se revend pas : elle porte ta signature) : +1 aux attaques, et tu ajoutes ta Technique aux dégâts à la place de ta caractéristique d'attaque."),
           P(7, "Munitions spéciales", "action bonus", "repos court", "Pendant une minute, ton arme fait +1d6 dégâts de feu ou de foudre, au choix à chaque attaque.", { uses: 2 }),
           P(11, "Tir assisté", "réaction", "repos court", "Un allié à 9 m fait une attaque à distance : tu ajoutes ta Technique à son jet d'attaque.", { uses: 3, range: "9 m" }),
           P(15, "Surchauffe", "action", "repos long", "Cône de 9 m devant toi : 8d6 dégâts de feu, moitié si sauvegarde de Réflexes. Ton arme est inutilisable jusqu'à ton prochain repos court.", { uses: 1 }),

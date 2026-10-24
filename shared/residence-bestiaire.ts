@@ -131,7 +131,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     ],
     actions: [
       hit("Matraque", "contact", 3, "1,5 m", "1d6+1", "contondants"),
-      hit("Taser à harpon", "distance", 3, "6/12 m", "1d4+1", "électrique", "La cible est ancrée au sol par un câble : elle ne peut pas s'éloigner de plus de 6 m du clerc tant qu'elle n'a pas arraché le harpon (une action, test de Corps DD 11)."),
+      hit("Taser à harpon", "distance", 3, "9/18 m", "1d4+1", "électrique", "La cible est entravée par un câble (vitesse 0) tant qu'elle n'a pas arraché le harpon (une action, test de Corps ou de Réflexes DD 11)."),
     ],
     lore: "Un brassard jaune, une visière opaque et un tablier de cuir râpé où pendent des serrures neuves. Les clercs portent les valises, les clés et le courrier : ce sont eux qui sonnent les premiers, et eux qui, le soir, n'osent pas rentrer dans leur Bloc par la même porte que les gens qu'ils ont mis dehors.",
     gmNotes: "Huissier de première année, payé à l'expulsion et pas à l'heure. Quasiment tous ont un loyer en retard : un arrangement de 40 h (Persuasion DD 11) leur fait fermer les yeux, et certains préviennent leurs voisins la veille. Ils se rendent à la moitié de leurs PV. Les tuer fait venir l'huissier-chef à l'étage suivant, et vaut +5 à la jauge de l'Emprise.",
@@ -169,11 +169,11 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     ],
     actions: [
       hit("Matraque électrique", "contact", 5, "1,5 m", "1d6+3", "contondants", "", { damage: "1d4", damageType: "électrique" }),
-      hit("Taser à harpon", "distance", 3, "6/12 m", "1d6+1", "électrique", "La cible est ancrée au sol par un câble : elle ne peut pas s'éloigner de plus de 6 m de l'huissier tant qu'elle n'a pas arraché le harpon (une action, test de Corps DD 13)."),
+      hit("Taser à harpon", "distance", 3, "9/18 m", "1d6+1", "électrique", "La cible est entravée par un câble (vitesse 0) tant qu'elle n'a pas arraché le harpon (une action, test de Corps ou de Réflexes DD 13)."),
       save("Saisie", "For", 13, "Une fois par combat, au contact : la cible fait un jet de sauvegarde de Corps DD 13. En cas d'échec, elle perd 20 h de son solde."),
     ],
     lore: "Un brassard jaune, une visière opaque, une serrure neuve dans la poche gauche. Il ne hausse jamais la voix : il lit l'avis, laisse l'ancienne clé sur le paillasson et repart avec la nouvelle. Les gamins des Blocs miment sa démarche en riant, de loin.",
-    gmNotes: "Il veut finir à l'heure, parce qu'il est payé à l'expulsion. Il cherche à ancrer avant de frapper, et à se faire payer plutôt qu'à tuer : 50 h bien présentées règlent un huissier ordinaire (Persuasion DD 13). Il se rend sous le quart de ses PV. Appelé en renfort, l'huissier-chef arrive en trois rounds. Un personnage Ancien Huissier reconnaît sa visière à son numéro.",
+    gmNotes: "Il veut finir à l'heure, parce qu'il est payé à l'expulsion. Il cherche à entraver avant de frapper, et à se faire payer plutôt qu'à tuer : 50 h bien présentées règlent un huissier ordinaire (Persuasion DD 15, 10 avec 50 h). Il se rend sous le quart de ses PV. Appelé en renfort, l'huissier-chef arrive en trois rounds. Un personnage Ancien Huissier reconnaît sa visière à son numéro.",
     scene: "a bailiff in a thin fibre armour vest with a yellow armband and an opaque black visor, one gloved hand holding a long electric baton and the other a folded eviction notice, standing at a doorway in a rain wet apartment block corridor, a new lock case at his feet and a family on suitcases blurred behind him",
   }),
   creature({
@@ -233,7 +233,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     actions: [
       multi("Deux coups de matraque électrique.", { "Matraque électrique": 2 }),
       hit("Matraque électrique", "contact", 5, "1,5 m", "1d6+3", "contondants", "", { damage: "1d4", damageType: "électrique" }),
-      hit("Taser à harpon", "distance", 3, "6/12 m", "1d6+1", "électrique", "La cible est ancrée au sol par un câble (arracher le harpon : une action, test de Corps DD 13)."),
+      hit("Taser à harpon", "distance", 3, "9/18 m", "1d6+1", "électrique", "La cible est entravée par un câble (arracher le harpon : une action, test de Corps ou de Réflexes DD 13)."),
     ],
     bonusActions: [special("Ordre de rang", "Un clerc ou un huissier à 9 m qui l'entend se déplace de sa vitesse ou attaque (sa réaction).")],
     lore: "Armure lourde de fibre, visière à verre blindé, un carnet de quittances dans une poche de poitrine. Il arrive avec quatre clercs, toujours une demi-heure avant l'heure dite, et lit l'avis devant tout le palier. Un huissier-chef comme Grégoire Tessandier compte sa prime avant ses coups.",
@@ -280,7 +280,7 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     actions: [
       multi("Trois coups de matraque de commandement.", { "Matraque de commandement": 3 }),
       hit("Matraque de commandement", "contact", 8, "1,5 m", "1d8+4", "contondants", "", { damage: "2d6", damageType: "électrique" }),
-      hit("Taser à harpon", "distance", 8, "9/27 m", "2d6+4", "électrique", "La cible est ancrée au sol par un câble (arracher le harpon : une action, test de Corps DD 16)."),
+      hit("Taser à harpon", "distance", 8, "9/27 m", "2d6+4", "électrique", "La cible est entravée par un câble (arracher le harpon : une action, test de Corps ou de Réflexes DD 16)."),
     ],
     bonusActions: [special("Ordre de rang", "Un allié à 18 m qui l'entend se déplace de sa vitesse ou attaque (sa réaction).")],
     reactions: [special("Parade réglementaire", "Une fois par round, il gagne +3 à la CA contre une attaque de contact qui le vise, s'il voit l'attaquant.")],
@@ -383,10 +383,10 @@ export const BESTIAIRE_RESIDENCE: Creature[] = [
     ],
     actions: [
       multi("Deux tirs de harpon.", { "Harpon électrique": 2 }),
-      hit("Harpon électrique", "distance", 5, "12/36 m", "1d6+3", "perforants", "La cible est ancrée au sol par un câble : elle ne peut pas s'éloigner de plus de 12 m du drone tant qu'elle n'a pas arraché le harpon (une action, test de Corps DD 12).", { damage: "1d6", damageType: "électrique" }),
+      hit("Harpon électrique", "distance", 5, "12/36 m", "1d6+3", "perforants", "La cible est entravée par un câble (vitesse 0) tant qu'elle n'a pas arraché le harpon (une action, test de Corps ou de Réflexes DD 12).", { damage: "1d6", damageType: "électrique" }),
     ],
     lore: "Jaune laqué, gros comme un dogue, quatre hélices carénées et deux lanceurs sous le ventre. Il précède les huissiers dans les couloirs des Blocs en diffusant l'avis d'une voix de gardienne d'immeuble. Les gens ferment leur porte, mais il ne frappe pas : il attend qu'on soit sorti.",
-    gmNotes: "Il ancre, il ne tue pas : il retient la cible pour l'huissier. Le couper de l'huissier (Technique DD 14, trace +1) le pose. Sa batterie tient dix minutes de combat. Les enfants des Blocs le surnomment « le chien du palier » ; un enfant peut le détourner en lui montrant une porte déjà fermée. Il garde la mémoire de ce qu'il a vu : le détruire sans prendre sa carte coûte une trace.",
+    gmNotes: "Il entrave, il ne tue pas : il retient la cible pour l'huissier. Le couper de l'huissier (Technique DD 14, trace +1) le pose. Sa batterie tient dix minutes de combat. Les enfants des Blocs le surnomment « le chien du palier » ; un enfant peut le détourner en lui montrant une porte déjà fermée. Il garde la mémoire de ce qu'il a vu : le détruire sans prendre sa carte coûte une trace.",
     scene: "a yellow lacquered patrol drone as large as a mastiff hovering above a corridor floor, four ducted rotors, a black lens cluster and two harpoon launchers under its belly, rain dripping from its hull, a long concrete apartment block corridor of identical doors behind it",
   }),
   creature({

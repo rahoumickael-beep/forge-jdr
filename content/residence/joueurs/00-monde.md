@@ -40,7 +40,7 @@ Depuis un an, ses discours ont changé. Il parle de « rendre les clés ». Le C
 
 **Nous sommes en novembre 2089.**
 
-Le Conseil vient d'annoncer la **Révision** : au premier janvier, tous les loyers augmentent d'un quart. Une pièce qui coûtait deux cents heures par mois en coûtera deux cent cinquante. Dans les Blocs, les comités de locataires parlent de grève. Les Huissiers ont doublé leurs patrouilles. À la Friche, ceux qui ont arraché leur Compteur vivent sans heures et sans bail, et la Foncière a promis de « régulariser » la Friche avant l'hiver.
+Le Conseil vient d'annoncer la **Révision** : au 1er janvier, tous les loyers augmentent d'un quart. Une pièce qui coûtait deux cents heures par mois en coûtera deux cent cinquante. Dans les Blocs, les comités de locataires parlent de grève. Les Huissiers ont doublé leurs patrouilles. À la Friche, ceux qui ont arraché leur Compteur vivent sans heures et sans bail, et la Foncière a promis de « régulariser » la Friche avant l'hiver.
 
 > **Ce que tout le monde sait.**
 > - Le loyer tombe le premier du mois, à minuit, sur le Compteur.
@@ -178,7 +178,7 @@ Toute la Résidence est câblée. Le **Réseau** relie les Compteurs, les portes
 
 ### Les armes
 
-Pistolets et fusils à aiguilles, matraques électriques, lames de céramique, armures légères en fibre. Les armes à poudre sont rares, et interdites dans les Hauts. Les Huissiers portent des **tasers à harpon**, qui ancrent un fuyard au sol.
+Pistolets et fusils à aiguilles, matraques électriques, lames de céramique, armures légères en fibre. Les armes à poudre sont rares, et interdites dans les Hauts. Les Huissiers portent des **tasers à harpon**, dont le câble entrave un fuyard.
 
 ### Les implants
 

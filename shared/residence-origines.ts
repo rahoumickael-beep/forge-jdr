@@ -148,7 +148,7 @@ export const ORIGINES_RESIDENCE: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Corps loué", text: "Solde de départ : 150 h. Tu commences avec deux implants loués, selon ta variante, pour un loyer total de 55 h par mois. Un implant dont le loyer n'est pas payé s'éteint à distance, et reste éteint jusqu'au paiement." },
+      { name: "Corps loué", text: "Solde de départ : 300 h. Tu commences avec deux implants loués, selon ta variante, pour un loyer total de 55 h par mois. Un implant dont le loyer n'est pas payé s'éteint à distance, et reste éteint jusqu'au paiement." },
       { name: "Fiché", text: "Un Cousu est toujours fiché : les Huissiers t'arrêtent pour un contrôle avant de contrôler les autres, et les lecteurs de Compteur comptent tes implants." },
     ],
     subs: [
@@ -184,7 +184,7 @@ export const ORIGINES_RESIDENCE: Origin[] = [
     speed: 6,
     unique: true,
     traits: [
-      { name: "Un corps au bail", text: "Tu ne vieillis pas et tu ne fonds pas. Tu commences avec 6 mois de bail (1 200 h). Tu comptes en heures comme tout le monde ; le premier du mois, 200 h sont retirées de ton bail. À zéro, on vient retirer le corps. Un Locataire ne peut pas être Prêcheur des Sans-Bail." },
+      { name: "Un corps au bail", text: "Tu ne vieillis pas et tu ne fonds pas. Tu n'as pas de Compteur au poignet : ton bail est inscrit dans ton corps, et les lecteurs le lisent comme un Compteur. Ton bail tient lieu de loyer : tu n'as pas d'autre logement à payer. Tu commences avec 6 mois de bail (1 200 h) ; le premier du mois, 200 h sont retirées de ton bail. À zéro, on vient retirer le corps. Un Locataire ne peut pas être Prêcheur des Sans-Bail." },
       { name: "Corps synthétique", text: "Résistance aux dégâts de poison, aucune maladie, pas besoin de manger. Un repos long te demande quatre heures de veille immobile." },
       { name: "Bien meublé", text: "La loi te range avec les meubles : tu ne peux ni signer de bail, ni porter plainte, ni voter au Comité. Un Huissier peut saisir ton corps comme un objet." },
     ],

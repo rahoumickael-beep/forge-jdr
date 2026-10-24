@@ -10,19 +10,23 @@ Chaque personnage commence avec l'équipement de sa **classe** et celui de son *
 
 | Classe | Argent de départ, à la place de l'équipement |
 |---|---|
-| Médic de rue, Coursier des passerelles, Journaliste | 3d4 × 100 h |
-| Fouineur, Mécano, Syndicaliste, Fixeur | 4d4 × 100 h |
-| Solo, Huissier défroqué | 5d4 × 100 h |
+| Solo | 8d4 × 100 h |
+| Huissier défroqué | 7d4 × 100 h |
+| Mécano | 6d4 × 100 h |
+| Fouineur | 5d4 × 100 h |
+| Journaliste | 4d4 × 100 h |
+| Médic de rue, Coursier des passerelles | 3d4 × 100 h |
+| Syndicaliste, Fixeur | 2d4 × 100 h |
 | Prêcheur des Sans-Bail | 2d4 × 50 h de troc (pas de Compteur : voir « Troquer ») |
 
-Cet argent s'ajoute au **solde de départ** de ton origine, ou le remplace si le MJ le préfère.
+Cet argent s'ajoute au **solde de départ** de ton origine.
 
 | Origine | Solde de départ |
 |---|---|
 | Résident des Blocs | 300 h (dont 100 h de loyer en retard) |
 | Enfant des Hauts | 1 500 h |
 | Prolongé | 600 h |
-| Cousu | 150 h |
+| Cousu | 300 h |
 | Locataire | 6 mois de bail (1 200 h) |
 | Sans-Bail | 0 h (troc) |
 
@@ -64,7 +68,6 @@ Quelques prix de référence pour le marché d'un Bloc :
 | Un repas chaud, avec une boisson | 3 h |
 | Un verre dans un bar de conteneur | 2 h |
 | Une couchette, une nuit | 6 h |
-| Un trajet en tram | 1 h |
 | Une carte de visite imprimée | 5 h |
 | Un manteau de laine synthétique | 168 h |
 | Une paire de bottes | 70 h |
@@ -96,7 +99,7 @@ Attaquer avec une arme qu'on ne maîtrise pas reste possible : on n'ajoute simpl
 
 | Arme | Prix | Dégâts | Poids | Propriétés |
 |---|---|---|---|---|
-| Pistolet à aiguilles | 400 h | 1d8 perforant | 1 kg | Munitions (12/36 m), légère |
+| Pistolet à aiguilles | 400 h | 1d6 perforant | 1 kg | Munitions (12/36 m), légère |
 | Taser à harpon | 500 h | 1d6 foudre | 1,5 kg | Harpon (9/18 m), chargement |
 
 ### Armes de guerre
@@ -105,9 +108,9 @@ Attaquer avec une arme qu'on ne maîtrise pas reste possible : on n'ajoute simpl
 |---|---|---|---|---|
 | Grande lame de céramique | 300 h | 1d8 tranchant | 1,5 kg | Polyvalente (1d10). Invisible aux portiques |
 | Bélier d'Huissier | 250 h | 2d6 contondant | 6 kg | Deux mains, lourde. Avantage aux tests pour enfoncer une porte |
-| Fusil à aiguilles | 1 100 h | 2d8 perforant | 3 kg | Munitions (18/54 m), deux mains, perce-cloison |
-| Pistolet à poudre | 1 500 h | 1d10 perforant | 1,5 kg | Munitions (12/36 m), bruyant. Rare |
-| Fusil à poudre | 2 500 h | 2d10 perforant | 4 kg | Munitions (24/72 m), deux mains, bruyant. Rare |
+| Fusil à aiguilles | 1 100 h | 2d6 perforant | 3 kg | Munitions (18/54 m), deux mains, perce-cloison |
+| Pistolet à poudre | 1 500 h | 1d10 perforant | 1,5 kg | Munitions (12/36 m), chargement, bruyant. Rare |
+| Fusil à poudre | 2 500 h | 2d8 perforant | 4 kg | Munitions (24/72 m), chargement, deux mains, bruyant. Rare |
 
 ### Les munitions
 
@@ -157,7 +160,7 @@ Quelques armes ont un nom d'ici. Elles se jouent avec les statistiques du tablea
 | Arme | Se joue comme | Remarques |
 |---|---|---|
 | Matraque de commandement | Matraque électrique | Prix : 800 h. Une poignée gainée de jaune, que les Huissiers-chefs ne prêtent pas |
-| Barre de manutention | Bâton ferré | Une barre de chantier, 1d6 contondant, deux mains. Les gros bras du Port-Franc |
+| Barre de manutention | Bâton ferré | Une barre de chantier, 1d6 contondant, polyvalente (1d8 à deux mains) comme le bâton ferré. Les gros bras du Port-Franc |
 | Fusil à aiguilles de la Garde | Fusil à aiguilles | Prix : 1 300 h. Joint étanche, cran de sécurité, numéro de vanne gravé |
 | Matraque de comité | Matraque | Prix : 20 h. Un manche de pioche, une clé barrée peinte dessus |
 
@@ -179,17 +182,18 @@ Sans armure, la CA d'un personnage vaut **10 + son modificateur de Réflexes**. 
 | Blouse ou blouson de fibre | 200 h | 11 + Réf | — | — | 2 kg |
 | Combinaison de fibre | 300 h | 11 + Réf | — | — | 3 kg |
 | Gilet pare-éclats | 500 h | 12 + Réf | — | — | 4 kg |
-| Armure légère d'Huissier | 800 h | 12 + Réf | — | Désavantage | 5 kg |
+| Armure légère d'Huissier | 400 h | 12 + Réf | — | Désavantage | 5 kg |
 | **Armures intermédiaires** | | | | | |
 | Armure de fibre | 1 200 h | 13 + Réf (max 2) | — | — | 8 kg |
 | Plaques anti-émeute | 2 500 h | 14 + Réf (max 2) | — | Désavantage | 12 kg |
 | **Armures lourdes** | | | | | |
-| Carapace de chantier | 5 000 h | 16 | 13 | Désavantage | 20 kg |
+| Carapace de chantier | 5 000 h | 17 | 15 | Désavantage | 20 kg |
 | **Bouclier** | | | | | |
 | Bouclier anti-émeute | 400 h | +2 | — | — | 3 kg |
 
 - **Corps** : une armure lourde qui indique une valeur de Corps réduit la vitesse de **3 m** si le porteur ne l'atteint pas.
 - **Discrétion** : désavantage aux tests de Réflexes (Discrétion) tant qu'on porte l'armure.
+- **Combinaison de fibre** : fermée du col aux chevilles, elle donne aussi la résistance au froid de la pluie (avantage à la sauvegarde de nuit dehors, comme le manteau de pluie).
 - **Armure légère d'Huissier** : gilet de fibre, brassard jaune, visière opaque. Un brassard qu'on n'a pas le droit de porter attire les ennuis dans les Blocs.
 - **Plaques anti-émeute** : des plaques de polymère sur une base de fibre. Elles arrêtent les coups de barre et les harpons, mais cliquettent.
 - **Carapace de chantier** : l'armure des grutiers et des équipes de la Digue. Elle protège de tout, sauf de l'eau jusqu'au cou.
@@ -223,8 +227,8 @@ Un implant se loue. Le prix ne se paie pas une fois : il se paie **chaque mois**
 
 Les chiffres de ta fiche font foi. Les loyers ci-dessus sont des repères pour choisir.
 
-- **Poser un implant.** Chez un Greffeur, comptez dix mois de loyer, une fois, pour la pose et l'entretien. Un Médic de rue charcutier du Port-Franc le fait pour moins cher, et sans papiers.
-- **Retirer un implant.** Chez un médecin. Comptez la moitié des frais de pose. Frère Lazare, des Sans-Bail, le fait gratuitement, et retire aussi les Compteurs.
+- **Poser un implant.** Chez un Mécano greffeur, compte dix mois de loyer, une fois, pour la pose et l'entretien. Un Médic de rue charcutier du Port-Franc le fait pour moins cher, et sans papiers.
+- **Retirer un implant.** Chez un médecin. Compte la moitié des frais de pose. Frère Lazare, des Sans-Bail, le fait gratuitement, et retire aussi les Compteurs.
 - **Un implant n'est pas un objet.** On ne le prête pas, on ne le vend pas, on ne le vole pas : il est dans le corps de quelqu'un. L'implant qu'on arrache à un mort s'éteint sur-le-champ.
 - **Les Sans-Bail et les Locataires** n'ont pas droit aux implants de la Foncière (chapitre 5). Un bricolage de récupération coûte le prix d'une arme et tombe en panne quand le MJ le décide.
 
@@ -263,7 +267,7 @@ Quelques usages dans la Résidence :
 - **Outils de fouineur** : entrer dans le Réseau sans classe de piratage laisse **une trace à chaque fois** (chapitre 5). Les outils permettent de tenter, pas d'effacer.
 - **Console de poignet** : la console d'un Fouineur sert aussi à brouiller sa trace une fois par semaine (chapitre 5).
 - **Compteur piraté** : un Compteur sans numéro, soudé à la main dans un boîtier de montre. Il efface une trace d'un coup, et pendant une scène les trams, les portes et les caméras ne lisent pas ton vrai Compteur. Chaque piratage laisse quand même une trace.
-- **Matériel de serrurerie et serrure neuve** : ouvrir une serrure de couloir demande un test de Technique. Une serrure neuve posée par un clerc d'Huissier ne s'ouvre qu'avec un test de Technique DD 15 : plus personne ne rentre chez soi.
+- **Matériel de serrurerie et serrure neuve** : crocheter une serrure de couloir demande un test de Réflexes. Une serrure neuve posée par un clerc d'Huissier ne s'ouvre qu'avec un test de Réflexes DD 15 : plus personne ne rentre chez soi.
 - **Matériel de faussaire** : papiers, quittances, avis. Un faux s'oppose à l'Investigation de celui qui l'examine. Un Huissier qui vérifie en personne ne s'y laisse pas prendre.
 - **Grappin de poignet** : traverser un vide de 9 m ou remonter une chute sur un test de Corps (Athlétisme) DD 12.
 
@@ -289,7 +293,7 @@ Quelques usages dans la Résidence :
 
 ### Ce que font certains objets
 
-**Trousse de Bloc.** Gaze, colle à plaies, pastilles que les voisins se repassent. Dix usages. Une action et un usage pour stabiliser une créature à 0 PV sans test de Médecine, ou pour rendre 1d4 PV.
+**Trousse de Bloc.** Gaze, colle à plaies, pastilles que les voisins se repassent. Dix usages. Une action et un usage pour stabiliser une créature à 0 PV sans test de Médecine, ou pour rendre 1d4 PV (la carte de collection est une trousse plus complète).
 
 **Seringue de soins.** Une action pour l'utiliser sur toi ou sur quelqu'un : récupère 2d4 + 2 PV.
 
@@ -331,17 +335,17 @@ Il pleut toujours sur les Blocs. Ce qu'on porte compte.
 
 ### Se déplacer
 
-Le **tram** lit ton Compteur et débite à chaque trajet : 1 h. Les **ascenseurs** des Blocs aussi. Les Hauts sont fermés à ceux qui n'ont pas de droit : monter sans carte laisse une trace, et une tourelle peut te prendre pour cible. À la Friche, on se déplace en **barque** (de 1 à 5 h le passage, au troc) ; dans les Souterrains, à pied ou sur les rames abandonnées.
+Le **tram** lit ton Compteur et ne débite rien : la place est comprise dans le Bail. Les **ascenseurs** des Blocs aussi. Les Hauts sont fermés à ceux qui n'ont pas de droit : monter sans carte laisse une trace, et une tourelle peut te prendre pour cible. À la Friche, on se déplace en **barque** (de 1 à 5 h le passage, au troc) ; dans les Souterrains, à pied ou sur les rames abandonnées.
 
 ### Gîte et couvert
 
 | Service | Prix |
 |---|---|
 | Une nuit de couchette dans un dortoir de Bloc | 6 h |
-| Une nuit dans un capsule-hôtel du Port-Franc | 15 h |
+| Une nuit dans un hôtel-capsule du Port-Franc | 15 h |
 | Un mois de loyer, une pièce | 200 h |
-| Un mois de loyer, un studio avec fenêtre | 450 h |
-| Un mois de loyer, un appartement des Hauts | à partir de 6 000 h |
+| Un mois de loyer, un studio avec fenêtre | 300 h |
+| Un mois de loyer, un appartement des Hauts | à partir de 2 000 h |
 | Un repas de marché | 1 h |
 | Un repas chaud | 3 h |
 
@@ -359,7 +363,7 @@ Le **tram** lit ton Compteur et débite à chaque trajet : 1 h. Les **ascenseurs
 | Un grutier, une charge déplacée | 40 h |
 | Un coursier, un colis dans les Blocs | 10 h |
 
-> **Le pot-de-vin.** Un clerc se laisse convaincre pour quelques dizaines d'heures, un huissier pour une cinquantaine, un huissier-chef pour plus de cent. Ce n'est pas un prix de marché : c'est un prix de risque, et celui qui l'accepte sait que vous savez.
+> **Le pot-de-vin.** Un clerc se laisse convaincre pour quelques dizaines d'heures, un huissier pour une cinquantaine, un huissier-chef pour plus de cent. Le prix monte avec le risque : celui qui l'accepte sait que tu sais.
 
 ## Les objets de la collection
 
@@ -382,17 +386,17 @@ Certains objets n'ont pas de prix sur un marché. Ils se glanent chez un clerc, 
 
 **Quittance imprimée.** Un papier, un vrai, avec le tampon de la Foncière. Plus personne n'imprime, et c'est pour ça qu'on le croit. Avantage à un jet de Persuasion pour prouver qu'un loyer est payé. Un clerc ou un huissier qui le lit renonce à son avis pour la journée. Une fois.
 
-**Carte de tram illimitée.** Une carte de cadre, trouvée ou prêtée. Le tram la lit comme un Compteur et ne débite rien. Une journée de trams et d'ascenseurs des Blocs sans payer une heure, et sans trace sur le Compteur. Une fois par séance.
+**Carte de tram illimitée.** Une carte de cadre, trouvée ou prêtée. Une journée de trams et d'ascenseurs des Blocs sans que le tram lise ton Compteur, et sans trace sur le Compteur. Une fois par séance.
 
 **Ciré de la Digue.** Un ciré jaune de la Garde, raide de sel. Avantage aux jets de Corps et d'Athlétisme pour tenir sous la pluie, dans un courant ou sur une rambarde, et résistance au froid. Une fois par séance.
 
 **Trousse de Bloc.** Une boîte de biscuits pleine de gaze, de colle à plaies et de pastilles. Soigne 1d8 + 2 PV à une créature, ou la stabilise à 0 PV, sans jet de Médecine. Une fois par séance.
 
-**Sachet d'heures volées.** Une pastille de cire qui se pose sur le poignet. Elle vient d'un Compteur qui n'était pas à vous. Ajoute 60 h au solde. Si tu dépenses plus de 50 h volées dans la même journée, sauvegarde d'Endurance DD 12 contre le reflux. Une fois.
+**Sachet d'heures volées.** Une pastille de cire qui se pose sur le poignet. Elle vient d'un Compteur qui n'était pas à toi. Ajoute 60 h au solde. Si tu dépenses plus de 50 h volées dans la même journée, sauvegarde d'Endurance DD 12 contre le reflux. Une fois.
 
 **Compteur piraté.** Un Compteur de rechange gravé à la main au Port-Franc, qui répond aux bornes avec le numéro de quelqu'un d'autre. Efface une trace laissée dans le Réseau. Pendant une scène, les trams, les portes et les caméras ne lisent pas le vrai Compteur du porteur. Une fois.
 
-**Harpon de taser.** Le jouet des Huissiers : un harpon à câble qui ancre un fuyard au sol. Celui-ci a été rendu avec la serrure. Attaque à distance (9 m) : si elle touche, la cible fait une sauvegarde de Corps DD 13 ou reste entravée, 1d6 dégâts. Une fois par séance.
+**Harpon de taser.** Le jouet des Huissiers : un harpon à câble qui entrave un fuyard. Celui-ci a été rendu avec la serrure. Attaque à distance (9 m) : si elle touche, 1d6 dégâts de foudre et la cible est entravée ; elle se libère par un test de Corps ou de Réflexes DD 13. Une fois par séance.
 
 **Brassard jaune rendu.** Le brassard d'un huissier qui a démissionné, avec sa visière opaque. Les clercs ne savent plus où regarder. Avantage à un jet d'Intimidation ou de Tromperie devant des clercs ou des gens des Blocs. Un huissier-chef n'est pas dupe. Une fois par séance.
 
@@ -406,4 +410,4 @@ Certains objets n'ont pas de prix sur un marché. Ils se glanent chez un clerc, 
 
 > **Les alliés et les faveurs.** La collection compte aussi des cartes d'alliés (un clerc qui prévient la veille, une Taupe des Souterrains, un avocat de locataires) et de faveurs (une veillée de couloir, un délai d'un mois, un loyer gelé). Elles ne s'achètent pas : on les gagne en les méritant à la table.
 
-> **Ce qu'on ne peut pas acheter.** Le brassard d'un Huissier en service, le nœud de marin tatoué au poignet d'un homme du Port-Franc, la cicatrice d'un Sans-Bail : ce sont des signes de reconnaissance, pas des marchandises. On peut en voler un, ou en faire un faux. Le jour où quelqu'un pose la bonne question, ça se voit.
+> **Ce qu'on ne peut pas acheter.** Le brassard d'un Huissier en service, le nœud de marin tatoué au poignet d'un homme du Port-Franc, la cicatrice d'un Sans-Bail : ce sont des signes de reconnaissance, pas des marchandises. On peut en voler un, ou en faire un faux.
