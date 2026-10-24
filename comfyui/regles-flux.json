@@ -4,6 +4,7 @@
   "anachronismes": {
     "fantasy": "\\b(electric|electricity|telephone|power lines?|pylons?|asphalt|cars?|trucks?|plastic|concrete|neon|guns?|rifles?|pistols?|roads?|stakes?|poles?|light ?bulbs?|lamp ?posts?|street ?lights?|cables?|wires?|zippers?|sunglasses|wristwatch|helicopter|aircraft)\\b",
     "science-fiction": "\\b(lightsabers?|light ?swords?|jedi|sith|stormtroopers?|droids?|darth|x-wings?|tie fighters?|millennium falcon|death star|nasa|american flag|planet earth|earth)\\b",
-    "dark-fantasy": "\\b(electric|electricity|telephone|power lines?|pylons?|asphalt|cars?|trucks?|plastic|concrete|neon|guns?|rifles?|pistols?|roads?|stakes?|poles?|light ?bulbs?|lamp ?posts?|street ?lights?|cables?|wires?|zippers?|sunglasses|wristwatch|helicopter|aircraft)\\b"
+    "dark-fantasy": "\\b(electric|electricity|telephone|power lines?|pylons?|asphalt|cars?|trucks?|plastic|concrete|neon|guns?|rifles?|pistols?|roads?|stakes?|poles?|light ?bulbs?|lamp ?posts?|street ?lights?|cables?|wires?|zippers?|sunglasses|wristwatch|helicopter|aircraft)\\b",
+    "cyberpunk": "\\b(jedi|sith|lightsabers?|light ?swords?|dragons?|sword and sorcery|swords? and sorcery|wizards?|sorcerers?|elves|elf|orcs?|goblins?|blade runner|night city|cyberpunk 2077|arasaka|militech|netrunners?|cyberdecks?|neuromancer|shadowrun|ghost in the shell|akira|robocop|terminator|tyrell|weyland|stormtroopers?|droids?|darth|the matrix)\\b"
   }
 }

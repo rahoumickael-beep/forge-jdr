@@ -4,6 +4,7 @@
 // Tout est original ou tiré du folklore : aucune créature protégée hors SRD 5.1.
 import { BESTIAIRE_ARCHIPEL } from "./archipel-bestiaire";
 import { BESTIAIRE_TERNELANDE } from "./ternelande-bestiaire";
+import { BESTIAIRE_RESIDENCE } from "./residence-bestiaire";
 import { stylePeinture } from "./charte";
 import { cost, fabriquerCreature, hit, modOf, multi, recharge, save, special, type CreatureInput } from "./fiches";
 import type { Encounter, GenreId } from "./types";
@@ -21,7 +22,9 @@ export type FamilleAubreterre = "Morts" | "Bêtes" | "Humanoïdes" | "Monstruosi
 export type FamilleArchipel = "Faune des mondes" | "Équipages" | "Machines" | "Choses des Routes";
 /** Familles de la Ternelande */
 export type FamilleTernelande = "Bêtes d'hiver" | "Gens de la Dîme" | "Choses de la terre" | "Reflets";
-export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande;
+/** Familles de la Résidence */
+export type FamilleResidence = "Bêtes de la ville" | "Gens du Bail" | "Drones et automates" | "Cousus";
+export type Family = FamilleAubreterre | FamilleArchipel | FamilleTernelande | FamilleResidence;
 
 export type Region =
   // Aubreterre
@@ -53,6 +56,14 @@ export type Region =
   | "Saint-Mémoire"
   | "Les Landes Effacées"
   | "Brise-Glace"
+  // La Résidence
+  | "Les Hauts"
+  | "Les Blocs"
+  | "Le Port-Franc"
+  | "La Friche"
+  | "Le Jardin"
+  | "Les Souterrains"
+  | "La Digue"
   | "Partout";
 
 export interface Speed {
@@ -1645,7 +1656,7 @@ const CREATURES_AUBRETERRE: Creature[] = [
 ];
 
 /** Toutes les créatures de tous les mondes ; creaturesFor(genre) pour un seul. */
-export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE];
+export const BESTIARY: Creature[] = [...CREATURES_AUBRETERRE, ...BESTIAIRE_ARCHIPEL, ...BESTIAIRE_TERNELANDE, ...BESTIAIRE_RESIDENCE];
 
 /** Créatures d'un genre (pour l'instant, seul le monde fantasy d'Aubreterre en a). */
 export function creaturesFor(genre: GenreId): Creature[] {

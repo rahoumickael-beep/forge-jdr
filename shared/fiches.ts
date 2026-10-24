@@ -23,6 +23,11 @@ export const LUMIERE_FAMILLE: Record<Family, string> = {
   "Gens de la Dîme": "torch and lantern light in falling snow, soot black and dried blood red",
   "Choses de la terre": "dim grey light seeping up from the frozen ground, bone and lichen tones",
   Reflets: "cold blue light filtered through thick ice, grey and drowned green tones",
+  // La Résidence
+  "Bêtes de la ville": "sodium orange streetlight through drizzle and steam, wet asphalt and rust tones",
+  "Gens du Bail": "neon magenta and cyan reflections in falling rain, wet concrete and yellow armband tones",
+  "Drones et automates": "cold white scanner beams cutting through rain mist, gunmetal and indicator green tones",
+  Cousus: "sickly green clinic glow and flickering red warning lamps, pale skin and chrome tones",
 };
 
 /** Préfixe des prompts d'illustration d'une famille, tiré de la charte du genre (shared/charte.ts). */
