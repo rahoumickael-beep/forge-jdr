@@ -339,6 +339,7 @@ Elle part à **100** en novembre 2089. Elle mesure la prise du Conseil sur la R�
 - −3 pour chaque expulsion empêchée en public ;
 - −10 pour chaque secret du Conseil rendu public ;
 - +5 pour chaque comité brisé ou chaque Bloc qui accepte la Révision ;
+- +5 pour chaque combat contre les Huissiers devant témoins ;
 - +10 si la Friche est régularisée.
 
 Au plus −15 par mois pour les grèves, et −9 pour les expulsions empêchées.

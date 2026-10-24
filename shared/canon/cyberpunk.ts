@@ -20,7 +20,7 @@ export const RESIDENCE: Canon = {
     { an: 2041, quoi: "La Grande Crue : la mer monte de deux mètres en un hiver ; le delta du Rhône disparaît." },
     { an: 2043, quoi: "L'État, en faillite, vend la côte à la Foncière d'Hector Valcroze." },
     { an: 2046, quoi: "Pose de la première pierre de la Tour-Mère. Début de la Digue." },
-    { an: 2052, quoi: "Le Bail : chaque habitant devient locataire de la Foncière. An 1 du Bail." },
+    { an: 2052, quoi: "Le Bail : chaque habitant devient locataire de la Foncière. An 0 du Bail." },
     { an: 2057, quoi: "Naissance de Mado Ferrandi, future porte-parole du Comité." },
     { an: 2058, quoi: "Le Compteur devient obligatoire ; le loyer se paie en heures. Les premiers Sans-Bail gagnent la Friche." },
     { an: 2059, quoi: "Naissance de Nadia Aït-Larbi." },
@@ -121,6 +121,7 @@ export const RESIDENCE: Canon = {
     { nom: "Odon Marchetti", alias: ["Marchetti"], titre: "administrateur des Digues", ou: "La Digue", faction: "fonciere", age: 80, etat: "vivant" },
     // Première séance (bible, section 11)
     { nom: "Nadia Aït-Larbi", alias: ["Nadia", "Aït-Larbi", "les Aït-Larbi"], titre: "mère de quatre enfants, menacée d'expulsion", ou: "Bloc 14", age: 30, etat: "vivant" },
+    { nom: "Yamina Aït-Larbi", alias: ["Yamina"], titre: "belle-mère de Nadia Aït-Larbi", ou: "Bloc 14", etat: "vivant" },
     { nom: "Basile Ott", alias: ["Basile", "Ott"], titre: "voisin, vendeur d'heures volées au détail", ou: "Bloc 14", etat: "vivant" },
     { nom: "Grégoire Tessandier", alias: ["Tessandier"], titre: "huissier-chef", ou: "Les Blocs", faction: "huissiers", etat: "vivant" },
   ],
@@ -199,6 +200,7 @@ export const RESIDENCE: Canon = {
       remontees: [
         { action: "Chaque comité brisé, ou chaque Bloc qui accepte la Révision", gain: 5 },
         { action: "La Friche est régularisée", gain: 10 },
+        { action: "Un combat contre les Huissiers devant témoins", gain: 5 },
       ],
       descentes: [
         { action: "Chaque Bloc qui fait grève un mois entier (au plus 15 par mois)", perte: 5 },
