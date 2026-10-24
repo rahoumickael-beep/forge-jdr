@@ -36,7 +36,8 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 
 ## Peintures des mondes, un à la fois (choix de Mickael, 24/10/2026)
 - Méthode : `npx tsx scripts/lot-monde.ts <genre> <monde>` (créatures + planches des livres) puis `node comfyui/generer.mjs comfyui/lot-<monde>.json http://127.0.0.1:8188 <monde>`. Tri des 4 variantes délégué (Gemini par `scripts/deleguer.mjs` ou qwen3-vl local), Opus contrôle par sondage. Un monde fini avant le suivant.
-- Ternelande : 24 créatures + 32 planches en file le 24/10.
+- Tri : `node scripts/tri-peintures.mjs planches <monde>` (2×2 lettrées), Gemini choisit (`choix.json`), Opus sonde, puis `poser <monde> choix.json`. Gemini s’est trompé 2 fois sur 3 au sondage (anachronisme, défaut d’anatomie) : toujours regarder la planche-contact.
+- Ternelande : 56 peintures posées et livres refaits le 24/10, à montrer à Mickael. À repeindre : meute-affamee, brigand-des-landes, arbaletrier-de-compagnie, reflet, classe-fossoyeur, ours-des-neiges (trop gentil), origine-df-humain (manteau rouge XIXᵉ).
 
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
