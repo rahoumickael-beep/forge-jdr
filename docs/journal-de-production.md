@@ -39,6 +39,11 @@ Mémoire du projet d'une session à l'autre : décisions, choix de Mickael, ce q
 - Tri : `node scripts/tri-peintures.mjs planches <monde>` (2×2 lettrées), Gemini choisit (`choix.json`), Opus sonde, puis `poser <monde> choix.json`. Gemini s’est trompé 2 fois sur 3 au sondage (anachronisme, défaut d’anatomie) : toujours regarder la planche-contact.
 - Ternelande : 56 peintures posées et livres refaits le 24/10, à montrer à Mickael. À repeindre : meute-affamee, brigand-des-landes, arbaletrier-de-compagnie, reflet, classe-fossoyeur, ours-des-neiges (trop gentil), origine-df-humain (manteau rouge XIXᵉ).
 
+## Outils de délégation (24/10)
+- Antigravity : **une seule tâche longue à la fois** (la seconde lancée en parallèle revient vide, sans erreur). Délai porté à 30 min.
+- Contrôle à trois étages (choix A de Mickael) : `node scripts/controler.mjs [--tests] [chemins]` (sans IA, bilan de 5 lignes) ; `node scripts/relire.mjs --sortie f.md [chemins]` (relecture croisée par une autre IA via OmniRoute) ; Haiku/Sonnet seulement sur alerte.
+- OmniRoute 3.8.52 sur 127.0.0.1:20128 (config dans ~/.omniroute/.env, clé client dans .env du projet) : Google AI Studio + Mistral branchés ; offres gratuites encore capricieuses (429, Pro en attente).
+
 ## Points ouverts
 - 4 prompts déjà peints enfreignent la règle « route, piquet, mât » (origine-humain, origine-petites-gens, mj-heritiers, famille-betes) : planches gardées, à corriger si on les repeint.
 - Planche du demi-orc à repeindre.

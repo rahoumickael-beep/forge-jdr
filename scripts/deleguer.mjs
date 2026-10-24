@@ -41,7 +41,7 @@ const cadre =
   "Termine par un résumé de 5 lignes maximum de ce que tu as fait.\n\n";
 
 const agy = join(homedir(), ".gemini", "bin", process.platform === "win32" ? "agy.exe" : "agy");
-const opts = ["--model", MODELES[modele], "--print-timeout", "900s", "-p", cadre + consigne];
+const opts = ["--model", MODELES[modele], "--print-timeout", "1800s", "-p", cadre + consigne];
 if (ecrire) opts.unshift("--mode", "accept-edits", "--dangerously-skip-permissions");
 
 let texte;
